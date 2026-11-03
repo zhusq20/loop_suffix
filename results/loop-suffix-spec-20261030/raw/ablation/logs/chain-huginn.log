@@ -1,0 +1,31 @@
+=== calibrate huginn-3.5b 01:06:29
+[calibrate] offline huginn-3.5b pairs [(2, 4), (4, 8), (8, 16), (16, 24)] in 8s
+[calibrate] insitu d=2: 47038 dev suffix offers, right 0.455, 45s
+[calibrate] insitu d=4: 45439 dev suffix offers, right 0.454, 28s
+[calibrate] insitu d=8: 43429 dev suffix offers, right 0.474, 9s
+[calibrate] insitu d=16: 43401 dev suffix offers, right 0.480, 6s
+[check-calib] huginn-3.5b d=4: identical
+=== run huginn-3.5b 01:08:14
+| setting | speedup | rows/word | speedup (confirm) | s |
+| --- | ---: | ---: | ---: | ---: |
+| legacy K16 | 4.12 | 1104.0 | 4.51 | 47 |
+| C t0.01 | 9.50 | 141.2 | 10.29 | 17 |
+| C t0.01 top1 | 6.93 | 70.3 | 7.56 | 7 |
+| C t0.01 K16 | 6.81 | 127.2 | 7.11 | 13 |
+| C t0.01 offline-suffix | 9.56 | 153.6 | 10.34 | 18 |
+| C t0.01 step-end | 8.50 | 139.2 | 9.11 | 14 |
+| C t0.1 | 6.92 | 53.8 | 7.51 | 7 |
+| C t0.1 top1 | 6.29 | 48.1 | 6.83 | 5 |
+| C t0.1 K16 | 5.60 | 52.0 | 5.89 | 6 |
+| C t0.1 offline-suffix | 7.04 | 59.4 | 7.66 | 7 |
+| C t0.1 step-end | 6.72 | 53.8 | 7.33 | 4 |
+| d2 C t0.01 | 6.45 | 266.4 | 7.02 | 29 |
+| d2 C t0.1 | 4.45 | 66.7 | 4.76 | 8 |
+| d4 C t0.01 | 9.50 | 141.2 | 10.29 | 17 |
+| d4 C t0.1 | 6.92 | 53.8 | 7.51 | 7 |
+| d8 C t0.01 | 6.79 | 67.7 | 7.23 | 7 |
+| d8 C t0.1 | 6.03 | 42.9 | 6.46 | 5 |
+| d16 C t0.01 | 3.61 | 50.9 | 3.82 | 5 |
+| d16 C t0.1 | 3.51 | 42.7 | 3.72 | 5 |
+[plot] /mnt/disk2_from_server2/siqizhu4/llm-memory-editability/results/loop-suffix-spec-20261030/figures/ablation-huginn-3.5b.png
+=== all done 01:09:25

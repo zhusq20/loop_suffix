@@ -1,0 +1,347 @@
+=== check-ouro start 2026-10-31T04:57:39Z
+[wallclock] ouro-2.6b check-float32: 6 questions, arms ['wfd-ar', 'wfd', 'ar', 'shallow', 'suffix', 'both', 'both-path'], max_seq 841, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+[wallclock] 1/6 q81 mt_bench {'wfd-ar': '10.8t/s', 'wfd': '17.5t/s', 'ar': '5.0t/s', 'shallow': '9.8t/s', 'suffix': '6.5t/s', 'both': '11.7t/s', 'both-path': '11.7t/s'}
+[wallclock] 2/6 q161 translation {'wfd': '11.6t/s', 'ar': '5.1t/s', 'shallow': '6.6t/s', 'suffix': '6.5t/s', 'both': '7.9t/s', 'both-path': '8.1t/s', 'wfd-ar': '10.5t/s'}
+[wallclock] 3/6 q241 summarization {'ar': '5.0t/s', 'shallow': '8.3t/s', 'suffix': '7.2t/s', 'both': '9.6t/s', 'both-path': '9.8t/s', 'wfd-ar': '10.3t/s', 'wfd': '13.5t/s'}
+[wallclock] 4/6 q321 qa {'shallow': '8.8t/s', 'suffix': '5.3t/s', 'both': '8.5t/s', 'both-path': '8.7t/s', 'wfd-ar': '10.5t/s', 'wfd': '15.5t/s', 'ar': '5.1t/s'}
+[wallclock] 5/6 q401 math_reasoning {'suffix': '8.1t/s', 'both': '14.9t/s', 'both-path': '14.8t/s', 'wfd-ar': '10.7t/s', 'wfd': '20.2t/s', 'ar': '5.2t/s', 'shallow': '11.0t/s'}
+[wallclock] 6/6 q481 rag {'both': '11.9t/s', 'both-path': '12.1t/s', 'wfd-ar': '10.3t/s', 'wfd': '18.5t/s', 'ar': '5.1t/s', 'shallow': '10.5t/s', 'suffix': '6.2t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_050232-4h4zz0ib
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▁▆▆▇█▇
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▄▁▃▂█▆
+wandb:       both-path/same_as_ar ▁▁▁▁▁▁
+wandb:      both/decode_tok_per_s ▄▁▃▂█▅
+wandb:            both/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb:   shallow/decode_tok_per_s ▆▁▄▅██
+wandb:         shallow/same_as_ar ▁▁▁▁▁▁
+wandb:                         +6 ...
+wandb: 
+wandb: Run summary:
+wandb:           ar/calls_eq_replay 1
+wandb:           ar/calls_per_token 4
+wandb:             ar/cpu_over_wall 1.00065
+wandb:      ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_shallow 0.53904
+wandb:     ar/decode_speedup_vs_wfd 0.30008
+wandb:  ar/decode_speedup_vs_wfd-ar 0.47131
+wandb:          ar/decode_tok_per_s 5.19903
+wandb:         ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_shallow 0.54953
+wandb:                         +133 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_050232-4h4zz0ib
+wandb: Find logs at: /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_050232-4h4zz0ib/logs
+wfd-ar     decode    11.0 tok/s  x2.12 vs ar  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 1.00
+wfd        decode    17.3 tok/s  x3.33 vs ar  x1.57 vs wfd-ar  calls/tok 1.54 (replay nan)  ms/call 37.37  same-as-ar 1.00
+ar         decode     5.2 tok/s  x1.00 vs ar  x0.47 vs wfd-ar  calls/tok 4.00 (replay 4.00)  ms/call 48.09  same-as-ar 1.00
+shallow    decode     9.6 tok/s  x1.86 vs ar  x0.87 vs wfd-ar  calls/tok 1.59 (replay 1.60)  ms/call 65.25  same-as-ar 1.00
+suffix     decode     6.8 tok/s  x1.32 vs ar  x0.62 vs wfd-ar  calls/tok 3.01 (replay 3.04)  ms/call 48.63  same-as-ar 1.00
+both       decode    11.3 tok/s  x2.17 vs ar  x1.02 vs wfd-ar  calls/tok 1.31 (replay 1.31)  ms/call 67.48  same-as-ar 1.00
+both-path  decode    11.5 tok/s  x2.21 vs ar  x1.04 vs wfd-ar  calls/tok 1.31 (replay 1.31)  ms/call 66.51  same-as-ar 1.00
+=== check-ouro done 2026-10-31T05:02:36Z
+=== check-huginn start 2026-10-31T05:02:36Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 488.01it/s]
+[wallclock] huginn-3.5b check-float32: 6 questions, arms ['wfd-ar', 'wfd', 'ar', 'shallow', 'suffix', 'both', 'both-path'], max_seq 828, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+[wallclock] 1/6 q81 mt_bench {'wfd-ar': '5.8t/s', 'wfd': '10.0t/s', 'ar': '5.3t/s', 'shallow': '8.1t/s', 'suffix': '5.3t/s', 'both': '6.7t/s', 'both-path': '7.3t/s'}
+[wallclock] 2/6 q161 translation {'wfd': '11.1t/s', 'ar': '5.3t/s', 'shallow': '8.5t/s', 'suffix': '8.0t/s', 'both': '5.6t/s', 'both-path': '8.0t/s', 'wfd-ar': '5.8t/s'}
+[wallclock] 3/6 q241 summarization {'ar': '4.5t/s', 'shallow': '7.6t/s', 'suffix': '7.0t/s', 'both': '6.3t/s', 'both-path': '8.5t/s', 'wfd-ar': '4.7t/s', 'wfd': '7.0t/s'}
+[wallclock] 4/6 q321 qa {'shallow': '4.2t/s', 'suffix': '4.7t/s', 'both': '3.8t/s', 'both-path': '4.1t/s', 'wfd-ar': '4.2t/s', 'wfd': '4.6t/s', 'ar': '3.9t/s'}
+[wallclock] 5/6 q401 math_reasoning {'suffix': '8.2t/s', 'both': '5.3t/s', 'both-path': '8.2t/s', 'wfd-ar': '5.8t/s', 'wfd': '9.9t/s', 'ar': '5.3t/s', 'shallow': '8.3t/s'}
+[wallclock] 6/6 q481 rag {'both': '16.3t/s', 'both-path': '16.4t/s', 'wfd-ar': '4.7t/s', 'wfd': '9.9t/s', 'ar': '4.5t/s', 'shallow': '10.2t/s', 'suffix': '15.7t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_050951-zgtpagwz
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ██▁██▂
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▁▂▂▁▂█
+wandb:       both-path/same_as_ar ▁▁▁▁▁▁
+wandb:      both/decode_tok_per_s ▁▁▂▁▁█
+wandb:            both/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb:   shallow/decode_tok_per_s ▃▃▄▁▃█
+wandb:         shallow/same_as_ar ▁▁▁▁▁▁
+wandb:                         +6 ...
+wandb: 
+wandb: Run summary:
+wandb:           ar/calls_eq_replay 1
+wandb:           ar/calls_per_token 32
+wandb:             ar/cpu_over_wall 1.00063
+wandb:      ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_shallow 0.54796
+wandb:     ar/decode_speedup_vs_wfd 0.48667
+wandb:  ar/decode_speedup_vs_wfd-ar 0.92207
+wandb:          ar/decode_tok_per_s 5.37655
+wandb:         ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_shallow 0.58814
+wandb:                         +133 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_050951-zgtpagwz
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_050951-zgtpagwz/logs
+wfd-ar     decode     5.8 tok/s  x1.08 vs ar  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 1.00
+wfd        decode    11.0 tok/s  x2.05 vs ar  x1.89 vs wfd-ar  calls/tok 10.06 (replay nan)  ms/call 9.00  same-as-ar 1.00
+ar         decode     5.4 tok/s  x1.00 vs ar  x0.92 vs wfd-ar  calls/tok 32.00 (replay 32.00)  ms/call 5.81  same-as-ar 1.00
+shallow    decode     9.8 tok/s  x1.82 vs ar  x1.68 vs wfd-ar  calls/tok 11.02 (replay 10.93)  ms/call 9.25  same-as-ar 1.00
+suffix     decode     8.9 tok/s  x1.66 vs ar  x1.53 vs wfd-ar  calls/tok 18.26 (replay 18.46)  ms/call 6.13  same-as-ar 1.00
+both       decode     7.6 tok/s  x1.41 vs ar  x1.30 vs wfd-ar  calls/tok 8.51 (replay 8.34)  ms/call 15.46  same-as-ar 1.00
+both-path  decode    10.4 tok/s  x1.93 vs ar  x1.78 vs wfd-ar  calls/tok 8.43 (replay 8.34)  ms/call 11.42  same-as-ar 1.00
+=== check-huginn done 2026-10-31T05:09:54Z
+=== bench-ouro start 2026-10-31T05:09:54Z
+[wallclock] ouro-2.6b bench-bfloat16: 60 questions, arms ['wfd-ar', 'wfd', 'ar', 'shallow', 'suffix', 'both', 'both-path'], max_seq 2410, attention check 0.001953125
+[wallclock] 1/60 q81 mt_bench {'wfd-ar': '9.6t/s*', 'wfd': '15.4t/s*', 'ar': '5.5t/s', 'shallow': '10.7t/s*', 'suffix': '6.0t/s*', 'both': '11.6t/s*', 'both-path': '11.1t/s*'}
+[wallclock] 2/60 q89 mt_bench {'wfd': '20.5t/s', 'ar': '5.5t/s', 'shallow': '14.7t/s', 'suffix': '6.5t/s', 'both': '16.9t/s', 'both-path': '16.2t/s', 'wfd-ar': '9.5t/s'}
+[wallclock] 3/60 q97 mt_bench {'ar': '5.5t/s', 'shallow': '16.5t/s*', 'suffix': '6.5t/s*', 'both': '16.8t/s', 'both-path': '19.5t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '23.1t/s*'}
+[wallclock] 4/60 q105 mt_bench {'shallow': '15.6t/s', 'suffix': '12.3t/s', 'both': '26.2t/s', 'both-path': '26.4t/s', 'wfd-ar': '9.5t/s', 'wfd': '23.4t/s', 'ar': '5.5t/s'}
+[wallclock] 5/60 q113 mt_bench {'suffix': '7.3t/s*', 'both': '19.3t/s*', 'both-path': '18.9t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '22.7t/s*', 'ar': '5.5t/s', 'shallow': '15.4t/s*'}
+[wallclock] 6/60 q121 mt_bench {'both': '19.2t/s', 'both-path': '19.3t/s', 'wfd-ar': '9.5t/s', 'wfd': '25.1t/s', 'ar': '5.5t/s', 'shallow': '16.7t/s', 'suffix': '6.6t/s*'}
+[wallclock] 7/60 q129 mt_bench {'both-path': '24.2t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '24.2t/s*', 'ar': '5.5t/s', 'shallow': '15.7t/s*', 'suffix': '9.2t/s*', 'both': '22.9t/s*'}
+[wallclock] 8/60 q137 mt_bench {'wfd-ar': '9.4t/s', 'wfd': '20.2t/s', 'ar': '5.5t/s', 'shallow': '14.0t/s', 'suffix': '6.7t/s', 'both': '16.2t/s', 'both-path': '16.3t/s'}
+[wallclock] 9/60 q145 mt_bench {'wfd': '19.4t/s*', 'ar': '5.5t/s', 'shallow': '13.1t/s*', 'suffix': '6.9t/s*', 'both': '15.1t/s*', 'both-path': '14.9t/s*', 'wfd-ar': '9.5t/s*'}
+[wallclock] 10/60 q153 mt_bench {'ar': '5.5t/s', 'shallow': '14.3t/s', 'suffix': '6.9t/s*', 'both': '17.7t/s*', 'both-path': '17.3t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '20.8t/s*'}
+[wallclock] 11/60 q161 translation {'shallow': '8.9t/s', 'suffix': '6.7t/s', 'both': '10.3t/s', 'both-path': '10.3t/s', 'wfd-ar': '9.3t/s', 'wfd': '12.0t/s', 'ar': '5.3t/s'}
+[wallclock] 12/60 q169 translation {'suffix': '5.4t/s', 'both': '7.5t/s', 'both-path': '7.6t/s', 'wfd-ar': '9.2t/s', 'wfd': '10.4t/s', 'ar': '5.3t/s', 'shallow': '7.2t/s'}
+[wallclock] 13/60 q177 translation {'both': '8.4t/s', 'both-path': '8.5t/s', 'wfd-ar': '9.3t/s', 'wfd': '11.6t/s', 'ar': '5.4t/s', 'shallow': '8.0t/s', 'suffix': '6.3t/s'}
+[wallclock] 14/60 q185 translation {'both-path': '13.2t/s', 'wfd-ar': '9.3t/s*', 'wfd': '17.0t/s', 'ar': '5.4t/s', 'shallow': '12.3t/s', 'suffix': '6.1t/s', 'both': '13.9t/s*'}
+[wallclock] 15/60 q193 translation {'wfd-ar': '9.0t/s', 'wfd': '11.5t/s', 'ar': '5.2t/s', 'shallow': '8.1t/s', 'suffix': '5.9t/s', 'both': '8.4t/s', 'both-path': '8.5t/s'}
+[wallclock] 16/60 q201 translation {'wfd': '13.1t/s', 'ar': '5.4t/s', 'shallow': '9.3t/s', 'suffix': '6.0t/s', 'both': '9.6t/s', 'both-path': '9.7t/s', 'wfd-ar': '9.2t/s'}
+[wallclock] 17/60 q209 translation {'ar': '5.3t/s', 'shallow': '10.9t/s', 'suffix': '5.8t/s', 'both': '10.3t/s*', 'both-path': '11.3t/s', 'wfd-ar': '9.2t/s', 'wfd': '16.1t/s*'}
+[wallclock] 18/60 q217 translation {'shallow': '8.6t/s', 'suffix': '5.5t/s', 'both': '8.2t/s', 'both-path': '8.2t/s', 'wfd-ar': '9.4t/s', 'wfd': '11.8t/s', 'ar': '5.4t/s'}
+[wallclock] 19/60 q225 translation {'suffix': '6.3t/s', 'both': '11.3t/s*', 'both-path': '10.9t/s', 'wfd-ar': '9.5t/s', 'wfd': '15.0t/s', 'ar': '5.4t/s', 'shallow': '10.1t/s*'}
+[wallclock] 20/60 q233 translation {'both': '13.8t/s', 'both-path': '13.8t/s', 'wfd-ar': '9.3t/s', 'wfd': '15.2t/s', 'ar': '5.4t/s', 'shallow': '10.9t/s', 'suffix': '8.1t/s'}
+[wallclock] 21/60 q241 summarization {'both-path': '13.8t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '15.2t/s*', 'ar': '5.5t/s', 'shallow': '11.5t/s*', 'suffix': '7.2t/s*', 'both': '13.8t/s*'}
+[wallclock] 22/60 q249 summarization {'wfd-ar': '9.6t/s*', 'wfd': '15.7t/s*', 'ar': '5.5t/s', 'shallow': '10.9t/s*', 'suffix': '7.9t/s*', 'both': '13.3t/s*', 'both-path': '13.1t/s*'}
+[wallclock] 23/60 q257 summarization {'wfd': '16.1t/s*', 'ar': '5.5t/s', 'shallow': '11.8t/s*', 'suffix': '7.5t/s*', 'both': '13.7t/s*', 'both-path': '13.6t/s*', 'wfd-ar': '9.5t/s*'}
+[wallclock] 24/60 q265 summarization {'ar': '5.5t/s', 'shallow': '17.0t/s', 'suffix': '52.3t/s', 'both': '65.2t/s', 'both-path': '65.3t/s', 'wfd-ar': '9.6t/s', 'wfd': '26.7t/s'}
+[wallclock] 25/60 q273 summarization {'shallow': '12.7t/s', 'suffix': '10.6t/s*', 'both': '14.5t/s', 'both-path': '23.5t/s*', 'wfd-ar': '9.4t/s*', 'wfd': '18.0t/s*', 'ar': '5.5t/s'}
+[wallclock] 26/60 q281 summarization {'suffix': '43.5t/s', 'both': '62.6t/s', 'both-path': '62.5t/s', 'wfd-ar': '9.5t/s*', 'wfd': '26.1t/s*', 'ar': '5.5t/s', 'shallow': '17.0t/s*'}
+[wallclock] 27/60 q289 summarization {'both': '79.0t/s', 'both-path': '77.3t/s', 'wfd-ar': '9.6t/s', 'wfd': '27.3t/s', 'ar': '5.5t/s', 'shallow': '17.3t/s', 'suffix': '72.0t/s'}
+[wallclock] 28/60 q297 summarization {'both-path': '15.1t/s*', 'wfd-ar': '9.5t/s', 'wfd': '18.4t/s', 'ar': '5.5t/s', 'shallow': '13.1t/s', 'suffix': '7.1t/s', 'both': '15.2t/s'}
+[wallclock] 29/60 q305 summarization {'wfd-ar': '9.6t/s', 'wfd': '18.8t/s', 'ar': '5.4t/s', 'shallow': '13.0t/s', 'suffix': '8.1t/s', 'both': '16.4t/s', 'both-path': '16.2t/s'}
+[wallclock] 30/60 q313 summarization {'wfd': '24.8t/s', 'ar': '5.5t/s', 'shallow': '16.1t/s', 'suffix': '31.8t/s', 'both': '49.2t/s', 'both-path': '48.2t/s*', 'wfd-ar': '9.6t/s'}
+[wallclock] 31/60 q321 qa {'ar': '5.4t/s', 'shallow': '11.6t/s', 'suffix': '5.4t/s', 'both': '11.5t/s', 'both-path': '11.5t/s', 'wfd-ar': '9.3t/s', 'wfd': '16.1t/s'}
+[wallclock] 32/60 q329 qa {'shallow': '14.0t/s*', 'suffix': '6.1t/s*', 'both': '15.2t/s', 'both-path': '15.2t/s*', 'wfd-ar': '9.5t/s*', 'wfd': '19.6t/s*', 'ar': '5.5t/s'}
+[wallclock] 33/60 q337 qa {'suffix': '6.5t/s', 'both': '17.2t/s', 'both-path': '17.4t/s', 'wfd-ar': '9.6t/s', 'wfd': '21.9t/s', 'ar': '5.5t/s', 'shallow': '14.8t/s'}
+[wallclock] 34/60 q345 qa {'both': '20.5t/s*', 'both-path': '18.8t/s', 'wfd-ar': '9.5t/s', 'wfd': '23.2t/s*', 'ar': '5.4t/s', 'shallow': '15.9t/s', 'suffix': '6.5t/s'}
+[wallclock] 35/60 q353 qa {'both-path': '35.2t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '24.8t/s*', 'ar': '5.5t/s', 'shallow': '16.0t/s', 'suffix': '7.2t/s*', 'both': '35.4t/s*'}
+[wallclock] 36/60 q361 qa {'wfd-ar': '9.3t/s', 'wfd': '17.8t/s', 'ar': '5.4t/s', 'shallow': '14.7t/s*', 'suffix': '6.0t/s*', 'both': '15.8t/s', 'both-path': '14.7t/s*'}
+[wallclock] 37/60 q369 qa {'wfd': '20.3t/s', 'ar': '5.5t/s', 'shallow': '14.0t/s*', 'suffix': '6.3t/s*', 'both': '15.7t/s', 'both-path': '16.1t/s', 'wfd-ar': '9.6t/s'}
+[wallclock] 38/60 q377 qa {'ar': '5.3t/s', 'shallow': '12.7t/s', 'suffix': '8.1t/s', 'both': '16.1t/s', 'both-path': '16.3t/s', 'wfd-ar': '9.2t/s', 'wfd': '17.4t/s'}
+[wallclock] 39/60 q385 qa {'shallow': '13.1t/s*', 'suffix': '6.8t/s*', 'both': '15.4t/s*', 'both-path': '13.9t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '15.1t/s*', 'ar': '5.5t/s'}
+[wallclock] 40/60 q393 qa {'suffix': '6.5t/s*', 'both': '15.9t/s*', 'both-path': '15.2t/s*', 'wfd-ar': '9.6t/s*', 'wfd': '19.6t/s', 'ar': '5.5t/s', 'shallow': '13.2t/s*'}
+[wallclock] 41/60 q401 math_reasoning {'both': '19.8t/s', 'both-path': '19.9t/s', 'wfd-ar': '9.3t/s', 'wfd': '21.4t/s', 'ar': '5.4t/s', 'shallow': '14.8t/s', 'suffix': '8.1t/s'}
+[wallclock] 42/60 q409 math_reasoning {'both-path': '21.3t/s', 'wfd-ar': '9.6t/s', 'wfd': '23.6t/s', 'ar': '5.5t/s', 'shallow': '15.5t/s', 'suffix': '8.5t/s', 'both': '20.3t/s'}
+[wallclock] 43/60 q417 math_reasoning {'wfd-ar': '9.6t/s*', 'wfd': '22.1t/s', 'ar': '5.5t/s', 'shallow': '16.7t/s*', 'suffix': '8.3t/s*', 'both': '22.5t/s*', 'both-path': '23.0t/s*'}
+[wallclock] 44/60 q425 math_reasoning {'wfd': '23.6t/s', 'ar': '5.4t/s', 'shallow': '16.0t/s', 'suffix': '9.9t/s', 'both': '23.6t/s', 'both-path': '24.1t/s', 'wfd-ar': '9.6t/s'}
+[wallclock] 45/60 q433 math_reasoning {'ar': '5.5t/s', 'shallow': '16.4t/s', 'suffix': '10.2t/s', 'both': '24.9t/s', 'both-path': '26.1t/s', 'wfd-ar': '9.6t/s', 'wfd': '24.2t/s'}
+[wallclock] 46/60 q441 math_reasoning {'shallow': '16.9t/s', 'suffix': '8.8t/s', 'both': '23.8t/s', 'both-path': '24.2t/s', 'wfd-ar': '9.6t/s', 'wfd': '26.4t/s', 'ar': '5.5t/s'}
+[wallclock] 47/60 q449 math_reasoning {'suffix': '9.0t/s*', 'both': '23.4t/s*', 'both-path': '24.2t/s*', 'wfd-ar': '9.5t/s*', 'wfd': '24.3t/s*', 'ar': '5.5t/s', 'shallow': '16.1t/s'}
+[wallclock] 48/60 q457 math_reasoning {'both': '27.6t/s*', 'both-path': '28.4t/s*', 'wfd-ar': '9.5t/s*', 'wfd': '25.8t/s*', 'ar': '5.5t/s', 'shallow': '16.7t/s', 'suffix': '11.0t/s*'}
+[wallclock] 49/60 q465 math_reasoning {'both-path': '18.5t/s', 'wfd-ar': '9.4t/s', 'wfd': '19.9t/s', 'ar': '5.4t/s', 'shallow': '14.5t/s', 'suffix': '8.2t/s', 'both': '18.4t/s'}
+[wallclock] 50/60 q473 math_reasoning {'wfd-ar': '9.4t/s*', 'wfd': '22.7t/s*', 'ar': '5.4t/s', 'shallow': '15.4t/s*', 'suffix': '8.1t/s*', 'both': '20.6t/s*', 'both-path': '22.2t/s*'}
+[wallclock] 51/60 q481 rag {'wfd': '23.3t/s*', 'ar': '5.5t/s', 'shallow': '14.4t/s*', 'suffix': '7.1t/s*', 'both': '18.5t/s*', 'both-path': '17.8t/s*', 'wfd-ar': '9.6t/s*'}
+[wallclock] 52/60 q489 rag {'ar': '5.4t/s', 'shallow': '14.7t/s', 'suffix': '8.5t/s', 'both': '20.1t/s', 'both-path': '21.0t/s', 'wfd-ar': '9.4t/s', 'wfd': '20.8t/s'}
+[wallclock] 53/60 q497 rag {'shallow': '12.7t/s*', 'suffix': '7.1t/s', 'both': '15.1t/s*', 'both-path': '14.2t/s*', 'wfd-ar': '9.5t/s', 'wfd': '18.1t/s*', 'ar': '5.4t/s'}
+[wallclock] 54/60 q505 rag {'suffix': '7.2t/s', 'both': '14.8t/s', 'both-path': '15.0t/s', 'wfd-ar': '9.1t/s', 'wfd': '15.8t/s', 'ar': '5.3t/s', 'shallow': '12.0t/s'}
+[wallclock] 55/60 q513 rag {'both': '19.7t/s', 'both-path': '20.9t/s', 'wfd-ar': '9.2t/s', 'wfd': '20.0t/s', 'ar': '5.4t/s', 'shallow': '14.6t/s', 'suffix': '9.3t/s'}
+[wallclock] 56/60 q521 rag {'both-path': '14.5t/s', 'wfd-ar': '9.0t/s', 'wfd': '16.8t/s', 'ar': '5.3t/s', 'shallow': '12.4t/s', 'suffix': '7.1t/s', 'both': '16.6t/s'}
+[wallclock] 57/60 q529 rag {'wfd-ar': '9.4t/s', 'wfd': '16.6t/s', 'ar': '5.4t/s', 'shallow': '12.3t/s', 'suffix': '6.6t/s', 'both': '13.2t/s', 'both-path': '13.6t/s'}
+[wallclock] 58/60 q537 rag {'wfd': '21.0t/s', 'ar': '5.5t/s', 'shallow': '14.3t/s', 'suffix': '13.3t/s*', 'both': '24.8t/s', 'both-path': '25.5t/s*', 'wfd-ar': '9.5t/s*'}
+[wallclock] 59/60 q545 rag {'ar': '5.4t/s', 'shallow': '10.6t/s', 'suffix': '6.6t/s', 'both': '11.7t/s', 'both-path': '11.8t/s', 'wfd-ar': '9.4t/s', 'wfd': '15.0t/s'}
+[wallclock] 60/60 q553 rag {'shallow': '13.6t/s', 'suffix': '8.2t/s', 'both': '17.1t/s', 'both-path': '17.2t/s', 'wfd-ar': '9.5t/s', 'wfd': '19.3t/s', 'ar': '5.4t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_101813-yjia00ho
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▆▆▇▅▅▆▅▃▇▁▇▅▆▆▅█▄▆▅▆▂▃▆▅▅▇▆▆▆▁▂▄▂▃▅▇▆▆▅▄
+wandb:              ar/same_as_ar ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▁▂▂▃▂▂▂▂▁▁▁▁▂▁▇▆█▂▂▅▂▂▄▂▂▂▂▂▃▃▃▂▂▂▂▂▂▂▂▁
+wandb:       both-path/same_as_ar █▁██▁▁▁█████▁▁▁██▁█▁██▁▁█▁▁██▁▁▁█▁▁███▁█
+wandb:      both/decode_tok_per_s ▂▂▂▂▂▂▁▁▁▂▁▁▁▂▂▆█▂▂▅▂▂▄▂▂▂▂▂▂▃▂▂▂▂▂▂▂▂▃▂
+wandb:            both/same_as_ar ▁███▁█▁▁██▁█▁█▁████████▁▁█▁▁█▁█▁█▁▁▁████
+wandb:                   question ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇██
+wandb:                question_id ▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇████
+wandb:   shallow/decode_tok_per_s ▃▆█▇▇▇▆▅▆▂▁▅▂▄▁▃▃▄█▅▇▄▆▆█▆▅▇▇▇█▇▇▆▅▇▅▄▆▅
+wandb:         shallow/same_as_ar ▁█▁▁██▁███████▁▁█▁████▁██▁██▁█████▁▁████
+wandb:                         +6 ...
+wandb: 
+wandb: Run summary:
+wandb:           ar/calls_eq_replay 0.68333
+wandb:           ar/calls_per_token 4
+wandb:             ar/cpu_over_wall 1.00062
+wandb:      ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_shallow 0.38454
+wandb:     ar/decode_speedup_vs_wfd 0.2615
+wandb:  ar/decode_speedup_vs_wfd-ar 0.57245
+wandb:          ar/decode_tok_per_s 5.49096
+wandb:         ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_shallow 0.38621
+wandb:                         +133 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_101813-yjia00ho
+wandb: Find logs at: /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_101813-yjia00ho/logs
+wfd-ar     decode     9.6 tok/s  x1.75 vs ar  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 0.63
+wfd        decode    21.0 tok/s  x3.82 vs ar  x2.19 vs wfd-ar  calls/tok 1.38 (replay nan)  ms/call 34.53  same-as-ar 0.65
+ar         decode     5.5 tok/s  x1.00 vs ar  x0.57 vs wfd-ar  calls/tok 4.00 (replay 4.02)  ms/call 45.53  same-as-ar 1.00
+shallow    decode    14.3 tok/s  x2.60 vs ar  x1.49 vs wfd-ar  calls/tok 1.45 (replay 1.48)  ms/call 48.36  same-as-ar 0.68
+suffix     decode     8.5 tok/s  x1.55 vs ar  x0.89 vs wfd-ar  calls/tok 2.47 (replay 2.49)  ms/call 47.50  same-as-ar 0.62
+both       decode    19.6 tok/s  x3.57 vs ar  x2.05 vs wfd-ar  calls/tok 1.02 (replay 1.02)  ms/call 49.94  same-as-ar 0.65
+both-path  decode    19.7 tok/s  x3.59 vs ar  x2.06 vs wfd-ar  calls/tok 1.02 (replay 1.04)  ms/call 49.66  same-as-ar 0.60
+=== bench-ouro done 2026-10-31T10:18:17Z
+=== bench-huginn start 2026-10-31T10:18:17Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.82s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.08s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.13s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.56s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.74s/it]
+[wallclock] huginn-3.5b bench-bfloat16: 60 questions, arms ['wfd-ar', 'wfd', 'ar', 'shallow', 'suffix', 'both', 'both-path'], max_seq 2428, attention check 0.00390625
+[wallclock] 1/60 q81 mt_bench {'wfd-ar': '10.1t/s*', 'wfd': '16.6t/s*', 'ar': '6.7t/s', 'shallow': '14.0t/s', 'suffix': '7.1t/s*', 'both': '13.4t/s*', 'both-path': '13.8t/s*'}
+[wallclock] 2/60 q89 mt_bench {'wfd': '18.6t/s', 'ar': '6.6t/s', 'shallow': '15.8t/s*', 'suffix': '8.1t/s', 'both': '16.6t/s*', 'both-path': '17.0t/s', 'wfd-ar': '10.0t/s'}
+[wallclock] 3/60 q97 mt_bench {'ar': '6.7t/s', 'shallow': '16.4t/s*', 'suffix': '9.0t/s*', 'both': '46.6t/s*', 'both-path': '20.0t/s*', 'wfd-ar': '10.1t/s*', 'wfd': '20.3t/s*'}
+[wallclock] 4/60 q105 mt_bench {'shallow': '19.7t/s*', 'suffix': '15.0t/s', 'both': '28.4t/s*', 'both-path': '30.2t/s*', 'wfd-ar': '10.0t/s*', 'wfd': '26.7t/s', 'ar': '6.7t/s'}
+[wallclock] 5/60 q113 mt_bench {'suffix': '11.3t/s*', 'both': '22.4t/s*', 'both-path': '20.7t/s*', 'wfd-ar': '10.1t/s*', 'wfd': '23.8t/s*', 'ar': '6.5t/s', 'shallow': '17.9t/s*'}
+[wallclock] 6/60 q121 mt_bench {'both': '19.2t/s', 'both-path': '20.2t/s*', 'wfd-ar': '10.1t/s*', 'wfd': '23.6t/s', 'ar': '6.5t/s', 'shallow': '18.7t/s', 'suffix': '8.6t/s'}
+[wallclock] 7/60 q129 mt_bench {'both-path': '29.6t/s', 'wfd-ar': '10.1t/s', 'wfd': '25.7t/s', 'ar': '6.5t/s', 'shallow': '20.2t/s', 'suffix': '13.7t/s', 'both': '28.4t/s'}
+[wallclock] 8/60 q137 mt_bench {'wfd-ar': '9.8t/s', 'wfd': '24.1t/s', 'ar': '6.4t/s', 'shallow': '17.2t/s', 'suffix': '8.4t/s', 'both': '19.2t/s', 'both-path': '19.4t/s'}
+[wallclock] 9/60 q145 mt_bench {'wfd': '17.3t/s', 'ar': '6.7t/s', 'shallow': '13.3t/s', 'suffix': '7.8t/s', 'both': '13.1t/s', 'both-path': '13.7t/s', 'wfd-ar': '10.1t/s'}
+[wallclock] 10/60 q153 mt_bench {'ar': '6.6t/s', 'shallow': '14.8t/s*', 'suffix': '23.4t/s*', 'both': '14.0t/s*', 'both-path': '15.7t/s*', 'wfd-ar': '10.0t/s*', 'wfd': '19.9t/s*'}
+[wallclock] 11/60 q161 translation {'shallow': '13.6t/s', 'suffix': '10.1t/s', 'both': '15.1t/s', 'both-path': '16.0t/s', 'wfd-ar': '10.1t/s', 'wfd': '20.4t/s', 'ar': '6.6t/s'}
+[wallclock] 12/60 q169 translation {'suffix': '6.4t/s', 'both': '6.1t/s', 'both-path': '6.6t/s', 'wfd-ar': '9.6t/s', 'wfd': '7.9t/s', 'ar': '6.4t/s', 'shallow': '6.4t/s'}
+[wallclock] 13/60 q177 translation {'both': '6.4t/s*', 'both-path': '7.0t/s*', 'wfd-ar': '9.6t/s', 'wfd': '8.7t/s*', 'ar': '6.4t/s', 'shallow': '6.1t/s', 'suffix': '7.5t/s'}
+[wallclock] 14/60 q185 translation {'both-path': '7.8t/s', 'wfd-ar': '9.7t/s', 'wfd': '11.2t/s', 'ar': '6.4t/s', 'shallow': '7.9t/s', 'suffix': '6.3t/s', 'both': '7.1t/s'}
+[wallclock] 15/60 q193 translation {'wfd-ar': '9.4t/s*', 'wfd': '7.3t/s*', 'ar': '6.3t/s', 'shallow': '5.8t/s', 'suffix': '7.0t/s*', 'both': '5.7t/s*', 'both-path': '6.2t/s*'}
+[wallclock] 16/60 q201 translation {'wfd': '7.8t/s', 'ar': '6.3t/s', 'shallow': '6.2t/s', 'suffix': '6.5t/s', 'both': '5.8t/s', 'both-path': '6.2t/s', 'wfd-ar': '9.4t/s'}
+[wallclock] 17/60 q209 translation {'ar': '6.2t/s', 'shallow': '6.9t/s', 'suffix': '6.9t/s', 'both': '6.5t/s', 'both-path': '6.9t/s', 'wfd-ar': '9.5t/s', 'wfd': '10.2t/s'}
+[wallclock] 18/60 q217 translation {'shallow': '7.2t/s', 'suffix': '6.7t/s*', 'both': '6.6t/s*', 'both-path': '6.9t/s*', 'wfd-ar': '9.7t/s*', 'wfd': '10.0t/s*', 'ar': '6.5t/s'}
+[wallclock] 19/60 q225 translation {'suffix': '7.3t/s', 'both': '6.9t/s', 'both-path': '7.4t/s', 'wfd-ar': '9.9t/s', 'wfd': '9.4t/s', 'ar': '6.5t/s', 'shallow': '6.9t/s'}
+[wallclock] 20/60 q233 translation {'both': '11.3t/s', 'both-path': '11.8t/s', 'wfd-ar': '9.8t/s', 'wfd': '14.0t/s', 'ar': '6.5t/s', 'shallow': '10.8t/s', 'suffix': '10.0t/s'}
+[wallclock] 21/60 q241 summarization {'both-path': '22.9t/s*', 'wfd-ar': '9.4t/s', 'wfd': '17.2t/s', 'ar': '6.4t/s', 'shallow': '15.1t/s', 'suffix': '11.7t/s', 'both': '21.1t/s*'}
+[wallclock] 22/60 q248 summarization {'wfd-ar': '7.9t/s', 'wfd': '9.6t/s', 'ar': '5.6t/s', 'shallow': '9.4t/s', 'suffix': '10.0t/s', 'both': '10.5t/s', 'both-path': '11.5t/s'}
+[wallclock] 23/60 q257 summarization {'wfd': '19.0t/s', 'ar': '6.2t/s', 'shallow': '15.3t/s', 'suffix': '12.7t/s', 'both': '17.8t/s', 'both-path': '19.2t/s', 'wfd-ar': '8.9t/s'}
+[wallclock] 24/60 q265 summarization {'ar': '6.3t/s', 'shallow': '12.0t/s', 'suffix': '15.7t/s', 'both': '17.5t/s', 'both-path': '18.3t/s', 'wfd-ar': '9.2t/s', 'wfd': '17.8t/s'}
+[wallclock] 25/60 q272 summarization {'shallow': '15.2t/s*', 'suffix': '8.1t/s', 'both': '14.0t/s*', 'both-path': '9.6t/s', 'wfd-ar': '8.2t/s*', 'wfd': '9.4t/s', 'ar': '5.8t/s'}
+[wallclock] 26/60 q280 summarization {'suffix': '28.6t/s', 'both': '36.7t/s', 'both-path': '37.5t/s', 'wfd-ar': '8.8t/s', 'wfd': '20.2t/s', 'ar': '6.1t/s', 'shallow': '18.2t/s'}
+[wallclock] 27/60 q289 summarization {'both': '28.1t/s', 'both-path': '28.1t/s', 'wfd-ar': '8.7t/s', 'wfd': '22.8t/s', 'ar': '6.0t/s', 'shallow': '18.3t/s', 'suffix': '20.8t/s'}
+[wallclock] 28/60 q297 summarization {'both-path': '9.7t/s', 'wfd-ar': '7.6t/s', 'wfd': '9.7t/s', 'ar': '5.5t/s', 'shallow': '9.2t/s', 'suffix': '7.2t/s', 'both': '8.6t/s'}
+[wallclock] 29/60 q305 summarization {'wfd-ar': '8.9t/s', 'wfd': '18.9t/s', 'ar': '6.1t/s', 'shallow': '17.0t/s', 'suffix': '14.5t/s', 'both': '28.7t/s', 'both-path': '30.8t/s'}
+[wallclock] 30/60 q313 summarization {'wfd': '13.2t/s', 'ar': '5.9t/s', 'shallow': '11.5t/s', 'suffix': '7.3t/s', 'both': '12.9t/s', 'both-path': '12.2t/s', 'wfd-ar': '8.5t/s'}
+[wallclock] 31/60 q321 qa {'ar': '5.6t/s', 'shallow': '7.1t/s', 'suffix': '7.0t/s', 'both': '7.2t/s', 'both-path': '7.3t/s', 'wfd-ar': '7.9t/s', 'wfd': '8.4t/s'}
+[wallclock] 32/60 q329 qa {'shallow': '14.1t/s', 'suffix': '10.8t/s*', 'both': '16.9t/s', 'both-path': '17.4t/s', 'wfd-ar': '10.1t/s', 'wfd': '18.3t/s*', 'ar': '6.6t/s'}
+[wallclock] 33/60 q337 qa {'suffix': '8.6t/s', 'both': '14.6t/s', 'both-path': '16.0t/s*', 'wfd-ar': '10.1t/s', 'wfd': '17.3t/s', 'ar': '6.5t/s', 'shallow': '13.5t/s'}
+[wallclock] 34/60 q345 qa {'both': '5.7t/s', 'both-path': '5.8t/s', 'wfd-ar': '6.4t/s', 'wfd': '6.6t/s', 'ar': '4.8t/s', 'shallow': '5.8t/s', 'suffix': '4.8t/s'}
+[wallclock] 35/60 q353 qa {'both-path': '58.4t/s', 'wfd-ar': '10.0t/s*', 'wfd': '34.6t/s*', 'ar': '6.6t/s', 'shallow': '23.6t/s', 'suffix': '51.6t/s*', 'both': '54.5t/s*'}
+[wallclock] 36/60 q361 qa {'wfd-ar': '7.9t/s', 'wfd': '6.5t/s', 'ar': '5.5t/s', 'shallow': '5.3t/s', 'suffix': '5.3t/s', 'both': '5.2t/s', 'both-path': '5.4t/s'}
+[wallclock] 37/60 q369 qa {'wfd': '17.7t/s*', 'ar': '6.7t/s', 'shallow': '13.6t/s*', 'suffix': '46.6t/s', 'both': '61.9t/s', 'both-path': '63.9t/s', 'wfd-ar': '10.1t/s*'}
+[wallclock] 38/60 q377 qa {'ar': '6.5t/s', 'shallow': '9.8t/s', 'suffix': '7.9t/s', 'both': '10.3t/s', 'both-path': '11.2t/s', 'wfd-ar': '10.1t/s*', 'wfd': '13.0t/s'}
+[wallclock] 39/60 q385 qa {'shallow': '4.1t/s', 'suffix': '5.1t/s', 'both': '3.9t/s', 'both-path': '4.1t/s', 'wfd-ar': '7.3t/s', 'wfd': '6.6t/s', 'ar': '5.3t/s'}
+[wallclock] 40/60 q393 qa {'suffix': '7.6t/s', 'both': '13.1t/s', 'both-path': '14.6t/s', 'wfd-ar': '10.1t/s', 'wfd': '18.7t/s', 'ar': '6.5t/s', 'shallow': '14.5t/s'}
+[wallclock] 41/60 q401 math_reasoning {'both': '15.2t/s', 'both-path': '17.6t/s', 'wfd-ar': '10.0t/s*', 'wfd': '17.8t/s', 'ar': '6.6t/s', 'shallow': '13.8t/s*', 'suffix': '9.4t/s'}
+[wallclock] 42/60 q409 math_reasoning {'both-path': '17.4t/s', 'wfd-ar': '10.0t/s', 'wfd': '18.9t/s', 'ar': '6.5t/s', 'shallow': '13.7t/s', 'suffix': '9.3t/s', 'both': '15.4t/s'}
+[wallclock] 43/60 q417 math_reasoning {'wfd-ar': '9.9t/s*', 'wfd': '21.4t/s*', 'ar': '6.5t/s', 'shallow': '16.0t/s*', 'suffix': '9.6t/s*', 'both': '18.6t/s*', 'both-path': '20.1t/s*'}
+[wallclock] 44/60 q425 math_reasoning {'wfd': '18.7t/s*', 'ar': '6.5t/s', 'shallow': '15.2t/s*', 'suffix': '10.4t/s*', 'both': '15.8t/s*', 'both-path': '17.4t/s*', 'wfd-ar': '10.1t/s*'}
+[wallclock] 45/60 q433 math_reasoning {'ar': '4.6t/s', 'shallow': '4.0t/s*', 'suffix': '4.4t/s', 'both': '5.0t/s*', 'both-path': '3.6t/s*', 'wfd-ar': '6.0t/s', 'wfd': '4.4t/s'}
+[wallclock] 46/60 q441 math_reasoning {'shallow': '15.3t/s*', 'suffix': '10.0t/s*', 'both': '16.6t/s', 'both-path': '19.0t/s', 'wfd-ar': '10.1t/s*', 'wfd': '22.4t/s', 'ar': '6.5t/s'}
+[wallclock] 47/60 q449 math_reasoning {'suffix': '9.1t/s*', 'both': '14.2t/s', 'both-path': '14.7t/s*', 'wfd-ar': '10.1t/s', 'wfd': '16.2t/s*', 'ar': '6.6t/s', 'shallow': '12.7t/s*'}
+[wallclock] 48/60 q457 math_reasoning {'both': '19.1t/s', 'both-path': '20.5t/s', 'wfd-ar': '10.0t/s', 'wfd': '18.8t/s', 'ar': '6.5t/s', 'shallow': '14.8t/s', 'suffix': '11.7t/s'}
+[wallclock] 49/60 q465 math_reasoning {'both-path': '16.9t/s', 'wfd-ar': '10.1t/s*', 'wfd': '18.8t/s', 'ar': '6.5t/s', 'shallow': '12.1t/s*', 'suffix': '8.8t/s*', 'both': '12.0t/s*'}
+[wallclock] 50/60 q473 math_reasoning {'wfd-ar': '10.1t/s', 'wfd': '20.2t/s*', 'ar': '6.6t/s', 'shallow': '15.7t/s', 'suffix': '9.2t/s*', 'both': '17.7t/s*', 'both-path': '19.1t/s'}
+[wallclock] 51/60 q481 rag {'wfd': '31.5t/s', 'ar': '6.4t/s', 'shallow': '25.0t/s', 'suffix': '68.9t/s', 'both': '70.8t/s', 'both-path': '71.3t/s', 'wfd-ar': '9.8t/s'}
+[wallclock] 52/60 q489 rag {'ar': '4.8t/s', 'shallow': '9.1t/s', 'suffix': '7.7t/s', 'both': '10.4t/s', 'both-path': '10.4t/s', 'wfd-ar': '6.3t/s', 'wfd': '9.7t/s'}
+[wallclock] 53/60 q497 rag {'shallow': '7.3t/s', 'suffix': '7.5t/s', 'both': '7.7t/s', 'both-path': '8.4t/s', 'wfd-ar': '7.9t/s', 'wfd': '8.5t/s', 'ar': '5.5t/s'}
+[wallclock] 54/60 q505 rag {'suffix': '3.4t/s', 'both': '2.6t/s', 'both-path': '2.9t/s', 'wfd-ar': '4.2t/s', 'wfd': '3.3t/s', 'ar': '3.5t/s', 'shallow': '2.9t/s'}
+[wallclock] 55/60 q513 rag {'both': '4.4t/s', 'both-path': '4.3t/s', 'wfd-ar': '4.2t/s', 'wfd': '4.8t/s', 'ar': '3.5t/s', 'shallow': '4.5t/s', 'suffix': '3.4t/s'}
+[wallclock] 56/60 q521 rag {'both-path': '4.5t/s', 'wfd-ar': '4.2t/s', 'wfd': '4.8t/s', 'ar': '3.5t/s', 'shallow': '4.5t/s', 'suffix': '3.5t/s', 'both': '4.4t/s'}
+[wallclock] 57/60 q529 rag {'wfd-ar': '8.0t/s', 'wfd': '12.7t/s', 'ar': '5.7t/s', 'shallow': '10.3t/s', 'suffix': '10.0t/s', 'both': '12.1t/s', 'both-path': '11.5t/s'}
+[wallclock] 58/60 q537 rag {'wfd': '6.2t/s', 'ar': '4.0t/s', 'shallow': '5.8t/s', 'suffix': '5.6t/s', 'both': '6.1t/s', 'both-path': '6.2t/s', 'wfd-ar': '4.9t/s'}
+[wallclock] 59/60 q545 rag {'ar': '6.6t/s', 'shallow': '11.7t/s*', 'suffix': '8.5t/s*', 'both': '48.0t/s', 'both-path': '54.5t/s', 'wfd-ar': '9.7t/s*', 'wfd': '34.2t/s*'}
+[wallclock] 60/60 q553 rag {'shallow': '16.3t/s', 'suffix': '21.7t/s', 'both': '28.9t/s', 'both-path': '29.9t/s', 'wfd-ar': '8.6t/s', 'wfd': '18.1t/s', 'ar': '5.9t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_130206-2fuojaan
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s █▇▁▂▂▆▅▅▅▆▅▆▆▅▅▄▆▅▇▅▄▆▅▆▄▆▃▃▂▃▃▄▃▃▄▆▂▃▅▂
+wandb:              ar/same_as_ar ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▂▂▃▂▂▂▂▂▂▁▁▁▃▂▃▇▂▅▂▂▆▁▆▂▁▂▂▂▂▁▂▂▂█▂▂▂▂▂▆
+wandb:       both-path/same_as_ar ▁█▁▁▁███▁█▁███████████▁███████▁▁▁███████
+wandb:      both/decode_tok_per_s ▅▃▂▂▂▂▁▁▁▁▁▁▂▃▃▂▅▂▁▂▁▆▁▂▁▂▂▂▂▁▂▂▂▂█▂▁▂▂▅
+wandb:            both/same_as_ar ▁▁▁▁█████▁██▁█▁▁███████▁████▁██▁▁███████
+wandb:                   question ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇██
+wandb:                question_id ▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇████
+wandb:   shallow/decode_tok_per_s ▄▅▅▅▆▄▄▄▂▁▂▂▂▂▃▄▇▇█▄▄▂▄▄▂▁▄▄▄▄▁▄▄▅█▃▃▄▄▇
+wandb:         shallow/same_as_ar ▁▁▁▁████████████▁████████▁██▁█▁█▁██████▁
+wandb:                         +6 ...
+wandb: 
+wandb: Run summary:
+wandb:           ar/calls_eq_replay 0.76667
+wandb:           ar/calls_per_token 32
+wandb:             ar/cpu_over_wall 1.00053
+wandb:      ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_shallow 0.41847
+wandb:     ar/decode_speedup_vs_wfd 0.30247
+wandb:  ar/decode_speedup_vs_wfd-ar 0.65586
+wandb:          ar/decode_tok_per_s 6.60923
+wandb:         ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_shallow 0.42588
+wandb:                         +133 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_130206-2fuojaan
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_130206-2fuojaan/logs
+wfd-ar     decode    10.1 tok/s  x1.52 vs ar  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 0.70
+wfd        decode    21.9 tok/s  x3.31 vs ar  x2.17 vs wfd-ar  calls/tok 8.59 (replay nan)  ms/call 5.32  same-as-ar 0.75
+ar         decode     6.6 tok/s  x1.00 vs ar  x0.66 vs wfd-ar  calls/tok 32.00 (replay 27.36)  ms/call 4.73  same-as-ar 1.00
+shallow    decode    15.8 tok/s  x2.39 vs ar  x1.57 vs wfd-ar  calls/tok 10.04 (replay 10.29)  ms/call 6.30  same-as-ar 0.75
+suffix     decode    13.4 tok/s  x2.03 vs ar  x1.33 vs wfd-ar  calls/tok 15.06 (replay 14.80)  ms/call 4.94  same-as-ar 0.75
+both       decode    23.3 tok/s  x3.52 vs ar  x2.31 vs wfd-ar  calls/tok 6.29 (replay 5.56)  ms/call 6.82  same-as-ar 0.72
+both-path  decode    23.6 tok/s  x3.57 vs ar  x2.34 vs wfd-ar  calls/tok 6.67 (replay 6.16)  ms/call 6.35  same-as-ar 0.75
+=== bench-huginn done 2026-10-31T13:02:10Z
+=== sum-ouro start 2026-10-31T13:02:13Z
+wfd-ar     decode     9.6 tok/s  x1.75 vs ar  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 0.63
+wfd        decode    21.0 tok/s  x3.82 vs ar  x2.19 vs wfd-ar  calls/tok 1.38 (replay nan)  ms/call 34.53  same-as-ar 0.65
+ar         decode     5.5 tok/s  x1.00 vs ar  x0.57 vs wfd-ar  calls/tok 4.00 (replay 4.02)  ms/call 45.53  same-as-ar 1.00
+shallow    decode    14.3 tok/s  x2.60 vs ar  x1.49 vs wfd-ar  calls/tok 1.45 (replay 1.48)  ms/call 48.36  same-as-ar 0.68
+suffix     decode     8.5 tok/s  x1.55 vs ar  x0.89 vs wfd-ar  calls/tok 2.47 (replay 2.49)  ms/call 47.50  same-as-ar 0.62
+both       decode    19.6 tok/s  x3.57 vs ar  x2.05 vs wfd-ar  calls/tok 1.02 (replay 1.02)  ms/call 49.94  same-as-ar 0.65
+both-path  decode    19.7 tok/s  x3.59 vs ar  x2.06 vs wfd-ar  calls/tok 1.02 (replay 1.04)  ms/call 49.66  same-as-ar 0.60
+=== sum-ouro done 2026-10-31T13:02:19Z
+=== sum-huginn start 2026-10-31T13:02:19Z
+wfd-ar     decode    10.1 tok/s  x1.52 vs ar  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 0.70
+wfd        decode    21.9 tok/s  x3.31 vs ar  x2.17 vs wfd-ar  calls/tok 8.59 (replay nan)  ms/call 5.32  same-as-ar 0.75
+ar         decode     6.6 tok/s  x1.00 vs ar  x0.66 vs wfd-ar  calls/tok 32.00 (replay 27.36)  ms/call 4.73  same-as-ar 1.00
+shallow    decode    15.8 tok/s  x2.39 vs ar  x1.57 vs wfd-ar  calls/tok 10.04 (replay 10.29)  ms/call 6.30  same-as-ar 0.75
+suffix     decode    13.4 tok/s  x2.03 vs ar  x1.33 vs wfd-ar  calls/tok 15.06 (replay 14.80)  ms/call 4.94  same-as-ar 0.75
+both       decode    23.3 tok/s  x3.52 vs ar  x2.31 vs wfd-ar  calls/tok 6.29 (replay 5.56)  ms/call 6.82  same-as-ar 0.72
+both-path  decode    23.6 tok/s  x3.57 vs ar  x2.34 vs wfd-ar  calls/tok 6.67 (replay 6.16)  ms/call 6.35  same-as-ar 0.75
+=== sum-huginn done 2026-10-31T13:02:25Z
+=== all done 2026-10-31T13:02:25Z

@@ -1,0 +1,93 @@
+{
+ "args": {
+  "model": "ouro-2.6b",
+  "runs_dir": "/runs/sb-chat/ouro-2.6b",
+  "out_dir": "/out/sb-chat/ouro-2.6b",
+  "hf_root": "/hf/hub",
+  "wfd_root": "/wfd",
+  "suffix_lib": "/arctic",
+  "prompt_format": "chat",
+  "max_new_tokens": 64,
+  "max_prompt_tokens": 3000,
+  "per_category": 10,
+  "arms": "wfd,ar,wavefront,shallow,suffix,both,both-path",
+  "draft_depth": 0,
+  "max_draft": 16,
+  "spec_factor": 1.0,
+  "prune_top": 0,
+  "max_nodes": 256,
+  "repeats": 1,
+  "warmup_tokens": 8,
+  "mode": "check",
+  "allow_shared_gpu": false,
+  "seed": 0,
+  "threads": 1,
+  "tracking_defaults": "/repo/configs/experiment-tracking-defaults.json",
+  "summarize": false,
+  "monitor": null,
+  "own_user": "siqizhu4",
+  "batch": "loop-wfd-same-engine-20261031"
+ },
+ "T": 4,
+ "d": 1,
+ "max_seq": 841,
+ "stop": [
+  0,
+  2
+ ],
+ "our_gpu_pids": [
+  1
+ ],
+ "uid": 1015,
+ "max_nodes": {
+  "ar": 256,
+  "wavefront": 76,
+  "shallow": 256,
+  "suffix": 256,
+  "both": 256,
+  "both-path": 256
+ },
+ "attention_self_check_max_abs_err": null,
+ "gpu_uuid": "GPU-d1972508-51b0-ae3d-188b-f1613ec33e07",
+ "cpu_affinity": [
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31
+ ],
+ "torch": "2.9.0+cu128",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "env_start": {
+  "time": 1793474173.0571458,
+  "gpu_util": 19,
+  "mem_used_mib": 14775,
+  "sm_mhz": 2355,
+  "mem_mhz": 12481,
+  "temp_c": 30,
+  "power_w": 87.013,
+  "throttle_reasons": 0,
+  "compute_procs": [
+   [
+    1,
+    14130
+   ]
+  ],
+  "loadavg": [
+   7.5947265625,
+   7.1494140625,
+   7.21875
+  ]
+ },
+ "questions": [
+  81,
+  161,
+  241,
+  321,
+  401,
+  481
+ ]
+}

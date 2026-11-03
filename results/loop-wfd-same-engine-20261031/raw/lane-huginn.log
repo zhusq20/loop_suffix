@@ -1,0 +1,68 @@
+=== check-huginn start 2026-10-31T19:16:14Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 432.15it/s]
+[wallclock] huginn-3.5b check-float32: 6 questions, arms ['wfd', 'ar', 'wavefront', 'shallow', 'suffix', 'both', 'both-path'], max_seq 844, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+[wallclock] 1/6 q81 mt_bench {'wfd': '9.8t/s', 'ar': '5.2t/s', 'wavefront': '8.7t/s', 'shallow': '7.9t/s', 'suffix': '5.3t/s', 'both': '6.7t/s', 'both-path': '7.2t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [728, 728]}
+[wallclock] 2/6 q161 translation {'ar': '5.3t/s', 'wavefront': '8.5t/s', 'shallow': '8.3t/s', 'suffix': '8.0t/s', 'both': '5.6t/s', 'both-path': '8.1t/s', 'wfd': '11.1t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [644, 644]}
+[wallclock] 3/6 q241 summarization {'wavefront': '7.4t/s', 'shallow': '7.5t/s', 'suffix': '7.0t/s', 'both': '6.3t/s', 'both-path': '8.5t/s', 'wfd': '7.1t/s', 'ar': '4.5t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [644, 644]}
+[wallclock] 4/6 q321 qa {'shallow': '4.2t/s', 'suffix': '4.7t/s', 'both': '3.8t/s', 'both-path': '4.1t/s', 'wfd': '4.6t/s', 'ar': '3.9t/s', 'wavefront': '4.2t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [72, 72]}
+[wallclock] 5/6 q401 math_reasoning {'suffix': '8.2t/s', 'both': '5.3t/s', 'both-path': '8.3t/s', 'wfd': '9.9t/s', 'ar': '5.3t/s', 'wavefront': '8.6t/s', 'shallow': '8.0t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [728, 728]}
+[wallclock] 6/6 q481 rag {'both': '16.4t/s', 'both-path': '16.6t/s', 'wfd': '9.9t/s', 'ar': '4.5t/s', 'wavefront': '10.3t/s', 'shallow': '10.0t/s', 'suffix': '15.9t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [392, 392]}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_192306-qz8s1kwh
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▅▆▁██▁
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▁▂▂▁▂█
+wandb:       both-path/same_as_ar ▁▁▁▁▁▁
+wandb:      both/decode_tok_per_s ▁▁▂▁▁█
+wandb:            both/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb:   shallow/decode_tok_per_s ▃▃▄▁▃█
+wandb:         shallow/same_as_ar ▁▁▁▁▁▁
+wandb:                         +6 ...
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 1
+wandb:             ar/calls_per_token 32
+wandb:               ar/cpu_over_wall 1.0005
+wandb:        ar/decode_speedup_vs_ar 1
+wandb:   ar/decode_speedup_vs_shallow 0.56463
+wandb: ar/decode_speedup_vs_wavefront 0.53996
+wandb:       ar/decode_speedup_vs_wfd 0.48966
+wandb:            ar/decode_tok_per_s 5.3744
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:      ar/e2e_speedup_vs_shallow 0.60276
+wandb:                           +137 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_192306-qz8s1kwh
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_192306-qz8s1kwh/logs
+wavefront vs wfd: {'questions': 6, 'same_tokens': 6, 'same_calls': 6, 'same_both': 6, 'calls_ours_total': 3208, 'calls_wfd_total': 3208}
+clean questions 6/6
+wfd        decode    11.0 tok/s  x2.04 vs ar  x1.10 vs wavefront  xnan vs wfd-ar  calls/tok 10.06 (replay nan)  ms/call 9.06  same-as-ar 1.00
+ar         decode     5.4 tok/s  x1.00 vs ar  x0.54 vs wavefront  xnan vs wfd-ar  calls/tok 32.00 (replay 32.00)  ms/call 5.81  same-as-ar 1.00
+wavefront  decode    10.0 tok/s  x1.85 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 10.06 (replay 10.67)  ms/call 9.99  same-as-ar 1.00
+shallow    decode     9.5 tok/s  x1.77 vs ar  x0.96 vs wavefront  xnan vs wfd-ar  calls/tok 11.02 (replay 10.93)  ms/call 9.53  same-as-ar 1.00
+suffix     decode     8.9 tok/s  x1.66 vs ar  x0.90 vs wavefront  xnan vs wfd-ar  calls/tok 18.26 (replay 18.46)  ms/call 6.13  same-as-ar 1.00
+both       decode     7.7 tok/s  x1.42 vs ar  x0.77 vs wavefront  xnan vs wfd-ar  calls/tok 8.51 (replay 8.34)  ms/call 15.35  same-as-ar 1.00
+both-path  decode    10.4 tok/s  x1.93 vs ar  x1.04 vs wavefront  xnan vs wfd-ar  calls/tok 8.43 (replay 8.34)  ms/call 11.43  same-as-ar 1.00
+=== check-huginn done rc=0 2026-10-31T19:23:09Z
+=== bench-huginn start 2026-10-31T19:23:09Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.85s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.06s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.08s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.70s/it]
+[wallclock] huginn-3.5b bench-bfloat16: 60 questions, arms ['ar', 'wavefront', 'shallow', 'suffix', 'both', 'both-path'], max_seq 2444, attention check 0.00390625
+[wallclock] 1/60 q81 mt_bench {'ar': '6.6t/s', 'wavefront': '13.9t/s', 'shallow': '13.2t/s*', 'suffix': '7.0t/s*', 'both': '12.8t/s*', 'both-path': '13.3t/s*'}
+[wallclock] 2/60 q89 mt_bench {'wavefront': '16.2t/s*', 'shallow': '14.8t/s', 'suffix': '7.9t/s', 'both': '16.2t/s*', 'both-path': '15.6t/s*', 'ar': '6.6t/s'}
+[wallclock] 3/60 q97 mt_bench {'shallow': '16.1t/s*', 'suffix': '8.8t/s*', 'both': '17.3t/s*', 'both-path': '19.9t/s*', 'ar': '6.7t/s', 'wavefront': '16.1t/s*'}
+[wallclock] 4/60 q105 mt_bench {'suffix': '14.7t/s', 'both': '28.4t/s*', 'both-path': '29.9t/s*', 'ar': '6.6t/s', 'wavefront': '20.5t/s*', 'shallow': '18.6t/s*'}
+[wallclock] 5/60 q113 mt_bench {'both': '23.8t/s*', 'both-path': '24.6t/s*', 'ar': '6.7t/s', 'wavefront': '19.7t/s*', 'shallow': '16.8t/s*', 'suffix': '11.3t/s*'}

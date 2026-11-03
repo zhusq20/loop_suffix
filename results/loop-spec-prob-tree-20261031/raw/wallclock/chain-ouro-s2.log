@@ -1,0 +1,63 @@
+=== bench start 2026-11-01T00:30:47Z
+[wallclock] ouro-2.6b bench-bfloat16: 60 questions, arms ['ar', 'wavefront', 'both-path', 'prob-low', 'prob-load'], max_seq 2648, attention check 0.001953125
+[wallclock] 29/60 q305 summarization {'prob-low': '23.9t/s', 'prob-load': '20.8t/s', 'ar': '5.3t/s', 'wavefront': '13.0t/s*', 'both-path': '15.5t/s'}
+[wallclock] 33/60 q337 qa {'both-path': '16.0t/s', 'prob-low': '21.5t/s', 'prob-load': '20.5t/s', 'ar': '5.2t/s', 'wavefront': '15.0t/s'}
+[wallclock] 37/60 q369 qa {'wavefront': '13.4t/s*', 'both-path': '15.4t/s', 'prob-low': '20.5t/s*', 'prob-load': '18.2t/s', 'ar': '5.3t/s'}
+[wallclock] 41/60 q401 math_reasoning {'ar': '5.2t/s', 'wavefront': '15.2t/s', 'both-path': '19.0t/s', 'prob-low': '24.2t/s', 'prob-load': '24.3t/s'}
+[wallclock] 45/60 q433 math_reasoning {'prob-load': '34.0t/s', 'ar': '5.3t/s', 'wavefront': '17.1t/s', 'both-path': '24.8t/s', 'prob-low': '34.7t/s'}
+[wallclock] 49/60 q465 math_reasoning {'prob-low': '22.3t/s', 'prob-load': '18.4t/s', 'ar': '5.2t/s', 'wavefront': '14.2t/s', 'both-path': '17.8t/s'}
+[wallclock] 53/60 q497 rag {'both-path': '13.8t/s*', 'prob-low': '20.4t/s', 'prob-load': '16.3t/s', 'ar': '5.2t/s', 'wavefront': '12.2t/s*'}
+[wallclock] 57/60 q529 rag {'wavefront': '11.7t/s', 'both-path': '13.0t/s', 'prob-low': '19.9t/s', 'prob-load': '17.0t/s', 'ar': '5.2t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/ouro-2.6b-s2/wandb/offline-run-20261101_004329-zn75lijn
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▆▁▅▄▅█▃▆
+wandb:              ar/same_as_ar ▁▁▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▂▃▂▅█▄▁▁
+wandb:       both-path/same_as_ar ██████▁█
+wandb: prob-load/decode_tok_per_s ▃▃▂▅█▂▁▁
+wandb:       prob-load/same_as_ar ▁▁▁▁▁▁▁▁
+wandb:  prob-low/decode_tok_per_s ▃▂▁▄█▃▁▁
+wandb:        prob-low/same_as_ar ██▁█████
+wandb:                   question ▁▂▃▄▅▆▇█
+wandb:                question_id ▁▂▃▄▅▆▇█
+wandb:                         +2 ...
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 1
+wandb:             ar/calls_per_token 4
+wandb:               ar/cpu_over_wall 1.00056
+wandb:        ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_both-path 0.31326
+wandb: ar/decode_speedup_vs_wavefront 0.37276
+wandb:            ar/decode_tok_per_s 5.24812
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_both-path 0.31742
+wandb:    ar/e2e_speedup_vs_wavefront 0.37651
+wandb:                            +97 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/ouro-2.6b-s2/wandb/offline-run-20261101_004329-zn75lijn
+wandb: Find logs at: /out/sb-chat/ouro-2.6b-s2/wandb/offline-run-20261101_004329-zn75lijn/logs
+clean questions 8/8
+prob-low   decode    24.3 tok/s  x4.63 vs ar  x1.73 vs wavefront  xnan vs wfd-ar  calls/tok 0.77 (replay 0.77)  ms/call 53.30  same-as-ar 0.88
+prob-load  decode    21.5 tok/s  x4.09 vs ar  x1.53 vs wavefront  xnan vs wfd-ar  calls/tok 0.89 (replay 0.89)  ms/call 52.11  same-as-ar 1.00
+ar         decode     5.2 tok/s  x1.00 vs ar  x0.37 vs wavefront  xnan vs wfd-ar  calls/tok 4.00 (replay 4.00)  ms/call 47.64  same-as-ar 1.00
+wavefront  decode    14.1 tok/s  x2.68 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 1.41 (replay 1.37)  ms/call 50.46  same-as-ar 0.62
+both-path  decode    16.8 tok/s  x3.19 vs ar  x1.19 vs wavefront  xnan vs wfd-ar  calls/tok 1.14 (replay 1.09)  ms/call 52.56  same-as-ar 0.88
+=== bench done 2026-11-01T00:43:33Z
+=== sum start 2026-11-01T00:43:33Z
+clean questions 8/8
+prob-low   decode    24.3 tok/s  x4.63 vs ar  x1.73 vs wavefront  xnan vs wfd-ar  calls/tok 0.77 (replay 0.77)  ms/call 53.30  same-as-ar 0.88
+prob-load  decode    21.5 tok/s  x4.09 vs ar  x1.53 vs wavefront  xnan vs wfd-ar  calls/tok 0.89 (replay 0.89)  ms/call 52.11  same-as-ar 1.00
+ar         decode     5.2 tok/s  x1.00 vs ar  x0.37 vs wavefront  xnan vs wfd-ar  calls/tok 4.00 (replay 4.00)  ms/call 47.64  same-as-ar 1.00
+wavefront  decode    14.1 tok/s  x2.68 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 1.41 (replay 1.37)  ms/call 50.46  same-as-ar 0.62
+both-path  decode    16.8 tok/s  x3.19 vs ar  x1.19 vs wavefront  xnan vs wfd-ar  calls/tok 1.14 (replay 1.09)  ms/call 52.56  same-as-ar 0.88
+=== sum done 2026-11-01T00:43:38Z
+=== all done 2026-11-01T00:43:39Z

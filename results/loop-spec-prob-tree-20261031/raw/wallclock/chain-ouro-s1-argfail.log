@@ -1,0 +1,28 @@
+=== bench start 2026-11-01T00:29:01Z
+usage: loop_suffix_spec_wallclock.py [-h] --model {huginn-3.5b,ouro-2.6b}
+                                     --runs-dir RUNS_DIR --out-dir OUT_DIR
+                                     [--hf-root HF_ROOT] [--wfd-root WFD_ROOT]
+                                     [--suffix-lib SUFFIX_LIB] --prompt-format
+                                     {raw,chat} --max-new-tokens
+                                     MAX_NEW_TOKENS --max-prompt-tokens
+                                     MAX_PROMPT_TOKENS
+                                     [--per-category PER_CATEGORY]
+                                     [--question-ids QUESTION_IDS]
+                                     [--arms ARMS] [--draft-depth DRAFT_DEPTH]
+                                     [--max-draft MAX_DRAFT]
+                                     [--spec-factor SPEC_FACTOR]
+                                     [--prune-top PRUNE_TOP]
+                                     [--max-nodes MAX_NODES]
+                                     [--prob-calibration PROB_CALIBRATION]
+                                     [--prob-max-nodes PROB_MAX_NODES]
+                                     [--flush-every FLUSH_EVERY]
+                                     [--repeats REPEATS]
+                                     [--warmup-tokens WARMUP_TOKENS]
+                                     [--mode {bench,check}]
+                                     [--allow-shared-gpu] [--seed SEED]
+                                     [--threads THREADS]
+                                     [--tracking-defaults TRACKING_DEFAULTS]
+                                     [--summarize] [--monitor MONITOR]
+                                     [--own-user OWN_USER] [--batch BATCH]
+                                     [--merge-old MERGE_OLD]
+loop_suffix_spec_wallclock.py: error: the following arguments are required: --max-new-tokens

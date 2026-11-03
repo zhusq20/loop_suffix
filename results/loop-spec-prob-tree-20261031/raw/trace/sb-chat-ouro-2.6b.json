@@ -1,0 +1,1279 @@
+{
+ "model": "ouro-2.6b",
+ "config": {
+  "name": "rule top8 noK deep t0.01",
+  "depth_total": 4,
+  "draft_depth": 1,
+  "readout_depths": [
+   1,
+   2
+  ],
+  "tau": 0.01,
+  "tau_suffix": null,
+  "tau_deep": null,
+  "top_m": 8,
+  "row_cap": null,
+  "max_draft": null,
+  "spec_factor": 1.0,
+  "suffix_min_prob": 0.001,
+  "suffix_room": 64,
+  "use_suffix": true,
+  "offpath_readouts": true,
+  "commit_on_accept": true,
+  "rescore": true,
+  "legacy": false
+ },
+ "p_edges": [
+  0.0,
+  0.01,
+  0.03,
+  0.1,
+  0.3,
+  0.5,
+  0.7,
+  0.9,
+  0.97,
+  1.0001
+ ],
+ "table": {
+  "confirm": {
+   "all|1": {
+    "n": 8958,
+    "mean_p": 0.017795070583732562,
+    "observed": 0.021991515963384684
+   },
+   "all|2": {
+    "n": 6992,
+    "mean_p": 0.058408196080522626,
+    "observed": 0.06335812356979405
+   },
+   "all|3": {
+    "n": 7618,
+    "mean_p": 0.18167943998572778,
+    "observed": 0.1268049356786558
+   },
+   "all|4": {
+    "n": 7977,
+    "mean_p": 0.40421324953752835,
+    "observed": 0.2536041118214868
+   },
+   "all|5": {
+    "n": 4226,
+    "mean_p": 0.6127176235452813,
+    "observed": 0.4673450070989115
+   },
+   "all|6": {
+    "n": 3358,
+    "mean_p": 0.7789901102087619,
+    "observed": 0.6378796902918403
+   },
+   "all|7": {
+    "n": 2386,
+    "mean_p": 0.9378776462253885,
+    "observed": 0.9019279128248114
+   },
+   "all|8": {
+    "n": 5344,
+    "mean_p": 0.9910276292250099,
+    "observed": 0.8486152694610778
+   },
+   "deep no sibling|4": {
+    "n": 4,
+    "mean_p": 0.3884146614688354,
+    "observed": 0.5
+   },
+   "deep no sibling|5": {
+    "n": 7,
+    "mean_p": 0.6610631373129295,
+    "observed": 0.42857142857142855
+   },
+   "deep no sibling|6": {
+    "n": 5,
+    "mean_p": 0.8116362209919139,
+    "observed": 0.6
+   },
+   "deep no sibling|7": {
+    "n": 5,
+    "mean_p": 0.946831579670374,
+    "observed": 0.8
+   },
+   "deep no sibling|8": {
+    "n": 22,
+    "mean_p": 0.9971880365896761,
+    "observed": 1.0
+   },
+   "deep with sibling|1": {
+    "n": 1080,
+    "mean_p": 0.014970209941526622,
+    "observed": 0.03333333333333333
+   },
+   "deep with sibling|2": {
+    "n": 660,
+    "mean_p": 0.047379369790749935,
+    "observed": 0.11515151515151516
+   },
+   "deep with sibling|3": {
+    "n": 234,
+    "mean_p": 0.1449679834031859,
+    "observed": 0.2564102564102564
+   },
+   "deep with sibling|4": {
+    "n": 124,
+    "mean_p": 0.4131204115053123,
+    "observed": 0.3387096774193548
+   },
+   "deep with sibling|5": {
+    "n": 174,
+    "mean_p": 0.6222379510772927,
+    "observed": 0.6379310344827587
+   },
+   "deep with sibling|6": {
+    "n": 122,
+    "mean_p": 0.7988643592075658,
+    "observed": 0.7950819672131147
+   },
+   "deep with sibling|7": {
+    "n": 51,
+    "mean_p": 0.9458281905158208,
+    "observed": 0.8627450980392157
+   },
+   "deep with sibling|8": {
+    "n": 84,
+    "mean_p": 0.9927588109414335,
+    "observed": 0.9880952380952381
+   },
+   "deep|1": {
+    "n": 1080,
+    "mean_p": 0.014970209941526622,
+    "observed": 0.03333333333333333
+   },
+   "deep|2": {
+    "n": 660,
+    "mean_p": 0.047379369790749935,
+    "observed": 0.11515151515151516
+   },
+   "deep|3": {
+    "n": 234,
+    "mean_p": 0.1449679834031859,
+    "observed": 0.2564102564102564
+   },
+   "deep|4": {
+    "n": 128,
+    "mean_p": 0.4123483568166724,
+    "observed": 0.34375
+   },
+   "deep|5": {
+    "n": 181,
+    "mean_p": 0.6237394776167926,
+    "observed": 0.6298342541436464
+   },
+   "deep|6": {
+    "n": 127,
+    "mean_p": 0.7993671884116741,
+    "observed": 0.7874015748031497
+   },
+   "deep|7": {
+    "n": 56,
+    "mean_p": 0.9459177788331915,
+    "observed": 0.8571428571428571
+   },
+   "deep|8": {
+    "n": 106,
+    "mean_p": 0.993678084189182,
+    "observed": 0.9905660377358491
+   },
+   "fill no sibling|3": {
+    "n": 115,
+    "mean_p": 0.19652134750054462,
+    "observed": 0.1826086956521739
+   },
+   "fill no sibling|4": {
+    "n": 433,
+    "mean_p": 0.4420286984860944,
+    "observed": 0.4665127020785219
+   },
+   "fill no sibling|5": {
+    "n": 295,
+    "mean_p": 0.6153816959892471,
+    "observed": 0.6847457627118644
+   },
+   "fill no sibling|6": {
+    "n": 304,
+    "mean_p": 0.78381553724368,
+    "observed": 0.7894736842105263
+   },
+   "fill no sibling|7": {
+    "n": 362,
+    "mean_p": 0.9400498780616486,
+    "observed": 0.9392265193370166
+   },
+   "fill no sibling|8": {
+    "n": 1497,
+    "mean_p": 0.9962715644018627,
+    "observed": 0.9986639946559787
+   },
+   "fill with sibling|3": {
+    "n": 192,
+    "mean_p": 0.20199833103454742,
+    "observed": 0.19270833333333334
+   },
+   "fill with sibling|4": {
+    "n": 963,
+    "mean_p": 0.4420097784073953,
+    "observed": 0.4672897196261682
+   },
+   "fill with sibling|5": {
+    "n": 632,
+    "mean_p": 0.615589782581952,
+    "observed": 0.6439873417721519
+   },
+   "fill with sibling|6": {
+    "n": 690,
+    "mean_p": 0.782217825498479,
+    "observed": 0.7739130434782608
+   },
+   "fill with sibling|7": {
+    "n": 752,
+    "mean_p": 0.9411366731963603,
+    "observed": 0.9454787234042553
+   },
+   "fill with sibling|8": {
+    "n": 2126,
+    "mean_p": 0.9956422781053955,
+    "observed": 0.9985888993414863
+   },
+   "fill|3": {
+    "n": 307,
+    "mean_p": 0.1999466922514514,
+    "observed": 0.18892508143322476
+   },
+   "fill|4": {
+    "n": 1396,
+    "mean_p": 0.4420156468845267,
+    "observed": 0.4670487106017192
+   },
+   "fill|5": {
+    "n": 927,
+    "mean_p": 0.6155235630082226,
+    "observed": 0.656957928802589
+   },
+   "fill|6": {
+    "n": 994,
+    "mean_p": 0.7827064616861439,
+    "observed": 0.778672032193159
+   },
+   "fill|7": {
+    "n": 1114,
+    "mean_p": 0.9407835135565247,
+    "observed": 0.9434470377019749
+   },
+   "fill|8": {
+    "n": 3623,
+    "mean_p": 0.9959022951039125,
+    "observed": 0.9986199282362683
+   },
+   "sibling with sibling|1": {
+    "n": 7748,
+    "mean_p": 0.018179308233476636,
+    "observed": 0.020779556014455344
+   },
+   "sibling with sibling|2": {
+    "n": 5258,
+    "mean_p": 0.056462295068827585,
+    "observed": 0.058767592240395586
+   },
+   "sibling with sibling|3": {
+    "n": 2425,
+    "mean_p": 0.15603200475000956,
+    "observed": 0.13443298969072165
+   },
+   "sibling with sibling|4": {
+    "n": 650,
+    "mean_p": 0.33689056664386374,
+    "observed": 0.3507692307692308
+   },
+   "sibling|1": {
+    "n": 7748,
+    "mean_p": 0.018179308233476636,
+    "observed": 0.020779556014455344
+   },
+   "sibling|2": {
+    "n": 5258,
+    "mean_p": 0.056462295068827585,
+    "observed": 0.058767592240395586
+   },
+   "sibling|3": {
+    "n": 2425,
+    "mean_p": 0.15603200475000956,
+    "observed": 0.13443298969072165
+   },
+   "sibling|4": {
+    "n": 650,
+    "mean_p": 0.33689056664386374,
+    "observed": 0.3507692307692308
+   },
+   "suffix depth 1 no sibling|1": {
+    "n": 8,
+    "mean_p": 0.019900497512437807,
+    "observed": 0.0
+   },
+   "suffix depth 1 no sibling|2": {
+    "n": 381,
+    "mean_p": 0.0770478034717642,
+    "observed": 0.07874015748031496
+   },
+   "suffix depth 1 no sibling|3": {
+    "n": 1872,
+    "mean_p": 0.1928827992894294,
+    "observed": 0.17094017094017094
+   },
+   "suffix depth 1 no sibling|4": {
+    "n": 549,
+    "mean_p": 0.41520155185562363,
+    "observed": 0.20947176684881602
+   },
+   "suffix depth 1 no sibling|5": {
+    "n": 1587,
+    "mean_p": 0.6340502558541459,
+    "observed": 0.4473850031505986
+   },
+   "suffix depth 1 no sibling|6": {
+    "n": 1421,
+    "mean_p": 0.7437387432876102,
+    "observed": 0.5095003518648838
+   },
+   "suffix depth 1 no sibling|7": {
+    "n": 39,
+    "mean_p": 0.9358171058516138,
+    "observed": 0.8205128205128205
+   },
+   "suffix depth 1 no sibling|8": {
+    "n": 1229,
+    "mean_p": 0.9793457935168512,
+    "observed": 0.36126932465419037
+   },
+   "suffix depth 1 with sibling|1": {
+    "n": 56,
+    "mean_p": 0.018223036061584187,
+    "observed": 0.0
+   },
+   "suffix depth 1 with sibling|2": {
+    "n": 335,
+    "mean_p": 0.0773917229900874,
+    "observed": 0.03582089552238806
+   },
+   "suffix depth 1 with sibling|3": {
+    "n": 1192,
+    "mean_p": 0.16349372129837764,
+    "observed": 0.053691275167785234
+   },
+   "suffix depth 1 with sibling|4": {
+    "n": 487,
+    "mean_p": 0.40575758249552774,
+    "observed": 0.07802874743326489
+   },
+   "suffix depth 1 with sibling|5": {
+    "n": 141,
+    "mean_p": 0.5500311330687123,
+    "observed": 0.0851063829787234
+   },
+   "suffix depth 1 with sibling|6": {
+    "n": 25,
+    "mean_p": 0.7990844569838157,
+    "observed": 0.08
+   },
+   "suffix depth 1 with sibling|7": {
+    "n": 2,
+    "mean_p": 0.9077718271266658,
+    "observed": 0.0
+   },
+   "suffix depth 1 with sibling|8": {
+    "n": 1,
+    "mean_p": 0.9963373493975903,
+    "observed": 0.0
+   },
+   "suffix depth 1|1": {
+    "n": 64,
+    "mean_p": 0.01843271874294089,
+    "observed": 0.0
+   },
+   "suffix depth 1|2": {
+    "n": 716,
+    "mean_p": 0.07720871553690097,
+    "observed": 0.05865921787709497
+   },
+   "suffix depth 1|3": {
+    "n": 3064,
+    "mean_p": 0.1814494504104015,
+    "observed": 0.12532637075718014
+   },
+   "suffix depth 1|4": {
+    "n": 1036,
+    "mean_p": 0.41076215699233437,
+    "observed": 0.1476833976833977
+   },
+   "suffix depth 1|5": {
+    "n": 1728,
+    "mean_p": 0.6271945288213063,
+    "observed": 0.41782407407407407
+   },
+   "suffix depth 1|6": {
+    "n": 1446,
+    "mean_p": 0.7446956193888606,
+    "observed": 0.5020746887966805
+   },
+   "suffix depth 1|7": {
+    "n": 41,
+    "mean_p": 0.9344490434747873,
+    "observed": 0.7804878048780488
+   },
+   "suffix depth 1|8": {
+    "n": 1230,
+    "mean_p": 0.9793596077899249,
+    "observed": 0.36097560975609755
+   },
+   "suffix depth 2-4 no sibling|1": {
+    "n": 25,
+    "mean_p": 0.020108939971517577,
+    "observed": 0.0
+   },
+   "suffix depth 2-4 no sibling|2": {
+    "n": 241,
+    "mean_p": 0.07093605805535637,
+    "observed": 0.05394190871369295
+   },
+   "suffix depth 2-4 no sibling|3": {
+    "n": 1030,
+    "mean_p": 0.21921326056384915,
+    "observed": 0.059223300970873784
+   },
+   "suffix depth 2-4 no sibling|4": {
+    "n": 3913,
+    "mean_p": 0.4038526747203132,
+    "observed": 0.18425760286225404
+   },
+   "suffix depth 2-4 no sibling|5": {
+    "n": 956,
+    "mean_p": 0.5901522697831862,
+    "observed": 0.3368200836820084
+   },
+   "suffix depth 2-4 no sibling|6": {
+    "n": 165,
+    "mean_p": 0.7967252781125839,
+    "observed": 0.6242424242424243
+   },
+   "suffix depth 2-4 no sibling|7": {
+    "n": 40,
+    "mean_p": 0.9313652011644151,
+    "observed": 0.925
+   },
+   "suffix depth 2-4 no sibling|8": {
+    "n": 183,
+    "mean_p": 0.987960653611937,
+    "observed": 0.9562841530054644
+   },
+   "suffix depth 2-4 with sibling|1": {
+    "n": 23,
+    "mean_p": 0.017231173974865767,
+    "observed": 0.0
+   },
+   "suffix depth 2-4 with sibling|2": {
+    "n": 103,
+    "mean_p": 0.06961660639767514,
+    "observed": 0.02912621359223301
+   },
+   "suffix depth 2-4 with sibling|3": {
+    "n": 128,
+    "mean_p": 0.17338199767814347,
+    "observed": 0.046875
+   },
+   "suffix depth 2-4 with sibling|4": {
+    "n": 106,
+    "mean_p": 0.38944361469977895,
+    "observed": 0.05660377358490566
+   },
+   "suffix depth 2-4 with sibling|5": {
+    "n": 63,
+    "mean_p": 0.6004213872577973,
+    "observed": 0.015873015873015872
+   },
+   "suffix depth 2-4 with sibling|6": {
+    "n": 83,
+    "mean_p": 0.7287070674402021,
+    "observed": 0.0
+   },
+   "suffix depth 2-4|1": {
+    "n": 48,
+    "mean_p": 0.01873001043145524,
+    "observed": 0.0
+   },
+   "suffix depth 2-4|2": {
+    "n": 344,
+    "mean_p": 0.07054098968110867,
+    "observed": 0.046511627906976744
+   },
+   "suffix depth 2-4|3": {
+    "n": 1158,
+    "mean_p": 0.21414728331914276,
+    "observed": 0.05785837651122625
+   },
+   "suffix depth 2-4|4": {
+    "n": 4019,
+    "mean_p": 0.40347263979566145,
+    "observed": 0.18089076884797214
+   },
+   "suffix depth 2-4|5": {
+    "n": 1019,
+    "mean_p": 0.5907871612462875,
+    "observed": 0.3169774288518155
+   },
+   "suffix depth 2-4|6": {
+    "n": 248,
+    "mean_p": 0.7739611188956182,
+    "observed": 0.4153225806451613
+   },
+   "suffix depth 2-4|7": {
+    "n": 40,
+    "mean_p": 0.9313652011644151,
+    "observed": 0.925
+   },
+   "suffix depth 2-4|8": {
+    "n": 183,
+    "mean_p": 0.987960653611937,
+    "observed": 0.9562841530054644
+   },
+   "suffix depth 5+ no sibling|1": {
+    "n": 17,
+    "mean_p": 0.016476691552089317,
+    "observed": 0.0
+   },
+   "suffix depth 5+ no sibling|2": {
+    "n": 11,
+    "mean_p": 0.04752037380629508,
+    "observed": 0.0
+   },
+   "suffix depth 5+ no sibling|3": {
+    "n": 427,
+    "mean_p": 0.2471617901789152,
+    "observed": 0.16393442622950818
+   },
+   "suffix depth 5+ no sibling|4": {
+    "n": 747,
+    "mean_p": 0.3857389714059936,
+    "observed": 0.2931726907630522
+   },
+   "suffix depth 5+ no sibling|5": {
+    "n": 368,
+    "mean_p": 0.5928999359586805,
+    "observed": 0.5625
+   },
+   "suffix depth 5+ no sibling|6": {
+    "n": 540,
+    "mean_p": 0.861271221499618,
+    "observed": 0.812962962962963
+   },
+   "suffix depth 5+ no sibling|7": {
+    "n": 1135,
+    "mean_p": 0.9349822161657169,
+    "observed": 0.8669603524229075
+   },
+   "suffix depth 5+ no sibling|8": {
+    "n": 202,
+    "mean_p": 0.9760328777247407,
+    "observed": 0.9554455445544554
+   },
+   "suffix depth 5+ with sibling|1": {
+    "n": 1,
+    "mean_p": 0.028297102608541205,
+    "observed": 0.0
+   },
+   "suffix depth 5+ with sibling|2": {
+    "n": 3,
+    "mean_p": 0.056903524876585836,
+    "observed": 0.0
+   },
+   "suffix depth 5+ with sibling|3": {
+    "n": 3,
+    "mean_p": 0.2894883691895832,
+    "observed": 0.3333333333333333
+   },
+   "suffix depth 5+ with sibling|4": {
+    "n": 1,
+    "mean_p": 0.3426448960832404,
+    "observed": 0.0
+   },
+   "suffix depth 5+ with sibling|5": {
+    "n": 3,
+    "mean_p": 0.6220163997056464,
+    "observed": 0.0
+   },
+   "suffix depth 5+ with sibling|6": {
+    "n": 3,
+    "mean_p": 0.8200838348162124,
+    "observed": 0.0
+   },
+   "suffix depth 5+|1": {
+    "n": 18,
+    "mean_p": 0.017133381055225536,
+    "observed": 0.0
+   },
+   "suffix depth 5+|2": {
+    "n": 14,
+    "mean_p": 0.0495310490356431,
+    "observed": 0.0
+   },
+   "suffix depth 5+|3": {
+    "n": 430,
+    "mean_p": 0.24745709189294313,
+    "observed": 0.16511627906976745
+   },
+   "suffix depth 5+|4": {
+    "n": 748,
+    "mean_p": 0.3856813590058295,
+    "observed": 0.2927807486631016
+   },
+   "suffix depth 5+|5": {
+    "n": 371,
+    "mean_p": 0.5931353790617556,
+    "observed": 0.5579514824797843
+   },
+   "suffix depth 5+|6": {
+    "n": 543,
+    "mean_p": 0.8610436668770577,
+    "observed": 0.8084714548802947
+   },
+   "suffix depth 5+|7": {
+    "n": 1135,
+    "mean_p": 0.9349822161657169,
+    "observed": 0.8669603524229075
+   },
+   "suffix depth 5+|8": {
+    "n": 202,
+    "mean_p": 0.9760328777247407,
+    "observed": 0.9554455445544554
+   }
+  },
+  "dev": {
+   "all|1": {
+    "n": 44250,
+    "mean_p": 0.017794421255462472,
+    "observed": 0.018757062146892656
+   },
+   "all|2": {
+    "n": 36625,
+    "mean_p": 0.0586875201013997,
+    "observed": 0.05621843003412969
+   },
+   "all|3": {
+    "n": 38691,
+    "mean_p": 0.18211432126617774,
+    "observed": 0.13757721433925202
+   },
+   "all|4": {
+    "n": 42806,
+    "mean_p": 0.40273249866111877,
+    "observed": 0.2776713544830164
+   },
+   "all|5": {
+    "n": 23789,
+    "mean_p": 0.6110077070974228,
+    "observed": 0.45895161629324477
+   },
+   "all|6": {
+    "n": 20668,
+    "mean_p": 0.7848246988818492,
+    "observed": 0.6808592994000388
+   },
+   "all|7": {
+    "n": 17723,
+    "mean_p": 0.9387015842844844,
+    "observed": 0.9154770637025335
+   },
+   "all|8": {
+    "n": 29307,
+    "mean_p": 0.9906054731627175,
+    "observed": 0.8592827652096768
+   },
+   "deep no sibling|4": {
+    "n": 12,
+    "mean_p": 0.4210579378948784,
+    "observed": 0.4166666666666667
+   },
+   "deep no sibling|5": {
+    "n": 31,
+    "mean_p": 0.6263819618370988,
+    "observed": 0.6774193548387096
+   },
+   "deep no sibling|6": {
+    "n": 44,
+    "mean_p": 0.8025771097262718,
+    "observed": 0.7727272727272727
+   },
+   "deep no sibling|7": {
+    "n": 19,
+    "mean_p": 0.9444749354060631,
+    "observed": 0.9473684210526315
+   },
+   "deep no sibling|8": {
+    "n": 95,
+    "mean_p": 0.9961781989627227,
+    "observed": 0.9894736842105263
+   },
+   "deep with sibling|1": {
+    "n": 4819,
+    "mean_p": 0.014985733985873205,
+    "observed": 0.03154181365428512
+   },
+   "deep with sibling|2": {
+    "n": 2896,
+    "mean_p": 0.046925112261950334,
+    "observed": 0.09392265193370165
+   },
+   "deep with sibling|3": {
+    "n": 970,
+    "mean_p": 0.14565113590468157,
+    "observed": 0.2381443298969072
+   },
+   "deep with sibling|4": {
+    "n": 432,
+    "mean_p": 0.4103413996407664,
+    "observed": 0.4305555555555556
+   },
+   "deep with sibling|5": {
+    "n": 752,
+    "mean_p": 0.6215443288336768,
+    "observed": 0.5904255319148937
+   },
+   "deep with sibling|6": {
+    "n": 582,
+    "mean_p": 0.7965065712492897,
+    "observed": 0.7920962199312714
+   },
+   "deep with sibling|7": {
+    "n": 207,
+    "mean_p": 0.9451783506195296,
+    "observed": 0.8357487922705314
+   },
+   "deep with sibling|8": {
+    "n": 447,
+    "mean_p": 0.9926839953222509,
+    "observed": 0.9753914988814317
+   },
+   "deep|1": {
+    "n": 4819,
+    "mean_p": 0.014985733985873205,
+    "observed": 0.03154181365428512
+   },
+   "deep|2": {
+    "n": 2896,
+    "mean_p": 0.046925112261950334,
+    "observed": 0.09392265193370165
+   },
+   "deep|3": {
+    "n": 970,
+    "mean_p": 0.14565113590468157,
+    "observed": 0.2381443298969072
+   },
+   "deep|4": {
+    "n": 444,
+    "mean_p": 0.4106310358097967,
+    "observed": 0.43018018018018017
+   },
+   "deep|5": {
+    "n": 783,
+    "mean_p": 0.6217358570879622,
+    "observed": 0.5938697318007663
+   },
+   "deep|6": {
+    "n": 626,
+    "mean_p": 0.7969332544649231,
+    "observed": 0.7907348242811502
+   },
+   "deep|7": {
+    "n": 226,
+    "mean_p": 0.9451192139422906,
+    "observed": 0.8451327433628318
+   },
+   "deep|8": {
+    "n": 542,
+    "mean_p": 0.9932964479898622,
+    "observed": 0.977859778597786
+   },
+   "fill no sibling|3": {
+    "n": 395,
+    "mean_p": 0.19421835460853362,
+    "observed": 0.2379746835443038
+   },
+   "fill no sibling|4": {
+    "n": 1629,
+    "mean_p": 0.4470283734076623,
+    "observed": 0.4775936157151627
+   },
+   "fill no sibling|5": {
+    "n": 1189,
+    "mean_p": 0.6182074759283499,
+    "observed": 0.6190075693860387
+   },
+   "fill no sibling|6": {
+    "n": 1489,
+    "mean_p": 0.7846775788070675,
+    "observed": 0.7897918065815984
+   },
+   "fill no sibling|7": {
+    "n": 1737,
+    "mean_p": 0.941778690435579,
+    "observed": 0.9372481289579735
+   },
+   "fill no sibling|8": {
+    "n": 8090,
+    "mean_p": 0.9966748627054295,
+    "observed": 0.9976514215080347
+   },
+   "fill with sibling|3": {
+    "n": 861,
+    "mean_p": 0.1997545695050656,
+    "observed": 0.19396051103368175
+   },
+   "fill with sibling|4": {
+    "n": 4276,
+    "mean_p": 0.44636777765218805,
+    "observed": 0.44200187090739007
+   },
+   "fill with sibling|5": {
+    "n": 3413,
+    "mean_p": 0.6155172818989801,
+    "observed": 0.61617345443891
+   },
+   "fill with sibling|6": {
+    "n": 3773,
+    "mean_p": 0.7813404636405115,
+    "observed": 0.7789557381394117
+   },
+   "fill with sibling|7": {
+    "n": 3922,
+    "mean_p": 0.941232483933736,
+    "observed": 0.9433962264150944
+   },
+   "fill with sibling|8": {
+    "n": 10614,
+    "mean_p": 0.995742839716714,
+    "observed": 0.9956661013755418
+   },
+   "fill|3": {
+    "n": 1256,
+    "mean_p": 0.19801348281388093,
+    "observed": 0.20780254777070065
+   },
+   "fill|4": {
+    "n": 5905,
+    "mean_p": 0.44655001482163403,
+    "observed": 0.45182049110922945
+   },
+   "fill|5": {
+    "n": 4602,
+    "mean_p": 0.6162123363755362,
+    "observed": 0.6169056931768796
+   },
+   "fill|6": {
+    "n": 5262,
+    "mean_p": 0.7822847746407234,
+    "observed": 0.7820220448498669
+   },
+   "fill|7": {
+    "n": 5659,
+    "mean_p": 0.9414001391190556,
+    "observed": 0.9415091005478
+   },
+   "fill|8": {
+    "n": 18704,
+    "mean_p": 0.9961459655709709,
+    "observed": 0.9965248075278016
+   },
+   "sibling with sibling|1": {
+    "n": 38692,
+    "mean_p": 0.01813092770107757,
+    "observed": 0.017290395947482683
+   },
+   "sibling with sibling|2": {
+    "n": 27232,
+    "mean_p": 0.056486175378084154,
+    "observed": 0.055559635722679204
+   },
+   "sibling with sibling|3": {
+    "n": 12595,
+    "mean_p": 0.15473261189359241,
+    "observed": 0.15498213576816197
+   },
+   "sibling with sibling|4": {
+    "n": 3412,
+    "mean_p": 0.33398511549290677,
+    "observed": 0.3344079718640094
+   },
+   "sibling|1": {
+    "n": 38692,
+    "mean_p": 0.01813092770107757,
+    "observed": 0.017290395947482683
+   },
+   "sibling|2": {
+    "n": 27232,
+    "mean_p": 0.056486175378084154,
+    "observed": 0.055559635722679204
+   },
+   "sibling|3": {
+    "n": 12595,
+    "mean_p": 0.15473261189359241,
+    "observed": 0.15498213576816197
+   },
+   "sibling|4": {
+    "n": 3412,
+    "mean_p": 0.33398511549290677,
+    "observed": 0.3344079718640094
+   },
+   "suffix depth 1 no sibling|1": {
+    "n": 36,
+    "mean_p": 0.018334254652662627,
+    "observed": 0.027777777777777776
+   },
+   "suffix depth 1 no sibling|2": {
+    "n": 1792,
+    "mean_p": 0.07781432742640372,
+    "observed": 0.07589285714285714
+   },
+   "suffix depth 1 no sibling|3": {
+    "n": 8856,
+    "mean_p": 0.19404648946536457,
+    "observed": 0.15808491418247517
+   },
+   "suffix depth 1 no sibling|4": {
+    "n": 2832,
+    "mean_p": 0.41612004062774083,
+    "observed": 0.21574858757062146
+   },
+   "suffix depth 1 no sibling|5": {
+    "n": 7985,
+    "mean_p": 0.6340360228221892,
+    "observed": 0.43869755792110204
+   },
+   "suffix depth 1 no sibling|6": {
+    "n": 8299,
+    "mean_p": 0.7470285013172004,
+    "observed": 0.600072297867213
+   },
+   "suffix depth 1 no sibling|7": {
+    "n": 374,
+    "mean_p": 0.9345630070443692,
+    "observed": 0.8609625668449198
+   },
+   "suffix depth 1 no sibling|8": {
+    "n": 6684,
+    "mean_p": 0.9796826291188968,
+    "observed": 0.4102333931777379
+   },
+   "suffix depth 1 with sibling|1": {
+    "n": 259,
+    "mean_p": 0.017347352523630583,
+    "observed": 0.003861003861003861
+   },
+   "suffix depth 1 with sibling|2": {
+    "n": 1991,
+    "mean_p": 0.07728320507296556,
+    "observed": 0.03415369161225515
+   },
+   "suffix depth 1 with sibling|3": {
+    "n": 5508,
+    "mean_p": 0.16319129610026936,
+    "observed": 0.06880900508351488
+   },
+   "suffix depth 1 with sibling|4": {
+    "n": 2289,
+    "mean_p": 0.40717399282602784,
+    "observed": 0.09305373525557012
+   },
+   "suffix depth 1 with sibling|5": {
+    "n": 783,
+    "mean_p": 0.5586372841727655,
+    "observed": 0.05874840357598978
+   },
+   "suffix depth 1 with sibling|6": {
+    "n": 113,
+    "mean_p": 0.7981996230572481,
+    "observed": 0.04424778761061947
+   },
+   "suffix depth 1 with sibling|8": {
+    "n": 3,
+    "mean_p": 0.9903359255945934,
+    "observed": 0.0
+   },
+   "suffix depth 1|1": {
+    "n": 295,
+    "mean_p": 0.017467788037681956,
+    "observed": 0.006779661016949152
+   },
+   "suffix depth 1|2": {
+    "n": 3783,
+    "mean_p": 0.07753479673497139,
+    "observed": 0.05392545598731166
+   },
+   "suffix depth 1|3": {
+    "n": 14364,
+    "mean_p": 0.18221479877650498,
+    "observed": 0.12385129490392648
+   },
+   "suffix depth 1|4": {
+    "n": 5121,
+    "mean_p": 0.41212130924361756,
+    "observed": 0.1609060730326108
+   },
+   "suffix depth 1|5": {
+    "n": 8768,
+    "mean_p": 0.6273027641129734,
+    "observed": 0.4047673357664234
+   },
+   "suffix depth 1|6": {
+    "n": 8412,
+    "mean_p": 0.7477158927528387,
+    "observed": 0.592605801236329
+   },
+   "suffix depth 1|7": {
+    "n": 374,
+    "mean_p": 0.9345630070443692,
+    "observed": 0.8609625668449198
+   },
+   "suffix depth 1|8": {
+    "n": 6687,
+    "mean_p": 0.9796874085251217,
+    "observed": 0.41004934948407357
+   },
+   "suffix depth 2-4 no sibling|1": {
+    "n": 156,
+    "mean_p": 0.0187127634208201,
+    "observed": 0.00641025641025641
+   },
+   "suffix depth 2-4 no sibling|2": {
+    "n": 1706,
+    "mean_p": 0.0681025378816139,
+    "observed": 0.022860492379835874
+   },
+   "suffix depth 2-4 no sibling|3": {
+    "n": 5402,
+    "mean_p": 0.21487361734532281,
+    "observed": 0.0684931506849315
+   },
+   "suffix depth 2-4 no sibling|4": {
+    "n": 21464,
+    "mean_p": 0.4041648800278351,
+    "observed": 0.23541744316064106
+   },
+   "suffix depth 2-4 no sibling|5": {
+    "n": 6065,
+    "mean_p": 0.592697695134071,
+    "observed": 0.39851607584501236
+   },
+   "suffix depth 2-4 no sibling|6": {
+    "n": 1401,
+    "mean_p": 0.8000032618674363,
+    "observed": 0.7166309778729479
+   },
+   "suffix depth 2-4 no sibling|7": {
+    "n": 307,
+    "mean_p": 0.9310378085119396,
+    "observed": 0.8925081433224755
+   },
+   "suffix depth 2-4 no sibling|8": {
+    "n": 1409,
+    "mean_p": 0.9883771648024665,
+    "observed": 0.9779985805535841
+   },
+   "suffix depth 2-4 with sibling|1": {
+    "n": 114,
+    "mean_p": 0.020532715442821255,
+    "observed": 0.0
+   },
+   "suffix depth 2-4 with sibling|2": {
+    "n": 608,
+    "mean_p": 0.06987635210747231,
+    "observed": 0.04111842105263158
+   },
+   "suffix depth 2-4 with sibling|3": {
+    "n": 818,
+    "mean_p": 0.16560475624745688,
+    "observed": 0.040342298288508556
+   },
+   "suffix depth 2-4 with sibling|4": {
+    "n": 558,
+    "mean_p": 0.37801131869529675,
+    "observed": 0.05913978494623656
+   },
+   "suffix depth 2-4 with sibling|5": {
+    "n": 367,
+    "mean_p": 0.5889140034208713,
+    "observed": 0.02452316076294278
+   },
+   "suffix depth 2-4 with sibling|6": {
+    "n": 436,
+    "mean_p": 0.7298744863679584,
+    "observed": 0.0045871559633027525
+   },
+   "suffix depth 2-4 with sibling|7": {
+    "n": 1,
+    "mean_p": 0.9264769104431718,
+    "observed": 0.0
+   },
+   "suffix depth 2-4|1": {
+    "n": 270,
+    "mean_p": 0.01948118760788727,
+    "observed": 0.003703703703703704
+   },
+   "suffix depth 2-4|2": {
+    "n": 2314,
+    "mean_p": 0.06856860488650728,
+    "observed": 0.027657735522904063
+   },
+   "suffix depth 2-4|3": {
+    "n": 6220,
+    "mean_p": 0.20839420763824082,
+    "observed": 0.06479099678456592
+   },
+   "suffix depth 2-4|4": {
+    "n": 22022,
+    "mean_p": 0.40350219329531223,
+    "observed": 0.23095086731450368
+   },
+   "suffix depth 2-4|5": {
+    "n": 6432,
+    "mean_p": 0.5924818035204618,
+    "observed": 0.37717661691542287
+   },
+   "suffix depth 2-4|6": {
+    "n": 1837,
+    "mean_p": 0.7833586532023432,
+    "observed": 0.5476320087098531
+   },
+   "suffix depth 2-4|7": {
+    "n": 308,
+    "mean_p": 0.9310230004013268,
+    "observed": 0.8896103896103896
+   },
+   "suffix depth 2-4|8": {
+    "n": 1409,
+    "mean_p": 0.9883771648024665,
+    "observed": 0.9779985805535841
+   },
+   "suffix depth 5+ no sibling|1": {
+    "n": 155,
+    "mean_p": 0.01815143112340717,
+    "observed": 0.03870967741935484
+   },
+   "suffix depth 5+ no sibling|2": {
+    "n": 341,
+    "mean_p": 0.05957260420344628,
+    "observed": 0.011730205278592375
+   },
+   "suffix depth 5+ no sibling|3": {
+    "n": 3234,
+    "mean_p": 0.2422901316411074,
+    "observed": 0.21428571428571427
+   },
+   "suffix depth 5+ no sibling|4": {
+    "n": 5887,
+    "mean_p": 0.38696969549519666,
+    "observed": 0.33531510107015455
+   },
+   "suffix depth 5+ no sibling|5": {
+    "n": 3183,
+    "mean_p": 0.5934048250128481,
+    "observed": 0.5149230285893811
+   },
+   "suffix depth 5+ no sibling|6": {
+    "n": 4481,
+    "mean_p": 0.8559817333016588,
+    "observed": 0.7743807185896006
+   },
+   "suffix depth 5+ no sibling|7": {
+    "n": 11149,
+    "mean_p": 0.9375644503178726,
+    "observed": 0.90680778545161
+   },
+   "suffix depth 5+ no sibling|8": {
+    "n": 1965,
+    "mean_p": 0.9758781990394352,
+    "observed": 0.9638676844783715
+   },
+   "suffix depth 5+ with sibling|1": {
+    "n": 19,
+    "mean_p": 0.023086521937336745,
+    "observed": 0.0
+   },
+   "suffix depth 5+ with sibling|2": {
+    "n": 59,
+    "mean_p": 0.05097669353048892,
+    "observed": 0.03389830508474576
+   },
+   "suffix depth 5+ with sibling|3": {
+    "n": 52,
+    "mean_p": 0.1967268116409654,
+    "observed": 0.07692307692307693
+   },
+   "suffix depth 5+ with sibling|4": {
+    "n": 15,
+    "mean_p": 0.4081988959239672,
+    "observed": 0.13333333333333333
+   },
+   "suffix depth 5+ with sibling|5": {
+    "n": 21,
+    "mean_p": 0.6091829542951173,
+    "observed": 0.0
+   },
+   "suffix depth 5+ with sibling|6": {
+    "n": 50,
+    "mean_p": 0.8204818468585476,
+    "observed": 0.02
+   },
+   "suffix depth 5+ with sibling|7": {
+    "n": 7,
+    "mean_p": 0.9200204708090676,
+    "observed": 0.0
+   },
+   "suffix depth 5+|1": {
+    "n": 174,
+    "mean_p": 0.018690320350215582,
+    "observed": 0.034482758620689655
+   },
+   "suffix depth 5+|2": {
+    "n": 400,
+    "mean_p": 0.05830470737918505,
+    "observed": 0.015
+   },
+   "suffix depth 5+|3": {
+    "n": 3286,
+    "mean_p": 0.2415691052747025,
+    "observed": 0.21211199026171637
+   },
+   "suffix depth 5+|4": {
+    "n": 5902,
+    "mean_p": 0.387023649749082,
+    "observed": 0.33480176211453744
+   },
+   "suffix depth 5+|5": {
+    "n": 3204,
+    "mean_p": 0.5935082397178816,
+    "observed": 0.5115480649188514
+   },
+   "suffix depth 5+|6": {
+    "n": 4531,
+    "mean_p": 0.8555899888032794,
+    "observed": 0.7660560582652836
+   },
+   "suffix depth 5+|7": {
+    "n": 11156,
+    "mean_p": 0.9375534420840468,
+    "observed": 0.9062387952671208
+   },
+   "suffix depth 5+|8": {
+    "n": 1965,
+    "mean_p": 0.9758781990394352,
+    "observed": 0.9638676844783715
+   }
+  }
+ }
+}

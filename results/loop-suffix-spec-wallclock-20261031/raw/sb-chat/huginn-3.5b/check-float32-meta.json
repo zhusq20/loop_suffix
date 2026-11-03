@@ -1,0 +1,82 @@
+{
+ "args": {
+  "model": "huginn-3.5b",
+  "runs_dir": "/runs/sb-chat/huginn-3.5b",
+  "out_dir": "/out/sb-chat/huginn-3.5b",
+  "hf_root": "/hf/hub",
+  "wfd_root": "/wfd",
+  "suffix_lib": "/arctic",
+  "prompt_format": "chat",
+  "max_new_tokens": 64,
+  "max_prompt_tokens": 3000,
+  "per_category": 10,
+  "arms": "wfd-ar,wfd,ar,shallow,suffix,both,both-path",
+  "draft_depth": 0,
+  "max_draft": 16,
+  "spec_factor": 1.0,
+  "prune_top": 0,
+  "max_nodes": 256,
+  "repeats": 1,
+  "warmup_tokens": 8,
+  "mode": "check",
+  "allow_shared_gpu": false,
+  "seed": 0,
+  "threads": 1,
+  "tracking_defaults": "/repo/configs/experiment-tracking-defaults.json",
+  "summarize": false,
+  "monitor": null
+ },
+ "T": 32,
+ "d": 4,
+ "max_seq": 828,
+ "stop": [
+  65505,
+  65508
+ ],
+ "our_gpu_pids": [
+  1
+ ],
+ "attention_self_check_max_abs_err": null,
+ "gpu_uuid": "GPU-d1972508-51b0-ae3d-188b-f1613ec33e07",
+ "cpu_affinity": [
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31
+ ],
+ "torch": "2.9.0+cu128",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "env_start": {
+  "time": 1793422971.196966,
+  "gpu_util": 0,
+  "mem_used_mib": 20855,
+  "sm_mhz": 2340,
+  "mem_mhz": 12481,
+  "temp_c": 40,
+  "power_w": 115.673,
+  "throttle_reasons": 0,
+  "compute_procs": [
+   [
+    1,
+    20210
+   ]
+  ],
+  "loadavg": [
+   6.59228515625,
+   6.6572265625,
+   7.1650390625
+  ]
+ },
+ "questions": [
+  81,
+  161,
+  241,
+  321,
+  401,
+  481
+ ]
+}

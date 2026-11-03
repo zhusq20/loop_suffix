@@ -1,0 +1,916 @@
+{
+ "questions": 60,
+ "wavefront_vs_wfd": null,
+ "overall": {
+  "wavefront": {
+   "questions": 60,
+   "runs": 120,
+   "e2e_tok_per_s": 16.567850386774143,
+   "decode_tok_per_s": 16.920718181277493,
+   "cpu_over_wall": 1.0004942087204995,
+   "calls_per_token": 9.250886974151038,
+   "ms_per_call": 6.388484315797881,
+   "rows_per_call": 5.729563883410037,
+   "replay_calls_per_token": 9.314749113025849,
+   "speculate_share_of_decode": 0.0,
+   "same_as_offline": 0.6833333333333333,
+   "same_as_ar": 0.6833333333333333,
+   "calls_eq_replay": 0.26666666666666666,
+   "decode_speedup_vs_wavefront": 1.0,
+   "e2e_speedup_vs_wavefront": 1.0
+  }
+ },
+ "clean_only": {
+  "wavefront": {
+   "questions": 60,
+   "runs": 120,
+   "e2e_tok_per_s": 16.567850386774143,
+   "decode_tok_per_s": 16.920718181277493,
+   "cpu_over_wall": 1.0004942087204995,
+   "calls_per_token": 9.250886974151038,
+   "ms_per_call": 6.388484315797881,
+   "rows_per_call": 5.729563883410037,
+   "replay_calls_per_token": 9.314749113025849,
+   "speculate_share_of_decode": 0.0,
+   "same_as_offline": 0.6833333333333333,
+   "same_as_ar": 0.6833333333333333,
+   "calls_eq_replay": 0.26666666666666666,
+   "decode_speedup_vs_wavefront": 1.0,
+   "e2e_speedup_vs_wavefront": 1.0
+  }
+ },
+ "by_category": {
+  "math_reasoning": {
+   "wavefront": {
+    "questions": 10,
+    "runs": 20,
+    "e2e_tok_per_s": 15.518273325082049,
+    "decode_tok_per_s": 15.599518841380945,
+    "cpu_over_wall": 1.000521807532293,
+    "calls_per_token": 10.035125066524747,
+    "ms_per_call": 6.388016181771643,
+    "rows_per_call": 5.59439966058549,
+    "replay_calls_per_token": 10.554550292708887,
+    "speculate_share_of_decode": 0.0,
+    "same_as_offline": 0.4,
+    "same_as_ar": 0.4,
+    "calls_eq_replay": 0.0,
+    "decode_speedup_vs_wavefront": 1.0,
+    "e2e_speedup_vs_wavefront": 1.0
+   }
+  },
+  "mt_bench": {
+   "wavefront": {
+    "questions": 10,
+    "runs": 20,
+    "e2e_tok_per_s": 16.894415189168605,
+    "decode_tok_per_s": 16.961614427218073,
+    "cpu_over_wall": 1.000457198472234,
+    "calls_per_token": 9.207620277688084,
+    "ms_per_call": 6.403028173669353,
+    "rows_per_call": 5.737691120774302,
+    "replay_calls_per_token": 9.0810461737165,
+    "speculate_share_of_decode": 0.0,
+    "same_as_offline": 0.5,
+    "same_as_ar": 0.5,
+    "calls_eq_replay": 0.0,
+    "decode_speedup_vs_wavefront": 1.0,
+    "e2e_speedup_vs_wavefront": 1.0
+   }
+  },
+  "qa": {
+   "wavefront": {
+    "questions": 10,
+    "runs": 20,
+    "e2e_tok_per_s": 21.579144219852708,
+    "decode_tok_per_s": 21.758617396553223,
+    "cpu_over_wall": 1.0005295702642099,
+    "calls_per_token": 7.209356725146199,
+    "ms_per_call": 6.374882568651629,
+    "rows_per_call": 6.2193380921479555,
+    "replay_calls_per_token": 7.216374269005848,
+    "speculate_share_of_decode": 0.0,
+    "same_as_offline": 0.6,
+    "same_as_ar": 0.6,
+    "calls_eq_replay": 0.3,
+    "decode_speedup_vs_wavefront": 1.0,
+    "e2e_speedup_vs_wavefront": 1.0
+   }
+  },
+  "rag": {
+   "wavefront": {
+    "questions": 10,
+    "runs": 20,
+    "e2e_tok_per_s": 15.576053526066225,
+    "decode_tok_per_s": 17.330543995986393,
+    "cpu_over_wall": 1.0005695137761967,
+    "calls_per_token": 9.076635514018692,
+    "ms_per_call": 6.357156584559843,
+    "rows_per_call": 5.762767710049423,
+    "replay_calls_per_token": 7.790654205607477,
+    "speculate_share_of_decode": 0.0,
+    "same_as_offline": 0.9,
+    "same_as_ar": 0.9,
+    "calls_eq_replay": 0.6,
+    "decode_speedup_vs_wavefront": 1.0,
+    "e2e_speedup_vs_wavefront": 1.0
+   }
+  },
+  "summarization": {
+   "wavefront": {
+    "questions": 10,
+    "runs": 20,
+    "e2e_tok_per_s": 14.907162936332524,
+    "decode_tok_per_s": 18.041852566875107,
+    "cpu_over_wall": 1.0005051314449545,
+    "calls_per_token": 8.652307692307692,
+    "ms_per_call": 6.4059997159274955,
+    "rows_per_call": 5.849217638691323,
+    "replay_calls_per_token": 8.775384615384615,
+    "speculate_share_of_decode": 0.0,
+    "same_as_offline": 0.9,
+    "same_as_ar": 0.9,
+    "calls_eq_replay": 0.4,
+    "decode_speedup_vs_wavefront": 1.0,
+    "e2e_speedup_vs_wavefront": 1.0
+   }
+  },
+  "translation": {
+   "wavefront": {
+    "questions": 10,
+    "runs": 20,
+    "e2e_tok_per_s": 9.579497366700204,
+    "decode_tok_per_s": 9.639036867715264,
+    "cpu_over_wall": 1.000433610471252,
+    "calls_per_token": 16.30057803468208,
+    "ms_per_call": 6.36448626272737,
+    "rows_per_call": 4.981560283687943,
+    "replay_calls_per_token": 17.90751445086705,
+    "speculate_share_of_decode": 0.0,
+    "same_as_offline": 0.8,
+    "same_as_ar": 0.8,
+    "calls_eq_replay": 0.3,
+    "decode_speedup_vs_wavefront": 1.0,
+    "e2e_speedup_vs_wavefront": 1.0
+   }
+  }
+ },
+ "flagged": {},
+ "monitor": {
+  "81": {
+   "samples": 29,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2257,
+    2377
+   ]
+  },
+  "89": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2385
+   ]
+  },
+  "97": {
+   "samples": 16,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "105": {
+   "samples": 11,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "113": {
+   "samples": 14,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2287,
+    2377
+   ]
+  },
+  "121": {
+   "samples": 18,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2310,
+    2377
+   ]
+  },
+  "129": {
+   "samples": 18,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "137": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2235,
+    2377
+   ]
+  },
+  "145": {
+   "samples": 13,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2385
+   ]
+  },
+  "153": {
+   "samples": 34,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2377
+   ]
+  },
+  "161": {
+   "samples": 6,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2347,
+    2400
+   ]
+  },
+  "169": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "177": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "185": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "193": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "201": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "209": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "217": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "225": {
+   "samples": 7,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "233": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "241": {
+   "samples": 4,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2370
+   ]
+  },
+  "248": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2362,
+    2370
+   ]
+  },
+  "257": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2370
+   ]
+  },
+  "265": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2002,
+    2250
+   ]
+  },
+  "272": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "280": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    1800,
+    2055
+   ]
+  },
+  "289": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    1882,
+    1882
+   ]
+  },
+  "297": {
+   "samples": 3,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2362,
+    2362
+   ]
+  },
+  "305": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2220,
+    2220
+   ]
+  },
+  "313": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 0.714,
+   "sm_mhz_range": [
+    2385,
+    2385
+   ]
+  },
+  "321": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 0.952,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "329": {
+   "samples": 6,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2385
+   ]
+  },
+  "337": {
+   "samples": 10,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "345": {
+   "samples": 0,
+   "foreign_pids": [],
+   "own_pids": [],
+   "own_concurrent_max": 0,
+   "cpu_busy_max": null,
+   "sm_mhz_range": null
+  },
+  "353": {
+   "samples": 28,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2377
+   ]
+  },
+  "361": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "369": {
+   "samples": 14,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2355,
+    2377
+   ]
+  },
+  "377": {
+   "samples": 5,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "385": {
+   "samples": 0,
+   "foreign_pids": [],
+   "own_pids": [],
+   "own_concurrent_max": 0,
+   "cpu_busy_max": null,
+   "sm_mhz_range": null
+  },
+  "393": {
+   "samples": 4,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2385
+   ]
+  },
+  "401": {
+   "samples": 8,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "409": {
+   "samples": 6,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2362,
+    2377
+   ]
+  },
+  "417": {
+   "samples": 7,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "425": {
+   "samples": 21,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2377
+   ]
+  },
+  "433": {
+   "samples": 0,
+   "foreign_pids": [],
+   "own_pids": [],
+   "own_concurrent_max": 0,
+   "cpu_busy_max": null,
+   "sm_mhz_range": null
+  },
+  "441": {
+   "samples": 6,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2430
+   ]
+  },
+  "449": {
+   "samples": 9,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "457": {
+   "samples": 20,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2377
+   ]
+  },
+  "465": {
+   "samples": 9,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "473": {
+   "samples": 17,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2377,
+    2377
+   ]
+  },
+  "481": {
+   "samples": 7,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2227,
+    2370
+   ]
+  },
+  "489": {
+   "samples": 0,
+   "foreign_pids": [],
+   "own_pids": [],
+   "own_concurrent_max": 0,
+   "cpu_busy_max": null,
+   "sm_mhz_range": null
+  },
+  "497": {
+   "samples": 2,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2370
+   ]
+  },
+  "505": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    1740,
+    1740
+   ]
+  },
+  "513": {
+   "samples": 0,
+   "foreign_pids": [],
+   "own_pids": [],
+   "own_concurrent_max": 0,
+   "cpu_busy_max": null,
+   "sm_mhz_range": null
+  },
+  "521": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2190,
+    2190
+   ]
+  },
+  "529": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2370
+   ]
+  },
+  "537": {
+   "samples": 0,
+   "foreign_pids": [],
+   "own_pids": [],
+   "own_concurrent_max": 0,
+   "cpu_busy_max": null,
+   "sm_mhz_range": null
+  },
+  "545": {
+   "samples": 15,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 1.0,
+   "sm_mhz_range": [
+    2370,
+    2370
+   ]
+  },
+  "553": {
+   "samples": 1,
+   "foreign_pids": [],
+   "own_pids": [
+    385207
+   ],
+   "own_concurrent_max": 1,
+   "cpu_busy_max": 0.755,
+   "sm_mhz_range": [
+    2122,
+    2122
+   ]
+  }
+ },
+ "env": {
+  "sm_mhz_min": 2092,
+  "temp_c_max": 53,
+  "loadavg1_max": 10.5712890625
+ }
+}

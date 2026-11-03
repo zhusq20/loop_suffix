@@ -1,6 +1,6 @@
 # Loop多词投机解码：后缀树与浅层读出共用一棵草稿树（结果，2026-10-31）
 
-[协议](protocol.md)、[原理图](https://claude.ai/artifact/TbCw31HG1oUNTRzjcsz5oc)、[回放汇总JSON](sim/)。零训练。指标是贪心路径上每个输出词的**块调用次数**，表中倍数 = `T·词数/调用数`（相对逐词），属于离线上限，不是墙钟延迟。
+[协议](protocol.md)、[原理图](../../docs/design/loop-suffix-tree-spec-20261030.html)、[回放汇总JSON](sim/)。零训练。指标是贪心路径上每个输出词的**块调用次数**，表中倍数 = `T·词数/调用数`（相对逐词），属于离线上限，不是墙钟延迟。
 
 ## 结论（raw prompt，全量为主结果）
 

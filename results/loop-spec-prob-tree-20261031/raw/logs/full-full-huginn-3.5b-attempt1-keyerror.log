@@ -1,0 +1,32 @@
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/siqizhu4/.local/share/uv/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/siqizhu4/.local/share/uv/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_replay.py", line 198, in run_config
+    if (old["calls"], old["tokens"]) != (s["calls"], s["tokens"]):
+                                         ~^^^^^^^^^
+KeyError: 'calls'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_replay.py", line 258, in <module>
+    main()
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_replay.py", line 254, in main
+    calibrate(args) if args.cmd == "calibrate" else sweep(args)
+                                                    ^^^^^^^^^^^
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_replay.py", line 224, in sweep
+    results = pool.map(run_config, cfgs, chunksize=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/siqizhu4/.local/share/uv/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/siqizhu4/.local/share/uv/python/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/multiprocessing/pool.py", line 774, in get
+    raise self._value
+KeyError: 'calls'

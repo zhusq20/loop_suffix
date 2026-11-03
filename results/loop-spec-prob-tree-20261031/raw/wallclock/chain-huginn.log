@@ -1,0 +1,171 @@
+=== check start 2026-10-31T22:34:33Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 500.27it/s]
+[wallclock] huginn-3.5b check-float32: 6 questions, arms ['ar', 'wavefront', 'both-path', 'prob-low', 'prob-load'], max_seq 1066, attention check None
+[wallclock] 1/6 q81 mt_bench {'ar': '5.3t/s', 'wavefront': '8.7t/s', 'both-path': '7.3t/s', 'prob-low': '11.1t/s', 'prob-load': '11.8t/s'}
+[wallclock] 2/6 q161 translation {'wavefront': '9.7t/s', 'both-path': '8.1t/s', 'prob-low': '12.8t/s', 'prob-load': '14.4t/s', 'ar': '5.3t/s'}
+[wallclock] 3/6 q241 summarization {'both-path': '8.5t/s', 'prob-low': '8.2t/s', 'prob-load': '8.6t/s', 'ar': '4.5t/s', 'wavefront': '7.4t/s'}
+[wallclock] 4/6 q321 qa {'prob-low': '3.6t/s', 'prob-load': '4.1t/s', 'ar': '3.9t/s', 'wavefront': '4.2t/s', 'both-path': '4.1t/s'}
+[wallclock] 5/6 q401 math_reasoning {'prob-load': '12.8t/s', 'ar': '5.3t/s', 'wavefront': '8.7t/s', 'both-path': '8.3t/s', 'prob-low': '12.1t/s'}
+[wallclock] 6/6 q481 rag {'ar': '4.5t/s', 'wavefront': '10.2t/s', 'both-path': '16.4t/s', 'prob-low': '18.1t/s', 'prob-load': '19.8t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_223900-0gq9l4z2
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▆█▁██▁
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▁▂▂▁▂█
+wandb:       both-path/same_as_ar ▁▁▁▁▁▁
+wandb: prob-load/decode_tok_per_s ▂▂▂▁▂█
+wandb:       prob-load/same_as_ar ▁▁▁▁▁▁
+wandb:  prob-low/decode_tok_per_s ▂▂▂▁▂█
+wandb:        prob-low/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb:                         +2 ...
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 1
+wandb:             ar/calls_per_token 32
+wandb:               ar/cpu_over_wall 1.00046
+wandb:        ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_both-path 0.51701
+wandb: ar/decode_speedup_vs_wavefront 0.52488
+wandb:            ar/decode_tok_per_s 5.41018
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_both-path 0.56013
+wandb:    ar/e2e_speedup_vs_wavefront 0.56621
+wandb:                            +97 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_223900-0gq9l4z2
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_223900-0gq9l4z2/logs
+clean questions 0/6
+ar         decode     5.4 tok/s  x1.00 vs ar  x0.52 vs wavefront  xnan vs wfd-ar  calls/tok 32.00 (replay 32.00)  ms/call 5.78  same-as-ar 1.00
+wavefront  decode    10.3 tok/s  x1.91 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 10.06 (replay 10.67)  ms/call 9.65  same-as-ar 1.00
+both-path  decode    10.5 tok/s  x1.93 vs ar  x1.02 vs wavefront  xnan vs wfd-ar  calls/tok 8.43 (replay 8.45)  ms/call 11.34  same-as-ar 1.00
+prob-low   decode    14.2 tok/s  x2.63 vs ar  x1.38 vs wavefront  xnan vs wfd-ar  calls/tok 4.71 (replay 4.71)  ms/call 14.90  same-as-ar 1.00
+prob-load  decode    15.6 tok/s  x2.89 vs ar  x1.52 vs wavefront  xnan vs wfd-ar  calls/tok 6.13 (replay 6.08)  ms/call 10.43  same-as-ar 1.00
+=== check done 2026-10-31T22:39:03Z
+=== bench start 2026-10-31T22:39:03Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.76s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.81s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:05<00:01,  1.81s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.31s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.49s/it]
+[wallclock] huginn-3.5b bench-bfloat16: 60 questions, arms ['ar', 'wavefront', 'both-path', 'prob-low', 'prob-load'], max_seq 2666, attention check 0.00390625
+[wallclock] 1/60 q81 mt_bench {'ar': '6.4t/s', 'wavefront': '13.4t/s*', 'both-path': '13.3t/s*', 'prob-low': '28.3t/s*', 'prob-load': '22.1t/s*'}
+[wallclock] 2/60 q89 mt_bench {'wavefront': '15.5t/s*', 'both-path': '16.4t/s', 'prob-low': '30.5t/s*', 'prob-load': '24.4t/s', 'ar': '6.4t/s'}
+[wallclock] 3/60 q97 mt_bench {'both-path': '19.4t/s*', 'prob-low': '35.8t/s*', 'prob-load': '107.9t/s*', 'ar': '6.5t/s', 'wavefront': '16.1t/s*'}
+[wallclock] 4/60 q105 mt_bench {'prob-low': '47.3t/s*', 'prob-load': '44.8t/s', 'ar': '6.5t/s', 'wavefront': '20.6t/s*', 'both-path': '29.1t/s*'}
+[wallclock] 5/60 q113 mt_bench {'prob-load': '41.2t/s*', 'ar': '6.4t/s', 'wavefront': '19.3t/s*', 'both-path': '20.5t/s*', 'prob-low': '45.3t/s*'}
+[wallclock] 6/60 q121 mt_bench {'ar': '6.4t/s', 'wavefront': '19.3t/s', 'both-path': '19.4t/s*', 'prob-low': '39.3t/s*', 'prob-load': '36.5t/s'}
+[wallclock] 7/60 q129 mt_bench {'wavefront': '21.5t/s', 'both-path': '29.2t/s', 'prob-low': '53.3t/s', 'prob-load': '50.7t/s', 'ar': '6.5t/s'}
+[wallclock] 8/60 q137 mt_bench {'both-path': '18.8t/s', 'prob-low': '33.9t/s', 'prob-load': '33.7t/s', 'ar': '6.4t/s', 'wavefront': '20.1t/s'}
+[wallclock] 9/60 q145 mt_bench {'prob-low': '28.3t/s', 'prob-load': '23.0t/s', 'ar': '6.5t/s', 'wavefront': '13.7t/s', 'both-path': '13.5t/s'}
+[wallclock] 10/60 q153 mt_bench {'prob-load': '26.3t/s*', 'ar': '6.5t/s', 'wavefront': '14.4t/s*', 'both-path': '15.5t/s*', 'prob-low': '34.4t/s*'}
+[wallclock] 11/60 q161 translation {'ar': '6.1t/s', 'wavefront': '15.8t/s', 'both-path': '15.1t/s', 'prob-low': '28.0t/s', 'prob-load': '21.8t/s'}
+[wallclock] 12/60 q169 translation {'wavefront': '6.1t/s', 'both-path': '6.3t/s', 'prob-low': '12.0t/s', 'prob-load': '9.9t/s', 'ar': '6.2t/s'}
+[wallclock] 13/60 q177 translation {'both-path': '6.5t/s*', 'prob-low': '9.2t/s*', 'prob-load': '8.3t/s', 'ar': '6.0t/s', 'wavefront': '6.4t/s*'}
+[wallclock] 14/60 q185 translation {'prob-low': '15.6t/s', 'prob-load': '13.1t/s', 'ar': '6.0t/s', 'wavefront': '8.5t/s', 'both-path': '7.0t/s'}
+[wallclock] 15/60 q193 translation {'prob-load': '8.5t/s*', 'ar': '6.1t/s', 'wavefront': '5.5t/s', 'both-path': '6.0t/s*', 'prob-low': '10.6t/s'}
+[wallclock] 16/60 q201 translation {'ar': '6.0t/s', 'wavefront': '5.8t/s', 'both-path': '5.9t/s', 'prob-low': '12.6t/s', 'prob-load': '9.4t/s'}
+[wallclock] 17/60 q209 translation {'wavefront': '7.9t/s', 'both-path': '6.8t/s', 'prob-low': '16.1t/s', 'prob-load': '13.1t/s', 'ar': '6.1t/s'}
+[wallclock] 18/60 q217 translation {'both-path': '6.7t/s*', 'prob-low': '15.5t/s*', 'prob-load': '14.2t/s*', 'ar': '6.3t/s', 'wavefront': '7.8t/s*'}
+[wallclock] 19/60 q225 translation {'prob-low': '16.7t/s', 'prob-load': '12.8t/s', 'ar': '6.3t/s', 'wavefront': '7.3t/s', 'both-path': '7.1t/s'}
+[wallclock] 20/60 q233 translation {'prob-load': '17.3t/s', 'ar': '6.3t/s', 'wavefront': '11.2t/s', 'both-path': '11.7t/s', 'prob-low': '24.2t/s'}
+[wallclock] 21/60 q241 summarization {'ar': '6.3t/s', 'wavefront': '15.3t/s*', 'both-path': '22.7t/s*', 'prob-low': '22.9t/s', 'prob-load': '18.9t/s'}
+[wallclock] 22/60 q248 summarization {'wavefront': '8.7t/s', 'both-path': '11.2t/s', 'prob-low': '15.7t/s', 'prob-load': '13.3t/s', 'ar': '5.6t/s'}
+[wallclock] 23/60 q257 summarization {'both-path': '18.8t/s', 'prob-low': '29.6t/s', 'prob-load': '24.1t/s', 'ar': '6.0t/s', 'wavefront': '17.0t/s'}
+[wallclock] 24/60 q265 summarization {'prob-low': '27.3t/s', 'prob-load': '22.2t/s', 'ar': '6.1t/s', 'wavefront': '15.2t/s', 'both-path': '18.1t/s'}
+[wallclock] 25/60 q272 summarization {'prob-load': '15.9t/s*', 'ar': '5.6t/s', 'wavefront': '14.7t/s*', 'both-path': '9.5t/s', 'prob-low': '19.8t/s*'}
+[wallclock] 26/60 q280 summarization {'ar': '6.0t/s', 'wavefront': '18.9t/s', 'both-path': '36.8t/s', 'prob-low': '47.9t/s', 'prob-load': '45.2t/s'}
+[wallclock] 27/60 q289 summarization {'wavefront': '20.5t/s', 'both-path': '27.7t/s', 'prob-low': '34.1t/s', 'prob-load': '31.5t/s', 'ar': '5.9t/s'}
+[wallclock] 28/60 q297 summarization {'both-path': '9.5t/s', 'prob-low': '14.7t/s', 'prob-load': '11.7t/s', 'ar': '5.5t/s', 'wavefront': '9.1t/s'}
+[wallclock] 29/60 q305 summarization {'prob-low': '27.8t/s', 'prob-load': '19.3t/s', 'ar': '6.0t/s', 'wavefront': '16.4t/s', 'both-path': '30.1t/s'}
+[wallclock] 30/60 q313 summarization {'prob-load': '12.7t/s', 'ar': '5.8t/s', 'wavefront': '12.6t/s', 'both-path': '12.0t/s', 'prob-low': '18.2t/s'}
+[wallclock] 31/60 q321 qa {'ar': '5.5t/s', 'wavefront': '7.0t/s', 'both-path': '7.2t/s', 'prob-low': '7.1t/s', 'prob-load': '6.9t/s'}
+[wallclock] 32/60 q329 qa {'wavefront': '15.3t/s', 'both-path': '17.4t/s', 'prob-low': '39.6t/s*', 'prob-load': '32.5t/s', 'ar': '6.5t/s'}
+[wallclock] 33/60 q337 qa {'both-path': '15.9t/s*', 'prob-low': '31.0t/s', 'prob-load': '22.2t/s', 'ar': '6.5t/s', 'wavefront': '15.1t/s*'}
+[wallclock] 34/60 q345 qa {'prob-low': '5.6t/s', 'prob-load': '5.7t/s', 'ar': '4.7t/s', 'wavefront': '5.8t/s', 'both-path': '5.7t/s'}
+[wallclock] 35/60 q353 qa {'prob-load': '144.0t/s', 'ar': '6.5t/s', 'wavefront': '31.1t/s', 'both-path': '57.9t/s', 'prob-low': '169.4t/s*'}
+[wallclock] 36/60 q361 qa {'ar': '5.5t/s', 'wavefront': '5.3t/s', 'both-path': '5.4t/s', 'prob-low': '6.4t/s', 'prob-load': '6.5t/s'}
+[wallclock] 37/60 q369 qa {'wavefront': '16.1t/s*', 'both-path': '63.0t/s', 'prob-low': '41.8t/s*', 'prob-load': '28.8t/s*', 'ar': '6.5t/s'}
+[wallclock] 38/60 q377 qa {'both-path': '11.2t/s', 'prob-low': '24.6t/s', 'prob-load': '19.6t/s', 'ar': '6.4t/s', 'wavefront': '10.1t/s'}
+[wallclock] 39/60 q385 qa {'prob-low': '5.3t/s', 'prob-load': '5.0t/s', 'ar': '5.2t/s', 'wavefront': '5.5t/s', 'both-path': '4.0t/s'}
+[wallclock] 40/60 q393 qa {'prob-load': '24.7t/s', 'ar': '6.4t/s', 'wavefront': '14.4t/s', 'both-path': '14.4t/s', 'prob-low': '30.3t/s'}
+[wallclock] 41/60 q401 math_reasoning {'ar': '6.5t/s', 'wavefront': '14.2t/s', 'both-path': '17.2t/s', 'prob-low': '32.2t/s', 'prob-load': '25.7t/s'}
+[wallclock] 42/60 q409 math_reasoning {'wavefront': '15.2t/s', 'both-path': '17.1t/s', 'prob-low': '33.1t/s', 'prob-load': '25.5t/s', 'ar': '6.4t/s'}
+[wallclock] 43/60 q417 math_reasoning {'both-path': '19.8t/s*', 'prob-low': '37.0t/s*', 'prob-load': '30.4t/s', 'ar': '6.5t/s', 'wavefront': '16.3t/s*'}
+[wallclock] 44/60 q425 math_reasoning {'prob-low': '33.9t/s*', 'prob-load': '27.8t/s*', 'ar': '6.5t/s', 'wavefront': '15.5t/s*', 'both-path': '17.3t/s*'}
+[wallclock] 45/60 q433 math_reasoning {'prob-load': '3.6t/s*', 'ar': '4.5t/s', 'wavefront': '4.0t/s*', 'both-path': '3.6t/s*', 'prob-low': '3.5t/s*'}
+[wallclock] 46/60 q441 math_reasoning {'ar': '6.1t/s', 'wavefront': '16.8t/s*', 'both-path': '18.7t/s', 'prob-low': '36.3t/s*', 'prob-load': '33.4t/s*'}
+[wallclock] 47/60 q449 math_reasoning {'wavefront': '12.8t/s', 'both-path': '14.6t/s*', 'prob-low': '29.9t/s', 'prob-load': '27.0t/s', 'ar': '6.5t/s'}
+[wallclock] 48/60 q457 math_reasoning {'both-path': '19.9t/s', 'prob-low': '40.6t/s', 'prob-load': '34.1t/s', 'ar': '6.5t/s', 'wavefront': '15.2t/s'}
+[wallclock] 49/60 q465 math_reasoning {'prob-low': '30.3t/s', 'prob-load': '27.3t/s', 'ar': '6.4t/s', 'wavefront': '14.8t/s', 'both-path': '16.5t/s'}
+[wallclock] 50/60 q473 math_reasoning {'prob-load': '33.7t/s', 'ar': '6.4t/s', 'wavefront': '16.3t/s*', 'both-path': '19.6t/s*', 'prob-low': '39.0t/s'}
+[wallclock] 51/60 q481 rag {'ar': '6.3t/s', 'wavefront': '27.5t/s', 'both-path': '69.0t/s', 'prob-low': '174.3t/s', 'prob-load': '177.7t/s'}
+[wallclock] 52/60 q489 rag {'wavefront': '9.1t/s', 'both-path': '10.3t/s', 'prob-low': '10.2t/s', 'prob-load': '10.2t/s', 'ar': '4.6t/s'}
+[wallclock] 53/60 q497 rag {'both-path': '8.4t/s', 'prob-low': '11.6t/s', 'prob-load': '10.4t/s', 'ar': '5.5t/s', 'wavefront': '7.3t/s'}
+[wallclock] 54/60 q505 rag {'prob-low': '3.4t/s', 'prob-load': '3.4t/s', 'ar': '3.4t/s', 'wavefront': '2.9t/s', 'both-path': '2.8t/s'}
+[wallclock] 55/60 q513 rag {'prob-load': '4.4t/s', 'ar': '3.4t/s', 'wavefront': '4.5t/s', 'both-path': '4.4t/s', 'prob-low': '4.3t/s'}
+[wallclock] 56/60 q521 rag {'ar': '3.4t/s', 'wavefront': '4.5t/s', 'both-path': '4.4t/s', 'prob-low': '4.4t/s', 'prob-load': '4.4t/s'}
+[wallclock] 57/60 q529 rag {'wavefront': '10.9t/s', 'both-path': '11.5t/s', 'prob-low': '14.8t/s', 'prob-load': '15.9t/s', 'ar': '5.4t/s'}
+[wallclock] 58/60 q537 rag {'both-path': '6.2t/s', 'prob-low': '5.9t/s', 'prob-load': '6.1t/s', 'ar': '3.9t/s', 'wavefront': '5.8t/s'}
+[wallclock] 59/60 q545 rag {'prob-low': '25.4t/s*', 'prob-load': '171.1t/s*', 'ar': '6.5t/s', 'wavefront': '12.3t/s*', 'both-path': '55.3t/s'}
+[wallclock] 60/60 q553 rag {'prob-load': '26.9t/s', 'ar': '5.9t/s', 'wavefront': '16.0t/s', 'both-path': '29.7t/s', 'prob-low': '27.3t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261101_001843-qsfpbl2f
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▇▆▅▆▇▁▆▃▁▅▆▇▇▇▇▇▇▇▇▇▇███▇▇▆▇▇▁▇▇▆▆▅▆▇▆▃▇
+wandb:              ar/same_as_ar ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▂▂▃▃▃▂▂▁▁▁▁▂▃▂▃▇▅▅▂▁▁▆▇▂▁▂▂▂▂▁▂▂▂▂█▂▂▂▂▆
+wandb:       both-path/same_as_ar ▁█▁▁██▁██▁▁███▁████████▁███████▁██▁█████
+wandb: prob-load/decode_tok_per_s ▁▄▂▂▂▂▂▁▁▁▁▁▁▁▁▁▂▂▂▄▁▁▂▁▁▁▁▂▂▂▁▂▂▂█▁▁▂▁▂
+wandb:       prob-load/same_as_ar ▁█▁████▁███▁█████▁██████████▁▁██████████
+wandb:  prob-low/decode_tok_per_s ▃▃▄▃▃▂▃▂▂▁▂▂▂▂▂▃▃█▅▂▂▁▃▃▁▃▁▃▃▃▁▃▃▃▃▂▁▁▂▄
+wandb:        prob-low/same_as_ar ▁▁▁▁▁██▁██▁███████▁█▁█▁███▁▁▁▁██████████
+wandb:                   question ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇████
+wandb:                question_id ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇███
+wandb:                         +2 ...
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 0.76667
+wandb:             ar/calls_per_token 32
+wandb:               ar/cpu_over_wall 1.00055
+wandb:        ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_both-path 0.28
+wandb: ar/decode_speedup_vs_wavefront 0.38929
+wandb:            ar/decode_tok_per_s 6.46929
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_both-path 0.28711
+wandb:    ar/e2e_speedup_vs_wavefront 0.39632
+wandb:                            +97 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261101_001843-qsfpbl2f
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261101_001843-qsfpbl2f/logs
+clean questions 40/60
+ar         decode     6.5 tok/s  x1.00 vs ar  x0.39 vs wavefront  xnan vs wfd-ar  calls/tok 32.00 (replay 27.36)  ms/call 4.83  same-as-ar 1.00
+wavefront  decode    16.6 tok/s  x2.57 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 9.25 (replay 9.31)  ms/call 6.50  same-as-ar 0.70
+both-path  decode    23.1 tok/s  x3.57 vs ar  x1.39 vs wavefront  xnan vs wfd-ar  calls/tok 6.67 (replay 6.16)  ms/call 6.49  same-as-ar 0.73
+prob-low   decode    39.3 tok/s  x6.07 vs ar  x2.36 vs wavefront  xnan vs wfd-ar  calls/tok 3.33 (replay 3.19)  ms/call 7.64  same-as-ar 0.70
+prob-load  decode    39.9 tok/s  x6.16 vs ar  x2.40 vs wavefront  xnan vs wfd-ar  calls/tok 3.70 (replay 3.66)  ms/call 6.78  same-as-ar 0.80
+=== bench done 2026-11-01T00:18:45Z
+=== sum start 2026-11-01T00:18:45Z
+clean questions 0/60
+ar         decode     6.5 tok/s  x1.00 vs ar  x0.39 vs wavefront  xnan vs wfd-ar  calls/tok 32.00 (replay 27.36)  ms/call 4.83  same-as-ar 1.00
+wavefront  decode    16.6 tok/s  x2.57 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 9.25 (replay 9.31)  ms/call 6.50  same-as-ar 0.70
+both-path  decode    23.1 tok/s  x3.57 vs ar  x1.39 vs wavefront  xnan vs wfd-ar  calls/tok 6.67 (replay 6.16)  ms/call 6.49  same-as-ar 0.73
+prob-low   decode    39.3 tok/s  x6.07 vs ar  x2.36 vs wavefront  xnan vs wfd-ar  calls/tok 3.33 (replay 3.19)  ms/call 7.64  same-as-ar 0.70
+prob-load  decode    39.9 tok/s  x6.16 vs ar  x2.40 vs wavefront  xnan vs wfd-ar  calls/tok 3.70 (replay 3.66)  ms/call 6.78  same-as-ar 0.80
+=== sum done 2026-11-01T00:18:48Z
+=== all done 2026-11-01T00:18:48Z

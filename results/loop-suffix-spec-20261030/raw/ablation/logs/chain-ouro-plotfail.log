@@ -1,0 +1,34 @@
+=== calibrate ouro-2.6b 01:03:58
+[calibrate] offline ouro-2.6b pairs [(1, 2), (2, 3)] in 9s
+[calibrate] insitu d=1: 87593 dev suffix offers, right 0.516, 20s
+[calibrate] insitu d=2: 87553 dev suffix offers, right 0.521, 12s
+[calibrate] insitu d=3: 87630 dev suffix offers, right 0.520, 10s
+[check-calib] ouro-2.6b d=1: identical
+=== run ouro-2.6b 01:05:02
+| setting | speedup | rows/word | speedup (confirm) | s |
+| --- | ---: | ---: | ---: | ---: |
+| legacy K16 | 4.43 | 22.4 | 3.91 | 11 |
+| C t0.01 | 7.04 | 9.7 | 6.02 | 18 |
+| C t0.01 top1 | 5.93 | 6.2 | 5.05 | 9 |
+| C t0.01 K16 | 5.29 | 9.0 | 4.73 | 13 |
+| C t0.01 offline-suffix | 7.06 | 10.8 | 6.04 | 17 |
+| C t0.01 step-end | 6.01 | 9.8 | 5.65 | 11 |
+| C t0.1 | 6.11 | 5.6 | 5.19 | 10 |
+| C t0.1 top1 | 5.68 | 5.3 | 4.85 | 8 |
+| C t0.1 K16 | 4.78 | 5.4 | 4.25 | 9 |
+| C t0.1 offline-suffix | 6.20 | 6.4 | 5.27 | 11 |
+| C t0.1 step-end | 5.61 | 5.7 | 5.02 | 6 |
+| d1 C t0.01 | 7.04 | 9.7 | 6.02 | 16 |
+| d1 C t0.1 | 6.11 | 5.6 | 5.19 | 10 |
+| d2 C t0.01 | 3.90 | 6.8 | 3.36 | 11 |
+| d2 C t0.1 | 3.74 | 5.6 | 3.21 | 9 |
+| d3 C t0.01 | 2.66 | 6.7 | 2.28 | 9 |
+| d3 C t0.1 | 2.61 | 6.0 | 2.23 | 8 |
+Traceback (most recent call last):
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_ablation.py", line 364, in <module>
+    main()
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_ablation.py", line 360, in main
+    run[args.cmd](args)
+  File "/mnt/disk2_from_server2/siqizhu4/llm-memory-editability/scripts/loop_prob_tree_ablation.py", line 274, in cmd_plot
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

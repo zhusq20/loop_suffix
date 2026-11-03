@@ -1,0 +1,219 @@
+[trace] huginn-3.5b rule top8 noK deep t0.01 dev
+   all|1                  n=  21934 p=0.024 observed=0.024
+   all|2                  n=  23641 p=0.064 observed=0.058
+   all|3                  n=  30334 p=0.176 observed=0.145
+   all|4                  n=  22989 p=0.389 observed=0.281
+   all|5                  n=  15897 p=0.601 observed=0.484
+   all|6                  n=  10702 p=0.794 observed=0.752
+   all|7                  n=   5957 p=0.949 observed=0.909
+   all|8                  n=  12630 p=0.984 observed=0.778
+   deep no sibling|4      n=     50 p=0.411 observed=0.360
+   deep no sibling|5      n=    133 p=0.557 observed=0.602
+   deep no sibling|6      n=    174 p=0.777 observed=0.839
+   deep no sibling|7      n=    112 p=0.946 observed=0.946
+   deep no sibling|8      n=    117 p=0.996 observed=1.000
+   deep with sibling|1    n=    524 p=0.027 observed=0.034
+   deep with sibling|2    n=   4011 p=0.050 observed=0.064
+   deep with sibling|3    n=   2339 p=0.148 observed=0.162
+   deep with sibling|4    n=    672 p=0.374 observed=0.381
+   deep with sibling|5    n=    765 p=0.556 observed=0.579
+   deep with sibling|6    n=    855 p=0.762 observed=0.737
+   deep with sibling|7    n=    284 p=0.943 observed=0.912
+   deep with sibling|8    n=    150 p=0.994 observed=0.980
+   deep|1                 n=    524 p=0.027 observed=0.034
+   deep|2                 n=   4011 p=0.050 observed=0.064
+   deep|3                 n=   2344 p=0.149 observed=0.163
+   deep|4                 n=    722 p=0.377 observed=0.380
+   deep|5                 n=    898 p=0.556 observed=0.582
+   deep|6                 n=   1029 p=0.765 observed=0.754
+   deep|7                 n=    396 p=0.944 observed=0.922
+   deep|8                 n=    267 p=0.995 observed=0.989
+   fill no sibling|3      n=    559 p=0.213 observed=0.208
+   fill no sibling|4      n=   1534 p=0.387 observed=0.420
+   fill no sibling|5      n=   1763 p=0.571 observed=0.618
+   fill no sibling|6      n=   2660 p=0.807 observed=0.839
+   fill no sibling|7      n=    758 p=0.950 observed=0.963
+   fill no sibling|8      n=   2927 p=0.989 observed=0.995
+   fill with sibling|3    n=    994 p=0.216 observed=0.218
+   fill with sibling|4    n=   2830 p=0.386 observed=0.380
+   fill with sibling|5    n=   2906 p=0.569 observed=0.551
+   fill with sibling|6    n=   3606 p=0.799 observed=0.790
+   fill with sibling|7    n=    815 p=0.950 observed=0.944
+   fill with sibling|8    n=   2131 p=0.988 observed=0.987
+   fill|2                 n=     32 p=0.037 observed=0.062
+   fill|3                 n=   1553 p=0.215 observed=0.214
+   fill|4                 n=   4364 p=0.387 observed=0.394
+   fill|5                 n=   4669 p=0.570 observed=0.576
+   fill|6                 n=   6266 p=0.802 observed=0.811
+   fill|7                 n=   1573 p=0.950 observed=0.953
+   fill|8                 n=   5058 p=0.989 observed=0.991
+   sibling with sibling|1 n=  20531 p=0.024 observed=0.024
+   sibling with sibling|2 n=  15055 p=0.065 observed=0.065
+   sibling with sibling|3 n=  15110 p=0.159 observed=0.162
+   sibling with sibling|4 n=   1963 p=0.347 observed=0.355
+   sibling|1              n=  20531 p=0.024 observed=0.024
+   sibling|2              n=  15055 p=0.065 observed=0.065
+   sibling|3              n=  15110 p=0.159 observed=0.162
+   sibling|4              n=   1963 p=0.347 observed=0.355
+   suffix depth 1 no sibling|1 n=     60 p=0.025 observed=0.067
+   suffix depth 1 no sibling|2 n=    780 p=0.073 observed=0.069
+   suffix depth 1 no sibling|3 n=   4149 p=0.196 observed=0.143
+   suffix depth 1 no sibling|4 n=   1716 p=0.427 observed=0.235
+   suffix depth 1 no sibling|5 n=   6046 p=0.642 observed=0.467
+   suffix depth 1 no sibling|6 n=   1844 p=0.776 observed=0.625
+   suffix depth 1 no sibling|7 n=    183 p=0.920 observed=0.781
+   suffix depth 1 no sibling|8 n=   4389 p=0.977 observed=0.391
+   suffix depth 1 with sibling|1 n=    402 p=0.025 observed=0.002
+   suffix depth 1 with sibling|2 n=   2151 p=0.079 observed=0.022
+   suffix depth 1 with sibling|3 n=   2405 p=0.159 observed=0.023
+   suffix depth 1 with sibling|4 n=   1356 p=0.410 observed=0.074
+   suffix depth 1 with sibling|5 n=    414 p=0.566 observed=0.051
+   suffix depth 1|1       n=    462 p=0.025 observed=0.011
+   suffix depth 1|2       n=   2931 p=0.078 observed=0.035
+   suffix depth 1|3       n=   6554 p=0.183 observed=0.099
+   suffix depth 1|4       n=   3072 p=0.420 observed=0.164
+   suffix depth 1|5       n=   6460 p=0.637 observed=0.440
+   suffix depth 1|6       n=   1862 p=0.776 observed=0.620
+   suffix depth 1|7       n=    197 p=0.920 observed=0.726
+   suffix depth 1|8       n=   4390 p=0.977 observed=0.391
+   suffix depth 2-4 no sibling|1 n=    211 p=0.019 observed=0.024
+   suffix depth 2-4 no sibling|2 n=    976 p=0.063 observed=0.027
+   suffix depth 2-4 no sibling|3 n=   2267 p=0.216 observed=0.064
+   suffix depth 2-4 no sibling|4 n=  10265 p=0.389 observed=0.236
+   suffix depth 2-4 no sibling|5 n=   2592 p=0.580 observed=0.422
+   suffix depth 2-4 no sibling|6 n=    604 p=0.788 observed=0.705
+   suffix depth 2-4 no sibling|7 n=    107 p=0.943 observed=0.916
+   suffix depth 2-4 no sibling|8 n=    655 p=0.994 observed=0.995
+   suffix depth 2-4 with sibling|1 n=     93 p=0.021 observed=0.000
+   suffix depth 2-4 with sibling|2 n=    328 p=0.068 observed=0.009
+   suffix depth 2-4 with sibling|3 n=    278 p=0.156 observed=0.040
+   suffix depth 2-4 with sibling|4 n=    345 p=0.390 observed=0.046
+   suffix depth 2-4 with sibling|5 n=    322 p=0.625 observed=0.019
+   suffix depth 2-4 with sibling|6 n=     99 p=0.745 observed=0.000
+   suffix depth 2-4|1     n=    304 p=0.020 observed=0.016
+   suffix depth 2-4|2     n=   1304 p=0.064 observed=0.022
+   suffix depth 2-4|3     n=   2545 p=0.209 observed=0.061
+   suffix depth 2-4|4     n=  10610 p=0.389 observed=0.230
+   suffix depth 2-4|5     n=   2914 p=0.585 observed=0.377
+   suffix depth 2-4|6     n=    703 p=0.782 observed=0.606
+   suffix depth 2-4|7     n=    110 p=0.942 observed=0.891
+   suffix depth 2-4|8     n=    656 p=0.994 observed=0.994
+   suffix depth 5+ no sibling|1 n=    111 p=0.022 observed=0.072
+   suffix depth 5+ no sibling|2 n=    294 p=0.060 observed=0.020
+   suffix depth 5+ no sibling|3 n=   2201 p=0.237 observed=0.196
+   suffix depth 5+ no sibling|4 n=   2245 p=0.390 observed=0.363
+   suffix depth 5+ no sibling|5 n=    941 p=0.598 observed=0.564
+   suffix depth 5+ no sibling|6 n=    822 p=0.814 observed=0.740
+   suffix depth 5+ no sibling|7 n=   3680 p=0.951 observed=0.900
+   suffix depth 5+ no sibling|8 n=   2258 p=0.980 observed=0.965
+   suffix depth 5+|1      n=    113 p=0.022 observed=0.071
+   suffix depth 5+|2      n=    308 p=0.060 observed=0.019
+   suffix depth 5+|3      n=   2228 p=0.236 observed=0.194
+   suffix depth 5+|4      n=   2258 p=0.390 observed=0.362
+   suffix depth 5+|5      n=    956 p=0.599 observed=0.556
+   suffix depth 5+|6      n=    842 p=0.814 observed=0.723
+   suffix depth 5+|7      n=   3681 p=0.951 observed=0.899
+   suffix depth 5+|8      n=   2259 p=0.980 observed=0.965
+[trace] huginn-3.5b rule top8 noK deep t0.01 confirm
+   all|1                  n=   3492 p=0.024 observed=0.024
+   all|2                  n=   3712 p=0.064 observed=0.059
+   all|3                  n=   5191 p=0.178 observed=0.149
+   all|4                  n=   3972 p=0.389 observed=0.280
+   all|5                  n=   2810 p=0.602 observed=0.487
+   all|6                  n=   1849 p=0.794 observed=0.745
+   all|7                  n=   1198 p=0.948 observed=0.910
+   all|8                  n=   2188 p=0.984 observed=0.806
+   deep no sibling|6      n=     31 p=0.775 observed=0.742
+   deep with sibling|1    n=     79 p=0.028 observed=0.025
+   deep with sibling|2    n=    619 p=0.050 observed=0.045
+   deep with sibling|3    n=    390 p=0.144 observed=0.151
+   deep with sibling|4    n=    105 p=0.381 observed=0.257
+   deep with sibling|5    n=    124 p=0.561 observed=0.532
+   deep with sibling|6    n=    124 p=0.763 observed=0.661
+   deep with sibling|7    n=     43 p=0.940 observed=0.907
+   deep|1                 n=     79 p=0.028 observed=0.025
+   deep|2                 n=    619 p=0.050 observed=0.045
+   deep|3                 n=    391 p=0.144 observed=0.151
+   deep|4                 n=    108 p=0.382 observed=0.259
+   deep|5                 n=    147 p=0.561 observed=0.551
+   deep|6                 n=    155 p=0.765 observed=0.677
+   deep|7                 n=     61 p=0.940 observed=0.934
+   deep|8                 n=     41 p=0.996 observed=1.000
+   fill no sibling|3      n=     73 p=0.210 observed=0.219
+   fill no sibling|4      n=    262 p=0.389 observed=0.492
+   fill no sibling|5      n=    294 p=0.572 observed=0.612
+   fill no sibling|6      n=    440 p=0.806 observed=0.875
+   fill no sibling|7      n=    127 p=0.950 observed=0.945
+   fill no sibling|8      n=    586 p=0.990 observed=0.995
+   fill with sibling|3    n=    132 p=0.215 observed=0.212
+   fill with sibling|4    n=    453 p=0.387 observed=0.342
+   fill with sibling|5    n=    521 p=0.572 observed=0.524
+   fill with sibling|6    n=    630 p=0.801 observed=0.763
+   fill with sibling|7    n=    169 p=0.950 observed=0.947
+   fill with sibling|8    n=    340 p=0.987 observed=0.991
+   fill|3                 n=    205 p=0.214 observed=0.215
+   fill|4                 n=    715 p=0.388 observed=0.397
+   fill|5                 n=    815 p=0.572 observed=0.556
+   fill|6                 n=   1070 p=0.803 observed=0.809
+   fill|7                 n=    296 p=0.950 observed=0.946
+   fill|8                 n=    926 p=0.989 observed=0.994
+   sibling with sibling|1 n=   3284 p=0.024 observed=0.021
+   sibling with sibling|2 n=   2420 p=0.065 observed=0.067
+   sibling with sibling|3 n=   2539 p=0.159 observed=0.158
+   sibling with sibling|4 n=    327 p=0.345 observed=0.346
+   sibling|1              n=   3284 p=0.024 observed=0.021
+   sibling|2              n=   2420 p=0.065 observed=0.067
+   sibling|3              n=   2539 p=0.159 observed=0.158
+   sibling|4              n=    327 p=0.345 observed=0.346
+   suffix depth 1 no sibling|2 n=    102 p=0.071 observed=0.059
+   suffix depth 1 no sibling|3 n=    697 p=0.200 observed=0.181
+   suffix depth 1 no sibling|4 n=    284 p=0.425 observed=0.208
+   suffix depth 1 no sibling|5 n=   1029 p=0.644 observed=0.500
+   suffix depth 1 no sibling|6 n=    343 p=0.778 observed=0.682
+   suffix depth 1 no sibling|7 n=     39 p=0.922 observed=0.769
+   suffix depth 1 no sibling|8 n=    682 p=0.978 observed=0.416
+   suffix depth 1 with sibling|2 n=    317 p=0.081 observed=0.047
+   suffix depth 1 with sibling|3 n=    373 p=0.160 observed=0.016
+   suffix depth 1 with sibling|4 n=    191 p=0.413 observed=0.094
+   suffix depth 1 with sibling|5 n=     69 p=0.569 observed=0.058
+   suffix depth 1|1       n=     32 p=0.022 observed=0.000
+   suffix depth 1|2       n=    419 p=0.078 observed=0.050
+   suffix depth 1|3       n=   1070 p=0.186 observed=0.123
+   suffix depth 1|4       n=    475 p=0.420 observed=0.162
+   suffix depth 1|5       n=   1098 p=0.639 observed=0.473
+   suffix depth 1|6       n=    351 p=0.778 observed=0.670
+   suffix depth 1|7       n=     42 p=0.921 observed=0.714
+   suffix depth 1|8       n=    682 p=0.978 observed=0.416
+   suffix depth 2-4 no sibling|2 n=    128 p=0.064 observed=0.016
+   suffix depth 2-4 no sibling|3 n=    393 p=0.220 observed=0.076
+   suffix depth 2-4 no sibling|4 n=   1820 p=0.389 observed=0.258
+   suffix depth 2-4 no sibling|5 n=    492 p=0.582 observed=0.492
+   suffix depth 2-4 no sibling|6 n=    128 p=0.787 observed=0.633
+   suffix depth 2-4 no sibling|8 n=    131 p=0.992 observed=1.000
+   suffix depth 2-4 with sibling|2 n=     37 p=0.068 observed=0.000
+   suffix depth 2-4 with sibling|3 n=     65 p=0.154 observed=0.031
+   suffix depth 2-4 with sibling|4 n=     63 p=0.396 observed=0.079
+   suffix depth 2-4 with sibling|5 n=     72 p=0.622 observed=0.014
+   suffix depth 2-4|1     n=     41 p=0.017 observed=0.024
+   suffix depth 2-4|2     n=    165 p=0.065 observed=0.012
+   suffix depth 2-4|3     n=    458 p=0.211 observed=0.070
+   suffix depth 2-4|4     n=   1883 p=0.389 observed=0.252
+   suffix depth 2-4|5     n=    564 p=0.587 observed=0.431
+   suffix depth 2-4|6     n=    143 p=0.783 observed=0.573
+   suffix depth 2-4|8     n=    131 p=0.992 observed=1.000
+   suffix depth 5+ no sibling|1 n=     54 p=0.019 observed=0.259
+   suffix depth 5+ no sibling|2 n=     81 p=0.066 observed=0.062
+   suffix depth 5+ no sibling|3 n=    522 p=0.232 observed=0.205
+   suffix depth 5+ no sibling|4 n=    463 p=0.391 observed=0.289
+   suffix depth 5+ no sibling|5 n=    175 p=0.597 observed=0.411
+   suffix depth 5+ no sibling|6 n=    124 p=0.812 observed=0.718
+   suffix depth 5+ no sibling|7 n=    785 p=0.949 observed=0.907
+   suffix depth 5+ no sibling|8 n=    408 p=0.980 observed=0.951
+   suffix depth 5+|1      n=     56 p=0.019 observed=0.250
+   suffix depth 5+|2      n=     85 p=0.066 observed=0.059
+   suffix depth 5+|3      n=    528 p=0.232 observed=0.203
+   suffix depth 5+|4      n=    464 p=0.391 observed=0.291
+   suffix depth 5+|5      n=    186 p=0.598 observed=0.392
+   suffix depth 5+|6      n=    130 p=0.810 observed=0.685
+   suffix depth 5+|7      n=    785 p=0.949 observed=0.907
+   suffix depth 5+|8      n=    408 p=0.980 observed=0.951

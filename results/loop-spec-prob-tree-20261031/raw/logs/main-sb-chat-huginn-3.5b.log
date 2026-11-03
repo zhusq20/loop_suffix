@@ -1,0 +1,7 @@
+| setting | calls/token (dev) | speedup (dev) | rows/call | reads/call | tokens/step | s |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| legacy K16 (check: 0 mismatched) | 7.882 | 4.06 | 143.1 | 15.1 | 4.94 | 46 |
+| rule top1 K16 t0.01 | 7.960 | 4.02 | 13.9 | 0.6 | 4.88 | 4 |
+| rule top8 K16 t0.01 | 5.969 | 5.36 | 49.4 | 2.6 | 7.56 | 13 |
+| rule top8 noK t0.01 | 5.481 | 5.84 | 55.6 | 3.1 | 8.82 | 14 |
+| rule top8 noK deep t0.01 | 3.727 | 8.59 | 84.0 | 9.6 | 32.09 | 22 |

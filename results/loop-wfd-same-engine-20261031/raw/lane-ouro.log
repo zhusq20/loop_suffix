@@ -1,0 +1,60 @@
+=== check-ouro start 2026-10-31T19:15:54Z
+[wallclock] ouro-2.6b check-float32: 6 questions, arms ['wfd', 'ar', 'wavefront', 'shallow', 'suffix', 'both', 'both-path'], max_seq 841, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+[wallclock] 1/6 q81 mt_bench {'wfd': '17.7t/s', 'ar': '5.1t/s', 'wavefront': '9.7t/s', 'shallow': '9.6t/s', 'suffix': '6.6t/s', 'both': '11.6t/s', 'both-path': '11.6t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [93, 93]}
+[wallclock] 2/6 q161 translation {'ar': '5.0t/s', 'wavefront': '6.4t/s', 'shallow': '6.3t/s', 'suffix': '6.3t/s', 'both': '7.6t/s', 'both-path': '7.8t/s', 'wfd': '10.9t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [52, 52]}
+[wallclock] 3/6 q241 summarization {'wavefront': '8.1t/s', 'shallow': '8.1t/s', 'suffix': '6.4t/s', 'both': '9.4t/s', 'both-path': '9.6t/s', 'wfd': '13.4t/s', 'ar': '5.0t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [111, 111]}
+[wallclock] 4/6 q321 qa {'shallow': '8.5t/s', 'suffix': '4.9t/s', 'both': '8.2t/s', 'both-path': '8.4t/s', 'wfd': '15.3t/s', 'ar': '5.0t/s', 'wavefront': '8.5t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [37, 37]}
+[wallclock] 5/6 q401 math_reasoning {'suffix': '7.8t/s', 'both': '14.5t/s', 'both-path': '14.4t/s', 'wfd': '19.7t/s', 'ar': '5.0t/s', 'wavefront': '10.9t/s', 'shallow': '10.4t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [46, 46]}
+[wallclock] 6/6 q481 rag {'both': '11.5t/s', 'both-path': '11.7t/s', 'wfd': '18.3t/s', 'ar': '5.0t/s', 'wavefront': '10.5t/s', 'shallow': '10.0t/s', 'suffix': '6.0t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [78, 78]}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_192056-szzx1bi9
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▅▃█▂▁▆
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb: both-path/decode_tok_per_s ▅▁▃▂█▆
+wandb:       both-path/same_as_ar ▁▁▁▁▁▁
+wandb:      both/decode_tok_per_s ▅▁▃▂█▅
+wandb:            both/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb:   shallow/decode_tok_per_s ▆▁▄▅██
+wandb:         shallow/same_as_ar ▁▁▁▁▁▁
+wandb:                         +6 ...
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 1
+wandb:             ar/calls_per_token 4
+wandb:               ar/cpu_over_wall 1.00047
+wandb:        ar/decode_speedup_vs_ar 1
+wandb:   ar/decode_speedup_vs_shallow 0.55394
+wandb: ar/decode_speedup_vs_wavefront 0.54285
+wandb:       ar/decode_speedup_vs_wfd 0.30089
+wandb:            ar/decode_tok_per_s 5.14934
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:      ar/e2e_speedup_vs_shallow 0.56409
+wandb:                           +137 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_192056-szzx1bi9
+wandb: Find logs at: /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_192056-szzx1bi9/logs
+wavefront vs wfd: {'questions': 6, 'same_tokens': 6, 'same_calls': 6, 'same_both': 6, 'calls_ours_total': 417, 'calls_wfd_total': 417}
+clean questions 6/6
+wfd        decode    17.1 tok/s  x3.32 vs ar  x1.80 vs wavefront  xnan vs wfd-ar  calls/tok 1.54 (replay nan)  ms/call 37.83  same-as-ar 1.00
+ar         decode     5.1 tok/s  x1.00 vs ar  x0.54 vs wavefront  xnan vs wfd-ar  calls/tok 4.00 (replay 4.00)  ms/call 48.55  same-as-ar 1.00
+wavefront  decode     9.5 tok/s  x1.84 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 1.54 (replay 1.58)  ms/call 68.26  same-as-ar 1.00
+shallow    decode     9.3 tok/s  x1.81 vs ar  x0.98 vs wavefront  xnan vs wfd-ar  calls/tok 1.59 (replay 1.60)  ms/call 67.70  same-as-ar 1.00
+suffix     decode     6.5 tok/s  x1.26 vs ar  x0.69 vs wavefront  xnan vs wfd-ar  calls/tok 3.01 (replay 3.04)  ms/call 51.16  same-as-ar 1.00
+both       decode    11.0 tok/s  x2.13 vs ar  x1.16 vs wavefront  xnan vs wfd-ar  calls/tok 1.31 (replay 1.31)  ms/call 69.38  same-as-ar 1.00
+both-path  decode    11.2 tok/s  x2.17 vs ar  x1.18 vs wavefront  xnan vs wfd-ar  calls/tok 1.31 (replay 1.31)  ms/call 68.24  same-as-ar 1.00
+=== check-ouro done rc=0 2026-10-31T19:20:59Z
+=== bench-ouro start 2026-10-31T19:20:59Z
+[wallclock] ouro-2.6b bench-bfloat16: 60 questions, arms ['ar', 'wavefront', 'shallow', 'suffix', 'both', 'both-path'], max_seq 2410, attention check 0.001953125
+[wallclock] 1/60 q81 mt_bench {'ar': '5.4t/s', 'wavefront': '10.8t/s*', 'shallow': '10.7t/s*', 'suffix': '5.8t/s*', 'both': '12.1t/s*', 'both-path': '10.5t/s*'}

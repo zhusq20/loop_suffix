@@ -1,0 +1,321 @@
+=== check-ouro start 2026-10-31T19:50:00Z
+[wallclock] ouro-2.6b check-float32: 6 questions, arms ['wfd', 'ar', 'wavefront'], max_seq 841, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+[wallclock] 1/6 q81 mt_bench {'wfd': '17.8t/s', 'ar': '5.1t/s', 'wavefront': '9.9t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [93, 93]}
+[wallclock] 2/6 q161 translation {'ar': '5.1t/s', 'wavefront': '6.5t/s', 'wfd': '11.6t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [52, 52]}
+[wallclock] 3/6 q241 summarization {'wavefront': '8.3t/s', 'wfd': '13.2t/s', 'ar': '5.0t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [111, 111]}
+[wallclock] 4/6 q321 qa {'wfd': '15.2t/s', 'ar': '5.1t/s', 'wavefront': '8.6t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [37, 37]}
+[wallclock] 5/6 q401 math_reasoning {'ar': '5.1t/s', 'wavefront': '11.3t/s', 'wfd': '20.1t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [46, 46]}
+[wallclock] 6/6 q481 rag {'wavefront': '10.9t/s', 'wfd': '18.2t/s', 'ar': '5.1t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [78, 78]}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_195225-6etpuosh
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ▁█▂▅▃█
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb: wavefront/decode_tok_per_s ▆▁▄▄██
+wandb:       wavefront/same_as_ar ▁▁▁▁▁▁
+wandb:       wfd/decode_tok_per_s ▆▁▃▄█▇
+wandb:             wfd/same_as_ar ▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 1
+wandb:             ar/calls_per_token 4
+wandb:               ar/cpu_over_wall 1.00044
+wandb:        ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_wavefront 0.53456
+wandb:       ar/decode_speedup_vs_wfd 0.3021
+wandb:            ar/decode_tok_per_s 5.19908
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_wavefront 0.54525
+wandb:          ar/e2e_speedup_vs_wfd 0.31846
+wandb:                            +47 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_195225-6etpuosh
+wandb: Find logs at: /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_195225-6etpuosh/logs
+wavefront vs wfd: {'questions': 6, 'same_tokens': 6, 'same_calls': 6, 'same_both': 6, 'calls_ours_total': 417, 'calls_wfd_total': 417}
+clean questions 6/6
+wfd        decode    17.2 tok/s  x3.31 vs ar  x1.77 vs wavefront  xnan vs wfd-ar  calls/tok 1.54 (replay nan)  ms/call 37.62  same-as-ar 1.00
+ar         decode     5.2 tok/s  x1.00 vs ar  x0.53 vs wavefront  xnan vs wfd-ar  calls/tok 4.00 (replay 4.00)  ms/call 48.09  same-as-ar 1.00
+wavefront  decode     9.7 tok/s  x1.87 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 1.54 (replay 1.58)  ms/call 66.57  same-as-ar 1.00
+=== check-ouro done 2026-10-31T19:52:28Z
+=== check-huginn start 2026-10-31T19:52:28Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 454.90it/s]
+[wallclock] huginn-3.5b check-float32: 6 questions, arms ['wfd', 'ar', 'wavefront'], max_seq 844, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+[wallclock] 1/6 q81 mt_bench {'wfd': '10.0t/s', 'ar': '5.3t/s', 'wavefront': '8.8t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [728, 728]}
+[wallclock] 2/6 q161 translation {'ar': '5.3t/s', 'wavefront': '9.8t/s', 'wfd': '11.1t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [644, 644]}
+[wallclock] 3/6 q241 summarization {'wavefront': '7.6t/s', 'wfd': '7.0t/s', 'ar': '4.5t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [644, 644]}
+[wallclock] 4/6 q321 qa {'wfd': '4.6t/s', 'ar': '3.9t/s', 'wavefront': '4.2t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [72, 72]}
+[wallclock] 5/6 q401 math_reasoning {'ar': '5.3t/s', 'wavefront': '8.7t/s', 'wfd': '9.9t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [728, 728]}
+[wallclock] 6/6 q481 rag {'wavefront': '10.3t/s', 'wfd': '9.9t/s', 'ar': '4.5t/s'} wavefront-vs-wfd {'same_tokens': True, 'calls': [392, 392]}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_195543-yzu1kdfr
+wandb: 
+wandb: Run history:
+wandb:        ar/decode_tok_per_s ██▁██▂
+wandb:              ar/same_as_ar ▁▁▁▁▁▁
+wandb:                   question ▁▂▄▅▇█
+wandb:                question_id ▁▂▄▅▇█
+wandb: wavefront/decode_tok_per_s ▃▄▄▁▃█
+wandb:       wavefront/same_as_ar ▁▁▁▁▁▁
+wandb:       wfd/decode_tok_per_s ▄▅▃▁▄█
+wandb:             wfd/same_as_ar ▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:             ar/calls_eq_replay 1
+wandb:             ar/calls_per_token 32
+wandb:               ar/cpu_over_wall 1.00047
+wandb:        ar/decode_speedup_vs_ar 1
+wandb: ar/decode_speedup_vs_wavefront 0.51552
+wandb:       ar/decode_speedup_vs_wfd 0.4877
+wandb:            ar/decode_tok_per_s 5.37625
+wandb:           ar/e2e_speedup_vs_ar 1
+wandb:    ar/e2e_speedup_vs_wavefront 0.55701
+wandb:          ar/e2e_speedup_vs_wfd 0.53218
+wandb:                            +47 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_195543-yzu1kdfr
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_195543-yzu1kdfr/logs
+wavefront vs wfd: {'questions': 6, 'same_tokens': 6, 'same_calls': 6, 'same_both': 6, 'calls_ours_total': 3208, 'calls_wfd_total': 3208}
+clean questions 6/6
+wfd        decode    11.0 tok/s  x2.05 vs ar  x1.06 vs wavefront  xnan vs wfd-ar  calls/tok 10.06 (replay nan)  ms/call 9.02  same-as-ar 1.00
+ar         decode     5.4 tok/s  x1.00 vs ar  x0.52 vs wavefront  xnan vs wfd-ar  calls/tok 32.00 (replay 32.00)  ms/call 5.81  same-as-ar 1.00
+wavefront  decode    10.4 tok/s  x1.94 vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 10.06 (replay 10.67)  ms/call 9.53  same-as-ar 1.00
+=== check-huginn done 2026-10-31T19:55:46Z
+=== bench-ouro start 2026-10-31T19:55:46Z
+[wallclock] ouro-2.6b bench-bfloat16: 60 questions, arms ['wavefront'], max_seq 2410, attention check 0.001953125
+[wallclock] 1/60 q81 mt_bench {'wavefront': '10.3t/s*'}
+[wallclock] 2/60 q89 mt_bench {'wavefront': '14.8t/s'}
+[wallclock] 3/60 q97 mt_bench {'wavefront': '15.8t/s*'}
+[wallclock] 4/60 q105 mt_bench {'wavefront': '16.5t/s'}
+[wallclock] 5/60 q113 mt_bench {'wavefront': '15.5t/s*'}
+[wallclock] 6/60 q121 mt_bench {'wavefront': '17.8t/s'}
+[wallclock] 7/60 q129 mt_bench {'wavefront': '17.6t/s*'}
+[wallclock] 8/60 q137 mt_bench {'wavefront': '14.1t/s'}
+[wallclock] 9/60 q145 mt_bench {'wavefront': '13.2t/s*'}
+[wallclock] 10/60 q153 mt_bench {'wavefront': '14.7t/s*'}
+[wallclock] 11/60 q161 translation {'wavefront': '8.8t/s'}
+[wallclock] 12/60 q169 translation {'wavefront': '7.1t/s'}
+[wallclock] 13/60 q177 translation {'wavefront': '7.8t/s'}
+[wallclock] 14/60 q185 translation {'wavefront': '11.8t/s*'}
+[wallclock] 15/60 q193 translation {'wavefront': '8.1t/s'}
+[wallclock] 16/60 q201 translation {'wavefront': '9.1t/s'}
+[wallclock] 17/60 q209 translation {'wavefront': '10.7t/s'}
+[wallclock] 18/60 q217 translation {'wavefront': '8.4t/s'}
+[wallclock] 19/60 q225 translation {'wavefront': '10.0t/s*'}
+[wallclock] 20/60 q233 translation {'wavefront': '10.7t/s'}
+[wallclock] 21/60 q241 summarization {'wavefront': '11.2t/s*'}
+[wallclock] 22/60 q249 summarization {'wavefront': '10.6t/s*'}
+[wallclock] 23/60 q257 summarization {'wavefront': '11.6t/s*'}
+[wallclock] 24/60 q265 summarization {'wavefront': '19.0t/s'}
+[wallclock] 25/60 q273 summarization {'wavefront': '12.3t/s*'}
+[wallclock] 26/60 q281 summarization {'wavefront': '18.9t/s*'}
+[wallclock] 27/60 q289 summarization {'wavefront': '19.6t/s'}
+[wallclock] 28/60 q297 summarization {'wavefront': '12.8t/s'}
+[wallclock] 29/60 q305 summarization {'wavefront': '12.8t/s*'}
+[wallclock] 30/60 q313 summarization {'wavefront': '17.4t/s'}
+[wallclock] 31/60 q321 qa {'wavefront': '11.4t/s'}
+[wallclock] 32/60 q329 qa {'wavefront': '13.6t/s*'}
+[wallclock] 33/60 q337 qa {'wavefront': '15.3t/s'}
+[wallclock] 34/60 q345 qa {'wavefront': '15.4t/s'}
+[wallclock] 35/60 q353 qa {'wavefront': '17.4t/s*'}
+[wallclock] 36/60 q361 qa {'wavefront': '14.2t/s*'}
+[wallclock] 37/60 q369 qa {'wavefront': '13.7t/s*'}
+[wallclock] 38/60 q377 qa {'wavefront': '12.5t/s'}
+[wallclock] 39/60 q385 qa {'wavefront': '13.1t/s'}
+[wallclock] 40/60 q393 qa {'wavefront': '13.5t/s*'}
+[wallclock] 41/60 q401 math_reasoning {'wavefront': '15.5t/s'}
+[wallclock] 42/60 q409 math_reasoning {'wavefront': '16.6t/s'}
+[wallclock] 43/60 q417 math_reasoning {'wavefront': '18.1t/s'}
+[wallclock] 44/60 q425 math_reasoning {'wavefront': '17.2t/s*'}
+[wallclock] 45/60 q433 math_reasoning {'wavefront': '17.4t/s'}
+[wallclock] 46/60 q441 math_reasoning {'wavefront': '18.7t/s'}
+[wallclock] 47/60 q449 math_reasoning {'wavefront': '16.4t/s*'}
+[wallclock] 48/60 q457 math_reasoning {'wavefront': '18.7t/s*'}
+[wallclock] 49/60 q465 math_reasoning {'wavefront': '14.3t/s'}
+[wallclock] 50/60 q473 math_reasoning {'wavefront': '15.7t/s*'}
+[wallclock] 51/60 q481 rag {'wavefront': '15.6t/s*'}
+[wallclock] 52/60 q489 rag {'wavefront': '14.6t/s'}
+[wallclock] 53/60 q497 rag {'wavefront': '12.4t/s*'}
+[wallclock] 54/60 q505 rag {'wavefront': '11.4t/s'}
+[wallclock] 55/60 q513 rag {'wavefront': '14.1t/s'}
+[wallclock] 56/60 q521 rag {'wavefront': '12.0t/s'}
+[wallclock] 57/60 q529 rag {'wavefront': '12.0t/s'}
+[wallclock] 58/60 q537 rag {'wavefront': '14.7t/s*'}
+[wallclock] 59/60 q545 rag {'wavefront': '10.5t/s'}
+[wallclock] 60/60 q553 rag {'wavefront': '13.2t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_203051-8tlqicxt
+wandb: 
+wandb: Run history:
+wandb:                   question ▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:                question_id ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇██
+wandb: wavefront/decode_tok_per_s ▃▆▆▇▆▇▅▂▁▁▂▃▂▃▃▃▄█▄█▄▄▇▅▆▅▅▄▆▇▇▇▆▆▆▆▄▄▄▅
+wandb:       wavefront/same_as_ar ▁█▁▁█▁▁██▁██▁█▁▁██▁█▁█▁▁█▁███▁█▁█▁████▁█
+wandb: 
+wandb: Run summary:
+wandb:                              question 59
+wandb:                           question_id 553
+wandb:             wavefront/calls_eq_replay 0.36667
+wandb:             wavefront/calls_per_token 1.37785
+wandb:               wavefront/cpu_over_wall 1.00053
+wandb: wavefront/decode_speedup_vs_wavefront 1
+wandb:            wavefront/decode_tok_per_s 14.64695
+wandb:    wavefront/e2e_speedup_vs_wavefront 1
+wandb:               wavefront/e2e_tok_per_s 14.60097
+wandb:                 wavefront/ms_per_call 49.55065
+wandb:                                    +7 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_203051-8tlqicxt
+wandb: Find logs at: /out/sb-chat/ouro-2.6b/wandb/offline-run-20261031_203051-8tlqicxt/logs
+clean questions 60/60
+wavefront  decode    14.6 tok/s  xnan vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 1.38 (replay 1.37)  ms/call 49.55  same-as-ar 0.57
+=== bench-ouro done 2026-10-31T20:30:54Z
+=== bench-huginn start 2026-10-31T20:30:54Z
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.85s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:04<00:04,  2.11s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:06<00:02,  2.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.57s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.76s/it]
+[wallclock] huginn-3.5b bench-bfloat16: 60 questions, arms ['wavefront'], max_seq 2444, attention check 0.00390625
+[wallclock] 1/60 q81 mt_bench {'wavefront': '13.6t/s*'}
+[wallclock] 2/60 q89 mt_bench {'wavefront': '15.7t/s*'}
+[wallclock] 3/60 q97 mt_bench {'wavefront': '16.3t/s'}
+[wallclock] 4/60 q105 mt_bench {'wavefront': '20.9t/s'}
+[wallclock] 5/60 q113 mt_bench {'wavefront': '19.9t/s*'}
+[wallclock] 6/60 q121 mt_bench {'wavefront': '19.9t/s*'}
+[wallclock] 7/60 q129 mt_bench {'wavefront': '21.6t/s'}
+[wallclock] 8/60 q137 mt_bench {'wavefront': '20.2t/s'}
+[wallclock] 9/60 q145 mt_bench {'wavefront': '13.9t/s'}
+[wallclock] 10/60 q153 mt_bench {'wavefront': '14.5t/s*'}
+[wallclock] 11/60 q161 translation {'wavefront': '16.4t/s'}
+[wallclock] 12/60 q169 translation {'wavefront': '6.3t/s'}
+[wallclock] 13/60 q177 translation {'wavefront': '6.9t/s*'}
+[wallclock] 14/60 q185 translation {'wavefront': '8.9t/s'}
+[wallclock] 15/60 q193 translation {'wavefront': '5.8t/s*'}
+[wallclock] 16/60 q201 translation {'wavefront': '6.2t/s'}
+[wallclock] 17/60 q209 translation {'wavefront': '8.2t/s'}
+[wallclock] 18/60 q217 translation {'wavefront': '7.9t/s'}
+[wallclock] 19/60 q225 translation {'wavefront': '7.5t/s'}
+[wallclock] 20/60 q233 translation {'wavefront': '11.4t/s'}
+[wallclock] 21/60 q241 summarization {'wavefront': '15.5t/s*'}
+[wallclock] 22/60 q248 summarization {'wavefront': '8.8t/s'}
+[wallclock] 23/60 q257 summarization {'wavefront': '17.1t/s'}
+[wallclock] 24/60 q265 summarization {'wavefront': '15.3t/s'}
+[wallclock] 25/60 q272 summarization {'wavefront': '14.7t/s'}
+[wallclock] 26/60 q280 summarization {'wavefront': '18.8t/s'}
+[wallclock] 27/60 q289 summarization {'wavefront': '20.9t/s'}
+[wallclock] 28/60 q297 summarization {'wavefront': '9.1t/s'}
+[wallclock] 29/60 q305 summarization {'wavefront': '16.6t/s'}
+[wallclock] 30/60 q313 summarization {'wavefront': '12.8t/s'}
+[wallclock] 31/60 q321 qa {'wavefront': '7.0t/s'}
+[wallclock] 32/60 q329 qa {'wavefront': '15.5t/s'}
+[wallclock] 33/60 q337 qa {'wavefront': '15.2t/s*'}
+[wallclock] 34/60 q345 qa {'wavefront': '5.8t/s'}
+[wallclock] 35/60 q353 qa {'wavefront': '31.6t/s*'}
+[wallclock] 36/60 q361 qa {'wavefront': '5.4t/s'}
+[wallclock] 37/60 q369 qa {'wavefront': '16.3t/s*'}
+[wallclock] 38/60 q377 qa {'wavefront': '10.4t/s*'}
+[wallclock] 39/60 q385 qa {'wavefront': '5.5t/s'}
+[wallclock] 40/60 q393 qa {'wavefront': '14.3t/s'}
+[wallclock] 41/60 q401 math_reasoning {'wavefront': '14.1t/s*'}
+[wallclock] 42/60 q409 math_reasoning {'wavefront': '15.2t/s'}
+[wallclock] 43/60 q417 math_reasoning {'wavefront': '16.2t/s'}
+[wallclock] 44/60 q425 math_reasoning {'wavefront': '15.7t/s*'}
+[wallclock] 45/60 q433 math_reasoning {'wavefront': '4.1t/s*'}
+[wallclock] 46/60 q441 math_reasoning {'wavefront': '17.1t/s*'}
+[wallclock] 47/60 q449 math_reasoning {'wavefront': '12.8t/s'}
+[wallclock] 48/60 q457 math_reasoning {'wavefront': '15.6t/s'}
+[wallclock] 49/60 q465 math_reasoning {'wavefront': '15.2t/s*'}
+[wallclock] 50/60 q473 math_reasoning {'wavefront': '16.5t/s*'}
+[wallclock] 51/60 q481 rag {'wavefront': '28.5t/s'}
+[wallclock] 52/60 q489 rag {'wavefront': '9.3t/s'}
+[wallclock] 53/60 q497 rag {'wavefront': '7.4t/s'}
+[wallclock] 54/60 q505 rag {'wavefront': '3.0t/s'}
+[wallclock] 55/60 q513 rag {'wavefront': '4.5t/s'}
+[wallclock] 56/60 q521 rag {'wavefront': '4.6t/s'}
+[wallclock] 57/60 q529 rag {'wavefront': '11.4t/s'}
+[wallclock] 58/60 q537 rag {'wavefront': '5.8t/s'}
+[wallclock] 59/60 q545 rag {'wavefront': '12.6t/s*'}
+[wallclock] 60/60 q553 rag {'wavefront': '16.4t/s'}
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/opt/conda/lib/python3.11/site-packages/pydantic/_internal/_generate_schema.py:2346: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.22.2
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_204827-nd3xbjed
+wandb: 
+wandb: Run history:
+wandb:                   question ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▇▇▇▇▇███
+wandb:                question_id ▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb: wavefront/decode_tok_per_s ▃▄▅▅▅▄▂▂▁▂▂▃▄▃▅▆█▃▅▄▄▄▂█▁▂▃▄▄▄▄▃▄█▅▁▃▃▄▅
+wandb:       wavefront/same_as_ar ▁█▁▁█▁█▁█▁████████████▁█▁██▁█▁▁██▁▁█████
+wandb: 
+wandb: Run summary:
+wandb:                              question 59
+wandb:                           question_id 553
+wandb:             wavefront/calls_eq_replay 0.26667
+wandb:             wavefront/calls_per_token 9.25089
+wandb:               wavefront/cpu_over_wall 1.00049
+wandb: wavefront/decode_speedup_vs_wavefront 1
+wandb:            wavefront/decode_tok_per_s 16.92072
+wandb:    wavefront/e2e_speedup_vs_wavefront 1
+wandb:               wavefront/e2e_tok_per_s 16.56785
+wandb:                 wavefront/ms_per_call 6.38848
+wandb:                                    +7 ...
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_204827-nd3xbjed
+wandb: Find logs at: /out/sb-chat/huginn-3.5b/wandb/offline-run-20261031_204827-nd3xbjed/logs
+clean questions 60/60
+wavefront  decode    16.9 tok/s  xnan vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 9.25 (replay 9.31)  ms/call 6.39  same-as-ar 0.68
+=== bench-huginn done 2026-10-31T20:48:30Z
+=== sum-ouro start 2026-10-31T20:48:33Z
+clean questions 60/60
+wavefront  decode    14.6 tok/s  xnan vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 1.38 (replay 1.37)  ms/call 49.55  same-as-ar 0.57
+clean questions 60/60
+wavefront  decode    14.6 tok/s  x2.67 vs ar  x1.00 vs wavefront  x1.53 vs wfd-ar  calls/tok 1.38 (replay 1.37)  ms/call 49.55  same-as-ar 0.65
+wfd-ar     decode     9.6 tok/s  x1.75 vs ar  x0.65 vs wavefront  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 0.63
+wfd        decode    21.0 tok/s  x3.82 vs ar  x1.43 vs wavefront  x2.19 vs wfd-ar  calls/tok 1.38 (replay nan)  ms/call 34.53  same-as-ar 0.65
+ar         decode     5.5 tok/s  x1.00 vs ar  x0.37 vs wavefront  x0.57 vs wfd-ar  calls/tok 4.00 (replay 4.02)  ms/call 45.53  same-as-ar 1.00
+shallow    decode    14.3 tok/s  x2.60 vs ar  x0.97 vs wavefront  x1.49 vs wfd-ar  calls/tok 1.45 (replay 1.48)  ms/call 48.36  same-as-ar 0.68
+suffix     decode     8.5 tok/s  x1.55 vs ar  x0.58 vs wavefront  x0.89 vs wfd-ar  calls/tok 2.47 (replay 2.49)  ms/call 47.50  same-as-ar 0.62
+both       decode    19.6 tok/s  x3.57 vs ar  x1.34 vs wavefront  x2.05 vs wfd-ar  calls/tok 1.02 (replay 1.02)  ms/call 49.94  same-as-ar 0.65
+both-path  decode    19.7 tok/s  x3.59 vs ar  x1.35 vs wavefront  x2.06 vs wfd-ar  calls/tok 1.02 (replay 1.04)  ms/call 49.66  same-as-ar 0.60
+=== sum-ouro done 2026-10-31T20:48:39Z
+=== sum-huginn start 2026-10-31T20:48:39Z
+clean questions 60/60
+wavefront  decode    16.9 tok/s  xnan vs ar  x1.00 vs wavefront  xnan vs wfd-ar  calls/tok 9.25 (replay 9.31)  ms/call 6.39  same-as-ar 0.68
+clean questions 60/60
+wavefront  decode    16.9 tok/s  x2.56 vs ar  x1.00 vs wavefront  x1.68 vs wfd-ar  calls/tok 9.25 (replay 9.31)  ms/call 6.39  same-as-ar 0.70
+wfd-ar     decode    10.1 tok/s  x1.52 vs ar  x0.60 vs wavefront  x1.00 vs wfd-ar  calls/tok nan (replay nan)  ms/call nan  same-as-ar 0.70
+wfd        decode    21.9 tok/s  x3.31 vs ar  x1.29 vs wavefront  x2.17 vs wfd-ar  calls/tok 8.59 (replay nan)  ms/call 5.32  same-as-ar 0.75
+ar         decode     6.6 tok/s  x1.00 vs ar  x0.39 vs wavefront  x0.66 vs wfd-ar  calls/tok 32.00 (replay 27.36)  ms/call 4.73  same-as-ar 1.00
+shallow    decode    15.8 tok/s  x2.39 vs ar  x0.93 vs wavefront  x1.57 vs wfd-ar  calls/tok 10.04 (replay 10.29)  ms/call 6.30  same-as-ar 0.75
+suffix     decode    13.4 tok/s  x2.03 vs ar  x0.79 vs wavefront  x1.33 vs wfd-ar  calls/tok 15.06 (replay 14.80)  ms/call 4.94  same-as-ar 0.75
+both       decode    23.3 tok/s  x3.52 vs ar  x1.38 vs wavefront  x2.31 vs wfd-ar  calls/tok 6.29 (replay 5.56)  ms/call 6.82  same-as-ar 0.72
+both-path  decode    23.6 tok/s  x3.57 vs ar  x1.40 vs wavefront  x2.34 vs wfd-ar  calls/tok 6.67 (replay 6.16)  ms/call 6.35  same-as-ar 0.75
+=== sum-huginn done 2026-10-31T20:48:44Z
+=== all done 2026-10-31T20:48:45Z

@@ -1,0 +1,13 @@
+=== check-ouro start 2026-10-31T04:56:26Z
+[wallclock] ouro-2.6b check-float32: 6 questions, arms ['wfd-ar', 'wfd', 'ar', 'shallow', 'suffix', 'both', 'both-path'], max_seq 841, attention check None
+/wfd/src/decoding/fa4_attention.py:362: UserWarning: aten._flash_attention_forward unavailable (RuntimeError: FlashAttention only support fp16 and bf16 data type); falling back to the per-sequence SDPA loop for varlen attention.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/repo/scripts/loop_suffix_spec_wallclock.py", line 578, in <module>
+    main()
+  File "/repo/scripts/loop_suffix_spec_wallclock.py", line 371, in main
+    run(a, prompt, args.warmup_tokens, ("warm", qid))
+  File "/repo/scripts/loop_suffix_spec_wallclock.py", line 321, in run
+    timing = {"n_tokens": len(res["tokens"]), "wall_s": wall, "cpu_s": cpu}
+                          ^^^^^^^^^^^^^^^^^^
+TypeError: object of type 'int' has no len()

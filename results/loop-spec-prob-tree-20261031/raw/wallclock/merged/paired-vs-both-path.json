@@ -1,0 +1,202 @@
+{
+ "ouro-2.6b": {
+  "ar": {
+   "questions": 60,
+   "speedup_vs_base": 0.2775410871584028,
+   "ci95": [
+    0.23205065230936234,
+    0.32433617905995793
+   ],
+   "same_text_questions": 28,
+   "speedup_vs_base_same_text": 0.23690878999714177,
+   "ci95_same_text": [
+    0.20673922555690555,
+    0.27415577611720926
+   ],
+   "per_question_geomean": 0.3008038336362162,
+   "calls_per_token": 4.0,
+   "rows_per_token": 4.0,
+   "rows_per_call": 1.0,
+   "ms_per_call": 47.8535656892287,
+   "calls_vs_replay": 0.995326139253557,
+   "calls_eq_replay": 0.6833333333333333,
+   "same_as_ar": 1.0
+  },
+  "wavefront": {
+   "questions": 60,
+   "speedup_vs_base": 0.7580026595208373,
+   "ci95": [
+    0.6828291048120189,
+    0.8233572289914576
+   ],
+   "same_text_questions": 28,
+   "speedup_vs_base_same_text": 0.6938670900547981,
+   "ci95_same_text": [
+    0.6220779060123136,
+    0.7693902961010954
+   ],
+   "per_question_geomean": 0.770460771761787,
+   "calls_per_token": 1.3778548123980423,
+   "rows_per_token": 4.755709624796085,
+   "rows_per_call": 3.451531744857185,
+   "ms_per_call": 50.8659773265227,
+   "calls_vs_replay": 1.003763307749443,
+   "calls_eq_replay": 0.36666666666666664,
+   "same_as_ar": 0.65
+  },
+  "both-path": {
+   "questions": 60,
+   "calls_per_token": 1.0225501689538652,
+   "rows_per_token": 13.85063099096614,
+   "rows_per_call": 13.545184785540869,
+   "ms_per_call": 52.15247623996674,
+   "calls_vs_replay": 0.9949674562168691,
+   "calls_eq_replay": 0.2833333333333333,
+   "same_as_ar": 0.6
+  },
+  "prob-low": {
+   "questions": 60,
+   "speedup_vs_base": 1.5725246578316103,
+   "ci95": [
+    1.448886051569752,
+    1.7555868740110854
+   ],
+   "same_text_questions": 28,
+   "speedup_vs_base_same_text": 1.4905033523626372,
+   "ci95_same_text": [
+    1.407204042137035,
+    1.5839462464488576
+   ],
+   "per_question_geomean": 1.5088753806193036,
+   "calls_per_token": 0.6302596816805206,
+   "rows_per_token": 11.302919002513049,
+   "rows_per_call": 17.933749105408445,
+   "ms_per_call": 53.78942269136963,
+   "calls_vs_replay": 1.0135751295336788,
+   "calls_eq_replay": 0.5166666666666667,
+   "same_as_ar": 0.6
+  },
+  "prob-load": {
+   "questions": 60,
+   "speedup_vs_base": 1.2637369684985382,
+   "ci95": [
+    1.1640556336490826,
+    1.3372511760682662
+   ],
+   "same_text_questions": 28,
+   "speedup_vs_base_same_text": 1.3738874644090502,
+   "ci95_same_text": [
+    1.3104150882296333,
+    1.445992046440526
+   ],
+   "per_question_geomean": 1.3030212748183767,
+   "calls_per_token": 0.7996555683122847,
+   "rows_per_token": 6.125502296211251,
+   "rows_per_call": 7.660175879396985,
+   "ms_per_call": 52.60824394053475,
+   "calls_vs_replay": 0.9955333214221904,
+   "calls_eq_replay": 0.4,
+   "same_as_ar": 0.6166666666666667
+  }
+ },
+ "huginn-3.5b": {
+  "ar": {
+   "questions": 60,
+   "speedup_vs_base": 0.27999775526750303,
+   "ci95": [
+    0.22619436265058016,
+    0.36079697962861307
+   ],
+   "same_text_questions": 37,
+   "speedup_vs_base_same_text": 0.3517325847838383,
+   "ci95_same_text": [
+    0.28758161671126864,
+    0.43465031815662974
+   ],
+   "per_question_geomean": 0.40044953025395824,
+   "calls_per_token": 32.0,
+   "rows_per_token": 32.0,
+   "rows_per_call": 1.0,
+   "ms_per_call": 4.830514846030407,
+   "calls_vs_replay": 1.1697756491051172,
+   "calls_eq_replay": 0.7666666666666667,
+   "same_as_ar": 1.0
+  },
+  "wavefront": {
+   "questions": 60,
+   "speedup_vs_base": 0.7192466703575194,
+   "ci95": [
+    0.5924114314748056,
+    0.8787495279480342
+   ],
+   "same_text_questions": 37,
+   "speedup_vs_base_same_text": 0.8527891031338718,
+   "ci95_same_text": [
+    0.782878214049827,
+    0.9272444026742768
+   ],
+   "per_question_geomean": 0.8305575665619483,
+   "calls_per_token": 9.250886974151038,
+   "rows_per_token": 53.003547896604154,
+   "rows_per_call": 5.729563883410037,
+   "ms_per_call": 6.504841431599917,
+   "calls_vs_replay": 0.9931439764936337,
+   "calls_eq_replay": 0.26666666666666666,
+   "same_as_ar": 0.7
+  },
+  "both-path": {
+   "questions": 60,
+   "calls_per_token": 6.669737852363716,
+   "rows_per_token": 142.5569814632006,
+   "rows_per_call": 21.37370082883831,
+   "ms_per_call": 6.489597379526987,
+   "calls_vs_replay": 1.0833036414166608,
+   "calls_eq_replay": 0.4666666666666667,
+   "same_as_ar": 0.7333333333333333
+  },
+  "prob-low": {
+   "questions": 60,
+   "speedup_vs_base": 1.699374043822161,
+   "ci95": [
+    1.3585508857266633,
+    2.0631026274166144
+   ],
+   "same_text_questions": 37,
+   "speedup_vs_base_same_text": 1.9592194629144073,
+   "ci95_same_text": [
+    1.872553249272828,
+    2.0401392367263163
+   ],
+   "per_question_geomean": 1.6647900426964193,
+   "calls_per_token": 3.332897318508829,
+   "rows_per_token": 160.1407455853499,
+   "rows_per_call": 48.04850863422292,
+   "ms_per_call": 7.641648104166893,
+   "calls_vs_replay": 1.045462005580174,
+   "calls_eq_replay": 0.4166666666666667,
+   "same_as_ar": 0.7
+  },
+  "prob-load": {
+   "questions": 60,
+   "speedup_vs_base": 1.7252112560936201,
+   "ci95": [
+    1.3787299594373028,
+    2.1271843383515754
+   ],
+   "same_text_questions": 37,
+   "speedup_vs_base_same_text": 1.6212002462433441,
+   "ci95_same_text": [
+    1.5515299418403217,
+    1.6836056827645234
+   ],
+   "per_question_geomean": 1.492015233607694,
+   "calls_per_token": 3.7022484173761185,
+   "rows_per_token": 53.168740449683476,
+   "rows_per_call": 14.36120283018868,
+   "ms_per_call": 6.776260761240715,
+   "calls_vs_replay": 1.0107270560190704,
+   "calls_eq_replay": 0.5333333333333333,
+   "same_as_ar": 0.8
+  }
+ }
+}
