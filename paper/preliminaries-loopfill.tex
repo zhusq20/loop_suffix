@@ -1,0 +1,175 @@
+\section{Preliminaries}
+\label{sec:prelim}
+
+
+\begin{figure*}[t]
+  \centering
+    \begin{minipage}[c]{0.14\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{figures/03_loopmodel.pdf}
+      \par\smallskip
+      \textbf{(a)}
+    \end{minipage}
+    \hspace{0.02\textwidth}
+    \begin{minipage}[c]{0.70\textwidth}
+      \centering
+      \includegraphics[width=\linewidth]{figures/01_looppipeline.pdf}
+      \par\smallskip
+      \textbf{(b)}
+    \end{minipage} 
+  \caption{
+    \textbf{(a) Looped LLM architecture.}
+    Blocks with dashed lines are optional.
+    \textbf{(b) Comparing four decoding algorithms}
+    (3 loops, shallow predictions after loop~1).
+    Row $o_k$ is the position that predicts
+    the $k$-th output token, with its input token on the left,
+    and each column is one loop step.
+    Autoregressive decoding starts a token after
+    the previous one finishes.
+    LoopSpec starts new token after one loop step, but the wrong draft
+    (e.g. \texttt{the}) forces a restart.
+    SuffixDecoding verifies multi-token drafts but waits
+    for all three loops in every round.
+    LoopFill (Section~\ref{sec:loopfill}) combines the two
+    and takes 5 loop steps to finish, achieving $3\times$ speedup.
+  }
+  \label{fig:four-decoders}
+
+  % Independent references without subcaption
+  \begingroup
+    \makeatletter
+    \edef\@currentlabel{\thefigure(a)}
+    \label{fig:loop-architecture}
+    \edef\@currentlabel{\thefigure(b)}
+    \label{fig:four-decoders-panel}
+  \endgroup
+\end{figure*}
+
+
+\paragraph{Looped language models and pipelined decoding.}
+A looped Transformer generates each token by repeatedly applying
+a weight-shared block $f$ for $T$ iterations,
+updating $h_i^{(t)}=f(h_{\le i}^{(t-1)})$
+from an embedding $h_i^{(0)}$ of the previous token $o_{i-1}$.
+Two properties enable efficient pipelined decoding.
+First, intermediate hidden states can produce draft tokens
+through the output head.
+A draft token allows computation of the next token to begin
+before the draft is verified.
+Second, weight sharing allows computations for multiple
+tokens at different loop depths to be processed together
+in batches. These properties enable a decoding pipeline that
+overlaps speculative drafting with full-depth verification.
+
+
+We count one batched forward pass of the shared block $f$
+as one loop step, during which each active token computation
+advances by one loop. Consider LoopSpec~\cite{cho2026loopspecpipelinedselfspeculativedecoding}
+with a draft depth $1\leq d<T$.
+After $d$ loop steps, the model produces a draft token
+$\hat o_i$ and uses it to start computing the next token
+$o_{i+1}$, while continuing the computation of $o_i$
+to depth $T$.
+At depth $T$, the model verifies $\hat o_i$ and determines
+the output token $o_i$.
+As illustrated in Figure~\ref{fig:four-decoders-panel},
+accepting the draft preserves the computation already
+performed for $o_{i+1}$.
+Otherwise, computations based on the rejected draft are
+discarded, and computation of $o_{i+1}$ restarts using
+the replacement token $o_i$.
+
+
+\paragraph{Data-driven drafters.}
+Model-free speculative decoding generates draft tokens from
+previously text or decoding history without an auxiliary
+draft model. LLMA and Prompt Lookup Decoding reuse continuations
+from matching prompt spans~\cite{yang2023inferencereferencelosslessacceleration,saxena2023prompt}, ANPD and Token Recycling use $n$-grams and
+cached token~\cite{ou-etal-2024-lossless,luo-etal-2025-turning}. 
+SuffixDecoding~\cite{oliaro2025suffixdecodingextremespeculativedecoding}
+extends this approach with suffix trees built from prompts and
+historical outputs, adaptively constructing draft trees. The target LLM verifies the draft tree in parallel and
+accepts the draft prefix with one
+additional token by full-depth decoding.
+In a looped model, each verification round takes $T$ loop steps,
+and all token computations in the round start together.
+The next round begins after the current round finishes.
+In the SuffixDecoding panel of
+Figure~\ref{fig:four-decoders-panel},
+the three rounds commit 1, 3, and 1 tokens, respectively.
+With $T=3$, generating these five tokens takes nine loop steps.
+
+
+\paragraph{Breaking the pipeline ceiling.}
+LoopSpec reduces the delay between consecutive token computations,
+whereas SuffixDecoding allows multiple token computations to start
+together. Vanilla LoopFill combines both mechanisms in a single draft tree,
+adding suffix continuations before loop computation and shallow
+continuations at depth $d$.
+
+Let $N$ be the number of generated tokens, and let $\delta_i$ be
+the number of loop steps between the start times of the computations
+for $o_{i-1}$ and $o_i$ retained after verification.
+The total loop-step cost and speedup over autoregressive decoding are
+\begin{equation}
+  K(N)=T+\sum_{i=2}^{N}\delta_i,
+  \qquad
+  S(N)=\frac{NT}{K(N)}.
+  \label{eq:steps}
+\end{equation}
+Below, $S=\lim_{N\to\infty}S(N)$ denotes the average
+loop-step speedup.
+
+Let $\bar A\geq 1$ denote the average number of tokens accepted
+per SuffixDecoding round, including the additional token produced
+by full-depth verification. Let $\alpha\in[0,1]$ denote the
+shallow-draft acceptance rate. For comparison, we assume that
+LoopFill preserves the suffix coverage of SuffixDecoding and uses
+the same $\alpha$ as LoopSpec.
+
+In LoopSpec, each transition costs $d$ steps when its shallow
+draft is accepted and $T$ steps otherwise, the average delay
+is $\alpha d+(1-\alpha)T$.
+In SuffixDecoding, transitions within a round have zero delay,
+only a fraction $1/\bar A$ of transitions across drafting rounds cost $T$ steps.
+LoopFill preserves the zero-delay transitions and replaces the
+remaining $T$-step delays with $d$-step delays whenever a shallow
+draft is accepted. Thus,
+\begin{align}
+  S_{\mathrm{LoopSpec}}
+  &=\frac{T}{\alpha d+(1-\alpha)T}
+    \leq\frac{T}{d},
+  \label{eq:loopspec}\\
+  S_{\mathrm{suffix}}
+  &=\frac{T}{T/\bar A}=\bar A,
+  \label{eq:suffix}\\
+  S_{\mathrm{LoopFill}}
+  &=\frac{T}{[\alpha d+(1-\alpha)T]/\bar A}
+  \label{eq:combined}
+\end{align}
+The speedup from the two baseline methods are
+\begin{equation}
+  \begin{aligned}
+    \frac{S_{\mathrm{LoopFill}}}{S_{\mathrm{suffix}}}
+    &=\frac{T}{\alpha d+(1-\alpha)T}
+      >1 \quad (\alpha>0),\\
+    \frac{S_{\mathrm{LoopFill}}}{S_{\mathrm{LoopSpec}}}
+    &=\bar A>1 \quad (\bar A>1).
+  \end{aligned}
+  \label{eq:relative-speedups}
+\end{equation}
+Relative to LoopSpec's upper nound speedup $T/d$, LoopFill achieves
+\begin{equation}
+  \begin{aligned}
+    \frac{S_{\mathrm{LoopFill}}}{T/d}
+    &=\frac{\bar A d}{\alpha d+(1-\alpha)T},\\
+    S_{\mathrm{LoopFill}}>\frac{T}{d}
+    &\quad\Longleftrightarrow\quad
+      \bar A>\alpha+(1-\alpha)\frac{T}{d}.
+  \end{aligned}
+  \label{eq:pipeline-ceiling}
+\end{equation}
+In particular, when $\alpha=1$, LoopFill achieves
+$S_{\mathrm{LoopFill}}=\bar A T/d$, exceeding the pipeline
+ceiling whenever $\bar A>1$.

@@ -1,0 +1,12 @@
+2026-10-30: STEP-1 SIBLING-BRANCH CHECK + BENCHMARK STARTED; NO RESULT YET.
+User asked to write step 1 and run it directly on CUDA 2,3.
+
+Containers (docker --context lm-memory), network none, WFD/weights/data read-only:
+  loop-spec-sibling-20261030-ouro    GPU2  Ouro-2.6B   T=4  d=1
+  loop-spec-sibling-20261030-huginn  GPU3  Huginn-0125 T=32 d=4
+Each runs: fp32 check (1 prompt/category, tau 0/0.5/0.8/2 vs AR and WFD), then bf16 bench (10 prompts/category).
+Persistent root: /mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-sibling-20261030
+  runs/<model>/check-float32.jsonl, bench-bfloat16.jsonl (resumable by question_id), *-complete.json, wandb/ (offline)
+
+Note: at launch GPU2/3 were idle; the wang-hop-matched-20261030 containers had already exited
+(controller state "failed", train stage returncode -15 at 21:18 UTC). Not touched or restarted here.

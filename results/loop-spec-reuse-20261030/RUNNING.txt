@@ -1,0 +1,14 @@
+2026-10-30: ZERO-TRAINING INFERENCE AUDIT STARTED; NO RESULT YET.
+User approved running external code (WFD repo + HF trust_remote_code) in isolated LM Docker containers.
+
+Containers (docker --context lm-memory), network none, WFD/weights/data read-only:
+  loop-spec-reuse-20261030-ouro    GPU7  Ouro-2.6B  T=4  d=1
+  loop-spec-reuse-20261030-huginn  GPU6  Huginn-0125 T=32 d=4
+Image: lm-memory-sdft:sn8200-20261028-ready. WFD source: /mnt/disk2_from_server2/siqizhu4/loop-spec-src/wavefront-decoding @ 434520932897fcc1e26898891c7e2feaa6ab099f.
+Persistent root: /mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-reuse-20261030
+  runs/<model>/sanity.json, events.jsonl (append, resumable by question_id), run-complete.json, wandb/ (offline)
+
+Each container first checks the logged scheduler against the original on 12 prompts and stops if they differ.
+After both finish: sync offline W&B runs from a networked container, then
+  python scripts/loop_spec_reuse_analyze.py --runs-dir <persistent>/runs --out-dir results/loop-spec-reuse-20261030
+Do not relaunch a finished model; a restarted container skips question_ids already in events.jsonl.

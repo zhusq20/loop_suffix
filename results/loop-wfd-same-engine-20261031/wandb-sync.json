@@ -1,0 +1,43 @@
+{
+ "synced_utc": "2026-10-31T22:05Z",
+ "project": "https://wandb.ai/zsqzz/llm-memory-editability",
+ "method": "wandb beta sync (host wandb 0.23.1) on each offline run-*.wandb file; token read from the local credential file into the environment, never argv",
+ "legacy_sync_failure": "plain `wandb sync` (image 0.22.2 and host 0.23.1) printed 'done' but uploaded nothing: its sender thread crashed in server_settings_introspection (ServerSettingsType came back None). It left .wandb.synced markers; the runs were then uploaded with beta sync.",
+ "verified": "W&B API: every run state=finished, group as below, history rows equal to the local record lines (check 6, bench 60)",
+ "group": "loop-wfd-same-engine-20261031-wfdonly",
+ "runs": [
+  {
+   "id": "yzu1kdfr",
+   "name": "loop-wfd-same-engine-20261031-wfdonly-huginn-3.5b-sb-chat-check-float32",
+   "group": "loop-wfd-same-engine-20261031-wfdonly",
+   "state": "finished",
+   "rows": 6,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/yzu1kdfr"
+  },
+  {
+   "id": "nd3xbjed",
+   "name": "loop-wfd-same-engine-20261031-wfdonly-huginn-3.5b-sb-chat-bench-bfloat16",
+   "group": "loop-wfd-same-engine-20261031-wfdonly",
+   "state": "finished",
+   "rows": 60,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/nd3xbjed"
+  },
+  {
+   "id": "6etpuosh",
+   "name": "loop-wfd-same-engine-20261031-wfdonly-ouro-2.6b-sb-chat-check-float32",
+   "group": "loop-wfd-same-engine-20261031-wfdonly",
+   "state": "finished",
+   "rows": 6,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/6etpuosh"
+  },
+  {
+   "id": "8tlqicxt",
+   "name": "loop-wfd-same-engine-20261031-wfdonly-ouro-2.6b-sb-chat-bench-bfloat16",
+   "group": "loop-wfd-same-engine-20261031-wfdonly",
+   "state": "finished",
+   "rows": 60,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/8tlqicxt"
+  }
+ ],
+ "not_synced": "Withdrawn 19:15-19:46 UTC run (offline-run-20261031_192056-szzx1bi9, offline-run-20261031_192306-qz8s1kwh under <root>/loop-wfd-same-engine-20261031/sb-chat/) kept offline on purpose: stopped by request, not used for results."
+}

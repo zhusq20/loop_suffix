@@ -1,0 +1,2045 @@
+{
+ "model": "huginn-3.5b",
+ "set": "sb-chat",
+ "runs_dir": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/runs/sb-chat/huginn-3.5b",
+ "sources": {
+  "scripts/loop_prob_tree_ablation.py": "cc3d0dd29427b75aedb75b8961b5c1f6182255b3419bae84645447871590b83f",
+  "scripts/loop_prob_tree_replay.py": "aad99396d05af8b5887912a5bf1e47454d5524f9aa0050fcb01f1411640102b2",
+  "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a"
+ },
+ "seconds": 69.00349164009094,
+ "results": [
+  {
+   "config": {
+    "name": "legacy K16",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": 16,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "offline",
+    "joint": false,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": false,
+    "legacy": true
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 408352,
+    "rows": 58066396,
+    "calls_per_token": 7.76393642102061,
+    "speedup_vs_ar": 4.12162056265183,
+    "rows_per_token": 1104.0078332953076
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 56276,
+     "rows": 7694704,
+     "calls_per_token": 7.097490225753563,
+     "speedup_vs_ar": 4.508636008245078,
+     "rows_per_token": 970.4507504098877
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 352076,
+     "rows": 50371692,
+     "calls_per_token": 7.8822396847784715,
+     "speedup_vs_ar": 4.059759824583328,
+     "rows_per_token": 1127.7160319699108
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 99020,
+     "rows": 25668412,
+     "calls_per_token": 7.260595395219241,
+     "speedup_vs_ar": 4.407352050090891,
+     "rows_per_token": 1882.124358410324
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 176060,
+     "rows": 19217008,
+     "calls_per_token": 7.5281139094368665,
+     "speedup_vs_ar": 4.250732704759741,
+     "rows_per_token": 821.6961559840937
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 60264,
+     "rows": 7063344,
+     "calls_per_token": 7.428078392703069,
+     "speedup_vs_ar": 4.307978229125182,
+     "rows_per_token": 870.6204856403303
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 11308,
+     "rows": 1252004,
+     "calls_per_token": 5.904960835509138,
+     "speedup_vs_ar": 5.4191722674212945,
+     "rows_per_token": 653.7879895561358
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 18960,
+     "rows": 1884088,
+     "calls_per_token": 6.181936746005869,
+     "speedup_vs_ar": 5.176371308016877,
+     "rows_per_token": 614.3097489403326
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 42740,
+     "rows": 2981540,
+     "calls_per_token": 17.261712439418417,
+     "speedup_vs_ar": 1.8538137576041178,
+     "rows_per_token": 1204.1760904684975
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 177124,
+    "rows": 7427476,
+    "calls_per_token": 3.367632519583238,
+    "speedup_vs_ar": 9.502224430342585,
+    "rows_per_token": 141.2175070347555
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 24664,
+     "rows": 1085948,
+     "calls_per_token": 3.1106066338756464,
+     "speedup_vs_ar": 10.287382419721052,
+     "rows_per_token": 136.95901122461848
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 152460,
+     "rows": 6341528,
+     "calls_per_token": 3.4132581100141044,
+     "speedup_vs_ar": 9.375206611570247,
+     "rows_per_token": 141.9734479593436
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 40860,
+     "rows": 2026076,
+     "calls_per_token": 2.996040475142983,
+     "speedup_vs_ar": 10.680763582966225,
+     "rows_per_token": 148.5610793371462
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 71880,
+     "rows": 3187508,
+     "calls_per_token": 3.0735023731132682,
+     "speedup_vs_ar": 10.411574846967168,
+     "rows_per_token": 136.29400949245309
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 25196,
+     "rows": 1063824,
+     "calls_per_token": 3.1056329347960063,
+     "speedup_vs_ar": 10.303857755199237,
+     "rows_per_token": 131.12584740539873
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 6816,
+     "rows": 194052,
+     "calls_per_token": 3.5592689295039164,
+     "speedup_vs_ar": 8.990610328638498,
+     "rows_per_token": 101.33263707571801
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 10496,
+     "rows": 454696,
+     "calls_per_token": 3.4222367134007174,
+     "speedup_vs_ar": 9.350609756097562,
+     "rows_per_token": 148.25432018258886
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 21876,
+     "rows": 501320,
+     "calls_per_token": 8.835218093699515,
+     "speedup_vs_ar": 3.621868714573048,
+     "rows_per_token": 202.47172859450728
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 top1",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 1,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 243012,
+    "rows": 3698080,
+    "calls_per_token": 4.620351357517682,
+    "speedup_vs_ar": 6.925880203446743,
+    "rows_per_token": 70.3110502699825
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 33552,
+     "rows": 548580,
+     "calls_per_token": 4.23155505107832,
+     "speedup_vs_ar": 7.562231759656652,
+     "rows_per_token": 69.18653045781309
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 209460,
+     "rows": 3149500,
+     "calls_per_token": 4.689367989791121,
+     "speedup_vs_ar": 6.823947293039244,
+     "rows_per_token": 70.51066783083708
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 57704,
+     "rows": 1016700,
+     "calls_per_token": 4.2311189323947795,
+     "speedup_vs_ar": 7.563011229724109,
+     "rows_per_token": 74.54905411350637
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 101076,
+     "rows": 1567892,
+     "calls_per_token": 4.321888228503014,
+     "speedup_vs_ar": 7.40417111876212,
+     "rows_per_token": 67.04117672211058
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 34292,
+     "rows": 535144,
+     "calls_per_token": 4.226796499445335,
+     "speedup_vs_ar": 7.570745363350053,
+     "rows_per_token": 65.96129668433379
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 7936,
+     "rows": 118136,
+     "calls_per_token": 4.144125326370757,
+     "speedup_vs_ar": 7.721774193548387,
+     "rows_per_token": 61.68981723237598
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 12964,
+     "rows": 229092,
+     "calls_per_token": 4.2269318552331265,
+     "speedup_vs_ar": 7.570502931194076,
+     "rows_per_token": 74.6957939354418
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 29040,
+     "rows": 231116,
+     "calls_per_token": 11.72859450726979,
+     "speedup_vs_ar": 2.728374655647383,
+     "rows_per_token": 93.34248788368336
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 K16",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": 16,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 247036,
+    "rows": 6689716,
+    "calls_per_token": 4.6968590767358736,
+    "speedup_vs_ar": 6.813063683025955,
+    "rows_per_token": 127.1905848353487
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 35664,
+     "rows": 967828,
+     "calls_per_token": 4.497919031403708,
+     "speedup_vs_ar": 7.114401076716016,
+     "rows_per_token": 122.06179846134444
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 211372,
+     "rows": 5721888,
+     "calls_per_token": 4.73217364049522,
+     "speedup_vs_ar": 6.762220161610809,
+     "rows_per_token": 128.10101417153604
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 59872,
+     "rows": 1765344,
+     "calls_per_token": 4.390086522950579,
+     "speedup_vs_ar": 7.28915018706574,
+     "rows_per_token": 129.44302683677958
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 105536,
+     "rows": 2863300,
+     "calls_per_token": 4.512592465899859,
+     "speedup_vs_ar": 7.091267434808975,
+     "rows_per_token": 122.43126523282166
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 36140,
+     "rows": 978420,
+     "calls_per_token": 4.454579070627388,
+     "speedup_vs_ar": 7.1836192584394025,
+     "rows_per_token": 120.5990385800567
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 9212,
+     "rows": 178168,
+     "calls_per_token": 4.810443864229765,
+     "speedup_vs_ar": 6.652192792010421,
+     "rows_per_token": 93.03812010443865
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 13592,
+     "rows": 413480,
+     "calls_per_token": 4.431692207368764,
+     "speedup_vs_ar": 7.220718069452619,
+     "rows_per_token": 134.81578089338115
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 22684,
+     "rows": 491004,
+     "calls_per_token": 9.161550888529886,
+     "speedup_vs_ar": 3.492858402398166,
+     "rows_per_token": 198.30533117932148
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 offline-suffix",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "offline",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 175988,
+    "rows": 8076468,
+    "calls_per_token": 3.346033918929196,
+    "speedup_vs_ar": 9.563561151896721,
+    "rows_per_token": 153.55669632671686
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 24528,
+     "rows": 1183468,
+     "calls_per_token": 3.093454407869845,
+     "speedup_vs_ar": 10.344422700587085,
+     "rows_per_token": 149.25816622524908
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 151460,
+     "rows": 6893000,
+     "calls_per_token": 3.3908702173864373,
+     "speedup_vs_ar": 9.43710550640433,
+     "rows_per_token": 154.31974388250833
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 40488,
+     "rows": 2227648,
+     "calls_per_token": 2.968763748350198,
+     "speedup_vs_ar": 10.778897451096622,
+     "rows_per_token": 163.34125238304736
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 71432,
+     "rows": 3434388,
+     "calls_per_token": 3.054346431778338,
+     "speedup_vs_ar": 10.476873110090716,
+     "rows_per_token": 146.85030144952324
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 25076,
+     "rows": 1161204,
+     "calls_per_token": 3.0908418587452235,
+     "speedup_vs_ar": 10.353166374222363,
+     "rows_per_token": 143.1288056206089
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 6788,
+     "rows": 212004,
+     "calls_per_token": 3.5446475195822456,
+     "speedup_vs_ar": 9.027695934001178,
+     "rows_per_token": 110.70704960835509
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 10420,
+     "rows": 493576,
+     "calls_per_token": 3.3974567981741117,
+     "speedup_vs_ar": 9.418809980806142,
+     "rows_per_token": 160.93120313009456
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 21784,
+     "rows": 547648,
+     "calls_per_token": 8.798061389337642,
+     "speedup_vs_ar": 3.6371648916636063,
+     "rows_per_token": 221.18255250403877
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 step-end",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": false,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 197976,
+    "rows": 7319572,
+    "calls_per_token": 3.7640885238421173,
+    "speedup_vs_ar": 8.501394108376774,
+    "rows_per_token": 139.1659441782645
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 27864,
+     "rows": 1064816,
+     "calls_per_token": 3.514188422247446,
+     "speedup_vs_ar": 9.105943152454781,
+     "rows_per_token": 134.29385798965822
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 170112,
+     "rows": 6254756,
+     "calls_per_token": 3.8084491906776816,
+     "speedup_vs_ar": 8.40237020316027,
+     "rows_per_token": 140.03080574025566
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 44712,
+     "rows": 1988076,
+     "calls_per_token": 3.2784865816102067,
+     "speedup_vs_ar": 9.760601180891037,
+     "rows_per_token": 145.77474703035637
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 80864,
+     "rows": 3133628,
+     "calls_per_token": 3.457647410954804,
+     "speedup_vs_ar": 9.254847645429363,
+     "rows_per_token": 133.9901654765468
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 32108,
+     "rows": 1056540,
+     "calls_per_token": 3.9575989153210895,
+     "speedup_vs_ar": 8.08571072629874,
+     "rows_per_token": 130.22802908911623
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 7820,
+     "rows": 186528,
+     "calls_per_token": 4.0835509138381205,
+     "speedup_vs_ar": 7.836317135549872,
+     "rows_per_token": 97.40365535248041
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 10568,
+     "rows": 454940,
+     "calls_per_token": 3.445712422562765,
+     "speedup_vs_ar": 9.286903860711583,
+     "rows_per_token": 148.3338767525269
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 21904,
+     "rows": 499860,
+     "calls_per_token": 8.846526655896607,
+     "speedup_vs_ar": 3.6172388604821037,
+     "rows_per_token": 201.8820678513732
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 243384,
+    "rows": 2830232,
+    "calls_per_token": 4.627424138717773,
+    "speedup_vs_ar": 6.915294349669658,
+    "rows_per_token": 53.81078409004487
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 33796,
+     "rows": 421572,
+     "calls_per_token": 4.26232816244167,
+     "speedup_vs_ar": 7.507634039531306,
+     "rows_per_token": 53.16836927733636
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 209588,
+     "rows": 2408660,
+     "calls_per_token": 4.692233640047462,
+     "speedup_vs_ar": 6.819779758383113,
+     "rows_per_token": 53.924821456556295
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 56032,
+     "rows": 782536,
+     "calls_per_token": 4.108520310896026,
+     "speedup_vs_ar": 7.788692175899486,
+     "rows_per_token": 57.379087842792195
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 99616,
+     "rows": 1221548,
+     "calls_per_token": 4.259460383974003,
+     "speedup_vs_ar": 7.512688724702859,
+     "rows_per_token": 52.23192371830504
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 35644,
+     "rows": 397388,
+     "calls_per_token": 4.39344262295082,
+     "speedup_vs_ar": 7.2835820895522385,
+     "rows_per_token": 48.98163441390361
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 8120,
+     "rows": 94016,
+     "calls_per_token": 4.240208877284595,
+     "speedup_vs_ar": 7.54679802955665,
+     "rows_per_token": 49.094516971279376
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 14836,
+     "rows": 168296,
+     "calls_per_token": 4.837300293446365,
+     "speedup_vs_ar": 6.615260177945538,
+     "rows_per_token": 54.87316596022171
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 29136,
+     "rows": 166448,
+     "calls_per_token": 11.767366720516963,
+     "speedup_vs_ar": 2.71938495332235,
+     "rows_per_token": 67.22455573505654
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 top1",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 1,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 267736,
+    "rows": 2529040,
+    "calls_per_token": 5.090425127386113,
+    "speedup_vs_ar": 6.2863118893238115,
+    "rows_per_token": 48.08426496311507
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 37124,
+     "rows": 377256,
+     "calls_per_token": 4.682053222348341,
+     "speedup_vs_ar": 6.834608339618575,
+     "rows_per_token": 47.5792659856224
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 230612,
+     "rows": 2151784,
+     "calls_per_token": 5.162916694651533,
+     "speedup_vs_ar": 6.198046935979047,
+     "rows_per_token": 48.17390914993172
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 63352,
+     "rows": 688724,
+     "calls_per_token": 4.645255902625018,
+     "speedup_vs_ar": 6.888748579366082,
+     "rows_per_token": 50.50036662267195
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 110584,
+     "rows": 1090612,
+     "calls_per_token": 4.7284388762987986,
+     "speedup_vs_ar": 6.767561310858714,
+     "rows_per_token": 46.633257792790864
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 38688,
+     "rows": 364380,
+     "calls_per_token": 4.768642918772341,
+     "speedup_vs_ar": 6.710504549214226,
+     "rows_per_token": 44.913102428201654
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 8548,
+     "rows": 87396,
+     "calls_per_token": 4.463707571801566,
+     "speedup_vs_ar": 7.168928404305101,
+     "rows_per_token": 45.637597911227154
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 15540,
+     "rows": 151388,
+     "calls_per_token": 5.066840560808608,
+     "speedup_vs_ar": 6.315572715572715,
+     "rows_per_token": 49.3602869253342
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 31024,
+     "rows": 146540,
+     "calls_per_token": 12.529886914378029,
+     "speedup_vs_ar": 2.553893759669933,
+     "rows_per_token": 59.18416801292407
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 K16",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": 16,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 300464,
+    "rows": 2733396,
+    "calls_per_token": 5.712677770172637,
+    "speedup_vs_ar": 5.601576228766175,
+    "rows_per_token": 51.969655487109286
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 43072,
+     "rows": 403268,
+     "calls_per_token": 5.432210871484425,
+     "speedup_vs_ar": 5.890787518573552,
+     "rows_per_token": 50.859881447849666
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 257392,
+     "rows": 2330128,
+     "calls_per_token": 5.762464459220453,
+     "speedup_vs_ar": 5.553179586001119,
+     "rows_per_token": 52.16665547272035
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 71336,
+     "rows": 749292,
+     "calls_per_token": 5.230678985188444,
+     "speedup_vs_ar": 6.117752607379163,
+     "rows_per_token": 54.941487021557414
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 126792,
+     "rows": 1180216,
+     "calls_per_token": 5.4214734681660754,
+     "speedup_vs_ar": 5.902454413527668,
+     "rows_per_token": 50.46461709496729
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 44948,
+     "rows": 387596,
+     "calls_per_token": 5.540244052754838,
+     "speedup_vs_ar": 5.775918839547922,
+     "rows_per_token": 47.77468260815974
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 10460,
+     "rows": 90304,
+     "calls_per_token": 5.462140992167102,
+     "speedup_vs_ar": 5.858508604206501,
+     "rows_per_token": 47.15613577023499
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 17328,
+     "rows": 160624,
+     "calls_per_token": 5.649820671666124,
+     "speedup_vs_ar": 5.663896583564173,
+     "rows_per_token": 52.37169872839909
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 29600,
+     "rows": 165364,
+     "calls_per_token": 11.954765751211632,
+     "speedup_vs_ar": 2.676756756756757,
+     "rows_per_token": 66.78675282714055
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 offline-suffix",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "offline",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 239240,
+    "rows": 3122088,
+    "calls_per_token": 4.548634877176972,
+    "speedup_vs_ar": 7.035077746196288,
+    "rows_per_token": 59.35979922427561
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 33140,
+     "rows": 462776,
+     "calls_per_token": 4.179593895825451,
+     "speedup_vs_ar": 7.6562462281231145,
+     "rows_per_token": 58.36498927985875
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 206100,
+     "rows": 2659312,
+     "calls_per_token": 4.61414467056216,
+     "speedup_vs_ar": 6.935196506550218,
+     "rows_per_token": 59.53639151946627
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 54744,
+     "rows": 882864,
+     "calls_per_token": 4.014078310602728,
+     "speedup_vs_ar": 7.971942130644454,
+     "rows_per_token": 64.73559172899252
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 97956,
+     "rows": 1335456,
+     "calls_per_token": 4.188480779920469,
+     "speedup_vs_ar": 7.640001633386419,
+     "rows_per_token": 57.1024928379014
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 35096,
+     "rows": 431544,
+     "calls_per_token": 4.325896708985579,
+     "speedup_vs_ar": 7.397310234784591,
+     "rows_per_token": 53.191667693824726
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 8016,
+     "rows": 102092,
+     "calls_per_token": 4.185900783289817,
+     "speedup_vs_ar": 7.644710578842315,
+     "rows_per_token": 53.311749347258484
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 14496,
+     "rows": 187736,
+     "calls_per_token": 4.726442777958917,
+     "speedup_vs_ar": 6.770419426048565,
+     "rows_per_token": 61.21160743397457
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 28932,
+     "rows": 182396,
+     "calls_per_token": 11.684975767366721,
+     "speedup_vs_ar": 2.738559380616618,
+     "rows_per_token": 73.66558966074314
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 step-end",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": false,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-huginn-3.5b.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 250400,
+    "rows": 2827908,
+    "calls_per_token": 4.760818313179709,
+    "speedup_vs_ar": 6.721533546325879,
+    "rows_per_token": 53.766598220396986
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 34596,
+     "rows": 418592,
+     "calls_per_token": 4.36322360953462,
+     "speedup_vs_ar": 7.334027055150885,
+     "rows_per_token": 52.792533736915125
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 215804,
+     "rows": 2409316,
+     "calls_per_token": 4.8313967806210405,
+     "speedup_vs_ar": 6.623343404200107,
+     "rows_per_token": 53.93950791412004
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 56968,
+     "rows": 780880,
+     "calls_per_token": 4.177152075084323,
+     "speedup_vs_ar": 7.660721808734729,
+     "rows_per_token": 57.257662413843676
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 102296,
+     "rows": 1216992,
+     "calls_per_token": 4.374053961602599,
+     "speedup_vs_ar": 7.315867678110581,
+     "rows_per_token": 52.037114636336426
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 38808,
+     "rows": 401480,
+     "calls_per_token": 4.783433994823123,
+     "speedup_vs_ar": 6.68975468975469,
+     "rows_per_token": 49.4860101072353
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 8224,
+     "rows": 93628,
+     "calls_per_token": 4.294516971279373,
+     "speedup_vs_ar": 7.45136186770428,
+     "rows_per_token": 48.891906005221934
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 14936,
+     "rows": 168988,
+     "calls_per_token": 4.869905445060319,
+     "speedup_vs_ar": 6.5709694697375465,
+     "rows_per_token": 55.098793609390285
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 29168,
+     "rows": 165940,
+     "calls_per_token": 11.780290791599354,
+     "speedup_vs_ar": 2.716401535929786,
+     "rows_per_token": 67.01938610662359
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d2 C t0.01",
+    "depth_total": 32,
+    "draft_depth": 2,
+    "readout_depths": [
+     2,
+     4
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d2.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 260848,
+    "rows": 14012574,
+    "calls_per_token": 4.959464598068294,
+    "speedup_vs_ar": 6.452309390909648,
+    "rows_per_token": 266.4190052475473
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 36164,
+     "rows": 2105024,
+     "calls_per_token": 4.560978685836802,
+     "speedup_vs_ar": 7.016038048888397,
+     "rows_per_token": 265.48417202673727
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 224684,
+     "rows": 11907550,
+     "calls_per_token": 5.030201267154723,
+     "speedup_vs_ar": 6.361574477933453,
+     "rows_per_token": 266.58495085857567
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 61996,
+     "rows": 4344864,
+     "calls_per_token": 4.545827833993254,
+     "speedup_vs_ar": 7.03942189818698,
+     "rows_per_token": 318.5851297844259
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 107256,
+     "rows": 5910732,
+     "calls_per_token": 4.586137597810749,
+     "speedup_vs_ar": 6.977549041545461,
+     "rows_per_token": 252.73579338948988
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 37346,
+     "rows": 1958232,
+     "calls_per_token": 4.603229384937754,
+     "speedup_vs_ar": 6.951641407379639,
+     "rows_per_token": 241.36965364230247
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 7530,
+     "rows": 351282,
+     "calls_per_token": 3.9321148825065273,
+     "speedup_vs_ar": 8.138114209827357,
+     "rows_per_token": 183.43707571801568
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 14990,
+     "rows": 653776,
+     "calls_per_token": 4.887512226931856,
+     "speedup_vs_ar": 6.5472981987992,
+     "rows_per_token": 213.16465601565048
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 31730,
+     "rows": 793688,
+     "calls_per_token": 12.815024232633279,
+     "speedup_vs_ar": 2.4970690198550267,
+     "rows_per_token": 320.5525040387722
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d2 C t0.1",
+    "depth_total": 32,
+    "draft_depth": 2,
+    "readout_depths": [
+     2,
+     4
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d2.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 378078,
+    "rows": 3510536,
+    "calls_per_token": 7.188341318731463,
+    "speedup_vs_ar": 4.451652833542285,
+    "rows_per_token": 66.74530382538596
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 53300,
+     "rows": 542854,
+     "calls_per_token": 6.722159162567789,
+     "speedup_vs_ar": 4.760375234521576,
+     "rows_per_token": 68.4643712952453
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 324778,
+     "rows": 2967682,
+     "calls_per_token": 7.271094991828419,
+     "speedup_vs_ar": 4.400987751633424,
+     "rows_per_token": 66.44014596905993
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 91316,
+     "rows": 1017170,
+     "calls_per_token": 6.6957031822847926,
+     "speedup_vs_ar": 4.779184370756494,
+     "rows_per_token": 74.5835166446693
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 158210,
+     "rows": 1514970,
+     "calls_per_token": 6.764869371873263,
+     "speedup_vs_ar": 4.7303204601479045,
+     "rows_per_token": 64.77829563432677
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 53812,
+     "rows": 508014,
+     "calls_per_token": 6.63281153703932,
+     "speedup_vs_ar": 4.824500111499294,
+     "rows_per_token": 62.617280907186
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 10360,
+     "rows": 106942,
+     "calls_per_token": 5.409921671018277,
+     "speedup_vs_ar": 5.915057915057915,
+     "rows_per_token": 55.8443864229765
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 22264,
+     "rows": 183054,
+     "calls_per_token": 7.259210955330942,
+     "speedup_vs_ar": 4.408192597915918,
+     "rows_per_token": 59.6850342354092
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 42116,
+     "rows": 180386,
+     "calls_per_token": 17.009693053311793,
+     "speedup_vs_ar": 1.8812802735302498,
+     "rows_per_token": 72.85379644588045
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d4 C t0.01",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d4.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 177124,
+    "rows": 7427476,
+    "calls_per_token": 3.367632519583238,
+    "speedup_vs_ar": 9.502224430342585,
+    "rows_per_token": 141.2175070347555
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 24664,
+     "rows": 1085948,
+     "calls_per_token": 3.1106066338756464,
+     "speedup_vs_ar": 10.287382419721052,
+     "rows_per_token": 136.95901122461848
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 152460,
+     "rows": 6341528,
+     "calls_per_token": 3.4132581100141044,
+     "speedup_vs_ar": 9.375206611570247,
+     "rows_per_token": 141.9734479593436
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 40860,
+     "rows": 2026076,
+     "calls_per_token": 2.996040475142983,
+     "speedup_vs_ar": 10.680763582966225,
+     "rows_per_token": 148.5610793371462
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 71880,
+     "rows": 3187508,
+     "calls_per_token": 3.0735023731132682,
+     "speedup_vs_ar": 10.411574846967168,
+     "rows_per_token": 136.29400949245309
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 25196,
+     "rows": 1063824,
+     "calls_per_token": 3.1056329347960063,
+     "speedup_vs_ar": 10.303857755199237,
+     "rows_per_token": 131.12584740539873
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 6816,
+     "rows": 194052,
+     "calls_per_token": 3.5592689295039164,
+     "speedup_vs_ar": 8.990610328638498,
+     "rows_per_token": 101.33263707571801
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 10496,
+     "rows": 454696,
+     "calls_per_token": 3.4222367134007174,
+     "speedup_vs_ar": 9.350609756097562,
+     "rows_per_token": 148.25432018258886
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 21876,
+     "rows": 501320,
+     "calls_per_token": 8.835218093699515,
+     "speedup_vs_ar": 3.621868714573048,
+     "rows_per_token": 202.47172859450728
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d4 C t0.1",
+    "depth_total": 32,
+    "draft_depth": 4,
+    "readout_depths": [
+     4,
+     8
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d4.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 243384,
+    "rows": 2830232,
+    "calls_per_token": 4.627424138717773,
+    "speedup_vs_ar": 6.915294349669658,
+    "rows_per_token": 53.81078409004487
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 33796,
+     "rows": 421572,
+     "calls_per_token": 4.26232816244167,
+     "speedup_vs_ar": 7.507634039531306,
+     "rows_per_token": 53.16836927733636
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 209588,
+     "rows": 2408660,
+     "calls_per_token": 4.692233640047462,
+     "speedup_vs_ar": 6.819779758383113,
+     "rows_per_token": 53.924821456556295
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 56032,
+     "rows": 782536,
+     "calls_per_token": 4.108520310896026,
+     "speedup_vs_ar": 7.788692175899486,
+     "rows_per_token": 57.379087842792195
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 99616,
+     "rows": 1221548,
+     "calls_per_token": 4.259460383974003,
+     "speedup_vs_ar": 7.512688724702859,
+     "rows_per_token": 52.23192371830504
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 35644,
+     "rows": 397388,
+     "calls_per_token": 4.39344262295082,
+     "speedup_vs_ar": 7.2835820895522385,
+     "rows_per_token": 48.98163441390361
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 8120,
+     "rows": 94016,
+     "calls_per_token": 4.240208877284595,
+     "speedup_vs_ar": 7.54679802955665,
+     "rows_per_token": 49.094516971279376
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 14836,
+     "rows": 168296,
+     "calls_per_token": 4.837300293446365,
+     "speedup_vs_ar": 6.615260177945538,
+     "rows_per_token": 54.87316596022171
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 29136,
+     "rows": 166448,
+     "calls_per_token": 11.767366720516963,
+     "speedup_vs_ar": 2.71938495332235,
+     "rows_per_token": 67.22455573505654
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d8 C t0.01",
+    "depth_total": 32,
+    "draft_depth": 8,
+    "readout_depths": [
+     8,
+     16
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d8.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 248056,
+    "rows": 3560672,
+    "calls_per_token": 4.7162521864780595,
+    "speedup_vs_ar": 6.785048537427032,
+    "rows_per_token": 67.69853220777246
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 35104,
+     "rows": 525248,
+     "calls_per_token": 4.427292218438643,
+     "speedup_vs_ar": 7.2278942570647216,
+     "rows_per_token": 66.2439147433472
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 212952,
+     "rows": 3035424,
+     "calls_per_token": 4.767546510846934,
+     "speedup_vs_ar": 6.7120477854164315,
+     "rows_per_token": 67.95674659144335
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 62656,
+     "rows": 916864,
+     "calls_per_token": 4.59422202669013,
+     "speedup_vs_ar": 6.965270684371808,
+     "rows_per_token": 67.22862589822554
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 108424,
+     "rows": 1526808,
+     "calls_per_token": 4.636079873433959,
+     "speedup_vs_ar": 6.902383236183871,
+     "rows_per_token": 65.28447428058323
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 34400,
+     "rows": 547560,
+     "calls_per_token": 4.240108467891039,
+     "speedup_vs_ar": 7.546976744186047,
+     "rows_per_token": 67.49168001972143
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 9256,
+     "rows": 117008,
+     "calls_per_token": 4.833420365535248,
+     "speedup_vs_ar": 6.62057044079516,
+     "rows_per_token": 61.10078328981723
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 12248,
+     "rows": 227320,
+     "calls_per_token": 3.993478969677209,
+     "speedup_vs_ar": 8.013063357282821,
+     "rows_per_token": 74.11803064884252
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 21072,
+     "rows": 225112,
+     "calls_per_token": 8.510500807754443,
+     "speedup_vs_ar": 3.760060744115414,
+     "rows_per_token": 90.91760904684976
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d8 C t0.1",
+    "depth_total": 32,
+    "draft_depth": 8,
+    "readout_depths": [
+     8,
+     16
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d8.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 279144,
+    "rows": 2256944,
+    "calls_per_token": 5.307323750855578,
+    "speedup_vs_ar": 6.029404178488522,
+    "rows_per_token": 42.91094379800745
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 39264,
+     "rows": 337232,
+     "calls_per_token": 4.951948543321983,
+     "speedup_vs_ar": 6.462102689486553,
+     "rows_per_token": 42.531466767562115
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 239880,
+     "rows": 1919712,
+     "calls_per_token": 5.37040768352475,
+     "speedup_vs_ar": 5.958579289644822,
+     "rows_per_token": 42.97830613204379
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 68456,
+     "rows": 608760,
+     "calls_per_token": 5.019504326147529,
+     "speedup_vs_ar": 6.375131471310039,
+     "rows_per_token": 44.63704355477343
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 120592,
+     "rows": 973496,
+     "calls_per_token": 5.156368922905888,
+     "speedup_vs_ar": 6.20591747379594,
+     "rows_per_token": 41.625518450421175
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 39848,
+     "rows": 331856,
+     "calls_per_token": 4.911623320596574,
+     "speedup_vs_ar": 6.515157598875728,
+     "rows_per_token": 40.90422778257118
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 10104,
+     "rows": 83320,
+     "calls_per_token": 5.276240208877285,
+     "speedup_vs_ar": 6.06492478226445,
+     "rows_per_token": 43.50913838120105
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 14664,
+     "rows": 138736,
+     "calls_per_token": 4.781219432670362,
+     "speedup_vs_ar": 6.692853246044735,
+     "rows_per_token": 45.23508314313661
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 25480,
+     "rows": 120776,
+     "calls_per_token": 10.290791599353797,
+     "speedup_vs_ar": 3.109576138147567,
+     "rows_per_token": 48.778675282714055
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d16 C t0.01",
+    "depth_total": 32,
+    "draft_depth": 16,
+    "readout_depths": [
+     16,
+     24
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d16.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 465984,
+    "rows": 2678504,
+    "calls_per_token": 8.85968514715948,
+    "speedup_vs_ar": 3.611866501854141,
+    "rows_per_token": 50.92600197733668
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 66344,
+     "rows": 398064,
+     "calls_per_token": 8.367259427418338,
+     "speedup_vs_ar": 3.8244302423730856,
+     "rows_per_token": 50.20355656451002
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 399640,
+     "rows": 2280440,
+     "calls_per_token": 8.947097409720824,
+     "speedup_vs_ar": 3.576578921028926,
+     "rows_per_token": 51.05424586383684
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 119376,
+     "rows": 731944,
+     "calls_per_token": 8.75318961724593,
+     "speedup_vs_ar": 3.6558102131081625,
+     "rows_per_token": 53.669452998973455
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 211496,
+     "rows": 1146176,
+     "calls_per_token": 9.043314661991705,
+     "speedup_vs_ar": 3.5385255513106633,
+     "rows_per_token": 49.00910762389362
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 65184,
+     "rows": 397032,
+     "calls_per_token": 8.03451251078516,
+     "speedup_vs_ar": 3.9828178694158076,
+     "rows_per_token": 48.93775422161962
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 15480,
+     "rows": 100872,
+     "calls_per_token": 8.08355091383812,
+     "speedup_vs_ar": 3.958656330749354,
+     "rows_per_token": 52.67467362924282
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 20720,
+     "rows": 162184,
+     "calls_per_token": 6.755787414411477,
+     "speedup_vs_ar": 4.736679536679537,
+     "rows_per_token": 52.88033909357679
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 33728,
+     "rows": 140296,
+     "calls_per_token": 13.621970920840065,
+     "speedup_vs_ar": 2.349146110056926,
+     "rows_per_token": 56.662358642972535
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d16 C t0.1",
+    "depth_total": 32,
+    "draft_depth": 16,
+    "readout_depths": [
+     16,
+     24
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-huginn-3.5b-d16.json",
+   "overall": {
+    "tokens": 52596,
+    "calls": 479208,
+    "rows": 2247240,
+    "calls_per_token": 9.11111111111111,
+    "speedup_vs_ar": 3.5121951219512195,
+    "rows_per_token": 42.72644307551905
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 7929,
+     "calls": 68168,
+     "rows": 336480,
+     "calls_per_token": 8.597301046790264,
+     "speedup_vs_ar": 3.7220983452646403,
+     "rows_per_token": 42.43662504729474
+    },
+    "dev": {
+     "tokens": 44667,
+     "calls": 411040,
+     "rows": 1910760,
+     "calls_per_token": 9.202319385676226,
+     "speedup_vs_ar": 3.477384196185286,
+     "rows_per_token": 42.77788971724092
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 13638,
+     "calls": 123120,
+     "rows": 620184,
+     "calls_per_token": 9.02771667399912,
+     "speedup_vs_ar": 3.5446393762183237,
+     "rows_per_token": 45.47470303563573
+    },
+    "mt_bench": {
+     "tokens": 23387,
+     "calls": 215872,
+     "rows": 970480,
+     "calls_per_token": 9.230427160388249,
+     "speedup_vs_ar": 3.466795137859472,
+     "rows_per_token": 41.49655791679138
+    },
+    "qa": {
+     "tokens": 8113,
+     "calls": 67224,
+     "rows": 327408,
+     "calls_per_token": 8.285960803648466,
+     "speedup_vs_ar": 3.861954064024753,
+     "rows_per_token": 40.3559718969555
+    },
+    "rag": {
+     "tokens": 1915,
+     "calls": 16096,
+     "rows": 83104,
+     "calls_per_token": 8.405221932114882,
+     "speedup_vs_ar": 3.8071570576540754,
+     "rows_per_token": 43.396344647519584
+    },
+    "summarization": {
+     "tokens": 3067,
+     "calls": 21560,
+     "rows": 134576,
+     "calls_per_token": 7.029670687968699,
+     "speedup_vs_ar": 4.552133580705009,
+     "rows_per_token": 43.878708835996086
+    },
+    "translation": {
+     "tokens": 2476,
+     "calls": 35336,
+     "rows": 111488,
+     "calls_per_token": 14.27140549273021,
+     "speedup_vs_ar": 2.2422458682363597,
+     "rows_per_token": 45.027463651050084
+    }
+   }
+  }
+ ]
+}

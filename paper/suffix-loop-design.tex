@@ -1,0 +1,55 @@
+% Copy the block from \begin{table} through \end{table} into the ICML body.
+% The next lines are only for the editor's standalone preview.
+\ifdefined\section
+  \let\sdendpreview\relax
+\else
+  \documentclass[10pt,twocolumn]{article}
+  \usepackage[letterpaper,textwidth=6.75in]{geometry}
+  \setlength{\columnsep}{0.25in}
+  \usepackage{xcolor}
+  \def\sdendpreview{\end{document}}
+  % Standalone preview labels for the manuscript's citation keys.
+  \bibcite{oliaro2025suffixdecodingextremespeculativedecoding}{Oliaro et al., 2025}
+  \bibcite{cho2026loopspecpipelinedselfspeculativedecoding}{Cho et al., 2026}
+  \bibcite{ha2026wavefrontdecodingparallelizedselfspeculative}{Ha and Kim, 2026}
+  \bibcite{liu2026loopaheadspeculatingaheadfaster}{Liu et al., 2026}
+  \begin{document}
+\fi
+\begin{table}[t]
+  \centering
+  \caption{\textbf{Comparison with existing speculative decoding methods
+    across four design dimensions.} Unlike the baselines, LoopFill
+    combines multi-token suffix drafts and shallow predictions from the
+    target model in a single draft tree without additional training.}
+  \label{tab:suffix-loop-design}
+  \scriptsize
+  \setlength{\tabcolsep}{0.8pt}
+  \renewcommand{\arraystretch}{1}
+  \def\sdyes{{\color[HTML]{228B22}\usefont{U}{pzd}{m}{n}\char51}}
+  \def\sdno{{\color[HTML]{FF0000}\usefont{U}{pzd}{m}{n}\char55}}
+  \begin{tabular*}{\columnwidth}{@{}l@{\extracolsep{\fill}}cccc@{}}
+    \hline
+    Method & Data & Model & Multi-token & Training-free \\
+    \hline
+    \multicolumn{5}{@{}l}{\textit{Data-driven drafting}} \\
+    SuffixDecoding \cite{oliaro2025suffixdecodingextremespeculativedecoding}
+      & \sdyes & \sdno  & \sdyes & \sdyes \\
+    \quad + EAGLE-3 fallback
+      & \sdyes & \sdyes & \sdyes & \sdno  \\
+    \hline
+    \multicolumn{5}{@{}l}{\textit{Model-driven drafting}} \\
+    LoopSpec \cite{cho2026loopspecpipelinedselfspeculativedecoding}
+      & \sdno  & \sdyes & \sdno  & \sdyes \\
+    WaveFront \cite{ha2026wavefrontdecodingparallelizedselfspeculative}
+      & \sdno  & \sdyes & \sdno  & \sdyes \\
+    LoopAhead \cite{liu2026loopaheadspeculatingaheadfaster}
+      & \sdno  & \sdyes & \sdyes & \sdno  \\
+    \hline
+    \rlap{{\setlength{\fboxsep}{0pt}%
+      \colorbox[HTML]{E6F7FD}{\makebox[\columnwidth][l]{\strut}}}}%
+    \textbf{LoopFill}
+      & \sdyes & \sdyes & \sdyes & \sdyes \\
+    \hline
+  \end{tabular*}
+\end{table}
+\sdendpreview

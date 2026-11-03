@@ -1,0 +1,28 @@
+2026-10-31: DONE, all steps exit 0 at 13:02 UTC; results in protocol.md §8 and, merged with the
+  same-engine WFD arm, ../loop-wfd-same-engine-20261031/report.md. W&B synced and verified 22:05 UTC
+  (wandb-sync.json). Monitor flags re-derived by user (PID namespaces differ in containers): 60/60
+  clean per model, in sb-chat/<model>/bench-bfloat16-summary-userflags.json; originals kept.
+Original handoff: User chose sb1024 chat, GPU 6, CPUs 24-31 (NUMA 1), models in sequence,
+2 repeats per question. Launched 04:57 UTC as a detached chain (setsid nohup):
+  /mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-wallclock-20261031/chain.sh
+  log chain.log; first attempt (04:56) died in the first warm-up: tree_decode's stats key "tokens"
+  (a count) overwrote the output list in the benchmark's result dict; fixed in
+  scripts/loop_suffix_spec_wallclock.py, log kept as chain-attempt1-stats-key-bug.log, its exited
+  container removed. No timing record was written by attempt 1.
+
+Order (one container at a time, foreground; set -e stops the chain on any failure):
+  check-ouro, check-huginn   fp32, 1 question per category, 64 new tokens, every arm vs AR
+  bench-ouro, bench-huginn   bf16, 10 per category (60), 1024 new tokens, --repeats 2
+  sum-ouro, sum-huginn       --summarize joined with monitor.jsonl
+Containers: loop-suffix-spec-wallclock-20261031-<step>, --gpus device=6 --cpuset-cpus 24-31
+  --cpuset-mems 1, network none, OMP_NUM_THREADS=1. Host monitor: taskset -c 47, interval 2 s,
+  watches CPUs 24-31,72-79, writes monitor.jsonl; killed by the chain before summarizing.
+Outputs: <root>/sb-chat/<model>/{check-float32,bench-bfloat16}{.jsonl,-meta.json,-summary.json},
+  offline W&B runs under the same dirs (synced 2026-10-31 with `wandb beta sync`, see wandb-sync.json).
+Restart: records resume by question_id; remove the step's exited container before rerunning it.
+Do not run other own GPU/CPU jobs on GPU 6 or CPUs 24-31/72-79 while this runs.
+
+Code: src/llm_memory_editability/loop_tree_decode.py, scripts/loop_suffix_spec_wallclock.py,
+  scripts/loop_suffix_spec_env_monitor.py, tests/test_loop_tree_decode.py (22 CPU tests passed).
+Inputs (read-only): .../loop-suffix-spec-20261030/runs/sb-chat/<model>. Huginn lacks q253, q288,
+  q295 (OOM, never rerun); sb-chat-turn2 was never started.

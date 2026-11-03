@@ -1,0 +1,50 @@
+2026-10-31: raw and chat-256 runs done (report.md written for raw); Spec-Bench-aligned sb1024 run in progress.
+User approved the working principle and asked to start the code experiment.
+
+Containers (docker --context lm-memory, network none, weights/data read-only, uid 1015 user):
+  loop-suffix-spec-20261030-ouro-s{0..3}    GPU7  Ouro-2.6B   T=4   static shards 0-3 of 480 questions
+  loop-suffix-spec-20261030-huginn-s{0..3}  GPU6  stopped at 22:05 after 4 questions (GPU-bound, 1.8 tok/s each);
+                                            replaced by claim workers (--claim, shared queue via <qid>.claim):
+  loop-suffix-spec-20261030-huginn-w{10..13} GPU6, w{14,15} GPU7; w{16..19} GPU7 start automatically when Ouro ends
+  loop-suffix-spec-20261030-pilot-{ouro,huginn}  1 question per category, script check (Huginn pilot stopped at 6/6 done)
+  huginn-w16 (GPU7) died of CUDA OOM at 00:14 on 2026-10-31 (GPU7 shared); its claim on question 481 was renamed
+  481.claim-oom-w16-20261031 and q481 rerun alone in loop-suffix-spec-20261030-rerun-huginn-q481 (raw, same settings).
+  Huginn raw turn 1: 479/480 by 00:39 before the rerun.
+MT-bench turn 2 (user request, protocol 7a), chained automatically:
+  loop-suffix-spec-20261030-turn2-ouro-w{20,21}       GPU7 after Ouro turn 1 ends
+  loop-suffix-spec-20261030-turn2-huginn-w{30..33} GPU6, w{34,35} GPU7 after Huginn turn-1 workers end
+  output runs/full-turn2/<model>/ ; pilot check runs/pilot-turn2/ouro-2.6b (question 81)
+Chat-template rerun (user request 2026-10-31, protocol 7b), GPUs 5 and 8 per user instruction:
+  loop-suffix-spec-20261030-chat-ouro-w{40..42} GPU5; chat-huginn-w{50,51} GPU5, w{52..55} GPU8  -> runs/full-chat/<model>
+  chat-ouro-w{43,44} GPU8 added at 01:07 after Huginn chat turn 1 ended
+  then chat-turn2-ouro-w{60,61} GPU5; chat-turn2-huginn-w{70,71} GPU5, w{72..75} GPU8      -> runs/full-chat-turn2/<model>
+  launcher: session scratchpad chat_chain.sh (same docker settings as the raw workers, --prompt-format chat)
+Spec-Bench-aligned rerun (user request 2026-10-31, protocol 7c), GPUs 2/6/7/8 per user instruction, started 01:40:
+  chat template, --max-new-tokens 1024, --max-prompt-tokens 3000 (no truncation in practice), --run-tag sb1024
+  loop-suffix-spec-20261030-sb-ouro-w{80..83} GPU2, w{84..87} GPU7; sb-huginn-w{90..94} GPU6, w{95..99} GPU8 -> runs/sb-chat/<model>
+  then sb-turn2-ouro-w{100..102} GPU2, w{103..105} GPU7; sb-turn2-huginn-w{110..112} GPU6, w{113..115} GPU8 -> runs/sb-chat-turn2/<model>
+  launcher: session scratchpad sb_chain.sh
+Raw runs shared GPU6/7 with loop-spec-reuse-20261030 (counts calls, not wall clock).
+
+Persistent root: /mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030
+  runs/full/<model>/readouts/<question_id>.npz   prompt, greedy output, top-8 ids/probs per stored depth
+  runs/full/<model>/index-shard<k>.jsonl          per question: lengths, EOS, depth-T teacher-forced agreement, timing (resumable)
+  runs/full/<model>/shard<k>-complete.json        written when a shard ends
+  runs/full/<model>/wandb/                         offline W&B runs, sync after completion
+  arctic-suffix/                                   ArcticInference aca5d9a suffix tree sources and built _C module
+Host replay env: session scratchpad simenv (uv, CPython 3.11, numpy, nanobind 2.9.2); the NFS env/.venv install hung and is unused.
+
+Replay (done for full, full-turn2, full-chat/huginn; others after their runs end) for each runs/<setting>/<m>:
+  PYTHONPATH=src <scratchpad>/simenv/bin/python scripts/loop_suffix_spec_simulate.py --model <m> \
+    --runs-dir <root>/runs/full/<m> --suffix-lib <root>/arctic-suffix/pkg --out <root>/sim/sim-<setting>-<m>.json
+then copy sim-*.json to sim/ here, write report.md, sync W&B.
+Restarting a shard resumes from its index file; do not delete readouts.
+
+2026-10-31 §10 (CPU only, user-approved during the prob-tree wall-clock run): ledger from existing sims
+(scripts/loop_suffix_spec_ledger.py) and schedule replays (scripts/loop_suffix_schedule_compare.py,
+22:54-22:59 UTC, 4 processes on NUMA 0 cores 0-3, membind 0). Check: instrumented replay = ProbReplay.run
+on the first 20 questions; v3 B/C equal the prob-tree v3 sweep on the selection split. Outputs:
+<persistent>/loop-suffix-spec-20261030/schedule/{chain.sh,logs/,<set>-<model>.json}; summaries and figures
+in schedule/ (scripts/loop_suffix_schedule_report.py). DONE, report §10.
+
+11-01 §11 v3 C消融（ExpWeaver图4式四栏）：CPU回放已完成（01:04–01:09 UTC，NUMA 0核0–7），用户要求与prob-tree测速分片s0（NUMA 1）并行。持久输出 <persistent>/loop-suffix-spec-20261030/ablation/（chain.sh、calib/、logs/），汇总 ablation/，图 figures/ablation-<模型>.png。首次画图因py311缺matplotlib失败，改用系统python3重画，回放结果未受影响（logs/chain-ouro-plotfail.log）。

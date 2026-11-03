@@ -1,0 +1,1829 @@
+{
+ "model": "ouro-2.6b",
+ "set": "sb-chat",
+ "runs_dir": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/runs/sb-chat/ouro-2.6b",
+ "sources": {
+  "scripts/loop_prob_tree_ablation.py": "cc3d0dd29427b75aedb75b8961b5c1f6182255b3419bae84645447871590b83f",
+  "scripts/loop_prob_tree_replay.py": "aad99396d05af8b5887912a5bf1e47454d5524f9aa0050fcb01f1411640102b2",
+  "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a"
+ },
+ "seconds": 56.46517086029053,
+ "results": [
+  {
+   "config": {
+    "name": "legacy K16",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": 16,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "offline",
+    "joint": false,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": false,
+    "legacy": true
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 91558,
+    "rows": 2275853,
+    "calls_per_token": 0.9026361969359387,
+    "speedup_vs_ar": 4.431464208479871,
+    "rows_per_token": 22.436786481850266
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 14902,
+     "rows": 365463,
+     "calls_per_token": 1.0242628359337411,
+     "speedup_vs_ar": 3.905247617769427,
+     "rows_per_token": 25.11945838201938
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 76656,
+     "rows": 1910390,
+     "calls_per_token": 0.8822696668009438,
+     "speedup_vs_ar": 4.533761218952202,
+     "rows_per_token": 21.987569776140877
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 18336,
+     "rows": 671002,
+     "calls_per_token": 0.757185332011893,
+     "speedup_vs_ar": 5.282722513089006,
+     "rows_per_token": 27.7090353485299
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 35048,
+     "rows": 693787,
+     "calls_per_token": 1.1332126228660113,
+     "speedup_vs_ar": 3.529787719698699,
+     "rows_per_token": 22.43232669425763
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 9172,
+     "rows": 224994,
+     "calls_per_token": 1.0528007346189165,
+     "speedup_vs_ar": 3.7993894461404274,
+     "rows_per_token": 25.825757575757574
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 8872,
+     "rows": 242060,
+     "calls_per_token": 0.8332081141998497,
+     "speedup_vs_ar": 4.800721370604148,
+     "rows_per_token": 22.732907588279488
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 15460,
+     "rows": 378744,
+     "calls_per_token": 0.6243689673276523,
+     "speedup_vs_ar": 6.406468305304011,
+     "rows_per_token": 15.295989661160696
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 4670,
+     "rows": 65266,
+     "calls_per_token": 2.153065928999539,
+     "speedup_vs_ar": 1.8578158458244112,
+     "rows_per_token": 30.090364223144306
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 57667,
+    "rows": 981395,
+    "calls_per_token": 0.5685174596289213,
+    "speedup_vs_ar": 7.0358437234466855,
+    "rows_per_token": 9.675207524104344
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 9669,
+     "rows": 151451,
+     "calls_per_token": 0.6645817581964396,
+     "speedup_vs_ar": 6.018823042713827,
+     "rows_per_token": 10.409718881022751
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 47998,
+     "rows": 829944,
+     "calls_per_token": 0.5524313748057778,
+     "speedup_vs_ar": 7.240718363265136,
+     "rows_per_token": 9.55221269494159
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 12160,
+     "rows": 203883,
+     "calls_per_token": 0.5021473406012553,
+     "speedup_vs_ar": 7.96578947368421,
+     "rows_per_token": 8.419350842418236
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 22574,
+     "rows": 346203,
+     "calls_per_token": 0.7298887739265391,
+     "speedup_vs_ar": 5.480287055905023,
+     "rows_per_token": 11.193837299534403
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6134,
+     "rows": 94848,
+     "calls_per_token": 0.7040863177226814,
+     "speedup_vs_ar": 5.68112161721552,
+     "rows_per_token": 10.887052341597796
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 5530,
+     "rows": 108153,
+     "calls_per_token": 0.5193463561232157,
+     "speedup_vs_ar": 7.701989150090416,
+     "rows_per_token": 10.157118707738542
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 8312,
+     "rows": 202451,
+     "calls_per_token": 0.3356891886434312,
+     "speedup_vs_ar": 11.915784408084697,
+     "rows_per_token": 8.176204515164978
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 2957,
+     "rows": 25857,
+     "calls_per_token": 1.3633010603964961,
+     "speedup_vs_ar": 2.9340547852553263,
+     "rows_per_token": 11.921161825726141
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 top1",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 1,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 68381,
+    "rows": 628364,
+    "calls_per_token": 0.6741427923575921,
+    "speedup_vs_ar": 5.933461049121832,
+    "rows_per_token": 6.1948064751464
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 11513,
+     "rows": 93650,
+     "calls_per_token": 0.7913258643205718,
+     "speedup_vs_ar": 5.054807608790063,
+     "rows_per_token": 6.436868513299883
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 56868,
+     "rows": 534714,
+     "calls_per_token": 0.6545203429821028,
+     "speedup_vs_ar": 6.111345572202293,
+     "rows_per_token": 6.154272889451574
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 13549,
+     "rows": 148162,
+     "calls_per_token": 0.5595061116617113,
+     "speedup_vs_ar": 7.149162299800723,
+     "rows_per_token": 6.118351503138421
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 27494,
+     "rows": 200055,
+     "calls_per_token": 0.8889679255043973,
+     "speedup_vs_ar": 4.499599912708227,
+     "rows_per_token": 6.468410501810657
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 7219,
+     "rows": 56076,
+     "calls_per_token": 0.8286271808999082,
+     "speedup_vs_ar": 4.827261393544812,
+     "rows_per_token": 6.4366391184573
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 6583,
+     "rows": 67810,
+     "calls_per_token": 0.6182381667918858,
+     "speedup_vs_ar": 6.469998480935743,
+     "rows_per_token": 6.368332081141999
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 10071,
+     "rows": 140091,
+     "calls_per_token": 0.4067283227656395,
+     "speedup_vs_ar": 9.8345745209016,
+     "rows_per_token": 5.657727878518638
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3465,
+     "rows": 16170,
+     "calls_per_token": 1.5975103734439835,
+     "speedup_vs_ar": 2.503896103896104,
+     "rows_per_token": 7.455048409405256
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 K16",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": 16,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 76724,
+    "rows": 912870,
+    "calls_per_token": 0.7563933197941518,
+    "speedup_vs_ar": 5.288254001355508,
+    "rows_per_token": 8.999645089417749
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 12313,
+     "rows": 140990,
+     "calls_per_token": 0.846312461337549,
+     "speedup_vs_ar": 4.72638674571591,
+     "rows_per_token": 9.690700391779504
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 64411,
+     "rows": 771880,
+     "calls_per_token": 0.7413362490648558,
+     "speedup_vs_ar": 5.395662231606402,
+     "rows_per_token": 8.88392702998216
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 16901,
+     "rows": 187795,
+     "calls_per_token": 0.6979269904195573,
+     "speedup_vs_ar": 5.731258505413881,
+     "rows_per_token": 7.754996696399075
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 27908,
+     "rows": 323217,
+     "calls_per_token": 0.902353854112778,
+     "speedup_vs_ar": 4.4328507954708325,
+     "rows_per_token": 10.450627263321262
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 7637,
+     "rows": 88466,
+     "calls_per_token": 0.8766069788797062,
+     "speedup_vs_ar": 4.563048317402122,
+     "rows_per_token": 10.154499540863178
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 7519,
+     "rows": 100403,
+     "calls_per_token": 0.7061419984973704,
+     "speedup_vs_ar": 5.664583056257481,
+     "rows_per_token": 9.42928249436514
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 13633,
+     "rows": 187835,
+     "calls_per_token": 0.5505835790153871,
+     "speedup_vs_ar": 7.265018704613805,
+     "rows_per_token": 7.585921408666855
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3126,
+     "rows": 25154,
+     "calls_per_token": 1.4412171507607192,
+     "speedup_vs_ar": 2.775431861804223,
+     "rows_per_token": 11.597049331489165
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 offline-suffix",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "offline",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 57496,
+    "rows": 1092661,
+    "calls_per_token": 0.5668316343632313,
+    "speedup_vs_ar": 7.056769166550716,
+    "rows_per_token": 10.772137547567876
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 9643,
+     "rows": 169335,
+     "calls_per_token": 0.6627946937933878,
+     "speedup_vs_ar": 6.035051332572851,
+     "rows_per_token": 11.638944257337274
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 47853,
+     "rows": 923326,
+     "calls_per_token": 0.550762502158025,
+     "speedup_vs_ar": 7.262658558502079,
+     "rows_per_token": 10.62698969902745
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 12125,
+     "rows": 232385,
+     "calls_per_token": 0.5007020151965642,
+     "speedup_vs_ar": 7.988783505154639,
+     "rows_per_token": 9.596341261975553
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 22513,
+     "rows": 384264,
+     "calls_per_token": 0.7279164511122608,
+     "speedup_vs_ar": 5.495136143561497,
+     "rows_per_token": 12.424469736161408
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6119,
+     "rows": 106728,
+     "calls_per_token": 0.7023645546372819,
+     "speedup_vs_ar": 5.69504821049191,
+     "rows_per_token": 12.25068870523416
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 5507,
+     "rows": 120137,
+     "calls_per_token": 0.5171863260706235,
+     "speedup_vs_ar": 7.734156528055203,
+     "rows_per_token": 11.282588279489106
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 8280,
+     "rows": 220609,
+     "calls_per_token": 0.33439683373046325,
+     "speedup_vs_ar": 11.96183574879227,
+     "rows_per_token": 8.909535156092241
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 2952,
+     "rows": 28538,
+     "calls_per_token": 1.3609958506224067,
+     "speedup_vs_ar": 2.9390243902439024,
+     "rows_per_token": 13.1572153065929
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.01 step-end",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": false,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 67497,
+    "rows": 998813,
+    "calls_per_token": 0.6654277658378848,
+    "speedup_vs_ar": 6.011170866853342,
+    "rows_per_token": 9.84692509414989
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 10296,
+     "rows": 152810,
+     "calls_per_token": 0.7076775036084955,
+     "speedup_vs_ar": 5.652292152292152,
+     "rows_per_token": 10.50312736270534
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 57201,
+     "rows": 846003,
+     "calls_per_token": 0.6583529953386661,
+     "speedup_vs_ar": 6.075767906155487,
+     "rows_per_token": 9.737043218046843
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 15710,
+     "rows": 208127,
+     "calls_per_token": 0.6487446316484968,
+     "speedup_vs_ar": 6.1657542966263525,
+     "rows_per_token": 8.594606871489924
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 26262,
+     "rows": 350940,
+     "calls_per_token": 0.8491334712881531,
+     "speedup_vs_ar": 4.71068463940294,
+     "rows_per_token": 11.346999482669426
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6823,
+     "rows": 95650,
+     "calls_per_token": 0.7831726354453628,
+     "speedup_vs_ar": 5.107430748937418,
+     "rows_per_token": 10.97910927456382
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 6781,
+     "rows": 111568,
+     "calls_per_token": 0.6368332081141999,
+     "speedup_vs_ar": 6.281079486801357,
+     "rows_per_token": 10.477836213373404
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 8962,
+     "rows": 206342,
+     "calls_per_token": 0.3619401478130932,
+     "speedup_vs_ar": 11.051550993081902,
+     "rows_per_token": 8.333346795363676
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 2959,
+     "rows": 26186,
+     "calls_per_token": 1.364223144306132,
+     "speedup_vs_ar": 2.9320716458262925,
+     "rows_per_token": 12.072844628861226
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 66409,
+    "rows": 568352,
+    "calls_per_token": 0.6547015793520911,
+    "speedup_vs_ar": 6.109653811983316,
+    "rows_per_token": 5.6031705345347715
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 11205,
+     "rows": 84000,
+     "calls_per_token": 0.7701560244690356,
+     "speedup_vs_ar": 5.193752788933512,
+     "rows_per_token": 5.773592686782597
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 55204,
+     "rows": 484352,
+     "calls_per_token": 0.6353685906658226,
+     "speedup_vs_ar": 6.2955582928773275,
+     "rows_per_token": 5.574633135754158
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 13186,
+     "rows": 135169,
+     "calls_per_token": 0.5445160224644863,
+     "speedup_vs_ar": 7.345973001668436,
+     "rows_per_token": 5.581805417905517
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 26243,
+     "rows": 181031,
+     "calls_per_token": 0.8485191412312467,
+     "speedup_vs_ar": 4.714095187288039,
+     "rows_per_token": 5.8533044490429385
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6986,
+     "rows": 50023,
+     "calls_per_token": 0.80188246097337,
+     "speedup_vs_ar": 4.988262238763241,
+     "rows_per_token": 5.741850321395776
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 6546,
+     "rows": 60105,
+     "calls_per_token": 0.614763335837716,
+     "speedup_vs_ar": 6.506568897036358,
+     "rows_per_token": 5.644722013523666
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 10025,
+     "rows": 128467,
+     "calls_per_token": 0.40487056257824805,
+     "speedup_vs_ar": 9.879700748129675,
+     "rows_per_token": 5.188279956383021
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3423,
+     "rows": 13557,
+     "calls_per_token": 1.578146611341632,
+     "speedup_vs_ar": 2.534618755477651,
+     "rows_per_token": 6.250345781466113
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 top1",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 1,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 71401,
+    "rows": 532950,
+    "calls_per_token": 0.7039158467574975,
+    "speedup_vs_ar": 5.682497444013389,
+    "rows_per_token": 5.254155411400516
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 12001,
+     "rows": 78206,
+     "calls_per_token": 0.824867688500928,
+     "speedup_vs_ar": 4.849262561453212,
+     "rows_per_token": 5.37535225788714
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 59400,
+     "rows": 454744,
+     "calls_per_token": 0.6836623122518272,
+     "speedup_vs_ar": 5.8508417508417505,
+     "rows_per_token": 5.233860850549577
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 14102,
+     "rows": 128428,
+     "calls_per_token": 0.5823422530558309,
+     "speedup_vs_ar": 6.868812934335555,
+     "rows_per_token": 5.303435744962009
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 28438,
+     "rows": 166344,
+     "calls_per_token": 0.9194904293843766,
+     "speedup_vs_ar": 4.350235600253183,
+     "rows_per_token": 5.37842731505432
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 7502,
+     "rows": 46458,
+     "calls_per_token": 0.8611111111111112,
+     "speedup_vs_ar": 4.645161290322581,
+     "rows_per_token": 5.332644628099174
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 7002,
+     "rows": 56168,
+     "calls_per_token": 0.6575882794891059,
+     "speedup_vs_ar": 6.082833476149672,
+     "rows_per_token": 5.2749812171299775
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 10789,
+     "rows": 122802,
+     "calls_per_token": 0.4357255361253584,
+     "speedup_vs_ar": 9.180090833256093,
+     "rows_per_token": 4.95949275069666
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3568,
+     "rows": 12750,
+     "calls_per_token": 1.6449976947902258,
+     "speedup_vs_ar": 2.431614349775785,
+     "rows_per_token": 5.878284923928078
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 K16",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": 16,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 84912,
+    "rows": 545996,
+    "calls_per_token": 0.8371157600015774,
+    "speedup_vs_ar": 4.778311663840211,
+    "rows_per_token": 5.382771062957194
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 13704,
+     "rows": 81091,
+     "calls_per_token": 0.9419204069008179,
+     "speedup_vs_ar": 4.246643315820198,
+     "rows_per_token": 5.573647673379614
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 71208,
+     "rows": 464905,
+     "calls_per_token": 0.8195660931115842,
+     "speedup_vs_ar": 4.880631389731491,
+     "rows_per_token": 5.35080854002417
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 17968,
+     "rows": 128527,
+     "calls_per_token": 0.741988767756855,
+     "speedup_vs_ar": 5.390917186108638,
+     "rows_per_token": 5.307523951106706
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 30856,
+     "rows": 175667,
+     "calls_per_token": 0.9976720124159337,
+     "speedup_vs_ar": 4.009333679025149,
+     "rows_per_token": 5.679869374030005
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 8365,
+     "rows": 48487,
+     "calls_per_token": 0.9601698806244261,
+     "speedup_vs_ar": 4.165929468021519,
+     "rows_per_token": 5.5655417814508725
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 8516,
+     "rows": 57649,
+     "calls_per_token": 0.7997746055597296,
+     "speedup_vs_ar": 5.001409112259276,
+     "rows_per_token": 5.414068369646882
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 15696,
+     "rows": 122220,
+     "calls_per_token": 0.6339000848107912,
+     "speedup_vs_ar": 6.310142711518858,
+     "rows_per_token": 4.935988045717055
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3511,
+     "rows": 13446,
+     "calls_per_token": 1.6187183033656063,
+     "speedup_vs_ar": 2.4710908573056107,
+     "rows_per_token": 6.199170124481328
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 offline-suffix",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "offline",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 65426,
+    "rows": 648581,
+    "calls_per_token": 0.6450105487311947,
+    "speedup_vs_ar": 6.201448965243175,
+    "rows_per_token": 6.394118342961926
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 11046,
+     "rows": 96958,
+     "calls_per_token": 0.7592274383119114,
+     "speedup_vs_ar": 5.268513489045809,
+     "rows_per_token": 6.664238091965084
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 54380,
+     "rows": 551623,
+     "calls_per_token": 0.6258847902399723,
+     "speedup_vs_ar": 6.390952556086797,
+     "rows_per_token": 6.34888645911262
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 12959,
+     "rows": 159905,
+     "calls_per_token": 0.5351420548397754,
+     "speedup_vs_ar": 7.474650821822672,
+     "rows_per_token": 6.603278823918071
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 25914,
+     "rows": 206302,
+     "calls_per_token": 0.8378815312984997,
+     "speedup_vs_ar": 4.773944585938103,
+     "rows_per_token": 6.670395757889291
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6906,
+     "rows": 57938,
+     "calls_per_token": 0.7926997245179064,
+     "speedup_vs_ar": 5.046046915725456,
+     "rows_per_token": 6.650367309458218
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 6413,
+     "rows": 68413,
+     "calls_per_token": 0.6022727272727273,
+     "speedup_vs_ar": 6.6415094339622645,
+     "rows_per_token": 6.424962434259955
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 9828,
+     "rows": 140726,
+     "calls_per_token": 0.39691450264528894,
+     "speedup_vs_ar": 10.077737077737078,
+     "rows_per_token": 5.6833730463228465
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3406,
+     "rows": 15297,
+     "calls_per_token": 1.570308898109728,
+     "speedup_vs_ar": 2.547269524368761,
+     "rows_per_token": 7.052558782849239
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "C t0.1 step-end",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": false,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-spec-prob-tree-20261031/calib-v3/sb-chat-ouro-2.6b.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 72348,
+    "rows": 583098,
+    "calls_per_token": 0.7132519667961433,
+    "speedup_vs_ar": 5.6081163266434455,
+    "rows_per_token": 5.748545852475501
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 11593,
+     "rows": 85503,
+     "calls_per_token": 0.7968245240222696,
+     "speedup_vs_ar": 5.0199258173035455,
+     "rows_per_token": 5.876898755928242
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 60755,
+     "rows": 497595,
+     "calls_per_token": 0.6992576394084135,
+     "speedup_vs_ar": 5.720352234384001,
+     "rows_per_token": 5.7270530010934
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 15371,
+     "rows": 139898,
+     "calls_per_token": 0.6347456227287743,
+     "speedup_vs_ar": 6.301737037277991,
+     "rows_per_token": 5.777089527585067
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 28282,
+     "rows": 186108,
+     "calls_per_token": 0.9144464562855664,
+     "speedup_vs_ar": 4.37423095962096,
+     "rows_per_token": 6.017459906880497
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 7492,
+     "rows": 50774,
+     "calls_per_token": 0.8599632690541782,
+     "speedup_vs_ar": 4.6513614522156965,
+     "rows_per_token": 5.828053259871441
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 7569,
+     "rows": 62218,
+     "calls_per_token": 0.7108377160030053,
+     "speedup_vs_ar": 5.627163429779364,
+     "rows_per_token": 5.843163035311796
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 10218,
+     "rows": 130306,
+     "calls_per_token": 0.41266507814708614,
+     "speedup_vs_ar": 9.693090624388335,
+     "rows_per_token": 5.26254997778765
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3416,
+     "rows": 13794,
+     "calls_per_token": 1.5749193176579068,
+     "speedup_vs_ar": 2.5398126463700232,
+     "rows_per_token": 6.359612724757953
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d1 C t0.01",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-ouro-2.6b-d1.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 57667,
+    "rows": 981395,
+    "calls_per_token": 0.5685174596289213,
+    "speedup_vs_ar": 7.0358437234466855,
+    "rows_per_token": 9.675207524104344
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 9669,
+     "rows": 151451,
+     "calls_per_token": 0.6645817581964396,
+     "speedup_vs_ar": 6.018823042713827,
+     "rows_per_token": 10.409718881022751
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 47998,
+     "rows": 829944,
+     "calls_per_token": 0.5524313748057778,
+     "speedup_vs_ar": 7.240718363265136,
+     "rows_per_token": 9.55221269494159
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 12160,
+     "rows": 203883,
+     "calls_per_token": 0.5021473406012553,
+     "speedup_vs_ar": 7.96578947368421,
+     "rows_per_token": 8.419350842418236
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 22574,
+     "rows": 346203,
+     "calls_per_token": 0.7298887739265391,
+     "speedup_vs_ar": 5.480287055905023,
+     "rows_per_token": 11.193837299534403
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6134,
+     "rows": 94848,
+     "calls_per_token": 0.7040863177226814,
+     "speedup_vs_ar": 5.68112161721552,
+     "rows_per_token": 10.887052341597796
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 5530,
+     "rows": 108153,
+     "calls_per_token": 0.5193463561232157,
+     "speedup_vs_ar": 7.701989150090416,
+     "rows_per_token": 10.157118707738542
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 8312,
+     "rows": 202451,
+     "calls_per_token": 0.3356891886434312,
+     "speedup_vs_ar": 11.915784408084697,
+     "rows_per_token": 8.176204515164978
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 2957,
+     "rows": 25857,
+     "calls_per_token": 1.3633010603964961,
+     "speedup_vs_ar": 2.9340547852553263,
+     "rows_per_token": 11.921161825726141
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d1 C t0.1",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+     1,
+     2
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-ouro-2.6b-d1.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 66409,
+    "rows": 568352,
+    "calls_per_token": 0.6547015793520911,
+    "speedup_vs_ar": 6.109653811983316,
+    "rows_per_token": 5.6031705345347715
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 11205,
+     "rows": 84000,
+     "calls_per_token": 0.7701560244690356,
+     "speedup_vs_ar": 5.193752788933512,
+     "rows_per_token": 5.773592686782597
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 55204,
+     "rows": 484352,
+     "calls_per_token": 0.6353685906658226,
+     "speedup_vs_ar": 6.2955582928773275,
+     "rows_per_token": 5.574633135754158
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 13186,
+     "rows": 135169,
+     "calls_per_token": 0.5445160224644863,
+     "speedup_vs_ar": 7.345973001668436,
+     "rows_per_token": 5.581805417905517
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 26243,
+     "rows": 181031,
+     "calls_per_token": 0.8485191412312467,
+     "speedup_vs_ar": 4.714095187288039,
+     "rows_per_token": 5.8533044490429385
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 6986,
+     "rows": 50023,
+     "calls_per_token": 0.80188246097337,
+     "speedup_vs_ar": 4.988262238763241,
+     "rows_per_token": 5.741850321395776
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 6546,
+     "rows": 60105,
+     "calls_per_token": 0.614763335837716,
+     "speedup_vs_ar": 6.506568897036358,
+     "rows_per_token": 5.644722013523666
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 10025,
+     "rows": 128467,
+     "calls_per_token": 0.40487056257824805,
+     "speedup_vs_ar": 9.879700748129675,
+     "rows_per_token": 5.188279956383021
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 3423,
+     "rows": 13557,
+     "calls_per_token": 1.578146611341632,
+     "speedup_vs_ar": 2.534618755477651,
+     "rows_per_token": 6.250345781466113
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d2 C t0.01",
+    "depth_total": 4,
+    "draft_depth": 2,
+    "readout_depths": [
+     2,
+     3
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-ouro-2.6b-d2.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 104066,
+    "rows": 693286,
+    "calls_per_token": 1.0259479070134274,
+    "speedup_vs_ar": 3.898833432629293,
+    "rows_per_token": 6.834848275726088
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 17345,
+     "rows": 104616,
+     "calls_per_token": 1.192178156574335,
+     "speedup_vs_ar": 3.355203228596137,
+     "rows_per_token": 7.190597291910097
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 86721,
+     "rows": 588670,
+     "calls_per_token": 0.9981124474880589,
+     "speedup_vs_ar": 4.007564488416877,
+     "rows_per_token": 6.7752776658801865
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 23698,
+     "rows": 164386,
+     "calls_per_token": 0.9786091840105715,
+     "speedup_vs_ar": 4.087433538695248,
+     "rows_per_token": 6.788321770730096
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 41060,
+     "rows": 222855,
+     "calls_per_token": 1.3275995861355405,
+     "speedup_vs_ar": 3.0129566488066244,
+     "rows_per_token": 7.2056065700982925
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 11186,
+     "rows": 64621,
+     "calls_per_token": 1.2839761248852157,
+     "speedup_vs_ar": 3.1153227248346145,
+     "rows_per_token": 7.4174701561065195
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 9671,
+     "rows": 75291,
+     "calls_per_token": 0.9082456799398948,
+     "speedup_vs_ar": 4.404094716161721,
+     "rows_per_token": 7.0709053343350865
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 14391,
+     "rows": 149599,
+     "calls_per_token": 0.581196236016316,
+     "speedup_vs_ar": 6.882357028698492,
+     "rows_per_token": 6.041718832034247
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 4060,
+     "rows": 16534,
+     "calls_per_token": 1.871830336560627,
+     "speedup_vs_ar": 2.1369458128078818,
+     "rows_per_token": 7.622867680958967
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d2 C t0.1",
+    "depth_total": 4,
+    "draft_depth": 2,
+    "readout_depths": [
+     2,
+     3
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-ouro-2.6b-d2.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 108527,
+    "rows": 564183,
+    "calls_per_token": 1.0699272433306386,
+    "speedup_vs_ar": 3.7385719682659615,
+    "rows_per_token": 5.5620699173847035
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 18155,
+     "rows": 83439,
+     "calls_per_token": 1.2478520860540243,
+     "speedup_vs_ar": 3.205508124483613,
+     "rows_per_token": 5.735033335624442
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 90372,
+     "rows": 480744,
+     "calls_per_token": 1.0401335098118203,
+     "speedup_vs_ar": 3.8456601602266187,
+     "rows_per_token": 5.533106980491454
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 24421,
+     "rows": 140440,
+     "calls_per_token": 1.0084654773703337,
+     "speedup_vs_ar": 3.9664223414274598,
+     "rows_per_token": 5.799471423851998
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 42647,
+     "rows": 174949,
+     "calls_per_token": 1.3789123124676668,
+     "speedup_vs_ar": 2.900837104602903,
+     "rows_per_token": 5.656654164511123
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 11635,
+     "rows": 50197,
+     "calls_per_token": 1.335514233241506,
+     "speedup_vs_ar": 2.995100988397078,
+     "rows_per_token": 5.76182277318641
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 10187,
+     "rows": 59099,
+     "calls_per_token": 0.9567054845980466,
+     "speedup_vs_ar": 4.181015019142044,
+     "rows_per_token": 5.550244177310293
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 15387,
+     "rows": 126493,
+     "calls_per_token": 0.6214207826824442,
+     "speedup_vs_ar": 6.436862286345616,
+     "rows_per_token": 5.10855781268931
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 4250,
+     "rows": 13005,
+     "calls_per_token": 1.9594283079760257,
+     "speedup_vs_ar": 2.0414117647058823,
+     "rows_per_token": 5.995850622406639
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d3 C t0.01",
+    "depth_total": 4,
+    "draft_depth": 3,
+    "readout_depths": [
+     3
+    ],
+    "tau": 0.01,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-ouro-2.6b-d3.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 152682,
+    "rows": 677288,
+    "calls_per_token": 1.5052349310881952,
+    "speedup_vs_ar": 2.6573924889639904,
+    "rows_per_token": 6.677129956424867
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 25531,
+     "rows": 101282,
+     "calls_per_token": 1.7548285105505532,
+     "speedup_vs_ar": 2.279425012729623,
+     "rows_per_token": 6.961440648841845
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 127151,
+     "rows": 576006,
+     "calls_per_token": 1.463440179547678,
+     "speedup_vs_ar": 2.7332856210332594,
+     "rows_per_token": 6.62952178166542
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 34879,
+     "rows": 173223,
+     "calls_per_token": 1.4403287082920384,
+     "speedup_vs_ar": 2.7771438401330313,
+     "rows_per_token": 7.153245787908821
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 60615,
+     "rows": 210285,
+     "calls_per_token": 1.9598745473357475,
+     "speedup_vs_ar": 2.0409469603233523,
+     "rows_per_token": 6.799178737713399
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 16362,
+     "rows": 63082,
+     "calls_per_token": 1.878099173553719,
+     "speedup_vs_ar": 2.1298129812981297,
+     "rows_per_token": 7.240817263544536
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 14004,
+     "rows": 71415,
+     "calls_per_token": 1.3151765589782118,
+     "speedup_vs_ar": 3.041416738074836,
+     "rows_per_token": 6.706893313298272
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 21061,
+     "rows": 143677,
+     "calls_per_token": 0.8505714631880781,
+     "speedup_vs_ar": 4.7027206685342575,
+     "rows_per_token": 5.802552400953112
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 5761,
+     "rows": 15606,
+     "calls_per_token": 2.656062701705855,
+     "speedup_vs_ar": 1.5059885436556153,
+     "rows_per_token": 7.195020746887967
+    }
+   }
+  },
+  {
+   "config": {
+    "name": "d3 C t0.1",
+    "depth_total": 4,
+    "draft_depth": 3,
+    "readout_depths": [
+     3
+    ],
+    "tau": 0.1,
+    "tau_suffix": null,
+    "tau_deep": null,
+    "top_m": 8,
+    "row_cap": null,
+    "max_draft": null,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "suffix_room": 64,
+    "use_suffix": true,
+    "offpath_readouts": true,
+    "commit_on_accept": true,
+    "rescore": true,
+    "suffix_calibration": "insitu",
+    "joint": true,
+    "deep_expand": true,
+    "deep_raise": true,
+    "prune": true,
+    "legacy": false
+   },
+   "calibration": "/mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-suffix-spec-20261030/ablation/calib/sb-chat-ouro-2.6b-d3.json",
+   "overall": {
+    "tokens": 101434,
+    "calls": 155654,
+    "rows": 604484,
+    "calls_per_token": 1.5345347713784332,
+    "speedup_vs_ar": 2.606653218034872,
+    "rows_per_token": 5.959382455586884
+   },
+   "splits": {
+    "confirm": {
+     "tokens": 14549,
+     "calls": 26047,
+     "rows": 89728,
+     "calls_per_token": 1.7902948656265036,
+     "speedup_vs_ar": 2.2342688217453066,
+     "rows_per_token": 6.167296721424153
+    },
+    "dev": {
+     "tokens": 86885,
+     "calls": 129607,
+     "rows": 514756,
+     "calls_per_token": 1.4917074293606492,
+     "speedup_vs_ar": 2.6814909688519912,
+     "rows_per_token": 5.924566956321574
+    }
+   },
+   "by_category": {
+    "math_reasoning": {
+     "tokens": 24216,
+     "calls": 35618,
+     "rows": 156038,
+     "calls_per_token": 1.470845721836802,
+     "speedup_vs_ar": 2.7195238362625638,
+     "rows_per_token": 6.443591014205484
+    },
+    "mt_bench": {
+     "tokens": 30928,
+     "calls": 61536,
+     "rows": 185580,
+     "calls_per_token": 1.9896533885152612,
+     "speedup_vs_ar": 2.010400416016641,
+     "rows_per_token": 6.000387997930678
+    },
+    "qa": {
+     "tokens": 8712,
+     "calls": 16700,
+     "rows": 54240,
+     "calls_per_token": 1.9168962350780532,
+     "speedup_vs_ar": 2.0867065868263475,
+     "rows_per_token": 6.225895316804408
+    },
+    "rag": {
+     "tokens": 10648,
+     "calls": 14405,
+     "rows": 62557,
+     "calls_per_token": 1.3528362133734035,
+     "speedup_vs_ar": 2.9567511280805276,
+     "rows_per_token": 5.875
+    },
+    "summarization": {
+     "tokens": 24761,
+     "calls": 21530,
+     "rows": 132389,
+     "calls_per_token": 0.8695125398812649,
+     "speedup_vs_ar": 4.600278680910358,
+     "rows_per_token": 5.346674205403659
+    },
+    "translation": {
+     "tokens": 2169,
+     "calls": 5865,
+     "rows": 13680,
+     "calls_per_token": 2.704011065006916,
+     "speedup_vs_ar": 1.4792838874680307,
+     "rows_per_token": 6.3070539419087135
+    }
+   }
+  }
+ ]
+}

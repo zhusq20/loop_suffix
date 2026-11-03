@@ -1,0 +1,42 @@
+{
+ "synced_utc": "2026-10-31T22:05Z",
+ "project": "https://wandb.ai/zsqzz/llm-memory-editability",
+ "method": "wandb beta sync (host wandb 0.23.1) on each offline run-*.wandb file; token read from the local credential file into the environment, never argv",
+ "legacy_sync_failure": "plain `wandb sync` (image 0.22.2 and host 0.23.1) printed 'done' but uploaded nothing: its sender thread crashed in server_settings_introspection (ServerSettingsType came back None). It left .wandb.synced markers; the runs were then uploaded with beta sync.",
+ "verified": "W&B API: every run state=finished, group as below, history rows equal to the local record lines (check 6, bench 60)",
+ "group": "loop-suffix-spec-wallclock-20261031",
+ "runs": [
+  {
+   "id": "zgtpagwz",
+   "name": "loop-suffix-spec-wallclock-20261031-huginn-3.5b-sb-chat-check-float32",
+   "group": "loop-suffix-spec-wallclock-20261031",
+   "state": "finished",
+   "rows": 6,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/zgtpagwz"
+  },
+  {
+   "id": "2fuojaan",
+   "name": "loop-suffix-spec-wallclock-20261031-huginn-3.5b-sb-chat-bench-bfloat16",
+   "group": "loop-suffix-spec-wallclock-20261031",
+   "state": "finished",
+   "rows": 60,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/2fuojaan"
+  },
+  {
+   "id": "4h4zz0ib",
+   "name": "loop-suffix-spec-wallclock-20261031-ouro-2.6b-sb-chat-check-float32",
+   "group": "loop-suffix-spec-wallclock-20261031",
+   "state": "finished",
+   "rows": 6,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/4h4zz0ib"
+  },
+  {
+   "id": "yjia00ho",
+   "name": "loop-suffix-spec-wallclock-20261031-ouro-2.6b-sb-chat-bench-bfloat16",
+   "group": "loop-suffix-spec-wallclock-20261031",
+   "state": "finished",
+   "rows": 60,
+   "url": "https://wandb.ai/zsqzz/llm-memory-editability/runs/yjia00ho"
+  }
+ ]
+}

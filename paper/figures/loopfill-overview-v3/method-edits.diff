@@ -1,0 +1,287 @@
+--- a/method.tex
++++ b/method.tex
+@@ -1,122 +1,145 @@
++\DeclareRobustCommand{\LFtok}[1]{\mbox{\texttt{\textbf{[#1]}}}}
+ \section{LoopFill Decoding}
+ \label{sec:loopfill}
+ 
+-A looped language model applies the same block of layers $T$ times to
+-each token before predicting the next one. One pass of this block is
+-a \emph{loop step}. One loop step can advance many tokens by one loop
+-each, even tokens at different loops. In greedy decoding, the next token
+-is known only after the current one finishes all $T$ loops, so every
+-output token costs $T$ loop steps. LoopFill starts this work early. It
+-guesses upcoming tokens, called \emph{drafts}, from text that appeared
+-earlier and from the model's own predictions after a few loops, so no
+-separate draft model is needed. Drafts only decide which work starts
+-early. Every emitted token is still the model's prediction after all $T$
+-loops.
++A looped language model applies the same block of layers $T$ times at
++each token position. We call one application of the block a \emph{loop
++step}. One step can advance several positions by one loop each, even
++when the positions have completed different numbers of loops. Greedy
++decoding waits until the current position finishes all $T$ loops before
++starting the next position. LoopFill instead proposes upcoming tokens,
++called \emph{drafts}, using earlier text and the model's own intermediate
++predictions. The decoder can start processing a proposed token before
++verifying it. It appends a token to the output only when that token is
++the greedy next-token prediction after all $T$ loops at the last
++verified position.
+ 
+-We follow the LoopFill example of Figure~\ref{fig:four-decoders}, where
+-$T=3$ and each word is one token. The prompt ends in \texttt{like}, and an
+-earlier output continued \texttt{like} with \texttt{a coffee}, so LoopFill
+-runs \texttt{a coffee} in step~1 alongside \texttt{like}. After one loop
+-on \texttt{like}, the model already ranks \texttt{to} first. LoopFill
+-drops \texttt{a coffee} and starts \texttt{to} in step~2, while
+-\texttt{like} is still running. When the final prediction at
+-\texttt{like} confirms \texttt{to} at step~3, the token after \texttt{to}
+-needs only one more loop and arrives at step~4, not at step~6 as in
+-greedy decoding. The output \texttt{to join Lean Club \textbackslash n}
+-takes 5 loop steps instead of 15. Figure~\ref{fig:loopfill-trees} shows
+-the two trees behind these drafts.
++Figure~\ref{fig:loopfill-trees} follows the five-token example in
++Figure~\ref{fig:four-decoders}, with $T=3$. Bracketed monospace text
++denotes one token, including \LFtok{\textbackslash n} for a newline.
++The prompt ends in \LFtok{like}. By the time the model confirms
++\LFtok{to} as the next token, the position processing \LFtok{to}
++has already completed two loops. LoopFill produces the five output
++tokens in five loop steps. Greedy decoding takes fifteen.
+ 
+ \begin{figure}[t]
+   \centering
+-  \includegraphics[
+-    width=0.7\columnwidth]{figures/02_tree.pdf}
+-  \caption{\textbf{The two trees behind LoopFill's drafts}, for the
+-    example of Figure~\ref{fig:four-decoders}. (a)~The suffix tree, with
+-    only the branches used here. Matching \texttt{like} drafts
+-    \texttt{a coffee}, and matching the newly added \texttt{to} drafts
+-    \texttt{join Lean Hub}. (b)~Every branch the draft tree held while
+-    decoding, rooted at the last prompt token. Blue edges come from the
+-    suffix tree and orange edges from shallow predictions.}
++  \includegraphics[width=\columnwidth]{figures/02_tree.pdf}
++  \caption{\textbf{LoopFill decoding with three loops per position.}
++    (a)~Matching \LFtok{like} proposes \LFtok{a} followed by \LFtok{coffee}.
++    (b)~The early prediction at \LFtok{like} proposes \LFtok{to}
++    (orange arrow with a dot). A suffix match at \LFtok{to} proposes
++    \LFtok{join} (blue arrow).
++    (c)~Scissors give the step when a branch is pruned.
++    (d)~After step~3, the first three positions each need one more
++    loop. The position processing \LFtok{Club} needs two more loops.
++    Each position predicts the token below it. Green badges mark the
++    step when the decoder appends that token to the output.}
+   \label{fig:loopfill-trees}
+ \end{figure}
+ 
+-\paragraph{Drafting from earlier text.}
+-As in SuffixDecoding~\cite{oliaro2025suffixdecodingextremespeculativedecoding}, a \emph{suffix tree}
+-indexes the current prompt, the output verified so far, and earlier
+-outputs (Figure~\ref{fig:loopfill-trees}a). We match the last few tokens
+-of a prefix against it and propose the tokens that followed the match.
+-Drafts live in a \emph{draft tree} (Figure~\ref{fig:loopfill-trees}b).
+-Its root is the verified prefix $x$. A node $u$ is $x$ followed by draft
+-tokens, and its child $ua$ appends one token $a$. Running node $u$ means
+-processing its last token, so after $T$ loops it yields the model's
+-prediction of the token after $u$. All nodes on a drafted path, such as
+-\texttt{a} and \texttt{coffee}, can start in the same loop step. Each node
+-attends to $x$ and to its own ancestors, never to another branch.
++\paragraph{(a) Draft from suffix matches.}
++As in SuffixDecoding~\cite{oliaro2025suffixdecodingextremespeculativedecoding},
++a \emph{suffix tree} indexes the current prompt, the output verified so
++far, and earlier outputs. The decoder matches the last tokens of a
++prefix against the index and proposes the tokens that followed the
++match. A separate \emph{draft tree} stores the proposed continuations.
++Its root represents the verified prefix $x$. A node $u$ represents
++$x$ followed by the draft tokens on the path to that node. A child
++$ua$ extends $u$ by one candidate token $a$.
+ 
+-\paragraph{Drafting from early loops.}
+-Each loop step advances every unfinished node, one with fewer than $T$
+-loops, by one loop. When a node has run $d_1$ loops, and again at $d_2$
+-loops ($d_1<d_2<T$), we take its \emph{shallow prediction} of the next
+-token. We score the node's existing children together with the eight
+-tokens this prediction ranks highest, which lets it add a child or
+-prune an unlikely branch. Whenever it adds a child, we also
+-query the suffix tree with the longer prefix, so a single shallow
+-prediction can lead back into familiar text. In
+-Figure~\ref{fig:loopfill-trees}b, the shallow prediction at \texttt{like}
+-adds \texttt{to}, which the suffix tree extends with
+-\texttt{join Lean Hub}. In step~2, shallow predictions add \texttt{the}
+-and \texttt{Club} and prune \texttt{Hub}.
++Each node processes the last token of its prefix to predict the token
++\emph{after} that prefix. Attention at the node uses only the verified
++prefix and the tokens on its own path. In
++Figure~\ref{fig:loopfill-trees}(a), the first match proposes the path
++\LFtok{a} \LFtok{coffee} after \LFtok{like}. The positions processing
++\LFtok{like}, \LFtok{a}, and \LFtok{coffee} all run their first loop
++in step~1.
+ 
+-\paragraph{Deciding which branches to compute.}
+-Every node occupies a slot in each loop step, and its work is wasted if
+-any token on its path is wrong. We therefore score each edge with
+-$\hat q(a\mid u)$, an estimate of the probability that $a$ is the greedy
+-token after $u$, given that $u$ itself lies on the greedy path. We build
+-these estimates as lookup tables before decoding. On calibration prompts,
+-we follow the greedy output and tabulate how often proposed tokens with
+-the same features match the greedy next token.
++\paragraph{(b) Draft from early predictions.}
++Each step advances every node that has completed fewer than $T$ loops
++by one loop. The decoder reads the next-token distribution at node $u$
++after $d_1$ loops and again if $u$ reaches $d_2$ loops ($d_1<d_2<T$).
++We call each readout a \emph{shallow prediction}. The candidates for
++the next position are the top eight
++tokens in that distribution together with the tokens labeling the
++existing children of $u$. The decoder scores those candidates using
++the rule in part~(c). Whenever the decoder adds a child, it also queries
++the suffix tree with the child's prefix. Children proposed during one
++step can start their first loop in the following step.
+ 
+-The available features grow as $u$ runs more loops. Let $m$ denote the
+-suffix-match features: the match length, how often $a$ followed the
+-match, whether $u$ has other children, and the depth of $u$ in the draft
+-tree. Let $b$ indicate whether the suffix tree proposed $a$, and let
+-$r_i$ and $p_i$ be the rank and probability of $a$ in the shallow
+-prediction after $d_i$ loops. A token outside the top eight gets a
+-reserved rank and $p_i=0$. With fixed match-rate tables $M$, the estimate
+-is updated at each stage:
++In Figure~\ref{fig:loopfill-trees}(b), the first loop at the position
++processing \LFtok{like} proposes \LFtok{to}. Matching \LFtok{to} in the
++suffix tree proposes \LFtok{join} \LFtok{Lean} \LFtok{Hub}. All four
++new positions start in step~2. At the end of that step, the position
++processing \LFtok{join} proposes \LFtok{the}, and the position
++processing \LFtok{Lean} proposes \LFtok{Club}.
++
++\paragraph{(c) Score and prune branches.}
++Computing a node is useful for the output only if every token on its
++path agrees with greedy decoding. For each edge from $u$ to $ua$, we
++estimate the probability $\hat q(a\mid u)$ that the greedy next token
++after $u$ is $a$, conditional on $u$ being on the greedy path. Before
++decoding, we follow greedy outputs on calibration prompts. For each
++group of proposals with the same features, we tabulate the fraction
++that match the greedy next token.
++
++For a suffix proposal, the features $m$ record the suffix-match
++length, how often $a$ followed the match, whether $u$ has other
++children, and the depth of $u$ in the draft tree. Let $b$ indicate
++whether the suffix tree proposed $a$. Let $r_i$ and $p_i$ be the rank
++and probability of $a$ in the shallow prediction at loop $d_i$.
++A token outside the top eight receives a reserved rank and $p_i=0$.
++The decoder updates the edge estimate using fixed match-rate tables $M$.
+ \[
+ \hat q(a\mid u)\gets
+ \left\{\begin{array}{@{}l@{\quad}l@{}}
+- M_{\mathrm{suf}}(m)  & \mbox{when the suffix tree proposes }a,\\
+- M_1(r_1,p_1,b)       & \mbox{after $d_1$ loops at }u,\\
+- M_2(r_1,r_2,p_2,b)   & \mbox{after $d_2$ loops at }u.
++ M_{\mathrm{suf}}(m)  & \mbox{on a suffix proposal},\\
++ M_1(r_1,p_1,b)       & \mbox{after $d_1$ loops},\\
++ M_2(r_1,r_2,p_2,b)   & \mbox{after $d_2$ loops}.
+ \end{array}\right.
+ \]
+-Each update replaces the previous estimate for that edge. The path score
+-is $s(x)=1$ at the root and $s(ua)=s(u)\,\hat q(a\mid u)$ below it. For
+-example, if \texttt{to} scores $0.8$ and \texttt{join} follows \texttt{to}
+-at rate $0.5$, the path \texttt{to join} scores $0.4$. A node is kept only
+-while its path score exceeds a threshold $\tau$. Rescoring an edge
+-changes every path score below it, and a node whose score falls to $\tau$
+-or below is pruned with its subtree. A higher $\tau$ wastes less work but
+-may leave the correct next token out of the tree.
++Each update replaces the previous estimate for that edge. The root
++score is $s(x)=1$, and a child's path score is
++$s(ua)=s(u)\,\hat q(a\mid u)$. For example, edge estimates of $0.8$
++for \LFtok{to} after the root and $0.5$ for \LFtok{join} after
++\LFtok{to} give the path \LFtok{to} \LFtok{join} a score of $0.4$.
+ 
+-\paragraph{Verifying the draft.}
+-When the root finishes its $T$ loops, its prediction gives the greedy
+-token $a$, which we emit and add to the suffix tree. If $xa$ is in the
+-draft tree, it becomes the new root with score one. We keep its subtree
+-with the work done there, discard its siblings, rescore the drafts below,
+-and add suffix continuations. If the new root has also finished its $T$
+-loops, we emit another token in the same loop step. In
+-Figure~\ref{fig:loopfill-trees}b, step~4 emits \texttt{join},
+-\texttt{Lean}, and \texttt{Club} this way. If $xa$ is missing, we still
+-emit $a$ and start a new draft tree at $xa$. Either way, each emitted
+-token is the greedy choice after the verified prefix, so LoopFill emits
+-the same sequence as greedy decoding whenever both compute the same final
+-predictions. Algorithm~\ref{alg:loopfill} summarizes one loop step.
++The decoder keeps a draft node only while its path score exceeds
++$\tau$. When an edge estimate changes, the decoder recomputes the
++scores of all paths through that edge. When a node's score falls to
++$\tau$ or below, the decoder removes that node and its descendants.
++In Figure~\ref{fig:loopfill-trees}(c), pruning \LFtok{a} in step~1
++also removes \LFtok{coffee}. The decoder prunes \LFtok{Hub} in
++step~2 and \LFtok{the} in step~3. A higher threshold can save work
++on incorrect paths but can also exclude a correct draft.
+ 
+-% An inline algorithm using only core LaTeX. Share the host's algorithm
+-% counter when its algorithm package is loaded.
++\paragraph{(d) Verify and append tokens.}
++When the root for $x$ finishes all $T$ loops, the decoder takes the
++greedy next token $a$ at that root, appends $a$ to the output, and
++adds $a$ to the suffix index. If the root has a child $xa$, the
++decoder makes that child the new root with score one, keeps the
++child's subtree and its completed loops, and discards the old root's
++other branches. It then recomputes path scores from $xa$ and adds
++suffix drafts from $xa$. If the child is absent, the decoder starts a
++new draft tree at $xa$. In both cases the output uses the full-depth
++greedy prediction. Thus LoopFill produces the same sequence as greedy
++decoding whenever both compute the same final predictions.
++
++A new root that has already finished all $T$ loops can supply the next
++output token in the same step. In Figure~\ref{fig:loopfill-trees}(d),
++the final prediction at the position processing \LFtok{like} is
++\LFtok{to} in step~3. At the end of that step, the positions processing
++\LFtok{to}, \LFtok{join}, and \LFtok{Lean} each need one more loop,
++while the position processing \LFtok{Club} needs two more loops.
++The first three positions finish together in step~4 and predict
++\LFtok{join}, \LFtok{Lean}, and \LFtok{Club}, respectively.
++The decoder appends those three tokens in order. In step~5 the position
++processing \LFtok{Club} finishes its last loop and predicts
++\LFtok{\textbackslash n}. Algorithm~\ref{alg:loopfill} summarizes
++one loop step.
++
++% Share the host's algorithm counter when its algorithm package is loaded.
+ \ifcsname c@algorithm\endcsname\else\newcounter{algorithm}\fi
+ \par\medskip
+ \noindent\begin{minipage}{\linewidth}
+@@ -124,25 +147,26 @@
+ \hrule\smallskip
+ \textbf{Algorithm \thealgorithm.\quad LoopFill decoding}\par
+ \smallskip
+-\textbf{Start.} Make the verified prefix $x$ the root of a new draft
+-tree. Add suffix drafts from $x$ one token at a time while their path
+-scores exceed $\tau$.\par
++\textbf{Start.} Create a draft tree with verified prefix $x$ as its root
++and $s(x)=1$. Add suffix continuations one token at a time while their
++path scores exceed $\tau$.\par
+ \smallskip
+ \textbf{Repeat} for each loop step\par
+ {\leftskip=1em\relax
+ Advance every unfinished node by one loop.\par
+-\textbf{While} the root $x$ has finished $T$ loops\par
++\textbf{While} the root for $x$ has completed $T$ loops\par
+ {\leftskip=2em\relax
+-Emit its greedy token $a$ and add $a$ to the suffix tree. Stop if the
+-output is complete.\par
+-Set $x\gets xa$. If $x$ is missing from the draft tree, return to
+-\textbf{Start}.\par
+-Make $x$ the root, keep its subtree, and add suffix drafts from $x$.\par}
+-\textbf{For each} node $u$ that has just run $d_1$ or $d_2$ loops\par
++Let $a$ be the root's greedy next token. Append $a$ to the output and
++add $a$ to the suffix index. Stop if the output is complete.\par
++Set $x\gets xa$. If the tree has no node for the updated prefix $x$,
++return to \textbf{Start}.\par
++Make that node the root with $s(x)=1$. Retain its subtree and completed
++loops, recompute path scores from $x$, and add suffix drafts from $x$.\par}
++\textbf{For each} surviving node $u$ that just completed $d_1$ or $d_2$ loops\par
+ {\leftskip=2em\relax
+-Score its children and the eight tokens its shallow prediction ranks
+-highest. Keep $ua$ if $s(ua)>\tau$, and otherwise prune it with its
+-subtree.\par
++Score the existing children of $u$ and the top eight next tokens in its
++shallow prediction. Keep a candidate $ua$ only if $s(ua)>\tau$.
++Otherwise discard $ua$ and any descendants.\par
+ Add suffix drafts from each newly added child.\par}}
+ \smallskip\hrule
+ \end{minipage}\par

@@ -1,0 +1,28 @@
+2026-10-31: DONE (wfd-only), all steps exit 0 at 20:48 UTC; results in report.md. W&B synced and
+  verified 22:05 UTC (wandb-sync.json; plain `wandb sync` printed 'done' but uploaded nothing,
+  so `wandb beta sync` was used). Withdrawn-run offline records stay unsynced.
+User asked to time WFD inside our engine, then decided the other arms keep their numbers from loop-suffix-spec-wallclock-20261031; only WFD is timed now.
+
+Current run, launched 19:50 UTC (setsid nohup), chain PID 294983:
+  /mnt/disk2_from_server2/siqizhu4/lm-memory-persistent/workspace/llm-memory-editability/loop-wfd-same-engine-20261031/wfd-only/chain.sh
+  log wfd-only/chain.log; host monitor wfd-only/monitor.jsonl (CPUs 24-31,72-79)
+  GPU 6, --cpuset-cpus 24-31 --cpuset-mems 1 (same placement as the earlier batch), in sequence:
+  check-ouro, check-huginn (fp32: wfd,ar,wavefront) -> bench-ouro, bench-huginn (bf16: wavefront,
+  --repeats 2) -> sum-ouro, sum-huginn (--merge-old with the earlier batch's bench JSONL).
+  Containers loop-wfd-same-engine-20261031-wfdonly-<step>.
+fp32 checks PASSED 19:52 / 19:55 UTC: wavefront == AR; wavefront == WFD's own scheduler in tokens and
+  R calls on 6/6 per model (Ouro 417=417, Huginn 3208=3208). Timing started 19:55 UTC.
+Outputs: wfd-only/sb-chat/<model>/{check-float32,bench-bfloat16}{.jsonl,-meta.json,-summary.json},
+  bench-bfloat16-merged-summary.json; offline W&B (group loop-wfd-same-engine-20261031-wfdonly).
+Restart: records resume by question_id; remove the step's exited container first.
+Do not run other own GPU/CPU jobs on GPU 6 or CPUs 24-31/72-79 while this runs.
+
+Withdrawn run (19:15-19:46 UTC, stopped by request, kept as record only): all six arms in a variant
+  engine (eager flush + ancestor-only tree attention), Ouro GPU 6 / Huginn GPU 5 in parallel.
+  fp32 checks had passed; partial bench records in <root>/loop-wfd-same-engine-20261031/sb-chat/
+  (Huginn 5, Ouro 1 question); containers ...-check-*, ...-bench-* (stopped). Not used for results.
+
+Code: src/llm_memory_editability/loop_tree_decode.py (earlier engine + shared_coda, flush_every;
+  both off by default), scripts/loop_suffix_spec_wallclock.py (wavefront arm, wfd comparison,
+  user-based monitor flags, --merge-old), tests/test_loop_tree_decode.py (28 CPU tests incl. related
+  files passed). Variant-engine code kept at <root>/loop-wfd-same-engine-20261031/withdrawn-engine/loop_tree_decode.py.

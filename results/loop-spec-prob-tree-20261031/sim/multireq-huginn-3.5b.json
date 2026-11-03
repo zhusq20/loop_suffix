@@ -1,0 +1,396 @@
+{
+ "meta": {
+  "model": "huginn-3.5b",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.9.0+cu128"
+ },
+ "records": [
+  {
+   "prefix": 256,
+   "rows": 1,
+   "layout": "one request",
+   "requests": 1,
+   "per": 1,
+   "ms_median": 3.195779863744974,
+   "ms_mean": 3.2077008858323097
+  },
+  {
+   "prefix": 256,
+   "rows": 4,
+   "layout": "one request",
+   "requests": 1,
+   "per": 4,
+   "ms_median": 3.38309770449996,
+   "ms_mean": 3.3815788105130196
+  },
+  {
+   "prefix": 256,
+   "rows": 4,
+   "layout": "1 row per request",
+   "requests": 4,
+   "per": 1,
+   "ms_median": 3.396842163056135,
+   "ms_mean": 3.3988121431320906
+  },
+  {
+   "prefix": 256,
+   "rows": 16,
+   "layout": "one request",
+   "requests": 1,
+   "per": 16,
+   "ms_median": 3.552985144779086,
+   "ms_mean": 3.5578417126089334
+  },
+  {
+   "prefix": 256,
+   "rows": 16,
+   "layout": "8 rows per request",
+   "requests": 2,
+   "per": 8,
+   "ms_median": 3.552214475348592,
+   "ms_mean": 3.56869800016284
+  },
+  {
+   "prefix": 256,
+   "rows": 16,
+   "layout": "1 row per request",
+   "requests": 16,
+   "per": 1,
+   "ms_median": 3.7355972453951836,
+   "ms_mean": 3.7394737359136343
+  },
+  {
+   "prefix": 256,
+   "rows": 64,
+   "layout": "one request",
+   "requests": 1,
+   "per": 64,
+   "ms_median": 3.974693128839135,
+   "ms_mean": 3.97960904520005
+  },
+  {
+   "prefix": 256,
+   "rows": 64,
+   "layout": "8 rows per request",
+   "requests": 8,
+   "per": 8,
+   "ms_median": 4.047017078846693,
+   "ms_mean": 4.054596251808107
+  },
+  {
+   "prefix": 256,
+   "rows": 64,
+   "layout": "1 row per request",
+   "requests": 64,
+   "per": 1,
+   "ms_median": 4.950162954628468,
+   "ms_mean": 4.973560804501176
+  },
+  {
+   "prefix": 256,
+   "rows": 256,
+   "layout": "one request",
+   "requests": 1,
+   "per": 256,
+   "ms_median": 5.191594362258911,
+   "ms_mean": 5.35658854059875
+  },
+  {
+   "prefix": 256,
+   "rows": 256,
+   "layout": "8 rows per request",
+   "requests": 32,
+   "per": 8,
+   "ms_median": 6.515703862532973,
+   "ms_mean": 6.555528310127556
+  },
+  {
+   "prefix": 256,
+   "rows": 256,
+   "layout": "1 row per request",
+   "requests": 256,
+   "per": 1,
+   "ms_median": 11.135941371321678,
+   "ms_mean": 11.134490626864135
+  },
+  {
+   "prefix": 256,
+   "rows": 1024,
+   "layout": "one request",
+   "requests": 1,
+   "per": 1024,
+   "ms_median": 18.782897386699915,
+   "ms_mean": 18.776954826898873
+  },
+  {
+   "prefix": 256,
+   "rows": 1024,
+   "layout": "8 rows per request",
+   "requests": 128,
+   "per": 8,
+   "ms_median": 20.916778361424804,
+   "ms_mean": 21.01870086044073
+  },
+  {
+   "prefix": 256,
+   "rows": 1024,
+   "layout": "1 row per request",
+   "requests": 1024,
+   "per": 1,
+   "ms_median": 41.067410027608275,
+   "ms_mean": 41.2032229360193
+  },
+  {
+   "prefix": 1024,
+   "rows": 1,
+   "layout": "one request",
+   "requests": 1,
+   "per": 1,
+   "ms_median": 3.2475495245307684,
+   "ms_mean": 3.2493889098986983
+  },
+  {
+   "prefix": 1024,
+   "rows": 4,
+   "layout": "one request",
+   "requests": 1,
+   "per": 4,
+   "ms_median": 3.429621458053589,
+   "ms_mean": 3.4430949250236154
+  },
+  {
+   "prefix": 1024,
+   "rows": 4,
+   "layout": "1 row per request",
+   "requests": 4,
+   "per": 1,
+   "ms_median": 3.5289451479911804,
+   "ms_mean": 3.5318284295499325
+  },
+  {
+   "prefix": 1024,
+   "rows": 16,
+   "layout": "one request",
+   "requests": 1,
+   "per": 16,
+   "ms_median": 3.6129532381892204,
+   "ms_mean": 3.618101100437343
+  },
+  {
+   "prefix": 1024,
+   "rows": 16,
+   "layout": "8 rows per request",
+   "requests": 2,
+   "per": 8,
+   "ms_median": 3.6202433984726667,
+   "ms_mean": 3.6214207531884313
+  },
+  {
+   "prefix": 1024,
+   "rows": 16,
+   "layout": "1 row per request",
+   "requests": 16,
+   "per": 1,
+   "ms_median": 4.559773486107588,
+   "ms_mean": 4.562945873476565
+  },
+  {
+   "prefix": 1024,
+   "rows": 64,
+   "layout": "one request",
+   "requests": 1,
+   "per": 64,
+   "ms_median": 3.9774077013134956,
+   "ms_mean": 3.9972851518541574
+  },
+  {
+   "prefix": 1024,
+   "rows": 64,
+   "layout": "8 rows per request",
+   "requests": 8,
+   "per": 8,
+   "ms_median": 4.428456071764231,
+   "ms_mean": 4.436229798011482
+  },
+  {
+   "prefix": 1024,
+   "rows": 64,
+   "layout": "1 row per request",
+   "requests": 64,
+   "per": 1,
+   "ms_median": 8.664324879646301,
+   "ms_mean": 8.657438913360238
+  },
+  {
+   "prefix": 1024,
+   "rows": 256,
+   "layout": "one request",
+   "requests": 1,
+   "per": 256,
+   "ms_median": 5.268337670713663,
+   "ms_mean": 5.2678135223686695
+  },
+  {
+   "prefix": 1024,
+   "rows": 256,
+   "layout": "8 rows per request",
+   "requests": 32,
+   "per": 8,
+   "ms_median": 8.351864758878946,
+   "ms_mean": 8.378902217373252
+  },
+  {
+   "prefix": 1024,
+   "rows": 256,
+   "layout": "1 row per request",
+   "requests": 256,
+   "per": 1,
+   "ms_median": 27.540676528587937,
+   "ms_mean": 27.627018210478127
+  },
+  {
+   "prefix": 1024,
+   "rows": 1024,
+   "layout": "one request",
+   "requests": 1,
+   "per": 1024,
+   "ms_median": 17.90203107520938,
+   "ms_mean": 17.77235264889896
+  },
+  {
+   "prefix": 1024,
+   "rows": 1024,
+   "layout": "8 rows per request",
+   "requests": 128,
+   "per": 8,
+   "ms_median": 25.781693402677774,
+   "ms_mean": 25.912748905830085
+  },
+  {
+   "prefix": 3584,
+   "rows": 1,
+   "layout": "one request",
+   "requests": 1,
+   "per": 1,
+   "ms_median": 3.473961027339101,
+   "ms_mean": 3.477478725835681
+  },
+  {
+   "prefix": 3584,
+   "rows": 4,
+   "layout": "one request",
+   "requests": 1,
+   "per": 4,
+   "ms_median": 3.656842978671193,
+   "ms_mean": 3.672660863958299
+  },
+  {
+   "prefix": 3584,
+   "rows": 4,
+   "layout": "1 row per request",
+   "requests": 4,
+   "per": 1,
+   "ms_median": 4.107346059754491,
+   "ms_mean": 4.205468506552279
+  },
+  {
+   "prefix": 3584,
+   "rows": 16,
+   "layout": "one request",
+   "requests": 1,
+   "per": 16,
+   "ms_median": 3.8506407290697098,
+   "ms_mean": 3.852223511785269
+  },
+  {
+   "prefix": 3584,
+   "rows": 16,
+   "layout": "8 rows per request",
+   "requests": 2,
+   "per": 8,
+   "ms_median": 3.8808591198176146,
+   "ms_mean": 3.8830559235066175
+  },
+  {
+   "prefix": 3584,
+   "rows": 16,
+   "layout": "1 row per request",
+   "requests": 16,
+   "per": 1,
+   "ms_median": 7.211108226329088,
+   "ms_mean": 7.258339039981365
+  },
+  {
+   "prefix": 3584,
+   "rows": 64,
+   "layout": "one request",
+   "requests": 1,
+   "per": 64,
+   "ms_median": 4.263793351128697,
+   "ms_mean": 4.276587790809572
+  },
+  {
+   "prefix": 3584,
+   "rows": 64,
+   "layout": "8 rows per request",
+   "requests": 8,
+   "per": 8,
+   "ms_median": 6.395544856786728,
+   "ms_mean": 6.43240069039166
+  },
+  {
+   "prefix": 3584,
+   "rows": 64,
+   "layout": "1 row per request",
+   "requests": 64,
+   "per": 1,
+   "ms_median": 20.826810970902443,
+   "ms_mean": 20.873161708004773
+  },
+  {
+   "prefix": 3584,
+   "rows": 256,
+   "layout": "one request",
+   "requests": 1,
+   "per": 256,
+   "ms_median": 5.956137552857399,
+   "ms_mean": 6.061918567866087
+  },
+  {
+   "prefix": 3584,
+   "rows": 256,
+   "layout": "8 rows per request",
+   "requests": 32,
+   "per": 8,
+   "ms_median": 13.598933350294828,
+   "ms_mean": 13.686839281581342
+  },
+  {
+   "prefix": 3584,
+   "rows": 256,
+   "layout": "1 row per request",
+   "requests": 256,
+   "per": 1,
+   "ms_median": 81.30553900264204,
+   "ms_mean": 81.51619529817253
+  },
+  {
+   "prefix": 3584,
+   "rows": 1024,
+   "layout": "one request",
+   "requests": 1,
+   "per": 1024,
+   "ms_median": 18.49837671034038,
+   "ms_mean": 18.69925521314144
+  },
+  {
+   "prefix": 3584,
+   "rows": 1024,
+   "layout": "8 rows per request",
+   "requests": 128,
+   "per": 8,
+   "ms_median": 49.978821305558085,
+   "ms_mean": 49.81789197772741
+  }
+ ]
+}
