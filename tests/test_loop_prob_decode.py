@@ -166,3 +166,22 @@ def test_huginn_prob_decoder_matches_hf_greedy_and_replay():
             lambda: HuginnLoop(model, T, 256, 4096, 0, init_len, extra_depths=(deep,)),
             runner, T, d, deep,
         )  # fmt: skip
+
+
+def test_observer_preserves_decode_and_labels_only_verified_prefixes():
+    prompt = [1, 2, 3, 4, 5, 6, 1, 2]
+    cfg = ProbConfig('audit', 4, 1, (1, 2), tau=.01, joint=True, prune=True,
+                     suffix_calibration='insitu')
+    events = []
+    plain, stats = prob_tree_decode(ProbFakeLoop(4, 1), prompt, cfg, calibration((1, 2)),
+                                   40, set(), ProbFakeSuffix(), 0)
+    audited, other = prob_tree_decode(ProbFakeLoop(4, 1), prompt, cfg, calibration((1, 2)),
+                                     40, set(), ProbFakeSuffix(), 0,
+                                     observer=lambda event, **data: events.append((event, data)))
+    assert audited == plain
+    assert stats['calls'] == other['calls'] and stats['rows'] == other['rows']
+    assert any(event == 'score' for event, _ in events)
+    verified = [data for event, data in events if event == 'verify']
+    assert verified
+    for data in verified:
+        assert data['gold'] == audited[data['output_position']]

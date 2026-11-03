@@ -15,3 +15,5 @@ dist/
 *.safetensors
 *.npy
 *.npz
+# Keep new experiment outputs local; existing tracked results remain versioned.
+/results/

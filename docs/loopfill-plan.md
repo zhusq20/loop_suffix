@@ -1,9 +1,12 @@
 # LoopFill 推理解码实验规划
 
+**当前权威计划：[LoopFill ICML 投稿实验定稿](loopfill-icml-experiments.md)**。已确定 E00–E09 的必做矩阵、数据划分、官方基线、质量/泛化验证、消融、统计与交付标准；现有 [机器可读矩阵](../results/loopfill-icml-20261103/experiment-matrix.json) 仍对应 v3 阈值版，预算版机器协议待实现后登记。本文保留文献依据和历史候选，早先“以后再做”的项目若在新总计划中标为必做，以新总计划为准。
+
 摘自原仓库 `docs/loop-roadmap.md` §6（2026-11-02 快照），链接已改为本仓库路径。
 
+**2026-11-04 v4 已确定：每请求未验证草稿节点预算 N 为主方案，raw 分数用于排序。** 规则见 [节点预算定稿](loopfill-raw-tree.md)，预算版尚待实现。下文保留历史方案与文献依据；旧阈值、1024 槽容量及 320 流评分结果不代表预算版配置或证据。正式安排以 v4 总计划为准。
 
-**要回答的问题。** 同一棵草稿树允许后缀匹配一次启动多词，也允许模型在早期循环读出后补上缺词。单请求能省多少实际时间？多请求争用一张卡时，多算的候选行从什么负载起抵消这项收益？以下是建议的推理比较。现有模型、校准表和工作点已冻结。[方法](../paper/method-loopfill.tex) · [已有单请求计时](loopfill-results.md#loopfill-engine-e2e)
+以下保留历史设计讨论和文献依据，包括旧四表方案、旧阈值与连续批候选；不代表当前执行顺序。全部480题仍用于正式evaluation，历史设计参与需披露。
 
 ### 主文消融
 
@@ -28,11 +31,11 @@
 | MagicDec | 主结果用基于 GPT-Fast、FlashInfer 的自建后端，固定批大小和长上下文。论文 §5.1 的 PG-19 实验描述为 20 批，每条贪心生成 96 个 token | 公开 StreamingLLM 自投机脚本在 prefill 后同步并开始计时，按实际生成 token 总数除以耗时。该脚本最多读 10 批，最长一行达到其生成阈值或出现批级 EOS 条件时整批结束。复用结果时须区分这份脚本和论文的预算。[论文](https://openreview.net/pdf?id=CS2JWaziYr) · [测速脚本](https://raw.githubusercontent.com/Infini-AI-Lab/MagicDec/main/tests/StreamingLLM/selfspec_benchmark.py) |
 | SpecInfer | 在 FlexFlow 上自建按迭代调度的服务。每次解码后返回已经完成的请求，允许新请求加入仍在运行的批 | 图 7 扫并发请求数 1、2、4、8、16，每题最多 128 个新词，比较每输出词延迟。这是采用自建运行时做连续批处理的实例。[论文 §5–6](https://arxiv.org/pdf/2305.09781) |
 
-SuffixDecoding 的 Spec-Bench 对照使用修改过的 Transformers 脚本，单 GPU、批大小 1。它在 SWE-Bench 的 8 任务并发使用 vLLM。LoopAhead 的本地 PyTorch 评测每张卡同时一个请求，计时从 prefill 后开始。LoopSpec 的原评测使用 SGLang，其附录所报的有效批大小指活跃草稿分支。[SuffixDecoding 附录 A.1](https://proceedings.neurips.cc/paper_files/paper/2025/file/b7aea253ab34a773967f1e4cdea9e4fb-Paper-Conference.pdf) · [LoopAhead 附录 A.5](https://arxiv.org/html/2610.21594v1) · [LoopSpec §6 与附录 D](https://arxiv.org/html/2609.17184v1)
+SuffixDecoding 的 Spec-Bench 对照使用修改过的 Transformers 脚本，单 GPU、批大小 1。其附录 A.1 的 SWE-Bench 配置使用 vLLM、TP=4、最多 16 个任务 worker；任务并发不能直接当作固定请求 batch。LoopAhead 的本地 PyTorch 评测每张卡同时一个请求，计时从 prefill 后开始。LoopSpec 的原评测使用 SGLang，其附录所报的有效批大小指活跃草稿分支。[SuffixDecoding 附录 A.1](https://proceedings.neurips.cc/paper_files/paper/2025/file/b7aea253ab34a773967f1e4cdea9e4fb-Paper-Conference.pdf) · [LoopAhead 附录 A.5](https://arxiv.org/html/2610.21594v1) · [LoopSpec §6 与附录 D](https://arxiv.org/html/2609.17184v1)
 
-### 端到端比较与顺序
+### 旧版端到端候选（已被上述固定 batch 协议替代）
 
-**新增主实验用连续批处理跑完 Spec-Bench 的 480 道首轮请求，已有单请求结果保留为低负载参照。** E2E 时间覆盖请求进入引擎、提示预填充、草稿与核对，直到返回最后一个 token。并发 N 表示同时处理的独立请求数。每个请求可以有多个草稿节点。[已有单请求计时与数据覆盖](loopfill-results.md#loopfill-engine-e2e)
+以下为此前连续批处理方案，留作后续研究记录，当前不执行。当前主图使用固定批，并在同一机器、相同历史协议下重跑 B=1；旧 S4 只能单列。E2E 时间覆盖请求进入引擎、提示预填充、草稿与核对，直到返回最后一个 token。并发 N 表示同时处理的独立请求数。每个请求可以有多个草稿节点。[已有单请求计时与数据覆盖](loopfill-results.md#loopfill-engine-e2e)
 
 1. **先跑通固定批，再加入连续补位。** 两种调度共享同一条计算路径。每次循环把不同请求的活跃位置合入同一次块计算，各题独立维护 KV、草稿树、接受长度、回退和 EOS。固定批同时入场，短题结束后空槽，最后一题结束再开下一批。连续批在槽空时补入下一题。两者都用真实提示、真实模型核对和自然停止。先以并发 1 对接原实现，再以并发 2 跑至少三道长短不同的开发题，核对补入、缓存隔离及 FP32 逐词输出。已有多请求微基准只执行一次块调用。[现有单请求解码器](../src/llm_memory_editability/loop_prob_decode.py) · [块调用微基准](../scripts/loop_prob_tree_multireq.py) · [按迭代调度的设计](https://www.usenix.org/conference/osdi22/presentation/yu)
 

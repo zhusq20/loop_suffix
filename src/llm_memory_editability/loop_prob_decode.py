@@ -23,6 +23,7 @@ from dataclasses import dataclass, field
 import numpy as np
 import torch
 
+from llm_memory_editability.loop_decode_steps import ModelCall, run_single
 from llm_memory_editability.loop_prob_tree import ABSENT, Calibration, ProbConfig, _edge_probs
 from llm_memory_editability.loop_tree_decode import DraftTree
 
@@ -38,7 +39,12 @@ class _Info:
 
 
 @torch.no_grad()
-def prob_tree_decode(
+def prob_tree_decode(backbone, *args, **kwargs):
+    """Decode one request using the same state machine as the batch scheduler."""
+    return run_single(backbone, prob_tree_decode_steps(backbone, *args, **kwargs))
+
+
+def prob_tree_decode_steps(
     backbone,
     prompt,
     cfg: ProbConfig,
@@ -50,10 +56,13 @@ def prob_tree_decode(
     *,
     max_nodes: int | None = None,
     flush_every: int = 16,
+    observer=None,
 ) -> tuple[list[int], dict]:
     """Greedy decoding of one request; returns the output and per-request statistics."""
     if cfg.legacy or cfg.row_cap is not None or cfg.max_draft is not None:
         raise NotImplementedError("legacy, row caps and K caps run in loop_tree_decode")
+    if not len(prompt) or max_new_tokens < 1:
+        raise ValueError("prompt must be nonempty and max_new_tokens must be positive")
     T, d = cfg.depth_total, cfg.draft_depth
     depths = sorted(cfg.readout_depths)
     use_suffix = cfg.use_suffix and cache is not None
@@ -147,6 +156,10 @@ def prob_tree_decode(
                 e = calib.suffix_prob_insitu(edge[k], draft.match_len, rival, lead)
             else:
                 e = calib.suffix_prob(edge[k], draft.match_len)
+            if observer is not None:
+                observer("score", parent=base.idx, token=tok, probability=e,
+                         source="insitu" if cfg.suffix_calibration == "insitu" else "suffix",
+                         features=[float(edge[k]), int(draft.match_len), bool(rival), int(lead)])
             ok = info[base.idx].p * e > tau
             created.append(add(tok, base, tick, "suffix", e, True) if ok else None)
 
@@ -159,8 +172,15 @@ def prob_tree_decode(
 
         def edge_prob(tok, k, q, flag):
             if joint:
-                return calib.joint_prob(r, rank_d.get(tok, ABSENT), k, q, flag)
-            return calib.shallow_prob(r, k, q, flag)
+                e = calib.joint_prob(r, rank_d.get(tok, ABSENT), k, q, flag)
+                features = [r, rank_d.get(tok, ABSENT), k, float(q), bool(flag)]
+            else:
+                e = calib.shallow_prob(r, k, q, flag)
+                features = [r, k, float(q), bool(flag)]
+            if observer is not None:
+                observer("score", parent=n.idx, token=int(tok), probability=e,
+                         source="joint" if joint else "shallow", features=features)
+            return e
 
         seen = set()
         for k, (tok, q) in enumerate(zip(ids, probs, strict=True)):
@@ -188,11 +208,16 @@ def prob_tree_decode(
                 e = calib.shallow_prob(r, ABSENT, 0.0, True)
             else:
                 continue
+            if observer is not None:
+                features = ([r, rank_d.get(c.token, ABSENT), ABSENT, 0.0, bool(info[j].suffix)]
+                            if joint else [r, ABSENT, 0.0, True])
+                observer("score", parent=n.idx, token=int(c.token), probability=e,
+                         source="joint" if joint else "shallow", features=features)
             rescore(c, e, deep)
 
-    backbone.synchronize()
+    yield ModelCall("synchronize")
     t0 = time.perf_counter()
-    out = [backbone.prefill([int(t) for t in prompt], d)]
+    out = [(yield ModelCall("prefill", ([int(t) for t in prompt], d)))]
     t1 = time.perf_counter()
     ctx = [int(t) for t in prompt] + out
     if use_suffix:
@@ -201,26 +226,28 @@ def prob_tree_decode(
 
     while len(out) < max_new_tokens and out[-1] not in stop:
         tree.reset(backbone.length)
+        if observer is not None:
+            observer("reset", output_position=len(out))
         info.clear()
         root = tree.add(out[-1], None, 0, "root")
         info[root.idx] = _Info(1.0, 1.0, "root", False, locked=True)
         frontier = [root]  # last accepted node; a list so the closures see updates
         if use_suffix:
             place_suffix(root, 0)
-        backbone.embed(tree, tree.take_fresh())
+        yield ModelCall("embed", (tree, tree.take_fresh()))
         chain, flushed, new, tick = [root], 0, [], 0
         while True:
             tick += 1
             nodes = tree.nodes[tree.lo :] if tree.lo else tree.nodes
             live = sorted((n for n in nodes if n.alive and n.step < T), key=lambda n: n.step)
-            backbone.advance(tree, live)
+            yield ModelCall("advance", (tree, live))
             for n in live:
                 n.step += 1
             stats["rows"] += len(live)
             stats["max_rows"] = max(stats["max_rows"], len(live))
             groups = [(r, [n for n in live if n.step == r]) for r in depths]
             fu = [n for n in live if n.step == T]
-            reads, fu_top = backbone.readout_top(tree, groups, fu, 8)
+            reads, fu_top = (yield ModelCall("readout_top", (tree, groups, fu, 8)))
             stats["readout_rows"] += sum(len(g) for _, g in groups) + len(fu)
             for (r, g), got in zip(groups, reads, strict=True):
                 for n, top in zip(g, got, strict=True):
@@ -231,6 +258,9 @@ def prob_tree_decode(
             done = False
             while frontier[0].full_top is not None:
                 gold = frontier[0].full_top
+                if observer is not None:
+                    observer("verify", parent=frontier[0].idx, gold=int(gold),
+                             output_position=len(out) + len(new))
                 new.append(gold)
                 if eager:
                     cache.add_active_response(req_id, np.asarray([gold], dtype=np.int32))
@@ -267,7 +297,7 @@ def prob_tree_decode(
                     readout(n, r, tick)
             fresh = tree.take_fresh()
             if fresh:
-                backbone.embed(tree, fresh)
+                yield ModelCall("embed", (tree, fresh))
 
         backbone.commit(tree, chain[flushed:])
         out += new
@@ -279,7 +309,7 @@ def prob_tree_decode(
         stats["tokens"] += len(new)
         stats["nodes"] += len(tree.nodes)
 
-    backbone.synchronize()
+    yield ModelCall("synchronize")
     t2 = time.perf_counter()
     if use_suffix:
         cache.stop_request(req_id)

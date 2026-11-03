@@ -1,0 +1,138 @@
+{
+  "version": "full480-continuous-batch-sweep-v2",
+  "status": "eight_gpu_continuous480_sweep",
+  "authority": "docs/loopfill-online-suffix-control.md",
+  "questions": "results/loop-spec-reuse-20261030/raw/data/spec_bench_question.jsonl",
+  "questions_sha256": "4b6d33e79484f9841c487ee87d1cf6aa8c6066f61d5d482ff09e5a007fafdf04",
+  "expected_unique_requests": 480,
+  "turn": 0,
+  "calibration": null,
+  "selection_policy": "a_priori_global_no_evaluation_tuning",
+  "models": {
+    "ouro-2.6b": {
+      "depth_total": 4,
+      "readout_depths": [
+        1,
+        2
+      ]
+    },
+    "huginn-3.5b": {
+      "depth_total": 32,
+      "readout_depths": [
+        4,
+        8
+      ]
+    }
+  },
+  "arms": [
+    "ar",
+    "wavefront",
+    "loopspec-dual",
+    "budget-suffix",
+    "budget-raw",
+    "budget-online"
+  ],
+  "primary_comparison": [
+    "budget-online",
+    "budget-raw"
+  ],
+  "tree_policy": "node_budget",
+  "draft_node_budget": 64,
+  "controller": {
+    "scoring": "online_suffix_i",
+    "scope": "request",
+    "update_event": "verified_parent",
+    "c_initial": 1.0,
+    "eta": 0.1,
+    "c_min": 0.25,
+    "c_max": 2.0
+  },
+  "candidate_generation": {
+    "model_top_m": 8,
+    "suffix_room": 64,
+    "suffix_min_prob": 0.001,
+    "spec_factor": 1.0
+  },
+  "batch_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "order_seeds": [
+    0
+  ],
+  "repeat_ids": [
+    0
+  ],
+  "measured_streams": 108,
+  "measured_request_generations": 51840,
+  "prompt_format": "chat",
+  "max_new_tokens": 1024,
+  "dtype": "bfloat16",
+  "check_serial_ar": true,
+  "physical_max_nodes": 1152,
+  "max_seq_initial": 2816,
+  "max_seq_status": "full480_input_audit_passed_no_truncation",
+  "history": "cold_start_completion_only",
+  "trace_controller_in_timed_main": false,
+  "warmup_tokens": 8,
+  "known_limitation": "Full-size Ouro BF16 divergence is unresolved; no unconditional losslessness claim.",
+  "buffer_policy": "per-arm",
+  "physical_nodes_by_arm": {
+    "ar": 1,
+    "wavefront": 1152,
+    "loopspec-dual": {
+      "ouro-2.6b": 15,
+      "huginn-3.5b": 109
+    },
+    "budget-suffix": 65,
+    "budget-raw": 65,
+    "budget-online": 65
+  },
+  "loopspec": {
+    "implementation": "same_engine_dual_proposal",
+    "ouro_depths": [
+      1,
+      2
+    ],
+    "huginn_depths": [
+      4,
+      8
+    ],
+    "reference_commit": "41aa710ed7c9ce908cffa03597be5d1df19d7b56",
+    "not_official_sglang_timing": true
+  },
+  "batch_probe": {
+    "enabled": false,
+    "reason": "cancelled_by_user"
+  },
+  "execution_protocol": "results/loopfill-continuous480-20261104/protocol.json",
+  "failure_policy": "Each model/batch/arm independently attempts full480; actual CUDA OOM recorded; no batch reduction or pruning.",
+  "resources": {
+    "gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "compute_mode": "EXCLUSIVE_PROCESS",
+    "graphics_clock_mhz": 1980,
+    "memory_application_clock_mhz": 3201,
+    "power_limit_w": 700,
+    "cpu_cores_per_lane": 4,
+    "torch_threads": 1,
+    "pairing": "All six arms of each model/batch share a fixed GPU UUID."
+  },
+  "schedule": "continuous",
+  "scheduling_policy": "FCFS finite queue of 480; B is maximum active requests; refill freed slots each iteration; sequential prefill; completed-output-only suffix history"
+}

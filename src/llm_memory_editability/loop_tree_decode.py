@@ -51,6 +51,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from llm_memory_editability.loop_decode_steps import ModelCall, run_single
 from llm_memory_editability.loop_suffix_spec import ArmConfig, SuffixCache
 
 
@@ -154,7 +155,12 @@ class DraftTree:
 
 
 @torch.no_grad()
-def tree_decode(
+def tree_decode(backbone, *args, **kwargs):
+    """Decode one request using the same state machine as the batch scheduler."""
+    return run_single(backbone, tree_decode_steps(backbone, *args, **kwargs))
+
+
+def tree_decode_steps(
     backbone,
     prompt,
     arm: ArmConfig,
@@ -177,6 +183,8 @@ def tree_decode(
     """
     if fill_scope not in ("all", "path"):
         raise ValueError(fill_scope)
+    if not len(prompt) or max_new_tokens < 1:
+        raise ValueError("prompt must be nonempty and max_new_tokens must be positive")
     T, d, K = arm.depth_total, arm.draft_depth, arm.max_draft
     if arm.use_fill and d >= T:
         raise ValueError("draft depth must be below full depth")
@@ -202,9 +210,11 @@ def tree_decode(
         stats["speculate_calls"] += 1
         return draft
 
-    backbone.synchronize()
+    yield ModelCall("synchronize")
     t0 = time.perf_counter()
-    out = [backbone.prefill([int(t) for t in prompt], d if shallow and not shared_coda else None)]
+    out = [(yield ModelCall("prefill", (
+        [int(t) for t in prompt], d if shallow and not shared_coda else None
+    )))]
     t1 = time.perf_counter()
     ctx = [int(t) for t in prompt] + out
     if use_suffix:
@@ -216,20 +226,20 @@ def tree_decode(
         root = tree.add(out[-1], None, 0, "root")
         if use_suffix:
             tree.attach(root, speculate(ctx, K), 0)
-        backbone.embed(tree, tree.take_fresh())
+        yield ModelCall("embed", (tree, tree.take_fresh()))
         frontier, chain, flushed, new, tick = root, [root], 0, [], 0
         while True:
             tick += 1
             nodes = tree.nodes[tree.lo :] if tree.lo else tree.nodes
             live = sorted((n for n in nodes if n.alive and n.step < T), key=lambda n: n.step)
-            backbone.advance(tree, live)
+            yield ModelCall("advance", (tree, live))
             for n in live:
                 n.step += 1
             stats["rows"] += len(live)
             stats["max_rows"] = max(stats["max_rows"], len(live))
             sh = [n for n in live if n.step == d] if shallow else []
             fu = [n for n in live if n.step == T]
-            sh_top, fu_top = backbone.readout(tree, sh, fu, arm.prune_top or 1, shared_coda)
+            sh_top, fu_top = (yield ModelCall("readout", (tree, sh, fu, arm.prune_top or 1, shared_coda)))
             stats["readout_rows"] += len(sh) + len(fu)
             for n, top in zip(sh, sh_top, strict=True):
                 n.shallow_top = top[0]
@@ -275,7 +285,7 @@ def tree_decode(
                         tree.kill(tree.nodes[n.children.pop(tok)])
             fresh = tree.take_fresh()
             if fresh:
-                backbone.embed(tree, fresh)
+                yield ModelCall("embed", (tree, fresh))
 
         backbone.commit(tree, chain[flushed:])
         out += new
@@ -287,7 +297,7 @@ def tree_decode(
         stats["tokens"] += len(new)
         stats["nodes"] += len(tree.nodes)
 
-    backbone.synchronize()
+    yield ModelCall("synchronize")
     t2 = time.perf_counter()
     if use_suffix:
         cache.stop_request(req_id)
@@ -307,11 +317,14 @@ class LoopKV:
     slot, so all slots share one length. TK[slot, node] holds draft node `node`.
     """
 
-    def __init__(self, n_slots, max_seq, max_nodes, heads, head_dim, dtype, device):
-        self.K = torch.zeros(n_slots, max_seq, heads, head_dim, dtype=dtype, device=device)
-        self.V = torch.zeros_like(self.K)
-        self.TK = torch.zeros(n_slots, max_nodes, heads, head_dim, dtype=dtype, device=device)
-        self.TV = torch.zeros_like(self.TK)
+    def __init__(self, n_slots, max_seq, max_nodes, heads, head_dim, dtype, device, storage=None):
+        if storage is None:
+            self.K = torch.zeros(n_slots, max_seq, heads, head_dim, dtype=dtype, device=device)
+            self.V = torch.zeros_like(self.K)
+            self.TK = torch.zeros(n_slots, max_nodes, heads, head_dim, dtype=dtype, device=device)
+            self.TV = torch.zeros_like(self.TK)
+        else:
+            self.K, self.V, self.TK, self.TV = storage
         self.max_seq = max_seq
         self.length = 0
         self.fast = device.type == "cuda" and dtype in (torch.bfloat16, torch.float16)
@@ -551,7 +564,7 @@ class OuroLoop(_Backbone):
     Slot of loop step s, layer l: s * n_layers + l (Ouro's own cache index).
     """
 
-    def __init__(self, causal_lm, depth_total: int, max_seq: int, max_nodes: int):
+    def __init__(self, causal_lm, depth_total: int, max_seq: int, max_nodes: int, kv_factory=None):
         self.lm = causal_lm
         self.inner = causal_lm.model
         cfg = causal_lm.config
@@ -560,7 +573,7 @@ class OuroLoop(_Backbone):
         self.T = depth_total
         p = next(causal_lm.parameters())
         head_dim = getattr(cfg, "head_dim", cfg.hidden_size // cfg.num_attention_heads)
-        self.kv = LoopKV(
+        self.kv = (kv_factory or LoopKV)(
             depth_total * self.n_layers, max_seq, max_nodes, cfg.num_key_value_heads, head_dim,
             p.dtype, p.device,
         )  # fmt: skip
@@ -622,7 +635,8 @@ class OuroLoop(_Backbone):
 
     def readout_top(self, tree, groups, full, m):
         """groups: [(depth, nodes)]. Per group: (ids, probs) of the top-m per node; and the
-        full-depth argmax per node of `full`. Ouro reads every depth through lm_head."""
+        full-depth argmax per node of `full`. m=0 returns grouped argmax IDs only.
+        Ouro reads every depth through lm_head."""
         sizes = [len(g) for _, g in groups]
         nodes = [n for _, g in groups for n in g] + full
         if not nodes:
@@ -630,7 +644,8 @@ class OuroLoop(_Backbone):
         idx = self.kv.upload(np.array([n.idx for n in nodes]))
         logits = self.lm.lm_head(self.hidden[idx]).float()
         k = sum(sizes)
-        return _split(_top_probs(logits[:k], m), sizes), logits[k:].argmax(-1).tolist()
+        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m)
+        return _split(reads, sizes), logits[k:].argmax(-1).tolist()
 
 
 def _rotate_half(x):
@@ -649,7 +664,8 @@ class HuginnLoop(_Backbone):
     """
 
     def __init__(
-        self, model, depth_total, max_seq, max_nodes, seed: int, init_len: int, extra_depths=()
+        self, model, depth_total, max_seq, max_nodes, seed: int, init_len: int, extra_depths=(),
+        kv_factory=None,
     ):
         self.model = model
         tr = model.transformer
@@ -668,7 +684,7 @@ class HuginnLoop(_Backbone):
             r: self.coda_shallow + len(self.coda) * (j + 1) for j, r in enumerate(extra_depths)
         }
         n_slots = self.coda_shallow + len(self.coda) * (1 + len(self.coda_extra))
-        self.kv = LoopKV(n_slots, max_seq, max_nodes, heads, cfg.n_embd // heads, p.dtype, p.device)
+        self.kv = (kv_factory or LoopKV)(n_slots, max_seq, max_nodes, heads, cfg.n_embd // heads, p.dtype, p.device)
         if max_seq > model.freqs_cis.shape[1]:
             raise ValueError(f"max_seq {max_seq} beyond the RoPE table {model.freqs_cis.shape[1]}")
         self.rope = sys.modules[type(model).__module__].apply_rotary_emb_complex_like
@@ -795,4 +811,5 @@ class HuginnLoop(_Backbone):
         order = self.kv.upload(np.array([at[n.idx] for n in nodes]))
         logits = logits[order]
         k = sum(sizes)
-        return _split(_top_probs(logits[:k], m), sizes), logits[k:].argmax(-1).tolist()
+        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m)
+        return _split(reads, sizes), logits[k:].argmax(-1).tolist()

@@ -5,11 +5,13 @@ LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练�
 - **后缀树匹配**（同 SuffixDecoding）：从提示、已确认输出和历史请求中检索续写；
 - **早期循环读出**（同 LoopSpec / WFD）：位置在跑完全部 T 轮之前，用第 d 轮的读出先提出下一个词。
 
-两种来源可以互相接续，并按校准得到的“与全深度贪心一致”概率给路径打分，路径分数低于阈值 τ 的节点被剪掉。只有已验证前缀上的全深度预测决定实际输出（FP32 下与贪心逐词一致；BF16 下因数值误差部分题输出不同，见结果摘要）。模型为 Ouro-2.6B（T=4, d=1）与 Huginn-3.5B（T=32, d=4），基准为 Spec-Bench。
+两种来源可以互相接续。v4 按**每请求未接受草稿节点预算 N**控制树规模，按路径分数排序并支持满额替换。已实现 `budget-raw`（c=1）、`budget-online`（逐请求在线 suffix 权重）及 `budget-suffix`，无需离线校准集或校准表；旧阈值与四表实现保留用于历史复现。分数控制提前计算，输出由已验证前缀上的全深度预测决定。模型为 Ouro-2.6B（T=4，读出1/2）与 Huginn-3.5B（T=32，读出4/8）。新版全尺寸性能尚未评测，既有 Ouro BF16 输出分歧仍待定位。实现、统一 N=64 的拟议480题对比和命令见 [在线控制器方案](docs/loopfill-online-suffix-control.md#11-已实现接口与下一轮比较方案)。
 
 本仓库从 [zhusq20/llm-memory-editability](https://github.com/zhusq20/llm-memory-editability) 中抽出 LoopFill 相关的文档、代码和小体积实验产物（2026-11-02 快照）。为保持报告里的链接和 import 不变，目录结构与 Python 包名 `llm_memory_editability` 沿用原仓库。
 
-## 主要结果（详见 [docs/loopfill-results.md](docs/loopfill-results.md)）
+**2026-11-04 更新**：主实验使用 continuous batching + 128-token chunked prefill + 跨请求 packed attention + decode CUDA Graph。两模型、六臂在完整480条数据上测试 B=1/2/4/8/16/32/64/128/256，共108组，8张GPU并行；B表示最大在场请求数。实际 OOM 单独记录，其他组继续。GPU统一独占、固定频率和CPU亲和性，同模型同B六臂绑定同一卡。见[优化后端协议](results/loopfill-optimized480-20261104/protocol.json)、[状态](results/loopfill-optimized480-20261104/status.json)、[结果表](results/loopfill-optimized480-20261104/measurements.csv)、[验证记录](results/loopfill-optimized480-20261104/validation.json)。图仅覆盖预热中常见的decode形状，未覆盖形状走eager并计数；预热和捕获在计时外。旧固定batch及未优化的continuous结果分别保留在 `results/loopfill-batch480-20261104/`、`results/loopfill-continuous480-20261104/`，不混入新结果。
+
+## 历史四表结果（详见 [docs/loopfill-results.md](docs/loopfill-results.md)）
 
 单请求引擎 E2E，sb1024 chat，bf16，每模型 60 题：
 
@@ -18,7 +20,9 @@ LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练�
 | Ouro-2.6B | 5.23× [4.49, 6.18] | 1.95× [1.76, 2.20] |
 | Huginn-3.5B | 6.94× [5.26, 8.79] | 2.34× [2.16, 2.56] |
 
-多请求（连续批处理）吞吐尚未实测，计划见 [docs/loopfill-plan.md](docs/loopfill-plan.md)。
+**当前进度（2026-11-03）**：两模型、B=1/4、raw/simple/four 的八卡消融已完成320流（128调参+192评测），见 [消融协议与产物](results/loop-score-ablation-20261103/protocol.json)。ID24/CanItEdit dev12 为开发规模证据；正式 Spec-Bench 全量、任务质量和满载曲线仍待完成。
+
+**当前计划 v4（2026-11-04）**：[投稿总计划](docs/loopfill-icml-experiments.md)保留完整实验范围；下一轮按 [在线控制器方案第11节](docs/loopfill-online-suffix-control.md#11-已实现接口与下一轮比较方案)比较 AR/WFD/同引擎 LoopSpec 双提案/预算纯后缀/预算 raw/在线版本。事前统一 N=64，不再要求外部开发集选 N；参数不根据480题结果选优。N 不计已确认前缀与根，计入算完但未接受的草稿。预算入口已接入 [batch 脚本](scripts/loop_batch_bench.py)，旧机器协议与已有结果不改名。Ouro 输出分歧仍需针对性诊断。
 
 ## 目录
 
@@ -39,7 +43,7 @@ LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练�
 - `loop-suffix-spec-wallclock-20261031`、`loop-wfd-same-engine-20261031`：首批墙钟与同引擎 WFD 对照
 - `loop-spec-reuse-20261030`、`loop-spec-sibling-20261030`：草稿复用与兄弟分支的上限测量
 
-## 进度（截至 2026-11-02）
+## 进度（截至 2026-11-03）
 
 | 日期 | 内容 | 位置 |
 | --- | --- | --- |
@@ -50,13 +54,14 @@ LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练�
 | 10-31 | 按猜对概率放候选：设计 v1→v3、校准、回放、多请求微基准；loop 给后缀树带来什么（报告 §10） | `results/loop-spec-prob-tree-20261031`、`results/loop-suffix-spec-20261030/report.md` §10 |
 | 11-01 | v3 C 单请求墙钟（S4）：相对 both-path 快 1.26–1.73×；v3 C 四栏消融（报告 §11）；单请求 E2E 汇总（见上表） | `results/loop-spec-prob-tree-20261031/report.md` §9、`docs/loopfill-results.md` |
 | 11-02 | 论文方法节、预备知识节与图 | `paper/` |
+| 11-03 | 最小固定 batch 入口、小模型正确性测试、均衡预检输入与正式吞吐执行计划；后续完成320流全尺寸评分消融，正式全量矩阵待执行 | `docs/loopfill-batch.md`、`results/loop-batch-20261103` |
 
-**尚未完成**（计划与顺序见 [docs/loopfill-plan.md](docs/loopfill-plan.md)）：
+**尚未完成**（当前投稿计划与顺序见 [docs/loopfill-icml-experiments.md](docs/loopfill-icml-experiments.md)）：
 
-- 多请求 E2E：固定批与连续批处理、N=4/16 跑 Spec-Bench 全量请求流。目前只有按行数的估计和一次块调用的微基准。
-- 在相同负载下补纯 SuffixDecoding 和 LoopSpec (1,2) 基线。
-- GPU 消融；“关闭新孩子立即查询后缀索引”这项优先消融。
-- 外部工作负载：CanItEdit 可行性检查；SQL / SWE-bench 只是备选。
+- 本轮：节点预算与在线控制器代码已实现，待全尺寸验证及容量审计；先按统一 N=64 的六臂方案做两个模型 B=1/4、单题序单次计时的24流全量比较，再扩展负载曲线。Ouro 分歧诊断单列，区分共同 B 对照与各臂最高吞吐。
+- 投稿必做：官方 LoopSpec/WFD 直接对照；MATH-500 数学质量；CanItEdit 代码编辑速度与功能正确性。
+- 投稿必做：GPU 核心消融（含关闭新孩子立即后缀查询）、节点预算/历史阈值策略与评分消融、历史/二轮、容量/上下文和性能分解；统计与复现归档。
+- 不在本轮范围：连续到达/SLO 服务、新 drafter 训练、完整 SQL / SWE-bench agent 系统。
 - 数据缺口：Huginn 摘要题 253、288、295 缺 sb1024 读出（显存不足）；预留题 249、273、281 缺 S4 计时。
 
 `results/*/RUNNING.txt` 是运行当时的交接记录，状态以 `report.md` 和上表为准。
@@ -65,7 +70,7 @@ LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练�
 
 ```bash
 pip install -e ".[dev]"            # 纯 CPU 测试只需 numpy + pytest（部分测试需 torch）
-PYTHONPATH=src pytest tests
+PYTHONPATH=src python -m pytest tests
 ```
 
 需要模型推理的部分另需：
