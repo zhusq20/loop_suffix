@@ -216,6 +216,7 @@ def batch_decode(
     executor=None,
     schedule="fixed",
     prefill_chunk_size=0,
+    progress_callback=None,
 ):
     """Run a finite stream with fixed batches or continuous slot replenishment.
 
@@ -300,6 +301,8 @@ def batch_decode(
                 )
             )
             del active[slot]
+            if progress_callback is not None:
+                progress_callback(completed, end - start)
 
     def admit():
         nonlocal next_request, max_active_requests, refilled_requests

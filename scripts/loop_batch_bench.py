@@ -33,11 +33,11 @@ from llm_memory_editability.loop_tree_decode import HuginnLoop, OuroLoop, tree_d
 
 SPECS = {"ouro-2.6b": (4, 1, 2, "<|im_end|>"), "huginn-3.5b": (32, 4, 8, "<|end_turn|>")}
 ARMS = ("ar", "wavefront", "prob-low", "prob-load", "suffix",
-        "budget-raw", "budget-online", "budget-suffix", "loopspec-dual")
+        "budget-raw", "budget-online", "budget-fixed", "budget-suffix", "budget-shallow", "loopspec-dual", "loopspec-capped")
 
 
 def parser():
-    p = argparse.ArgumentParser(description=__doc__)
+    p = argparse.ArgumentParser(description=__doc__, fromfile_prefix_chars="@")
     p.add_argument("--model", choices=SPECS, required=True)
     p.add_argument("--model-path", required=True, help="local Hugging Face checkpoint directory")
     p.add_argument("--questions", required=True, help="Spec-Bench JSONL or prompt_token_ids JSONL")
@@ -50,6 +50,15 @@ def parser():
     p.add_argument("--suffix-eta", type=float, default=0.1)
     p.add_argument("--suffix-c-min", type=float, default=0.25)
     p.add_argument("--suffix-c-max", type=float, default=2.0)
+    p.add_argument("--suffix-c-initial", type=float, default=1.0,
+                   help="initial online coefficient, or constant coefficient for budget-fixed")
+    p.add_argument("--model-top-k", type=int, choices=(1, 2, 8), default=8)
+    p.add_argument("--child-suffix-policy", choices=("all", "best1", "none"), default="all")
+    p.add_argument("--child-suffix-caps", type=int, nargs="+",
+                   help="per-model-rank suffix node caps; zero skips that child's query; root cap unchanged")
+    p.add_argument("--positive-only", action="store_true")
+    p.add_argument("--progress-every", type=int, default=0,
+                   help="write progress after this many completed requests; zero disables")
     p.add_argument("--trace-controller", action="store_true",
                    help="diagnostic coefficient traces and CPU metadata estimates; timed separately")
     p.add_argument("--arms", default="ar,wavefront,prob-low,prob-load")
@@ -59,8 +68,13 @@ def parser():
     p.add_argument("--prefill-chunk-size", type=int, default=0,
                    help="positive token count enables prefill/decode interleaving; 0 uses full prompts")
     p.add_argument("--attention-backend", choices=("per-request", "packed"), default="per-request")
-    p.add_argument("--cuda-graph", action="store_true", help="capture decode shapes in warmup only; requires packed")
+    p.add_argument("--cuda-graph", action=argparse.BooleanOptionalAction, default=False,
+                   help="capture decode shapes in warmup only; requires packed")
     p.add_argument("--max-cuda-graphs", type=int, default=24)
+    p.add_argument("--pad-decode-rows", action=argparse.BooleanOptionalAction, default=False,
+                   help="packed backend: bucket execution rows using an isolated KV sink for padding")
+    p.add_argument("--verifier-shape-warmup", choices=("complete", "observed"), default="complete",
+                   help="with row padding: prime bounded verifier shapes or retain request-observed warmup only")
     p.add_argument("--allocation-guard", choices=("conservative", "disabled"),
                    default="conservative",
                    help="disabled attempts the requested buffers and lets CUDA report actual OOM")
@@ -83,6 +97,8 @@ def parser():
     )
     p.add_argument("--limit", type=int, help="first N IDs before shuffling; for smoke checks")
     p.add_argument("--warmup-tokens", type=int, default=8)
+    p.add_argument("--warmup-request-limit-factor", type=int, choices=(1, 2),
+                   help="warmup requests per batch slot; default: 2 with CUDA Graph, otherwise 1")
     p.add_argument("--threads", type=int, default=1)
     p.add_argument(
         "--check",
@@ -97,15 +113,22 @@ def parser():
 
 
 def arm_config(name, T, d, deep, suffix_max_draft, *, draft_node_budget=64,
-               suffix_eta=0.1, suffix_c_min=0.25, suffix_c_max=2.0, trace_controller=False):
-    if name == "loopspec-dual":
-        return LoopSpecConfig(name, T, d, deep)
+               suffix_eta=0.1, suffix_c_min=0.25, suffix_c_max=2.0, trace_controller=False,
+               model_top_k=8, child_suffix_policy="all", positive_only=False, child_suffix_caps=None,
+               suffix_c_initial=1.0):
+    if name in ("loopspec-dual", "loopspec-capped"):
+        return LoopSpecConfig(name, T, d, deep,
+                              draft_node_budget=draft_node_budget if name == "loopspec-capped" else None)
     if name.startswith("budget-"):
         return BudgetConfig(
             name, T, d, (d, deep), draft_node_budget=draft_node_budget,
-            scoring="online_suffix_i" if name == "budget-online" else "raw",
+            scoring={"budget-online": "online_suffix_i", "budget-fixed": "fixed_suffix"}.get(name, "raw"),
             eta=suffix_eta, c_min=suffix_c_min, c_max=suffix_c_max,
             use_model=name != "budget-suffix", suffix_room=suffix_max_draft,
+            use_suffix=name != "budget-shallow", top_m=model_top_k,
+            child_suffix_policy=child_suffix_policy, positive_only=positive_only,
+            child_suffix_caps=tuple(child_suffix_caps) if child_suffix_caps is not None else None,
+            c_initial=suffix_c_initial,
             trace_controller=trace_controller,
         )
     if name.startswith("prob-"):
@@ -225,6 +248,9 @@ def serial_reference(path, identity, requests, generate):
 
 def main():
     args = parser().parse_args()
+    warmup_request_limit_factor = args.warmup_request_limit_factor
+    if warmup_request_limit_factor is None:
+        warmup_request_limit_factor = 2 if args.cuda_graph else 1
     arms = args.arms.split(",")
     batches = [int(n) for n in args.batch_sizes.split(",")]
     seeds = [int(n) for n in args.order_seeds.split(",")]
@@ -256,6 +282,10 @@ def main():
             draft_node_budget=args.draft_node_budget, suffix_eta=args.suffix_eta,
             suffix_c_min=args.suffix_c_min, suffix_c_max=args.suffix_c_max,
             trace_controller=args.trace_controller,
+            model_top_k=args.model_top_k, child_suffix_policy=args.child_suffix_policy,
+            positive_only=args.positive_only,
+            child_suffix_caps=args.child_suffix_caps,
+            suffix_c_initial=args.suffix_c_initial,
         )
         if isinstance(config, ProbConfig) and args.tau is not None:
             config = replace(config, tau=args.tau)
@@ -315,12 +345,14 @@ def main():
             return 1
         if arm.startswith("budget-"):
             return args.draft_node_budget + 1
-        if arm == "loopspec-dual":
+        if arm in ("loopspec-dual", "loopspec-capped"):
             return configs[arm].physical_nodes
         return args.max_nodes
 
     if args.prefill_chunk_size < 0 or args.max_cuda_graphs < 1:
         raise ValueError("invalid chunk size or graph count")
+    if args.pad_decode_rows and args.attention_backend != "packed":
+        raise ValueError("row padding requires packed attention")
     if args.cuda_graph and (args.attention_backend != "packed" or device.type != "cuda"):
         raise ValueError("CUDA graphs require the packed CUDA backend")
 
@@ -367,7 +399,7 @@ def main():
         compile=False,
         prefill="chunked_interleaved" if args.prefill_chunk_size else "sequential",
         warmup_prefill="same_as_measured",
-        warmup_request_limit_factor=2 if args.cuda_graph else 1,
+        warmup_request_limit_factor=warmup_request_limit_factor,
         schedule=args.schedule,
         history="cold_start_completion_only",
         profiled=args.profile,
@@ -408,7 +440,7 @@ def main():
 
     def allocate(B, nodes):
         # A dense cache can be large: fail explicitly rather than silently lowering B/caps.
-        pool = SharedKVPool(B) if args.attention_backend == "packed" else None
+        pool = SharedKVPool(B, pad_decode_rows=args.pad_decode_rows) if args.attention_backend == "packed" else None
         first = backbone(nodes, pool)
         kv = first.kv
         if kv.K.dtype != getattr(torch, args.dtype):
@@ -447,7 +479,7 @@ def main():
                     slots, slot_bytes = allocate(B, physical_nodes)
                 warm = [
                     replace(r, max_new_tokens=min(args.warmup_tokens, r.max_new_tokens))
-                    for r in ordered[:B * (2 if args.cuda_graph else 1)]
+                    for r in ordered[:B * warmup_request_limit_factor]
                 ]
                 engine = (PackedLoopExecutor(slots, args.cuda_graph, args.max_cuda_graphs)
                           if args.attention_backend == "packed" else None)
@@ -456,12 +488,29 @@ def main():
                     schedule=args.schedule, executor=engine, prefill_chunk_size=args.prefill_chunk_size,
                 )
                 if engine is not None:
+                    if (args.pad_decode_rows and args.cuda_graph and engine.pool.max_nodes <= 65
+                            and args.verifier_shape_warmup == "complete"):
+                        if arm == 'ar':
+                            engine.prime_verifier_shapes(1)
+                        elif isinstance(config, BudgetConfig) and not config.use_model:
+                            engine.prime_verifier_shapes(min(config.draft_node_budget, config.suffix_room) + 1)
                     engine.graphs.freeze()
                 cache = cache_for(config)  # warmup outputs never enter measured history
                 gc.collect()
                 if device.type == "cuda":
                     torch.cuda.reset_peak_memory_stats(device)
                 key = f"{arm}-b{B}-seed{seed}"
+                def progress(completed, elapsed):
+                    if len(completed) % args.progress_every and len(completed) != len(ordered):
+                        return
+                    record = dict(completed_requests=len(completed), total_requests=len(ordered),
+                                  completed_output_tokens=sum(r['n_tokens'] for r in completed),
+                                  elapsed_s=elapsed, updated_unix=time.time(), phase="measured")
+                    target = out / f"{key}-progress.json"
+                    temporary = target.with_suffix(".tmp")
+                    temporary.write_text(json.dumps(record))
+                    temporary.replace(target)
+                    print(f"{key}: {len(completed)}/{len(ordered)} completed, {elapsed:.1f}s", flush=True)
                 prof = None
                 try:
                     if args.profile:
@@ -473,6 +522,7 @@ def main():
                     records, summary = batch_decode(
                         ordered, slots, config, calibration, cache, max_nodes=physical_nodes,
                         schedule=args.schedule, executor=engine, prefill_chunk_size=args.prefill_chunk_size,
+                        progress_callback=progress if args.progress_every > 0 else None,
                     )
                 except Exception as exc:
                     (out / f"{key}-failure.json").write_text(
@@ -506,7 +556,7 @@ def main():
                     profiled=args.profile,
                     controller_profiled=args.trace_controller,
                     tree_policy="node_budget" if isinstance(config, BudgetConfig) else (
-                        "loopspec_dual" if isinstance(config, LoopSpecConfig) else
+                        ("loopspec_dual" if config.draft_node_budget is None else "loopspec_capped") if isinstance(config, LoopSpecConfig) else
                         "threshold" if isinstance(config, ProbConfig) else "legacy_arm"
                     ),
                     scoring=config.scoring if isinstance(config, BudgetConfig) else args.scoring,

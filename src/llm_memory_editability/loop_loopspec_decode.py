@@ -21,6 +21,7 @@ class LoopSpecConfig:
     draft_depth: int
     second_depth: int
     use_suffix: bool = False
+    draft_node_budget: int | None = None
 
     def __post_init__(self):
         if not 0 < self.draft_depth < self.second_depth < self.depth_total:
@@ -29,6 +30,10 @@ class LoopSpecConfig:
             raise ValueError("LoopSpec requires T and d2 divisible by d1")
         if self.use_suffix:
             raise ValueError("LoopSpec does not use suffix proposals")
+        if self.draft_node_budget is not None and (
+            type(self.draft_node_budget) is not int or self.draft_node_budget < 0
+        ):
+            raise ValueError("draft_node_budget must be a nonnegative integer or None")
 
     @property
     def live_bound(self):
@@ -40,7 +45,8 @@ class LoopSpecConfig:
 
     @property
     def physical_nodes(self):
-        return 2 * self.live_bound + 1
+        native = 2 * self.live_bound + 1
+        return native if self.draft_node_budget is None else min(native, self.draft_node_budget + 1)
 
 
 @torch.no_grad()
@@ -63,6 +69,7 @@ selection, suffix proposals, score pruning, or online controller is used.
     live_bound = cfg.live_bound
     # New proposals are temporarily present before final branch retention.
     capacity = cfg.physical_nodes
+    budget = cfg.draft_node_budget
     if max_nodes < capacity:
         raise ValueError(f"LoopSpec needs {capacity} tree slots; got {max_nodes}")
     tree = RecyclingTree(capacity)
@@ -70,7 +77,8 @@ selection, suffix proposals, score pruning, or online controller is used.
                  readout_rows=0, cap_skips=0, first_proposals=0, second_proposals=0,
                  second_agreements=0, accepted_first=0, accepted_second=0,
                  fallback_tokens=0, wasted_rows=0, peak_live_nodes=0,
-                 readout_depths=[d1, d2], tree_policy="loopspec_dual",
+                 readout_depths=[d1, d2], tree_policy="loopspec_dual" if budget is None else "loopspec_capped",
+                 draft_node_budget=budget, budget_rejections=0, peak_draft_nodes=0,
                  schedule="selective_second_proposal", implementation="same_engine")
     yield ModelCall("synchronize")
     start = time.perf_counter()
@@ -81,11 +89,17 @@ selection, suffix proposals, score pruning, or online controller is used.
     pool = {}
 
     def add(path, parent, source):
+        # Capped ablation: retain existing paths, admit proposals in the native
+        # d1-then-d2 order while space remains. Never replace the confirmed root.
+        if parent is not None and budget is not None and len(pool) - 1 >= budget:
+            stats["budget_rejections"] += 1
+            return None
         n = tree.add(path[-1], parent, stats["calls"], source)
         if n is None:
             raise RuntimeError("LoopSpec exceeded its preregistered physical bound")
         pool[path] = n
         stats["nodes"] += 1
+        stats["peak_draft_nodes"] = max(stats["peak_draft_nodes"], len(pool) - 1)
         return n
 
     if len(out) < max_new_tokens and out[-1] not in stop:
@@ -159,6 +173,9 @@ selection, suffix proposals, score pruning, or online controller is used.
             root_path = next_path
             if len(out) < max_new_tokens and gold not in stop and selected is None:
                 add(root_path, None, "root")
+    if budget is not None:
+        # Match the budget decoder's accounting of unfinished terminal drafts.
+        stats['wasted_rows'] += sum(n.step for path, n in pool.items() if path != root_path)
     yield ModelCall("synchronize")
     stats.update(prefill_s=prefilled - start, decode_s=time.perf_counter() - prefilled)
     return out, stats

@@ -42,16 +42,24 @@ class BudgetConfig:
     suffix_min_prob: float = 0.001
     trace_controller: bool = False
     tree_policy: str = "node_budget"
+    child_suffix_policy: str = "all"
+    positive_only: bool = False
+    child_suffix_caps: tuple[int, ...] | None = None
+    c_initial: float = 1.0
 
     def __post_init__(self):
         if not isinstance(self.draft_node_budget, int) or self.draft_node_budget < 0:
             raise ValueError("draft_node_budget must be a nonnegative integer")
-        if self.scoring not in ("raw", "online_suffix_i") or self.tree_policy != "node_budget":
-            raise ValueError("budget decoder supports raw or online_suffix_i scoring")
+        if self.scoring not in ("raw", "fixed_suffix", "online_suffix_i") or self.tree_policy != "node_budget":
+            raise ValueError("budget decoder supports raw, fixed_suffix or online_suffix_i scoring")
         if not (math.isfinite(self.eta) and self.eta > 0):
             raise ValueError("eta must be finite and positive")
         if not (0 < self.c_min < 1 < self.c_max < math.inf):
             raise ValueError("coefficient bounds must satisfy 0 < c_min < 1 < c_max < inf")
+        if not math.isfinite(self.c_initial) or not self.c_min <= self.c_initial <= self.c_max:
+            raise ValueError("initial coefficient must be finite and within coefficient bounds")
+        if self.scoring == "raw" and self.c_initial != 1.0:
+            raise ValueError("raw scoring requires c_initial=1; use fixed_suffix for a fixed weight")
         if not 0 < self.draft_depth < self.depth_total:
             raise ValueError("draft depth must be between zero and total depth")
         if (
@@ -60,8 +68,15 @@ class BudgetConfig:
             or (self.use_model and self.draft_depth not in self.readout_depths)
         ):
             raise ValueError("readout depths must be unique, below T, and include draft depth")
-        if self.top_m != 8 or self.suffix_room < 1:
-            raise ValueError("v1 uses model top-8 and a positive suffix query cap")
+        if self.top_m not in (1, 2, 8) or self.suffix_room < 1:
+            raise ValueError("model top-k must be 1, 2 or 8; suffix query cap must be positive")
+        if self.child_suffix_policy not in ("all", "best1", "none"):
+            raise ValueError("child_suffix_policy must be all, best1 or none")
+        if self.child_suffix_caps is not None and (
+            len(self.child_suffix_caps) != self.top_m
+            or any(type(q) is not int or q < 0 for q in self.child_suffix_caps)
+        ):
+            raise ValueError("child suffix caps must contain one nonnegative integer per model rank")
         if not math.isfinite(self.spec_factor) or self.spec_factor <= 0:
             raise ValueError("spec_factor must be finite and positive")
         if not 0 <= self.suffix_min_prob <= 1:
@@ -87,13 +102,13 @@ class SuffixController:
 
     def __init__(self, cfg: BudgetConfig):
         self.cfg = cfg
-        self.u = 0.0
+        self.u = math.log(cfg.c_initial)
         self.records: dict[Path, dict[int, SuffixPrediction]] = {}
         # Includes unconfirmed parents whose full result is already available.
         self.known: set[Path] = set()
         self.pending = self.peak_records = self.peak_parents = 0
         self.created = self.discarded = self.feedback_records = self.updates = 0
-        self.c_low = self.c_high = 1.0
+        self.c_low = self.c_high = cfg.c_initial
         self.trace: list[dict] = []
 
     @property
@@ -187,10 +202,12 @@ class Candidate:
     node: TreeNode | None = None
     p: float = 0.0
     e: float = 0.0
+    model_rank: int | None = None
 
 
-def select_candidates(pool: dict[Path, Candidate], root: Path, budget: int, coefficient: float):
-    """Select metadata before allocating state; zero scores still compete for slots."""
+def select_candidates(pool: dict[Path, Candidate], root: Path, budget: int, coefficient: float,
+                      *, positive_only=False):
+    """Select an ancestor-closed tree before allocating state; legacy keeps zeros."""
     pool[root].p = pool[root].e = 1.0
     ranked = []
     for path in sorted((p for p in pool if p != root), key=lambda p: (len(p), p)):
@@ -199,7 +216,7 @@ def select_candidates(pool: dict[Path, Candidate], root: Path, budget: int, coef
         c.p = pool[path[:-1]].p * c.e
         ranked.append(c)
     ranked.sort(key=lambda c: (-c.p, len(c.path), c.path))
-    chosen = ranked[:budget]
+    chosen = [c for c in ranked if not positive_only or c.p > 0][:budget]
     return {root: pool[root], **{c.path: c for c in chosen}}
 
 
@@ -313,6 +330,13 @@ def budget_tree_decode_steps(
         budget_rejections=0,
         candidate_replacements=0,
         wasted_rows=0,
+        wasted_budget_rows=0,
+        wasted_rejected_rows=0,
+        wasted_end_rows=0,
+        selection_events=0,
+        selected_draft_nodes_sum=0,
+        selected_zero_nodes_sum=0,
+        child_suffix_queries=0,
         cap_skips=0,
         verified_parents=0,
         covered_tokens=0,
@@ -320,6 +344,9 @@ def budget_tree_decode_steps(
         peak_feedback_metadata_bytes_estimate=0,
     )
     stats.update({f"from_{s}": 0 for s in ("suffix", "fill", "sibling", "deep")})
+    stats.update({f"child_suffix_rank{rank}_{metric}": 0
+                  for rank in range(1, cfg.top_m + 1)
+                  for metric in ("queries", "returned_nodes", "skipped")})
     pool: dict[Path, Candidate] = {}
     tick = 0
 
@@ -327,20 +354,24 @@ def budget_tree_decode_steps(
         if observer is not None:
             observer(event, **data)
 
-    def release(c, wasted=True):
+    def release(c, wasted=True, reason="rejected"):
         if c.node is not None:
             if wasted:
                 stats["wasted_rows"] += c.node.step
+                stats[f"wasted_{reason}_rows"] += c.node.step
             tree.release(c.node)
 
-    def suffix(parent):
+    def suffix(parent, cap=None):
+        cap = cfg.suffix_room if cap is None else cap
+        if cap <= 0:
+            raise ValueError("zero-cap child queries must be skipped before calling the provider")
         start = time.perf_counter()
         ctx = prompt + list(parent.path)
         limit = getattr(cache, "max_tree_depth", None)
         draft = cache.speculate(
             req_id,
             np.asarray(ctx[-limit:] if limit else ctx, dtype=np.int32),
-            max_spec_tokens=cfg.suffix_room,
+            max_spec_tokens=cap,
             max_spec_factor=cfg.spec_factor,
             max_spec_offset=0.0,
             min_token_prob=cfg.suffix_min_prob,
@@ -348,7 +379,7 @@ def budget_tree_decode_steps(
         )
         stats["speculate_calls"] += 1
         stats["speculate_s"] += time.perf_counter() - start
-        if len(draft.token_ids) > cfg.suffix_room:
+        if len(draft.token_ids) > cap:
             raise ValueError("suffix provider exceeded max_spec_tokens")
         created = []
         # Validate topology before deriving conditional scores.
@@ -371,6 +402,7 @@ def budget_tree_decode_steps(
             else:
                 c.suffix = True  # never override a model score (nor the first snapshot)
             created.append(c)
+        return len(draft.token_ids)
 
     def model_candidates(c, depth, top):
         if max_pos is not None and len(prompt) + len(c.path) >= max_pos:
@@ -389,6 +421,9 @@ def budget_tree_decode_steps(
             else:
                 origin = "deep" if depth > cfg.draft_depth else ("fill" if rank == 0 else "sibling")
                 pool[path] = Candidate(path, probability, "model", origin)
+            # Rank belongs to this parent's latest model readout, not admission order
+            # or the candidate's original source (which may have been suffix).
+            pool[path].model_rank = rank
         for path, child in pool.items():
             if path[:-1] == c.path and path[-1] not in seen:
                 # Preserve the documented legacy ABSENT=0 heuristic; not true softmax.
@@ -398,7 +433,7 @@ def budget_tree_decode_steps(
     def choose(root):
         nonlocal pool
         start = time.perf_counter()
-        selected = select_candidates(pool, root, N, controller.c)
+        selected = select_candidates(pool, root, N, controller.c, positive_only=cfg.positive_only)
         evicted = rejected = 0
         for path, c in pool.items():
             if path not in selected:
@@ -406,12 +441,15 @@ def budget_tree_decode_steps(
                     rejected += 1
                 else:
                     evicted += 1
-                    release(c)
+                    release(c, reason="budget")
         new = sum(c.node is None for p, c in selected.items() if p != root)
         stats["budget_evictions"] += evicted
         stats["budget_rejections"] += rejected
         stats["candidate_replacements"] += min(evicted, new)
         pool = selected
+        stats["selection_events"] += 1
+        stats["selected_draft_nodes_sum"] += len(pool) - 1
+        stats["selected_zero_nodes_sum"] += sum(c.p == 0 for p, c in pool.items() if p != root)
         stats["peak_draft_nodes"] = max(stats["peak_draft_nodes"], len(pool) - 1)
         stats["selection_s"] += time.perf_counter() - start
 
@@ -443,10 +481,26 @@ def budget_tree_decode_steps(
             suffix(pool[root])
         choose(root)
         # Only newly selected model children trigger immediate suffix continuation.
-        if use_suffix:
-            for c in list(pool.values()):
-                if c.path != root and c.node is None and c.score_source == "model":
-                    suffix(c)
+        if use_suffix and cfg.child_suffix_policy != "none":
+            children = [c for c in pool.values()
+                        if c.path != root and c.node is None and c.score_source == "model"]
+            if cfg.child_suffix_policy == "best1":
+                children = sorted(children, key=lambda c: (-c.p, len(c.path), c.path))[:1]
+            for c in children:
+                rank = c.model_rank
+                # Legacy ABSENT=0 entries can have model scores without ever
+                # appearing in top-k. Preserve their existing query behavior.
+                cap = cfg.suffix_room if cfg.child_suffix_caps is None or rank is None else cfg.child_suffix_caps[rank]
+                if cap == 0:
+                    stats[f"child_suffix_rank{rank + 1}_skipped"] += 1
+                    emit("child_suffix_query", path=c.path, rank=rank, cap=0, returned_nodes=0)
+                    continue
+                returned = suffix(c, cap)
+                stats["child_suffix_queries"] += 1
+                if rank is not None:
+                    stats[f"child_suffix_rank{rank + 1}_queries"] += 1
+                    stats[f"child_suffix_rank{rank + 1}_returned_nodes"] += returned
+                emit("child_suffix_query", path=c.path, rank=rank, cap=cap, returned_nodes=returned)
             choose(root)
         allocate(root)
         if cfg.trace_controller:
@@ -487,7 +541,7 @@ def budget_tree_decode_steps(
             stats["max_rows"] = max(stats["max_rows"], len(live))
             groups = [(d, [n for n in live if n.step == d]) for d in depths]
             full = [n for n in live if n.step == T]
-            reads, tops = yield ModelCall("readout_top", (tree, groups, full, 8))
+            reads, tops = yield ModelCall("readout_top", (tree, groups, full, cfg.top_m))
             stats["readout_rows"] += sum(len(g) for _, g in groups) + len(full)
             by_slot = {c.node.idx: c for c in pool.values()}
             due = [
@@ -556,7 +610,7 @@ def budget_tree_decode_steps(
 
         for path, c in pool.items():
             if path != root:
-                release(c)
+                release(c, reason="end")
         yield ModelCall("synchronize")
         t2 = time.perf_counter()
         if started:
@@ -570,7 +624,7 @@ def budget_tree_decode_steps(
             draft_node_budget=N,
             controller_scope="request",
             update_event="verified_parent",
-            c_initial=1.0,
+            c_initial=cfg.c_initial,
             c_final=controller.c,
             c_observed_min=controller.c_low,
             c_observed_max=controller.c_high,

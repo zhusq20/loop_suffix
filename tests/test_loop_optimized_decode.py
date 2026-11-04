@@ -30,12 +30,12 @@ def threads():
     torch.set_num_threads(old)
 
 
-def setup(family, device='cpu', dtype=torch.float32):
+def setup(family, device='cpu', dtype=torch.float32, max_nodes=128):
     torch.manual_seed(71)
     model = (TinyOuro() if family == 'ouro' else TinyHuginn()).to(device, dtype).eval()
     def make(pool=None):
-        return (OuroLoop(model, 4, 128, 128, kv_factory=pool) if family == 'ouro' else
-                HuginnLoop(model, 4, 128, 128, 0, 128, extra_depths=(2,), kv_factory=pool))
+        return (OuroLoop(model, 4, 128, max_nodes, kv_factory=pool) if family == 'ouro' else
+                HuginnLoop(model, 4, 128, max_nodes, 0, 128, extra_depths=(2,), kv_factory=pool))
     return make
 
 
@@ -140,3 +140,60 @@ def test_prefill_chunks_interleave_active_decode(monkeypatch):
     assert len(chunks) == 5
     for a, b in zip(chunks, chunks[1:]):
         assert any(e[0] == 'advance' and 0 in e[1] for e in events[a+1:b])
+
+
+@pytest.mark.parametrize('family', ['ouro', 'huginn'])
+@pytest.mark.parametrize('arm', ['ar', 'budget-suffix', 'budget-raw'])
+@pytest.mark.parametrize('cuda', [False, True])
+@pytest.mark.parametrize('max_nodes', [9, 128])
+def test_padded_shapes_preserve_outputs_accounting_and_kv(family, arm, cuda, max_nodes):
+    if cuda and not torch.cuda.is_available():
+        pytest.skip('CUDA unavailable')
+    make = setup(family, 'cuda' if cuda else 'cpu', torch.bfloat16 if cuda else torch.float32,
+                 max_nodes=max_nodes)
+    cfg = arm_config(arm, 4, 1, 2, 4, draft_node_budget=8)
+    def cache():
+        return CompletionSuffixCache.arctic() if cfg.use_suffix else None
+    runs = []
+    for padding in (False, True):
+        pool = SharedKVPool(2, pad_decode_rows=padding)
+        slots = [make(pool), make(pool)]
+        engine = PackedLoopExecutor(slots, cuda_graph=cuda, max_graphs=32)
+        batch_decode(requests(), slots, cfg, cache=cache(), schedule='continuous',
+                     executor=engine, prefill_chunk_size=2)
+        pure = arm in ('ar', 'budget-suffix')
+        if padding and pure and max_nodes <= 65:
+            engine.prime_verifier_shapes(1 if arm == 'ar' else 5)
+        engine.graphs.freeze()
+        if cuda and padding and pure and max_nodes <= 65:
+            original_run = engine.graphs.run
+            def checked_run(key, inputs, fn):
+                if key[0] == 'advance':
+                    assert key in engine.graphs.entries
+                return original_run(key, inputs, fn)
+            engine.graphs.run = checked_run
+        # Poison the private sink: real outputs must never read its contents.
+        pool.tree_k_storage[pool.TK.numel() // pool.TK.shape[-1] // pool.TK.shape[-2]:].fill_(float('nan'))
+        pool.tree_v_storage[pool.TV.numel() // pool.TV.shape[-1] // pool.TV.shape[-2]:].fill_(float('nan'))
+        # Reused request slots, changed prompts, EOS, and short output budgets.
+        changed = [replace(r, prompt=[(t + 1) % 13 for t in r.prompt],
+                           stop={18} if r.request_id % 2 else set()) for r in requests()]
+        rows, summary = batch_decode(changed, slots, cfg, cache=cache(), schedule='continuous',
+                                     executor=engine, prefill_chunk_size=2)
+        runs.append((rows, summary, [(b.kv.K.clone(), b.kv.V.clone(), b.kv.length) for b in slots]))
+    rows, summary, kv = runs[1]
+    refs, original, ref_kv = runs[0]
+    assert [r['tokens'] for r in rows] == [r['tokens'] for r in refs]
+    for r, ref in zip(rows, refs, strict=True):
+        for metric in ('calls', 'rows', 'nodes', 'readout_rows', 'speculate_calls'):
+            assert r['stats'][metric] == ref['stats'][metric]
+    assert summary['core_calls'] == original['core_calls']
+    assert summary['core_rows'] == original['core_rows']
+    assert summary['core_execution_rows'] >= summary['core_rows']
+    assert summary['padding_sink_bytes'] > 0
+    for (k, v, n), (rk, rv, rn) in zip(kv, ref_kv, strict=True):
+        assert n == rn
+        # Padding may change GEMM/reduction order, especially under BF16.
+        tol = 0.015625 if cuda else 2e-6
+        torch.testing.assert_close(k[:, :n], rk[:, :n], atol=tol, rtol=tol)
+        torch.testing.assert_close(v[:, :n], rv[:, :n], atol=tol, rtol=tol)

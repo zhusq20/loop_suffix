@@ -2,6 +2,90 @@
 
 日期：2026-11-04。
 
+**2026-11-05 当前执行**：按用户最新要求，关闭 CUDA Graph 和执行行填充，保留原来的 2×batch 请求预热量及其余参数。六组主方法（AR、WFD、LoopSpec、纯后缀、LoopFill-raw、LoopFill-online）在 B=1/2/4/8/16 上全部重新计时，共30组，每组完整480题、最多1024新token，8张GPU共享队列并行。见[实时状态](../results/loopfill-eager-b1-b16-huginn-20261105/status.json)和[结果表](../results/loopfill-eager-b1-b16-huginn-20261105/measurements.csv)。配置为 `@configs/loopfill-eager.args`。此前额外的 loopspec-capped 不计入六组主对照；[纯后缀修复报告](loopfill-suffix-baseline-fix.md)中的 Graph-on 结果和下方旧矩阵保留为历史记录。
+
+## 最新执行：复用已有结果，仅补8个缺失配置（2026-11-04）
+
+用户明确纠正：“不用同卡啊，跑过的不用重新跑了”。据此取消同卡要求及新增三次计时，停止正在重跑的五组AR；中断产物保留，原105单元队列的未完成项标记`cancelled_by_user`，不作为OOM或方法失败。下节三次重复方案已撤销，不再执行。
+
+B1/2/4/8/16的七方法共35单元中，复用26个已完成结果及1个实际OOM（WFD B16），只新增8组：B2/B4的Q4 N16 raw与N16受限LoopSpec，B1/B2/B4/B16的Q4 N16纯后缀。五档online全部复用，初值0.7、eta0.1、Q4、N16、top2和孩子Q(4,4)不变。八组缺项分配GPU0–7独立运行。
+
+复用核对模型、输入哈希、480题覆盖、输出预算、BF16、continuous/chunked/packed/graph后端及有效方法参数，不要求同卡或整份源码哈希相同。旧AR的无效`max_draft=64`占位参数与4不影响无提案AR；旧`child_suffix_caps=None`在全分支Q4模式下等价于(4,4)。来源GPU、原始配置、源码变化和产物哈希写入复用审计。旧源码中的进度输出和统计计数存在差别，比较不标为同源码同卡重复实验，不计算三次重复的显著性或标准误。
+
+- [当前协议](../results/loopfill-missing-b1-b16-huginn-20261104/protocol.json)
+- [当前状态](../results/loopfill-missing-b1-b16-huginn-20261104/status.json)
+- [汇总结果](../results/loopfill-missing-b1-b16-huginn-20261104/measurements.csv)
+- [复用审计](../results/loopfill-missing-b1-b16-huginn-20261104/reuse-provenance.json)
+- [取消重复实验的交接记录](../results/loopfill-confirm-b1-b16-huginn-20261104/no-rerun-handoff.json)
+
+## 已撤销：B1–16 的配对重复与输出审计（2026-11-04）
+
+以下仅保留方案历史；已被上一节用户明确要求替代。
+
+按用户“先把 B=1、2、4、8、16 做扎实”的要求，本阶段固定Huginn、Q4、N16、top2、孩子查询上限(4,4)、online初值0.7和eta=0.1，补齐五档的配对测量。六个主方法为AR、WFD、原生调度的同引擎LoopSpec、Q4/N16纯后缀、raw、online；另加明确命名的`loopspec-capped` N16作为已知更强的受限预算对照，不冒充原生LoopSpec。
+
+每个B/方法做repeat=0/1/2三次独立计时，共105个登记单元。输入480题、最多1024新token、模型初始化及题序seed=0、BF16、continuous/chunked/packed/graph设置保持冻结。五档分别绑定GPU0/1/2/5/3，所有方法与重复在该B对应同一卡运行；repeat1倒序、repeat2轮换方法顺序。三次重复只估计固定题序下的计时波动，不能消除选参偏差，也不估计其他题序的方差。
+
+严格检查执行源码身份、物理GPU UUID、输入哈希、完整配置、repeat编号和480题覆盖后，复用五档已完成online repeat0，以及GPU5的B8匹配raw repeat0，共6组。旧baseline源码身份/卡位与本配对配置不完全匹配，保留为历史锚点，本次补测同源码同卡baseline。各新配置先跑8题×16-token真实模型短检查；不改动生产解码器，沿用此前通过的CUDA正确性验证。重用的原始结果不移动或覆盖。
+
+当前仍为稠密最大长度预分配KV后端，不新增分页或跨循环KV共享。某B/方法完整命令若实际OOM，只记录一次，后两次标记`not_repeated_capacity_failure`，不当作成功重复，不报告相对该方法的速度收益；不以失败结果推断其他batch。尤其原WFD在B16有额外树缓存分配限制，不能写成算法被击败或硬件理论容量边界。
+
+自动汇总单次吞吐/耗时/输出量、三次均值/样本标准差/范围、同repeat的AR和raw吞吐比、显存峰值、每token计算行数、controller更新数。逐题审计同B/同repeat优化AR的一致率、同方法repeat0的一致率，并按任务类别报告覆盖和输出长度。串行参考一致率保留；这些一致率不是任务正确率，不将所有BF16分歧直接认定为无害。
+
+独立数据确认、任务质量评分与全量数值分歧归因仍列为论文证据缺口；本阶段不声称已经解决。N、Q和online参数已根据同一480题的开发结果选择。
+
+- [重复实验协议](../results/loopfill-confirm-b1-b16-huginn-20261104/protocol.json)
+- [运行状态](../results/loopfill-confirm-b1-b16-huginn-20261104/status.json)
+- [单次测量](../results/loopfill-confirm-b1-b16-huginn-20261104/measurements.csv)
+- [重复统计与配对加速](../results/loopfill-confirm-b1-b16-huginn-20261104/aggregate.csv)
+- [逐类别输出审计](../results/loopfill-confirm-b1-b16-huginn-20261104/category-output-audit.csv)
+- [执行入口](../scripts/loop_confirm_suite.py)
+
+## 追加：选定参数的正式 batch 曲线（2026-11-04）
+
+按用户要求，online 固定初值 **0.7**、步长 **0.1**，选择 **Q=4、N=16、模型 top-2、两个孩子的后缀查询上限 (4,4)**，在 Huginn 上补齐 B=1/2/4/8/16/32/64/128/256 九档。沿用完整480题、最多1024新token、seed=0、repeat=0、BF16、continuous batching、128-token chunked prefill、packed attention及CUDA Graph，不新增参数搜索。
+
+选择依据：B8 的 Q4 raw 比较中，N16 吞吐98.83 token/s，高于N8/32/64；B16的Q4 N16也优于已测N32配置。B8的Q8 N16 raw吞吐略高，但总时间536.36秒长于Q4 N16的529.99秒，不足以认定其整体更优。Q4 N16已有匹配初值与步长的online结果102.38 token/s、535.59秒。此处选择一个跨batch固定的合理工作点，不声称已证明所有batch的全局最优；参数来自同一480题上的开发结果，正式负载曲线仍不是独立留出集确认。
+
+B8直接复用`online-c07-eta01`完整结果，审计480题覆盖、源码/输入哈希、配置与执行设置，保留原始产物路径。其余八档分别在GPU0–7独占执行，先做CUDA正确性与真实模型短检查，再跑全量。旧初值1的online结果不算本次已完成。短检查若因实际CUDA分配OOM失败，仍尝试对应完整480题正式命令，逐档记录真实OOM，不降低batch/N/输入长度；其他正确性错误阻止该配置计时。已有baseline不重复执行。
+
+- [冻结协议](../results/loopfill-online-batch-huginn-20261104/protocol.json)
+- [运行状态](../results/loopfill-online-batch-huginn-20261104/status.json)
+- [结果表](../results/loopfill-online-batch-huginn-20261104/measurements.csv)
+- [复用审计](../results/loopfill-online-batch-huginn-20261104/reuse-provenance.json)
+- [准备入口](../scripts/loop_online_batch_suite.py)
+
+## 追加：online 初值与更新速度优化（2026-11-04）
+
+按用户授权开展下一轮优化，先固定Huginn、B=8、N=16、top2、root Q=4、分支(4,4)。比较6个候选：固定c=0.5/0.7/0.9，原版online(c0=1, eta=0.1)，暖启动online(c0=0.7, eta=0.1)，暖启动慢更新online(c0=0.7, eta=0.03)。每个候选配一个同卡raw(c=1)控制，共12个480题测量，GPU1至6独占运行，每卡2组；卡1/3/5先控制后候选，卡2/4/6先候选后控制，降低固定运行顺序的影响。六个raw控制也用于观察不同卡和时段的测量波动。
+
+新增显式`budget-fixed`臂（`fixed_suffix`评分）用于恒定后缀系数，不记录反馈、不更新；原`budget-raw`仍要求c=1。online新增可配置c_initial，初始化log(c_initial)且每请求重置，反馈方式、系数上下限[0.25,2]以及逐后缀边乘系数的规则不变。默认c0=1须与前批冻结实现保持输出、计算计数和反馈轨迹一致。所有候选共享新版本，保留原全部产物；迁移AR参考头部源码身份，逐行输出不变，serial_reference/generate AST与模型后端核对不变。
+
+本轮首先回答“固定调低后缀权重是否已足够”和“online冷启动或更新步长是否限制收益”，暂不把逐段加权或额外分组反馈混入比较。所有参数根据旧开发集结果选出，仍是开发探索。固定完整480题、最大1024新token、seed=0、repeat=0、相同precision/backend/warmup。判读同时看配对tok/s、总耗时、输出长度和rows/token；不能把长度变化导致的吞吐变化直接称为确定加速。
+
+- [优化协议](../results/loopfill-online-tuning-huginn-b8-20261104/protocol.json)
+- [运行状态](../results/loopfill-online-tuning-huginn-b8-20261104/status.json)
+- [结果表](../results/loopfill-online-tuning-huginn-b8-20261104/measurements.csv)
+
+## 追加：使用已选较快参数测试 online（2026-11-04）
+
+按用户要求，在Huginn上选择下列4个设置，各新增online/raw配对测量，共8组；每一对固定同一GPU、同一冻结实现与输入，先online后raw。不是重新搜索全部参数。B8的(4,0)虽然吞吐较高，但此前总耗时与(4,4)接近，仍保留两者，不将其认定为已确认最佳点。
+
+| B | N | 根查询Q | 两个模型候选查询上限 | GPU |
+| --- | --- | --- | --- | --- |
+| 1 | 32 | 8 | (8,8) | 7 |
+| 8 | 16 | 4 | (4,4) | 2 |
+| 8 | 16 | 4 | (4,0)，跳过第二候选查询 | 6 |
+| 16 | 16 | 4 | (4,4) | 1 |
+
+模型top2、完整480题、最多1024新token、BF16、seed=0、repeat=0、continuous batching、packed attention和CUDA Graph设置沿用已完成实验。online使用原定义的逐请求积分反馈：eta=0.1，c初始1，范围[0.25,2]；raw固定c=1。只切换评分与反馈是否启用，其余配置配对一致。正式计时关闭详细controller trace，保留更新次数、请求末系数及观测范围、controller耗时、反馈记录峰值等轻量统计。每组先通过真实模型短检查再计时。输入与执行源码直接继承rank-suffix冻结批次，参考文件无需迁移或重新生成。
+
+每卡先执行所选online配置的CUDA图和回收测试。全量online必须有实际反馈更新；raw对照用于区分online开销与收益。仍属于原开发集上的探索，不是独立确认。
+
+- [所选参数online协议](../results/loopfill-online-selected-huginn-20261104/protocol.json)
+- [运行状态](../results/loopfill-online-selected-huginn-20261104/status.json)
+- [配对结果](../results/loopfill-online-selected-huginn-20261104/measurements.csv)
+
 本文记录新的算法设计：**每个 request 最多保留 N 个未接受的草稿节点；每当一个父节点到达已确认前缀并完成全深度验证，就用它下面已有的后缀候选记录，小幅更新一次 suffix 权重。** 不攒固定数量的反馈，不训练分类器，不读取离线校准表。
 
 实现状态（2026-11-04）：[预算解码器](../src/llm_memory_editability/loop_budget_decode.py)已实现本文算法，并接入单请求与固定 batch 入口；[旧阈值解码器](../src/llm_memory_editability/loop_prob_decode.py)保留用于历史复现。尚未运行新版的全尺寸 480 题性能评测，历史结果不改名。当前接口和下一轮实验配置见第 11 节。

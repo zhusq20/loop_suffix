@@ -1,5 +1,7 @@
 # LoopFill (loop_suffix)
 
+**论文实验规划**：[当前精简计划](docs/loopfill-paper-experiments.md)统一主指标（throughput 与按 loop steps 归一化的平均接受长度 γ）、三维消融雷达图及机制分析；与旧实验计划冲突时以此文为准。
+
 LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练投机解码。它把两种草稿来源放进同一棵草稿树：
 
 - **后缀树匹配**（同 SuffixDecoding）：从提示、已确认输出和历史请求中检索续写；
@@ -8,6 +10,10 @@ LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练�
 两种来源可以互相接续。v4 按**每请求未接受草稿节点预算 N**控制树规模，按路径分数排序并支持满额替换。已实现 `budget-raw`（c=1）、`budget-online`（逐请求在线 suffix 权重）及 `budget-suffix`，无需离线校准集或校准表；旧阈值与四表实现保留用于历史复现。分数控制提前计算，输出由已验证前缀上的全深度预测决定。模型为 Ouro-2.6B（T=4，读出1/2）与 Huginn-3.5B（T=32，读出4/8）。新版全尺寸性能尚未评测，既有 Ouro BF16 输出分歧仍待定位。实现、统一 N=64 的拟议480题对比和命令见 [在线控制器方案](docs/loopfill-online-suffix-control.md#11-已实现接口与下一轮比较方案)。
 
 本仓库从 [zhusq20/llm-memory-editability](https://github.com/zhusq20/llm-memory-editability) 中抽出 LoopFill 相关的文档、代码和小体积实验产物（2026-11-02 快照）。为保持报告里的链接和 import 不变，目录结构与 Python 包名 `llm_memory_editability` 沿用原仓库。
+
+**2026-11-05 当前对照重跑**：关闭 CUDA Graph 和执行行填充，保留 2×batch 请求预热量和其他实验参数。Huginn 六组主方法（AR、WFD、LoopSpec、纯后缀、LoopFill-raw、LoopFill-online），B=1/2/4/8/16，共30组完整480题，在8张GPU上通过共享队列并行执行。见[协议](results/loopfill-eager-b1-b16-huginn-20261105/protocol.json)、[实时状态](results/loopfill-eager-b1-b16-huginn-20261105/status.json)、[结果表](results/loopfill-eager-b1-b16-huginn-20261105/measurements.csv)。配置为 [`@configs/loopfill-eager.args`](configs/loopfill-eager.args)，本轮不复用历史计时或OOM结果。
+
+**2026-11-05 纯后缀基线修复（此前 Graph-on 实验）**：执行行填充与固定验证形状预热已实现。Huginn完整480题，B8纯后缀105.37 token/s，对本轮AR为1.36×；B16仅请求预热的更快已测点为131.94 token/s，对AR为1.27×。B1另做60题短验证，尚未补齐修复后的全量曲线。BF16输出分歧与任务质量仍需单列。见[修复、配置及验证报告](docs/loopfill-suffix-baseline-fix.md)。
 
 **2026-11-04 更新**：主实验使用 continuous batching + 128-token chunked prefill + 跨请求 packed attention + decode CUDA Graph。两模型、六臂在完整480条数据上测试 B=1/2/4/8/16/32/64/128/256，共108组，8张GPU并行；B表示最大在场请求数。实际 OOM 单独记录，其他组继续。GPU统一独占、固定频率和CPU亲和性，同模型同B六臂绑定同一卡。见[优化后端协议](results/loopfill-optimized480-20261104/protocol.json)、[状态](results/loopfill-optimized480-20261104/status.json)、[结果表](results/loopfill-optimized480-20261104/measurements.csv)、[验证记录](results/loopfill-optimized480-20261104/validation.json)。图仅覆盖预热中常见的decode形状，未覆盖形状走eager并计数；预热和捕获在计时外。旧固定batch及未优化的continuous结果分别保留在 `results/loopfill-batch480-20261104/`、`results/loopfill-continuous480-20261104/`，不混入新结果。
 

@@ -1,8 +1,9 @@
 """Chunked prefill, shared-storage attention, and warmed decode CUDA graphs.
 
-Token decoders stay unchanged. Metadata remains request-specific even when a
-single attention call serves multiple requests. Graph capture is allowed only
-in explicit warmup; the timed run replays known shapes or records eager misses.
+Metadata remains request-specific even when a single attention call serves
+multiple requests. Optional execution padding writes to an isolated KV sink.
+Graph capture is allowed only in explicit warmup; the timed run replays known
+shapes or records eager misses. Token decoders and scheduling stay unchanged.
 """
 from __future__ import annotations
 
@@ -15,7 +16,8 @@ import torch
 import torch.nn.functional as F
 
 from .loop_batch_decode import FusedLoopExecutor
-from .loop_tree_decode import HuginnLoop, LoopKV, OuroLoop, _split, _top, _top_probs
+from .loop_tree_decode import DraftTree, HuginnLoop, LoopKV, OuroLoop, _split, _top, _top_probs
+from .loop_decode_steps import ModelCall
 
 
 def bucket(n):
@@ -24,8 +26,9 @@ def bucket(n):
 
 class SharedKVPool:
     """Allocate every request's dense cache once, as disjoint contiguous views."""
-    def __init__(self, batch_size):
+    def __init__(self, batch_size, pad_decode_rows=False):
         self.batch_size = batch_size
+        self.pad_decode_rows = pad_decode_rows
         self.used = 0
         self.signature = None
 
@@ -36,8 +39,15 @@ class SharedKVPool:
             self.slots, self.max_seq, self.max_nodes = slots, max_seq, max_nodes
             self.K = torch.zeros(self.batch_size * slots, max_seq, heads, dim, dtype=dtype, device=device)
             self.V = torch.zeros_like(self.K)
-            self.TK = torch.zeros(self.batch_size * slots, max_nodes, heads, dim, dtype=dtype, device=device)
-            self.TV = torch.zeros_like(self.TK)
+            real = self.batch_size * slots * max_nodes
+            # Padded rows write only into this private sink. Different padded
+            # rows have distinct addresses within an operation. No attention
+            # reads the sink, so different layers may reuse its storage.
+            reserve = slots * max_nodes + bucket(self.batch_size * max_nodes) if self.pad_decode_rows else 0
+            self.tree_k_storage = torch.zeros(real + reserve, heads, dim, dtype=dtype, device=device)
+            self.tree_v_storage = torch.zeros_like(self.tree_k_storage)
+            self.TK = self.tree_k_storage[:real].view(self.batch_size * slots, max_nodes, heads, dim)
+            self.TV = self.tree_v_storage[:real].view_as(self.TK)
         if self.signature != signature or self.used >= self.batch_size:
             raise ValueError('shared KV pool shape/capacity mismatch')
         index = self.used
@@ -102,7 +112,7 @@ def prefill_chunk(b, prompt, depth, start, chunk_size):
 
 
 class DecodeGraphs:
-    """Exact real row counts, bucketed attention dimensions; no timed capture."""
+    """Capture execution shapes during warmup; never capture inside timing."""
     def __init__(self, enabled=False, max_graphs=24):
         self.enabled = enabled
         self.max_graphs = max_graphs
@@ -112,6 +122,8 @@ class DecodeGraphs:
         self.candidates = {}
         self.capture_s = 0.0
         self.replays = self.eager_calls = 0
+        self.required = set()
+        self.prioritize = False
 
     @torch.no_grad()
     def freeze(self):
@@ -147,8 +159,11 @@ class DecodeGraphs:
         if self.warming:
             self.observed[key] += 1
             if key not in self.candidates and len(self.candidates) == self.max_graphs:
-                least = min(self.candidates, key=lambda k: self.observed[k])
-                if self.observed[key] > self.observed[least]:
+                eligible = [k for k in self.candidates if k not in self.required]
+                if not eligible and self.prioritize:
+                    raise ValueError('max_graphs cannot cover required verifier shapes')
+                least = min(eligible, key=lambda k: self.observed[k]) if eligible else None
+                if least is not None and (self.prioritize or self.observed[key] > self.observed[least]):
                     del self.candidates[least]
             if key not in self.candidates and len(self.candidates) < self.max_graphs:
                 self.candidates[key] = ({k: v.clone() for k, v in inputs.items()}, fn)
@@ -156,6 +171,8 @@ class DecodeGraphs:
                 static, _ = self.candidates[key]
                 for name, value in inputs.items():
                     static[name].copy_(value)
+            if self.prioritize:
+                self.required.add(key)
             self.eager_calls += 1
             return fn(inputs)
         if key in self.entries:
@@ -173,7 +190,9 @@ class PackedLoopExecutor(FusedLoopExecutor):
     """One prefix attention invocation and one tree attention batch per layer."""
     def __init__(self, backbones, cuda_graph=False, max_graphs=24):
         super().__init__(backbones)
+        self.core_execution_rows = 0
         self.pool = getattr(backbones[0].kv, 'pool', None)
+        self.backbones = backbones
         if self.pool is None or any(getattr(b.kv, 'pool', None) is not self.pool for b in backbones):
             raise ValueError('packed attention requires a shared KV pool')
         self.graphs = DecodeGraphs(cuda_graph, max_graphs)
@@ -189,6 +208,7 @@ class PackedLoopExecutor(FusedLoopExecutor):
 
     def reset_metrics(self):
         self.core_calls = self.core_rows = self.max_core_rows = 0
+        self.core_execution_rows = 0
         self.attention_batches = self.prefill_chunks = self.chunk_tokens = 0
         self.graphs.reset_counts()
 
@@ -196,7 +216,60 @@ class PackedLoopExecutor(FusedLoopExecutor):
         return dict(attention_backend='packed_prefix_and_tree', cuda_graph=self.graphs.enabled,
                     cuda_graph_shapes=len(self.graphs.entries), cuda_graph_replays=self.graphs.replays,
                     cuda_graph_eager_misses=self.graphs.eager_calls, cuda_graph_capture_s=self.graphs.capture_s,
-                    attention_policy='packed_prefix_and_tree', attention_batches=self.attention_batches)
+                    attention_policy='packed_prefix_and_tree', attention_batches=self.attention_batches,
+                    pad_decode_rows=self.pool.pad_decode_rows,
+                    core_execution_rows=self.core_execution_rows,
+                    core_padding_rows=self.core_execution_rows-self.core_rows,
+                    verifier_graph_shapes=len(self.graphs.required),
+                    padding_sink_bytes=(self.pool.tree_k_storage.numel()-self.pool.TK.numel())
+                    * self.pool.TK.element_size() * 2)
+
+    @torch.no_grad()
+    def prime_verifier_shapes(self, max_query_nodes):
+        """Cover bounded full-depth verifier shapes without reading test outputs.
+
+        Pure suffix and AR have one recurrence group per active request. Enumerate
+        reachable row/query buckets from declared capacity alone. Synthetic states
+        never enter the suffix cache or measurements; normal request admission
+        overwrites them. Prioritize recurrent graphs within the existing graph cap.
+        """
+        if not self.graphs.enabled or not self.pool.pad_decode_rows:
+            return
+        if not self.graphs.warming or not 1 <= max_query_nodes <= self.pool.max_nodes:
+            raise ValueError('invalid verifier warmup state or node bound')
+        if self.pool.max_nodes > 65:
+            raise ValueError('verifier shape priming requires a bounded tree of at most 65 slots')
+        representatives = {}
+        for largest in range(1, max_query_nodes + 1):
+            for active in range(1, len(self.backbones) + 1):
+                # A largest group plus at least one row in every other group.
+                low, high = largest + active - 1, largest * active
+                total = low
+                while total <= high:
+                    counts = [largest] + [1] * (active - 1)
+                    extra = total - low
+                    for i in range(1, active):
+                        take = min(extra, largest - 1)
+                        counts[i] += take
+                        extra -= take
+                    representatives.setdefault((bucket(total), bucket(largest)), counts)
+                    total = bucket(total) + 1
+        if len(representatives) > self.graphs.max_graphs:
+            raise ValueError(f'verifier needs {len(representatives)} graphs; increase --max-cuda-graphs')
+        self.graphs.prioritize = True
+        try:
+            for counts in representatives.values():
+                jobs = []
+                for b, count in zip(self.backbones, counts):
+                    tree = DraftTree(self.pool.max_nodes, max_query_nodes)
+                    tree.reset(min(b.kv.length, b.kv.max_seq - max_query_nodes))
+                    parent = None
+                    for _ in range(count):
+                        parent = tree.add(0, parent, 0, 'warmup')
+                    jobs.append((b, ModelCall('advance', (tree, tree.nodes))))
+                self._rows('advance', jobs)
+        finally:
+            self.graphs.prioritize = False
 
     def _rows(self, name, jobs):
         plans = []
@@ -259,8 +332,15 @@ class PackedLoopExecutor(FusedLoopExecutor):
         group_info.sort(key=lambda group: group[0])
         Q = bucket(max(z-a for _, a, z, *_ in group_info))
         N = bucket(max(len(t.nodes)-t.lo for *_, t in group_info))
+        padded_R = bucket(R) if pool.pad_decode_rows else R
+        if pool.pad_decode_rows:
+            G = max(G, bucket(pool.batch_size))
+            # Small bounded trees use a stable attention width. Large WFD
+            # buffers retain their existing dynamic width to avoid huge masks.
+            if pool.max_nodes <= 65:
+                N = bucket(pool.max_nodes)
         query_map = np.zeros((G, Q), dtype=np.int64)
-        output_map = np.zeros(R, dtype=np.int64)
+        output_map = np.zeros(padded_R, dtype=np.int64)
         anc = np.zeros((G, Q, N), dtype=bool)
         anc[:, :, 0] = True
         tree_idx = np.zeros((G, N), dtype=np.int64)
@@ -282,6 +362,11 @@ class PackedLoopExecutor(FusedLoopExecutor):
         missing = G - len(group_info)
         prefix_lengths.extend([1] * missing)
         gslots.extend([gslots[-1]] * missing)
+        padding = padded_R - R
+        base.extend([pool.batch_size * pool.slots] * padding)
+        idx.extend(range(padding))
+        pos.extend([0] * padding)
+        tokens.extend([0] * padding)
         dev = pool.K.device
         # Three packed metadata uploads, independent of request count. Graph
         # replay also copies these packed tensors rather than dozens of views.
@@ -315,7 +400,11 @@ class PackedLoopExecutor(FusedLoopExecutor):
         inputs['x'] = torch.cat([b.hidden[rows.idx] for _, b, rows, _, _, _ in plans])[None]
         if isinstance(b0, HuginnLoop):
             inputs['static'] = torch.cat([b.static[r.idx] for _, b, r, _, _, _ in plans])[None]
-        key = (name, R, G, Q, N)
+        if padding:
+            inputs['x'] = F.pad(inputs['x'], (0, 0, 0, padding))
+            if 'static' in inputs:
+                inputs['static'] = F.pad(inputs['static'], (0, 0, 0, padding))
+        key = (name, padded_R, G, Q, N)
         layer_count = (len(b0.layers) if isinstance(b0, OuroLoop) else len(b0.core)) if name == 'advance' else (
             len(b0.prelude) if name == 'embed' and isinstance(b0, HuginnLoop) else
             len(b0.coda) if isinstance(b0, HuginnLoop) else 0)
@@ -325,8 +414,9 @@ class PackedLoopExecutor(FusedLoopExecutor):
             v = metadata(v)
             def attend(layer):
                 def attention(q, k, val):
-                    pool.TK[v['base']+layer, v['idx']] = k
-                    pool.TV[v['base']+layer, v['idx']] = val
+                    write_idx = (v['base']+layer)*pool.max_nodes + v['idx']
+                    pool.tree_k_storage[write_idx] = k
+                    pool.tree_v_storage[write_idx] = val
                     qp = q[v['query_map']].view(G,Q,*q.shape[1:])
                     kt = pool.TK[(v['gslots']+layer)[:,None], v['tree_idx']].float()
                     vt = pool.TV[(v['gslots']+layer)[:,None], v['tree_idx']].float()
@@ -375,8 +465,9 @@ class PackedLoopExecutor(FusedLoopExecutor):
                         x=b0._layer(layer,x,cos,sin,attend(li))
                     return b0.inner.norm(x)
                 x=b0.model.transformer.adapter(torch.cat([x,v['static']],dim=-1))
+                freqs = b0.model.freqs_cis[:,v['pos']]
                 for li,block in enumerate(b0.core):
-                    x=b0._block(block,x,b0.model.freqs_cis[:,v['pos']],attend(li))
+                    x=b0._block(block,x,freqs,attend(li))
                 return x
             if isinstance(b0,HuginnLoop):
                 x=b0._coda(x,b0.model.freqs_cis[:,v['pos']],attend)
@@ -387,16 +478,17 @@ class PackedLoopExecutor(FusedLoopExecutor):
         if name == 'advance':
             self.core_calls += 1
             self.core_rows += R
+            self.core_execution_rows += padded_R
             self.max_core_rows = max(self.max_core_rows,R)
         if name in ('advance','embed'):
-            for (_,b,rows,_,_,_),part in zip(plans,output[0].split(counts),strict=True):
+            for (_,b,rows,_,_,_),part in zip(plans,output[0,:R].split(counts),strict=True):
                 if name == 'embed':
                     b.static[rows.idx]=part
                     b.hidden[rows.idx]=b.init[rows.pos]
                 else:
                     b.hidden[rows.idx]=part
             return results
-        for (j,b,rows,nodes,group_sizes,_),part in zip(plans,output.split(counts),strict=True):
+        for (j,b,rows,nodes,group_sizes,_),part in zip(plans,output[:R].split(counts),strict=True):
             at={n.idx:i for i,n in enumerate(rows.nodes)}
             order=b.kv.upload(np.asarray([at[n.idx] for n in nodes],dtype=np.int64))
             part=part[order]
