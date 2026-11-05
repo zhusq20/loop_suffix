@@ -2,6 +2,72 @@
 
 日期：2026-11-04。
 
+## 2026-11-05：连续匹配长度评分（新实验方法）
+
+新增 `budget-fixed-length` 与 `budget-online-length`，分别使用固定系数和在线系数。
+它们是待验证的新方法，不替换既有 `budget-raw` / `budget-online` 定义，也不改动正在运行的冻结实验。
+
+### 统一公式与动机
+
+设 suffix 边的原始条件分数为 q，检索器返回的匹配长度为 L，c=exp(u)>0：
+
+```text
+e = q (1 + L)
+p_suffix = c e / (1 + c e)
+p_model = 原有模型读出分数
+P(path) = 沿路径所有边分数的乘积
+```
+
+L 使用原始 token 数，不按模型、任务类别、数据集分位数或人为长度区间归一化。
+`1+L` 给零匹配提供一个基础单位，没有新增长度阈值、指数或可调尺度。
+这是一项明确的建模假设：让匹配长度线性增加历史接续的证据，再把证据映射为有界分数。
+匹配长度不是独立观测次数；该式不是贝叶斯后验，也不保证分数已经校准。
+
+公式对 q、L、c 单调，连续且有界；q=1 时仍小于1，允许高置信错误产生负反馈。
+q=0 时保持0。对于 q>0，其 log-odds 为 `u + log(q) + log(1+L)`。
+例如 c=1、q=0.5 时，L=1/4/16 分别得到0.500/0.714/0.895。
+这些是公式示例，不是数据驱动的分桶或拟合点。
+
+同一次 suffix 查询返回的每条边共用该次查询的 L，不加上尚未验证的草稿深度。
+一条候选的 q 与 L 都保留第一次 suffix 提案的快照；模型后续覆盖评分时仍以模型分数为准。
+路径乘积继续约束远端候选；祖先闭包、节点预算与最终全深度验证沿用现有规则。
+非空提案缺失合法 L 时明确报错，不用默认长度掩盖元数据问题。
+
+### 只学习一个标量
+
+仅当父前缀被确认时，以全深度 greedy token 产生 y=0/1 标签。
+每个父前缀至多更新一次，对它的 m 条正分数 suffix 预测取平均：
+
+```text
+u <- clip(u + eta * mean(y - p_at_proposal), log(c_min), log(c_max))
+```
+
+这是对 Bernoulli 对数损失、相对于 u 的延迟投影梯度更新。
+使用提案时保存的 p，不拿当前 c 重算旧预测；排除预算淘汰造成的标签丢失，
+但不为偏离最终前缀的父节点编造负标签。q=0 的边不随乘性系数变化，不参与该目标。
+模型覆盖评分后仍保留原 suffix 预测反馈，因此目标是检索证据校准，不等价于节点分配收益最大化。
+
+新方法以 c0=1 为统一起点；eta=0.1、范围[0.25,2]沿用现有控制器设置，未针对长度分组调参。
+每请求重置一个标量，无离线拟合和跨请求训练。`--trace-controller` 额外记录新方法每条
+反馈的 q、L、提案时 c/p 和命中标签，以便区分评分改变与实际接受收益。
+
+### 接入与验证边界
+
+在原 `loop_batch_bench.py` 命令上选取：
+
+```text
+--arms budget-fixed-length,budget-online-length --suffix-c-initial 1
+```
+
+其他输入、N/Q、模型读出、精度与调度设置应沿用要比较的协议。
+固定长度公式对照用于区分“引入长度”与“在线更新”的贡献。
+原 raw/online 对照需保留各自原配置，尤其旧 online 的 c0=0.7 不应混同于新方法的 c0=1。
+
+验证覆盖解析梯度、快照/去重、错误反馈、长度元数据传递、祖先闭包、节点回收、
+两个模型族的小模型 greedy 对齐、真实 suffix 检索器以及 CPU packed continuous batching。
+尚未得到新方法的完整 Ouro/Huginn 吞吐结果，不宣称此公式已提高 γ 或墙钟速度。
+模型分数覆盖、ABSENT=0 启发式和候选提前计算时机仍是独立限制，此次没有同时改变它们。
+
 **2026-11-05 当前执行**：按用户最新要求，关闭 CUDA Graph 和执行行填充，保留原来的 2×batch 请求预热量及其余参数。六组主方法（AR、WFD、LoopSpec、纯后缀、LoopFill-raw、LoopFill-online）在 B=1/2/4/8/16 上全部重新计时，共30组，每组完整480题、最多1024新token，8张GPU共享队列并行。见[实时状态](../results/loopfill-eager-b1-b16-huginn-20261105/status.json)和[结果表](../results/loopfill-eager-b1-b16-huginn-20261105/measurements.csv)。配置为 `@configs/loopfill-eager.args`。此前额外的 loopspec-capped 不计入六组主对照；[纯后缀修复报告](loopfill-suffix-baseline-fix.md)中的 Graph-on 结果和下方旧矩阵保留为历史记录。
 
 ## 最新执行：复用已有结果，仅补8个缺失配置（2026-11-04）
@@ -402,3 +468,108 @@ python results/loopfill-continuous480-20261104/source/scripts/loop_batch_sweep.p
 ```
 
 本轮只运行repeat-id=0；Huginn更换模型名、权重路径和输出目录。本轮自动运行入口为 `scripts/loop_batch_sweep.py`，冻结协议、源码快照和状态写入 `results/loopfill-continuous480-20261104/`；旧入口不再重启探测。不要传 `--calibration` 或 `--tau`。`--scoring raw` 是脚本保留的全局开关；`budget-online` 自身的 config/stats 明确记录 `scoring=online_suffix_i`，不会读取离线表。若只比较三个预算臂，物理容量可显式改为65；这种容量实验单独登记，不与上述共同缓冲区设置混合。
+
+## 12. 双来源与计算浪费诊断（2026-11-05）
+
+按用户要求先检查候选能否提前，再检查计算浪费。使用固定分层24题（六类别各4题）、Ouro T4、B4、最多256输出、N16、top2、两个来源各Q4、eager packed。每组从空历史开始，只发布已完成输出。以下是带观察器的诊断，不作正式吞吐证据，不替换480题主实验。
+
+原实现已经查询 local 与 history 两个来源，但只返回总 score 更高的一整棵树。保持原返回值的观察实验与原 raw 的24题输出及 calls/rows/nodes/wasted_rows/speculate_calls/covered_tokens 完全一致。在2,249个只差一轮计算的正确节点中，另一来源为74个（3.29%）提供了比实际首次提案和分配更早的正确路径；另有一个差两轮的节点也有此机会。候选可用不等于预算接纳或实际收益。[查询诊断](../results/loopfill-suffix-source-probe-ouro-20261105/runs/budget-raw/source-opportunities.json)及[观察器一致性审计](../results/loopfill-suffix-source-probe-ouro-20261105/instrumentation-audit.json)。
+
+实测三个改动：①双来源路径合并，重复路径保留原胜出来源的边分数，仅补另一来源独有路径，合并最多8候选、模型预算仍N16；②使用已有 positive-only，过滤路径分数为零的节点；③两项同时启用。没有增加拟合参数、分段权重或按任务调参。合并只用于 raw，不将两个来源不同的匹配长度伪装成一个长度。
+
+四组输出完全一致的共同16题共2,125个生成token，比较如下。calls是请求各自模型推进轮数之和，rows是节点推进计算行数，不是墙钟或FLOPs。
+
+| 方法 | calls | 相对raw | rows | 相对raw | suffix查询 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| raw | 1463 | — | 23966 | — | 11206 |
+| 双来源合并 | 1441 | -1.50% | 23642 | -1.35% | 10776 |
+| 过滤零分 | 1460 | -0.21% | 22334 | -6.81% | 9763 |
+| 两项合用 | 1440 | -1.57% | 22363 | -6.69% | 9427 |
+
+全24题的每token calls变化分别为合并-4.51%、过滤零分+0.44%、合用-0.44%，rows变化为-4.09%、-7.45%、-7.41%。各改动与raw输出完全相同的请求分别为17、19、18题，不能把不同输出长度造成的归一化差异直接解释为算法收益。共同16题是事后诊断子集，不是独立评测集，且相同输出/前缀仍不保证完成历史状态相同。真实模型输出分歧原因未在本实验定位。
+
+原先75个提前机会中，合并运行有62个仍可按相同前缀比较，其中49个根节点就绪程度提高、13个不变、0个下降。合并在其他位置也有收益和退化，净收益小于局部收益。过滤零分降低计算量，但零分来自早期top2之外的启发式，不表示真实概率为零，不应推广成“低分候选均可无损删除”。当前适合保留这个简单组合继续做未插桩的正式验证，尚不能宣称吞吐提升或核心延迟瓶颈已解决。
+
+实现为诊断入口 [loop_suffix_union_probe.py](../scripts/loop_suffix_union_probe.py)，未修改生产缓存的来源选择默认值；分析器 [loop_source_waste_analyze.py](../scripts/loop_source_waste_analyze.py)。相关28项测试通过。完整数字、逐请求配对、共同前缀统计和限制见[分析](../results/loopfill-source-waste-ablation-ouro-20261105/analysis.json)，运行协议见[独立消融](../results/loopfill-source-waste-ablation-ouro-20261105/protocol.json)与[组合验证](../results/loopfill-source-waste-combined-ouro-20261105/protocol.json)。
+
+## 13. f1 top4 与 f1/f2 各 top2（2026-11-05）
+
+用户指定比较这两种读出策略。沿用相同24题、B4、最多256输出、N16、BF16、eager packed、原raw的local/history择优Q4，每个新模型分支按同一规则查询suffix；此处不叠加来源合并或positive-only。f1 top4只在深度1读出4个候选，另一组在深度1和2各读出2个候选，最终均由深度4验证。两组候选可能重合，节点预算相同不等于实际计算量相同。
+
+新增CLI `--model-top-k 4` 与预算臂专用 `--model-readout-depths 1`，不传深度参数时保留原双读出默认值。测试验证实际读出调用、完整深度验证、greedy结果、节点预算和非法参数；相关80项通过、8项CUDA小模型测试在CPU测试进程中跳过，随后真实模型的8个运行全部成功。
+
+未插桩吞吐在GPU3上各重复3次，顺序为A/B、B/A、A/B；两个生命周期追踪在GPU4上单独运行。各方法的三次重复及追踪均输出完全一致，追踪与首轮未插桩运行的计算计数也一致。计时不包含加载与预热，包含整流prefill和decode；标准差仅描述固定输入下的计时波动。
+
+| 指标 | f1 top4 | f1/f2 各top2 |
+| --- | ---: | ---: |
+| 全24题吞吐均值±样本标准差（tokens/s） | 60.33 ± 0.65 | 68.01 ± 0.42 |
+| 全24题平均墙钟（s） | 61.67 | 54.87 |
+| 相同输出19题推进轮数 | 2075 | 1871 |
+| 相同输出19题节点计算行数 | 31395 | 30540 |
+| 相同输出19题词表读出行数 | 19644 | 26478 |
+
+双读出吞吐约高12.7%，三次配对方向一致。f1 top4在共同19题减少约25.8%的读出行数，却增加约10.9%的推进轮数、2.8%的节点计算行数，省下的读出未转化为整体收益。两方法有5题输出分歧，19题是事后诊断子集，不是独立验证集，也不能保证历史缓存相同；这些数字只支持当前小规模工作点，不外推全部batch或480题。
+
+全24题中，正确节点接棒时计算进度为0的情况从双读出的31个增加到top4的210个。分解如下：没有更早提案22→105；提案存在但没有更早获得计算槽5→83；更早分配后丢失4→22。共同前缀位置中，74个从双读出时已有2轮计算退化为top4时0轮，另有42个从2轮改善到3轮。两种策略各有局部收益，但不能用第一轮提出更多候选替代第二轮补救和分数更新。仅凭正确路径已执行后被淘汰的rows很少，也不能排除“正确提案尚未获得计算槽”的问题。
+
+完整[协议](../results/loopfill-f1top4-vs-dualtop2-ouro-20261105/protocol.json)、[结果](../results/loopfill-f1top4-vs-dualtop2-ouro-20261105/analysis.json)、[计时表](../results/loopfill-f1top4-vs-dualtop2-ouro-20261105/timing.csv)保留源码与输入哈希。可用 `python scripts/loop_readout_ablation_analyze.py results/loopfill-f1top4-vs-dualtop2-ouro-20261105` 重建分析。
+
+## 14. 过滤零分与已有孩子真实概率：两模型四组实验（2026-11-05）
+
+按用户要求重点比较两个改动，完成 **32/32 个运行**：Ouro/Huginn 各四组、三次未插桩计时和一次独立生命周期追踪。每模型使用同样24个题目ID（六类各4题），输入token使用该模型自己的正式chat分词结果；B4、最多256输出、N16、Q4、top2、两次模型读出（Ouro 1/2，Huginn 4/8）、raw固定c=1，local/history仍取胜出来源，每个模型孩子Q4。BF16、continuous、packed attention、128-token chunked prefill、Graph-off、不填充执行行；8请求×32token预热。各流历史冷启动，仅完成请求发布输出。
+
+### 改动与验证
+
+- `raw`：保留原ABSENT=0及允许零分占预算的行为。
+- `positive`：仅开启 `--positive-only`，选树时排除路径分数为零的节点。
+- `exact`：仅开启 `--existing-child-probs`。在每次浅层读出时，为当前已有孩子提取同一份全词表softmax概率，替代top2之外孩子的人工零分；仍然只新增top2模型提案，不扩大候选提案数、不新增读出深度、不重归一化top2。
+- `exact-positive`：同时开启两项。
+
+真实概率开关已接入单请求、普通融合batch和packed batch执行器；默认关闭。已有softmax只算一次，额外索引提取和GPU→CPU传输计入实际时间。CLI拒绝在没有模型读出的臂上使用该开关。日志新增已有孩子概率提取数、top-k外重评分/正分重评分计数，并修正观察器：`absent_zero_rescores`现在只计真正被赋零的事件。
+
+CPU重点检查90项通过，相关执行器回归97项通过；CUDA/BF16新增测试13项通过。覆盖全词表概率、top-k同分行为、不额外提案、预算闭包、缓存回收、两个小模型的serial/fused/packed与AR一致。当前raw与历史Ouro双top2基线24/24输出及calls/rows/nodes/readout_rows/speculate_calls/covered_tokens/wasted_rows完全一致，见[默认路径回归审计](../results/loopfill-existing-probs-20261105/baseline-regression-audit.json)。小模型验证不替代全尺寸输出一致性。
+
+### 未插桩吞吐
+
+每模型三个计时block，每个block四配置固定同一GPU，三个block改变执行顺序；另用一张GPU做四个追踪。共8卡，各运行独占一卡。表为三次吞吐的均值±样本标准差，包含prefill、decode、CPU调度和后缀操作，排除加载/预热。变化率按均值比计算，逐block配对结果另存于分析JSON。标准差同时包含计时与卡间差异，不表示题序鲁棒性。
+
+| 配置 | Ouro token/s | 对raw | Huginn token/s | 对raw |
+| --- | ---: | ---: | ---: | ---: |
+| raw | 68.71 ± 1.15 | — | 47.96 ± 0.19 | — |
+| positive | 68.48 ± 0.49 | -0.34% | 49.04 ± 0.44 | +2.25% |
+| exact | 70.63 ± 0.78 | +2.78% | 47.78 ± 0.32 | -0.38% |
+| exact-positive | 70.06 ± 0.59 | +1.95% | 47.74 ± 0.08 | -0.45% |
+
+Huginn positive三次配对吞吐变化为+2.90%、+3.00%、+0.86%；Ouro positive为+0.82%、-0.73%、-1.07%，没有稳定提速。Ouro exact为+3.74%、+2.11%、+2.52%；Huginn exact为-0.30%、-0.68%、-0.17%。所有配置自己的三次重复与追踪均24/24输出、计算计数一致；追踪时间不进入此表。
+
+### 相同输出子集与机制
+
+下面逐项与raw配对，不同变体的子集不同。仅统计相同完整输出题目的计算量；不从混合流墙钟分摊这些题目的吞吐。
+
+| 模型/配置 | 相同输出题数 | decode token数 | calls变化 | rows变化 |
+| --- | ---: | ---: | ---: | ---: |
+| Ouro positive | 19/24 | 2621 | 0.00% | -6.41% |
+| Ouro exact | 16/24 | 2125 | +0.47% | +0.14% |
+| Huginn positive | 15/24 | 625 | -1.43% | -5.75% |
+| Huginn exact | 18/24 | 1197 | +0.06% | -0.55% |
+
+exact-positive与exact在两个模型上均24/24输出和全部计算计数相同。exact已经把人工零分消除，本批次没有零路径分数可再过滤，组合没有额外算法收益。两者小幅计时差异不能当作计算轨迹改善。
+
+全24题Ouro raw的零分入选节点累计10,908次，Huginn为4,551次，三个变体均为0。exact的top2外重评分分别6,057和4,395次，全部获得正分；这是浅层模型概率，不是最终接受概率或校准保证。
+
+共同前缀上，positive的剩余等待变化为Ouro -3轮、Huginn -60轮，exact为+3轮、+32轮。全流Ouro exact的γ从5.166升至5.427，但其相同输出子集calls略增；全流输出也从3732增至3801 token，平均墙钟仅下降0.92%。因此不能把吞吐+2.78%或全流γ提高直接归因为在相同生成任务上排序更好。所有相同输出/共同前缀分析都是事后子集，也没有固定跨请求历史状态。
+
+### 当前判断与产物
+
+过滤零分的计算节省证据更直接：两个模型相同输出子集rows均下降，Huginn还有小幅一致的配对吞吐收益；Ouro的计算节省尚未变成吞吐收益。已有孩子真实概率修正改善了分数含义，但本轮没有证明它稳定改善最终接受或计算效率，不据此替换默认策略。若继续扩大验证，优先检查positive在较大batch下的成本收益；exact需要固定前缀/历史的诊断以分离轨迹变化。
+
+本轮24题已参与过机制分析，是探索样本，不是独立全量验证；没有进行任务质量评分。全尺寸BF16方法间输出分歧仍保留，不能称无条件等输出加速。
+
+[冻结协议](../results/loopfill-existing-probs-20261105/protocol.json)、[运行状态](../results/loopfill-existing-probs-20261105/status.json)、[完整分析](../results/loopfill-existing-probs-20261105/analysis.json)、[吞吐表](../results/loopfill-existing-probs-20261105/timing.csv)、[启动前审计](../results/loopfill-existing-probs-20261105/prelaunch-audit.json)均已保存，含模型专属输入哈希、源码快照与逐请求结果。实验入口为 [loop_existing_probs_suite.py](../scripts/loop_existing_probs_suite.py)：
+
+```bash
+PYTHONPATH=src python scripts/loop_existing_probs_suite.py analyze \
+  --out results/loopfill-existing-probs-20261105
+```
+
+精确复现本批次分析可调用该结果目录 `source/scripts/loop_existing_probs_suite.py`；新运行先使用 `prepare --out 新目录` 冻结协议，再从其快照运行 `run --out 新目录`。

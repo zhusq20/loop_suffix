@@ -100,7 +100,7 @@ def test_top_n_ancestor_closure_ties_zero_scores_and_current_coefficient():
 
 
 @pytest.mark.parametrize("N", [0, 1, 2, 8, 32])
-@pytest.mark.parametrize("scoring", ["raw", "online_suffix_i"])
+@pytest.mark.parametrize("scoring", ["raw", "online_suffix_i", "online_suffix_length", "fixed_suffix_length"])
 @pytest.mark.parametrize("stop", [set(), {5}])
 def test_budget_decoder_greedy_recycling_and_request_reset(N, scoring, stop):
     prompt = [1, 2, 3, 4, 5, 6, 1, 2]
@@ -135,7 +135,7 @@ def test_budget_decoder_greedy_recycling_and_request_reset(N, scoring, stop):
         assert stats["speculate_calls"] == stats["controller_updates"] == 0
         assert stats["readout_rows"] == len(got) - 1
         assert stats["calls"] == (len(got) - 1) * 4
-    elif scoring == "online_suffix_i":
+    elif scoring in ("online_suffix_i", "online_suffix_length"):
         assert stats["controller_updates"] > 0
         assert 0.25 <= stats["c_final"] <= 2
     else:
@@ -285,7 +285,7 @@ def one_thread():
 
 
 @pytest.mark.parametrize("family", ["ouro", "huginn"])
-@pytest.mark.parametrize("scoring", ["raw", "online_suffix_i"])
+@pytest.mark.parametrize("scoring", ["raw", "online_suffix_i", "online_suffix_length", "fixed_suffix_length"])
 @pytest.mark.parametrize(
     "device",
     [
@@ -382,6 +382,9 @@ def test_budget_cli_runs_without_calibration(tmp_path, monkeypatch, one_thread):
         lambda *a, **kw: SimpleNamespace(eos_token_id=None, get_vocab=lambda: {}),
     )
 
+    monkeypatch.setattr(transformers.AutoConfig, "from_pretrained",
+                        lambda *a, **kw: TinyOuro().config)
+
     def cache():
         c = BoundedSuffix()
         c.publications = []
@@ -403,7 +406,7 @@ def test_budget_cli_runs_without_calibration(tmp_path, monkeypatch, one_thread):
             "--out",
             str(out),
             "--arms",
-            "ar,budget-suffix,budget-raw,budget-online",
+            "ar,budget-suffix,budget-raw,budget-online,budget-online-length,budget-fixed-length",
             "--scoring",
             "raw",
             "--draft-node-budget",
@@ -429,7 +432,7 @@ def test_budget_cli_runs_without_calibration(tmp_path, monkeypatch, one_thread):
     )
     bench.main()
     summaries = [json.loads(p.read_text()) for p in out.glob("*-summary.json")]
-    assert len(summaries) == 8
+    assert len(summaries) == 12
     for s in summaries:
         assert s["same_as_serial_ar"] == s["requests"] == 2
         assert s["repeat_id"] == 1

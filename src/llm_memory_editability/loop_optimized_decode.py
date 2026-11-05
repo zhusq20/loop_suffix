@@ -18,6 +18,7 @@ import torch.nn.functional as F
 from .loop_batch_decode import FusedLoopExecutor
 from .loop_tree_decode import DraftTree, HuginnLoop, LoopKV, OuroLoop, _split, _top, _top_probs
 from .loop_decode_steps import ModelCall
+from .loop_tree_decode import grouped_scores, grouped_values
 
 
 def bucket(n):
@@ -67,7 +68,7 @@ def chunk_attention(kv, slot, start, end):
         mask = torch.arange(end, device=q.device)[None, :] <= torch.arange(start, end, device=q.device)[:, None]
         return F.scaled_dot_product_attention(q.transpose(0, 1)[None],
             kv.K[slot, :end].transpose(0, 1)[None], kv.V[slot, :end].transpose(0, 1)[None],
-            attn_mask=mask)[0].transpose(0, 1)
+            attn_mask=mask, enable_gqa=q.shape[1] != kv.K.shape[-2])[0].transpose(0, 1)
     return attend
 
 
@@ -91,7 +92,7 @@ def prefill_chunk(b, prompt, depth, start, chunk_size):
             x = b.inner.norm(x)
         logits = b.lm.lm_head(x[:, -1]) if end == len(prompt) else None
     else:
-        freqs = b.model.freqs_cis[:, start:end]
+        freqs = b._positions(positions)
         x = b._embed_tokens(ids)
         for li, block in enumerate(b.prelude):
             x = b._block(block, x, freqs, chunk_attention(b.kv, li, start, end))
@@ -282,7 +283,7 @@ class PackedLoopExecutor(FusedLoopExecutor):
                          else b.n_pre + n.step * b.n_core) for n in nodes]
                 sizes = None
             elif name == 'readout_top':
-                _, groups, full, m = call.args
+                _, groups, full, m = call.args[:4]
                 sizes = [len(g) for _, g in groups]
                 nodes = [n for _, g in groups for n in g] + full
                 bases = ([b.coda_extra.get(d, b.coda_shallow) for d, g in groups for _ in g]
@@ -420,16 +421,16 @@ class PackedLoopExecutor(FusedLoopExecutor):
                     qp = q[v['query_map']].view(G,Q,*q.shape[1:])
                     kt = pool.TK[(v['gslots']+layer)[:,None], v['tree_idx']].float()
                     vt = pool.TV[(v['gslots']+layer)[:,None], v['tree_idx']].float()
-                    scores = torch.einsum('gqhd,gnhd->ghqn', qp.float(), kt) * q.shape[-1]**-0.5
+                    scores = grouped_scores(qp.float(), kt) * q.shape[-1]**-0.5
                     scores = scores.masked_fill(~v['anc'][:,None], float('-inf'))
                     tree_lse = torch.logsumexp(scores, -1)
-                    tree_out = torch.einsum('ghqn,gnhd->gqhd', torch.exp(scores-tree_lse[...,None]), vt)
+                    tree_out = grouped_values(torch.exp(scores-tree_lse[...,None]), vt)
                     tree_out = tree_out.reshape(G*Q,*q.shape[1:])[v['output_map']]
                     tree_lse = tree_lse.transpose(1,2).reshape(G*Q,q.shape[1])[v['output_map']]
                     if pool.K.device.type == 'cuda' and pool.K.dtype in (torch.float16,torch.bfloat16):
                         prefix, lse = torch.ops.aten._flash_attention_forward(
-                            qp.reshape(G*Q,*q.shape[1:]), pool.K.view(-1,*q.shape[1:]),
-                            pool.V.view(-1,*q.shape[1:]), v['cuq'], v['cuk']+layer*pool.max_seq,
+                            qp.reshape(G*Q,*q.shape[1:]), pool.K.flatten(0,1),
+                            pool.V.flatten(0,1), v['cuq'], v['cuk']+layer*pool.max_seq,
                             Q, pool.max_seq, 0.0, False, False, seqused_k=v['lengths'])[:2]
                         if lse.dim() == 3:
                             lse = lse[:, :, :Q].permute(0,2,1).reshape(G*Q,q.shape[1])
@@ -441,11 +442,11 @@ class PackedLoopExecutor(FusedLoopExecutor):
                         # Dense CPU oracle; CUDA production uses the no-copy varlen path.
                         kp = pool.K[v['gslots']+layer].float()
                         vp = pool.V[v['gslots']+layer].float()
-                        scores = torch.einsum('gqhd,gnhd->ghqn',qp.float(),kp)*q.shape[-1]**-0.5
+                        scores = grouped_scores(qp.float(),kp)*q.shape[-1]**-0.5
                         valid = torch.arange(pool.max_seq,device=dev)[None,:] < v['lengths'][:,None]
                         scores = scores.masked_fill(~valid[:,None,None,:],float('-inf'))
                         lse = torch.logsumexp(scores,-1)
-                        prefix = torch.einsum('ghqn,gnhd->gqhd',torch.exp(scores-lse[...,None]),vp)
+                        prefix = grouped_values(torch.exp(scores-lse[...,None]),vp)
                         prefix = prefix.reshape(G*Q,*q.shape[1:])[v['output_map']]
                         lse = lse.transpose(1,2).reshape(G*Q,q.shape[1])[v['output_map']]
                     maximum = torch.maximum(lse,tree_lse)
@@ -455,8 +456,9 @@ class PackedLoopExecutor(FusedLoopExecutor):
             x = v['x']
             if name == 'embed':
                 x = b0._embed_tokens(v['tokens'][None])
+                freqs = b0._positions(v['pos'])
                 for li, block in enumerate(b0.prelude):
-                    x = b0._block(block,x,b0.model.freqs_cis[:,v['pos']],attend(li))
+                    x = b0._block(block,x,freqs,attend(li))
                 return x
             if name == 'advance':
                 if isinstance(b0,OuroLoop):
@@ -465,12 +467,12 @@ class PackedLoopExecutor(FusedLoopExecutor):
                         x=b0._layer(layer,x,cos,sin,attend(li))
                     return b0.inner.norm(x)
                 x=b0.model.transformer.adapter(torch.cat([x,v['static']],dim=-1))
-                freqs = b0.model.freqs_cis[:,v['pos']]
+                freqs = b0._positions(v['pos'])
                 for li,block in enumerate(b0.core):
                     x=b0._block(block,x,freqs,attend(li))
                 return x
             if isinstance(b0,HuginnLoop):
-                x=b0._coda(x,b0.model.freqs_cis[:,v['pos']],attend)
+                x=b0._coda(x,b0._positions(v['pos']),attend)
                 return b0.model.lm_head(b0.model.transformer.ln_f(x[0])).float()
             return b0.lm.lm_head(x[0]).float()
 
@@ -495,7 +497,8 @@ class PackedLoopExecutor(FusedLoopExecutor):
             split=sum(group_sizes)
             m=jobs[j][1].args[3]
             if name == 'readout_top':
-                results[j]=(_split(part[:split].argmax(-1).tolist() if m==0 else _top_probs(part[:split],m),group_sizes),part[split:].argmax(-1).tolist())
+                extra = jobs[j][1].args[4] if len(jobs[j][1].args) > 4 else None
+                results[j]=(_split(part[:split].argmax(-1).tolist() if m==0 else _top_probs(part[:split],m,extra),group_sizes),part[split:].argmax(-1).tolist())
             else:
                 tops=_top(part,m)
                 results[j]=(tops[:split],tops[split:])

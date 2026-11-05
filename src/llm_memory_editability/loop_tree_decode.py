@@ -185,6 +185,9 @@ def tree_decode_steps(
         raise ValueError(fill_scope)
     if not len(prompt) or max_new_tokens < 1:
         raise ValueError("prompt must be nonempty and max_new_tokens must be positive")
+    position_limit = getattr(backbone, 'position_limit', None)
+    if position_limit is not None and len(prompt) + max_new_tokens > position_limit:
+        raise ValueError('request exceeds model/cache context; no truncation applied')
     T, d, K = arm.depth_total, arm.draft_depth, arm.max_draft
     if arm.use_fill and d >= T:
         raise ValueError("draft depth must be below full depth")
@@ -223,6 +226,9 @@ def tree_decode_steps(
 
     while len(out) < max_new_tokens and out[-1] not in stop:
         tree.reset(backbone.length)
+        position_limit = getattr(backbone, "position_limit", None)
+        if position_limit is not None:
+            tree.max_draft = min(K, position_limit - tree.base_pos - 1)
         root = tree.add(out[-1], None, 0, "root")
         if use_suffix:
             tree.attach(root, speculate(ctx, K), 0)
@@ -274,7 +280,7 @@ def tree_decode_steps(
             for n, top in zip(sh, sh_top, strict=True):
                 if not n.alive:
                     continue
-                fill = arm.use_fill and n.depth < K and top[0] not in n.children
+                fill = arm.use_fill and n.depth < tree.max_draft and top[0] not in n.children
                 if fill and (on_path is None or n.idx in on_path):
                     f = tree.add(top[0], n, tick, "fill")
                     if f is not None and use_suffix and f.depth < K:
@@ -361,7 +367,7 @@ class LoopKV:
             self.V[slot, :n] = v
             o = F.scaled_dot_product_attention(
                 q.transpose(0, 1)[None], k.transpose(0, 1)[None], v.transpose(0, 1)[None],
-                is_causal=True,
+                is_causal=True, enable_gqa=q.shape[1] != k.shape[1],
             )  # fmt: skip
             return o[0].transpose(0, 1)
 
@@ -440,14 +446,38 @@ def make_rows(kv: LoopKV, tree: DraftTree, nodes: list[TreeNode], bases: list[in
     )  # fmt: skip
 
 
+def grouped_scores(q, k):
+    """(G,Q,Hq,D) x (G,N,Hkv,D) -> (G,Hq,Q,N), without expanding KV."""
+    heads = k.shape[-2]
+    if q.shape[-2] % heads:
+        raise ValueError('query heads must be divisible by KV heads')
+    if q.shape[-2] == heads:
+        return torch.einsum('gqhd,gnhd->ghqn', q, k)
+    groups, count, _, dim = q.shape
+    scores = torch.einsum('gqhrd,gnhd->ghrqn',
+                         q.reshape(groups, count, heads, -1, dim), k)
+    return scores.flatten(1, 2)
+
+
+def grouped_values(probs, v):
+    """(G,Hq,Q,N) x (G,N,Hkv,D) -> (G,Q,Hq,D), without expanding KV."""
+    heads = v.shape[-2]
+    if probs.shape[1] == heads:
+        return torch.einsum('ghqn,gnhd->gqhd', probs, v)
+    groups, query_heads, count, length = probs.shape
+    out = torch.einsum('ghrqn,gnhd->gqhrd',
+                       probs.reshape(groups, heads, query_heads // heads, count, length), v)
+    return out.flatten(2, 3)
+
+
 def _prefix_attention(q, kv: LoopKV, rows: Rows, layer: int, fast: bool):
     """Attention of each row over the committed prefix of its slot: (out, lse)."""
     R, H, D = q.shape
     if fast:
         out, lse = torch.ops.aten._flash_attention_forward(
             q,
-            kv.K.view(-1, H, D),
-            kv.V.view(-1, H, D),
+            kv.K.view(-1, kv.K.shape[-2], D),
+            kv.V.view(-1, kv.V.shape[-2], D),
             rows.cu_q,
             rows.cu_k + layer * kv.max_seq,
             rows.max_q,
@@ -465,9 +495,9 @@ def _prefix_attention(q, kv: LoopKV, rows: Rows, layer: int, fast: bool):
     for base, a, b in rows.groups:
         k = kv.K[base + layer, : kv.length].float()
         v = kv.V[base + layer, : kv.length].float()
-        s = torch.einsum("rhd,lhd->rhl", q[a:b].float(), k) * scale
+        s = grouped_scores(q[a:b].float()[None], k[None])[0].transpose(0, 1) * scale
         lse = torch.logsumexp(s, dim=-1)
-        outs.append(torch.einsum("rhl,lhd->rhd", torch.exp(s - lse[..., None]), v))
+        outs.append(grouped_values(torch.exp(s - lse[..., None]).transpose(0, 1)[None], v[None])[0])
         lses.append(lse)
     return torch.cat(outs), torch.cat(lses)
 
@@ -484,10 +514,10 @@ def tree_attention(q, k, v, kv: LoopKV, rows: Rows, layer: int, fast: bool | Non
     vt = kv.TV[:, lo : lo + n][rows.gslot + layer].float()
     qp = q.new_zeros(G * M, H, D)
     qp[rows.pad] = q
-    s = torch.einsum("gihd,gnhd->ghin", qp.view(G, M, H, D).float(), kt) * D**-0.5
+    s = grouped_scores(qp.view(G, M, H, D).float(), kt) * D**-0.5
     s = s.masked_fill(~rows.anc[:, None], float("-inf"))
     lse = torch.logsumexp(s, dim=-1)  # (G, H, M)
-    out = torch.einsum("ghin,gnhd->gihd", torch.exp(s - lse[..., None]), vt)
+    out = grouped_values(torch.exp(s - lse[..., None]), vt)
     out_t = out.reshape(G * M, H, D)[rows.pad]
     lse_t = lse.transpose(1, 2).reshape(G * M, H)[rows.pad]
     if kv.length == 0:
@@ -499,8 +529,14 @@ def tree_attention(q, k, v, kv: LoopKV, rows: Rows, layer: int, fast: bool | Non
     return ((out_p * w_p + out_t * w_t) / (w_p + w_t)).to(q.dtype)
 
 
-def _top_probs(logits: torch.Tensor, m: int) -> list[tuple[list[int], list[float]]]:
-    """Per row: (top-m ids, their softmax probabilities), argmax first as in _top."""
+def _top_probs(logits: torch.Tensor, m: int, extra_token_ids=None) -> list[tuple[list[int], list[float]]]:
+    """Top-m first, optionally followed by scoring-only existing children.
+
+    Extra IDs are per row in readout order. They share the full-vocabulary
+    softmax with top-m; they are never renormalized or new-token proposals.
+    """
+    if extra_token_ids is not None and len(extra_token_ids) != logits.shape[0]:
+        raise ValueError("existing child IDs must have one list per readout row")
     if logits.shape[0] == 0:
         return []
     probs = torch.softmax(logits.float(), dim=-1)
@@ -513,6 +549,15 @@ def _top_probs(logits: torch.Tensor, m: int) -> list[tuple[list[int], list[float
     ):  # fmt: skip
         rest = [(t, q) for t, q in zip(ids, ps, strict=True) if t != a][: m - 1]
         out.append(([a] + [t for t, _ in rest], [pa] + [q for _, q in rest]))
+    if extra_token_ids is not None:
+        pairs = [(row, token) for row, tokens in enumerate(extra_token_ids)
+                 for token in dict.fromkeys(tokens) if token not in out[row][0]]
+        if pairs:
+            indices = torch.tensor(pairs, dtype=torch.long, device=probs.device)
+            values = probs[indices[:, 0], indices[:, 1]].tolist()
+            for (row, token), value in zip(pairs, values, strict=True):
+                out[row][0].append(token)
+                out[row][1].append(value)
     return out
 
 
@@ -577,8 +622,6 @@ class OuroLoop(_Backbone):
             depth_total * self.n_layers, max_seq, max_nodes, cfg.num_key_value_heads, head_dim,
             p.dtype, p.device,
         )  # fmt: skip
-        if cfg.num_key_value_heads != cfg.num_attention_heads:
-            raise NotImplementedError("tree attention assumes multi-head attention")
         self.hidden = torch.zeros(max_nodes, cfg.hidden_size, dtype=p.dtype, device=p.device)
 
     def _layer(self, layer, x, cos, sin, attend):
@@ -633,7 +676,7 @@ class OuroLoop(_Backbone):
         top = _top(self.lm.lm_head(self.hidden[idx]).float(), m)
         return top[: len(shallow)], top[len(shallow) :]
 
-    def readout_top(self, tree, groups, full, m):
+    def readout_top(self, tree, groups, full, m, extra_token_ids=None):
         """groups: [(depth, nodes)]. Per group: (ids, probs) of the top-m per node; and the
         full-depth argmax per node of `full`. m=0 returns grouped argmax IDs only.
         Ouro reads every depth through lm_head."""
@@ -644,7 +687,7 @@ class OuroLoop(_Backbone):
         idx = self.kv.upload(np.array([n.idx for n in nodes]))
         logits = self.lm.lm_head(self.hidden[idx]).float()
         k = sum(sizes)
-        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m)
+        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids)
         return _split(reads, sizes), logits[k:].argmax(-1).tolist()
 
 
@@ -676,15 +719,14 @@ class HuginnLoop(_Backbone):
         self.coda_shallow = self.coda_full + len(self.coda)
         cfg = model.config
         p = next(model.parameters())
-        heads = cfg.num_attention_heads
-        if cfg.num_key_value_heads != heads:
-            raise NotImplementedError("tree attention assumes multi-head attention")
+        heads = cfg.num_key_value_heads
         # a further shallow coda cache per extra readout depth (probability-threshold arm)
         self.coda_extra = {
             r: self.coda_shallow + len(self.coda) * (j + 1) for j, r in enumerate(extra_depths)
         }
         n_slots = self.coda_shallow + len(self.coda) * (1 + len(self.coda_extra))
-        self.kv = (kv_factory or LoopKV)(n_slots, max_seq, max_nodes, heads, cfg.n_embd // heads, p.dtype, p.device)
+        self.kv = (kv_factory or LoopKV)(n_slots, max_seq, max_nodes, heads,
+                                       cfg.n_embd // cfg.num_attention_heads, p.dtype, p.device)
         if max_seq > model.freqs_cis.shape[1]:
             raise ValueError(f"max_seq {max_seq} beyond the RoPE table {model.freqs_cis.shape[1]}")
         self.rope = sys.modules[type(model).__module__].apply_rotary_emb_complex_like
@@ -719,10 +761,13 @@ class HuginnLoop(_Backbone):
         x = self.model.transformer.wte(ids)
         return x * self.model.emb_scale if self.model.emb_scale != 1 else x
 
+    def _positions(self, positions):
+        return self.model.freqs_cis[:, positions]
+
     def prefill(self, prompt: list[int], shallow_depth: int | None) -> int:
         P = len(prompt)
         dev = self.kv.K.device
-        freqs = self.model.freqs_cis[:, :P]
+        freqs = self._positions(torch.arange(P, device=dev))
         x = self._embed_tokens(torch.tensor([prompt], device=dev))
         for li, block in enumerate(self.prelude):
             x = self._block(block, x, freqs, self.kv.dense(li))
@@ -749,7 +794,7 @@ class HuginnLoop(_Backbone):
 
     def embed(self, tree: DraftTree, nodes: list[TreeNode]) -> None:
         rows = make_rows(self.kv, tree, nodes, [0] * len(nodes))
-        freqs = self.model.freqs_cis[:, rows.pos]
+        freqs = self._positions(rows.pos)
         x = self._embed_tokens(self.kv.upload(np.array([[n.token for n in rows.nodes]])))
         for li, block in enumerate(self.prelude):
             x = self._block(
@@ -761,7 +806,7 @@ class HuginnLoop(_Backbone):
     def advance(self, tree: DraftTree, nodes: list[TreeNode]) -> None:
         bases = [self.n_pre + self.n_core * n.step for n in nodes]
         rows = make_rows(self.kv, tree, nodes, bases)
-        freqs = self.model.freqs_cis[:, rows.pos]
+        freqs = self._positions(rows.pos)
         x = torch.cat([self.hidden[rows.idx], self.static[rows.idx]], dim=-1)[None]
         x = self.model.transformer.adapter(x)
         for li, block in enumerate(self.core):
@@ -780,7 +825,7 @@ class HuginnLoop(_Backbone):
         kind = {n.idx: i < len(shallow) and not shared_coda for i, n in enumerate(nodes)}
         bases = [self.coda_shallow if kind[n.idx] else self.coda_full for n in nodes]
         rows = make_rows(self.kv, tree, nodes, bases)
-        freqs = self.model.freqs_cis[:, rows.pos]
+        freqs = self._positions(rows.pos)
         y = self._coda(
             self.hidden[rows.idx][None],
             freqs,
@@ -790,7 +835,7 @@ class HuginnLoop(_Backbone):
         by_idx = dict(zip((n.idx for n in rows.nodes), _top(logits, m), strict=True))
         return [by_idx[n.idx] for n in shallow], [by_idx[n.idx] for n in full]
 
-    def readout_top(self, tree, groups, full, m):
+    def readout_top(self, tree, groups, full, m, extra_token_ids=None):
         """As OuroLoop.readout_top. A depth-r readout attends to depth-r coda states: the
         shallow coda cache for the draft depth, an extra one per deeper readout depth."""
         sizes = [len(g) for _, g in groups]
@@ -800,7 +845,7 @@ class HuginnLoop(_Backbone):
         bases = [self.coda_extra.get(r, self.coda_shallow) for r, g in groups for _ in g]
         bases += [self.coda_full] * len(full)
         rows = make_rows(self.kv, tree, nodes, bases)
-        freqs = self.model.freqs_cis[:, rows.pos]
+        freqs = self._positions(rows.pos)
         y = self._coda(
             self.hidden[rows.idx][None],
             freqs,
@@ -811,5 +856,5 @@ class HuginnLoop(_Backbone):
         order = self.kv.upload(np.array([at[n.idx] for n in nodes]))
         logits = logits[order]
         k = sum(sizes)
-        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m)
+        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids)
         return _split(reads, sizes), logits[k:].argmax(-1).tolist()

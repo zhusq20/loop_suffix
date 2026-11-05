@@ -2,6 +2,8 @@
 
 更新：2026-11-05。本文记录当前确定的论文实验范围与指标；与旧实验总计划冲突时，以本文为准。既有结果保留原协议，不改名为新实验。
 
+**当前执行（2026-11-05）**：Huginn eager 六方法五档实验已结束（29组完成、WFD B16 OOM），见[完整汇总与主表草稿](loopfill-eager-paper-summary.md)。按用户要求，Ouro-2.6B 同协议六方法、B=1/2/4/8/16 共30组已启动，见[状态](../results/loopfill-eager-b1-b16-ouro-20261105/status.json)、[协议](../results/loopfill-eager-b1-b16-ouro-20261105/protocol.json)和[汇总](../results/loopfill-eager-b1-b16-ouro-20261105/aggregate.csv)。完整480题、每题最多1024新token、BF16、continuous/packed、Graph-off、执行行填充关闭、2B请求预热、N16/Q4/top2、online初值0.7与η0.1均保留；模型特有T=4、读出深度1/2。单次计时，8张GPU共享队列，每组占一张卡。没有启动消融或重复计时。
+
 ## 1. 中心论点
 
 后缀检索与早期循环预测具有互补性。在同一棵草稿树内接续两种来源，可以更早启动未来正确位置的计算，并在有限节点预算内减少生成所需的串行 loop steps。

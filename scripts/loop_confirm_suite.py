@@ -83,7 +83,7 @@ def audit(out, protocol, job, smoke=False):
     if reason:
         raise ValueError(f'Incompatible measurement: {reason}: {out}')
     ids = protocol['request_ids'][:8] if smoke else protocol['request_ids']
-    summary, = audit_run(out, set(ids), True)
+    summary, = audit_run(out, set(ids), protocol.get('require_serial_reference', True))
     if summary['cap_skips'] or summary['attention_policy'] != 'packed_prefix_and_tree':
         raise ValueError('Capacity truncation or wrong backend')
     if summary['repeat_id'] != job['repeat'] or summary['order_seed'] != 0:
@@ -221,7 +221,7 @@ def summarize(out):
             rs = {r['request_id']: r for r in read_rows(target / f'{prefix}.jsonl')}
             records[(j['batch'], j['arm'], j['repeat'])] = rs
             row.update(tok_s=s['output_tput'], wall_s=s['wall_s'], output_tokens=s['output_tokens'],
-                requests=s['requests'], same_as_serial_ar=s['same_as_serial_ar'],
+                requests=s['requests'], same_as_serial_ar=s.get('same_as_serial_ar'),
                 peak_allocated_gib=s['peak_allocated_bytes'] / 2**30,
                 rows_per_token=s['core_rows'] / s['output_tokens'],
                 controller_updates=sum(r['stats'].get('controller_updates', 0) for r in rs.values()))

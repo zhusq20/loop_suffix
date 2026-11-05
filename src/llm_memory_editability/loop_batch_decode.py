@@ -14,6 +14,7 @@ from dataclasses import dataclass, field
 import numpy as np
 import torch
 
+from .loop_raven_decode import RavenLoop
 from .loop_prob_decode import prob_tree_decode_steps
 from .loop_budget_decode import BudgetConfig, budget_tree_decode_steps
 from .loop_loopspec_decode import LoopSpecConfig, loopspec_decode_steps
@@ -37,8 +38,8 @@ class FusedLoopExecutor:
         if not backbones:
             raise ValueError("at least one backbone is required")
         self.first = backbones[0]
-        if type(self.first) not in (OuroLoop, HuginnLoop):
-            raise TypeError("fused executor supports OuroLoop and HuginnLoop")
+        if type(self.first) not in (OuroLoop, HuginnLoop, RavenLoop):
+            raise TypeError("fused executor supports OuroLoop, HuginnLoop and RavenLoop")
         model = getattr(self.first, "lm", getattr(self.first, "model", None))
         for b in backbones:
             if (
@@ -86,7 +87,7 @@ class FusedLoopExecutor:
                     bases = [b.n_pre + n.step * b.n_core for n in nodes]
                 sizes = None
             elif name == "readout_top":
-                _, groups, full, m = call.args
+                _, groups, full, m = call.args[:4]
                 sizes = [len(g) for _, g in groups]
                 nodes = [n for _, g in groups for n in g] + full
                 bases = (
@@ -144,7 +145,7 @@ class FusedLoopExecutor:
                 )
             )
             x = b0._embed_tokens(ids[None])
-            freqs = b0.model.freqs_cis[:, pos]
+            freqs = b0._positions(pos)
             for li, block in enumerate(b0.prelude):
                 x = b0._block(block, x, freqs, attend(li))
             for (_, b, rows, _, _), part in zip(plans, x[0].split(sizes), strict=True):
@@ -165,14 +166,15 @@ class FusedLoopExecutor:
             else:
                 static = torch.cat([b.static[r.idx] for _, b, r, _, _ in plans])[None]
                 x = b0.model.transformer.adapter(torch.cat([x, static], dim=-1))
+                freqs = b0._positions(pos)
                 for li, block in enumerate(b0.core):
-                    x = b0._block(block, x, b0.model.freqs_cis[:, pos], attend(li))
+                    x = b0._block(block, x, freqs, attend(li))
             for (_, b, rows, _, _), part in zip(plans, x[0].split(sizes), strict=True):
                 b.hidden[rows.idx] = part
             return results
 
         if isinstance(b0, HuginnLoop):
-            x = b0._coda(x, b0.model.freqs_cis[:, pos], attend)
+            x = b0._coda(x, b0._positions(pos), attend)
             logits = b0.model.lm_head(b0.model.transformer.ln_f(x[0])).float()
         else:
             logits = b0.lm.lm_head(x[0]).float()
@@ -186,7 +188,7 @@ class FusedLoopExecutor:
             if name == "readout_top":
                 results[j] = (
                     _split(part[:k].argmax(-1).tolist() if m == 0 else
-                           _top_probs(part[:k], m), group_sizes),
+                           _top_probs(part[:k], m, jobs[j][1].args[4] if len(jobs[j][1].args) > 4 else None), group_sizes),
                     part[k:].argmax(-1).tolist(),
                 )
             else:

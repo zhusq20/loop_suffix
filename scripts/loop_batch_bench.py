@@ -14,6 +14,7 @@ import fcntl
 import gc
 import hashlib
 import json
+import os
 import random
 import subprocess
 import time
@@ -30,10 +31,15 @@ from llm_memory_editability.loop_batch_suffix import CompletionSuffixCache
 from llm_memory_editability.loop_prob_tree import Calibration, ProbConfig
 from llm_memory_editability.loop_suffix_spec import ArmConfig
 from llm_memory_editability.loop_tree_decode import HuginnLoop, OuroLoop, tree_decode
+from llm_memory_editability.loop_raven_decode import RavenLoop, INIT_POLICY
+from llm_memory_editability.loop_model_registry import (
+    MODELS, checkpoint_manifest, context_audit, resolve_stop_ids, tokenize_prompt,
+)
 
-SPECS = {"ouro-2.6b": (4, 1, 2, "<|im_end|>"), "huginn-3.5b": (32, 4, 8, "<|end_turn|>")}
+SPECS = {k: (s.depth_total, *s.loopfill_readout_depths, s.stop_token) for k, s in MODELS.items()}
 ARMS = ("ar", "wavefront", "prob-low", "prob-load", "suffix",
-        "budget-raw", "budget-online", "budget-fixed", "budget-suffix", "budget-shallow", "loopspec-dual", "loopspec-capped")
+        "budget-raw", "budget-online", "budget-fixed", "budget-online-length", "budget-fixed-length",
+        "budget-suffix", "budget-shallow", "loopspec-dual", "loopspec-capped")
 
 
 def parser():
@@ -51,12 +57,19 @@ def parser():
     p.add_argument("--suffix-c-min", type=float, default=0.25)
     p.add_argument("--suffix-c-max", type=float, default=2.0)
     p.add_argument("--suffix-c-initial", type=float, default=1.0,
-                   help="initial online coefficient, or constant coefficient for budget-fixed")
-    p.add_argument("--model-top-k", type=int, choices=(1, 2, 8), default=8)
+                   help="initial online coefficient, or constant coefficient for budget-fixed[-length]")
+    p.add_argument("--model-top-k", type=int, choices=(1, 2, 4, 8), default=8)
+    p.add_argument("--model-readout-depths", type=int, nargs="+",
+                   help="budget arms only: intermediate model readout depths; default uses both model-specific depths")
+    p.add_argument('--loopspec-depths', type=int, nargs=2,
+                   help='LoopSpec first/second readout only; defaults to registry')
+    p.add_argument('--wavefront-depth', type=int, help='WFD first readout only; defaults to registry')
     p.add_argument("--child-suffix-policy", choices=("all", "best1", "none"), default="all")
     p.add_argument("--child-suffix-caps", type=int, nargs="+",
                    help="per-model-rank suffix node caps; zero skips that child's query; root cap unchanged")
     p.add_argument("--positive-only", action="store_true")
+    p.add_argument("--existing-child-probs", action="store_true",
+                   help="budget model arms: score existing children outside top-k with their full-vocabulary softmax probability")
     p.add_argument("--progress-every", type=int, default=0,
                    help="write progress after this many completed requests; zero disables")
     p.add_argument("--trace-controller", action="store_true",
@@ -89,7 +102,8 @@ def parser():
         "--max-nodes", type=int, default=8192, help="per-slot tree cap; logged, never hidden"
     )
     p.add_argument("--suffix-max-draft", type=int, default=64)
-    p.add_argument("--prompt-format", choices=("raw", "chat"), default="chat")
+    p.add_argument("--prompt-format", choices=("raw", "chat"),
+                   help='defaults to the registered model prompt format')
     p.add_argument("--dtype", choices=("float32", "bfloat16"), default="bfloat16")
     p.add_argument("--device", default="cuda:0")
     p.add_argument(
@@ -106,6 +120,8 @@ def parser():
         help="compare against untimed serial AR; FP32 fails on mismatch",
     )
     p.add_argument("--reference-file", help="locked, resumable serial AR JSONL shared by paired runs")
+    p.add_argument('--reference-only', action='store_true',
+                   help='generate/resume the untimed serial reference and exit without timing')
     p.add_argument(
         "--profile", action="store_true", help="export a PyTorch trace; results marked profiled"
     )
@@ -115,20 +131,30 @@ def parser():
 def arm_config(name, T, d, deep, suffix_max_draft, *, draft_node_budget=64,
                suffix_eta=0.1, suffix_c_min=0.25, suffix_c_max=2.0, trace_controller=False,
                model_top_k=8, child_suffix_policy="all", positive_only=False, child_suffix_caps=None,
-               suffix_c_initial=1.0):
+               suffix_c_initial=1.0, model_readout_depths=None, existing_child_probs=False,
+               loopspec_depths=None, wavefront_depth=None):
+    if model_readout_depths is not None and not name.startswith("budget-"):
+        raise ValueError("model readout override requires budget arms")
+    if existing_child_probs and (not name.startswith("budget-") or name == "budget-suffix"):
+        raise ValueError("existing child probabilities require budget arms with model readouts")
     if name in ("loopspec-dual", "loopspec-capped"):
+        d, deep = loopspec_depths or (d, deep)
         return LoopSpecConfig(name, T, d, deep,
                               draft_node_budget=draft_node_budget if name == "loopspec-capped" else None)
     if name.startswith("budget-"):
         return BudgetConfig(
-            name, T, d, (d, deep), draft_node_budget=draft_node_budget,
-            scoring={"budget-online": "online_suffix_i", "budget-fixed": "fixed_suffix"}.get(name, "raw"),
+            name, T, d, (d, deep) if model_readout_depths is None else tuple(model_readout_depths),
+            draft_node_budget=draft_node_budget,
+            scoring={"budget-online": "online_suffix_i", "budget-fixed": "fixed_suffix",
+                     "budget-online-length": "online_suffix_length",
+                     "budget-fixed-length": "fixed_suffix_length"}.get(name, "raw"),
             eta=suffix_eta, c_min=suffix_c_min, c_max=suffix_c_max,
             use_model=name != "budget-suffix", suffix_room=suffix_max_draft,
             use_suffix=name != "budget-shallow", top_m=model_top_k,
             child_suffix_policy=child_suffix_policy, positive_only=positive_only,
             child_suffix_caps=tuple(child_suffix_caps) if child_suffix_caps is not None else None,
             c_initial=suffix_c_initial,
+            existing_child_probs=existing_child_probs,
             trace_controller=trace_controller,
         )
     if name.startswith("prob-"):
@@ -145,46 +171,52 @@ def arm_config(name, T, d, deep, suffix_max_draft, *, draft_node_budget=64,
     return ArmConfig(
         name,
         T,
-        d,
+        wavefront_depth if name == 'wavefront' and wavefront_depth is not None else d,
         (1 << 30) if name == "wavefront" else suffix_max_draft,
         name == "suffix",
         name == "wavefront",
     )
 
 
-def load_requests(path, tokenizer, args, model_eos):
+def load_requests(path, tokenizer, args, model_eos, generation_eos=None, vocab_size=None):
     rows = [json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
     rows.sort(key=lambda r: r.get("question_id", r.get("request_id", 0)))
     if args.limit is not None:
         rows = rows[: args.limit]
-    eos = tokenizer.eos_token_id if args.model.startswith("ouro") else model_eos
-    stop = set(eos if isinstance(eos, list) else ([] if eos is None else [eos]))
-    if args.prompt_format == "chat":
-        token = SPECS[args.model][3]
-        if token in tokenizer.get_vocab():
-            stop.add(tokenizer.convert_tokens_to_ids(token))
+    spec = MODELS[args.model]
+    fmt = args.prompt_format or spec.prompt_format
+    vocab_size = vocab_size or (max(tokenizer.get_vocab().values()) + 1)
+    stop, _ = resolve_stop_ids(spec, tokenizer, model_eos, generation_eos, vocab_size, fmt)
     requests, metadata = [], {}
     for i, row in enumerate(rows):
         rid = row.get("question_id", row.get("request_id", i))
+        if row.get('model_id', args.model) != args.model:
+            raise ValueError(f'request {rid}: tokenized input belongs to another model')
         if "prompt_token_ids" in row:
             prompt = row["prompt_token_ids"]
         else:
             text = row["turns"][0] if "turns" in row else row["prompt"]
-            prompt = (
+            prompt = tokenize_prompt(spec, tokenizer, text, fmt) if spec.expansion else (
                 tokenizer.apply_chat_template(
                     [{"role": "user", "content": text}], add_generation_prompt=True
                 )
-                if args.prompt_format == "chat"
+                if fmt == "chat"
                 else tokenizer(text).input_ids
             )
         n = row.get("max_new_tokens", args.max_new_tokens)
+        if any(type(t) is not int or not 0 <= t < vocab_size for t in prompt):
+            raise ValueError(f'request {rid}: invalid input token ID')
         # Reserve room for unverified WFD descendants near the output boundary.
-        margin = SPECS[args.model][0] + args.suffix_max_draft
+        margin = 0 if spec.expansion else SPECS[args.model][0] + args.suffix_max_draft
         if not prompt or n < 1 or len(prompt) + n + margin > args.max_seq:
             raise ValueError(
                 f"request {rid}: prompt={len(prompt)}, output={n}, margin={margin}; "
                 f"exceeds max_seq={args.max_seq} or invalid budget. No truncation applied."
             )
+        if spec.expansion:
+            audit = context_audit(spec, rid, prompt, n, max_seq=args.max_seq)
+            if not audit['context_ok']:
+                raise ValueError(f'request {rid}: exceeds model context; no truncation: {audit}')
         requests.append(BatchRequest(rid, list(prompt), n, stop.copy()))
         metadata[rid] = dict(category=row.get("category"), prompt_tokens=len(prompt))
     if not requests or len(metadata) != len(requests):
@@ -248,6 +280,8 @@ def serial_reference(path, identity, requests, generate):
 
 def main():
     args = parser().parse_args()
+    spec = MODELS[args.model]
+    args.prompt_format = args.prompt_format or spec.prompt_format
     warmup_request_limit_factor = args.warmup_request_limit_factor
     if warmup_request_limit_factor is None:
         warmup_request_limit_factor = 2 if args.cuda_graph else 1
@@ -269,6 +303,8 @@ def main():
         raise ValueError("repeat-id must be nonnegative")
     if args.reference_file and not args.check:
         raise ValueError("--reference-file requires --check")
+    if args.reference_only and not args.check:
+        raise ValueError('--reference-only requires --check')
     if budget_arms:
         if args.calibration or args.tau is not None or args.scoring != "raw":
             raise ValueError("budget arms require --scoring raw and no calibration or tau")
@@ -286,6 +322,10 @@ def main():
             positive_only=args.positive_only,
             child_suffix_caps=args.child_suffix_caps,
             suffix_c_initial=args.suffix_c_initial,
+            model_readout_depths=args.model_readout_depths,
+            existing_child_probs=args.existing_child_probs,
+            loopspec_depths=args.loopspec_depths or spec.loopspec_depths,
+            wavefront_depth=args.wavefront_depth or spec.wavefront_depth,
         )
         if isinstance(config, ProbConfig) and args.tau is not None:
             config = replace(config, tau=args.tau)
@@ -298,7 +338,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     if (out / "metadata.json").exists():
         raise FileExistsError(f"{out} already contains a benchmark; use a new output directory")
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
     torch.set_num_threads(args.threads)
     torch.manual_seed(args.seed)
@@ -308,6 +348,14 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(
         args.model_path, trust_remote_code=True, local_files_only=True
     )
+    model_config = AutoConfig.from_pretrained(args.model_path, trust_remote_code=True, local_files_only=True)
+    generation_path = Path(args.model_path) / 'generation_config.json'
+    generation_eos = json.loads(generation_path.read_text()).get('eos_token_id') if generation_path.exists() else None
+    reqs, req_meta = load_requests(args.questions, tokenizer, args,
+                                  getattr(model_config, 'eos_token_id', None), generation_eos,
+                                  model_config.vocab_size)
+    _, stop_audit = resolve_stop_ids(spec, tokenizer, getattr(model_config, 'eos_token_id', None),
+                                    generation_eos, model_config.vocab_size, args.prompt_format)
     model = (
         AutoModelForCausalLM.from_pretrained(
             args.model_path,
@@ -319,12 +367,11 @@ def main():
         .eval()
     )
     model = enforce_precision(model, args.dtype)
-    reqs, req_meta = load_requests(
-        args.questions, tokenizer, args, getattr(model.config, "eos_token_id", None)
-    )
     T, d, deep, _ = SPECS[args.model]
     if args.model.startswith("ouro"):
         model.model.total_ut_steps = T
+        model.early_exit_step = None
+        model.early_exit_threshold = None
     calibration = None
     if args.calibration:
         raw = json.loads(Path(args.calibration).read_text())
@@ -358,8 +405,19 @@ def main():
 
     def backbone(nodes=None, kv_factory=None):
         nodes = args.max_nodes if nodes is None else nodes
-        if args.model.startswith("ouro"):
-            return OuroLoop(model, T, args.max_seq, nodes, kv_factory=kv_factory)
+        if spec.backend == 'ouro':
+            b = OuroLoop(model, T, args.max_seq, nodes, kv_factory=kv_factory)
+            if spec.expansion:
+                b.position_limit = min(args.max_seq, spec.context_limit)
+            return b
+        if spec.backend == 'raven':
+            depths = set(spec.loopfill_readout_depths) | set(args.loopspec_depths or spec.loopspec_depths)
+            depths.update(args.model_readout_depths or ())
+            # Every explicitly requested depth gets a separate coda prefix.
+            return RavenLoop(model, T, args.max_seq, nodes, args.seed,
+                             extra_depths=tuple(sorted(depths)), kv_factory=kv_factory)
+        if spec.backend != 'huginn':
+            raise ValueError(f'Unknown backend: {spec.backend}')
         return HuginnLoop(
             model, T, args.max_seq, nodes, args.seed, args.max_seq, extra_depths=(deep,), kv_factory=kv_factory
         )
@@ -383,6 +441,9 @@ def main():
             subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True).stdout
         ),
         torch=torch.__version__,
+        transformers=__import__('transformers').__version__,
+        cpu_affinity=sorted(os.sched_getaffinity(0)),
+        actual_kv_dtype=str(getattr(torch, args.dtype)),
         actual_parameter_dtypes=sorted({str(p.dtype) for p in model.parameters()}),
         complex_buffer_dtypes={name: str(value.dtype) for name, value in model.named_buffers()
                                if value.is_complex()},
@@ -405,6 +466,11 @@ def main():
         profiled=args.profile,
         controller_profiled=args.trace_controller,
         configs={arm: asdict(config) for arm, config in configs.items()},
+        checkpoint=checkpoint_manifest(spec, args.model_path) if spec.expansion else None,
+        loaded_model_class=f'{type(model).__module__}.{type(model).__name__}',
+        stop_audit=stop_audit,
+        initialization_policy=INIT_POLICY if spec.backend == 'raven' else 'historical_backend',
+        coda_policy='independent_depth_caches; WFD uses its existing shared coda rule',
         physical_nodes={arm: nodes_for(arm) for arm in arms},
     )
     (out / "metadata.json").write_text(json.dumps(meta, indent=2))
@@ -437,6 +503,11 @@ def main():
         gc.collect()
         if device.type == "cuda":
             torch.cuda.empty_cache()
+
+    if args.reference_only:
+        (out / 'reference-complete.json').write_text(json.dumps(dict(
+            requests=len(reference), reference_sha256=meta['reference_sha256'])))
+        return
 
     def allocate(B, nodes):
         # A dense cache can be large: fail explicitly rather than silently lowering B/caps.

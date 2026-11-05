@@ -49,6 +49,45 @@ def test_three_repeats_cover_exactly_requested_batches_and_distinct_artifacts():
     assert arm_order(2) != arm_order(0)
 
 
+def test_throughput_audit_and_summary_allow_explicitly_unmeasured_serial_agreement(tmp_path):
+    import json
+    from loop_confirm_suite import audit, summarize
+    from loop_capacity_suite import digest
+    protocol, job, meta = fixture_data()
+    protocol.update(require_serial_reference=False, request_ids=[1])
+    job.update(key='test', gpu=0, outcome='complete', output=str(tmp_path))
+    questions = tmp_path/'questions.jsonl'
+    questions.write_text('{}\n')
+    meta['args']['questions'] = str(questions)
+    meta['questions_sha256'] = protocol['questions_sha256'] = digest(questions)
+    protocol['execution_args']['check'] = meta['args']['check'] = False
+    (tmp_path/'metadata.json').write_text(json.dumps(meta))
+    prefix = 'budget-online-b8-seed0'
+    rows = [dict(request_id=1,tokens=[2],stats=dict(peak_draft_nodes=0,controller_updates=1))]
+    (tmp_path/f'{prefix}.jsonl').write_text(json.dumps(rows[0])+'\n')
+    summary = dict(output_tokens=1, wall_s=1, output_tput=1, requests=1, max_active_requests=1,
+                   cap_skips=0,attention_policy='packed_prefix_and_tree',repeat_id=0,order_seed=0,
+                   peak_allocated_bytes=1,core_rows=1)
+    (tmp_path/f'{prefix}-summary.json').write_text(json.dumps(summary))
+    (tmp_path/'complete.json').write_text('{}')
+    assert audit(tmp_path, protocol, job) == summary
+    (tmp_path/'jobs').mkdir()
+    (tmp_path/'jobs/test.json').write_text(json.dumps(job))
+    summarize(tmp_path)
+    import csv
+    with (tmp_path/'measurements.csv').open() as f:
+        measurement, = csv.DictReader(f)
+    assert measurement['same_as_serial_ar'] == ''
+    assert measurement['tok_s'] == '1'
+    protocol['require_serial_reference'] = True
+    with pytest.raises(ValueError, match='missing serial-AR comparison'):
+        audit(tmp_path, protocol, job)
+    protocol['require_serial_reference'] = False
+    (tmp_path/f'{prefix}.jsonl').write_text('')
+    with pytest.raises(ValueError, match='request coverage'):
+        audit(tmp_path, protocol, job)
+
+
 @pytest.mark.parametrize('arm', ARMS)
 @pytest.mark.parametrize('smoke', [False, True])
 def test_commands_preserve_backend_and_use_the_right_initial_weight(arm, smoke):

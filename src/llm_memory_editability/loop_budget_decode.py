@@ -46,12 +46,15 @@ class BudgetConfig:
     positive_only: bool = False
     child_suffix_caps: tuple[int, ...] | None = None
     c_initial: float = 1.0
+    existing_child_probs: bool = False
 
     def __post_init__(self):
         if not isinstance(self.draft_node_budget, int) or self.draft_node_budget < 0:
             raise ValueError("draft_node_budget must be a nonnegative integer")
-        if self.scoring not in ("raw", "fixed_suffix", "online_suffix_i") or self.tree_policy != "node_budget":
-            raise ValueError("budget decoder supports raw, fixed_suffix or online_suffix_i scoring")
+        if self.scoring not in (
+            "raw", "fixed_suffix", "online_suffix_i", "fixed_suffix_length", "online_suffix_length"
+        ) or self.tree_policy != "node_budget":
+            raise ValueError("unsupported budget decoder scoring or tree policy")
         if not (math.isfinite(self.eta) and self.eta > 0):
             raise ValueError("eta must be finite and positive")
         if not (0 < self.c_min < 1 < self.c_max < math.inf):
@@ -68,8 +71,8 @@ class BudgetConfig:
             or (self.use_model and self.draft_depth not in self.readout_depths)
         ):
             raise ValueError("readout depths must be unique, below T, and include draft depth")
-        if self.top_m not in (1, 2, 8) or self.suffix_room < 1:
-            raise ValueError("model top-k must be 1, 2 or 8; suffix query cap must be positive")
+        if self.top_m not in (1, 2, 4, 8) or self.suffix_room < 1:
+            raise ValueError("model top-k must be 1, 2, 4 or 8; suffix query cap must be positive")
         if self.child_suffix_policy not in ("all", "best1", "none"):
             raise ValueError("child_suffix_policy must be all, best1 or none")
         if self.child_suffix_caps is not None and (
@@ -90,11 +93,25 @@ def _score(value):
     return min(1.0, value)
 
 
+def suffix_score(q: float, coefficient: float, match_len: int | None = None) -> float:
+    """Legacy multiplication, or continuous match-length evidence-to-odds mapping.
+
+    For length weighting, odds = c * q * (1 + L). L is the retriever's
+    observed match length, not a sample count or speculative continuation depth.
+    The added unit defines the zero-match baseline without a fitted length scale.
+    """
+    if match_len is None:
+        return min(1.0, coefficient * q)
+    evidence = coefficient * q * (1 + match_len)
+    return evidence / (1.0 + evidence)
+
+
 @dataclass(frozen=True)
 class SuffixPrediction:
     q: float
     coefficient: float
     prediction: float
+    match_len: int | None = None
 
 
 class SuffixController:
@@ -117,15 +134,31 @@ class SuffixController:
 
     @property
     def enabled(self):
-        return self.cfg.scoring == "online_suffix_i" and self.cfg.draft_node_budget > 0
+        return (
+            self.cfg.scoring in ("online_suffix_i", "online_suffix_length")
+            and self.cfg.draft_node_budget > 0
+        )
 
-    def observe(self, parent: Path, token: int, q: float):
+    @property
+    def length_conditioned(self):
+        return self.cfg.scoring in ("fixed_suffix_length", "online_suffix_length")
+
+    def observe(self, parent: Path, token: int, q: float, match_len: int | None = None):
         if not self.enabled or parent in self.known:
             return
         records = self.records.setdefault(parent, {})
         if token not in records:
             q = _score(q)
-            records[token] = SuffixPrediction(q, self.c, min(1.0, self.c * q))
+            if self.length_conditioned:
+                if type(match_len) is not int or match_len < 0:
+                    raise ValueError("length scoring requires a nonnegative integer match_len")
+                # A multiplicative controller cannot change a zero-evidence edge.
+                # Exclude it from the positive-evidence logistic objective.
+                if q == 0:
+                    return
+            else:
+                match_len = None
+            records[token] = SuffixPrediction(q, self.c, suffix_score(q, self.c, match_len), match_len)
             self.pending += 1
             self.created += 1
             self.peak_records = max(self.peak_records, self.pending)
@@ -136,7 +169,11 @@ class SuffixController:
             self.known.add(parent)
 
     def verify(self, parent: Path, gold: int):
-        """Called only when this parent is on the confirmed prefix; at most once."""
+        """Called once on a confirmed parent, using prediction-time snapshots.
+
+        With length scores, y-p is the negative Bernoulli log-loss gradient
+        w.r.t. log(c). This is a delayed, projected online gradient step.
+        """
         self.mark_known(parent)
         records = self.records.pop(parent, {})
         self.pending -= len(records)
@@ -159,6 +196,11 @@ class SuffixController:
             c_after=self.c,
         )
         if self.cfg.trace_controller:
+            if self.length_conditioned:
+                event["predictions"] = [dict(
+                    token=token, q=r.q, match_len=r.match_len,
+                    coefficient=r.coefficient, prediction=r.prediction, hit=int(token == gold),
+                ) for token, r in records.items()]
             self.trace.append(event)
         return event
 
@@ -203,16 +245,23 @@ class Candidate:
     p: float = 0.0
     e: float = 0.0
     model_rank: int | None = None
+    suffix_match_len: int | None = None
 
 
 def select_candidates(pool: dict[Path, Candidate], root: Path, budget: int, coefficient: float,
-                      *, positive_only=False):
+                      *, positive_only=False, length_conditioned=False):
     """Select an ancestor-closed tree before allocating state; legacy keeps zeros."""
     pool[root].p = pool[root].e = 1.0
     ranked = []
     for path in sorted((p for p in pool if p != root), key=lambda p: (len(p), p)):
         c = pool[path]
-        c.e = min(1.0, coefficient * c.raw_score) if c.score_source == "suffix" else c.raw_score
+        if c.score_source == "suffix":
+            match_len = c.suffix_match_len if length_conditioned else None
+            if length_conditioned and (type(match_len) is not int or match_len < 0):
+                raise ValueError("length scoring requires a nonnegative integer match_len")
+            c.e = suffix_score(c.raw_score, coefficient, match_len)
+        else:
+            c.e = c.raw_score
         c.p = pool[path[:-1]].p * c.e
         ranked.append(c)
     ranked.sort(key=lambda c: (-c.p, len(c.path), c.path))
@@ -302,7 +351,7 @@ def budget_tree_decode_steps(
         raise ValueError("physical tree capacity must cover N+1 and fit the backbone buffers")
     if getattr(backbone, "T", T) != T:
         raise ValueError("model recurrence depth differs from decoder configuration")
-    max_pos = getattr(kv, "max_seq", None)
+    max_pos = getattr(backbone, "position_limit", getattr(kv, "max_seq", None))
     if max_pos is not None and len(prompt) + max_new_tokens > max_pos:
         raise ValueError("request exceeds max_seq; no truncation applied")
     if cfg.use_suffix and N and cache is None:
@@ -336,6 +385,9 @@ def budget_tree_decode_steps(
         selection_events=0,
         selected_draft_nodes_sum=0,
         selected_zero_nodes_sum=0,
+        existing_probability_values=0,
+        absent_rescores=0,
+        absent_positive_rescores=0,
         child_suffix_queries=0,
         cap_skips=0,
         verified_parents=0,
@@ -356,6 +408,9 @@ def budget_tree_decode_steps(
 
     def release(c, wasted=True, reason="rejected"):
         if c.node is not None:
+            if observer is not None:
+                emit("release", path=c.path, tick=tick, spent=c.node.step,
+                     reason=reason if wasted else "committed")
             if wasted:
                 stats["wasted_rows"] += c.node.step
                 stats[f"wasted_{reason}_rows"] += c.node.step
@@ -387,18 +442,26 @@ def budget_tree_decode_steps(
             if par < -1 or par >= k:
                 raise ValueError("suffix parents must precede children")
         edges = _edge_probs(draft)
+        match_len = None
+        if controller.length_conditioned and len(draft.token_ids):
+            match_len = getattr(draft, "match_len", None)
+            if type(match_len) is not int or match_len < 0:
+                raise ValueError("length scoring requires a nonnegative integer match_len")
         for tok, par, q in zip(draft.token_ids, draft.parents, edges, strict=True):
             base = parent if par < 0 else created[par]
             if base is None or (max_pos is not None and len(prompt) + len(base.path) >= max_pos):
                 created.append(None)
                 continue
             tok, q = int(tok), _score(q)
-            controller.observe(base.path, tok, q)
+            controller.observe(base.path, tok, q, match_len)
             path = base.path + (tok,)
             c = pool.get(path)
             if c is None:
-                c = Candidate(path, q, "suffix", "suffix", suffix=True)
+                c = Candidate(path, q, "suffix", "suffix", suffix=True, suffix_match_len=match_len)
                 pool[path] = c
+                if observer is not None:
+                    emit("proposal", path=path, tick=tick, source="suffix", score=q,
+                         match_len=getattr(draft, "match_len", None))
             else:
                 c.suffix = True  # never override a model score (nor the first snapshot)
             created.append(c)
@@ -408,6 +471,7 @@ def budget_tree_decode_steps(
         if max_pos is not None and len(prompt) + len(c.path) >= max_pos:
             return
         ids, probs = top
+        existing_probs = dict(zip(ids[cfg.top_m:], probs[cfg.top_m:], strict=True))
         seen = set()
         for rank, (token, probability) in enumerate(zip(ids, probs, strict=True)):
             if rank >= cfg.top_m:
@@ -416,24 +480,44 @@ def budget_tree_decode_steps(
             seen.add(token)
             path = c.path + (token,)
             if path in pool:
+                if observer is not None:
+                    emit("rescore", path=path, tick=tick, previous_source=pool[path].score_source,
+                         score=probability, depth=depth, absent=False)
                 pool[path].raw_score = probability
                 pool[path].score_source = "model"
             else:
                 origin = "deep" if depth > cfg.draft_depth else ("fill" if rank == 0 else "sibling")
                 pool[path] = Candidate(path, probability, "model", origin)
+                if observer is not None:
+                    emit("proposal", path=path, tick=tick, source=origin, score=probability,
+                         readout_depth=depth)
             # Rank belongs to this parent's latest model readout, not admission order
             # or the candidate's original source (which may have been suffix).
             pool[path].model_rank = rank
         for path, child in pool.items():
             if path[:-1] == c.path and path[-1] not in seen:
-                # Preserve the documented legacy ABSENT=0 heuristic; not true softmax.
+                # Existing children can be scored without proposing more than top-m.
                 if depth > cfg.draft_depth or child.suffix:
-                    child.raw_score, child.score_source = 0.0, "model"
+                    probability = _score(existing_probs[path[-1]]) if cfg.existing_child_probs else 0.0
+                    stats["absent_rescores"] += 1
+                    stats["absent_positive_rescores"] += probability > 0
+                    if observer is not None:
+                        emit("rescore", path=path, tick=tick, previous_source=child.score_source,
+                             score=probability, depth=depth, absent=True)
+                    child.raw_score, child.score_source = probability, "model"
 
     def choose(root):
         nonlocal pool
         start = time.perf_counter()
-        selected = select_candidates(pool, root, N, controller.c, positive_only=cfg.positive_only)
+        selected = select_candidates(pool, root, N, controller.c,
+                                     positive_only=cfg.positive_only,
+                                     length_conditioned=controller.length_conditioned)
+        if observer is not None:
+            emit("selection_candidates", root=root, tick=tick, coefficient=controller.c,
+                 length_conditioned=controller.length_conditioned, budget=N,
+                 positive_only=cfg.positive_only, selected=tuple(selected),
+                 candidates={p: (c.score_source, c.raw_score, c.suffix_match_len, c.p)
+                             for p, c in pool.items()})
         evicted = rejected = 0
         for path, c in pool.items():
             if path not in selected:
@@ -462,14 +546,18 @@ def budget_tree_decode_steps(
                 if c.node is None:
                     raise AssertionError("N+1 recyclable slots must fit the selected tree")
                 stats["nodes"] += 1
+                if observer is not None:
+                    emit("allocate", path=path, tick=tick, slot=c.node.idx, root=root)
         if observer is not None:
             emit(
                 "selection",
+                tick=tick,
                 root=root,
                 coefficient=controller.c,
                 paths=tuple(pool),
                 slots={p: c.node.idx for p, c in pool.items()},
                 scores={p: (c.score_source, c.raw_score, c.e, c.p) for p, c in pool.items()},
+                suffix_match_lengths={p: c.suffix_match_len for p, c in pool.items()},
             )
 
     def boundary(root, due, query_root):
@@ -541,9 +629,17 @@ def budget_tree_decode_steps(
             stats["max_rows"] = max(stats["max_rows"], len(live))
             groups = [(d, [n for n in live if n.step == d]) for d in depths]
             full = [n for n in live if n.step == T]
-            reads, tops = yield ModelCall("readout_top", (tree, groups, full, cfg.top_m))
+            readout_args = (tree, groups, full, cfg.top_m)
+            if cfg.existing_child_probs:
+                existing = [list(n.children) for _, group in groups for n in group]
+                stats["existing_probability_values"] += sum(map(len, existing))
+                readout_args += (existing,)
+            reads, tops = yield ModelCall("readout_top", readout_args)
             stats["readout_rows"] += sum(len(g) for _, g in groups) + len(full)
             by_slot = {c.node.idx: c for c in pool.values()}
+            if observer is not None:
+                emit("advance", tick=tick, root=root,
+                     steps={by_slot[n.idx].path: n.step for n in live})
             due = [
                 (by_slot[n.idx], d, top)
                 for (d, group), group_tops in zip(groups, reads, strict=True)
@@ -561,7 +657,15 @@ def budget_tree_decode_steps(
                 start = time.perf_counter()
                 feedback = controller.verify(root, gold)
                 stats["controller_s"] += time.perf_counter() - start
-                emit("verify", parent=root, gold=gold, output_position=len(out), feedback=feedback)
+                if observer is not None:
+                    next_candidate = pool.get(root + (gold,))
+                    emit("verify", parent=root, gold=gold, output_position=len(out),
+                         feedback=feedback, tick=tick,
+                         next_step=next_candidate.node.step if next_candidate and next_candidate.node else 0,
+                         covered=next_candidate is not None,
+                         next_origin=next_candidate.origin if next_candidate else None,
+                         next_score_source=next_candidate.score_source if next_candidate else None,
+                         terminal=gold in stop or len(out) + 1 >= max_new_tokens)
                 stats["verified_parents"] += 1
                 stats["tokens"] += 1
                 burst += 1
@@ -621,7 +725,10 @@ def budget_tree_decode_steps(
             decode_s=t2 - t1,
             tree_policy="node_budget",
             scoring=cfg.scoring,
+            suffix_weight_formula="cq(1+L)/(1+cq(1+L))" if controller.length_conditioned else "min(1,cq)",
             draft_node_budget=N,
+            positive_only=cfg.positive_only,
+            existing_child_probs=cfg.existing_child_probs,
             controller_scope="request",
             update_event="verified_parent",
             c_initial=cfg.c_initial,

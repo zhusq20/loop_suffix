@@ -93,6 +93,7 @@ class TinyOuro(nn.Module):
         super().__init__()
         self.config = SimpleNamespace(
             num_hidden_layers=2,
+            vocab_size=19,
             num_attention_heads=2,
             num_key_value_heads=2,
             hidden_size=16,
@@ -409,6 +410,8 @@ def test_cli_writes_four_arm_paired_results(tmp_path, monkeypatch, schedule):
     monkeypatch.setattr(
         transformers.AutoModelForCausalLM, "from_pretrained", lambda *a, **kw: TinyOuro().eval()
     )
+    monkeypatch.setattr(transformers.AutoConfig, "from_pretrained",
+                        lambda *a, **kw: TinyOuro().config)
     tokenizer = SimpleNamespace(eos_token_id=None, get_vocab=lambda: {})
     monkeypatch.setattr(transformers.AutoTokenizer, "from_pretrained", lambda *a, **kw: tokenizer)
 
