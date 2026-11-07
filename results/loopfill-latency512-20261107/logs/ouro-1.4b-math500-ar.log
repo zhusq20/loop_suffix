@@ -484,3 +484,66 @@ ouro-1.4b-math500-ar 471/500 decode=40.544s tokens=512
 ouro-1.4b-math500-ar 472/500 decode=40.450s tokens=512
 ouro-1.4b-math500-ar 473/500 decode=40.513s tokens=512
 ouro-1.4b-math500-ar 474/500 decode=14.756s tokens=188
+ouro-1.4b-math500-ar 475/500 decode=40.651s tokens=512
+ouro-1.4b-math500-ar 476/500 decode=40.355s tokens=512
+ouro-1.4b-math500-ar 477/500 decode=40.237s tokens=512
+ouro-1.4b-math500-ar 478/500 decode=40.629s tokens=512
+ouro-1.4b-math500-ar 479/500 decode=40.332s tokens=512
+ouro-1.4b-math500-ar 480/500 decode=40.072s tokens=512
+ouro-1.4b-math500-ar 481/500 decode=40.097s tokens=512
+ouro-1.4b-math500-ar 482/500 decode=40.191s tokens=512
+ouro-1.4b-math500-ar 483/500 decode=40.513s tokens=512
+ouro-1.4b-math500-ar 484/500 decode=40.462s tokens=512
+ouro-1.4b-math500-ar 485/500 decode=40.074s tokens=512
+ouro-1.4b-math500-ar 486/500 decode=40.300s tokens=512
+ouro-1.4b-math500-ar 487/500 decode=40.189s tokens=512
+ouro-1.4b-math500-ar 488/500 decode=40.477s tokens=512
+ouro-1.4b-math500-ar 489/500 decode=40.560s tokens=512
+ouro-1.4b-math500-ar 490/500 decode=40.203s tokens=512
+ouro-1.4b-math500-ar 491/500 decode=40.214s tokens=512
+ouro-1.4b-math500-ar 492/500 decode=40.668s tokens=512
+ouro-1.4b-math500-ar 493/500 decode=40.211s tokens=512
+ouro-1.4b-math500-ar 494/500 decode=40.639s tokens=512
+ouro-1.4b-math500-ar 495/500 decode=40.532s tokens=512
+ouro-1.4b-math500-ar 496/500 decode=40.194s tokens=512
+ouro-1.4b-math500-ar 497/500 decode=40.538s tokens=512
+ouro-1.4b-math500-ar 498/500 decode=40.517s tokens=512
+ouro-1.4b-math500-ar 499/500 decode=40.694s tokens=512
+ouro-1.4b-math500-ar 500/500 decode=40.227s tokens=512
+wandb: updating run metadata; uploading artifact ouro-1.4b-math500-ar
+wandb: uploading artifact ouro-1.4b-math500-ar
+wandb: uploading artifact ouro-1.4b-math500-ar; uploading wandb-summary.json; uploading config.yaml; uploading requests.jsonl; uploading output.log
+wandb: uploading artifact ouro-1.4b-math500-ar; uploading requests.jsonl
+wandb: uploading requests.jsonl
+wandb: uploading history steps 498-499, summary, console lines 501-501
+wandb: 
+wandb: Run history:
+wandb:        aggregate/cap_stopped ▁▁▁▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇▇█████
+wandb: aggregate/completed_requests ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇██
+wandb:           aggregate/decode_s ▁▂▂▂▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇█
+wandb:     aggregate/decode_token_s ▃▃▂▁▁▃▃▄▄▅▅▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇███████████▇▇
+wandb:      aggregate/decode_tokens ▁▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▇▇▇▇▇▇████
+wandb:              aggregate/gamma ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         aggregate/loop_steps ▁▁▁▁▁▂▂▃▃▃▃▃▃▄▄▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇██
+wandb:      aggregate/output_tokens ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇████
+wandb:          aggregate/prefill_s ▁▁▁▁▂▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▅▅▅▅▅▆▆▆▆▇▇▇▇▇▇████
+wandb:             request/decode_s ██████▇▇█▇█▇█▇▇█▇▇▇▇█▇▇▇▂▇▇▇▇▇▇▄█▁██████
+wandb:                           +2 ...
+wandb: 
+wandb: Run summary:
+wandb:        aggregate/cap_stopped 471
+wandb: aggregate/completed_requests 500
+wandb:           aggregate/decode_s 19732.77413
+wandb:     aggregate/decode_token_s 12.71793
+wandb:      aggregate/decode_tokens 250960
+wandb:              aggregate/gamma 1
+wandb:         aggregate/loop_steps 1003840
+wandb:      aggregate/output_tokens 251460
+wandb:          aggregate/prefill_s 22.4564
+wandb:            attention_backend packed_prefix_and_tr...
+wandb:                          +27 ...
+wandb: 
+wandb: 🚀 View run ouro-1.4b-math500-ar at: https://wandb.ai/zsqzz/loopfill-latency512/runs/67d1c43ad352
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/runs/ouro-1.4b-math500-ar/wandb/run-20261107_031930-67d1c43ad352/logs

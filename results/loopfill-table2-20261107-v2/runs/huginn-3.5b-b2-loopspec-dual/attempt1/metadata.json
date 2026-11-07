@@ -1,0 +1,152 @@
+{
+  "args": {
+    "model": "huginn-3.5b",
+    "model_path": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+    "questions": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl",
+    "calibration": null,
+    "out": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b2-loopspec-dual/attempt1",
+    "scoring": "raw",
+    "tau": null,
+    "draft_node_budget": 16,
+    "suffix_eta": 0.1,
+    "suffix_c_min": 0.25,
+    "suffix_c_max": 2.0,
+    "suffix_c_initial": 1.0,
+    "model_top_k": 2,
+    "model_readout_depths": null,
+    "loopspec_depths": null,
+    "wavefront_depth": null,
+    "child_suffix_policy": "all",
+    "child_suffix_caps": [
+      4,
+      4
+    ],
+    "positive_only": false,
+    "existing_child_probs": false,
+    "progress_every": 1,
+    "durable_results": true,
+    "trace_controller": false,
+    "arms": "loopspec-dual",
+    "batch_sizes": "2",
+    "schedule": "continuous",
+    "prefill_chunk_size": 128,
+    "attention_backend": "packed",
+    "cuda_graph": false,
+    "max_cuda_graphs": 24,
+    "pad_decode_rows": false,
+    "verifier_shape_warmup": "complete",
+    "allocation_guard": "disabled",
+    "order_seeds": "0",
+    "repeat_id": 0,
+    "max_new_tokens": 1024,
+    "max_seq": 2688,
+    "buffer_policy": "per-arm",
+    "max_nodes": 1152,
+    "suffix_max_draft": 4,
+    "prompt_format": "chat",
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "seed": 0,
+    "limit": null,
+    "warmup_tokens": 32,
+    "warmup_request_limit_factor": 2,
+    "threads": 1,
+    "check": false,
+    "reference_file": null,
+    "reference_only": false,
+    "profile": false
+  },
+  "git_revision": "9cd42e499c9677f8cd5db712cade9004fd27cd9d",
+  "git_dirty": true,
+  "torch": "2.6.0+cu126",
+  "transformers": "4.55.0",
+  "cpu_affinity": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "actual_kv_dtype": "torch.bfloat16",
+  "actual_parameter_dtypes": [
+    "torch.bfloat16"
+  ],
+  "complex_buffer_dtypes": {},
+  "buffer_dtypes": {
+    "freqs_cis": "torch.float32"
+  },
+  "cuda": "12.6",
+  "gpu": "NVIDIA L20X",
+  "gpu_uuid": "520fad11-804c-b419-7096-2a19c219449b",
+  "source_sha256": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2"
+  },
+  "questions_sha256": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e",
+  "calibration_sha256": null,
+  "backend": "packed_prefix_and_tree",
+  "cuda_graph": false,
+  "compile": false,
+  "prefill": "chunked_interleaved",
+  "warmup_prefill": "same_as_measured",
+  "warmup_request_limit_factor": 2,
+  "schedule": "continuous",
+  "history": "cold_start_completion_only",
+  "profiled": false,
+  "controller_profiled": false,
+  "configs": {
+    "loopspec-dual": {
+      "name": "loopspec-dual",
+      "depth_total": 32,
+      "draft_depth": 4,
+      "second_depth": 8,
+      "use_suffix": false,
+      "draft_node_budget": null
+    }
+  },
+  "checkpoint": null,
+  "loaded_model_class": "transformers_modules.bb6621b65e90b6a4b9b29ef88dc83866d450470c.raven_modeling_minimal.RavenForCausalLM",
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        65505
+      ],
+      "generation_config": [
+        65505,
+        65508
+      ],
+      "model_config": [
+        65505
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "model_config",
+    "stop_ids": [
+      65505,
+      65508
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "initialization_policy": "historical_backend",
+  "coda_policy": "independent_depth_caches; WFD uses its existing shared coda rule",
+  "physical_nodes": {
+    "loopspec-dual": 109
+  }
+}

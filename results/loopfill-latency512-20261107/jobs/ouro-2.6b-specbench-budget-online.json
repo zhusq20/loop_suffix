@@ -4,7 +4,16 @@
   "dataset": "specbench",
   "arm": "budget-online",
   "batch_size": 1,
-  "outcome": "pending",
-  "failures": 0,
-  "wandb_id": "e1089548a9f4"
+  "outcome": "complete",
+  "failures": 1,
+  "wandb_id": "e1089548a9f4",
+  "phase": "measured",
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "cpus": "8-11",
+  "pid": 259711,
+  "started_unix": 1794055130.5581064,
+  "exit_code": 1,
+  "ended_unix": 1794057900.1439605,
+  "recovered_unix": 1794071695.1794074,
+  "recovery": "recovery/upload-finalization/wandb-verification.json"
 }

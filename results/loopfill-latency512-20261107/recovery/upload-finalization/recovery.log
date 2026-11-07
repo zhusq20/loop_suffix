@@ -1,0 +1,71 @@
+Validated all 480 records, frozen source/input hashes and recomputed summary.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run e1089548a9f4
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/runs/ouro-2.6b-specbench-budget-online/wandb/run-20261108_011440-e1089548a9f4
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run ouro-2.6b-specbench-budget-online
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/e1089548a9f4
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: uploading metadata.json; uploading requests.jsonl; uploading summary.json; uploading wandb-metadata.json; updating run metadata
+wandb: uploading metadata.json; uploading requests.jsonl; uploading summary.json; uploading wandb-metadata.json
+wandb: uploading requests.jsonl; uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading requests.jsonl; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading requests.jsonl; uploading config.yaml
+wandb: 
+wandb: Run summary:
+wandb:        aggregate/cap_stopped 60
+wandb: aggregate/completed_requests 480
+wandb:           aggregate/decode_s 2618.11231
+wandb:     aggregate/decode_token_s 30.85009
+wandb:      aggregate/decode_tokens 80769
+wandb:              aggregate/gamma 5.70654
+wandb:         aggregate/loop_steps 56615
+wandb:      aggregate/output_tokens 81249
+wandb:          aggregate/prefill_s 40.80343
+wandb:            attention_backend packed_prefix_and_tr...
+wandb:                          +28 ...
+wandb: 
+wandb: 🚀 View run ouro-2.6b-specbench-budget-online at: https://wandb.ai/zsqzz/loopfill-latency512/runs/e1089548a9f4
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 3 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/runs/ouro-2.6b-specbench-budget-online/wandb/run-20261108_011440-e1089548a9f4/logs
+wandb: \ 1 of 3 files downloaded...wandb:   3 of 3 files downloaded.  
+wandb: setting up run 05457d1e7ad5
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/wandb/run-20261108_011457-05457d1e7ad5
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Resuming run queue
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/05457d1e7ad5
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: uploading summary; updating run metadata
+wandb: updating run metadata
+wandb: uploading measurements.json; uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading wandb-metadata.json (+ 3 more)
+wandb: uploading measurements.json; uploading output.log; uploading config.yaml; uploading wandb-metadata.json; uploading requirements.txt (+ 2 more)
+wandb: uploading summary, console lines 4485-4487
+wandb: 
+wandb: Run summary:
+wandb:     cells/complete 90
+wandb:       cells/failed 0
+wandb:      cells/pending 0
+wandb:      cells/running 0
+wandb: completed_requests 31380
+wandb:    counts.complete 89
+wandb:      counts.failed 1
+wandb:        gpus/active 0
+wandb:      planned_cells 90
+wandb:   planned_requests 31380
+wandb:                 +2 ...
+wandb: 
+wandb: 🚀 View run queue at: https://wandb.ai/zsqzz/loopfill-latency512/runs/05457d1e7ad5
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 3 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/wandb/run-20261108_011457-05457d1e7ad5/logs
+{"updated_unix": 1794071696.9065382, "counts": {"complete": 90}, "planned_cells": 90, "completed_requests": 31380, "planned_requests": 31380}

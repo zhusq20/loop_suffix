@@ -1,0 +1,126 @@
+{
+  "model": {
+    "model_id": "ouro-1.4b",
+    "repo_id": "ByteDance/Ouro-1.4B",
+    "revision": "574fa66cb8bf5abdc979642d01cf2b79b16bfab1",
+    "backend": "ouro",
+    "depth_total": 4,
+    "loopspec_depths": [
+      1,
+      2
+    ],
+    "wavefront_depth": 1,
+    "loopfill_readout_depths": [
+      1,
+      2
+    ],
+    "prompt_format": "chat",
+    "stop_token": "<|im_end|>",
+    "context_limit": 65536,
+    "prelude_layers": 0,
+    "core_layers": 24,
+    "coda_layers": 0,
+    "query_heads": 16,
+    "kv_heads": 16,
+    "head_dim": 128,
+    "expansion": true
+  },
+  "arm": "budget-online",
+  "config": {
+    "name": "budget-online",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+      1,
+      2
+    ],
+    "draft_node_budget": 16,
+    "scoring": "online_suffix_i",
+    "eta": 0.1,
+    "c_min": 0.25,
+    "c_max": 2.0,
+    "use_suffix": true,
+    "use_model": true,
+    "top_m": 2,
+    "suffix_room": 4,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "trace_controller": false,
+    "tree_policy": "node_budget",
+    "child_suffix_policy": "all",
+    "positive_only": false,
+    "child_suffix_caps": [
+      4,
+      4
+    ],
+    "c_initial": 0.7,
+    "existing_child_probs": false
+  },
+  "dataset": "gsm8k",
+  "batch_size": 1,
+  "max_new_tokens": 16,
+  "cuda_graph": false,
+  "pad_decode_rows": false,
+  "torch_compile": false,
+  "dtype": "bfloat16",
+  "torch": "2.6.0+cu126",
+  "transformers": "4.55.0",
+  "cuda": "12.6",
+  "gpu_uuid": "520fad11-804c-b419-7096-2a19c219449b",
+  "gpu": "NVIDIA L20X",
+  "cpu_affinity": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "max_seq": 1024,
+  "physical_nodes": 17,
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Released tokenizer EOS plus chat end token."
+  },
+  "inputs_sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+  "source_sha256": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "scripts/loop_latency_inputs.py": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+    "scripts/loop_latency_suite.py": "126d66f3c24ec53100182cf0c58057eb71dade51084912c1d9c1d69b4a9faf5d",
+    "scripts/loop_latency_worker.py": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2"
+  },
+  "timing": "B1 synchronized wall-clock; prefill excluded; includes suffix setup/query/update/publication; journal/W&B/loading/warmup excluded",
+  "history": "cold per dataset/method; only completed prior selected outputs; warmup isolated",
+  "prompt_format": "released chat template; EOS/chat-end stops; no task-specific text delimiters"
+}

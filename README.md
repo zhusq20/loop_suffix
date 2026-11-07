@@ -1,10 +1,11 @@
 # LoopFill (loop_suffix)
 
-**表 1、表 2 归档（2026-11-07）**：实验代码、测试、冻结输入与源码、协议、当前逐题记录和汇总已纳入 Git；文件入口、汇总命令与快照范围见[归档说明](docs/loopfill-table12-archive.md)。实验尚未全部完成，GitHub 中的结果是提交时快照。
+**表 1、表 2 最终结果（2026-11-08）**：表1全部90组、31,380条请求完成；表2为74组成功、1组实测OOM（Huginn/WFD/B16）。表1曾因W&B上传超时标记失败的单元已补传，云端artifact下载哈希与本地一致，原失败记录保留。实验均为单次计时，BF16输出差异与任务质量需单独评估。
 
-**Table 1 / B=1 延迟实验**：三个模型、六个数据集、AR/WFD/LoopSpec/Suffix-only/LoopFill-online，共90组；每题最多512新token，报告decode延迟加速比与循环归一化接受长度 γ。见[运行说明](docs/loopfill-latency512.md)、[状态](results/loopfill-latency512-20261107/status.json)及[汇总](results/loopfill-latency512-20261107/measurements.csv)。
-
-**2026-11-07 Table 2**：Huginn-3.5B、Ouro-1.4B、Ouro-2.6B，AR/WFD/LoopSpec/Suffix-only/LoopFill-online，B=1/2/4/8/16，共75组完整SpecBench480实验已启动。计时含prefill与decode；Graph-off；8张GPU共享队列，空闲即补位；逐请求持久化并实时同步W&B。见[运行说明](docs/loopfill-table2.md)、[状态](results/loopfill-table2-20261107-v2/status.json)及[实时表格](results/loopfill-table2-20261107-v2/table2.md)。
+- [表1：512-token、B=1 decode延迟加速比与γ](results/loopfill-latency512-20261107/table1.md) · [完整指标CSV](results/loopfill-latency512-20261107/measurements.csv)
+- [表2：1024-token、B=1/2/4/8/16端到端吞吐与加速比](results/loopfill-table2-20261107-v2/table2-final.md) · [完整指标CSV](results/loopfill-table2-20261107-v2/measurements.csv)
+- LaTeX：[表1](paper/tables/table1-latency512.tex)、[表2](paper/tables/table2-throughput.tex)。使用 `python scripts/loop_final_tables.py` 从汇总数据重新生成。
+- 协议与归档：[表1](docs/loopfill-latency512.md)、[表2](docs/loopfill-table2.md)、[归档范围](docs/loopfill-table12-archive.md)。
 
 **论文实验规划**：[当前精简计划](docs/loopfill-paper-experiments.md)统一主指标（throughput 与按 loop steps 归一化的平均接受长度 γ）、三维消融雷达图及机制分析；与旧实验计划冲突时以此文为准。
 

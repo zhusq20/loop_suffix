@@ -62,3 +62,9 @@ GSM8K 使用 harness 的前三个固定 CoT 示例；MATH 使用四个固定 Min
 ## 验证
 
 全部18个模型/数据集组合的上下文检查通过，未删题、未截断prompt。CPU回归72 passed、12 skipped；新增测试覆盖prefill计时边界、suffix发布计时、崩溃日志恢复、确定性抽样、五方法矩阵和汇总指标。GPU回归曾因其他队列启用独占模式而无法获得设备，未作为代码失败或验证通过证据；真实检查点短验证已排在正式单元前。初次数据准备遇GitHub匿名API限流，失败目录保留；随后使用核实的固定commit拉取，六数据集准备成功。
+
+## 最终完成状态（2026-11-08）
+
+90/90单元完成，31,380/31,380请求。Ouro-2.6B / SpecBench / LoopFill-online原已完成480请求，但在`run.log_artifact`阶段遇W&B服务超时，未写完成标记。收尾时核对冻结源码与输入哈希、逐题题序和prompt哈希，并从原始记录复算所有汇总指标；恢复原run并补传artifact，下载验证三个文件SHA256一致后才写完成标记及更新队列。没有重新生成请求或替换计时。原始退出码、失败次数与原job/status快照保留在`recovery/upload-finalization/`。
+
+最终[表格](../results/loopfill-latency512-20261107/table1.md)报告各方法/数据集的延迟加速比与γ，GM为六数据集加速比的等权几何均值。[上传核验](../results/loopfill-latency512-20261107/recovery/upload-finalization/wandb-verification.json)记录云端artifact与哈希。

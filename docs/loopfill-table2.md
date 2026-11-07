@@ -38,3 +38,7 @@ export PYTHONPATH=results/loopfill-table2-20261107-v2/source/src:results/loopfil
 仅汇总已有记录可将 `run` 换成 `summarize`。模型权重与运行环境位于本机 `/tmp`，实验结果和冻结源码位于持久化工作区；更换机器后须按固定 revision 重建环境与路径，不能直接混用新硬件计时。
 
 本轮为固定 seed=0 的单次计时。BF16 下不同方法可能生成不同输出，吞吐结果不等同于任务质量或无损性验证。
+
+## 最终完成状态（2026-11-08）
+
+75组全部结束：74组成功，Huginn-3.5B / WFD / B16实测OOM。保留OOM，不改batch或预算替代该结果。[最终表格](../results/loopfill-table2-20261107-v2/table2-final.md)同时给出output token/s及相对同模型同batch AR的加速比；原始吞吐表和CSV保留。

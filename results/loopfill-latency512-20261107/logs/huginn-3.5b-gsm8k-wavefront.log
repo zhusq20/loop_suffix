@@ -1,0 +1,348 @@
+Loading huginn-3.5b wavefront gsm8k
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.11s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.31s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.29s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.08it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 032d1dcc3129
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/runs/huginn-3.5b-gsm8k-wavefront/wandb/run-20261107_092954-032d1dcc3129
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-gsm8k-wavefront
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/032d1dcc3129
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-gsm8k-wavefront 1/300 decode=2.949s tokens=68
+huginn-3.5b-gsm8k-wavefront 2/300 decode=7.785s tokens=129
+huginn-3.5b-gsm8k-wavefront 3/300 decode=6.787s tokens=106
+huginn-3.5b-gsm8k-wavefront 4/300 decode=9.883s tokens=127
+huginn-3.5b-gsm8k-wavefront 5/300 decode=5.265s tokens=68
+huginn-3.5b-gsm8k-wavefront 6/300 decode=2.385s tokens=30
+huginn-3.5b-gsm8k-wavefront 7/300 decode=4.216s tokens=64
+huginn-3.5b-gsm8k-wavefront 8/300 decode=4.485s tokens=56
+huginn-3.5b-gsm8k-wavefront 9/300 decode=9.553s tokens=175
+huginn-3.5b-gsm8k-wavefront 10/300 decode=19.297s tokens=512
+huginn-3.5b-gsm8k-wavefront 11/300 decode=3.891s tokens=67
+huginn-3.5b-gsm8k-wavefront 12/300 decode=5.181s tokens=86
+huginn-3.5b-gsm8k-wavefront 13/300 decode=2.393s tokens=46
+huginn-3.5b-gsm8k-wavefront 14/300 decode=2.519s tokens=44
+huginn-3.5b-gsm8k-wavefront 15/300 decode=5.286s tokens=63
+huginn-3.5b-gsm8k-wavefront 16/300 decode=3.361s tokens=59
+huginn-3.5b-gsm8k-wavefront 17/300 decode=7.021s tokens=126
+huginn-3.5b-gsm8k-wavefront 18/300 decode=8.301s tokens=91
+huginn-3.5b-gsm8k-wavefront 19/300 decode=4.955s tokens=78
+huginn-3.5b-gsm8k-wavefront 20/300 decode=6.114s tokens=84
+huginn-3.5b-gsm8k-wavefront 21/300 decode=6.391s tokens=103
+huginn-3.5b-gsm8k-wavefront 22/300 decode=7.497s tokens=101
+huginn-3.5b-gsm8k-wavefront 23/300 decode=8.646s tokens=155
+huginn-3.5b-gsm8k-wavefront 24/300 decode=3.822s tokens=72
+huginn-3.5b-gsm8k-wavefront 25/300 decode=10.554s tokens=112
+huginn-3.5b-gsm8k-wavefront 26/300 decode=4.160s tokens=63
+huginn-3.5b-gsm8k-wavefront 27/300 decode=5.194s tokens=81
+huginn-3.5b-gsm8k-wavefront 28/300 decode=3.024s tokens=38
+huginn-3.5b-gsm8k-wavefront 29/300 decode=8.647s tokens=110
+huginn-3.5b-gsm8k-wavefront 30/300 decode=10.357s tokens=154
+huginn-3.5b-gsm8k-wavefront 31/300 decode=4.990s tokens=74
+huginn-3.5b-gsm8k-wavefront 32/300 decode=4.192s tokens=61
+huginn-3.5b-gsm8k-wavefront 33/300 decode=6.475s tokens=82
+huginn-3.5b-gsm8k-wavefront 34/300 decode=7.118s tokens=105
+huginn-3.5b-gsm8k-wavefront 35/300 decode=4.399s tokens=67
+huginn-3.5b-gsm8k-wavefront 36/300 decode=11.545s tokens=178
+huginn-3.5b-gsm8k-wavefront 37/300 decode=15.934s tokens=195
+huginn-3.5b-gsm8k-wavefront 38/300 decode=5.907s tokens=94
+huginn-3.5b-gsm8k-wavefront 39/300 decode=9.118s tokens=120
+huginn-3.5b-gsm8k-wavefront 40/300 decode=11.554s tokens=160
+huginn-3.5b-gsm8k-wavefront 41/300 decode=10.087s tokens=160
+huginn-3.5b-gsm8k-wavefront 42/300 decode=3.540s tokens=52
+huginn-3.5b-gsm8k-wavefront 43/300 decode=4.580s tokens=67
+huginn-3.5b-gsm8k-wavefront 44/300 decode=6.523s tokens=88
+huginn-3.5b-gsm8k-wavefront 45/300 decode=4.272s tokens=63
+huginn-3.5b-gsm8k-wavefront 46/300 decode=4.229s tokens=82
+huginn-3.5b-gsm8k-wavefront 47/300 decode=2.661s tokens=36
+huginn-3.5b-gsm8k-wavefront 48/300 decode=8.851s tokens=140
+huginn-3.5b-gsm8k-wavefront 49/300 decode=5.262s tokens=85
+huginn-3.5b-gsm8k-wavefront 50/300 decode=9.514s tokens=120
+huginn-3.5b-gsm8k-wavefront 51/300 decode=4.663s tokens=74
+huginn-3.5b-gsm8k-wavefront 52/300 decode=8.819s tokens=159
+huginn-3.5b-gsm8k-wavefront 53/300 decode=8.894s tokens=126
+huginn-3.5b-gsm8k-wavefront 54/300 decode=6.063s tokens=78
+huginn-3.5b-gsm8k-wavefront 55/300 decode=5.357s tokens=97
+huginn-3.5b-gsm8k-wavefront 56/300 decode=8.872s tokens=135
+huginn-3.5b-gsm8k-wavefront 57/300 decode=6.666s tokens=106
+huginn-3.5b-gsm8k-wavefront 58/300 decode=5.730s tokens=71
+huginn-3.5b-gsm8k-wavefront 59/300 decode=5.026s tokens=81
+huginn-3.5b-gsm8k-wavefront 60/300 decode=2.480s tokens=50
+huginn-3.5b-gsm8k-wavefront 61/300 decode=6.524s tokens=104
+huginn-3.5b-gsm8k-wavefront 62/300 decode=10.382s tokens=140
+huginn-3.5b-gsm8k-wavefront 63/300 decode=3.450s tokens=43
+huginn-3.5b-gsm8k-wavefront 64/300 decode=11.099s tokens=185
+huginn-3.5b-gsm8k-wavefront 65/300 decode=10.288s tokens=170
+huginn-3.5b-gsm8k-wavefront 66/300 decode=6.064s tokens=138
+huginn-3.5b-gsm8k-wavefront 67/300 decode=4.426s tokens=83
+huginn-3.5b-gsm8k-wavefront 68/300 decode=5.100s tokens=105
+huginn-3.5b-gsm8k-wavefront 69/300 decode=4.372s tokens=54
+huginn-3.5b-gsm8k-wavefront 70/300 decode=6.993s tokens=79
+huginn-3.5b-gsm8k-wavefront 71/300 decode=4.646s tokens=66
+huginn-3.5b-gsm8k-wavefront 72/300 decode=15.131s tokens=512
+huginn-3.5b-gsm8k-wavefront 73/300 decode=3.499s tokens=38
+huginn-3.5b-gsm8k-wavefront 74/300 decode=6.921s tokens=87
+huginn-3.5b-gsm8k-wavefront 75/300 decode=2.848s tokens=65
+huginn-3.5b-gsm8k-wavefront 76/300 decode=7.207s tokens=98
+huginn-3.5b-gsm8k-wavefront 77/300 decode=5.417s tokens=91
+huginn-3.5b-gsm8k-wavefront 78/300 decode=2.528s tokens=51
+huginn-3.5b-gsm8k-wavefront 79/300 decode=4.653s tokens=71
+huginn-3.5b-gsm8k-wavefront 80/300 decode=10.284s tokens=155
+huginn-3.5b-gsm8k-wavefront 81/300 decode=7.608s tokens=132
+huginn-3.5b-gsm8k-wavefront 82/300 decode=8.456s tokens=135
+huginn-3.5b-gsm8k-wavefront 83/300 decode=5.519s tokens=79
+huginn-3.5b-gsm8k-wavefront 84/300 decode=3.996s tokens=65
+huginn-3.5b-gsm8k-wavefront 85/300 decode=7.134s tokens=102
+huginn-3.5b-gsm8k-wavefront 86/300 decode=5.384s tokens=80
+huginn-3.5b-gsm8k-wavefront 87/300 decode=3.162s tokens=71
+huginn-3.5b-gsm8k-wavefront 88/300 decode=6.404s tokens=81
+huginn-3.5b-gsm8k-wavefront 89/300 decode=14.530s tokens=512
+huginn-3.5b-gsm8k-wavefront 90/300 decode=17.785s tokens=512
+huginn-3.5b-gsm8k-wavefront 91/300 decode=5.063s tokens=68
+huginn-3.5b-gsm8k-wavefront 92/300 decode=7.987s tokens=134
+huginn-3.5b-gsm8k-wavefront 93/300 decode=9.830s tokens=123
+huginn-3.5b-gsm8k-wavefront 94/300 decode=13.894s tokens=512
+huginn-3.5b-gsm8k-wavefront 95/300 decode=5.624s tokens=71
+huginn-3.5b-gsm8k-wavefront 96/300 decode=4.119s tokens=51
+huginn-3.5b-gsm8k-wavefront 97/300 decode=1.498s tokens=21
+huginn-3.5b-gsm8k-wavefront 98/300 decode=4.783s tokens=57
+huginn-3.5b-gsm8k-wavefront 99/300 decode=3.658s tokens=55
+huginn-3.5b-gsm8k-wavefront 100/300 decode=5.079s tokens=90
+huginn-3.5b-gsm8k-wavefront 101/300 decode=6.016s tokens=99
+huginn-3.5b-gsm8k-wavefront 102/300 decode=7.457s tokens=120
+huginn-3.5b-gsm8k-wavefront 103/300 decode=5.423s tokens=111
+huginn-3.5b-gsm8k-wavefront 104/300 decode=8.140s tokens=136
+huginn-3.5b-gsm8k-wavefront 105/300 decode=6.163s tokens=73
+huginn-3.5b-gsm8k-wavefront 106/300 decode=4.642s tokens=72
+huginn-3.5b-gsm8k-wavefront 107/300 decode=4.467s tokens=63
+huginn-3.5b-gsm8k-wavefront 108/300 decode=8.909s tokens=140
+huginn-3.5b-gsm8k-wavefront 109/300 decode=5.288s tokens=92
+huginn-3.5b-gsm8k-wavefront 110/300 decode=5.845s tokens=94
+huginn-3.5b-gsm8k-wavefront 111/300 decode=5.986s tokens=85
+huginn-3.5b-gsm8k-wavefront 112/300 decode=6.064s tokens=90
+huginn-3.5b-gsm8k-wavefront 113/300 decode=6.345s tokens=75
+huginn-3.5b-gsm8k-wavefront 114/300 decode=6.802s tokens=74
+huginn-3.5b-gsm8k-wavefront 115/300 decode=4.037s tokens=60
+huginn-3.5b-gsm8k-wavefront 116/300 decode=8.990s tokens=139
+huginn-3.5b-gsm8k-wavefront 117/300 decode=4.876s tokens=96
+huginn-3.5b-gsm8k-wavefront 118/300 decode=5.168s tokens=79
+huginn-3.5b-gsm8k-wavefront 119/300 decode=5.505s tokens=91
+huginn-3.5b-gsm8k-wavefront 120/300 decode=3.594s tokens=47
+huginn-3.5b-gsm8k-wavefront 121/300 decode=6.838s tokens=87
+huginn-3.5b-gsm8k-wavefront 122/300 decode=3.346s tokens=63
+huginn-3.5b-gsm8k-wavefront 123/300 decode=2.662s tokens=30
+huginn-3.5b-gsm8k-wavefront 124/300 decode=6.827s tokens=94
+huginn-3.5b-gsm8k-wavefront 125/300 decode=6.545s tokens=83
+huginn-3.5b-gsm8k-wavefront 126/300 decode=4.927s tokens=89
+huginn-3.5b-gsm8k-wavefront 127/300 decode=3.882s tokens=68
+huginn-3.5b-gsm8k-wavefront 128/300 decode=4.652s tokens=64
+huginn-3.5b-gsm8k-wavefront 129/300 decode=7.472s tokens=79
+huginn-3.5b-gsm8k-wavefront 130/300 decode=2.668s tokens=50
+huginn-3.5b-gsm8k-wavefront 131/300 decode=11.178s tokens=133
+huginn-3.5b-gsm8k-wavefront 132/300 decode=5.442s tokens=98
+huginn-3.5b-gsm8k-wavefront 133/300 decode=6.846s tokens=94
+huginn-3.5b-gsm8k-wavefront 134/300 decode=4.670s tokens=99
+huginn-3.5b-gsm8k-wavefront 135/300 decode=4.430s tokens=69
+huginn-3.5b-gsm8k-wavefront 136/300 decode=3.379s tokens=60
+huginn-3.5b-gsm8k-wavefront 137/300 decode=12.559s tokens=168
+huginn-3.5b-gsm8k-wavefront 138/300 decode=4.226s tokens=75
+huginn-3.5b-gsm8k-wavefront 139/300 decode=9.409s tokens=174
+huginn-3.5b-gsm8k-wavefront 140/300 decode=5.642s tokens=80
+huginn-3.5b-gsm8k-wavefront 141/300 decode=5.337s tokens=64
+huginn-3.5b-gsm8k-wavefront 142/300 decode=5.068s tokens=75
+huginn-3.5b-gsm8k-wavefront 143/300 decode=9.423s tokens=120
+huginn-3.5b-gsm8k-wavefront 144/300 decode=12.005s tokens=189
+huginn-3.5b-gsm8k-wavefront 145/300 decode=3.882s tokens=68
+huginn-3.5b-gsm8k-wavefront 146/300 decode=7.909s tokens=117
+huginn-3.5b-gsm8k-wavefront 147/300 decode=3.202s tokens=66
+huginn-3.5b-gsm8k-wavefront 148/300 decode=7.369s tokens=116
+huginn-3.5b-gsm8k-wavefront 149/300 decode=2.632s tokens=50
+huginn-3.5b-gsm8k-wavefront 150/300 decode=2.615s tokens=28
+huginn-3.5b-gsm8k-wavefront 151/300 decode=3.302s tokens=57
+huginn-3.5b-gsm8k-wavefront 152/300 decode=4.041s tokens=60
+huginn-3.5b-gsm8k-wavefront 153/300 decode=3.929s tokens=69
+huginn-3.5b-gsm8k-wavefront 154/300 decode=5.470s tokens=93
+huginn-3.5b-gsm8k-wavefront 155/300 decode=12.640s tokens=161
+huginn-3.5b-gsm8k-wavefront 156/300 decode=5.627s tokens=68
+huginn-3.5b-gsm8k-wavefront 157/300 decode=7.503s tokens=104
+huginn-3.5b-gsm8k-wavefront 158/300 decode=1.538s tokens=23
+huginn-3.5b-gsm8k-wavefront 159/300 decode=3.758s tokens=51
+huginn-3.5b-gsm8k-wavefront 160/300 decode=6.489s tokens=80
+huginn-3.5b-gsm8k-wavefront 161/300 decode=3.538s tokens=44
+huginn-3.5b-gsm8k-wavefront 162/300 decode=3.323s tokens=63
+huginn-3.5b-gsm8k-wavefront 163/300 decode=5.642s tokens=97
+huginn-3.5b-gsm8k-wavefront 164/300 decode=22.185s tokens=512
+huginn-3.5b-gsm8k-wavefront 165/300 decode=14.718s tokens=219
+huginn-3.5b-gsm8k-wavefront 166/300 decode=7.314s tokens=129
+huginn-3.5b-gsm8k-wavefront 167/300 decode=5.784s tokens=59
+huginn-3.5b-gsm8k-wavefront 168/300 decode=4.294s tokens=72
+huginn-3.5b-gsm8k-wavefront 169/300 decode=6.246s tokens=106
+huginn-3.5b-gsm8k-wavefront 170/300 decode=4.581s tokens=62
+huginn-3.5b-gsm8k-wavefront 171/300 decode=6.375s tokens=77
+huginn-3.5b-gsm8k-wavefront 172/300 decode=4.685s tokens=72
+huginn-3.5b-gsm8k-wavefront 173/300 decode=7.924s tokens=86
+huginn-3.5b-gsm8k-wavefront 174/300 decode=7.248s tokens=103
+huginn-3.5b-gsm8k-wavefront 175/300 decode=6.880s tokens=111
+huginn-3.5b-gsm8k-wavefront 176/300 decode=4.914s tokens=56
+huginn-3.5b-gsm8k-wavefront 177/300 decode=6.430s tokens=113
+huginn-3.5b-gsm8k-wavefront 178/300 decode=3.856s tokens=71
+huginn-3.5b-gsm8k-wavefront 179/300 decode=2.193s tokens=30
+huginn-3.5b-gsm8k-wavefront 180/300 decode=11.425s tokens=168
+huginn-3.5b-gsm8k-wavefront 181/300 decode=5.115s tokens=108
+huginn-3.5b-gsm8k-wavefront 182/300 decode=2.380s tokens=45
+huginn-3.5b-gsm8k-wavefront 183/300 decode=3.428s tokens=42
+huginn-3.5b-gsm8k-wavefront 184/300 decode=6.320s tokens=109
+huginn-3.5b-gsm8k-wavefront 185/300 decode=3.815s tokens=62
+huginn-3.5b-gsm8k-wavefront 186/300 decode=5.473s tokens=94
+huginn-3.5b-gsm8k-wavefront 187/300 decode=3.188s tokens=73
+huginn-3.5b-gsm8k-wavefront 188/300 decode=5.306s tokens=100
+huginn-3.5b-gsm8k-wavefront 189/300 decode=10.845s tokens=136
+huginn-3.5b-gsm8k-wavefront 190/300 decode=5.637s tokens=93
+huginn-3.5b-gsm8k-wavefront 191/300 decode=8.300s tokens=114
+huginn-3.5b-gsm8k-wavefront 192/300 decode=6.548s tokens=103
+huginn-3.5b-gsm8k-wavefront 193/300 decode=4.570s tokens=75
+huginn-3.5b-gsm8k-wavefront 194/300 decode=12.084s tokens=190
+huginn-3.5b-gsm8k-wavefront 195/300 decode=7.857s tokens=120
+huginn-3.5b-gsm8k-wavefront 196/300 decode=5.651s tokens=86
+huginn-3.5b-gsm8k-wavefront 197/300 decode=3.969s tokens=50
+huginn-3.5b-gsm8k-wavefront 198/300 decode=4.907s tokens=82
+huginn-3.5b-gsm8k-wavefront 199/300 decode=10.264s tokens=163
+huginn-3.5b-gsm8k-wavefront 200/300 decode=3.567s tokens=52
+huginn-3.5b-gsm8k-wavefront 201/300 decode=9.518s tokens=134
+huginn-3.5b-gsm8k-wavefront 202/300 decode=4.716s tokens=67
+huginn-3.5b-gsm8k-wavefront 203/300 decode=10.911s tokens=146
+huginn-3.5b-gsm8k-wavefront 204/300 decode=8.163s tokens=136
+huginn-3.5b-gsm8k-wavefront 205/300 decode=20.464s tokens=369
+huginn-3.5b-gsm8k-wavefront 206/300 decode=15.526s tokens=201
+huginn-3.5b-gsm8k-wavefront 207/300 decode=8.117s tokens=105
+huginn-3.5b-gsm8k-wavefront 208/300 decode=1.935s tokens=26
+huginn-3.5b-gsm8k-wavefront 209/300 decode=5.030s tokens=101
+huginn-3.5b-gsm8k-wavefront 210/300 decode=3.016s tokens=57
+huginn-3.5b-gsm8k-wavefront 211/300 decode=4.771s tokens=54
+huginn-3.5b-gsm8k-wavefront 212/300 decode=3.566s tokens=54
+huginn-3.5b-gsm8k-wavefront 213/300 decode=4.874s tokens=74
+huginn-3.5b-gsm8k-wavefront 214/300 decode=3.511s tokens=86
+huginn-3.5b-gsm8k-wavefront 215/300 decode=5.412s tokens=96
+huginn-3.5b-gsm8k-wavefront 216/300 decode=5.824s tokens=100
+huginn-3.5b-gsm8k-wavefront 217/300 decode=2.226s tokens=39
+huginn-3.5b-gsm8k-wavefront 218/300 decode=6.069s tokens=83
+huginn-3.5b-gsm8k-wavefront 219/300 decode=1.440s tokens=27
+huginn-3.5b-gsm8k-wavefront 220/300 decode=5.798s tokens=99
+huginn-3.5b-gsm8k-wavefront 221/300 decode=5.469s tokens=85
+huginn-3.5b-gsm8k-wavefront 222/300 decode=4.654s tokens=92
+huginn-3.5b-gsm8k-wavefront 223/300 decode=6.171s tokens=107
+huginn-3.5b-gsm8k-wavefront 224/300 decode=5.060s tokens=89
+huginn-3.5b-gsm8k-wavefront 225/300 decode=17.000s tokens=220
+huginn-3.5b-gsm8k-wavefront 226/300 decode=4.202s tokens=54
+huginn-3.5b-gsm8k-wavefront 227/300 decode=3.382s tokens=66
+huginn-3.5b-gsm8k-wavefront 228/300 decode=14.169s tokens=261
+huginn-3.5b-gsm8k-wavefront 229/300 decode=3.467s tokens=64
+huginn-3.5b-gsm8k-wavefront 230/300 decode=2.778s tokens=47
+huginn-3.5b-gsm8k-wavefront 231/300 decode=4.991s tokens=87
+huginn-3.5b-gsm8k-wavefront 232/300 decode=6.835s tokens=101
+huginn-3.5b-gsm8k-wavefront 233/300 decode=6.349s tokens=85
+huginn-3.5b-gsm8k-wavefront 234/300 decode=7.640s tokens=123
+huginn-3.5b-gsm8k-wavefront 235/300 decode=2.697s tokens=51
+huginn-3.5b-gsm8k-wavefront 236/300 decode=11.233s tokens=159
+huginn-3.5b-gsm8k-wavefront 237/300 decode=2.707s tokens=38
+huginn-3.5b-gsm8k-wavefront 238/300 decode=5.768s tokens=97
+huginn-3.5b-gsm8k-wavefront 239/300 decode=7.555s tokens=117
+huginn-3.5b-gsm8k-wavefront 240/300 decode=4.081s tokens=75
+huginn-3.5b-gsm8k-wavefront 241/300 decode=2.739s tokens=67
+huginn-3.5b-gsm8k-wavefront 242/300 decode=6.574s tokens=109
+huginn-3.5b-gsm8k-wavefront 243/300 decode=7.091s tokens=100
+huginn-3.5b-gsm8k-wavefront 244/300 decode=5.873s tokens=107
+huginn-3.5b-gsm8k-wavefront 245/300 decode=7.205s tokens=121
+huginn-3.5b-gsm8k-wavefront 246/300 decode=8.001s tokens=145
+huginn-3.5b-gsm8k-wavefront 247/300 decode=8.653s tokens=131
+huginn-3.5b-gsm8k-wavefront 248/300 decode=11.852s tokens=197
+huginn-3.5b-gsm8k-wavefront 249/300 decode=8.107s tokens=103
+huginn-3.5b-gsm8k-wavefront 250/300 decode=11.865s tokens=149
+huginn-3.5b-gsm8k-wavefront 251/300 decode=6.022s tokens=68
+huginn-3.5b-gsm8k-wavefront 252/300 decode=2.560s tokens=29
+huginn-3.5b-gsm8k-wavefront 253/300 decode=10.810s tokens=156
+huginn-3.5b-gsm8k-wavefront 254/300 decode=3.522s tokens=66
+huginn-3.5b-gsm8k-wavefront 255/300 decode=6.848s tokens=150
+huginn-3.5b-gsm8k-wavefront 256/300 decode=8.921s tokens=122
+huginn-3.5b-gsm8k-wavefront 257/300 decode=4.798s tokens=78
+huginn-3.5b-gsm8k-wavefront 258/300 decode=9.558s tokens=149
+huginn-3.5b-gsm8k-wavefront 259/300 decode=10.512s tokens=187
+huginn-3.5b-gsm8k-wavefront 260/300 decode=3.624s tokens=56
+huginn-3.5b-gsm8k-wavefront 261/300 decode=5.330s tokens=65
+huginn-3.5b-gsm8k-wavefront 262/300 decode=8.751s tokens=125
+huginn-3.5b-gsm8k-wavefront 263/300 decode=6.676s tokens=120
+huginn-3.5b-gsm8k-wavefront 264/300 decode=3.976s tokens=84
+huginn-3.5b-gsm8k-wavefront 265/300 decode=5.882s tokens=85
+huginn-3.5b-gsm8k-wavefront 266/300 decode=4.666s tokens=72
+huginn-3.5b-gsm8k-wavefront 267/300 decode=7.501s tokens=137
+huginn-3.5b-gsm8k-wavefront 268/300 decode=5.308s tokens=100
+huginn-3.5b-gsm8k-wavefront 269/300 decode=3.714s tokens=67
+huginn-3.5b-gsm8k-wavefront 270/300 decode=8.813s tokens=114
+huginn-3.5b-gsm8k-wavefront 271/300 decode=6.155s tokens=77
+huginn-3.5b-gsm8k-wavefront 272/300 decode=6.620s tokens=104
+huginn-3.5b-gsm8k-wavefront 273/300 decode=7.825s tokens=128
+huginn-3.5b-gsm8k-wavefront 274/300 decode=4.655s tokens=65
+huginn-3.5b-gsm8k-wavefront 275/300 decode=9.657s tokens=142
+huginn-3.5b-gsm8k-wavefront 276/300 decode=2.576s tokens=53
+huginn-3.5b-gsm8k-wavefront 277/300 decode=2.822s tokens=50
+huginn-3.5b-gsm8k-wavefront 278/300 decode=7.299s tokens=128
+huginn-3.5b-gsm8k-wavefront 279/300 decode=3.489s tokens=65
+huginn-3.5b-gsm8k-wavefront 280/300 decode=2.880s tokens=39
+huginn-3.5b-gsm8k-wavefront 281/300 decode=4.486s tokens=71
+huginn-3.5b-gsm8k-wavefront 282/300 decode=7.273s tokens=131
+huginn-3.5b-gsm8k-wavefront 283/300 decode=8.831s tokens=123
+huginn-3.5b-gsm8k-wavefront 284/300 decode=6.068s tokens=95
+huginn-3.5b-gsm8k-wavefront 285/300 decode=3.094s tokens=59
+huginn-3.5b-gsm8k-wavefront 286/300 decode=4.770s tokens=83
+huginn-3.5b-gsm8k-wavefront 287/300 decode=4.581s tokens=55
+huginn-3.5b-gsm8k-wavefront 288/300 decode=6.977s tokens=127
+huginn-3.5b-gsm8k-wavefront 289/300 decode=4.344s tokens=108
+huginn-3.5b-gsm8k-wavefront 290/300 decode=6.205s tokens=86
+huginn-3.5b-gsm8k-wavefront 291/300 decode=3.487s tokens=56
+huginn-3.5b-gsm8k-wavefront 292/300 decode=8.332s tokens=133
+huginn-3.5b-gsm8k-wavefront 293/300 decode=3.338s tokens=58
+huginn-3.5b-gsm8k-wavefront 294/300 decode=5.202s tokens=96
+huginn-3.5b-gsm8k-wavefront 295/300 decode=7.775s tokens=103
+huginn-3.5b-gsm8k-wavefront 296/300 decode=21.246s tokens=512
+huginn-3.5b-gsm8k-wavefront 297/300 decode=8.382s tokens=116
+huginn-3.5b-gsm8k-wavefront 298/300 decode=2.343s tokens=30
+huginn-3.5b-gsm8k-wavefront 299/300 decode=5.784s tokens=104
+huginn-3.5b-gsm8k-wavefront 300/300 decode=4.731s tokens=82
+wandb: updating run metadata; uploading artifact huginn-3.5b-gsm8k-wavefront
+wandb: uploading artifact huginn-3.5b-gsm8k-wavefront
+wandb: uploading artifact huginn-3.5b-gsm8k-wavefront; uploading output.log; uploading wandb-summary.json
+wandb: uploading artifact huginn-3.5b-gsm8k-wavefront
+wandb: 
+wandb: Run history:
+wandb:        aggregate/cap_stopped ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▇▇▇▇▇▇▇▇▇███████████████
+wandb: aggregate/completed_requests ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▅▅▅▅▅▅▆▆▆▆▆▆▆▆▇▇████
+wandb:           aggregate/decode_s ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▆▆▇▇████
+wandb:     aggregate/decode_token_s ▁██▇▇▂▁▁▁▁▂▂▂▄▅▄▄▄▄▄▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
+wandb:      aggregate/decode_tokens ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇█████
+wandb:              aggregate/gamma ▆▂▁██▄▄▃▂▁▁▂▂▃▃▅▄▄▄▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃
+wandb:         aggregate/loop_steps ▁▁▁▁▁▂▂▂▂▃▃▃▃▄▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇████
+wandb:      aggregate/output_tokens ▁▁▁▂▂▂▂▂▂▂▃▃▃▄▄▄▄▄▄▄▅▆▆▆▆▆▆▆▆▇▇▇▇▇▇█████
+wandb:          aggregate/prefill_s ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▄▄▅▅▅▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb:             request/decode_s ▂▁▂█▄▂▂▄▃▃▂▄▂▂▂▅▅▂▂▂▂▂▂▃▂▁▅▂▄▂▂▂▅▂▄▃▂▂▂▂
+wandb:                           +2 ...
+wandb: 
+wandb: Run summary:
+wandb:        aggregate/cap_stopped 7
+wandb: aggregate/completed_requests 300
+wandb:           aggregate/decode_s 1920.48964
+wandb:     aggregate/decode_token_s 16.07351
+wandb:      aggregate/decode_tokens 30869
+wandb:              aggregate/gamma 3.05396
+wandb:         aggregate/loop_steps 323452
+wandb:      aggregate/output_tokens 31169
+wandb:          aggregate/prefill_s 31.33784
+wandb:            attention_backend packed_prefix_and_tr...
+wandb:                          +27 ...
+wandb: 
+wandb: 🚀 View run huginn-3.5b-gsm8k-wavefront at: https://wandb.ai/zsqzz/loopfill-latency512/runs/032d1dcc3129
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/runs/huginn-3.5b-gsm8k-wavefront/wandb/run-20261107_092954-032d1dcc3129/logs

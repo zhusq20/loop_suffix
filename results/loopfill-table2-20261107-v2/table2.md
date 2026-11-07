@@ -6,28 +6,28 @@
 
 | Method | B1 | B2 | B4 | B8 | B16 |
 |---|---:|---:|---:|---:|---:|
-| AR | 5.89 | 11.11 | 19.00 | 32.99 | pending |
-| WFD | 14.92 | 24.56 | 39.76 | pending | pending |
-| LoopSpec | 19.65 | pending | pending | pending | pending |
-| Suffix-only | 9.45 | 17.34 | pending | pending | pending |
-| LoopFill-online | 26.17 | pending | pending | pending | pending |
+| AR | 5.89 | 11.11 | 19.00 | 32.99 | 48.34 |
+| WFD | 14.92 | 24.56 | 39.76 | 60.81 | oom |
+| LoopSpec | 19.65 | 33.89 | 51.03 | 74.24 | 89.65 |
+| Suffix-only | 9.45 | 17.34 | 30.17 | 52.01 | 74.45 |
+| LoopFill-online | 26.17 | 40.73 | 59.50 | 88.18 | 117.52 |
 
 ## ouro-1.4b
 
 | Method | B1 | B2 | B4 | B8 | B16 |
 |---|---:|---:|---:|---:|---:|
-| AR | pending | pending | pending | pending | pending |
-| WFD | pending | pending | pending | pending | pending |
-| LoopSpec | pending | pending | pending | pending | pending |
-| Suffix-only | pending | pending | pending | pending | pending |
-| LoopFill-online | pending | pending | pending | pending | pending |
+| AR | 10.77 | 20.75 | 40.06 | 76.25 | 135.65 |
+| WFD | 26.86 | 51.00 | 94.74 | 168.89 | 272.37 |
+| LoopSpec | 29.77 | 56.83 | 105.23 | 182.51 | 287.90 |
+| Suffix-only | 17.55 | 31.54 | 61.70 | 113.74 | 193.24 |
+| LoopFill-online | 47.49 | 84.42 | 143.27 | 214.71 | 289.28 |
 
 ## ouro-2.6b
 
 | Method | B1 | B2 | B4 | B8 | B16 |
 |---|---:|---:|---:|---:|---:|
-| AR | 5.53 | 10.65 | pending | pending | pending |
-| WFD | 15.19 | pending | pending | pending | pending |
-| LoopSpec | pending | pending | pending | pending | pending |
-| Suffix-only | pending | pending | pending | pending | pending |
-| LoopFill-online | pending | pending | pending | pending | pending |
+| AR | 5.53 | 10.65 | 20.75 | 38.72 | 67.48 |
+| WFD | 15.19 | 29.02 | 53.96 | 98.75 | 158.45 |
+| LoopSpec | 16.77 | 32.02 | 58.78 | 104.06 | 166.52 |
+| Suffix-only | 8.89 | 17.03 | 32.48 | 60.47 | 102.13 |
+| LoopFill-online | 27.12 | 51.17 | 86.22 | 140.94 | 189.56 |

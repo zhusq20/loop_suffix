@@ -1,6 +1,6 @@
-# 表 1、表 2 实验归档（2026-11-07）
+# 表 1、表 2 实验归档（2026-11-08 更新）
 
-本次按要求将两张表所需的代码、测试及正式实验目录中的现有文件提交到 GitHub。实验尚未全部完成；这些文件是提交时的快照，不能视为最终完整表格。`running` 和进程 PID 表示原机器采集时的状态，不表示克隆仓库后存在对应进程。
+2026-11-08最终归档：表1全部90组、31,380条请求完成；表2全部75组结束，其中74组成功、Huginn/WFD/B16为实测OOM。已纳入完整逐题记录、最终汇总、Markdown/LaTeX表格及上传恢复证据。表1失败单元补传到原W&B run并下载核验SHA256；没有重新生成或修改计时。下文2026-11-07的数量与测试结果为首次快照历史。`running` 和进程 PID 表示原机器采集时的状态，不表示克隆仓库后存在对应进程。
 
 | 表格 | 正式目录 | 制表入口 | 协议 |
 | --- | --- | --- | --- |
@@ -50,3 +50,7 @@ CUDA_VISIBLE_DEVICES='' OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   tests/test_loop_batch_sweep.py tests/test_loop_batch_decode.py \
   tests/test_loop_continuous_batch.py -q
 ```
+
+## 最终归档验证
+
+表1核对全部90份逐题记录的完成哈希、冻结输入题序及prompt哈希，并复算全部汇总指标（31,380请求）。表2核对75组CSV状态，成功组的吞吐、墙钟时间、输出量和请求数与job汇总一致。W&B队列已核验为finished、90 complete、0 failed。最终表格由 `python scripts/loop_final_tables.py` 生成；完整核验记录见 `results/loopfill-latency512-20261107/recovery/upload-finalization/final-validation.json`。云端artifact下载副本不重复入库，保留哈希核验记录。

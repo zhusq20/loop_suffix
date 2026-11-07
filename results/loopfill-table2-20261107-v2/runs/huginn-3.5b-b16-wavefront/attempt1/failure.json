@@ -1,0 +1,10 @@
+{
+  "outcome": "oom",
+  "exception_type": "OutOfMemoryError",
+  "error": "CUDA out of memory. Tried to allocate 24.65 GiB. GPU 0 has a total capacity of 139.81 GiB of which 17.48 GiB is free. Including non-PyTorch memory, this process has 122.32 GiB memory in use. Of the allocated memory 121.70 GiB is allocated by PyTorch, and 22.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+  "outer_error": "OutOfMemoryError('CUDA out of memory. Tried to allocate 24.65 GiB. GPU 0 has a total capacity of 139.81 GiB of which 17.48 GiB is free. Including non-PyTorch memory, this process has 122.32 GiB memory in use. Of the allocated memory 121.70 GiB is allocated by PyTorch, and 22.37 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)')",
+  "model": "huginn-3.5b",
+  "arms": "wavefront",
+  "batch_sizes": "16",
+  "finished_unix": 1794056357.8976567
+}

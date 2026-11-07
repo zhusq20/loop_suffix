@@ -6,3 +6,4 @@ Traceback (most recent call last):
   File "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/source/scripts/loop_table2_suite.py", line 247, in worker
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 BlockingIOError: [Errno 11] Resource temporarily unavailable
+{"key": "huginn-3.5b-b16-budget-suffix", "outcome": "complete", "gpu": 1, "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/98657cea6e1ab943"}

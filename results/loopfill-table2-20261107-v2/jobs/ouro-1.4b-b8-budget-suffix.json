@@ -3,7 +3,7 @@
   "model": "ouro-1.4b",
   "batch": 8,
   "arm": "budget-suffix",
-  "outcome": "pending",
+  "outcome": "complete",
   "worker_log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/ouro-1.4b-b8-budget-suffix-full-worker.log",
   "launch_failures": [
     {
@@ -13,5 +13,2514 @@
       "requeued_unix": 1793993108.1935644,
       "reason": "GPU lock contention"
     }
-  ]
+  ],
+  "attempt": 1,
+  "output": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b8-budget-suffix/attempt1",
+  "gpu": 5,
+  "gpu_uuid": "GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a",
+  "cpus": "52-55",
+  "started_unix": 1794067818.5180774,
+  "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/e52db6420369dc39",
+  "pid": 391443,
+  "progress": {
+    "completed_requests": 480,
+    "output_tokens": 119782,
+    "elapsed_s": 1053.1421478018165
+  },
+  "returncode": 0,
+  "finished_unix": 1794068891.1084816,
+  "summary": {
+    "schedule": "continuous",
+    "concurrency": 8,
+    "max_active_requests": 8,
+    "requests": 480,
+    "output_tokens": 119782,
+    "wall_s": 1053.163111589849,
+    "output_tput": 113.73546859154398,
+    "request_tput": 0.4557698562717363,
+    "prefill_policy": "chunked_interleaved",
+    "prefill_chunk_size": 128,
+    "prefill_chunks": 1380,
+    "prefill_chunk_tokens": 144013,
+    "attention_policy": "packed_prefix_and_tree",
+    "latency_origin": "slot_admission",
+    "refilled_requests": 472,
+    "average_active_requests": 7.71622911729368,
+    "slot_utilization": 0.96452863966171,
+    "core_calls": 35004,
+    "core_rows": 798508,
+    "max_core_rows": 36,
+    "attention_backend": "packed_prefix_and_tree",
+    "cuda_graph": false,
+    "cuda_graph_shapes": 0,
+    "cuda_graph_replays": 0,
+    "cuda_graph_eager_misses": 65694,
+    "cuda_graph_capture_s": 0.0,
+    "attention_batches": 840096,
+    "pad_decode_rows": false,
+    "core_execution_rows": 798508,
+    "core_padding_rows": 0,
+    "verifier_graph_shapes": 0,
+    "padding_sink_bytes": 0,
+    "latency_s": {
+      "p50": 9.246527690440416,
+      "p95": 81.11546674668784
+    },
+    "ttft_s": {
+      "p50": 0.05572741478681564,
+      "p95": 0.7282832290977238
+    },
+    "arm": "budget-suffix",
+    "config": {
+      "name": "budget-suffix",
+      "depth_total": 4,
+      "draft_depth": 1,
+      "readout_depths": [
+        1,
+        2
+      ],
+      "draft_node_budget": 16,
+      "scoring": "raw",
+      "eta": 0.1,
+      "c_min": 0.25,
+      "c_max": 2.0,
+      "use_suffix": true,
+      "use_model": false,
+      "top_m": 2,
+      "suffix_room": 4,
+      "spec_factor": 1.0,
+      "suffix_min_prob": 0.001,
+      "trace_controller": false,
+      "tree_policy": "node_budget",
+      "child_suffix_policy": "all",
+      "positive_only": false,
+      "child_suffix_caps": [
+        4,
+        4
+      ],
+      "c_initial": 1.0,
+      "existing_child_probs": false
+    },
+    "order_seed": 0,
+    "repeat_id": 0,
+    "request_order": [
+      217,
+      294,
+      181,
+      223,
+      475,
+      439,
+      125,
+      234,
+      365,
+      369,
+      413,
+      83,
+      483,
+      345,
+      139,
+      148,
+      227,
+      488,
+      150,
+      269,
+      415,
+      282,
+      149,
+      212,
+      165,
+      404,
+      137,
+      145,
+      197,
+      489,
+      385,
+      306,
+      405,
+      484,
+      351,
+      504,
+      406,
+      143,
+      362,
+      318,
+      312,
+      210,
+      523,
+      398,
+      189,
+      108,
+      542,
+      238,
+      208,
+      179,
+      364,
+      109,
+      384,
+      254,
+      486,
+      267,
+      337,
+      246,
+      105,
+      517,
+      533,
+      491,
+      350,
+      554,
+      286,
+      370,
+      206,
+      255,
+      186,
+      396,
+      297,
+      190,
+      248,
+      380,
+      412,
+      215,
+      96,
+      336,
+      399,
+      509,
+      291,
+      334,
+      273,
+      515,
+      134,
+      268,
+      199,
+      360,
+      119,
+      265,
+      245,
+      103,
+      434,
+      344,
+      241,
+      540,
+      437,
+      95,
+      184,
+      275,
+      472,
+      425,
+      340,
+      355,
+      400,
+      432,
+      315,
+      261,
+      231,
+      545,
+      473,
+      346,
+      211,
+      390,
+      316,
+      503,
+      300,
+      124,
+      277,
+      283,
+      440,
+      98,
+      82,
+      418,
+      529,
+      524,
+      107,
+      500,
+      451,
+      543,
+      332,
+      314,
+      218,
+      174,
+      280,
+      274,
+      133,
+      422,
+      91,
+      85,
+      366,
+      120,
+      462,
+      169,
+      438,
+      446,
+      146,
+      352,
+      196,
+      151,
+      86,
+      302,
+      182,
+      202,
+      435,
+      387,
+      511,
+      158,
+      527,
+      548,
+      111,
+      258,
+      106,
+      319,
+      328,
+      249,
+      289,
+      135,
+      266,
+      161,
+      557,
+      501,
+      424,
+      481,
+      102,
+      313,
+      426,
+      544,
+      287,
+      93,
+      200,
+      461,
+      164,
+      207,
+      90,
+      301,
+      368,
+      335,
+      411,
+      216,
+      343,
+      556,
+      284,
+      471,
+      450,
+      292,
+      420,
+      327,
+      553,
+      522,
+      458,
+      378,
+      551,
+      520,
+      358,
+      410,
+      305,
+      226,
+      317,
+      518,
+      391,
+      195,
+      478,
+      138,
+      323,
+      121,
+      552,
+      259,
+      130,
+      233,
+      496,
+      416,
+      498,
+      293,
+      187,
+      272,
+      429,
+      160,
+      356,
+      114,
+      528,
+      414,
+      457,
+      309,
+      232,
+      172,
+      253,
+      154,
+      237,
+      171,
+      455,
+      276,
+      395,
+      115,
+      539,
+      220,
+      376,
+      476,
+      166,
+      464,
+      459,
+      198,
+      84,
+      257,
+      224,
+      159,
+      433,
+      279,
+      421,
+      240,
+      477,
+      290,
+      521,
+      87,
+      170,
+      510,
+      141,
+      534,
+      256,
+      163,
+      162,
+      110,
+      466,
+      167,
+      321,
+      546,
+      372,
+      183,
+      388,
+      373,
+      555,
+      320,
+      338,
+      427,
+      173,
+      304,
+      260,
+      474,
+      117,
+      485,
+      445,
+      447,
+      497,
+      298,
+      499,
+      383,
+      402,
+      188,
+      326,
+      392,
+      453,
+      180,
+      92,
+      99,
+      514,
+      270,
+      460,
+      436,
+      142,
+      456,
+      452,
+      470,
+      94,
+      525,
+      465,
+      354,
+      374,
+      104,
+      407,
+      155,
+      519,
+      507,
+      299,
+      468,
+      168,
+      271,
+      193,
+      448,
+      219,
+      89,
+      492,
+      487,
+      252,
+      403,
+      463,
+      330,
+      140,
+      502,
+      535,
+      123,
+      263,
+      409,
+      419,
+      494,
+      311,
+      221,
+      377,
+      295,
+      382,
+      443,
+      191,
+      201,
+      348,
+      222,
+      349,
+      281,
+      430,
+      538,
+      479,
+      100,
+      157,
+      147,
+      428,
+      126,
+      116,
+      324,
+      508,
+      417,
+      531,
+      97,
+      176,
+      177,
+      175,
+      229,
+      204,
+      375,
+      243,
+      559,
+      386,
+      480,
+      308,
+      228,
+      381,
+      558,
+      530,
+      560,
+      357,
+      506,
+      549,
+      144,
+      532,
+      230,
+      512,
+      235,
+      136,
+      331,
+      341,
+      244,
+      122,
+      127,
+      310,
+      359,
+      153,
+      203,
+      194,
+      371,
+      178,
+      113,
+      441,
+      247,
+      526,
+      205,
+      251,
+      333,
+      394,
+      81,
+      401,
+      423,
+      550,
+      444,
+      285,
+      449,
+      128,
+      88,
+      361,
+      493,
+      112,
+      214,
+      347,
+      307,
+      547,
+      363,
+      185,
+      408,
+      393,
+      242,
+      303,
+      262,
+      132,
+      367,
+      322,
+      250,
+      431,
+      516,
+      118,
+      454,
+      131,
+      239,
+      156,
+      389,
+      495,
+      442,
+      353,
+      209,
+      490,
+      397,
+      129,
+      467,
+      541,
+      225,
+      152,
+      339,
+      192,
+      537,
+      379,
+      264,
+      325,
+      236,
+      505,
+      482,
+      288,
+      329,
+      342,
+      213,
+      101,
+      296,
+      536,
+      469,
+      278,
+      513
+    ],
+    "max_nodes": 17,
+    "buffer_policy": "per-arm",
+    "slot_buffer_bytes": 2127368192,
+    "profiled": false,
+    "controller_profiled": false,
+    "tree_policy": "node_budget",
+    "scoring": "raw",
+    "cap_skips": 0,
+    "publications": [
+      {
+        "request_id": 181,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 234,
+        "output_tokens": 26
+      },
+      {
+        "request_id": 223,
+        "output_tokens": 27
+      },
+      {
+        "request_id": 217,
+        "output_tokens": 30
+      },
+      {
+        "request_id": 369,
+        "output_tokens": 63
+      },
+      {
+        "request_id": 294,
+        "output_tokens": 153
+      },
+      {
+        "request_id": 413,
+        "output_tokens": 138
+      },
+      {
+        "request_id": 345,
+        "output_tokens": 65
+      },
+      {
+        "request_id": 475,
+        "output_tokens": 265
+      },
+      {
+        "request_id": 139,
+        "output_tokens": 59
+      },
+      {
+        "request_id": 227,
+        "output_tokens": 23
+      },
+      {
+        "request_id": 488,
+        "output_tokens": 55
+      },
+      {
+        "request_id": 365,
+        "output_tokens": 308
+      },
+      {
+        "request_id": 483,
+        "output_tokens": 598
+      },
+      {
+        "request_id": 439,
+        "output_tokens": 366
+      },
+      {
+        "request_id": 282,
+        "output_tokens": 193
+      },
+      {
+        "request_id": 212,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 165,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 415,
+        "output_tokens": 254
+      },
+      {
+        "request_id": 269,
+        "output_tokens": 275
+      },
+      {
+        "request_id": 404,
+        "output_tokens": 99
+      },
+      {
+        "request_id": 137,
+        "output_tokens": 56
+      },
+      {
+        "request_id": 197,
+        "output_tokens": 45
+      },
+      {
+        "request_id": 385,
+        "output_tokens": 94
+      },
+      {
+        "request_id": 489,
+        "output_tokens": 413
+      },
+      {
+        "request_id": 306,
+        "output_tokens": 183
+      },
+      {
+        "request_id": 484,
+        "output_tokens": 89
+      },
+      {
+        "request_id": 405,
+        "output_tokens": 127
+      },
+      {
+        "request_id": 504,
+        "output_tokens": 63
+      },
+      {
+        "request_id": 125,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 351,
+        "output_tokens": 96
+      },
+      {
+        "request_id": 362,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 83,
+        "output_tokens": 992
+      },
+      {
+        "request_id": 318,
+        "output_tokens": 113
+      },
+      {
+        "request_id": 210,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 312,
+        "output_tokens": 126
+      },
+      {
+        "request_id": 406,
+        "output_tokens": 356
+      },
+      {
+        "request_id": 189,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 148,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 523,
+        "output_tokens": 99
+      },
+      {
+        "request_id": 108,
+        "output_tokens": 37
+      },
+      {
+        "request_id": 542,
+        "output_tokens": 52
+      },
+      {
+        "request_id": 208,
+        "output_tokens": 13
+      },
+      {
+        "request_id": 398,
+        "output_tokens": 104
+      },
+      {
+        "request_id": 238,
+        "output_tokens": 46
+      },
+      {
+        "request_id": 150,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 364,
+        "output_tokens": 58
+      },
+      {
+        "request_id": 179,
+        "output_tokens": 51
+      },
+      {
+        "request_id": 384,
+        "output_tokens": 62
+      },
+      {
+        "request_id": 149,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 267,
+        "output_tokens": 194
+      },
+      {
+        "request_id": 105,
+        "output_tokens": 7
+      },
+      {
+        "request_id": 486,
+        "output_tokens": 140
+      },
+      {
+        "request_id": 145,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 254,
+        "output_tokens": 603
+      },
+      {
+        "request_id": 491,
+        "output_tokens": 50
+      },
+      {
+        "request_id": 350,
+        "output_tokens": 27
+      },
+      {
+        "request_id": 246,
+        "output_tokens": 155
+      },
+      {
+        "request_id": 337,
+        "output_tokens": 147
+      },
+      {
+        "request_id": 370,
+        "output_tokens": 31
+      },
+      {
+        "request_id": 286,
+        "output_tokens": 158
+      },
+      {
+        "request_id": 206,
+        "output_tokens": 41
+      },
+      {
+        "request_id": 533,
+        "output_tokens": 189
+      },
+      {
+        "request_id": 396,
+        "output_tokens": 20
+      },
+      {
+        "request_id": 186,
+        "output_tokens": 33
+      },
+      {
+        "request_id": 190,
+        "output_tokens": 11
+      },
+      {
+        "request_id": 297,
+        "output_tokens": 133
+      },
+      {
+        "request_id": 255,
+        "output_tokens": 160
+      },
+      {
+        "request_id": 412,
+        "output_tokens": 74
+      },
+      {
+        "request_id": 517,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 215,
+        "output_tokens": 68
+      },
+      {
+        "request_id": 554,
+        "output_tokens": 288
+      },
+      {
+        "request_id": 509,
+        "output_tokens": 90
+      },
+      {
+        "request_id": 336,
+        "output_tokens": 105
+      },
+      {
+        "request_id": 248,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 143,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 515,
+        "output_tokens": 58
+      },
+      {
+        "request_id": 334,
+        "output_tokens": 83
+      },
+      {
+        "request_id": 291,
+        "output_tokens": 199
+      },
+      {
+        "request_id": 96,
+        "output_tokens": 236
+      },
+      {
+        "request_id": 199,
+        "output_tokens": 14
+      },
+      {
+        "request_id": 109,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 273,
+        "output_tokens": 151
+      },
+      {
+        "request_id": 268,
+        "output_tokens": 212
+      },
+      {
+        "request_id": 360,
+        "output_tokens": 66
+      },
+      {
+        "request_id": 265,
+        "output_tokens": 290
+      },
+      {
+        "request_id": 399,
+        "output_tokens": 564
+      },
+      {
+        "request_id": 245,
+        "output_tokens": 288
+      },
+      {
+        "request_id": 344,
+        "output_tokens": 54
+      },
+      {
+        "request_id": 241,
+        "output_tokens": 243
+      },
+      {
+        "request_id": 103,
+        "output_tokens": 209
+      },
+      {
+        "request_id": 184,
+        "output_tokens": 50
+      },
+      {
+        "request_id": 134,
+        "output_tokens": 389
+      },
+      {
+        "request_id": 437,
+        "output_tokens": 219
+      },
+      {
+        "request_id": 95,
+        "output_tokens": 130
+      },
+      {
+        "request_id": 472,
+        "output_tokens": 66
+      },
+      {
+        "request_id": 340,
+        "output_tokens": 19
+      },
+      {
+        "request_id": 275,
+        "output_tokens": 163
+      },
+      {
+        "request_id": 355,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 540,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 400,
+        "output_tokens": 100
+      },
+      {
+        "request_id": 231,
+        "output_tokens": 23
+      },
+      {
+        "request_id": 315,
+        "output_tokens": 170
+      },
+      {
+        "request_id": 119,
+        "output_tokens": 656
+      },
+      {
+        "request_id": 261,
+        "output_tokens": 186
+      },
+      {
+        "request_id": 432,
+        "output_tokens": 289
+      },
+      {
+        "request_id": 211,
+        "output_tokens": 32
+      },
+      {
+        "request_id": 545,
+        "output_tokens": 110
+      },
+      {
+        "request_id": 346,
+        "output_tokens": 69
+      },
+      {
+        "request_id": 503,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 390,
+        "output_tokens": 54
+      },
+      {
+        "request_id": 277,
+        "output_tokens": 46
+      },
+      {
+        "request_id": 300,
+        "output_tokens": 83
+      },
+      {
+        "request_id": 425,
+        "output_tokens": 532
+      },
+      {
+        "request_id": 380,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 473,
+        "output_tokens": 328
+      },
+      {
+        "request_id": 316,
+        "output_tokens": 153
+      },
+      {
+        "request_id": 418,
+        "output_tokens": 41
+      },
+      {
+        "request_id": 283,
+        "output_tokens": 317
+      },
+      {
+        "request_id": 107,
+        "output_tokens": 9
+      },
+      {
+        "request_id": 500,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 124,
+        "output_tokens": 214
+      },
+      {
+        "request_id": 524,
+        "output_tokens": 70
+      },
+      {
+        "request_id": 434,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 529,
+        "output_tokens": 90
+      },
+      {
+        "request_id": 440,
+        "output_tokens": 175
+      },
+      {
+        "request_id": 98,
+        "output_tokens": 108
+      },
+      {
+        "request_id": 174,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 218,
+        "output_tokens": 44
+      },
+      {
+        "request_id": 332,
+        "output_tokens": 84
+      },
+      {
+        "request_id": 133,
+        "output_tokens": 103
+      },
+      {
+        "request_id": 314,
+        "output_tokens": 141
+      },
+      {
+        "request_id": 280,
+        "output_tokens": 187
+      },
+      {
+        "request_id": 82,
+        "output_tokens": 261
+      },
+      {
+        "request_id": 543,
+        "output_tokens": 234
+      },
+      {
+        "request_id": 85,
+        "output_tokens": 85
+      },
+      {
+        "request_id": 91,
+        "output_tokens": 116
+      },
+      {
+        "request_id": 366,
+        "output_tokens": 81
+      },
+      {
+        "request_id": 169,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 120,
+        "output_tokens": 125
+      },
+      {
+        "request_id": 422,
+        "output_tokens": 254
+      },
+      {
+        "request_id": 274,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 196,
+        "output_tokens": 41
+      },
+      {
+        "request_id": 451,
+        "output_tokens": 544
+      },
+      {
+        "request_id": 302,
+        "output_tokens": 104
+      },
+      {
+        "request_id": 438,
+        "output_tokens": 286
+      },
+      {
+        "request_id": 202,
+        "output_tokens": 9
+      },
+      {
+        "request_id": 182,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 462,
+        "output_tokens": 409
+      },
+      {
+        "request_id": 511,
+        "output_tokens": 20
+      },
+      {
+        "request_id": 387,
+        "output_tokens": 69
+      },
+      {
+        "request_id": 446,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 352,
+        "output_tokens": 320
+      },
+      {
+        "request_id": 527,
+        "output_tokens": 169
+      },
+      {
+        "request_id": 435,
+        "output_tokens": 347
+      },
+      {
+        "request_id": 106,
+        "output_tokens": 4
+      },
+      {
+        "request_id": 111,
+        "output_tokens": 236
+      },
+      {
+        "request_id": 548,
+        "output_tokens": 252
+      },
+      {
+        "request_id": 258,
+        "output_tokens": 355
+      },
+      {
+        "request_id": 319,
+        "output_tokens": 150
+      },
+      {
+        "request_id": 328,
+        "output_tokens": 76
+      },
+      {
+        "request_id": 86,
+        "output_tokens": 477
+      },
+      {
+        "request_id": 249,
+        "output_tokens": 124
+      },
+      {
+        "request_id": 161,
+        "output_tokens": 31
+      },
+      {
+        "request_id": 557,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 501,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 289,
+        "output_tokens": 569
+      },
+      {
+        "request_id": 266,
+        "output_tokens": 219
+      },
+      {
+        "request_id": 102,
+        "output_tokens": 56
+      },
+      {
+        "request_id": 313,
+        "output_tokens": 355
+      },
+      {
+        "request_id": 544,
+        "output_tokens": 21
+      },
+      {
+        "request_id": 426,
+        "output_tokens": 187
+      },
+      {
+        "request_id": 424,
+        "output_tokens": 387
+      },
+      {
+        "request_id": 200,
+        "output_tokens": 20
+      },
+      {
+        "request_id": 481,
+        "output_tokens": 279
+      },
+      {
+        "request_id": 146,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 164,
+        "output_tokens": 10
+      },
+      {
+        "request_id": 207,
+        "output_tokens": 14
+      },
+      {
+        "request_id": 287,
+        "output_tokens": 133
+      },
+      {
+        "request_id": 90,
+        "output_tokens": 86
+      },
+      {
+        "request_id": 301,
+        "output_tokens": 213
+      },
+      {
+        "request_id": 368,
+        "output_tokens": 88
+      },
+      {
+        "request_id": 335,
+        "output_tokens": 61
+      },
+      {
+        "request_id": 411,
+        "output_tokens": 46
+      },
+      {
+        "request_id": 216,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 343,
+        "output_tokens": 14
+      },
+      {
+        "request_id": 151,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 461,
+        "output_tokens": 275
+      },
+      {
+        "request_id": 284,
+        "output_tokens": 120
+      },
+      {
+        "request_id": 135,
+        "output_tokens": 726
+      },
+      {
+        "request_id": 327,
+        "output_tokens": 65
+      },
+      {
+        "request_id": 292,
+        "output_tokens": 180
+      },
+      {
+        "request_id": 450,
+        "output_tokens": 246
+      },
+      {
+        "request_id": 522,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 420,
+        "output_tokens": 237
+      },
+      {
+        "request_id": 553,
+        "output_tokens": 177
+      },
+      {
+        "request_id": 520,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 158,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 378,
+        "output_tokens": 90
+      },
+      {
+        "request_id": 551,
+        "output_tokens": 65
+      },
+      {
+        "request_id": 226,
+        "output_tokens": 36
+      },
+      {
+        "request_id": 358,
+        "output_tokens": 74
+      },
+      {
+        "request_id": 518,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 556,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 391,
+        "output_tokens": 26
+      },
+      {
+        "request_id": 195,
+        "output_tokens": 29
+      },
+      {
+        "request_id": 305,
+        "output_tokens": 113
+      },
+      {
+        "request_id": 138,
+        "output_tokens": 37
+      },
+      {
+        "request_id": 458,
+        "output_tokens": 446
+      },
+      {
+        "request_id": 317,
+        "output_tokens": 319
+      },
+      {
+        "request_id": 410,
+        "output_tokens": 327
+      },
+      {
+        "request_id": 478,
+        "output_tokens": 213
+      },
+      {
+        "request_id": 552,
+        "output_tokens": 111
+      },
+      {
+        "request_id": 259,
+        "output_tokens": 131
+      },
+      {
+        "request_id": 233,
+        "output_tokens": 27
+      },
+      {
+        "request_id": 496,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 498,
+        "output_tokens": 8
+      },
+      {
+        "request_id": 471,
+        "output_tokens": 707
+      },
+      {
+        "request_id": 187,
+        "output_tokens": 33
+      },
+      {
+        "request_id": 416,
+        "output_tokens": 131
+      },
+      {
+        "request_id": 323,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 356,
+        "output_tokens": 86
+      },
+      {
+        "request_id": 121,
+        "output_tokens": 325
+      },
+      {
+        "request_id": 272,
+        "output_tokens": 177
+      },
+      {
+        "request_id": 429,
+        "output_tokens": 178
+      },
+      {
+        "request_id": 130,
+        "output_tokens": 254
+      },
+      {
+        "request_id": 309,
+        "output_tokens": 123
+      },
+      {
+        "request_id": 93,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 232,
+        "output_tokens": 26
+      },
+      {
+        "request_id": 172,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 293,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 237,
+        "output_tokens": 14
+      },
+      {
+        "request_id": 171,
+        "output_tokens": 36
+      },
+      {
+        "request_id": 414,
+        "output_tokens": 426
+      },
+      {
+        "request_id": 457,
+        "output_tokens": 416
+      },
+      {
+        "request_id": 455,
+        "output_tokens": 125
+      },
+      {
+        "request_id": 528,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 539,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 253,
+        "output_tokens": 407
+      },
+      {
+        "request_id": 395,
+        "output_tokens": 67
+      },
+      {
+        "request_id": 376,
+        "output_tokens": 33
+      },
+      {
+        "request_id": 220,
+        "output_tokens": 36
+      },
+      {
+        "request_id": 276,
+        "output_tokens": 297
+      },
+      {
+        "request_id": 166,
+        "output_tokens": 46
+      },
+      {
+        "request_id": 198,
+        "output_tokens": 30
+      },
+      {
+        "request_id": 464,
+        "output_tokens": 227
+      },
+      {
+        "request_id": 115,
+        "output_tokens": 314
+      },
+      {
+        "request_id": 154,
+        "output_tokens": 525
+      },
+      {
+        "request_id": 459,
+        "output_tokens": 265
+      },
+      {
+        "request_id": 224,
+        "output_tokens": 33
+      },
+      {
+        "request_id": 476,
+        "output_tokens": 300
+      },
+      {
+        "request_id": 257,
+        "output_tokens": 182
+      },
+      {
+        "request_id": 279,
+        "output_tokens": 322
+      },
+      {
+        "request_id": 240,
+        "output_tokens": 40
+      },
+      {
+        "request_id": 433,
+        "output_tokens": 256
+      },
+      {
+        "request_id": 521,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 160,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 170,
+        "output_tokens": 21
+      },
+      {
+        "request_id": 421,
+        "output_tokens": 284
+      },
+      {
+        "request_id": 510,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 534,
+        "output_tokens": 115
+      },
+      {
+        "request_id": 114,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 290,
+        "output_tokens": 735
+      },
+      {
+        "request_id": 159,
+        "output_tokens": 356
+      },
+      {
+        "request_id": 163,
+        "output_tokens": 49
+      },
+      {
+        "request_id": 162,
+        "output_tokens": 34
+      },
+      {
+        "request_id": 477,
+        "output_tokens": 364
+      },
+      {
+        "request_id": 321,
+        "output_tokens": 20
+      },
+      {
+        "request_id": 167,
+        "output_tokens": 30
+      },
+      {
+        "request_id": 87,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 256,
+        "output_tokens": 342
+      },
+      {
+        "request_id": 183,
+        "output_tokens": 45
+      },
+      {
+        "request_id": 84,
+        "output_tokens": 694
+      },
+      {
+        "request_id": 555,
+        "output_tokens": 39
+      },
+      {
+        "request_id": 388,
+        "output_tokens": 93
+      },
+      {
+        "request_id": 338,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 372,
+        "output_tokens": 367
+      },
+      {
+        "request_id": 373,
+        "output_tokens": 117
+      },
+      {
+        "request_id": 546,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 320,
+        "output_tokens": 125
+      },
+      {
+        "request_id": 173,
+        "output_tokens": 34
+      },
+      {
+        "request_id": 304,
+        "output_tokens": 87
+      },
+      {
+        "request_id": 427,
+        "output_tokens": 113
+      },
+      {
+        "request_id": 260,
+        "output_tokens": 146
+      },
+      {
+        "request_id": 485,
+        "output_tokens": 99
+      },
+      {
+        "request_id": 110,
+        "output_tokens": 530
+      },
+      {
+        "request_id": 497,
+        "output_tokens": 113
+      },
+      {
+        "request_id": 447,
+        "output_tokens": 285
+      },
+      {
+        "request_id": 445,
+        "output_tokens": 390
+      },
+      {
+        "request_id": 499,
+        "output_tokens": 123
+      },
+      {
+        "request_id": 383,
+        "output_tokens": 87
+      },
+      {
+        "request_id": 188,
+        "output_tokens": 30
+      },
+      {
+        "request_id": 474,
+        "output_tokens": 448
+      },
+      {
+        "request_id": 298,
+        "output_tokens": 212
+      },
+      {
+        "request_id": 466,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 180,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 392,
+        "output_tokens": 29
+      },
+      {
+        "request_id": 326,
+        "output_tokens": 76
+      },
+      {
+        "request_id": 514,
+        "output_tokens": 37
+      },
+      {
+        "request_id": 402,
+        "output_tokens": 205
+      },
+      {
+        "request_id": 141,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 270,
+        "output_tokens": 161
+      },
+      {
+        "request_id": 453,
+        "output_tokens": 303
+      },
+      {
+        "request_id": 436,
+        "output_tokens": 249
+      },
+      {
+        "request_id": 460,
+        "output_tokens": 321
+      },
+      {
+        "request_id": 470,
+        "output_tokens": 56
+      },
+      {
+        "request_id": 99,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 465,
+        "output_tokens": 27
+      },
+      {
+        "request_id": 525,
+        "output_tokens": 99
+      },
+      {
+        "request_id": 354,
+        "output_tokens": 28
+      },
+      {
+        "request_id": 456,
+        "output_tokens": 394
+      },
+      {
+        "request_id": 104,
+        "output_tokens": 32
+      },
+      {
+        "request_id": 452,
+        "output_tokens": 392
+      },
+      {
+        "request_id": 519,
+        "output_tokens": 61
+      },
+      {
+        "request_id": 507,
+        "output_tokens": 30
+      },
+      {
+        "request_id": 117,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 374,
+        "output_tokens": 198
+      },
+      {
+        "request_id": 299,
+        "output_tokens": 104
+      },
+      {
+        "request_id": 168,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 193,
+        "output_tokens": 13
+      },
+      {
+        "request_id": 468,
+        "output_tokens": 144
+      },
+      {
+        "request_id": 271,
+        "output_tokens": 131
+      },
+      {
+        "request_id": 219,
+        "output_tokens": 48
+      },
+      {
+        "request_id": 492,
+        "output_tokens": 20
+      },
+      {
+        "request_id": 487,
+        "output_tokens": 94
+      },
+      {
+        "request_id": 448,
+        "output_tokens": 368
+      },
+      {
+        "request_id": 92,
+        "output_tokens": 856
+      },
+      {
+        "request_id": 252,
+        "output_tokens": 193
+      },
+      {
+        "request_id": 463,
+        "output_tokens": 70
+      },
+      {
+        "request_id": 403,
+        "output_tokens": 241
+      },
+      {
+        "request_id": 330,
+        "output_tokens": 122
+      },
+      {
+        "request_id": 535,
+        "output_tokens": 21
+      },
+      {
+        "request_id": 502,
+        "output_tokens": 96
+      },
+      {
+        "request_id": 142,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 409,
+        "output_tokens": 19
+      },
+      {
+        "request_id": 89,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 494,
+        "output_tokens": 28
+      },
+      {
+        "request_id": 407,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 263,
+        "output_tokens": 261
+      },
+      {
+        "request_id": 221,
+        "output_tokens": 33
+      },
+      {
+        "request_id": 377,
+        "output_tokens": 59
+      },
+      {
+        "request_id": 382,
+        "output_tokens": 31
+      },
+      {
+        "request_id": 94,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 191,
+        "output_tokens": 12
+      },
+      {
+        "request_id": 311,
+        "output_tokens": 162
+      },
+      {
+        "request_id": 201,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 295,
+        "output_tokens": 142
+      },
+      {
+        "request_id": 222,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 155,
+        "output_tokens": 916
+      },
+      {
+        "request_id": 419,
+        "output_tokens": 384
+      },
+      {
+        "request_id": 348,
+        "output_tokens": 68
+      },
+      {
+        "request_id": 281,
+        "output_tokens": 155
+      },
+      {
+        "request_id": 349,
+        "output_tokens": 137
+      },
+      {
+        "request_id": 479,
+        "output_tokens": 184
+      },
+      {
+        "request_id": 123,
+        "output_tokens": 481
+      },
+      {
+        "request_id": 443,
+        "output_tokens": 505
+      },
+      {
+        "request_id": 538,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 140,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 116,
+        "output_tokens": 20
+      },
+      {
+        "request_id": 324,
+        "output_tokens": 14
+      },
+      {
+        "request_id": 508,
+        "output_tokens": 45
+      },
+      {
+        "request_id": 417,
+        "output_tokens": 162
+      },
+      {
+        "request_id": 430,
+        "output_tokens": 649
+      },
+      {
+        "request_id": 100,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 176,
+        "output_tokens": 23
+      },
+      {
+        "request_id": 175,
+        "output_tokens": 11
+      },
+      {
+        "request_id": 428,
+        "output_tokens": 603
+      },
+      {
+        "request_id": 177,
+        "output_tokens": 29
+      },
+      {
+        "request_id": 204,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 229,
+        "output_tokens": 23
+      },
+      {
+        "request_id": 559,
+        "output_tokens": 28
+      },
+      {
+        "request_id": 243,
+        "output_tokens": 246
+      },
+      {
+        "request_id": 531,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 375,
+        "output_tokens": 174
+      },
+      {
+        "request_id": 228,
+        "output_tokens": 9
+      },
+      {
+        "request_id": 97,
+        "output_tokens": 253
+      },
+      {
+        "request_id": 558,
+        "output_tokens": 21
+      },
+      {
+        "request_id": 308,
+        "output_tokens": 95
+      },
+      {
+        "request_id": 530,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 381,
+        "output_tokens": 63
+      },
+      {
+        "request_id": 560,
+        "output_tokens": 105
+      },
+      {
+        "request_id": 549,
+        "output_tokens": 29
+      },
+      {
+        "request_id": 480,
+        "output_tokens": 243
+      },
+      {
+        "request_id": 386,
+        "output_tokens": 420
+      },
+      {
+        "request_id": 532,
+        "output_tokens": 42
+      },
+      {
+        "request_id": 230,
+        "output_tokens": 33
+      },
+      {
+        "request_id": 506,
+        "output_tokens": 182
+      },
+      {
+        "request_id": 136,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 235,
+        "output_tokens": 43
+      },
+      {
+        "request_id": 512,
+        "output_tokens": 82
+      },
+      {
+        "request_id": 157,
+        "output_tokens": 883
+      },
+      {
+        "request_id": 244,
+        "output_tokens": 128
+      },
+      {
+        "request_id": 144,
+        "output_tokens": 245
+      },
+      {
+        "request_id": 341,
+        "output_tokens": 218
+      },
+      {
+        "request_id": 357,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 126,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 359,
+        "output_tokens": 65
+      },
+      {
+        "request_id": 310,
+        "output_tokens": 150
+      },
+      {
+        "request_id": 147,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 194,
+        "output_tokens": 28
+      },
+      {
+        "request_id": 203,
+        "output_tokens": 68
+      },
+      {
+        "request_id": 331,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 122,
+        "output_tokens": 294
+      },
+      {
+        "request_id": 178,
+        "output_tokens": 38
+      },
+      {
+        "request_id": 371,
+        "output_tokens": 65
+      },
+      {
+        "request_id": 205,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 247,
+        "output_tokens": 196
+      },
+      {
+        "request_id": 526,
+        "output_tokens": 271
+      },
+      {
+        "request_id": 333,
+        "output_tokens": 68
+      },
+      {
+        "request_id": 251,
+        "output_tokens": 343
+      },
+      {
+        "request_id": 394,
+        "output_tokens": 57
+      },
+      {
+        "request_id": 401,
+        "output_tokens": 37
+      },
+      {
+        "request_id": 441,
+        "output_tokens": 229
+      },
+      {
+        "request_id": 550,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 127,
+        "output_tokens": 373
+      },
+      {
+        "request_id": 423,
+        "output_tokens": 135
+      },
+      {
+        "request_id": 444,
+        "output_tokens": 131
+      },
+      {
+        "request_id": 361,
+        "output_tokens": 24
+      },
+      {
+        "request_id": 493,
+        "output_tokens": 24
+      },
+      {
+        "request_id": 153,
+        "output_tokens": 430
+      },
+      {
+        "request_id": 112,
+        "output_tokens": 35
+      },
+      {
+        "request_id": 285,
+        "output_tokens": 223
+      },
+      {
+        "request_id": 449,
+        "output_tokens": 263
+      },
+      {
+        "request_id": 214,
+        "output_tokens": 44
+      },
+      {
+        "request_id": 547,
+        "output_tokens": 26
+      },
+      {
+        "request_id": 363,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 185,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 347,
+        "output_tokens": 98
+      },
+      {
+        "request_id": 307,
+        "output_tokens": 196
+      },
+      {
+        "request_id": 242,
+        "output_tokens": 137
+      },
+      {
+        "request_id": 303,
+        "output_tokens": 270
+      },
+      {
+        "request_id": 408,
+        "output_tokens": 296
+      },
+      {
+        "request_id": 132,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 322,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 367,
+        "output_tokens": 28
+      },
+      {
+        "request_id": 393,
+        "output_tokens": 280
+      },
+      {
+        "request_id": 516,
+        "output_tokens": 97
+      },
+      {
+        "request_id": 262,
+        "output_tokens": 179
+      },
+      {
+        "request_id": 431,
+        "output_tokens": 132
+      },
+      {
+        "request_id": 131,
+        "output_tokens": 11
+      },
+      {
+        "request_id": 250,
+        "output_tokens": 138
+      },
+      {
+        "request_id": 239,
+        "output_tokens": 10
+      },
+      {
+        "request_id": 389,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 495,
+        "output_tokens": 17
+      },
+      {
+        "request_id": 118,
+        "output_tokens": 158
+      },
+      {
+        "request_id": 113,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 209,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 454,
+        "output_tokens": 283
+      },
+      {
+        "request_id": 490,
+        "output_tokens": 29
+      },
+      {
+        "request_id": 442,
+        "output_tokens": 348
+      },
+      {
+        "request_id": 128,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 541,
+        "output_tokens": 6
+      },
+      {
+        "request_id": 156,
+        "output_tokens": 498
+      },
+      {
+        "request_id": 467,
+        "output_tokens": 230
+      },
+      {
+        "request_id": 353,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 225,
+        "output_tokens": 49
+      },
+      {
+        "request_id": 192,
+        "output_tokens": 13
+      },
+      {
+        "request_id": 397,
+        "output_tokens": 290
+      },
+      {
+        "request_id": 537,
+        "output_tokens": 122
+      },
+      {
+        "request_id": 325,
+        "output_tokens": 18
+      },
+      {
+        "request_id": 339,
+        "output_tokens": 106
+      },
+      {
+        "request_id": 264,
+        "output_tokens": 92
+      },
+      {
+        "request_id": 236,
+        "output_tokens": 25
+      },
+      {
+        "request_id": 81,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 505,
+        "output_tokens": 43
+      },
+      {
+        "request_id": 88,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 379,
+        "output_tokens": 184
+      },
+      {
+        "request_id": 213,
+        "output_tokens": 29
+      },
+      {
+        "request_id": 342,
+        "output_tokens": 109
+      },
+      {
+        "request_id": 329,
+        "output_tokens": 131
+      },
+      {
+        "request_id": 536,
+        "output_tokens": 110
+      },
+      {
+        "request_id": 296,
+        "output_tokens": 447
+      },
+      {
+        "request_id": 482,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 278,
+        "output_tokens": 152
+      },
+      {
+        "request_id": 469,
+        "output_tokens": 233
+      },
+      {
+        "request_id": 288,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 129,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 513,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 101,
+        "output_tokens": 565
+      },
+      {
+        "request_id": 152,
+        "output_tokens": 1024
+      }
+    ],
+    "durable_results": true,
+    "result_persistence_s": 3.1475237905979156,
+    "peak_allocated_bytes": 19933867008,
+    "peak_reserved_bytes": 20155727872,
+    "input_tokens": 144013,
+    "total_tput": 250.47876924000556
+  },
+  "tracking_finished": true
 }

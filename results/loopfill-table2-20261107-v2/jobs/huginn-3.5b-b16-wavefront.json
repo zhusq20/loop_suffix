@@ -3,7 +3,7 @@
   "model": "huginn-3.5b",
   "batch": 16,
   "arm": "wavefront",
-  "outcome": "pending",
+  "outcome": "oom",
   "worker_log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/huginn-3.5b-b16-wavefront-full-worker.log",
   "launch_failures": [
     {
@@ -13,5 +13,16 @@
       "requeued_unix": 1793993107.08279,
       "reason": "GPU lock contention"
     }
-  ]
+  ],
+  "attempt": 1,
+  "output": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b16-wavefront/attempt1",
+  "gpu": 4,
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "cpus": "48-51",
+  "started_unix": 1794056344.1734738,
+  "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/15a05e9a4e0c275c",
+  "pid": 272423,
+  "returncode": 1,
+  "finished_unix": 1794056362.3405313,
+  "tracking_finished": true
 }

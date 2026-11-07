@@ -1,0 +1,428 @@
+Loading ouro-1.4b loopspec-dual mbppplus
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 4f8984738b14
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/runs/ouro-1.4b-mbppplus-loopspec-dual/wandb/run-20261107_142821-4f8984738b14
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ouro-1.4b-mbppplus-loopspec-dual
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/4f8984738b14
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+ouro-1.4b-mbppplus-loopspec-dual 1/378 decode=2.017s tokens=82
+ouro-1.4b-mbppplus-loopspec-dual 2/378 decode=4.832s tokens=202
+ouro-1.4b-mbppplus-loopspec-dual 3/378 decode=5.913s tokens=252
+ouro-1.4b-mbppplus-loopspec-dual 4/378 decode=6.050s tokens=252
+ouro-1.4b-mbppplus-loopspec-dual 5/378 decode=4.309s tokens=167
+ouro-1.4b-mbppplus-loopspec-dual 6/378 decode=0.652s tokens=24
+ouro-1.4b-mbppplus-loopspec-dual 7/378 decode=5.451s tokens=228
+ouro-1.4b-mbppplus-loopspec-dual 8/378 decode=5.333s tokens=212
+ouro-1.4b-mbppplus-loopspec-dual 9/378 decode=5.314s tokens=227
+ouro-1.4b-mbppplus-loopspec-dual 10/378 decode=5.409s tokens=195
+ouro-1.4b-mbppplus-loopspec-dual 11/378 decode=11.599s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 12/378 decode=4.269s tokens=184
+ouro-1.4b-mbppplus-loopspec-dual 13/378 decode=2.366s tokens=92
+ouro-1.4b-mbppplus-loopspec-dual 14/378 decode=4.483s tokens=181
+ouro-1.4b-mbppplus-loopspec-dual 15/378 decode=5.895s tokens=245
+ouro-1.4b-mbppplus-loopspec-dual 16/378 decode=5.597s tokens=241
+ouro-1.4b-mbppplus-loopspec-dual 17/378 decode=2.617s tokens=113
+ouro-1.4b-mbppplus-loopspec-dual 18/378 decode=5.596s tokens=233
+ouro-1.4b-mbppplus-loopspec-dual 19/378 decode=3.027s tokens=127
+ouro-1.4b-mbppplus-loopspec-dual 20/378 decode=0.437s tokens=18
+ouro-1.4b-mbppplus-loopspec-dual 21/378 decode=11.410s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 22/378 decode=4.282s tokens=179
+ouro-1.4b-mbppplus-loopspec-dual 23/378 decode=2.257s tokens=92
+ouro-1.4b-mbppplus-loopspec-dual 24/378 decode=6.824s tokens=289
+ouro-1.4b-mbppplus-loopspec-dual 25/378 decode=4.486s tokens=175
+ouro-1.4b-mbppplus-loopspec-dual 26/378 decode=9.532s tokens=398
+ouro-1.4b-mbppplus-loopspec-dual 27/378 decode=0.756s tokens=26
+ouro-1.4b-mbppplus-loopspec-dual 28/378 decode=5.540s tokens=237
+ouro-1.4b-mbppplus-loopspec-dual 29/378 decode=3.933s tokens=173
+ouro-1.4b-mbppplus-loopspec-dual 30/378 decode=8.677s tokens=366
+ouro-1.4b-mbppplus-loopspec-dual 31/378 decode=5.526s tokens=223
+ouro-1.4b-mbppplus-loopspec-dual 32/378 decode=7.256s tokens=298
+ouro-1.4b-mbppplus-loopspec-dual 33/378 decode=7.177s tokens=290
+ouro-1.4b-mbppplus-loopspec-dual 34/378 decode=7.202s tokens=278
+ouro-1.4b-mbppplus-loopspec-dual 35/378 decode=2.889s tokens=118
+ouro-1.4b-mbppplus-loopspec-dual 36/378 decode=5.127s tokens=197
+ouro-1.4b-mbppplus-loopspec-dual 37/378 decode=6.156s tokens=256
+ouro-1.4b-mbppplus-loopspec-dual 38/378 decode=5.214s tokens=210
+ouro-1.4b-mbppplus-loopspec-dual 39/378 decode=11.862s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 40/378 decode=2.559s tokens=100
+ouro-1.4b-mbppplus-loopspec-dual 41/378 decode=3.856s tokens=156
+ouro-1.4b-mbppplus-loopspec-dual 42/378 decode=2.820s tokens=113
+ouro-1.4b-mbppplus-loopspec-dual 43/378 decode=11.229s tokens=480
+ouro-1.4b-mbppplus-loopspec-dual 44/378 decode=7.255s tokens=312
+ouro-1.4b-mbppplus-loopspec-dual 45/378 decode=0.650s tokens=24
+ouro-1.4b-mbppplus-loopspec-dual 46/378 decode=4.892s tokens=193
+ouro-1.4b-mbppplus-loopspec-dual 47/378 decode=5.165s tokens=214
+ouro-1.4b-mbppplus-loopspec-dual 48/378 decode=3.455s tokens=146
+ouro-1.4b-mbppplus-loopspec-dual 49/378 decode=1.858s tokens=78
+ouro-1.4b-mbppplus-loopspec-dual 50/378 decode=8.243s tokens=341
+ouro-1.4b-mbppplus-loopspec-dual 51/378 decode=10.491s tokens=435
+ouro-1.4b-mbppplus-loopspec-dual 52/378 decode=9.158s tokens=378
+ouro-1.4b-mbppplus-loopspec-dual 53/378 decode=5.308s tokens=223
+ouro-1.4b-mbppplus-loopspec-dual 54/378 decode=7.177s tokens=271
+ouro-1.4b-mbppplus-loopspec-dual 55/378 decode=7.278s tokens=275
+ouro-1.4b-mbppplus-loopspec-dual 56/378 decode=3.460s tokens=142
+ouro-1.4b-mbppplus-loopspec-dual 57/378 decode=4.236s tokens=177
+ouro-1.4b-mbppplus-loopspec-dual 58/378 decode=7.592s tokens=317
+ouro-1.4b-mbppplus-loopspec-dual 59/378 decode=11.522s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 60/378 decode=3.212s tokens=132
+ouro-1.4b-mbppplus-loopspec-dual 61/378 decode=4.137s tokens=178
+ouro-1.4b-mbppplus-loopspec-dual 62/378 decode=2.231s tokens=88
+ouro-1.4b-mbppplus-loopspec-dual 63/378 decode=7.188s tokens=303
+ouro-1.4b-mbppplus-loopspec-dual 64/378 decode=4.459s tokens=190
+ouro-1.4b-mbppplus-loopspec-dual 65/378 decode=2.204s tokens=95
+ouro-1.4b-mbppplus-loopspec-dual 66/378 decode=4.995s tokens=197
+ouro-1.4b-mbppplus-loopspec-dual 67/378 decode=5.218s tokens=222
+ouro-1.4b-mbppplus-loopspec-dual 68/378 decode=4.462s tokens=190
+ouro-1.4b-mbppplus-loopspec-dual 69/378 decode=6.107s tokens=239
+ouro-1.4b-mbppplus-loopspec-dual 70/378 decode=3.376s tokens=138
+ouro-1.4b-mbppplus-loopspec-dual 71/378 decode=2.872s tokens=112
+ouro-1.4b-mbppplus-loopspec-dual 72/378 decode=4.962s tokens=202
+ouro-1.4b-mbppplus-loopspec-dual 73/378 decode=0.437s tokens=17
+ouro-1.4b-mbppplus-loopspec-dual 74/378 decode=7.557s tokens=307
+ouro-1.4b-mbppplus-loopspec-dual 75/378 decode=3.741s tokens=151
+ouro-1.4b-mbppplus-loopspec-dual 76/378 decode=0.452s tokens=16
+ouro-1.4b-mbppplus-loopspec-dual 77/378 decode=2.734s tokens=113
+ouro-1.4b-mbppplus-loopspec-dual 78/378 decode=4.580s tokens=180
+ouro-1.4b-mbppplus-loopspec-dual 79/378 decode=5.421s tokens=230
+ouro-1.4b-mbppplus-loopspec-dual 80/378 decode=6.673s tokens=281
+ouro-1.4b-mbppplus-loopspec-dual 81/378 decode=6.257s tokens=262
+ouro-1.4b-mbppplus-loopspec-dual 82/378 decode=5.184s tokens=210
+ouro-1.4b-mbppplus-loopspec-dual 83/378 decode=3.333s tokens=144
+ouro-1.4b-mbppplus-loopspec-dual 84/378 decode=2.804s tokens=119
+ouro-1.4b-mbppplus-loopspec-dual 85/378 decode=3.737s tokens=162
+ouro-1.4b-mbppplus-loopspec-dual 86/378 decode=7.107s tokens=298
+ouro-1.4b-mbppplus-loopspec-dual 87/378 decode=1.829s tokens=82
+ouro-1.4b-mbppplus-loopspec-dual 88/378 decode=3.149s tokens=126
+ouro-1.4b-mbppplus-loopspec-dual 89/378 decode=12.015s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 90/378 decode=4.748s tokens=195
+ouro-1.4b-mbppplus-loopspec-dual 91/378 decode=4.632s tokens=197
+ouro-1.4b-mbppplus-loopspec-dual 92/378 decode=5.999s tokens=247
+ouro-1.4b-mbppplus-loopspec-dual 93/378 decode=2.711s tokens=106
+ouro-1.4b-mbppplus-loopspec-dual 94/378 decode=5.634s tokens=222
+ouro-1.4b-mbppplus-loopspec-dual 95/378 decode=6.219s tokens=252
+ouro-1.4b-mbppplus-loopspec-dual 96/378 decode=15.300s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 97/378 decode=8.060s tokens=346
+ouro-1.4b-mbppplus-loopspec-dual 98/378 decode=4.001s tokens=157
+ouro-1.4b-mbppplus-loopspec-dual 99/378 decode=6.132s tokens=254
+ouro-1.4b-mbppplus-loopspec-dual 100/378 decode=1.853s tokens=77
+ouro-1.4b-mbppplus-loopspec-dual 101/378 decode=6.175s tokens=254
+ouro-1.4b-mbppplus-loopspec-dual 102/378 decode=5.474s tokens=220
+ouro-1.4b-mbppplus-loopspec-dual 103/378 decode=4.972s tokens=211
+ouro-1.4b-mbppplus-loopspec-dual 104/378 decode=14.233s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 105/378 decode=6.691s tokens=259
+ouro-1.4b-mbppplus-loopspec-dual 106/378 decode=2.237s tokens=88
+ouro-1.4b-mbppplus-loopspec-dual 107/378 decode=2.442s tokens=102
+ouro-1.4b-mbppplus-loopspec-dual 108/378 decode=1.970s tokens=75
+ouro-1.4b-mbppplus-loopspec-dual 109/378 decode=4.966s tokens=201
+ouro-1.4b-mbppplus-loopspec-dual 110/378 decode=5.435s tokens=225
+ouro-1.4b-mbppplus-loopspec-dual 111/378 decode=7.193s tokens=299
+ouro-1.4b-mbppplus-loopspec-dual 112/378 decode=5.284s tokens=215
+ouro-1.4b-mbppplus-loopspec-dual 113/378 decode=5.536s tokens=237
+ouro-1.4b-mbppplus-loopspec-dual 114/378 decode=5.283s tokens=213
+ouro-1.4b-mbppplus-loopspec-dual 115/378 decode=4.789s tokens=199
+ouro-1.4b-mbppplus-loopspec-dual 116/378 decode=3.937s tokens=157
+ouro-1.4b-mbppplus-loopspec-dual 117/378 decode=3.194s tokens=131
+ouro-1.4b-mbppplus-loopspec-dual 118/378 decode=4.737s tokens=187
+ouro-1.4b-mbppplus-loopspec-dual 119/378 decode=7.174s tokens=304
+ouro-1.4b-mbppplus-loopspec-dual 120/378 decode=5.157s tokens=203
+ouro-1.4b-mbppplus-loopspec-dual 121/378 decode=7.044s tokens=295
+ouro-1.4b-mbppplus-loopspec-dual 122/378 decode=0.965s tokens=38
+ouro-1.4b-mbppplus-loopspec-dual 123/378 decode=4.896s tokens=183
+ouro-1.4b-mbppplus-loopspec-dual 124/378 decode=5.742s tokens=224
+ouro-1.4b-mbppplus-loopspec-dual 125/378 decode=4.467s tokens=189
+ouro-1.4b-mbppplus-loopspec-dual 126/378 decode=3.748s tokens=164
+ouro-1.4b-mbppplus-loopspec-dual 127/378 decode=2.878s tokens=127
+ouro-1.4b-mbppplus-loopspec-dual 128/378 decode=4.610s tokens=186
+ouro-1.4b-mbppplus-loopspec-dual 129/378 decode=3.952s tokens=155
+ouro-1.4b-mbppplus-loopspec-dual 130/378 decode=1.676s tokens=71
+ouro-1.4b-mbppplus-loopspec-dual 131/378 decode=3.841s tokens=147
+ouro-1.4b-mbppplus-loopspec-dual 132/378 decode=3.993s tokens=161
+ouro-1.4b-mbppplus-loopspec-dual 133/378 decode=4.754s tokens=180
+ouro-1.4b-mbppplus-loopspec-dual 134/378 decode=2.294s tokens=95
+ouro-1.4b-mbppplus-loopspec-dual 135/378 decode=5.452s tokens=227
+ouro-1.4b-mbppplus-loopspec-dual 136/378 decode=5.285s tokens=218
+ouro-1.4b-mbppplus-loopspec-dual 137/378 decode=6.395s tokens=259
+ouro-1.4b-mbppplus-loopspec-dual 138/378 decode=4.227s tokens=169
+ouro-1.4b-mbppplus-loopspec-dual 139/378 decode=3.985s tokens=166
+ouro-1.4b-mbppplus-loopspec-dual 140/378 decode=9.981s tokens=404
+ouro-1.4b-mbppplus-loopspec-dual 141/378 decode=4.223s tokens=179
+ouro-1.4b-mbppplus-loopspec-dual 142/378 decode=4.363s tokens=174
+ouro-1.4b-mbppplus-loopspec-dual 143/378 decode=4.247s tokens=167
+ouro-1.4b-mbppplus-loopspec-dual 144/378 decode=7.271s tokens=295
+ouro-1.4b-mbppplus-loopspec-dual 145/378 decode=5.501s tokens=225
+ouro-1.4b-mbppplus-loopspec-dual 146/378 decode=4.809s tokens=205
+ouro-1.4b-mbppplus-loopspec-dual 147/378 decode=6.846s tokens=286
+ouro-1.4b-mbppplus-loopspec-dual 148/378 decode=4.226s tokens=171
+ouro-1.4b-mbppplus-loopspec-dual 149/378 decode=4.412s tokens=170
+ouro-1.4b-mbppplus-loopspec-dual 150/378 decode=5.520s tokens=230
+ouro-1.4b-mbppplus-loopspec-dual 151/378 decode=5.462s tokens=221
+ouro-1.4b-mbppplus-loopspec-dual 152/378 decode=6.875s tokens=263
+ouro-1.4b-mbppplus-loopspec-dual 153/378 decode=8.508s tokens=370
+ouro-1.4b-mbppplus-loopspec-dual 154/378 decode=7.078s tokens=278
+ouro-1.4b-mbppplus-loopspec-dual 155/378 decode=7.295s tokens=290
+ouro-1.4b-mbppplus-loopspec-dual 156/378 decode=4.731s tokens=203
+ouro-1.4b-mbppplus-loopspec-dual 157/378 decode=8.855s tokens=348
+ouro-1.4b-mbppplus-loopspec-dual 158/378 decode=3.893s tokens=154
+ouro-1.4b-mbppplus-loopspec-dual 159/378 decode=3.571s tokens=147
+ouro-1.4b-mbppplus-loopspec-dual 160/378 decode=4.346s tokens=177
+ouro-1.4b-mbppplus-loopspec-dual 161/378 decode=6.397s tokens=271
+ouro-1.4b-mbppplus-loopspec-dual 162/378 decode=3.078s tokens=132
+ouro-1.4b-mbppplus-loopspec-dual 163/378 decode=3.041s tokens=124
+ouro-1.4b-mbppplus-loopspec-dual 164/378 decode=6.821s tokens=293
+ouro-1.4b-mbppplus-loopspec-dual 165/378 decode=4.633s tokens=197
+ouro-1.4b-mbppplus-loopspec-dual 166/378 decode=6.622s tokens=266
+ouro-1.4b-mbppplus-loopspec-dual 167/378 decode=3.760s tokens=155
+ouro-1.4b-mbppplus-loopspec-dual 168/378 decode=3.491s tokens=146
+ouro-1.4b-mbppplus-loopspec-dual 169/378 decode=4.462s tokens=177
+ouro-1.4b-mbppplus-loopspec-dual 170/378 decode=4.055s tokens=161
+ouro-1.4b-mbppplus-loopspec-dual 171/378 decode=6.618s tokens=270
+ouro-1.4b-mbppplus-loopspec-dual 172/378 decode=2.264s tokens=84
+ouro-1.4b-mbppplus-loopspec-dual 173/378 decode=0.375s tokens=15
+ouro-1.4b-mbppplus-loopspec-dual 174/378 decode=4.124s tokens=176
+ouro-1.4b-mbppplus-loopspec-dual 175/378 decode=3.648s tokens=142
+ouro-1.4b-mbppplus-loopspec-dual 176/378 decode=5.596s tokens=233
+ouro-1.4b-mbppplus-loopspec-dual 177/378 decode=4.298s tokens=177
+ouro-1.4b-mbppplus-loopspec-dual 178/378 decode=9.064s tokens=387
+ouro-1.4b-mbppplus-loopspec-dual 179/378 decode=6.867s tokens=284
+ouro-1.4b-mbppplus-loopspec-dual 180/378 decode=3.595s tokens=152
+ouro-1.4b-mbppplus-loopspec-dual 181/378 decode=2.721s tokens=111
+ouro-1.4b-mbppplus-loopspec-dual 182/378 decode=1.919s tokens=79
+ouro-1.4b-mbppplus-loopspec-dual 183/378 decode=3.714s tokens=149
+ouro-1.4b-mbppplus-loopspec-dual 184/378 decode=1.763s tokens=71
+ouro-1.4b-mbppplus-loopspec-dual 185/378 decode=2.047s tokens=85
+ouro-1.4b-mbppplus-loopspec-dual 186/378 decode=3.056s tokens=130
+ouro-1.4b-mbppplus-loopspec-dual 187/378 decode=11.429s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 188/378 decode=3.751s tokens=141
+ouro-1.4b-mbppplus-loopspec-dual 189/378 decode=2.247s tokens=94
+ouro-1.4b-mbppplus-loopspec-dual 190/378 decode=2.353s tokens=93
+ouro-1.4b-mbppplus-loopspec-dual 191/378 decode=2.373s tokens=89
+ouro-1.4b-mbppplus-loopspec-dual 192/378 decode=6.829s tokens=299
+ouro-1.4b-mbppplus-loopspec-dual 193/378 decode=8.412s tokens=352
+ouro-1.4b-mbppplus-loopspec-dual 194/378 decode=3.810s tokens=160
+ouro-1.4b-mbppplus-loopspec-dual 195/378 decode=2.073s tokens=80
+ouro-1.4b-mbppplus-loopspec-dual 196/378 decode=5.809s tokens=240
+ouro-1.4b-mbppplus-loopspec-dual 197/378 decode=3.349s tokens=139
+ouro-1.4b-mbppplus-loopspec-dual 198/378 decode=8.216s tokens=324
+ouro-1.4b-mbppplus-loopspec-dual 199/378 decode=3.045s tokens=126
+ouro-1.4b-mbppplus-loopspec-dual 200/378 decode=7.588s tokens=310
+ouro-1.4b-mbppplus-loopspec-dual 201/378 decode=4.418s tokens=181
+ouro-1.4b-mbppplus-loopspec-dual 202/378 decode=2.343s tokens=90
+ouro-1.4b-mbppplus-loopspec-dual 203/378 decode=6.087s tokens=251
+ouro-1.4b-mbppplus-loopspec-dual 204/378 decode=0.517s tokens=19
+ouro-1.4b-mbppplus-loopspec-dual 205/378 decode=4.570s tokens=197
+ouro-1.4b-mbppplus-loopspec-dual 206/378 decode=5.144s tokens=211
+ouro-1.4b-mbppplus-loopspec-dual 207/378 decode=3.192s tokens=134
+ouro-1.4b-mbppplus-loopspec-dual 208/378 decode=4.219s tokens=177
+ouro-1.4b-mbppplus-loopspec-dual 209/378 decode=8.521s tokens=353
+ouro-1.4b-mbppplus-loopspec-dual 210/378 decode=6.478s tokens=268
+ouro-1.4b-mbppplus-loopspec-dual 211/378 decode=3.936s tokens=158
+ouro-1.4b-mbppplus-loopspec-dual 212/378 decode=2.835s tokens=114
+ouro-1.4b-mbppplus-loopspec-dual 213/378 decode=3.723s tokens=147
+ouro-1.4b-mbppplus-loopspec-dual 214/378 decode=7.372s tokens=324
+ouro-1.4b-mbppplus-loopspec-dual 215/378 decode=4.446s tokens=177
+ouro-1.4b-mbppplus-loopspec-dual 216/378 decode=6.391s tokens=243
+ouro-1.4b-mbppplus-loopspec-dual 217/378 decode=3.711s tokens=165
+ouro-1.4b-mbppplus-loopspec-dual 218/378 decode=5.887s tokens=239
+ouro-1.4b-mbppplus-loopspec-dual 219/378 decode=4.141s tokens=176
+ouro-1.4b-mbppplus-loopspec-dual 220/378 decode=4.833s tokens=198
+ouro-1.4b-mbppplus-loopspec-dual 221/378 decode=0.651s tokens=28
+ouro-1.4b-mbppplus-loopspec-dual 222/378 decode=0.678s tokens=26
+ouro-1.4b-mbppplus-loopspec-dual 223/378 decode=0.722s tokens=28
+ouro-1.4b-mbppplus-loopspec-dual 224/378 decode=3.864s tokens=153
+ouro-1.4b-mbppplus-loopspec-dual 225/378 decode=1.353s tokens=52
+ouro-1.4b-mbppplus-loopspec-dual 226/378 decode=6.843s tokens=271
+ouro-1.4b-mbppplus-loopspec-dual 227/378 decode=3.073s tokens=131
+ouro-1.4b-mbppplus-loopspec-dual 228/378 decode=6.065s tokens=255
+ouro-1.4b-mbppplus-loopspec-dual 229/378 decode=16.455s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 230/378 decode=4.081s tokens=165
+ouro-1.4b-mbppplus-loopspec-dual 231/378 decode=1.583s tokens=57
+ouro-1.4b-mbppplus-loopspec-dual 232/378 decode=4.857s tokens=201
+ouro-1.4b-mbppplus-loopspec-dual 233/378 decode=3.494s tokens=139
+ouro-1.4b-mbppplus-loopspec-dual 234/378 decode=4.810s tokens=205
+ouro-1.4b-mbppplus-loopspec-dual 235/378 decode=6.609s tokens=278
+ouro-1.4b-mbppplus-loopspec-dual 236/378 decode=3.900s tokens=157
+ouro-1.4b-mbppplus-loopspec-dual 237/378 decode=3.027s tokens=123
+ouro-1.4b-mbppplus-loopspec-dual 238/378 decode=6.387s tokens=240
+ouro-1.4b-mbppplus-loopspec-dual 239/378 decode=7.200s tokens=288
+ouro-1.4b-mbppplus-loopspec-dual 240/378 decode=3.234s tokens=136
+ouro-1.4b-mbppplus-loopspec-dual 241/378 decode=4.107s tokens=159
+ouro-1.4b-mbppplus-loopspec-dual 242/378 decode=6.006s tokens=256
+ouro-1.4b-mbppplus-loopspec-dual 243/378 decode=5.228s tokens=219
+ouro-1.4b-mbppplus-loopspec-dual 244/378 decode=4.178s tokens=165
+ouro-1.4b-mbppplus-loopspec-dual 245/378 decode=5.438s tokens=214
+ouro-1.4b-mbppplus-loopspec-dual 246/378 decode=5.410s tokens=223
+ouro-1.4b-mbppplus-loopspec-dual 247/378 decode=7.638s tokens=303
+ouro-1.4b-mbppplus-loopspec-dual 248/378 decode=4.742s tokens=184
+ouro-1.4b-mbppplus-loopspec-dual 249/378 decode=4.056s tokens=165
+ouro-1.4b-mbppplus-loopspec-dual 250/378 decode=3.929s tokens=152
+ouro-1.4b-mbppplus-loopspec-dual 251/378 decode=3.116s tokens=125
+ouro-1.4b-mbppplus-loopspec-dual 252/378 decode=4.251s tokens=178
+ouro-1.4b-mbppplus-loopspec-dual 253/378 decode=2.113s tokens=76
+ouro-1.4b-mbppplus-loopspec-dual 254/378 decode=6.371s tokens=255
+ouro-1.4b-mbppplus-loopspec-dual 255/378 decode=5.577s tokens=224
+ouro-1.4b-mbppplus-loopspec-dual 256/378 decode=8.893s tokens=362
+ouro-1.4b-mbppplus-loopspec-dual 257/378 decode=5.780s tokens=250
+ouro-1.4b-mbppplus-loopspec-dual 258/378 decode=3.722s tokens=147
+ouro-1.4b-mbppplus-loopspec-dual 259/378 decode=11.264s tokens=459
+ouro-1.4b-mbppplus-loopspec-dual 260/378 decode=4.416s tokens=170
+ouro-1.4b-mbppplus-loopspec-dual 261/378 decode=8.409s tokens=321
+ouro-1.4b-mbppplus-loopspec-dual 262/378 decode=2.861s tokens=117
+ouro-1.4b-mbppplus-loopspec-dual 263/378 decode=8.180s tokens=318
+ouro-1.4b-mbppplus-loopspec-dual 264/378 decode=7.465s tokens=300
+ouro-1.4b-mbppplus-loopspec-dual 265/378 decode=6.568s tokens=279
+ouro-1.4b-mbppplus-loopspec-dual 266/378 decode=2.649s tokens=115
+ouro-1.4b-mbppplus-loopspec-dual 267/378 decode=3.968s tokens=156
+ouro-1.4b-mbppplus-loopspec-dual 268/378 decode=3.057s tokens=128
+ouro-1.4b-mbppplus-loopspec-dual 269/378 decode=2.229s tokens=94
+ouro-1.4b-mbppplus-loopspec-dual 270/378 decode=2.214s tokens=90
+ouro-1.4b-mbppplus-loopspec-dual 271/378 decode=3.661s tokens=146
+ouro-1.4b-mbppplus-loopspec-dual 272/378 decode=3.739s tokens=157
+ouro-1.4b-mbppplus-loopspec-dual 273/378 decode=6.472s tokens=253
+ouro-1.4b-mbppplus-loopspec-dual 274/378 decode=6.555s tokens=269
+ouro-1.4b-mbppplus-loopspec-dual 275/378 decode=2.586s tokens=105
+ouro-1.4b-mbppplus-loopspec-dual 276/378 decode=4.443s tokens=171
+ouro-1.4b-mbppplus-loopspec-dual 277/378 decode=3.001s tokens=125
+ouro-1.4b-mbppplus-loopspec-dual 278/378 decode=5.022s tokens=215
+ouro-1.4b-mbppplus-loopspec-dual 279/378 decode=9.111s tokens=377
+ouro-1.4b-mbppplus-loopspec-dual 280/378 decode=10.418s tokens=425
+ouro-1.4b-mbppplus-loopspec-dual 281/378 decode=5.030s tokens=208
+ouro-1.4b-mbppplus-loopspec-dual 282/378 decode=3.582s tokens=145
+ouro-1.4b-mbppplus-loopspec-dual 283/378 decode=2.578s tokens=105
+ouro-1.4b-mbppplus-loopspec-dual 284/378 decode=3.151s tokens=132
+ouro-1.4b-mbppplus-loopspec-dual 285/378 decode=0.597s tokens=21
+ouro-1.4b-mbppplus-loopspec-dual 286/378 decode=3.702s tokens=154
+ouro-1.4b-mbppplus-loopspec-dual 287/378 decode=4.304s tokens=176
+ouro-1.4b-mbppplus-loopspec-dual 288/378 decode=7.630s tokens=325
+ouro-1.4b-mbppplus-loopspec-dual 289/378 decode=4.287s tokens=169
+ouro-1.4b-mbppplus-loopspec-dual 290/378 decode=5.851s tokens=238
+ouro-1.4b-mbppplus-loopspec-dual 291/378 decode=8.080s tokens=312
+ouro-1.4b-mbppplus-loopspec-dual 292/378 decode=4.817s tokens=198
+ouro-1.4b-mbppplus-loopspec-dual 293/378 decode=6.315s tokens=250
+ouro-1.4b-mbppplus-loopspec-dual 294/378 decode=5.598s tokens=232
+ouro-1.4b-mbppplus-loopspec-dual 295/378 decode=6.907s tokens=275
+ouro-1.4b-mbppplus-loopspec-dual 296/378 decode=10.031s tokens=410
+ouro-1.4b-mbppplus-loopspec-dual 297/378 decode=4.113s tokens=169
+ouro-1.4b-mbppplus-loopspec-dual 298/378 decode=3.179s tokens=129
+ouro-1.4b-mbppplus-loopspec-dual 299/378 decode=4.073s tokens=166
+ouro-1.4b-mbppplus-loopspec-dual 300/378 decode=5.598s tokens=225
+ouro-1.4b-mbppplus-loopspec-dual 301/378 decode=6.062s tokens=255
+ouro-1.4b-mbppplus-loopspec-dual 302/378 decode=3.935s tokens=166
+ouro-1.4b-mbppplus-loopspec-dual 303/378 decode=4.197s tokens=165
+ouro-1.4b-mbppplus-loopspec-dual 304/378 decode=7.260s tokens=293
+ouro-1.4b-mbppplus-loopspec-dual 305/378 decode=4.339s tokens=171
+ouro-1.4b-mbppplus-loopspec-dual 306/378 decode=4.668s tokens=185
+ouro-1.4b-mbppplus-loopspec-dual 307/378 decode=6.120s tokens=254
+ouro-1.4b-mbppplus-loopspec-dual 308/378 decode=2.846s tokens=123
+ouro-1.4b-mbppplus-loopspec-dual 309/378 decode=10.147s tokens=423
+ouro-1.4b-mbppplus-loopspec-dual 310/378 decode=6.045s tokens=243
+ouro-1.4b-mbppplus-loopspec-dual 311/378 decode=7.909s tokens=342
+ouro-1.4b-mbppplus-loopspec-dual 312/378 decode=5.448s tokens=222
+ouro-1.4b-mbppplus-loopspec-dual 313/378 decode=7.042s tokens=277
+ouro-1.4b-mbppplus-loopspec-dual 314/378 decode=5.387s tokens=234
+ouro-1.4b-mbppplus-loopspec-dual 315/378 decode=5.669s tokens=233
+ouro-1.4b-mbppplus-loopspec-dual 316/378 decode=11.585s tokens=512
+ouro-1.4b-mbppplus-loopspec-dual 317/378 decode=6.451s tokens=255
+ouro-1.4b-mbppplus-loopspec-dual 318/378 decode=5.366s tokens=217
+ouro-1.4b-mbppplus-loopspec-dual 319/378 decode=4.736s tokens=197
+ouro-1.4b-mbppplus-loopspec-dual 320/378 decode=6.654s tokens=286
+ouro-1.4b-mbppplus-loopspec-dual 321/378 decode=6.677s tokens=269
+ouro-1.4b-mbppplus-loopspec-dual 322/378 decode=6.034s tokens=244
+ouro-1.4b-mbppplus-loopspec-dual 323/378 decode=5.090s tokens=215
+ouro-1.4b-mbppplus-loopspec-dual 324/378 decode=5.677s tokens=228
+ouro-1.4b-mbppplus-loopspec-dual 325/378 decode=4.128s tokens=160
+ouro-1.4b-mbppplus-loopspec-dual 326/378 decode=5.572s tokens=240
+ouro-1.4b-mbppplus-loopspec-dual 327/378 decode=5.039s tokens=211
+ouro-1.4b-mbppplus-loopspec-dual 328/378 decode=2.613s tokens=103
+ouro-1.4b-mbppplus-loopspec-dual 329/378 decode=0.574s tokens=22
+ouro-1.4b-mbppplus-loopspec-dual 330/378 decode=4.029s tokens=163
+ouro-1.4b-mbppplus-loopspec-dual 331/378 decode=7.433s tokens=313
+ouro-1.4b-mbppplus-loopspec-dual 332/378 decode=5.904s tokens=254
+ouro-1.4b-mbppplus-loopspec-dual 333/378 decode=7.664s tokens=312
+ouro-1.4b-mbppplus-loopspec-dual 334/378 decode=11.527s tokens=438
+ouro-1.4b-mbppplus-loopspec-dual 335/378 decode=7.019s tokens=296
+ouro-1.4b-mbppplus-loopspec-dual 336/378 decode=0.499s tokens=17
+ouro-1.4b-mbppplus-loopspec-dual 337/378 decode=4.172s tokens=175
+ouro-1.4b-mbppplus-loopspec-dual 338/378 decode=5.831s tokens=230
+ouro-1.4b-mbppplus-loopspec-dual 339/378 decode=7.803s tokens=321
+ouro-1.4b-mbppplus-loopspec-dual 340/378 decode=6.414s tokens=266
+ouro-1.4b-mbppplus-loopspec-dual 341/378 decode=0.704s tokens=26
+ouro-1.4b-mbppplus-loopspec-dual 342/378 decode=3.633s tokens=141
+ouro-1.4b-mbppplus-loopspec-dual 343/378 decode=2.818s tokens=115
+ouro-1.4b-mbppplus-loopspec-dual 344/378 decode=3.005s tokens=115
+ouro-1.4b-mbppplus-loopspec-dual 345/378 decode=6.043s tokens=242
+ouro-1.4b-mbppplus-loopspec-dual 346/378 decode=11.242s tokens=460
+ouro-1.4b-mbppplus-loopspec-dual 347/378 decode=5.245s tokens=201
+ouro-1.4b-mbppplus-loopspec-dual 348/378 decode=2.917s tokens=121
+ouro-1.4b-mbppplus-loopspec-dual 349/378 decode=4.241s tokens=168
+ouro-1.4b-mbppplus-loopspec-dual 350/378 decode=6.305s tokens=256
+ouro-1.4b-mbppplus-loopspec-dual 351/378 decode=6.325s tokens=264
+ouro-1.4b-mbppplus-loopspec-dual 352/378 decode=4.807s tokens=193
+ouro-1.4b-mbppplus-loopspec-dual 353/378 decode=5.177s tokens=219
+ouro-1.4b-mbppplus-loopspec-dual 354/378 decode=6.019s tokens=249
+ouro-1.4b-mbppplus-loopspec-dual 355/378 decode=4.871s tokens=199
+ouro-1.4b-mbppplus-loopspec-dual 356/378 decode=4.841s tokens=208
+ouro-1.4b-mbppplus-loopspec-dual 357/378 decode=6.249s tokens=242
+ouro-1.4b-mbppplus-loopspec-dual 358/378 decode=3.941s tokens=164
+ouro-1.4b-mbppplus-loopspec-dual 359/378 decode=3.996s tokens=164
+ouro-1.4b-mbppplus-loopspec-dual 360/378 decode=3.325s tokens=138
+ouro-1.4b-mbppplus-loopspec-dual 361/378 decode=3.365s tokens=138
+ouro-1.4b-mbppplus-loopspec-dual 362/378 decode=6.852s tokens=268
+ouro-1.4b-mbppplus-loopspec-dual 363/378 decode=1.484s tokens=56
+ouro-1.4b-mbppplus-loopspec-dual 364/378 decode=5.991s tokens=242
+ouro-1.4b-mbppplus-loopspec-dual 365/378 decode=3.592s tokens=147
+ouro-1.4b-mbppplus-loopspec-dual 366/378 decode=4.358s tokens=172
+ouro-1.4b-mbppplus-loopspec-dual 367/378 decode=6.597s tokens=280
+ouro-1.4b-mbppplus-loopspec-dual 368/378 decode=5.437s tokens=224
+ouro-1.4b-mbppplus-loopspec-dual 369/378 decode=5.801s tokens=252
+ouro-1.4b-mbppplus-loopspec-dual 370/378 decode=4.724s tokens=179
+ouro-1.4b-mbppplus-loopspec-dual 371/378 decode=2.269s tokens=93
+ouro-1.4b-mbppplus-loopspec-dual 372/378 decode=6.420s tokens=271
+ouro-1.4b-mbppplus-loopspec-dual 373/378 decode=0.497s tokens=18
+ouro-1.4b-mbppplus-loopspec-dual 374/378 decode=12.049s tokens=505
+ouro-1.4b-mbppplus-loopspec-dual 375/378 decode=7.091s tokens=291
+ouro-1.4b-mbppplus-loopspec-dual 376/378 decode=4.181s tokens=180
+ouro-1.4b-mbppplus-loopspec-dual 377/378 decode=8.533s tokens=366
+ouro-1.4b-mbppplus-loopspec-dual 378/378 decode=4.498s tokens=185
+wandb: updating run metadata; uploading artifact ouro-1.4b-mbppplus-loopspec-dual
+wandb: uploading artifact ouro-1.4b-mbppplus-loopspec-dual; uploading requests.jsonl; uploading output.log; uploading wandb-summary.json
+wandb: uploading artifact ouro-1.4b-mbppplus-loopspec-dual; uploading requests.jsonl; uploading wandb-summary.json
+wandb: uploading artifact ouro-1.4b-mbppplus-loopspec-dual; uploading requests.jsonl
+wandb: uploading artifact ouro-1.4b-mbppplus-loopspec-dual; uploading history steps 375-377, summary, console lines 378-379
+wandb: uploading artifact ouro-1.4b-mbppplus-loopspec-dual
+wandb: uploading config.yaml
+wandb: 
+wandb: Run history:
+wandb:        aggregate/cap_stopped ▁▁▂▂▃▃▃▄▄▄▄▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇█████
+wandb: aggregate/completed_requests ▁▁▁▁▁▂▂▂▃▃▃▃▃▄▄▄▄▄▄▄▅▅▆▆▆▆▆▇▇▇▇▇▇▇██████
+wandb:           aggregate/decode_s ▁▁▁▁▁▂▂▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇███
+wandb:     aggregate/decode_token_s ▁▅▆▇█▆▇▆▇▇▅▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▃▃▃▃▃▃▃▃▃▃▃▃▃
+wandb:      aggregate/decode_tokens ▁▁▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▇▇▇██
+wandb:              aggregate/gamma ▅▆██▅▆▇▆▆▆▆▆▄▂▃▂▂▂▃▃▃▃▂▂▁▁▁▁▁▁▁▁▂▂▂▂▂▂▂▂
+wandb:         aggregate/loop_steps ▁▁▁▁▁▁▂▂▂▃▃▃▃▄▄▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▇▇▇▇▇█████
+wandb:      aggregate/output_tokens ▁▁▁▂▂▂▂▂▂▂▃▃▃▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇████
+wandb:          aggregate/prefill_s ▁▁▁▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇█████
+wandb:             request/decode_s ▁▄▃▁▅▃▂▄▄▁▅▅▂▅▂▄▄▄▄▄▃▃▅▂▁▂▅▂▃▂▃▃▅█▅▆▆▃▅▅
+wandb:                           +2 ...
+wandb: 
+wandb: Run summary:
+wandb:        aggregate/cap_stopped 10
+wandb: aggregate/completed_requests 378
+wandb:           aggregate/decode_s 1922.52804
+wandb:     aggregate/decode_token_s 40.6496
+wandb:      aggregate/decode_tokens 78150
+wandb:              aggregate/gamma 3.56381
+wandb:         aggregate/loop_steps 87715
+wandb:      aggregate/output_tokens 78528
+wandb:          aggregate/prefill_s 15.09196
+wandb:            attention_backend packed_prefix_and_tr...
+wandb:                          +27 ...
+wandb: 
+wandb: 🚀 View run ouro-1.4b-mbppplus-loopspec-dual at: https://wandb.ai/zsqzz/loopfill-latency512/runs/4f8984738b14
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/runs/ouro-1.4b-mbppplus-loopspec-dual/wandb/run-20261107_142821-4f8984738b14/logs

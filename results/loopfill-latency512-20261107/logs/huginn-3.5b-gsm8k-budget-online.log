@@ -1,0 +1,348 @@
+Loading huginn-3.5b budget-online gsm8k
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.46s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.41s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.47s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.20s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 7d5a8d439c4c
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/runs/huginn-3.5b-gsm8k-budget-online/wandb/run-20261107_184826-7d5a8d439c4c
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-gsm8k-budget-online
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/7d5a8d439c4c
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-gsm8k-budget-online 1/300 decode=1.878s tokens=68
+huginn-3.5b-gsm8k-budget-online 2/300 decode=4.762s tokens=129
+huginn-3.5b-gsm8k-budget-online 3/300 decode=4.707s tokens=172
+huginn-3.5b-gsm8k-budget-online 4/300 decode=5.383s tokens=127
+huginn-3.5b-gsm8k-budget-online 5/300 decode=3.033s tokens=68
+huginn-3.5b-gsm8k-budget-online 6/300 decode=1.101s tokens=30
+huginn-3.5b-gsm8k-budget-online 7/300 decode=2.083s tokens=64
+huginn-3.5b-gsm8k-budget-online 8/300 decode=2.242s tokens=56
+huginn-3.5b-gsm8k-budget-online 9/300 decode=5.607s tokens=175
+huginn-3.5b-gsm8k-budget-online 10/300 decode=6.912s tokens=512
+huginn-3.5b-gsm8k-budget-online 11/300 decode=2.659s tokens=67
+huginn-3.5b-gsm8k-budget-online 12/300 decode=3.003s tokens=85
+huginn-3.5b-gsm8k-budget-online 13/300 decode=1.383s tokens=46
+huginn-3.5b-gsm8k-budget-online 14/300 decode=1.684s tokens=44
+huginn-3.5b-gsm8k-budget-online 15/300 decode=4.048s tokens=115
+huginn-3.5b-gsm8k-budget-online 16/300 decode=1.965s tokens=59
+huginn-3.5b-gsm8k-budget-online 17/300 decode=3.289s tokens=129
+huginn-3.5b-gsm8k-budget-online 18/300 decode=4.181s tokens=91
+huginn-3.5b-gsm8k-budget-online 19/300 decode=2.508s tokens=78
+huginn-3.5b-gsm8k-budget-online 20/300 decode=2.921s tokens=84
+huginn-3.5b-gsm8k-budget-online 21/300 decode=3.168s tokens=103
+huginn-3.5b-gsm8k-budget-online 22/300 decode=3.833s tokens=101
+huginn-3.5b-gsm8k-budget-online 23/300 decode=4.284s tokens=155
+huginn-3.5b-gsm8k-budget-online 24/300 decode=1.718s tokens=72
+huginn-3.5b-gsm8k-budget-online 25/300 decode=5.047s tokens=113
+huginn-3.5b-gsm8k-budget-online 26/300 decode=2.002s tokens=63
+huginn-3.5b-gsm8k-budget-online 27/300 decode=3.212s tokens=81
+huginn-3.5b-gsm8k-budget-online 28/300 decode=1.586s tokens=38
+huginn-3.5b-gsm8k-budget-online 29/300 decode=3.513s tokens=110
+huginn-3.5b-gsm8k-budget-online 30/300 decode=5.573s tokens=154
+huginn-3.5b-gsm8k-budget-online 31/300 decode=2.339s tokens=74
+huginn-3.5b-gsm8k-budget-online 32/300 decode=1.997s tokens=61
+huginn-3.5b-gsm8k-budget-online 33/300 decode=3.868s tokens=82
+huginn-3.5b-gsm8k-budget-online 34/300 decode=3.138s tokens=105
+huginn-3.5b-gsm8k-budget-online 35/300 decode=2.392s tokens=67
+huginn-3.5b-gsm8k-budget-online 36/300 decode=6.551s tokens=178
+huginn-3.5b-gsm8k-budget-online 37/300 decode=7.624s tokens=195
+huginn-3.5b-gsm8k-budget-online 38/300 decode=2.738s tokens=94
+huginn-3.5b-gsm8k-budget-online 39/300 decode=4.612s tokens=120
+huginn-3.5b-gsm8k-budget-online 40/300 decode=5.461s tokens=160
+huginn-3.5b-gsm8k-budget-online 41/300 decode=5.769s tokens=160
+huginn-3.5b-gsm8k-budget-online 42/300 decode=1.619s tokens=52
+huginn-3.5b-gsm8k-budget-online 43/300 decode=2.188s tokens=67
+huginn-3.5b-gsm8k-budget-online 44/300 decode=2.831s tokens=88
+huginn-3.5b-gsm8k-budget-online 45/300 decode=1.998s tokens=63
+huginn-3.5b-gsm8k-budget-online 46/300 decode=2.069s tokens=82
+huginn-3.5b-gsm8k-budget-online 47/300 decode=1.396s tokens=29
+huginn-3.5b-gsm8k-budget-online 48/300 decode=4.676s tokens=140
+huginn-3.5b-gsm8k-budget-online 49/300 decode=3.322s tokens=85
+huginn-3.5b-gsm8k-budget-online 50/300 decode=4.180s tokens=120
+huginn-3.5b-gsm8k-budget-online 51/300 decode=2.423s tokens=74
+huginn-3.5b-gsm8k-budget-online 52/300 decode=5.226s tokens=159
+huginn-3.5b-gsm8k-budget-online 53/300 decode=3.987s tokens=126
+huginn-3.5b-gsm8k-budget-online 54/300 decode=2.683s tokens=69
+huginn-3.5b-gsm8k-budget-online 55/300 decode=2.887s tokens=97
+huginn-3.5b-gsm8k-budget-online 56/300 decode=4.662s tokens=135
+huginn-3.5b-gsm8k-budget-online 57/300 decode=2.985s tokens=85
+huginn-3.5b-gsm8k-budget-online 58/300 decode=2.900s tokens=71
+huginn-3.5b-gsm8k-budget-online 59/300 decode=3.780s tokens=109
+huginn-3.5b-gsm8k-budget-online 60/300 decode=2.023s tokens=55
+huginn-3.5b-gsm8k-budget-online 61/300 decode=3.843s tokens=104
+huginn-3.5b-gsm8k-budget-online 62/300 decode=5.928s tokens=140
+huginn-3.5b-gsm8k-budget-online 63/300 decode=1.750s tokens=43
+huginn-3.5b-gsm8k-budget-online 64/300 decode=4.918s tokens=185
+huginn-3.5b-gsm8k-budget-online 65/300 decode=5.712s tokens=170
+huginn-3.5b-gsm8k-budget-online 66/300 decode=3.305s tokens=138
+huginn-3.5b-gsm8k-budget-online 67/300 decode=3.210s tokens=87
+huginn-3.5b-gsm8k-budget-online 68/300 decode=2.550s tokens=105
+huginn-3.5b-gsm8k-budget-online 69/300 decode=2.279s tokens=54
+huginn-3.5b-gsm8k-budget-online 70/300 decode=3.692s tokens=79
+huginn-3.5b-gsm8k-budget-online 71/300 decode=2.037s tokens=66
+huginn-3.5b-gsm8k-budget-online 72/300 decode=7.750s tokens=512
+huginn-3.5b-gsm8k-budget-online 73/300 decode=1.839s tokens=40
+huginn-3.5b-gsm8k-budget-online 74/300 decode=4.256s tokens=87
+huginn-3.5b-gsm8k-budget-online 75/300 decode=1.988s tokens=65
+huginn-3.5b-gsm8k-budget-online 76/300 decode=3.581s tokens=110
+huginn-3.5b-gsm8k-budget-online 77/300 decode=2.938s tokens=88
+huginn-3.5b-gsm8k-budget-online 78/300 decode=1.515s tokens=51
+huginn-3.5b-gsm8k-budget-online 79/300 decode=2.379s tokens=71
+huginn-3.5b-gsm8k-budget-online 80/300 decode=5.552s tokens=155
+huginn-3.5b-gsm8k-budget-online 81/300 decode=3.992s tokens=133
+huginn-3.5b-gsm8k-budget-online 82/300 decode=3.108s tokens=98
+huginn-3.5b-gsm8k-budget-online 83/300 decode=2.449s tokens=79
+huginn-3.5b-gsm8k-budget-online 84/300 decode=2.633s tokens=65
+huginn-3.5b-gsm8k-budget-online 85/300 decode=3.894s tokens=102
+huginn-3.5b-gsm8k-budget-online 86/300 decode=2.372s tokens=80
+huginn-3.5b-gsm8k-budget-online 87/300 decode=1.623s tokens=71
+huginn-3.5b-gsm8k-budget-online 88/300 decode=3.508s tokens=81
+huginn-3.5b-gsm8k-budget-online 89/300 decode=8.530s tokens=512
+huginn-3.5b-gsm8k-budget-online 90/300 decode=9.330s tokens=512
+huginn-3.5b-gsm8k-budget-online 91/300 decode=2.485s tokens=68
+huginn-3.5b-gsm8k-budget-online 92/300 decode=3.782s tokens=134
+huginn-3.5b-gsm8k-budget-online 93/300 decode=4.662s tokens=123
+huginn-3.5b-gsm8k-budget-online 94/300 decode=6.644s tokens=512
+huginn-3.5b-gsm8k-budget-online 95/300 decode=2.798s tokens=71
+huginn-3.5b-gsm8k-budget-online 96/300 decode=1.999s tokens=51
+huginn-3.5b-gsm8k-budget-online 97/300 decode=0.995s tokens=21
+huginn-3.5b-gsm8k-budget-online 98/300 decode=2.097s tokens=57
+huginn-3.5b-gsm8k-budget-online 99/300 decode=2.334s tokens=55
+huginn-3.5b-gsm8k-budget-online 100/300 decode=2.598s tokens=90
+huginn-3.5b-gsm8k-budget-online 101/300 decode=2.740s tokens=99
+huginn-3.5b-gsm8k-budget-online 102/300 decode=3.311s tokens=120
+huginn-3.5b-gsm8k-budget-online 103/300 decode=3.653s tokens=123
+huginn-3.5b-gsm8k-budget-online 104/300 decode=4.527s tokens=97
+huginn-3.5b-gsm8k-budget-online 105/300 decode=2.859s tokens=73
+huginn-3.5b-gsm8k-budget-online 106/300 decode=2.310s tokens=72
+huginn-3.5b-gsm8k-budget-online 107/300 decode=2.784s tokens=63
+huginn-3.5b-gsm8k-budget-online 108/300 decode=4.629s tokens=140
+huginn-3.5b-gsm8k-budget-online 109/300 decode=2.981s tokens=92
+huginn-3.5b-gsm8k-budget-online 110/300 decode=3.119s tokens=94
+huginn-3.5b-gsm8k-budget-online 111/300 decode=2.554s tokens=62
+huginn-3.5b-gsm8k-budget-online 112/300 decode=3.537s tokens=91
+huginn-3.5b-gsm8k-budget-online 113/300 decode=3.092s tokens=75
+huginn-3.5b-gsm8k-budget-online 114/300 decode=9.313s tokens=512
+huginn-3.5b-gsm8k-budget-online 115/300 decode=1.921s tokens=41
+huginn-3.5b-gsm8k-budget-online 116/300 decode=4.430s tokens=139
+huginn-3.5b-gsm8k-budget-online 117/300 decode=2.641s tokens=96
+huginn-3.5b-gsm8k-budget-online 118/300 decode=1.954s tokens=79
+huginn-3.5b-gsm8k-budget-online 119/300 decode=2.858s tokens=91
+huginn-3.5b-gsm8k-budget-online 120/300 decode=1.865s tokens=47
+huginn-3.5b-gsm8k-budget-online 121/300 decode=3.659s tokens=87
+huginn-3.5b-gsm8k-budget-online 122/300 decode=2.325s tokens=63
+huginn-3.5b-gsm8k-budget-online 123/300 decode=1.397s tokens=30
+huginn-3.5b-gsm8k-budget-online 124/300 decode=3.810s tokens=94
+huginn-3.5b-gsm8k-budget-online 125/300 decode=3.405s tokens=83
+huginn-3.5b-gsm8k-budget-online 126/300 decode=2.766s tokens=89
+huginn-3.5b-gsm8k-budget-online 127/300 decode=2.319s tokens=68
+huginn-3.5b-gsm8k-budget-online 128/300 decode=2.460s tokens=64
+huginn-3.5b-gsm8k-budget-online 129/300 decode=5.149s tokens=142
+huginn-3.5b-gsm8k-budget-online 130/300 decode=1.879s tokens=50
+huginn-3.5b-gsm8k-budget-online 131/300 decode=5.027s tokens=133
+huginn-3.5b-gsm8k-budget-online 132/300 decode=2.916s tokens=98
+huginn-3.5b-gsm8k-budget-online 133/300 decode=3.088s tokens=94
+huginn-3.5b-gsm8k-budget-online 134/300 decode=2.517s tokens=99
+huginn-3.5b-gsm8k-budget-online 135/300 decode=2.319s tokens=69
+huginn-3.5b-gsm8k-budget-online 136/300 decode=1.874s tokens=60
+huginn-3.5b-gsm8k-budget-online 137/300 decode=7.025s tokens=168
+huginn-3.5b-gsm8k-budget-online 138/300 decode=1.842s tokens=75
+huginn-3.5b-gsm8k-budget-online 139/300 decode=5.065s tokens=174
+huginn-3.5b-gsm8k-budget-online 140/300 decode=2.397s tokens=80
+huginn-3.5b-gsm8k-budget-online 141/300 decode=2.947s tokens=64
+huginn-3.5b-gsm8k-budget-online 142/300 decode=2.996s tokens=76
+huginn-3.5b-gsm8k-budget-online 143/300 decode=5.256s tokens=127
+huginn-3.5b-gsm8k-budget-online 144/300 decode=4.758s tokens=115
+huginn-3.5b-gsm8k-budget-online 145/300 decode=2.440s tokens=72
+huginn-3.5b-gsm8k-budget-online 146/300 decode=4.165s tokens=117
+huginn-3.5b-gsm8k-budget-online 147/300 decode=1.680s tokens=66
+huginn-3.5b-gsm8k-budget-online 148/300 decode=2.996s tokens=81
+huginn-3.5b-gsm8k-budget-online 149/300 decode=1.829s tokens=72
+huginn-3.5b-gsm8k-budget-online 150/300 decode=1.339s tokens=28
+huginn-3.5b-gsm8k-budget-online 151/300 decode=2.365s tokens=57
+huginn-3.5b-gsm8k-budget-online 152/300 decode=2.255s tokens=60
+huginn-3.5b-gsm8k-budget-online 153/300 decode=2.334s tokens=69
+huginn-3.5b-gsm8k-budget-online 154/300 decode=3.101s tokens=93
+huginn-3.5b-gsm8k-budget-online 155/300 decode=7.830s tokens=161
+huginn-3.5b-gsm8k-budget-online 156/300 decode=2.469s tokens=68
+huginn-3.5b-gsm8k-budget-online 157/300 decode=13.088s tokens=512
+huginn-3.5b-gsm8k-budget-online 158/300 decode=1.135s tokens=23
+huginn-3.5b-gsm8k-budget-online 159/300 decode=1.973s tokens=51
+huginn-3.5b-gsm8k-budget-online 160/300 decode=3.305s tokens=80
+huginn-3.5b-gsm8k-budget-online 161/300 decode=2.263s tokens=44
+huginn-3.5b-gsm8k-budget-online 162/300 decode=1.640s tokens=63
+huginn-3.5b-gsm8k-budget-online 163/300 decode=2.929s tokens=99
+huginn-3.5b-gsm8k-budget-online 164/300 decode=7.153s tokens=172
+huginn-3.5b-gsm8k-budget-online 165/300 decode=7.902s tokens=179
+huginn-3.5b-gsm8k-budget-online 166/300 decode=3.355s tokens=95
+huginn-3.5b-gsm8k-budget-online 167/300 decode=3.434s tokens=82
+huginn-3.5b-gsm8k-budget-online 168/300 decode=2.017s tokens=72
+huginn-3.5b-gsm8k-budget-online 169/300 decode=4.519s tokens=106
+huginn-3.5b-gsm8k-budget-online 170/300 decode=3.056s tokens=62
+huginn-3.5b-gsm8k-budget-online 171/300 decode=3.234s tokens=77
+huginn-3.5b-gsm8k-budget-online 172/300 decode=3.283s tokens=72
+huginn-3.5b-gsm8k-budget-online 173/300 decode=3.676s tokens=86
+huginn-3.5b-gsm8k-budget-online 174/300 decode=3.844s tokens=103
+huginn-3.5b-gsm8k-budget-online 175/300 decode=3.615s tokens=111
+huginn-3.5b-gsm8k-budget-online 176/300 decode=2.602s tokens=56
+huginn-3.5b-gsm8k-budget-online 177/300 decode=3.484s tokens=113
+huginn-3.5b-gsm8k-budget-online 178/300 decode=2.396s tokens=71
+huginn-3.5b-gsm8k-budget-online 179/300 decode=1.164s tokens=30
+huginn-3.5b-gsm8k-budget-online 180/300 decode=5.327s tokens=168
+huginn-3.5b-gsm8k-budget-online 181/300 decode=3.035s tokens=108
+huginn-3.5b-gsm8k-budget-online 182/300 decode=1.526s tokens=41
+huginn-3.5b-gsm8k-budget-online 183/300 decode=1.640s tokens=42
+huginn-3.5b-gsm8k-budget-online 184/300 decode=3.010s tokens=109
+huginn-3.5b-gsm8k-budget-online 185/300 decode=1.941s tokens=62
+huginn-3.5b-gsm8k-budget-online 186/300 decode=2.819s tokens=94
+huginn-3.5b-gsm8k-budget-online 187/300 decode=1.621s tokens=73
+huginn-3.5b-gsm8k-budget-online 188/300 decode=2.877s tokens=100
+huginn-3.5b-gsm8k-budget-online 189/300 decode=5.712s tokens=134
+huginn-3.5b-gsm8k-budget-online 190/300 decode=4.162s tokens=120
+huginn-3.5b-gsm8k-budget-online 191/300 decode=4.265s tokens=114
+huginn-3.5b-gsm8k-budget-online 192/300 decode=3.154s tokens=103
+huginn-3.5b-gsm8k-budget-online 193/300 decode=2.368s tokens=75
+huginn-3.5b-gsm8k-budget-online 194/300 decode=6.976s tokens=216
+huginn-3.5b-gsm8k-budget-online 195/300 decode=3.747s tokens=120
+huginn-3.5b-gsm8k-budget-online 196/300 decode=3.047s tokens=86
+huginn-3.5b-gsm8k-budget-online 197/300 decode=2.205s tokens=50
+huginn-3.5b-gsm8k-budget-online 198/300 decode=2.316s tokens=82
+huginn-3.5b-gsm8k-budget-online 199/300 decode=7.380s tokens=241
+huginn-3.5b-gsm8k-budget-online 200/300 decode=1.323s tokens=52
+huginn-3.5b-gsm8k-budget-online 201/300 decode=4.283s tokens=156
+huginn-3.5b-gsm8k-budget-online 202/300 decode=1.512s tokens=50
+huginn-3.5b-gsm8k-budget-online 203/300 decode=5.319s tokens=146
+huginn-3.5b-gsm8k-budget-online 204/300 decode=4.253s tokens=136
+huginn-3.5b-gsm8k-budget-online 205/300 decode=10.556s tokens=369
+huginn-3.5b-gsm8k-budget-online 206/300 decode=6.740s tokens=163
+huginn-3.5b-gsm8k-budget-online 207/300 decode=5.452s tokens=139
+huginn-3.5b-gsm8k-budget-online 208/300 decode=1.814s tokens=37
+huginn-3.5b-gsm8k-budget-online 209/300 decode=3.266s tokens=101
+huginn-3.5b-gsm8k-budget-online 210/300 decode=1.814s tokens=57
+huginn-3.5b-gsm8k-budget-online 211/300 decode=1.880s tokens=54
+huginn-3.5b-gsm8k-budget-online 212/300 decode=1.347s tokens=40
+huginn-3.5b-gsm8k-budget-online 213/300 decode=2.923s tokens=74
+huginn-3.5b-gsm8k-budget-online 214/300 decode=2.039s tokens=86
+huginn-3.5b-gsm8k-budget-online 215/300 decode=2.962s tokens=96
+huginn-3.5b-gsm8k-budget-online 216/300 decode=2.647s tokens=87
+huginn-3.5b-gsm8k-budget-online 217/300 decode=1.445s tokens=39
+huginn-3.5b-gsm8k-budget-online 218/300 decode=2.518s tokens=83
+huginn-3.5b-gsm8k-budget-online 219/300 decode=1.008s tokens=27
+huginn-3.5b-gsm8k-budget-online 220/300 decode=2.713s tokens=96
+huginn-3.5b-gsm8k-budget-online 221/300 decode=2.802s tokens=83
+huginn-3.5b-gsm8k-budget-online 222/300 decode=2.592s tokens=92
+huginn-3.5b-gsm8k-budget-online 223/300 decode=3.635s tokens=113
+huginn-3.5b-gsm8k-budget-online 224/300 decode=3.179s tokens=89
+huginn-3.5b-gsm8k-budget-online 225/300 decode=10.075s tokens=512
+huginn-3.5b-gsm8k-budget-online 226/300 decode=1.786s tokens=54
+huginn-3.5b-gsm8k-budget-online 227/300 decode=2.082s tokens=66
+huginn-3.5b-gsm8k-budget-online 228/300 decode=6.520s tokens=261
+huginn-3.5b-gsm8k-budget-online 229/300 decode=2.171s tokens=64
+huginn-3.5b-gsm8k-budget-online 230/300 decode=1.731s tokens=47
+huginn-3.5b-gsm8k-budget-online 231/300 decode=2.924s tokens=87
+huginn-3.5b-gsm8k-budget-online 232/300 decode=3.283s tokens=101
+huginn-3.5b-gsm8k-budget-online 233/300 decode=3.056s tokens=85
+huginn-3.5b-gsm8k-budget-online 234/300 decode=8.252s tokens=512
+huginn-3.5b-gsm8k-budget-online 235/300 decode=1.834s tokens=51
+huginn-3.5b-gsm8k-budget-online 236/300 decode=5.235s tokens=159
+huginn-3.5b-gsm8k-budget-online 237/300 decode=1.780s tokens=57
+huginn-3.5b-gsm8k-budget-online 238/300 decode=3.223s tokens=97
+huginn-3.5b-gsm8k-budget-online 239/300 decode=3.953s tokens=117
+huginn-3.5b-gsm8k-budget-online 240/300 decode=2.456s tokens=75
+huginn-3.5b-gsm8k-budget-online 241/300 decode=2.035s tokens=67
+huginn-3.5b-gsm8k-budget-online 242/300 decode=3.674s tokens=109
+huginn-3.5b-gsm8k-budget-online 243/300 decode=3.212s tokens=100
+huginn-3.5b-gsm8k-budget-online 244/300 decode=2.673s tokens=107
+huginn-3.5b-gsm8k-budget-online 245/300 decode=3.606s tokens=121
+huginn-3.5b-gsm8k-budget-online 246/300 decode=3.855s tokens=145
+huginn-3.5b-gsm8k-budget-online 247/300 decode=4.684s tokens=147
+huginn-3.5b-gsm8k-budget-online 248/300 decode=7.135s tokens=202
+huginn-3.5b-gsm8k-budget-online 249/300 decode=3.492s tokens=103
+huginn-3.5b-gsm8k-budget-online 250/300 decode=4.111s tokens=92
+huginn-3.5b-gsm8k-budget-online 251/300 decode=2.754s tokens=68
+huginn-3.5b-gsm8k-budget-online 252/300 decode=0.963s tokens=29
+huginn-3.5b-gsm8k-budget-online 253/300 decode=6.384s tokens=156
+huginn-3.5b-gsm8k-budget-online 254/300 decode=2.744s tokens=66
+huginn-3.5b-gsm8k-budget-online 255/300 decode=3.245s tokens=150
+huginn-3.5b-gsm8k-budget-online 256/300 decode=4.569s tokens=117
+huginn-3.5b-gsm8k-budget-online 257/300 decode=2.630s tokens=78
+huginn-3.5b-gsm8k-budget-online 258/300 decode=5.177s tokens=150
+huginn-3.5b-gsm8k-budget-online 259/300 decode=5.292s tokens=187
+huginn-3.5b-gsm8k-budget-online 260/300 decode=2.218s tokens=59
+huginn-3.5b-gsm8k-budget-online 261/300 decode=2.095s tokens=65
+huginn-3.5b-gsm8k-budget-online 262/300 decode=5.297s tokens=140
+huginn-3.5b-gsm8k-budget-online 263/300 decode=3.260s tokens=97
+huginn-3.5b-gsm8k-budget-online 264/300 decode=2.774s tokens=105
+huginn-3.5b-gsm8k-budget-online 265/300 decode=3.739s tokens=85
+huginn-3.5b-gsm8k-budget-online 266/300 decode=3.230s tokens=73
+huginn-3.5b-gsm8k-budget-online 267/300 decode=4.142s tokens=137
+huginn-3.5b-gsm8k-budget-online 268/300 decode=2.989s tokens=99
+huginn-3.5b-gsm8k-budget-online 269/300 decode=2.114s tokens=67
+huginn-3.5b-gsm8k-budget-online 270/300 decode=4.744s tokens=114
+huginn-3.5b-gsm8k-budget-online 271/300 decode=2.864s tokens=77
+huginn-3.5b-gsm8k-budget-online 272/300 decode=2.775s tokens=104
+huginn-3.5b-gsm8k-budget-online 273/300 decode=4.444s tokens=132
+huginn-3.5b-gsm8k-budget-online 274/300 decode=2.394s tokens=62
+huginn-3.5b-gsm8k-budget-online 275/300 decode=4.304s tokens=142
+huginn-3.5b-gsm8k-budget-online 276/300 decode=1.759s tokens=53
+huginn-3.5b-gsm8k-budget-online 277/300 decode=1.749s tokens=50
+huginn-3.5b-gsm8k-budget-online 278/300 decode=3.574s tokens=128
+huginn-3.5b-gsm8k-budget-online 279/300 decode=2.019s tokens=65
+huginn-3.5b-gsm8k-budget-online 280/300 decode=1.454s tokens=39
+huginn-3.5b-gsm8k-budget-online 281/300 decode=2.185s tokens=71
+huginn-3.5b-gsm8k-budget-online 282/300 decode=3.504s tokens=121
+huginn-3.5b-gsm8k-budget-online 283/300 decode=4.939s tokens=122
+huginn-3.5b-gsm8k-budget-online 284/300 decode=3.306s tokens=95
+huginn-3.5b-gsm8k-budget-online 285/300 decode=1.842s tokens=59
+huginn-3.5b-gsm8k-budget-online 286/300 decode=3.002s tokens=83
+huginn-3.5b-gsm8k-budget-online 287/300 decode=2.365s tokens=55
+huginn-3.5b-gsm8k-budget-online 288/300 decode=3.669s tokens=127
+huginn-3.5b-gsm8k-budget-online 289/300 decode=2.852s tokens=108
+huginn-3.5b-gsm8k-budget-online 290/300 decode=3.290s tokens=86
+huginn-3.5b-gsm8k-budget-online 291/300 decode=1.712s tokens=56
+huginn-3.5b-gsm8k-budget-online 292/300 decode=3.830s tokens=133
+huginn-3.5b-gsm8k-budget-online 293/300 decode=2.117s tokens=58
+huginn-3.5b-gsm8k-budget-online 294/300 decode=3.246s tokens=96
+huginn-3.5b-gsm8k-budget-online 295/300 decode=5.259s tokens=124
+huginn-3.5b-gsm8k-budget-online 296/300 decode=7.587s tokens=512
+huginn-3.5b-gsm8k-budget-online 297/300 decode=3.735s tokens=116
+huginn-3.5b-gsm8k-budget-online 298/300 decode=2.853s tokens=73
+huginn-3.5b-gsm8k-budget-online 299/300 decode=2.942s tokens=104
+huginn-3.5b-gsm8k-budget-online 300/300 decode=3.015s tokens=85
+wandb: uploading requests.jsonl; updating run metadata; uploading artifact huginn-3.5b-gsm8k-budget-online
+wandb: updating run metadata; uploading artifact huginn-3.5b-gsm8k-budget-online
+wandb: uploading artifact huginn-3.5b-gsm8k-budget-online
+wandb: uploading requests.jsonl
+wandb: 
+wandb: Run history:
+wandb:        aggregate/cap_stopped ▁▁▁▁▂▂▂▂▂▂▂▂▃▃▃▅▅▆▆▆▆▆▆▆▆▆▆▆▆▆██████████
+wandb: aggregate/completed_requests ▁▁▁▁▁▂▂▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇▇██
+wandb:           aggregate/decode_s ▁▂▂▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇█████
+wandb:     aggregate/decode_token_s ▁▆▄▄▄▃▅▇██████▇▆▆▆▆▅▅▅▅▅▅▅▅▅▆▆▆▆▆▅▅▅▅▅▅▅
+wandb:      aggregate/decode_tokens ▁▁▂▂▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▇▇▇▇█
+wandb:              aggregate/gamma █▃▂▂▂▁▁▁▂▁▄▃▃▃▇▇█▇▇▆▅▅▄▄▃▃▄▃▃▃▃▃▃▃▄▅▄▄▄▄
+wandb:         aggregate/loop_steps ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▅▅▅▆▆▆▇▇▇▇▇██
+wandb:      aggregate/output_tokens ▁▁▁▂▂▂▂▂▂▂▂▂▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▇▇▇▇▇▇████
+wandb:          aggregate/prefill_s ▁▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▇▇▇▇████
+wandb:             request/decode_s ▄▅▂▁▁▃▂▆▂▄▄▃▂▅▂▅▁█▂▂▂▂▂▃▂▇▁▃▂▁▆▃▇▁▃▂▄▂▂▂
+wandb:                           +2 ...
+wandb: 
+wandb: Run summary:
+wandb:        aggregate/cap_stopped 10
+wandb: aggregate/completed_requests 300
+wandb:           aggregate/decode_s 1025.54162
+wandb:     aggregate/decode_token_s 31.38439
+wandb:      aggregate/decode_tokens 32186
+wandb:              aggregate/gamma 6.50436
+wandb:         aggregate/loop_steps 158348
+wandb:      aggregate/output_tokens 32486
+wandb:          aggregate/prefill_s 31.40909
+wandb:            attention_backend packed_prefix_and_tr...
+wandb:                          +27 ...
+wandb: 
+wandb: 🚀 View run huginn-3.5b-gsm8k-budget-online at: https://wandb.ai/zsqzz/loopfill-latency512/runs/7d5a8d439c4c
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/runs/huginn-3.5b-gsm8k-budget-online/wandb/run-20261107_184826-7d5a8d439c4c/logs
