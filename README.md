@@ -1,5 +1,7 @@
 # LoopFill (loop_suffix)
 
+**temperature=1 完整表1实验（2026-11-08）**：三个模型×六个数据集×五种方法，共90组、31,380次请求；B=1、最多512 token，统计decode latency、γ和候选命中率。独立八卡队列已启动，原greedy结果保留。见[协议与运行说明](docs/loopfill-latency512-t1.md)、[实时状态](results/loopfill-latency512-t1-20261108/status.json)、[汇总CSV](results/loopfill-latency512-t1-20261108/measurements.csv)。
+
 **表 1、表 2 最终结果（2026-11-08）**：表1全部90组、31,380条请求完成；表2为74组成功、1组实测OOM（Huginn/WFD/B16）。表1曾因W&B上传超时标记失败的单元已补传，云端artifact下载哈希与本地一致，原失败记录保留。实验均为单次计时，BF16输出差异与任务质量需单独评估。
 
 - [表1：512-token、B=1 decode延迟加速比与γ](results/loopfill-latency512-20261107/table1.md) · [完整指标CSV](results/loopfill-latency512-20261107/measurements.csv)

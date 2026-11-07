@@ -47,6 +47,8 @@ import sys
 import time
 from dataclasses import dataclass, field
 
+from .loop_sampling import target_tokens
+
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -648,7 +650,7 @@ class OuroLoop(_Backbone):
                 x = self._layer(layer, x, cos, sin, self.kv.dense(s * self.n_layers + li))
             x = self.inner.norm(x)
         self.kv.length = len(prompt)
-        return int(self.lm.lm_head(x[:, -1]).argmax(-1))
+        return target_tokens(self, self.lm.lm_head(x[:, -1]), [len(prompt)])[0]
 
     def embed(self, tree: DraftTree, nodes: list[TreeNode]) -> None:
         both = self.kv.upload(np.array([[n.idx for n in nodes], [n.token for n in nodes]]))
@@ -673,8 +675,9 @@ class OuroLoop(_Backbone):
         if not nodes:
             return [], []
         idx = self.kv.upload(np.array([n.idx for n in nodes]))
-        top = _top(self.lm.lm_head(self.hidden[idx]).float(), m)
-        return top[: len(shallow)], top[len(shallow) :]
+        logits = self.lm.lm_head(self.hidden[idx]).float()
+        return _top(logits[:len(shallow)], m), [[t] for t in target_tokens(
+            self, logits[len(shallow):], [tree.position(n)+1 for n in full])]
 
     def readout_top(self, tree, groups, full, m, extra_token_ids=None):
         """groups: [(depth, nodes)]. Per group: (ids, probs) of the top-m per node; and the
@@ -688,7 +691,7 @@ class OuroLoop(_Backbone):
         logits = self.lm.lm_head(self.hidden[idx]).float()
         k = sum(sizes)
         reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids)
-        return _split(reads, sizes), logits[k:].argmax(-1).tolist()
+        return _split(reads, sizes), target_tokens(self, logits[k:], [tree.position(n)+1 for n in full])
 
 
 def _rotate_half(x):
@@ -784,7 +787,7 @@ class HuginnLoop(_Backbone):
         y = self._coda(h, freqs, lambda li: self.kv.dense(self.coda_full + li))
         self.kv.length = P
         tr = self.model.transformer
-        return int(self.model.lm_head(tr.ln_f(y[:, -1])).argmax(-1))
+        return target_tokens(self, self.model.lm_head(tr.ln_f(y[:, -1])), [len(prompt)])[0]
 
     def _coda(self, h, freqs, attend_for):
         x = self.model.transformer.ln_f(h)
@@ -832,8 +835,11 @@ class HuginnLoop(_Backbone):
             lambda li: lambda q, k, v: tree_attention(q, k, v, self.kv, rows, li),
         )
         logits = self.model.lm_head(self.model.transformer.ln_f(y[0])).float()
-        by_idx = dict(zip((n.idx for n in rows.nodes), _top(logits, m), strict=True))
-        return [by_idx[n.idx] for n in shallow], [by_idx[n.idx] for n in full]
+        at = {n.idx: i for i, n in enumerate(rows.nodes)}
+        shallow_logits = logits[[at[n.idx] for n in shallow]]
+        full_logits = logits[[at[n.idx] for n in full]]
+        return _top(shallow_logits, m), [[t] for t in target_tokens(
+            self, full_logits, [tree.position(n)+1 for n in full])]
 
     def readout_top(self, tree, groups, full, m, extra_token_ids=None):
         """As OuroLoop.readout_top. A depth-r readout attends to depth-r coda states: the
@@ -857,4 +863,4 @@ class HuginnLoop(_Backbone):
         logits = logits[order]
         k = sum(sizes)
         reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids)
-        return _split(reads, sizes), logits[k:].argmax(-1).tolist()
+        return _split(reads, sizes), target_tokens(self, logits[k:], [tree.position(n)+1 for n in full])

@@ -76,7 +76,7 @@ selection, suffix proposals, score pruning, or online controller is used.
     stats = dict(tokens=0, steps=0, calls=0, rows=0, max_rows=0, nodes=0,
                  readout_rows=0, cap_skips=0, first_proposals=0, second_proposals=0,
                  second_agreements=0, accepted_first=0, accepted_second=0,
-                 fallback_tokens=0, wasted_rows=0, peak_live_nodes=0,
+                 fallback_tokens=0, draft_hits=0, wasted_rows=0, peak_live_nodes=0,
                  readout_depths=[d1, d2], tree_policy="loopspec_dual" if budget is None else "loopspec_capped",
                  draft_node_budget=budget, budget_rejections=0, peak_draft_nodes=0,
                  schedule="selective_second_proposal", implementation="same_engine")
@@ -150,6 +150,7 @@ selection, suffix proposals, score pruning, or online controller is used.
             root.full_top = gold = int(tops[0])
             next_path = root_path + (gold,)
             selected = pool.get(next_path)
+            stats["draft_hits"] += int(selected is not None)
             stats["tokens"] += 1
             stats["steps"] += 1
             accepted = ("accepted_first" if gold == root.shallow_top else

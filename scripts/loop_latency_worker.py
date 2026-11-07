@@ -88,7 +88,13 @@ def summarize(rows, depth):
     seconds = sum(r['stats']['decode_s'] for r in rows)
     tokens = sum(r['stats']['tokens'] for r in rows)
     calls = sum(r['stats']['calls'] for r in rows)
+    hits = [r['stats'].get('draft_hits', r['stats'].get('covered_tokens',
+        r['stats'].get('from_suffix', 0) + r['stats'].get('from_fill', 0))) for r in rows]
+    rates = [h/r['stats']['tokens'] for h, r in zip(hits, rows) if r['stats']['tokens']]
     return dict(completed_requests=len(rows), decode_s=seconds, decode_tokens=tokens,
+                mean_decode_s=seconds/len(rows) if rows else None, draft_hits=sum(hits),
+                mean_acceptance_rate=sum(rates)/len(rates) if rates else None,
+                pooled_acceptance_rate=sum(hits)/tokens if tokens else None,
                 output_tokens=sum(len(r['tokens']) for r in rows), loop_steps=calls,
                 decode_token_s=tokens / seconds if seconds else None,
                 gamma=depth * tokens / calls if calls else None,
@@ -153,7 +159,11 @@ def main():
         loopspec_depths=spec.loopspec_depths, wavefront_depth=spec.wavefront_depth)
     nodes = 1 if arm == 'ar' else 17 if isinstance(config, BudgetConfig) else (
         config.physical_nodes if isinstance(config, LoopSpecConfig) else 1152)
-    metadata = dict(model=spec.to_dict(), arm=arm, config=asdict(config),
+    sampling = {k: protocol.get(k, default) for k, default in [('temperature', 0.),
+        ('top_p', 1.), ('top_k', 0), ('sampling_seed', 0)]}
+    if sampling['top_p'] != 1. or sampling['top_k'] != 0:
+        raise ValueError('Only untruncated target sampling supported')
+    metadata = dict(model=spec.to_dict(), arm=arm, config=asdict(config), sampling=sampling,
         dataset=dataset, batch_size=1, max_new_tokens=max_new_tokens,
         cuda_graph=False, pad_decode_rows=False, torch_compile=False,
         dtype='bfloat16', torch=torch.__version__, transformers=__import__('transformers').__version__,
@@ -171,6 +181,8 @@ def main():
         for key in ['model', 'arm', 'config', 'dataset', 'max_new_tokens', 'inputs_sha256', 'source_sha256']:
             if prior[key] != metadata[key]:
                 raise ValueError('Resume identity mismatch: ' + key)
+    if prior_meta.exists() and read(prior_meta).get('sampling', sampling) != sampling:
+        raise ValueError('Resume sampling identity mismatch')
     save(target / 'metadata.json', metadata)
     print(f'Loading {spec_name} {arm} {dataset}', flush=True)
     model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True,
@@ -194,7 +206,14 @@ def main():
     def cache_new():
         return CompletionSuffixCache.arctic() if config.use_suffix else None
 
-    def generate(prompt, limit, cache, rid):
+    def generate(prompt, limit, cache, rid, warmup=False):
+        from llm_memory_editability.loop_sampling import TargetSampler, request_seed
+        if sampling['temperature']:
+            seed = request_seed(sampling['sampling_seed'], spec_name,
+                dataset + ('/warmup' if warmup else ''), texts[rid]['source_id'])
+            b.target_sampler = TargetSampler(sampling['temperature'], seed, max_seq+2, b.kv.K.device)
+        else:
+            b.target_sampler = None
         if isinstance(config, BudgetConfig):
             steps = budget_tree_decode_steps(b, prompt, config, limit, stop, cache=cache, req_id=rid, max_nodes=nodes)
         elif isinstance(config, LoopSpecConfig):
@@ -205,7 +224,7 @@ def main():
             return drive(b, engine, steps)
 
     for i, prompt in enumerate(prompts[:2]):
-        generate(prompt, 16 if args.smoke else 32, cache_new(), i)
+        generate(prompt, 16 if args.smoke else 32, cache_new(), i, warmup=True)
     engine.graphs.freeze()
     cache = cache_new()
     journal = target / 'requests.jsonl'
@@ -241,7 +260,7 @@ def main():
                     prompt_tokens=len(prompt), prompt_sha256=row['prompt_sha256'],
                     tokens=tokens, text=tok.decode(tokens, skip_special_tokens=False), stats=stats,
                     stop_reason='eos' if tokens[-1] in stop else 'length', completed_unix=time.time(),
-                    gpu_uuid=metadata['gpu_uuid'])
+                    gpu_uuid=metadata['gpu_uuid'], sampling=sampling)
                 f.write(json.dumps(record, ensure_ascii=False) + '\n')
                 f.flush()
                 os.fsync(f.fileno())
@@ -258,16 +277,29 @@ def main():
                        peak_allocated_bytes=torch.cuda.max_memory_allocated(), total_requests=len(texts))
         assert not summary['cuda_graph'] and summary['cuda_graph_replays'] == 0
         save(target / 'summary.json', summary)
-        if run is not None:
-            run.summary.update(summary)
-            artifact = wandb.Artifact(args.job, type='latency-results', metadata={'complete': True})
-            for name in ['metadata.json', 'requests.jsonl', 'summary.json']:
-                artifact.add_file(str(target / name))
-            run.log_artifact(artifact)
-            run.finish()
-            run = None
+        # Measurement completion is durable even when the upload service is unavailable.
         save(target / 'complete.json', {'requests': len(completed), 'finished_unix': time.time(),
                                       'requests_sha256': digest(journal)})
+        if run is not None:
+            try:
+                run.summary.update(summary)
+                artifact = wandb.Artifact(args.job, type='latency-results', metadata={'complete': True})
+                for name in ['metadata.json', 'requests.jsonl', 'summary.json']:
+                    artifact.add_file(str(target / name))
+                logged = run.log_artifact(artifact)
+                logged.wait(timeout=180)
+                run.finish()
+                save(target / 'upload-status.json', {'state': 'complete', 'updated_unix': time.time()})
+            except Exception as exc:
+                save(target / 'upload-status.json', {'state': 'pending', 'error_type': type(exc).__name__,
+                                                   'updated_unix': time.time()})
+                print('Measurement complete; upload pending: ' + type(exc).__name__, flush=True)
+                try:
+                    run.finish(exit_code=1)
+                except Exception:
+                    pass
+            run = None
+
     finally:
         if run is not None:
             run.finish(exit_code=1)

@@ -41,8 +41,10 @@ def jobs():
             for a in ARMS for d in DATASETS for m in MODELS]
 
 
-def prepare(out, assets, python):
+def prepare(out, assets, python, temperature=0.0, sampling_seed=0):
     out = Path(out).resolve()
+    if temperature not in (0.0, 1.0):
+        raise ValueError('supported experiment temperatures: 0 or 1')
     if (out / 'protocol.json').exists():
         raise FileExistsError('Protocol exists; use run to resume')
     manifest = read(out / 'inputs/manifest.json')
@@ -66,10 +68,14 @@ def prepare(out, assets, python):
         source_sha256=source_hashes, python=str(Path(python).absolute()), assets=str(assets),
         models=models, lanes=lanes, inputs=manifest['datasets'], arms=ARMS, datasets=DATASETS,
         batches=[1], planned_cells=90, max_new_tokens=512, cuda_graph=False,
+        temperature=temperature, top_p=1.0, top_k=0, sampling_seed=sampling_seed,
+        sampler='target_inverse_cdf_absolute_position' if temperature else 'greedy',
+        draft_sampling='deterministic shallow top-k and suffix retrieval',
         fixed_order_seed=20261107, repeats=1, warmup_requests=2, warmup_tokens=32,
         draft_node_budget=16, suffix_max_draft=4, model_top_k=2, child_suffix_caps=[4, 4],
         suffix_c_initial=.7, suffix_eta=.1,
-        wandb_key_file='/tmp/loopfill-wandb-key', wandb_project='loopfill-latency512',
+        wandb_key_file='/tmp/loopfill-wandb-key',
+        wandb_project='loopfill-latency512-t1' if temperature else 'loopfill-latency512',
         wandb_entity='zsqzz', resource_policy='one UUID and four disjoint NUMA-local CPU cores per cell; '
         'shared /tmp/loopfill-UUID.lock; poll real GPU occupancy before allocation; any free GPU takes next cell',
         recovery='append/fsync request journal; recover a prefix and replay only suffix publication; '
@@ -103,6 +109,7 @@ def aggregate(out):
         if value:
             row.update({k: value[k] for k in ['completed_requests', 'decode_s', 'decode_tokens',
                        'decode_token_s', 'gamma', 'cap_stopped']})
+            row.update({k: value[k] for k in ['mean_decode_s', 'draft_hits', 'mean_acceptance_rate', 'pooled_acceptance_rate'] if k in value})
             base = summaries.get(f"{job['model']}-{job['dataset']}-ar")
             if base:
                 row['latency_speedup'] = base['decode_s'] / value['decode_s']
@@ -111,7 +118,7 @@ def aggregate(out):
         rows.append(row)
     save(out / 'measurements.json', rows)
     columns = ['model', 'dataset', 'arm', 'outcome', 'completed_requests', 'decode_s', 'decode_tokens',
-               'decode_token_s', 'gamma', 'cap_stopped', 'latency_speedup', 'decode_rate_speedup', 'output_token_ratio']
+               'decode_token_s', 'gamma', 'cap_stopped', 'mean_decode_s', 'draft_hits', 'mean_acceptance_rate', 'pooled_acceptance_rate', 'latency_speedup', 'decode_rate_speedup', 'output_token_ratio']
     buf = io.StringIO()
     writer = csv.DictWriter(buf, columns, extrasaction='ignore')
     writer.writeheader()
@@ -185,6 +192,8 @@ def run(out):
                 del active[uuid]
             pending = [read(out / 'jobs' / (j['key'] + '.json')) for j in jobs()]
             pending = [j for j in pending if j['outcome'] == 'pending']
+            # Validate all model/method pairs early, before long formal cells fill the GPUs.
+            pending.sort(key=lambda j: (j['model'], j['arm']) in validation)
             states = gpu_state()
             for lane in protocol['lanes']:
                 uuid = lane['uuid']
@@ -260,9 +269,11 @@ if __name__ == '__main__':
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--assets', default='/tmp/loopfill-assets')
     parser.add_argument('--python', default='/tmp/loopfill-venv/bin/python')
+    parser.add_argument('--temperature', type=float, default=0.)
+    parser.add_argument('--sampling-seed', type=int, default=0)
     a = parser.parse_args()
     if a.action == 'prepare':
-        prepare(a.out, a.assets, a.python)
+        prepare(a.out, a.assets, a.python, a.temperature, a.sampling_seed)
     elif a.action == 'run':
         run(a.out)
     else:

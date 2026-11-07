@@ -11,6 +11,8 @@ import time
 from collections import Counter
 from types import SimpleNamespace
 
+from .loop_sampling import target_tokens
+
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -109,7 +111,7 @@ def prefill_chunk(b, prompt, depth, start, chunk_size):
         y = b._coda(h, freqs, lambda li: chunk_attention(b.kv, b.coda_full + li, start, end))
         logits = b.model.lm_head(b.model.transformer.ln_f(y[:, -1])) if end == len(prompt) else None
     b.kv.length = end
-    return end, (int(logits.argmax(-1)) if logits is not None else None)
+    return end, (target_tokens(b, logits, [len(prompt)])[0] if logits is not None else None)
 
 
 class DecodeGraphs:
@@ -490,7 +492,7 @@ class PackedLoopExecutor(FusedLoopExecutor):
                 else:
                     b.hidden[rows.idx]=part
             return results
-        for (j,b,rows,nodes,group_sizes,_),part in zip(plans,output[:R].split(counts),strict=True):
+        for (j,b,rows,nodes,group_sizes,tree),part in zip(plans,output[:R].split(counts),strict=True):
             at={n.idx:i for i,n in enumerate(rows.nodes)}
             order=b.kv.upload(np.asarray([at[n.idx] for n in nodes],dtype=np.int64))
             part=part[order]
@@ -498,8 +500,8 @@ class PackedLoopExecutor(FusedLoopExecutor):
             m=jobs[j][1].args[3]
             if name == 'readout_top':
                 extra = jobs[j][1].args[4] if len(jobs[j][1].args) > 4 else None
-                results[j]=(_split(part[:split].argmax(-1).tolist() if m==0 else _top_probs(part[:split],m,extra),group_sizes),part[split:].argmax(-1).tolist())
+                results[j]=(_split(part[:split].argmax(-1).tolist() if m==0 else _top_probs(part[:split],m,extra),group_sizes),target_tokens(b,part[split:],[tree.position(n)+1 for n in nodes[split:]]))
             else:
-                tops=_top(part,m)
-                results[j]=(tops[:split],tops[split:])
+                results[j]=(_top(part[:split],m), [[t] for t in target_tokens(
+                    b,part[split:],[tree.position(n)+1 for n in nodes[split:]])])
         return results
