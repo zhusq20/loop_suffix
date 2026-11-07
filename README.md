@@ -1,5 +1,11 @@
 # LoopFill (loop_suffix)
 
+**表 1、表 2 归档（2026-11-07）**：实验代码、测试、冻结输入与源码、协议、当前逐题记录和汇总已纳入 Git；文件入口、汇总命令与快照范围见[归档说明](docs/loopfill-table12-archive.md)。实验尚未全部完成，GitHub 中的结果是提交时快照。
+
+**Table 1 / B=1 延迟实验**：三个模型、六个数据集、AR/WFD/LoopSpec/Suffix-only/LoopFill-online，共90组；每题最多512新token，报告decode延迟加速比与循环归一化接受长度 γ。见[运行说明](docs/loopfill-latency512.md)、[状态](results/loopfill-latency512-20261107/status.json)及[汇总](results/loopfill-latency512-20261107/measurements.csv)。
+
+**2026-11-07 Table 2**：Huginn-3.5B、Ouro-1.4B、Ouro-2.6B，AR/WFD/LoopSpec/Suffix-only/LoopFill-online，B=1/2/4/8/16，共75组完整SpecBench480实验已启动。计时含prefill与decode；Graph-off；8张GPU共享队列，空闲即补位；逐请求持久化并实时同步W&B。见[运行说明](docs/loopfill-table2.md)、[状态](results/loopfill-table2-20261107-v2/status.json)及[实时表格](results/loopfill-table2-20261107-v2/table2.md)。
+
 **论文实验规划**：[当前精简计划](docs/loopfill-paper-experiments.md)统一主指标（throughput 与按 loop steps 归一化的平均接受长度 γ）、三维消融雷达图及机制分析；与旧实验计划冲突时以此文为准。
 
 LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练投机解码。它把两种草稿来源放进同一棵草稿树：

@@ -1,0 +1,17 @@
+{
+  "key": "huginn-3.5b-b16-wavefront",
+  "model": "huginn-3.5b",
+  "batch": 16,
+  "arm": "wavefront",
+  "outcome": "pending",
+  "worker_log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/huginn-3.5b-b16-wavefront-full-worker.log",
+  "launch_failures": [
+    {
+      "outcome": "worker_failed",
+      "returncode": 1,
+      "log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/huginn-3.5b-b16-wavefront-full-worker.log",
+      "requeued_unix": 1793993107.08279,
+      "reason": "GPU lock contention"
+    }
+  ]
+}

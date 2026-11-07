@@ -1,0 +1,17 @@
+{
+  "key": "ouro-2.6b-b8-loopspec-dual",
+  "model": "ouro-2.6b",
+  "batch": 8,
+  "arm": "loopspec-dual",
+  "outcome": "pending",
+  "worker_log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/ouro-2.6b-b8-loopspec-dual-full-worker.log",
+  "launch_failures": [
+    {
+      "outcome": "worker_failed",
+      "returncode": 1,
+      "log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/ouro-2.6b-b8-loopspec-dual-full-worker.log",
+      "requeued_unix": 1793993108.9444792,
+      "reason": "GPU lock contention"
+    }
+  ]
+}

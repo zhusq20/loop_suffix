@@ -1,0 +1,348 @@
+Loading ouro-1.4b ar gsm8k
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 9f048823e7a7
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/runs/ouro-1.4b-gsm8k-ar/wandb/run-20261107_024636-9f048823e7a7
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run ouro-1.4b-gsm8k-ar
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/9f048823e7a7
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+ouro-1.4b-gsm8k-ar 1/300 decode=6.945s tokens=83
+ouro-1.4b-gsm8k-ar 2/300 decode=41.610s tokens=512
+ouro-1.4b-gsm8k-ar 3/300 decode=39.649s tokens=489
+ouro-1.4b-gsm8k-ar 4/300 decode=41.528s tokens=512
+ouro-1.4b-gsm8k-ar 5/300 decode=41.509s tokens=512
+ouro-1.4b-gsm8k-ar 6/300 decode=17.306s tokens=217
+ouro-1.4b-gsm8k-ar 7/300 decode=41.532s tokens=512
+ouro-1.4b-gsm8k-ar 8/300 decode=41.950s tokens=512
+ouro-1.4b-gsm8k-ar 9/300 decode=41.013s tokens=512
+ouro-1.4b-gsm8k-ar 10/300 decode=41.170s tokens=512
+ouro-1.4b-gsm8k-ar 11/300 decode=41.226s tokens=512
+ouro-1.4b-gsm8k-ar 12/300 decode=41.359s tokens=512
+ouro-1.4b-gsm8k-ar 13/300 decode=42.002s tokens=512
+ouro-1.4b-gsm8k-ar 14/300 decode=18.571s tokens=229
+ouro-1.4b-gsm8k-ar 15/300 decode=42.007s tokens=512
+ouro-1.4b-gsm8k-ar 16/300 decode=41.175s tokens=512
+ouro-1.4b-gsm8k-ar 17/300 decode=41.444s tokens=512
+ouro-1.4b-gsm8k-ar 18/300 decode=41.656s tokens=512
+ouro-1.4b-gsm8k-ar 19/300 decode=41.512s tokens=512
+ouro-1.4b-gsm8k-ar 20/300 decode=5.077s tokens=64
+ouro-1.4b-gsm8k-ar 21/300 decode=36.399s tokens=451
+ouro-1.4b-gsm8k-ar 22/300 decode=41.033s tokens=512
+ouro-1.4b-gsm8k-ar 23/300 decode=40.688s tokens=512
+ouro-1.4b-gsm8k-ar 24/300 decode=41.584s tokens=512
+ouro-1.4b-gsm8k-ar 25/300 decode=40.783s tokens=512
+ouro-1.4b-gsm8k-ar 26/300 decode=9.766s tokens=124
+ouro-1.4b-gsm8k-ar 27/300 decode=40.783s tokens=512
+ouro-1.4b-gsm8k-ar 28/300 decode=41.227s tokens=512
+ouro-1.4b-gsm8k-ar 29/300 decode=41.320s tokens=512
+ouro-1.4b-gsm8k-ar 30/300 decode=26.213s tokens=329
+ouro-1.4b-gsm8k-ar 31/300 decode=38.669s tokens=483
+ouro-1.4b-gsm8k-ar 32/300 decode=35.379s tokens=445
+ouro-1.4b-gsm8k-ar 33/300 decode=24.912s tokens=311
+ouro-1.4b-gsm8k-ar 34/300 decode=39.836s tokens=502
+ouro-1.4b-gsm8k-ar 35/300 decode=38.697s tokens=482
+ouro-1.4b-gsm8k-ar 36/300 decode=41.312s tokens=512
+ouro-1.4b-gsm8k-ar 37/300 decode=41.201s tokens=512
+ouro-1.4b-gsm8k-ar 38/300 decode=40.957s tokens=512
+ouro-1.4b-gsm8k-ar 39/300 decode=38.629s tokens=485
+ouro-1.4b-gsm8k-ar 40/300 decode=41.419s tokens=512
+ouro-1.4b-gsm8k-ar 41/300 decode=41.150s tokens=512
+ouro-1.4b-gsm8k-ar 42/300 decode=27.935s tokens=347
+ouro-1.4b-gsm8k-ar 43/300 decode=31.825s tokens=394
+ouro-1.4b-gsm8k-ar 44/300 decode=40.892s tokens=512
+ouro-1.4b-gsm8k-ar 45/300 decode=9.147s tokens=116
+ouro-1.4b-gsm8k-ar 46/300 decode=41.062s tokens=512
+ouro-1.4b-gsm8k-ar 47/300 decode=3.741s tokens=48
+ouro-1.4b-gsm8k-ar 48/300 decode=41.453s tokens=512
+ouro-1.4b-gsm8k-ar 49/300 decode=40.727s tokens=512
+ouro-1.4b-gsm8k-ar 50/300 decode=40.837s tokens=512
+ouro-1.4b-gsm8k-ar 51/300 decode=38.312s tokens=478
+ouro-1.4b-gsm8k-ar 52/300 decode=40.909s tokens=512
+ouro-1.4b-gsm8k-ar 53/300 decode=31.262s tokens=384
+ouro-1.4b-gsm8k-ar 54/300 decode=22.820s tokens=288
+ouro-1.4b-gsm8k-ar 55/300 decode=7.331s tokens=93
+ouro-1.4b-gsm8k-ar 56/300 decode=41.035s tokens=512
+ouro-1.4b-gsm8k-ar 57/300 decode=40.695s tokens=512
+ouro-1.4b-gsm8k-ar 58/300 decode=7.472s tokens=92
+ouro-1.4b-gsm8k-ar 59/300 decode=35.592s tokens=446
+ouro-1.4b-gsm8k-ar 60/300 decode=41.386s tokens=512
+ouro-1.4b-gsm8k-ar 61/300 decode=40.835s tokens=512
+ouro-1.4b-gsm8k-ar 62/300 decode=41.341s tokens=512
+ouro-1.4b-gsm8k-ar 63/300 decode=41.672s tokens=512
+ouro-1.4b-gsm8k-ar 64/300 decode=41.114s tokens=512
+ouro-1.4b-gsm8k-ar 65/300 decode=41.617s tokens=512
+ouro-1.4b-gsm8k-ar 66/300 decode=41.484s tokens=512
+ouro-1.4b-gsm8k-ar 67/300 decode=41.489s tokens=512
+ouro-1.4b-gsm8k-ar 68/300 decode=41.316s tokens=512
+ouro-1.4b-gsm8k-ar 69/300 decode=23.108s tokens=291
+ouro-1.4b-gsm8k-ar 70/300 decode=40.973s tokens=512
+ouro-1.4b-gsm8k-ar 71/300 decode=41.171s tokens=512
+ouro-1.4b-gsm8k-ar 72/300 decode=41.056s tokens=512
+ouro-1.4b-gsm8k-ar 73/300 decode=27.940s tokens=349
+ouro-1.4b-gsm8k-ar 74/300 decode=34.930s tokens=436
+ouro-1.4b-gsm8k-ar 75/300 decode=28.977s tokens=356
+ouro-1.4b-gsm8k-ar 76/300 decode=40.810s tokens=512
+ouro-1.4b-gsm8k-ar 77/300 decode=21.191s tokens=263
+ouro-1.4b-gsm8k-ar 78/300 decode=4.976s tokens=63
+ouro-1.4b-gsm8k-ar 79/300 decode=40.691s tokens=512
+ouro-1.4b-gsm8k-ar 80/300 decode=40.811s tokens=512
+ouro-1.4b-gsm8k-ar 81/300 decode=40.816s tokens=512
+ouro-1.4b-gsm8k-ar 82/300 decode=41.061s tokens=512
+ouro-1.4b-gsm8k-ar 83/300 decode=39.838s tokens=501
+ouro-1.4b-gsm8k-ar 84/300 decode=18.142s tokens=230
+ouro-1.4b-gsm8k-ar 85/300 decode=11.081s tokens=140
+ouro-1.4b-gsm8k-ar 86/300 decode=41.017s tokens=512
+ouro-1.4b-gsm8k-ar 87/300 decode=41.610s tokens=512
+ouro-1.4b-gsm8k-ar 88/300 decode=34.708s tokens=436
+ouro-1.4b-gsm8k-ar 89/300 decode=8.737s tokens=111
+ouro-1.4b-gsm8k-ar 90/300 decode=41.059s tokens=512
+ouro-1.4b-gsm8k-ar 91/300 decode=41.098s tokens=512
+ouro-1.4b-gsm8k-ar 92/300 decode=41.016s tokens=512
+ouro-1.4b-gsm8k-ar 93/300 decode=41.145s tokens=512
+ouro-1.4b-gsm8k-ar 94/300 decode=40.137s tokens=512
+ouro-1.4b-gsm8k-ar 95/300 decode=27.398s tokens=345
+ouro-1.4b-gsm8k-ar 96/300 decode=40.674s tokens=512
+ouro-1.4b-gsm8k-ar 97/300 decode=40.275s tokens=512
+ouro-1.4b-gsm8k-ar 98/300 decode=40.788s tokens=512
+ouro-1.4b-gsm8k-ar 99/300 decode=40.579s tokens=512
+ouro-1.4b-gsm8k-ar 100/300 decode=25.893s tokens=326
+ouro-1.4b-gsm8k-ar 101/300 decode=40.091s tokens=512
+ouro-1.4b-gsm8k-ar 102/300 decode=31.294s tokens=394
+ouro-1.4b-gsm8k-ar 103/300 decode=40.663s tokens=512
+ouro-1.4b-gsm8k-ar 104/300 decode=40.480s tokens=512
+ouro-1.4b-gsm8k-ar 105/300 decode=25.882s tokens=325
+ouro-1.4b-gsm8k-ar 106/300 decode=40.107s tokens=512
+ouro-1.4b-gsm8k-ar 107/300 decode=1.582s tokens=21
+ouro-1.4b-gsm8k-ar 108/300 decode=40.406s tokens=512
+ouro-1.4b-gsm8k-ar 109/300 decode=40.324s tokens=512
+ouro-1.4b-gsm8k-ar 110/300 decode=36.074s tokens=461
+ouro-1.4b-gsm8k-ar 111/300 decode=5.630s tokens=73
+ouro-1.4b-gsm8k-ar 112/300 decode=40.429s tokens=512
+ouro-1.4b-gsm8k-ar 113/300 decode=40.448s tokens=512
+ouro-1.4b-gsm8k-ar 114/300 decode=25.906s tokens=324
+ouro-1.4b-gsm8k-ar 115/300 decode=27.522s tokens=350
+ouro-1.4b-gsm8k-ar 116/300 decode=40.659s tokens=512
+ouro-1.4b-gsm8k-ar 117/300 decode=40.118s tokens=512
+ouro-1.4b-gsm8k-ar 118/300 decode=25.227s tokens=319
+ouro-1.4b-gsm8k-ar 119/300 decode=41.002s tokens=512
+ouro-1.4b-gsm8k-ar 120/300 decode=41.091s tokens=512
+ouro-1.4b-gsm8k-ar 121/300 decode=40.981s tokens=512
+ouro-1.4b-gsm8k-ar 122/300 decode=40.845s tokens=512
+ouro-1.4b-gsm8k-ar 123/300 decode=40.480s tokens=512
+ouro-1.4b-gsm8k-ar 124/300 decode=40.204s tokens=512
+ouro-1.4b-gsm8k-ar 125/300 decode=40.654s tokens=512
+ouro-1.4b-gsm8k-ar 126/300 decode=40.946s tokens=512
+ouro-1.4b-gsm8k-ar 127/300 decode=40.604s tokens=512
+ouro-1.4b-gsm8k-ar 128/300 decode=30.715s tokens=392
+ouro-1.4b-gsm8k-ar 129/300 decode=26.327s tokens=337
+ouro-1.4b-gsm8k-ar 130/300 decode=40.630s tokens=512
+ouro-1.4b-gsm8k-ar 131/300 decode=40.860s tokens=512
+ouro-1.4b-gsm8k-ar 132/300 decode=40.170s tokens=512
+ouro-1.4b-gsm8k-ar 133/300 decode=37.196s tokens=471
+ouro-1.4b-gsm8k-ar 134/300 decode=40.427s tokens=512
+ouro-1.4b-gsm8k-ar 135/300 decode=40.325s tokens=512
+ouro-1.4b-gsm8k-ar 136/300 decode=40.619s tokens=512
+ouro-1.4b-gsm8k-ar 137/300 decode=40.789s tokens=512
+ouro-1.4b-gsm8k-ar 138/300 decode=40.814s tokens=512
+ouro-1.4b-gsm8k-ar 139/300 decode=40.520s tokens=512
+ouro-1.4b-gsm8k-ar 140/300 decode=28.030s tokens=357
+ouro-1.4b-gsm8k-ar 141/300 decode=40.274s tokens=512
+ouro-1.4b-gsm8k-ar 142/300 decode=40.028s tokens=512
+ouro-1.4b-gsm8k-ar 143/300 decode=40.488s tokens=512
+ouro-1.4b-gsm8k-ar 144/300 decode=40.360s tokens=512
+ouro-1.4b-gsm8k-ar 145/300 decode=37.993s tokens=483
+ouro-1.4b-gsm8k-ar 146/300 decode=40.650s tokens=512
+ouro-1.4b-gsm8k-ar 147/300 decode=40.564s tokens=512
+ouro-1.4b-gsm8k-ar 148/300 decode=4.819s tokens=60
+ouro-1.4b-gsm8k-ar 149/300 decode=28.782s tokens=366
+ouro-1.4b-gsm8k-ar 150/300 decode=40.532s tokens=512
+ouro-1.4b-gsm8k-ar 151/300 decode=23.717s tokens=298
+ouro-1.4b-gsm8k-ar 152/300 decode=26.263s tokens=332
+ouro-1.4b-gsm8k-ar 153/300 decode=41.110s tokens=512
+ouro-1.4b-gsm8k-ar 154/300 decode=40.829s tokens=512
+ouro-1.4b-gsm8k-ar 155/300 decode=25.463s tokens=324
+ouro-1.4b-gsm8k-ar 156/300 decode=40.570s tokens=512
+ouro-1.4b-gsm8k-ar 157/300 decode=40.463s tokens=512
+ouro-1.4b-gsm8k-ar 158/300 decode=40.861s tokens=512
+ouro-1.4b-gsm8k-ar 159/300 decode=40.208s tokens=512
+ouro-1.4b-gsm8k-ar 160/300 decode=38.589s tokens=491
+ouro-1.4b-gsm8k-ar 161/300 decode=40.480s tokens=512
+ouro-1.4b-gsm8k-ar 162/300 decode=40.087s tokens=512
+ouro-1.4b-gsm8k-ar 163/300 decode=40.356s tokens=512
+ouro-1.4b-gsm8k-ar 164/300 decode=39.530s tokens=502
+ouro-1.4b-gsm8k-ar 165/300 decode=40.657s tokens=512
+ouro-1.4b-gsm8k-ar 166/300 decode=36.252s tokens=455
+ouro-1.4b-gsm8k-ar 167/300 decode=24.897s tokens=314
+ouro-1.4b-gsm8k-ar 168/300 decode=21.444s tokens=268
+ouro-1.4b-gsm8k-ar 169/300 decode=37.499s tokens=470
+ouro-1.4b-gsm8k-ar 170/300 decode=40.335s tokens=512
+ouro-1.4b-gsm8k-ar 171/300 decode=31.688s tokens=402
+ouro-1.4b-gsm8k-ar 172/300 decode=40.788s tokens=512
+ouro-1.4b-gsm8k-ar 173/300 decode=30.119s tokens=381
+ouro-1.4b-gsm8k-ar 174/300 decode=40.819s tokens=512
+ouro-1.4b-gsm8k-ar 175/300 decode=39.669s tokens=499
+ouro-1.4b-gsm8k-ar 176/300 decode=31.013s tokens=396
+ouro-1.4b-gsm8k-ar 177/300 decode=29.816s tokens=379
+ouro-1.4b-gsm8k-ar 178/300 decode=40.909s tokens=512
+ouro-1.4b-gsm8k-ar 179/300 decode=30.077s tokens=376
+ouro-1.4b-gsm8k-ar 180/300 decode=40.228s tokens=512
+ouro-1.4b-gsm8k-ar 181/300 decode=40.448s tokens=512
+ouro-1.4b-gsm8k-ar 182/300 decode=13.990s tokens=179
+ouro-1.4b-gsm8k-ar 183/300 decode=40.534s tokens=512
+ouro-1.4b-gsm8k-ar 184/300 decode=40.563s tokens=512
+ouro-1.4b-gsm8k-ar 185/300 decode=40.951s tokens=512
+ouro-1.4b-gsm8k-ar 186/300 decode=33.334s tokens=424
+ouro-1.4b-gsm8k-ar 187/300 decode=37.071s tokens=472
+ouro-1.4b-gsm8k-ar 188/300 decode=34.743s tokens=441
+ouro-1.4b-gsm8k-ar 189/300 decode=40.134s tokens=512
+ouro-1.4b-gsm8k-ar 190/300 decode=38.011s tokens=483
+ouro-1.4b-gsm8k-ar 191/300 decode=39.954s tokens=512
+ouro-1.4b-gsm8k-ar 192/300 decode=40.288s tokens=512
+ouro-1.4b-gsm8k-ar 193/300 decode=6.061s tokens=78
+ouro-1.4b-gsm8k-ar 194/300 decode=40.578s tokens=512
+ouro-1.4b-gsm8k-ar 195/300 decode=40.081s tokens=512
+ouro-1.4b-gsm8k-ar 196/300 decode=31.288s tokens=393
+ouro-1.4b-gsm8k-ar 197/300 decode=40.369s tokens=512
+ouro-1.4b-gsm8k-ar 198/300 decode=40.178s tokens=512
+ouro-1.4b-gsm8k-ar 199/300 decode=40.397s tokens=512
+ouro-1.4b-gsm8k-ar 200/300 decode=40.326s tokens=512
+ouro-1.4b-gsm8k-ar 201/300 decode=40.667s tokens=512
+ouro-1.4b-gsm8k-ar 202/300 decode=41.078s tokens=512
+ouro-1.4b-gsm8k-ar 203/300 decode=40.584s tokens=512
+ouro-1.4b-gsm8k-ar 204/300 decode=40.863s tokens=512
+ouro-1.4b-gsm8k-ar 205/300 decode=40.857s tokens=512
+ouro-1.4b-gsm8k-ar 206/300 decode=38.570s tokens=485
+ouro-1.4b-gsm8k-ar 207/300 decode=37.456s tokens=474
+ouro-1.4b-gsm8k-ar 208/300 decode=5.879s tokens=75
+ouro-1.4b-gsm8k-ar 209/300 decode=40.258s tokens=512
+ouro-1.4b-gsm8k-ar 210/300 decode=5.477s tokens=67
+ouro-1.4b-gsm8k-ar 211/300 decode=40.500s tokens=512
+ouro-1.4b-gsm8k-ar 212/300 decode=40.528s tokens=512
+ouro-1.4b-gsm8k-ar 213/300 decode=40.576s tokens=512
+ouro-1.4b-gsm8k-ar 214/300 decode=40.208s tokens=512
+ouro-1.4b-gsm8k-ar 215/300 decode=12.678s tokens=164
+ouro-1.4b-gsm8k-ar 216/300 decode=40.678s tokens=512
+ouro-1.4b-gsm8k-ar 217/300 decode=5.147s tokens=66
+ouro-1.4b-gsm8k-ar 218/300 decode=40.520s tokens=512
+ouro-1.4b-gsm8k-ar 219/300 decode=3.690s tokens=48
+ouro-1.4b-gsm8k-ar 220/300 decode=40.159s tokens=512
+ouro-1.4b-gsm8k-ar 221/300 decode=40.504s tokens=512
+ouro-1.4b-gsm8k-ar 222/300 decode=40.369s tokens=512
+ouro-1.4b-gsm8k-ar 223/300 decode=32.626s tokens=417
+ouro-1.4b-gsm8k-ar 224/300 decode=40.280s tokens=512
+ouro-1.4b-gsm8k-ar 225/300 decode=40.238s tokens=512
+ouro-1.4b-gsm8k-ar 226/300 decode=4.599s tokens=60
+ouro-1.4b-gsm8k-ar 227/300 decode=40.270s tokens=512
+ouro-1.4b-gsm8k-ar 228/300 decode=40.502s tokens=512
+ouro-1.4b-gsm8k-ar 229/300 decode=40.311s tokens=512
+ouro-1.4b-gsm8k-ar 230/300 decode=29.164s tokens=364
+ouro-1.4b-gsm8k-ar 231/300 decode=12.616s tokens=160
+ouro-1.4b-gsm8k-ar 232/300 decode=40.901s tokens=512
+ouro-1.4b-gsm8k-ar 233/300 decode=40.200s tokens=512
+ouro-1.4b-gsm8k-ar 234/300 decode=38.827s tokens=492
+ouro-1.4b-gsm8k-ar 235/300 decode=33.373s tokens=427
+ouro-1.4b-gsm8k-ar 236/300 decode=40.188s tokens=512
+ouro-1.4b-gsm8k-ar 237/300 decode=27.786s tokens=355
+ouro-1.4b-gsm8k-ar 238/300 decode=40.962s tokens=512
+ouro-1.4b-gsm8k-ar 239/300 decode=40.341s tokens=512
+ouro-1.4b-gsm8k-ar 240/300 decode=40.162s tokens=512
+ouro-1.4b-gsm8k-ar 241/300 decode=40.799s tokens=512
+ouro-1.4b-gsm8k-ar 242/300 decode=40.655s tokens=512
+ouro-1.4b-gsm8k-ar 243/300 decode=40.563s tokens=512
+ouro-1.4b-gsm8k-ar 244/300 decode=40.811s tokens=512
+ouro-1.4b-gsm8k-ar 245/300 decode=40.083s tokens=512
+ouro-1.4b-gsm8k-ar 246/300 decode=40.230s tokens=512
+ouro-1.4b-gsm8k-ar 247/300 decode=40.630s tokens=512
+ouro-1.4b-gsm8k-ar 248/300 decode=40.401s tokens=512
+ouro-1.4b-gsm8k-ar 249/300 decode=40.530s tokens=512
+ouro-1.4b-gsm8k-ar 250/300 decode=40.374s tokens=512
+ouro-1.4b-gsm8k-ar 251/300 decode=36.904s tokens=469
+ouro-1.4b-gsm8k-ar 252/300 decode=5.536s tokens=72
+ouro-1.4b-gsm8k-ar 253/300 decode=40.371s tokens=512
+ouro-1.4b-gsm8k-ar 254/300 decode=40.036s tokens=512
+ouro-1.4b-gsm8k-ar 255/300 decode=40.375s tokens=512
+ouro-1.4b-gsm8k-ar 256/300 decode=39.759s tokens=506
+ouro-1.4b-gsm8k-ar 257/300 decode=40.015s tokens=512
+ouro-1.4b-gsm8k-ar 258/300 decode=32.528s tokens=410
+ouro-1.4b-gsm8k-ar 259/300 decode=40.425s tokens=512
+ouro-1.4b-gsm8k-ar 260/300 decode=40.564s tokens=512
+ouro-1.4b-gsm8k-ar 261/300 decode=40.786s tokens=512
+ouro-1.4b-gsm8k-ar 262/300 decode=40.330s tokens=512
+ouro-1.4b-gsm8k-ar 263/300 decode=40.190s tokens=512
+ouro-1.4b-gsm8k-ar 264/300 decode=39.977s tokens=512
+ouro-1.4b-gsm8k-ar 265/300 decode=40.220s tokens=512
+ouro-1.4b-gsm8k-ar 266/300 decode=33.666s tokens=427
+ouro-1.4b-gsm8k-ar 267/300 decode=40.148s tokens=512
+ouro-1.4b-gsm8k-ar 268/300 decode=6.198s tokens=80
+ouro-1.4b-gsm8k-ar 269/300 decode=4.652s tokens=60
+ouro-1.4b-gsm8k-ar 270/300 decode=40.281s tokens=512
+ouro-1.4b-gsm8k-ar 271/300 decode=40.473s tokens=512
+ouro-1.4b-gsm8k-ar 272/300 decode=4.152s tokens=54
+ouro-1.4b-gsm8k-ar 273/300 decode=5.878s tokens=76
+ouro-1.4b-gsm8k-ar 274/300 decode=5.485s tokens=71
+ouro-1.4b-gsm8k-ar 275/300 decode=40.671s tokens=512
+ouro-1.4b-gsm8k-ar 276/300 decode=40.266s tokens=507
+ouro-1.4b-gsm8k-ar 277/300 decode=27.494s tokens=345
+ouro-1.4b-gsm8k-ar 278/300 decode=22.613s tokens=288
+ouro-1.4b-gsm8k-ar 279/300 decode=8.246s tokens=106
+ouro-1.4b-gsm8k-ar 280/300 decode=40.862s tokens=512
+ouro-1.4b-gsm8k-ar 281/300 decode=40.155s tokens=512
+ouro-1.4b-gsm8k-ar 282/300 decode=40.662s tokens=512
+ouro-1.4b-gsm8k-ar 283/300 decode=38.690s tokens=485
+ouro-1.4b-gsm8k-ar 284/300 decode=38.791s tokens=492
+ouro-1.4b-gsm8k-ar 285/300 decode=5.797s tokens=75
+ouro-1.4b-gsm8k-ar 286/300 decode=40.441s tokens=512
+ouro-1.4b-gsm8k-ar 287/300 decode=40.725s tokens=512
+ouro-1.4b-gsm8k-ar 288/300 decode=40.132s tokens=512
+ouro-1.4b-gsm8k-ar 289/300 decode=40.402s tokens=512
+ouro-1.4b-gsm8k-ar 290/300 decode=40.402s tokens=512
+ouro-1.4b-gsm8k-ar 291/300 decode=31.763s tokens=400
+ouro-1.4b-gsm8k-ar 292/300 decode=40.792s tokens=512
+ouro-1.4b-gsm8k-ar 293/300 decode=37.582s tokens=477
+ouro-1.4b-gsm8k-ar 294/300 decode=40.770s tokens=512
+ouro-1.4b-gsm8k-ar 295/300 decode=40.637s tokens=512
+ouro-1.4b-gsm8k-ar 296/300 decode=41.613s tokens=512
+ouro-1.4b-gsm8k-ar 297/300 decode=41.114s tokens=512
+ouro-1.4b-gsm8k-ar 298/300 decode=34.639s tokens=437
+ouro-1.4b-gsm8k-ar 299/300 decode=37.716s tokens=471
+ouro-1.4b-gsm8k-ar 300/300 decode=40.345s tokens=512
+wandb: updating run metadata; uploading artifact ouro-1.4b-gsm8k-ar
+wandb: uploading artifact ouro-1.4b-gsm8k-ar
+wandb: uploading config.yaml; uploading requests.jsonl; uploading output.log
+wandb: uploading requests.jsonl; uploading output.log; uploading wandb-summary.json
+wandb: uploading requests.jsonl
+wandb: 
+wandb: Run history:
+wandb:        aggregate/cap_stopped ▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▄▄▄▅▅▅▅▅▅▅▅▅▅▅▆▇▇▇▇██████
+wandb: aggregate/completed_requests ▁▁▁▁▁▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▅▅▅▆▆▆▆▆▆▆▆▆▇▇▇▇▇▇██
+wandb:           aggregate/decode_s ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▆▆▆▆▆▇▇▇▇▇▇▇█████
+wandb:     aggregate/decode_token_s ▁▅▆▆▆▆▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇███████████████
+wandb:      aggregate/decode_tokens ▁▁▁▁▁▂▂▂▂▂▃▃▃▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇█████
+wandb:              aggregate/gamma ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:         aggregate/loop_steps ▁▁▂▂▂▂▃▃▃▃▃▃▄▄▄▅▅▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇█████
+wandb:      aggregate/output_tokens ▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▄▄▄▅▅▅▆▆▆▆▆▆▇▇▇▇▇████
+wandb:          aggregate/prefill_s ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇▇███
+wandb:             request/decode_s █████▆▅███████▇▅▆▅██▇▆█▆████▁████▇██████
+wandb:                           +2 ...
+wandb: 
+wandb: Run summary:
+wandb:        aggregate/cap_stopped 191
+wandb: aggregate/completed_requests 300
+wandb:           aggregate/decode_s 10494.73815
+wandb:     aggregate/decode_token_s 12.55591
+wandb:      aggregate/decode_tokens 131771
+wandb:              aggregate/gamma 1
+wandb:         aggregate/loop_steps 527084
+wandb:      aggregate/output_tokens 132071
+wandb:          aggregate/prefill_s 12.32438
+wandb:            attention_backend packed_prefix_and_tr...
+wandb:                          +27 ...
+wandb: 
+wandb: 🚀 View run ouro-1.4b-gsm8k-ar at: https://wandb.ai/zsqzz/loopfill-latency512/runs/9f048823e7a7
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-20261107/runs/ouro-1.4b-gsm8k-ar/wandb/run-20261107_024636-9f048823e7a7/logs

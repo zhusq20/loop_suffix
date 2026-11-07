@@ -1,0 +1,131 @@
+{
+  "schedule": "continuous",
+  "concurrency": 2,
+  "max_active_requests": 2,
+  "requests": 8,
+  "output_tokens": 128,
+  "wall_s": 15.290664419531822,
+  "output_tput": 8.371120867481517,
+  "request_tput": 0.5231950542175948,
+  "prefill_policy": "chunked_interleaved",
+  "prefill_chunk_size": 128,
+  "prefill_chunks": 30,
+  "prefill_chunk_tokens": 3228,
+  "attention_policy": "packed_prefix_and_tree",
+  "latency_origin": "slot_admission",
+  "refilled_requests": 6,
+  "average_active_requests": 1.9311560857665733,
+  "slot_utilization": 0.9655780428832866,
+  "core_calls": 217,
+  "core_rows": 664,
+  "max_core_rows": 8,
+  "attention_backend": "packed_prefix_and_tree",
+  "cuda_graph": false,
+  "cuda_graph_shapes": 0,
+  "cuda_graph_replays": 0,
+  "cuda_graph_eager_misses": 299,
+  "cuda_graph_capture_s": 0.0,
+  "attention_batches": 10416,
+  "pad_decode_rows": false,
+  "core_execution_rows": 664,
+  "core_padding_rows": 0,
+  "verifier_graph_shapes": 0,
+  "padding_sink_bytes": 0,
+  "latency_s": {
+    "p50": 3.770188696682453,
+    "p95": 4.590910330414772
+  },
+  "ttft_s": {
+    "p50": 0.2013884149491787,
+    "p95": 1.6607284475117916
+  },
+  "arm": "budget-suffix",
+  "config": {
+    "name": "budget-suffix",
+    "depth_total": 4,
+    "draft_depth": 1,
+    "readout_depths": [
+      1,
+      2
+    ],
+    "draft_node_budget": 16,
+    "scoring": "raw",
+    "eta": 0.1,
+    "c_min": 0.25,
+    "c_max": 2.0,
+    "use_suffix": true,
+    "use_model": false,
+    "top_m": 2,
+    "suffix_room": 4,
+    "spec_factor": 1.0,
+    "suffix_min_prob": 0.001,
+    "trace_controller": false,
+    "tree_policy": "node_budget",
+    "child_suffix_policy": "all",
+    "positive_only": false,
+    "child_suffix_caps": [
+      4,
+      4
+    ],
+    "c_initial": 1.0,
+    "existing_child_probs": false
+  },
+  "order_seed": 0,
+  "repeat_id": 0,
+  "request_order": [
+    321,
+    161,
+    325,
+    241,
+    81,
+    317,
+    481,
+    401
+  ],
+  "max_nodes": 17,
+  "buffer_policy": "per-arm",
+  "slot_buffer_bytes": 4254666752,
+  "profiled": false,
+  "controller_profiled": false,
+  "tree_policy": "node_budget",
+  "scoring": "raw",
+  "cap_skips": 0,
+  "publications": [
+    {
+      "request_id": 161,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 321,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 325,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 241,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 81,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 317,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 481,
+      "output_tokens": 16
+    },
+    {
+      "request_id": 401,
+      "output_tokens": 16
+    }
+  ],
+  "durable_results": true,
+  "result_persistence_s": 0.05137137323617935,
+  "peak_allocated_bytes": 13889850368,
+  "peak_reserved_bytes": 14292090880
+}

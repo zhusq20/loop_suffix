@@ -1,0 +1,156 @@
+{
+  "key": "huginn-3.5b-budget-suffix",
+  "model": "huginn-3.5b",
+  "arm": "budget-suffix",
+  "batch": 2,
+  "outcome": "complete",
+  "attempt": 1,
+  "output": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/preflight/huginn-3.5b-budget-suffix/attempt1",
+  "gpu": 3,
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "cpus": "12-15",
+  "started_unix": 1793987883.838399,
+  "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/7abf7098043c559e",
+  "pid": 37691,
+  "progress": {
+    "completed_requests": 8,
+    "output_tokens": 117,
+    "elapsed_s": 10.510936066508293
+  },
+  "returncode": 0,
+  "finished_unix": 1793987917.4366772,
+  "summary": {
+    "schedule": "continuous",
+    "concurrency": 2,
+    "max_active_requests": 2,
+    "requests": 8,
+    "output_tokens": 117,
+    "wall_s": 10.544085070490837,
+    "output_tput": 11.09626859208881,
+    "request_tput": 0.7587192199718844,
+    "prefill_policy": "chunked_interleaved",
+    "prefill_chunk_size": 128,
+    "prefill_chunks": 30,
+    "prefill_chunk_tokens": 3156,
+    "attention_policy": "packed_prefix_and_tree",
+    "latency_origin": "slot_admission",
+    "refilled_requests": 6,
+    "average_active_requests": 1.8600506414082,
+    "slot_utilization": 0.9300253207041,
+    "core_calls": 1201,
+    "core_rows": 4480,
+    "max_core_rows": 7,
+    "attention_backend": "packed_prefix_and_tree",
+    "cuda_graph": false,
+    "cuda_graph_shapes": 0,
+    "cuda_graph_replays": 0,
+    "cuda_graph_eager_misses": 1337,
+    "cuda_graph_capture_s": 0.0,
+    "attention_batches": 5076,
+    "pad_decode_rows": false,
+    "core_execution_rows": 4480,
+    "core_padding_rows": 0,
+    "verifier_graph_shapes": 0,
+    "padding_sink_bytes": 0,
+    "latency_s": {
+      "p50": 2.186493817716837,
+      "p95": 4.509402860328555
+    },
+    "ttft_s": {
+      "p50": 0.16177575290203094,
+      "p95": 1.025435226038098
+    },
+    "arm": "budget-suffix",
+    "config": {
+      "name": "budget-suffix",
+      "depth_total": 32,
+      "draft_depth": 4,
+      "readout_depths": [
+        4,
+        8
+      ],
+      "draft_node_budget": 16,
+      "scoring": "raw",
+      "eta": 0.1,
+      "c_min": 0.25,
+      "c_max": 2.0,
+      "use_suffix": true,
+      "use_model": false,
+      "top_m": 2,
+      "suffix_room": 4,
+      "spec_factor": 1.0,
+      "suffix_min_prob": 0.001,
+      "trace_controller": false,
+      "tree_policy": "node_budget",
+      "child_suffix_policy": "all",
+      "positive_only": false,
+      "child_suffix_caps": [
+        4,
+        4
+      ],
+      "c_initial": 1.0,
+      "existing_child_probs": false
+    },
+    "order_seed": 0,
+    "repeat_id": 0,
+    "request_order": [
+      321,
+      161,
+      377,
+      241,
+      81,
+      288,
+      481,
+      401
+    ],
+    "max_nodes": 17,
+    "buffer_policy": "per-arm",
+    "slot_buffer_bytes": 7798369920,
+    "profiled": false,
+    "controller_profiled": false,
+    "tree_policy": "node_budget",
+    "scoring": "raw",
+    "cap_skips": 0,
+    "publications": [
+      {
+        "request_id": 321,
+        "output_tokens": 5
+      },
+      {
+        "request_id": 161,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 241,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 377,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 288,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 481,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 81,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 401,
+        "output_tokens": 16
+      }
+    ],
+    "durable_results": true,
+    "result_persistence_s": 0.04980093240737915,
+    "peak_allocated_bytes": 22811733504,
+    "peak_reserved_bytes": 22852665344,
+    "input_tokens": 3156,
+    "total_tput": 310.4110008709972
+  },
+  "tracking_finished": true
+}

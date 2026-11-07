@@ -1,0 +1,156 @@
+{
+  "key": "ouro-1.4b-budget-online",
+  "model": "ouro-1.4b",
+  "arm": "budget-online",
+  "batch": 2,
+  "outcome": "complete",
+  "attempt": 1,
+  "output": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/preflight/ouro-1.4b-budget-online/attempt1",
+  "gpu": 7,
+  "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+  "cpus": "60-63",
+  "started_unix": 1793987914.2295709,
+  "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/d1689c21bdace7d5",
+  "pid": 38071,
+  "progress": {
+    "completed_requests": 8,
+    "output_tokens": 128,
+    "elapsed_s": 4.7112307250499725
+  },
+  "returncode": 0,
+  "finished_unix": 1793987932.3648684,
+  "summary": {
+    "schedule": "continuous",
+    "concurrency": 2,
+    "max_active_requests": 2,
+    "requests": 8,
+    "output_tokens": 128,
+    "wall_s": 4.738406240940094,
+    "output_tput": 27.013302256373223,
+    "request_tput": 1.6883313910233264,
+    "prefill_policy": "chunked_interleaved",
+    "prefill_chunk_size": 128,
+    "prefill_chunks": 30,
+    "prefill_chunk_tokens": 3228,
+    "attention_policy": "packed_prefix_and_tree",
+    "latency_origin": "slot_admission",
+    "refilled_requests": 6,
+    "average_active_requests": 1.8851078461630095,
+    "slot_utilization": 0.9425539230815048,
+    "core_calls": 94,
+    "core_rows": 2119,
+    "max_core_rows": 34,
+    "attention_backend": "packed_prefix_and_tree",
+    "cuda_graph": false,
+    "cuda_graph_shapes": 0,
+    "cuda_graph_replays": 0,
+    "cuda_graph_eager_misses": 188,
+    "cuda_graph_capture_s": 0.0,
+    "attention_batches": 2256,
+    "pad_decode_rows": false,
+    "core_execution_rows": 2119,
+    "core_padding_rows": 0,
+    "verifier_graph_shapes": 0,
+    "padding_sink_bytes": 0,
+    "latency_s": {
+      "p50": 1.030116967856884,
+      "p95": 1.6486393101513384
+    },
+    "ttft_s": {
+      "p50": 0.1028372310101986,
+      "p95": 0.8640536613762375
+    },
+    "arm": "budget-online",
+    "config": {
+      "name": "budget-online",
+      "depth_total": 4,
+      "draft_depth": 1,
+      "readout_depths": [
+        1,
+        2
+      ],
+      "draft_node_budget": 16,
+      "scoring": "online_suffix_i",
+      "eta": 0.1,
+      "c_min": 0.25,
+      "c_max": 2.0,
+      "use_suffix": true,
+      "use_model": true,
+      "top_m": 2,
+      "suffix_room": 4,
+      "spec_factor": 1.0,
+      "suffix_min_prob": 0.001,
+      "trace_controller": false,
+      "tree_policy": "node_budget",
+      "child_suffix_policy": "all",
+      "positive_only": false,
+      "child_suffix_caps": [
+        4,
+        4
+      ],
+      "c_initial": 0.7,
+      "existing_child_probs": false
+    },
+    "order_seed": 0,
+    "repeat_id": 0,
+    "request_order": [
+      321,
+      161,
+      325,
+      241,
+      81,
+      317,
+      481,
+      401
+    ],
+    "max_nodes": 17,
+    "buffer_policy": "per-arm",
+    "slot_buffer_bytes": 2127368192,
+    "profiled": false,
+    "controller_profiled": false,
+    "tree_policy": "node_budget",
+    "scoring": "online_suffix_i",
+    "cap_skips": 0,
+    "publications": [
+      {
+        "request_id": 321,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 161,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 325,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 241,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 81,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 317,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 481,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 401,
+        "output_tokens": 16
+      }
+    ],
+    "durable_results": true,
+    "result_persistence_s": 0.04525376856327057,
+    "peak_allocated_bytes": 7173992448,
+    "peak_reserved_bytes": 7392460800,
+    "input_tokens": 3228,
+    "total_tput": 708.2550185342855
+  },
+  "tracking_finished": true
+}

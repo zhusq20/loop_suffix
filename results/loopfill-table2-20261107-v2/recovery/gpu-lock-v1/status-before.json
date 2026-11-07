@@ -1,0 +1,44 @@
+{
+  "updated_unix": 1793993104.8924727,
+  "planned": 75,
+  "counts": {
+    "running": 3,
+    "worker_failed": 67,
+    "complete": 5
+  },
+  "active": [
+    {
+      "key": "huginn-3.5b-b1-ar",
+      "gpu": 0,
+      "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/763a52bc235cd513",
+      "progress": {
+        "completed_requests": 263,
+        "output_tokens": 29291,
+        "elapsed_s": 5043.03075452894
+      },
+      "started_unix": 1793987965.054425
+    },
+    {
+      "key": "huginn-3.5b-b1-budget-suffix",
+      "gpu": 3,
+      "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/7f75d8f27ad07ddc",
+      "progress": {
+        "completed_requests": 422,
+        "output_tokens": 47056,
+        "elapsed_s": 5080.0865669846535
+      },
+      "started_unix": 1793987965.057462
+    },
+    {
+      "key": "ouro-2.6b-b1-ar",
+      "gpu": 6,
+      "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/9512c4917f17d7a5",
+      "progress": {
+        "completed_requests": 122,
+        "output_tokens": 27503,
+        "elapsed_s": 5087.694096945226
+      },
+      "started_unix": 1793987965.0644948
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+Loading huginn-3.5b ar specbench
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.32s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.29s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.37s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.00s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.12s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run b491e5ff03a6
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/runs/huginn-3.5b-specbench-ar/wandb/run-20261107_075941-b491e5ff03a6
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-specbench-ar
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512/runs/b491e5ff03a6
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-specbench-ar 1/480 decode=3.255s tokens=24
+huginn-3.5b-specbench-ar 2/480 decode=1.128s tokens=9
+huginn-3.5b-specbench-ar 3/480 decode=0.284s tokens=3
+huginn-3.5b-specbench-ar 4/480 decode=3.789s tokens=28
+huginn-3.5b-specbench-ar 5/480 decode=0.281s tokens=3
+huginn-3.5b-specbench-ar 6/480 decode=17.144s tokens=122
+huginn-3.5b-specbench-ar 7/480 decode=5.646s tokens=41
+huginn-3.5b-specbench-ar 8/480 decode=22.471s tokens=160
+huginn-3.5b-specbench-ar 9/480 decode=72.767s tokens=512
+huginn-3.5b-specbench-ar 10/480 decode=0.996s tokens=8
+huginn-3.5b-specbench-ar 11/480 decode=0.564s tokens=5
+huginn-3.5b-specbench-ar 12/480 decode=3.537s tokens=26
+huginn-3.5b-specbench-ar 13/480 decode=72.869s tokens=506
+huginn-3.5b-specbench-ar 14/480 decode=46.977s tokens=334
+huginn-3.5b-specbench-ar 15/480 decode=2.756s tokens=19
+huginn-3.5b-specbench-ar 16/480 decode=1.139s tokens=9
+huginn-3.5b-specbench-ar 17/480 decode=72.272s tokens=512
+huginn-3.5b-specbench-ar 18/480 decode=5.140s tokens=37
+huginn-3.5b-specbench-ar 19/480 decode=38.245s tokens=271
+huginn-3.5b-specbench-ar 20/480 decode=0.430s tokens=4
+huginn-3.5b-specbench-ar 21/480 decode=2.131s tokens=16
+huginn-3.5b-specbench-ar 22/480 decode=21.592s tokens=152
+huginn-3.5b-specbench-ar 23/480 decode=0.571s tokens=5
+huginn-3.5b-specbench-ar 24/480 decode=0.282s tokens=3
+huginn-3.5b-specbench-ar 25/480 decode=52.227s tokens=369
+huginn-3.5b-specbench-ar 26/480 decode=23.828s tokens=169
+huginn-3.5b-specbench-ar 27/480 decode=19.011s tokens=135
+huginn-3.5b-specbench-ar 28/480 decode=13.312s tokens=95
+huginn-3.5b-specbench-ar 29/480 decode=7.071s tokens=50
+huginn-3.5b-specbench-ar 30/480 decode=0.842s tokens=7
+huginn-3.5b-specbench-ar 31/480 decode=0.279s tokens=3
+huginn-3.5b-specbench-ar 32/480 decode=16.425s tokens=118
+huginn-3.5b-specbench-ar 33/480 decode=3.346s tokens=25
+huginn-3.5b-specbench-ar 34/480 decode=0.278s tokens=3
+huginn-3.5b-specbench-ar 35/480 decode=0.998s tokens=8
+huginn-3.5b-specbench-ar 36/480 decode=0.710s tokens=6
+huginn-3.5b-specbench-ar 37/480 decode=4.806s tokens=35
+huginn-3.5b-specbench-ar 38/480 decode=0.423s tokens=4
+huginn-3.5b-specbench-ar 39/480 decode=7.328s tokens=53
+huginn-3.5b-specbench-ar 40/480 decode=55.962s tokens=396
+huginn-3.5b-specbench-ar 41/480 decode=3.416s tokens=25
+huginn-3.5b-specbench-ar 42/480 decode=32.822s tokens=231
+huginn-3.5b-specbench-ar 43/480 decode=1.282s tokens=10
+huginn-3.5b-specbench-ar 44/480 decode=4.367s tokens=32
+huginn-3.5b-specbench-ar 45/480 decode=0.569s tokens=5
+huginn-3.5b-specbench-ar 46/480 decode=1.694s tokens=13
+huginn-3.5b-specbench-ar 47/480 decode=1.986s tokens=15
+huginn-3.5b-specbench-ar 48/480 decode=1.963s tokens=15
+huginn-3.5b-specbench-ar 49/480 decode=44.534s tokens=316
+huginn-3.5b-specbench-ar 50/480 decode=71.761s tokens=512
+huginn-3.5b-specbench-ar 51/480 decode=37.079s tokens=265
+huginn-3.5b-specbench-ar 52/480 decode=14.825s tokens=106
+huginn-3.5b-specbench-ar 53/480 decode=15.566s tokens=109
+huginn-3.5b-specbench-ar 54/480 decode=2.122s tokens=16
+huginn-3.5b-specbench-ar 55/480 decode=51.157s tokens=362
+huginn-3.5b-specbench-ar 56/480 decode=14.779s tokens=106
+huginn-3.5b-specbench-ar 57/480 decode=4.499s tokens=33
+huginn-3.5b-specbench-ar 58/480 decode=0.423s tokens=4
+huginn-3.5b-specbench-ar 59/480 decode=50.613s tokens=356
+huginn-3.5b-specbench-ar 60/480 decode=32.616s tokens=231
+huginn-3.5b-specbench-ar 61/480 decode=9.789s tokens=70
+huginn-3.5b-specbench-ar 62/480 decode=3.709s tokens=27
+huginn-3.5b-specbench-ar 63/480 decode=3.673s tokens=27
+huginn-3.5b-specbench-ar 64/480 decode=2.403s tokens=18
+huginn-3.5b-specbench-ar 65/480 decode=2.117s tokens=16
+huginn-3.5b-specbench-ar 66/480 decode=2.146s tokens=15
+huginn-3.5b-specbench-ar 67/480 decode=2.479s tokens=18
+huginn-3.5b-specbench-ar 68/480 decode=1.993s tokens=15
+huginn-3.5b-specbench-ar 69/480 decode=0.282s tokens=3
+huginn-3.5b-specbench-ar 70/480 decode=2.409s tokens=18
+huginn-3.5b-specbench-ar 71/480 decode=0.564s tokens=5
+huginn-3.5b-specbench-ar 72/480 decode=6.057s tokens=44
+huginn-3.5b-specbench-ar 73/480 decode=25.483s tokens=182
+huginn-3.5b-specbench-ar 74/480 decode=3.941s tokens=29
+huginn-3.5b-specbench-ar 75/480 decode=6.363s tokens=46
+huginn-3.5b-specbench-ar 76/480 decode=14.857s tokens=104
+huginn-3.5b-specbench-ar 77/480 decode=1.984s tokens=15
+huginn-3.5b-specbench-ar 78/480 decode=12.427s tokens=89
+huginn-3.5b-specbench-ar 79/480 decode=7.297s tokens=52
+huginn-3.5b-specbench-ar 80/480 decode=0.575s tokens=5
+huginn-3.5b-specbench-ar 81/480 decode=10.354s tokens=74
+huginn-3.5b-specbench-ar 82/480 decode=2.839s tokens=21
+huginn-3.5b-specbench-ar 83/480 decode=72.491s tokens=512
+huginn-3.5b-specbench-ar 84/480 decode=38.952s tokens=274
+huginn-3.5b-specbench-ar 85/480 decode=21.789s tokens=154
+huginn-3.5b-specbench-ar 86/480 decode=4.217s tokens=31
+huginn-3.5b-specbench-ar 87/480 decode=1.690s tokens=13
+huginn-3.5b-specbench-ar 88/480 decode=0.428s tokens=4
+huginn-3.5b-specbench-ar 89/480 decode=27.439s tokens=193
+huginn-3.5b-specbench-ar 90/480 decode=3.008s tokens=22
+huginn-3.5b-specbench-ar 91/480 decode=3.419s tokens=25
+huginn-3.5b-specbench-ar 92/480 decode=0.569s tokens=5
+huginn-3.5b-specbench-ar 93/480 decode=3.432s tokens=25
+huginn-3.5b-specbench-ar 94/480 decode=9.992s tokens=71
+huginn-3.5b-specbench-ar 95/480 decode=33.228s tokens=233
+huginn-3.5b-specbench-ar 96/480 decode=36.000s tokens=254
+huginn-3.5b-specbench-ar 97/480 decode=1.433s tokens=11
+huginn-3.5b-specbench-ar 98/480 decode=5.386s tokens=39
+huginn-3.5b-specbench-ar 99/480 decode=0.423s tokens=4
+huginn-3.5b-specbench-ar 100/480 decode=14.505s tokens=103
+huginn-3.5b-specbench-ar 101/480 decode=0.933s tokens=7
+huginn-3.5b-specbench-ar 102/480 decode=0.572s tokens=5
+huginn-3.5b-specbench-ar 103/480 decode=0.285s tokens=3
+huginn-3.5b-specbench-ar 104/480 decode=36.245s tokens=256
+huginn-3.5b-specbench-ar 105/480 decode=6.235s tokens=45
+huginn-3.5b-specbench-ar 106/480 decode=51.583s tokens=363
+huginn-3.5b-specbench-ar 107/480 decode=0.421s tokens=4
+huginn-3.5b-specbench-ar 108/480 decode=13.236s tokens=95
+huginn-3.5b-specbench-ar 109/480 decode=32.117s tokens=226
+huginn-3.5b-specbench-ar 110/480 decode=6.124s tokens=44
+huginn-3.5b-specbench-ar 111/480 decode=4.397s tokens=32
+huginn-3.5b-specbench-ar 112/480 decode=2.566s tokens=19
+huginn-3.5b-specbench-ar 113/480 decode=0.427s tokens=4
+huginn-3.5b-specbench-ar 114/480 decode=3.678s tokens=27
+huginn-3.5b-specbench-ar 115/480 decode=8.362s tokens=60
+huginn-3.5b-specbench-ar 116/480 decode=15.828s tokens=112
+huginn-3.5b-specbench-ar 117/480 decode=13.528s tokens=94
+huginn-3.5b-specbench-ar 118/480 decode=0.430s tokens=4
+huginn-3.5b-specbench-ar 119/480 decode=54.749s tokens=387
+huginn-3.5b-specbench-ar 120/480 decode=0.302s tokens=3
+huginn-3.5b-specbench-ar 121/480 decode=0.455s tokens=4
+huginn-3.5b-specbench-ar 122/480 decode=28.389s tokens=203
+huginn-3.5b-specbench-ar 123/480 decode=12.544s tokens=90
+huginn-3.5b-specbench-ar 124/480 decode=3.822s tokens=28
+huginn-3.5b-specbench-ar 125/480 decode=8.345s tokens=60
+huginn-3.5b-specbench-ar 126/480 decode=19.100s tokens=134
+huginn-3.5b-specbench-ar 127/480 decode=5.850s tokens=42
+huginn-3.5b-specbench-ar 128/480 decode=32.699s tokens=231
+huginn-3.5b-specbench-ar 129/480 decode=14.068s tokens=100
+huginn-3.5b-specbench-ar 130/480 decode=19.642s tokens=139
+huginn-3.5b-specbench-ar 131/480 decode=0.722s tokens=6
+huginn-3.5b-specbench-ar 132/480 decode=3.399s tokens=25
+huginn-3.5b-specbench-ar 133/480 decode=4.438s tokens=32
+huginn-3.5b-specbench-ar 134/480 decode=0.286s tokens=3
+huginn-3.5b-specbench-ar 135/480 decode=0.572s tokens=5
+huginn-3.5b-specbench-ar 136/480 decode=22.689s tokens=162
+huginn-3.5b-specbench-ar 137/480 decode=18.684s tokens=132
+huginn-3.5b-specbench-ar 138/480 decode=0.279s tokens=3
+huginn-3.5b-specbench-ar 139/480 decode=2.111s tokens=16
+huginn-3.5b-specbench-ar 140/480 decode=20.134s tokens=143
+huginn-3.5b-specbench-ar 141/480 decode=0.427s tokens=4
+huginn-3.5b-specbench-ar 142/480 decode=11.814s tokens=85
+huginn-3.5b-specbench-ar 143/480 decode=5.109s tokens=37
+huginn-3.5b-specbench-ar 144/480 decode=2.016s tokens=15

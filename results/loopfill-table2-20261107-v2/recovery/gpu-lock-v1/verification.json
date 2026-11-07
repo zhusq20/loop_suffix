@@ -1,0 +1,72 @@
+{
+  "verified_unix": 1793993164.4585228,
+  "requeued_count": 67,
+  "completed_results_unchanged": 5,
+  "protocol_unchanged": true,
+  "source_hashes_verified": 102,
+  "table2_counts": {
+    "running": 3,
+    "pending": 67,
+    "complete": 5
+  },
+  "latency_counts": {
+    "pending": 85,
+    "running": 5
+  },
+  "latency_completed_requests": 414,
+  "latency_controller_unchanged": true,
+  "locks": [
+    {
+      "gpu": 0,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 1,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 2,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 3,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 4,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 5,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 6,
+      "state": "held_by_running_suite"
+    },
+    {
+      "gpu": 7,
+      "state": "held_by_running_suite"
+    }
+  ],
+  "preserved_progress": [
+    {
+      "key": "huginn-3.5b-b1-ar",
+      "pid": 39175,
+      "before": 263,
+      "now": 263
+    },
+    {
+      "key": "ouro-2.6b-b1-ar",
+      "pid": 39211,
+      "before": 122,
+      "now": 122
+    },
+    {
+      "key": "huginn-3.5b-b1-budget-suffix",
+      "pid": 39178,
+      "before": 422,
+      "now": 432
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "key": "ouro-1.4b-b4-budget-suffix",
+  "model": "ouro-1.4b",
+  "batch": 4,
+  "arm": "budget-suffix",
+  "outcome": "pending",
+  "worker_log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/ouro-1.4b-b4-budget-suffix-full-worker.log",
+  "launch_failures": [
+    {
+      "outcome": "worker_failed",
+      "returncode": 1,
+      "log": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/logs/ouro-1.4b-b4-budget-suffix-full-worker.log",
+      "requeued_unix": 1793993108.0445616,
+      "reason": "GPU lock contention"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "key": "ouro-2.6b-budget-online",
+  "model": "ouro-2.6b",
+  "arm": "budget-online",
+  "batch": 2,
+  "outcome": "complete",
+  "attempt": 1,
+  "output": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/preflight/ouro-2.6b-budget-online/attempt1",
+  "gpu": 4,
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "cpus": "48-51",
+  "started_unix": 1793987924.280462,
+  "wandb_url": "https://wandb.ai/zsqzz/loopfill-specbench-table2/runs/fbc70c6552d6561f",
+  "pid": 38304,
+  "progress": {
+    "completed_requests": 8,
+    "output_tokens": 128,
+    "elapsed_s": 8.33286352455616
+  },
+  "returncode": 0,
+  "finished_unix": 1793987948.0985699,
+  "summary": {
+    "schedule": "continuous",
+    "concurrency": 2,
+    "max_active_requests": 2,
+    "requests": 8,
+    "output_tokens": 128,
+    "wall_s": 8.369188107550144,
+    "output_tput": 15.294195608356159,
+    "request_tput": 0.9558872255222599,
+    "prefill_policy": "chunked_interleaved",
+    "prefill_chunk_size": 128,
+    "prefill_chunks": 30,
+    "prefill_chunk_tokens": 3228,
+    "attention_policy": "packed_prefix_and_tree",
+    "latency_origin": "slot_admission",
+    "refilled_requests": 6,
+    "average_active_requests": 1.9008203380250748,
+    "slot_utilization": 0.9504101690125374,
+    "core_calls": 82,
+    "core_rows": 2063,
+    "max_core_rows": 34,
+    "attention_backend": "packed_prefix_and_tree",
+    "cuda_graph": false,
+    "cuda_graph_shapes": 0,
+    "cuda_graph_replays": 0,
+    "cuda_graph_eager_misses": 164,
+    "cuda_graph_capture_s": 0.0,
+    "attention_batches": 3936,
+    "pad_decode_rows": false,
+    "core_execution_rows": 2063,
+    "core_padding_rows": 0,
+    "verifier_graph_shapes": 0,
+    "padding_sink_bytes": 0,
+    "latency_s": {
+      "p50": 1.9429681450128555,
+      "p95": 3.264266019687056
+    },
+    "ttft_s": {
+      "p50": 0.21042457967996597,
+      "p95": 2.0845047764480107
+    },
+    "arm": "budget-online",
+    "config": {
+      "name": "budget-online",
+      "depth_total": 4,
+      "draft_depth": 1,
+      "readout_depths": [
+        1,
+        2
+      ],
+      "draft_node_budget": 16,
+      "scoring": "online_suffix_i",
+      "eta": 0.1,
+      "c_min": 0.25,
+      "c_max": 2.0,
+      "use_suffix": true,
+      "use_model": true,
+      "top_m": 2,
+      "suffix_room": 4,
+      "spec_factor": 1.0,
+      "suffix_min_prob": 0.001,
+      "trace_controller": false,
+      "tree_policy": "node_budget",
+      "child_suffix_policy": "all",
+      "positive_only": false,
+      "child_suffix_caps": [
+        4,
+        4
+      ],
+      "c_initial": 0.7,
+      "existing_child_probs": false
+    },
+    "order_seed": 0,
+    "repeat_id": 0,
+    "request_order": [
+      321,
+      161,
+      325,
+      241,
+      81,
+      317,
+      481,
+      401
+    ],
+    "max_nodes": 17,
+    "buffer_policy": "per-arm",
+    "slot_buffer_bytes": 4254666752,
+    "profiled": false,
+    "controller_profiled": false,
+    "tree_policy": "node_budget",
+    "scoring": "online_suffix_i",
+    "cap_skips": 0,
+    "publications": [
+      {
+        "request_id": 321,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 161,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 325,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 241,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 81,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 481,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 317,
+        "output_tokens": 16
+      },
+      {
+        "request_id": 401,
+        "output_tokens": 16
+      }
+    ],
+    "durable_results": true,
+    "result_persistence_s": 0.04458719491958618,
+    "peak_allocated_bytes": 13896282112,
+    "peak_reserved_bytes": 14313062400,
+    "input_tokens": 3228,
+    "total_tput": 400.994691106588
+  },
+  "tracking_finished": true
+}

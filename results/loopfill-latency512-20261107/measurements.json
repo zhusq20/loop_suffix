@@ -1,0 +1,704 @@
+[
+  {
+    "key": "huginn-3.5b-bbh-ar",
+    "model": "huginn-3.5b",
+    "dataset": "bbh",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 270,
+    "decode_s": 7751.694911524653,
+    "decode_tokens": 53819,
+    "decode_token_s": 6.94286870346069,
+    "gamma": 1.0,
+    "cap_stopped": 15,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "huginn-3.5b-bbh-budget-online",
+    "model": "huginn-3.5b",
+    "dataset": "bbh",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-bbh-budget-suffix",
+    "model": "huginn-3.5b",
+    "dataset": "bbh",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-bbh-loopspec-dual",
+    "model": "huginn-3.5b",
+    "dataset": "bbh",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-bbh-wavefront",
+    "model": "huginn-3.5b",
+    "dataset": "bbh",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-gsm8k-ar",
+    "model": "huginn-3.5b",
+    "dataset": "gsm8k",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 300,
+    "decode_s": 4461.007359459996,
+    "decode_tokens": 31332,
+    "decode_token_s": 7.023525736526184,
+    "gamma": 1.0,
+    "cap_stopped": 9,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "huginn-3.5b-gsm8k-budget-online",
+    "model": "huginn-3.5b",
+    "dataset": "gsm8k",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-gsm8k-budget-suffix",
+    "model": "huginn-3.5b",
+    "dataset": "gsm8k",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-gsm8k-loopspec-dual",
+    "model": "huginn-3.5b",
+    "dataset": "gsm8k",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-gsm8k-wavefront",
+    "model": "huginn-3.5b",
+    "dataset": "gsm8k",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-humanevalplus-ar",
+    "model": "huginn-3.5b",
+    "dataset": "humanevalplus",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 164,
+    "decode_s": 3486.1283281594515,
+    "decode_tokens": 24535,
+    "decode_token_s": 7.0378935284214235,
+    "gamma": 1.0,
+    "cap_stopped": 17,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "huginn-3.5b-humanevalplus-budget-online",
+    "model": "huginn-3.5b",
+    "dataset": "humanevalplus",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-humanevalplus-budget-suffix",
+    "model": "huginn-3.5b",
+    "dataset": "humanevalplus",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-humanevalplus-loopspec-dual",
+    "model": "huginn-3.5b",
+    "dataset": "humanevalplus",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-humanevalplus-wavefront",
+    "model": "huginn-3.5b",
+    "dataset": "humanevalplus",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-math500-ar",
+    "model": "huginn-3.5b",
+    "dataset": "math500",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 500,
+    "decode_s": 17151.362770482898,
+    "decode_tokens": 121934,
+    "decode_token_s": 7.1092893102258685,
+    "gamma": 1.0,
+    "cap_stopped": 125,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "huginn-3.5b-math500-budget-online",
+    "model": "huginn-3.5b",
+    "dataset": "math500",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-math500-budget-suffix",
+    "model": "huginn-3.5b",
+    "dataset": "math500",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-math500-loopspec-dual",
+    "model": "huginn-3.5b",
+    "dataset": "math500",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-math500-wavefront",
+    "model": "huginn-3.5b",
+    "dataset": "math500",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-mbppplus-ar",
+    "model": "huginn-3.5b",
+    "dataset": "mbppplus",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "huginn-3.5b-mbppplus-budget-online",
+    "model": "huginn-3.5b",
+    "dataset": "mbppplus",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-mbppplus-budget-suffix",
+    "model": "huginn-3.5b",
+    "dataset": "mbppplus",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-mbppplus-loopspec-dual",
+    "model": "huginn-3.5b",
+    "dataset": "mbppplus",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-mbppplus-wavefront",
+    "model": "huginn-3.5b",
+    "dataset": "mbppplus",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-specbench-ar",
+    "model": "huginn-3.5b",
+    "dataset": "specbench",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "huginn-3.5b-specbench-budget-online",
+    "model": "huginn-3.5b",
+    "dataset": "specbench",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-specbench-budget-suffix",
+    "model": "huginn-3.5b",
+    "dataset": "specbench",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-specbench-loopspec-dual",
+    "model": "huginn-3.5b",
+    "dataset": "specbench",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "huginn-3.5b-specbench-wavefront",
+    "model": "huginn-3.5b",
+    "dataset": "specbench",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-bbh-ar",
+    "model": "ouro-1.4b",
+    "dataset": "bbh",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 270,
+    "decode_s": 4319.850407533348,
+    "decode_tokens": 53758,
+    "decode_token_s": 12.444412405173086,
+    "gamma": 1.0,
+    "cap_stopped": 21,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "ouro-1.4b-bbh-budget-online",
+    "model": "ouro-1.4b",
+    "dataset": "bbh",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-bbh-budget-suffix",
+    "model": "ouro-1.4b",
+    "dataset": "bbh",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-bbh-loopspec-dual",
+    "model": "ouro-1.4b",
+    "dataset": "bbh",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-bbh-wavefront",
+    "model": "ouro-1.4b",
+    "dataset": "bbh",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-gsm8k-ar",
+    "model": "ouro-1.4b",
+    "dataset": "gsm8k",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 300,
+    "decode_s": 10494.738146156073,
+    "decode_tokens": 131771,
+    "decode_token_s": 12.555911178047259,
+    "gamma": 1.0,
+    "cap_stopped": 191,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "ouro-1.4b-gsm8k-budget-online",
+    "model": "ouro-1.4b",
+    "dataset": "gsm8k",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-gsm8k-budget-suffix",
+    "model": "ouro-1.4b",
+    "dataset": "gsm8k",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-gsm8k-loopspec-dual",
+    "model": "ouro-1.4b",
+    "dataset": "gsm8k",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-gsm8k-wavefront",
+    "model": "ouro-1.4b",
+    "dataset": "gsm8k",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-humanevalplus-ar",
+    "model": "ouro-1.4b",
+    "dataset": "humanevalplus",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 164,
+    "decode_s": 2813.646612741053,
+    "decode_tokens": 35170,
+    "decode_token_s": 12.49979291668665,
+    "gamma": 1.0,
+    "cap_stopped": 10,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "ouro-1.4b-humanevalplus-budget-online",
+    "model": "ouro-1.4b",
+    "dataset": "humanevalplus",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-humanevalplus-budget-suffix",
+    "model": "ouro-1.4b",
+    "dataset": "humanevalplus",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-humanevalplus-loopspec-dual",
+    "model": "ouro-1.4b",
+    "dataset": "humanevalplus",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-humanevalplus-wavefront",
+    "model": "ouro-1.4b",
+    "dataset": "humanevalplus",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-math500-ar",
+    "model": "ouro-1.4b",
+    "dataset": "math500",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "ouro-1.4b-math500-budget-online",
+    "model": "ouro-1.4b",
+    "dataset": "math500",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-math500-budget-suffix",
+    "model": "ouro-1.4b",
+    "dataset": "math500",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-math500-loopspec-dual",
+    "model": "ouro-1.4b",
+    "dataset": "math500",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-math500-wavefront",
+    "model": "ouro-1.4b",
+    "dataset": "math500",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-mbppplus-ar",
+    "model": "ouro-1.4b",
+    "dataset": "mbppplus",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "ouro-1.4b-mbppplus-budget-online",
+    "model": "ouro-1.4b",
+    "dataset": "mbppplus",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-mbppplus-budget-suffix",
+    "model": "ouro-1.4b",
+    "dataset": "mbppplus",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-mbppplus-loopspec-dual",
+    "model": "ouro-1.4b",
+    "dataset": "mbppplus",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-mbppplus-wavefront",
+    "model": "ouro-1.4b",
+    "dataset": "mbppplus",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-specbench-ar",
+    "model": "ouro-1.4b",
+    "dataset": "specbench",
+    "arm": "ar",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-specbench-budget-online",
+    "model": "ouro-1.4b",
+    "dataset": "specbench",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-specbench-budget-suffix",
+    "model": "ouro-1.4b",
+    "dataset": "specbench",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-specbench-loopspec-dual",
+    "model": "ouro-1.4b",
+    "dataset": "specbench",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-1.4b-specbench-wavefront",
+    "model": "ouro-1.4b",
+    "dataset": "specbench",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-bbh-ar",
+    "model": "ouro-2.6b",
+    "dataset": "bbh",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "ouro-2.6b-bbh-budget-online",
+    "model": "ouro-2.6b",
+    "dataset": "bbh",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-bbh-budget-suffix",
+    "model": "ouro-2.6b",
+    "dataset": "bbh",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-bbh-loopspec-dual",
+    "model": "ouro-2.6b",
+    "dataset": "bbh",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-bbh-wavefront",
+    "model": "ouro-2.6b",
+    "dataset": "bbh",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-gsm8k-ar",
+    "model": "ouro-2.6b",
+    "dataset": "gsm8k",
+    "arm": "ar",
+    "outcome": "complete",
+    "completed_requests": 300,
+    "decode_s": 7457.714185275137,
+    "decode_tokens": 47681,
+    "decode_token_s": 6.393513993086999,
+    "gamma": 1.0,
+    "cap_stopped": 10,
+    "latency_speedup": 1.0,
+    "decode_rate_speedup": 1.0,
+    "output_token_ratio": 1.0
+  },
+  {
+    "key": "ouro-2.6b-gsm8k-budget-online",
+    "model": "ouro-2.6b",
+    "dataset": "gsm8k",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-gsm8k-budget-suffix",
+    "model": "ouro-2.6b",
+    "dataset": "gsm8k",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-gsm8k-loopspec-dual",
+    "model": "ouro-2.6b",
+    "dataset": "gsm8k",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-gsm8k-wavefront",
+    "model": "ouro-2.6b",
+    "dataset": "gsm8k",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-humanevalplus-ar",
+    "model": "ouro-2.6b",
+    "dataset": "humanevalplus",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "ouro-2.6b-humanevalplus-budget-online",
+    "model": "ouro-2.6b",
+    "dataset": "humanevalplus",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-humanevalplus-budget-suffix",
+    "model": "ouro-2.6b",
+    "dataset": "humanevalplus",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-humanevalplus-loopspec-dual",
+    "model": "ouro-2.6b",
+    "dataset": "humanevalplus",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-humanevalplus-wavefront",
+    "model": "ouro-2.6b",
+    "dataset": "humanevalplus",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-math500-ar",
+    "model": "ouro-2.6b",
+    "dataset": "math500",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "ouro-2.6b-math500-budget-online",
+    "model": "ouro-2.6b",
+    "dataset": "math500",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-math500-budget-suffix",
+    "model": "ouro-2.6b",
+    "dataset": "math500",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-math500-loopspec-dual",
+    "model": "ouro-2.6b",
+    "dataset": "math500",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-math500-wavefront",
+    "model": "ouro-2.6b",
+    "dataset": "math500",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-mbppplus-ar",
+    "model": "ouro-2.6b",
+    "dataset": "mbppplus",
+    "arm": "ar",
+    "outcome": "running"
+  },
+  {
+    "key": "ouro-2.6b-mbppplus-budget-online",
+    "model": "ouro-2.6b",
+    "dataset": "mbppplus",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-mbppplus-budget-suffix",
+    "model": "ouro-2.6b",
+    "dataset": "mbppplus",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-mbppplus-loopspec-dual",
+    "model": "ouro-2.6b",
+    "dataset": "mbppplus",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-mbppplus-wavefront",
+    "model": "ouro-2.6b",
+    "dataset": "mbppplus",
+    "arm": "wavefront",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-specbench-ar",
+    "model": "ouro-2.6b",
+    "dataset": "specbench",
+    "arm": "ar",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-specbench-budget-online",
+    "model": "ouro-2.6b",
+    "dataset": "specbench",
+    "arm": "budget-online",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-specbench-budget-suffix",
+    "model": "ouro-2.6b",
+    "dataset": "specbench",
+    "arm": "budget-suffix",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-specbench-loopspec-dual",
+    "model": "ouro-2.6b",
+    "dataset": "specbench",
+    "arm": "loopspec-dual",
+    "outcome": "pending"
+  },
+  {
+    "key": "ouro-2.6b-specbench-wavefront",
+    "model": "ouro-2.6b",
+    "dataset": "specbench",
+    "arm": "wavefront",
+    "outcome": "pending"
+  }
+]

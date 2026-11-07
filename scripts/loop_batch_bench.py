@@ -72,6 +72,8 @@ def parser():
                    help="budget model arms: score existing children outside top-k with their full-vocabulary softmax probability")
     p.add_argument("--progress-every", type=int, default=0,
                    help="write progress after this many completed requests; zero disables")
+    p.add_argument("--durable-results", action="store_true",
+                   help="append and fsync each completed request; persistence overhead is included in timing")
     p.add_argument("--trace-controller", action="store_true",
                    help="diagnostic coefficient traces and CPU metadata estimates; timed separately")
     p.add_argument("--arms", default="ar,wavefront,prob-low,prob-load")
@@ -571,8 +573,20 @@ def main():
                 if device.type == "cuda":
                     torch.cuda.reset_peak_memory_stats(device)
                 key = f"{arm}-b{B}-seed{seed}"
+                journal = None
+                journal_seconds = 0.0
+                if args.durable_results:
+                    journal = (out / f"{key}-completed.jsonl").open("x")
                 def progress(completed, elapsed):
-                    if len(completed) % args.progress_every and len(completed) != len(ordered):
+                    nonlocal journal_seconds
+                    if journal is not None:
+                        begin = time.perf_counter()
+                        row = dict(completed[-1], **req_meta[completed[-1]["request_id"]])
+                        journal.write(json.dumps(row) + "\n")
+                        journal.flush()
+                        os.fsync(journal.fileno())
+                        journal_seconds += time.perf_counter() - begin
+                    if not args.progress_every or (len(completed) % args.progress_every and len(completed) != len(ordered)):
                         return
                     record = dict(completed_requests=len(completed), total_requests=len(ordered),
                                   completed_output_tokens=sum(r['n_tokens'] for r in completed),
@@ -593,7 +607,7 @@ def main():
                     records, summary = batch_decode(
                         ordered, slots, config, calibration, cache, max_nodes=physical_nodes,
                         schedule=args.schedule, executor=engine, prefill_chunk_size=args.prefill_chunk_size,
-                        progress_callback=progress if args.progress_every > 0 else None,
+                        progress_callback=progress if args.progress_every > 0 or args.durable_results else None,
                     )
                 except Exception as exc:
                     (out / f"{key}-failure.json").write_text(
@@ -601,6 +615,8 @@ def main():
                     )
                     raise
                 finally:
+                    if journal is not None:
+                        journal.close()
                     if prof is not None:
                         prof.stop()
                         prof.export_chrome_trace(str(out / f"{key}-trace.json"))
@@ -633,6 +649,8 @@ def main():
                     scoring=config.scoring if isinstance(config, BudgetConfig) else args.scoring,
                     cap_skips=sum(r["stats"].get("cap_skips", 0) for r in records),
                     publications=cache.publications if cache else [],
+                    durable_results=args.durable_results,
+                    result_persistence_s=journal_seconds,
                 )
                 if reference:
                     summary["same_as_serial_ar"] = sum(r["same_as_serial_ar"] for r in records)
