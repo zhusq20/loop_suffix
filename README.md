@@ -1,5 +1,7 @@
 # LoopFill (loop_suffix)
 
+**四组消融已完成（2026-11-09）**：Huginn-3.5B与Ouro-2.6B，B16完成节点预算、浅层读出、suffix接续预算、权重控制四组，以吞吐为主；B1补充N=8/16/32/64，以单请求decode latency为主。36/36个单元完成，复用4个表2母配置，新增32组完整480题实验；greedy、最多1024 token、表2冻结推理版本。后续控制器诊断/调参/配对评测计划已按用户要求取消，不纳入本轮结果。见[执行记录](docs/loopfill-paper-experiments.md)、[协议](results/loopfill-four-ablation-20261109/protocol.json)、[完成状态](results/loopfill-four-ablation-20261109/status.json)、[指标CSV](results/loopfill-four-ablation-20261109/measurements.csv)。
+
 **Preliminary 命中率实验（2026-11-09）已完成**：Ouro-2.6B、480题、80,933个有效位置。loop 1/2/3 单层一致率为88.83%/95.63%/98.20%，累计覆盖率为88.83%/96.72%/98.95%。Suffix → +Shallow → +Requery 平均连续正确草稿长度为1.343 → 1.732 → 2.276；续查配对增量+0.544 token（95% CI [0.502, 0.587]），不代表实测速度收益。见[计划与结果](docs/loopfill-preliminary-plan.md)、[汇总](results/loopfill-preliminary-20261109-v2/full/summary.json)、[图（单层与额外命中率）](paper/figures/loopfill-preliminary-v2/preliminary-hit-rates.pdf)。
 
 **temperature=1 完整表1实验已完成（2026-11-09归档）**：三个模型×六个数据集×五种方法，90/90组、31,380/31,380次请求；B=1、最多512 token。LoopFill-online在六数据集上的延迟加速比几何均值：Huginn-3.5B 2.37×、Ouro-1.4B 3.22×、Ouro-2.6B 3.49×。原greedy结果保留。见[协议与验证](docs/loopfill-latency512-t1.md)、[结果表](results/loopfill-latency512-t1-20261108/table1.md)、[候选命中率](results/loopfill-latency512-t1-20261108/candidate-hit-rates.md)、[汇总CSV](results/loopfill-latency512-t1-20261108/measurements.csv)。
