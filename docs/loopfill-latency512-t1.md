@@ -2,6 +2,8 @@
 
 本轮是独立的随机采样实验，不覆盖temperature=0结果。状态与汇总入口：
 
+- **已完成：90/90单元，31,380/31,380次正式请求；2026-11-09复核归档。**
+- [延迟加速比与γ表](../results/loopfill-latency512-t1-20261108/table1.md)、[候选覆盖率表](../results/loopfill-latency512-t1-20261108/candidate-hit-rates.md)、[LaTeX](../paper/tables/table1-latency512-t1.tex)
 - [状态](../results/loopfill-latency512-t1-20261108/status.json)
 - [完整指标CSV](../results/loopfill-latency512-t1-20261108/measurements.csv)
 - [协议](../results/loopfill-latency512-t1-20261108/protocol.json)
@@ -48,3 +50,11 @@ CPU回归118 passed、36 skipped；另外采样CPU/GPU及队列检查29 passed�
 恢复前必须核查现有控制器和工作进程，不重复启动。冻结副本不可在运行期间修改。只汇总可将`run`换成`summarize`。原temperature=0全量结果继续保存在`results/loopfill-latency512-20261107/`。
 
 启动核验：15/15真实模型/方法短验证完成（每组2题×最多16token），八卡已进入正式单元。Huginn和Ouro-1.4B部分短输出与同seed AR不同，Ouro-2.6B本次短验证全部一致；逐组结果见`checks/real-checkpoint-smoke.json`。这些差异尚未逐项归因，不作为分布保持的实证证明。
+
+## 完成与归档复核（2026-11-09）
+
+90单元全部完成，31,380条正式请求保存在 `runs/*/requests.jsonl`。所有90单元的W&B上传状态为complete；没有另行执行云端下载哈希核验。源码、六组输入、逐题题序及prompt哈希、90份逐题journal的完成哈希均通过核对。从逐题记录重算decode时间、token数、γ、候选命中率等指标，与单元summary及总表一致，证据见[归档验证](../results/loopfill-latency512-t1-20261108/checks/archive-validation.json)。读取JSONL时按实际LF换行拆分，保留生成文本内部的Unicode分隔字符。
+
+LoopFill-online相对同模型AR的延迟加速比，在六数据集上等权取几何均值为Huginn-3.5B **2.37×**、Ouro-1.4B **3.22×**、Ouro-2.6B **3.49×**。这是单次计时、单sampling seed的结果，不提供跨seed置信区间或任务质量结论。
+
+用 `python scripts/loop_temperature_table.py` 从冻结CSV重新生成Markdown和LaTeX表，不启动推理。归档保留协议、输入、冻结源码、逐题输出、汇总、短验证、日志与环境遥测；W&B运行缓存、Python缓存与空锁文件不纳入Git。各文件SHA256列在本批 `archive-manifest.json` 中。历史PID和绝对路径描述原运行环境，不表示克隆后存在相应进程或依赖。

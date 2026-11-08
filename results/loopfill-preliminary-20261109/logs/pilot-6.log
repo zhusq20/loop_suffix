@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 451, in <module>
+    main()
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 443, in main
+    worker(args)
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 196, in worker
+    output, predictions = runner.generate_with_readouts(ids, protocol['max_new_tokens'], stop)
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_suffix_spec_readouts.py", line 102, in generate_with_readouts
+    out, hs, _ = self.model.model(
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/tmp/loopfill-venv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1083, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/root/.cache/huggingface/modules/transformers_modules/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py", line 549, in forward
+    past_key_values = UniversalTransformerCache(max_cache_size)
+  File "/root/.cache/huggingface/modules/transformers_modules/1ed04250da1a9936042725d302e81c8fa2ab5abd/modeling_ouro.py", line 134, in __init__
+    self.key_cache: list[Optional[torch.Tensor]] = []
+AttributeError: can't set attribute 'key_cache'

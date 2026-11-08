@@ -1,0 +1,319 @@
+Loading huginn-3.5b ar bbh
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.44s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.41s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.00s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.15s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run e85db1383fde
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-bbh-ar/wandb/run-20261108_013101-e85db1383fde
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-bbh-ar
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/e85db1383fde
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-bbh-ar 1/270 decode=43.096s tokens=304
+huginn-3.5b-bbh-ar 2/270 decode=31.207s tokens=219
+huginn-3.5b-bbh-ar 3/270 decode=22.515s tokens=160
+huginn-3.5b-bbh-ar 4/270 decode=43.790s tokens=309
+huginn-3.5b-bbh-ar 5/270 decode=29.614s tokens=210
+huginn-3.5b-bbh-ar 6/270 decode=38.484s tokens=272
+huginn-3.5b-bbh-ar 7/270 decode=72.275s tokens=512
+huginn-3.5b-bbh-ar 8/270 decode=15.188s tokens=108
+huginn-3.5b-bbh-ar 9/270 decode=72.504s tokens=512
+huginn-3.5b-bbh-ar 10/270 decode=25.624s tokens=182
+huginn-3.5b-bbh-ar 11/270 decode=59.626s tokens=421
+huginn-3.5b-bbh-ar 12/270 decode=29.452s tokens=208
+huginn-3.5b-bbh-ar 13/270 decode=3.966s tokens=29
+huginn-3.5b-bbh-ar 14/270 decode=31.122s tokens=219
+huginn-3.5b-bbh-ar 15/270 decode=39.777s tokens=280
+huginn-3.5b-bbh-ar 16/270 decode=16.145s tokens=115
+huginn-3.5b-bbh-ar 17/270 decode=31.952s tokens=226
+huginn-3.5b-bbh-ar 18/270 decode=24.271s tokens=171
+huginn-3.5b-bbh-ar 19/270 decode=25.328s tokens=179
+huginn-3.5b-bbh-ar 20/270 decode=21.666s tokens=154
+huginn-3.5b-bbh-ar 21/270 decode=43.146s tokens=304
+huginn-3.5b-bbh-ar 22/270 decode=33.440s tokens=234
+huginn-3.5b-bbh-ar 23/270 decode=37.346s tokens=263
+huginn-3.5b-bbh-ar 24/270 decode=29.444s tokens=208
+huginn-3.5b-bbh-ar 25/270 decode=72.887s tokens=512
+huginn-3.5b-bbh-ar 26/270 decode=8.703s tokens=63
+huginn-3.5b-bbh-ar 27/270 decode=27.153s tokens=194
+huginn-3.5b-bbh-ar 28/270 decode=11.734s tokens=83
+huginn-3.5b-bbh-ar 29/270 decode=31.250s tokens=223
+huginn-3.5b-bbh-ar 30/270 decode=32.868s tokens=231
+huginn-3.5b-bbh-ar 31/270 decode=12.645s tokens=91
+huginn-3.5b-bbh-ar 32/270 decode=36.179s tokens=256
+huginn-3.5b-bbh-ar 33/270 decode=25.110s tokens=176
+huginn-3.5b-bbh-ar 34/270 decode=30.981s tokens=217
+huginn-3.5b-bbh-ar 35/270 decode=14.357s tokens=101
+huginn-3.5b-bbh-ar 36/270 decode=31.255s tokens=219
+huginn-3.5b-bbh-ar 37/270 decode=12.820s tokens=91
+huginn-3.5b-bbh-ar 38/270 decode=3.374s tokens=25
+huginn-3.5b-bbh-ar 39/270 decode=12.864s tokens=91
+huginn-3.5b-bbh-ar 40/270 decode=19.250s tokens=136
+huginn-3.5b-bbh-ar 41/270 decode=24.674s tokens=175
+huginn-3.5b-bbh-ar 42/270 decode=23.888s tokens=169
+huginn-3.5b-bbh-ar 43/270 decode=16.718s tokens=118
+huginn-3.5b-bbh-ar 44/270 decode=17.621s tokens=126
+huginn-3.5b-bbh-ar 45/270 decode=36.229s tokens=258
+huginn-3.5b-bbh-ar 46/270 decode=28.568s tokens=204
+huginn-3.5b-bbh-ar 47/270 decode=17.885s tokens=128
+huginn-3.5b-bbh-ar 48/270 decode=18.145s tokens=128
+huginn-3.5b-bbh-ar 49/270 decode=35.457s tokens=253
+huginn-3.5b-bbh-ar 50/270 decode=18.880s tokens=134
+huginn-3.5b-bbh-ar 51/270 decode=12.325s tokens=87
+huginn-3.5b-bbh-ar 52/270 decode=7.075s tokens=51
+huginn-3.5b-bbh-ar 53/270 decode=15.479s tokens=111
+huginn-3.5b-bbh-ar 54/270 decode=49.874s tokens=354
+huginn-3.5b-bbh-ar 55/270 decode=34.903s tokens=246
+huginn-3.5b-bbh-ar 56/270 decode=33.320s tokens=236
+huginn-3.5b-bbh-ar 57/270 decode=19.000s tokens=135
+huginn-3.5b-bbh-ar 58/270 decode=15.340s tokens=109
+huginn-3.5b-bbh-ar 59/270 decode=19.734s tokens=140
+huginn-3.5b-bbh-ar 60/270 decode=25.625s tokens=182
+huginn-3.5b-bbh-ar 61/270 decode=5.544s tokens=40
+huginn-3.5b-bbh-ar 62/270 decode=19.175s tokens=137
+huginn-3.5b-bbh-ar 63/270 decode=42.617s tokens=303
+huginn-3.5b-bbh-ar 64/270 decode=72.251s tokens=512
+huginn-3.5b-bbh-ar 65/270 decode=19.173s tokens=135
+huginn-3.5b-bbh-ar 66/270 decode=24.606s tokens=174
+huginn-3.5b-bbh-ar 67/270 decode=11.807s tokens=84
+huginn-3.5b-bbh-ar 68/270 decode=27.958s tokens=198
+huginn-3.5b-bbh-ar 69/270 decode=17.034s tokens=119
+huginn-3.5b-bbh-ar 70/270 decode=11.790s tokens=83
+huginn-3.5b-bbh-ar 71/270 decode=24.005s tokens=170
+huginn-3.5b-bbh-ar 72/270 decode=21.434s tokens=152
+huginn-3.5b-bbh-ar 73/270 decode=47.974s tokens=339
+huginn-3.5b-bbh-ar 74/270 decode=19.687s tokens=139
+huginn-3.5b-bbh-ar 75/270 decode=32.363s tokens=231
+huginn-3.5b-bbh-ar 76/270 decode=72.571s tokens=512
+huginn-3.5b-bbh-ar 77/270 decode=30.280s tokens=212
+huginn-3.5b-bbh-ar 78/270 decode=17.185s tokens=123
+huginn-3.5b-bbh-ar 79/270 decode=7.755s tokens=56
+huginn-3.5b-bbh-ar 80/270 decode=18.622s tokens=133
+huginn-3.5b-bbh-ar 81/270 decode=43.901s tokens=308
+huginn-3.5b-bbh-ar 82/270 decode=68.285s tokens=480
+huginn-3.5b-bbh-ar 83/270 decode=38.474s tokens=272
+huginn-3.5b-bbh-ar 84/270 decode=7.666s tokens=55
+huginn-3.5b-bbh-ar 85/270 decode=35.717s tokens=252
+huginn-3.5b-bbh-ar 86/270 decode=40.851s tokens=288
+huginn-3.5b-bbh-ar 87/270 decode=15.987s tokens=113
+huginn-3.5b-bbh-ar 88/270 decode=15.253s tokens=108
+huginn-3.5b-bbh-ar 89/270 decode=37.646s tokens=265
+huginn-3.5b-bbh-ar 90/270 decode=7.539s tokens=54
+huginn-3.5b-bbh-ar 91/270 decode=16.116s tokens=113
+huginn-3.5b-bbh-ar 92/270 decode=56.919s tokens=398
+huginn-3.5b-bbh-ar 93/270 decode=18.277s tokens=129
+huginn-3.5b-bbh-ar 94/270 decode=29.444s tokens=207
+huginn-3.5b-bbh-ar 95/270 decode=24.912s tokens=174
+huginn-3.5b-bbh-ar 96/270 decode=13.562s tokens=96
+huginn-3.5b-bbh-ar 97/270 decode=46.475s tokens=327
+huginn-3.5b-bbh-ar 98/270 decode=21.617s tokens=153
+huginn-3.5b-bbh-ar 99/270 decode=19.853s tokens=141
+huginn-3.5b-bbh-ar 100/270 decode=20.217s tokens=140
+huginn-3.5b-bbh-ar 101/270 decode=12.351s tokens=88
+huginn-3.5b-bbh-ar 102/270 decode=37.596s tokens=265
+huginn-3.5b-bbh-ar 103/270 decode=32.413s tokens=227
+huginn-3.5b-bbh-ar 104/270 decode=30.812s tokens=217
+huginn-3.5b-bbh-ar 105/270 decode=3.141s tokens=23
+huginn-3.5b-bbh-ar 106/270 decode=33.042s tokens=233
+huginn-3.5b-bbh-ar 107/270 decode=17.093s tokens=122
+huginn-3.5b-bbh-ar 108/270 decode=14.288s tokens=102
+huginn-3.5b-bbh-ar 109/270 decode=30.333s tokens=214
+huginn-3.5b-bbh-ar 110/270 decode=12.795s tokens=91
+huginn-3.5b-bbh-ar 111/270 decode=68.092s tokens=478
+huginn-3.5b-bbh-ar 112/270 decode=12.702s tokens=90
+huginn-3.5b-bbh-ar 113/270 decode=13.531s tokens=94
+huginn-3.5b-bbh-ar 114/270 decode=25.331s tokens=179
+huginn-3.5b-bbh-ar 115/270 decode=27.076s tokens=191
+huginn-3.5b-bbh-ar 116/270 decode=5.134s tokens=36
+huginn-3.5b-bbh-ar 117/270 decode=4.684s tokens=33
+huginn-3.5b-bbh-ar 118/270 decode=7.251s tokens=52
+huginn-3.5b-bbh-ar 119/270 decode=20.683s tokens=147
+huginn-3.5b-bbh-ar 120/270 decode=16.953s tokens=119
+huginn-3.5b-bbh-ar 121/270 decode=20.098s tokens=140
+huginn-3.5b-bbh-ar 122/270 decode=16.892s tokens=120
+huginn-3.5b-bbh-ar 123/270 decode=14.376s tokens=102
+huginn-3.5b-bbh-ar 124/270 decode=21.362s tokens=151
+huginn-3.5b-bbh-ar 125/270 decode=15.965s tokens=112
+huginn-3.5b-bbh-ar 126/270 decode=34.575s tokens=244
+huginn-3.5b-bbh-ar 127/270 decode=15.889s tokens=111
+huginn-3.5b-bbh-ar 128/270 decode=74.131s tokens=512
+huginn-3.5b-bbh-ar 129/270 decode=47.910s tokens=335
+huginn-3.5b-bbh-ar 130/270 decode=17.874s tokens=125
+huginn-3.5b-bbh-ar 131/270 decode=18.911s tokens=133
+huginn-3.5b-bbh-ar 132/270 decode=19.374s tokens=137
+huginn-3.5b-bbh-ar 133/270 decode=68.773s tokens=482
+huginn-3.5b-bbh-ar 134/270 decode=6.440s tokens=46
+huginn-3.5b-bbh-ar 135/270 decode=3.432s tokens=25
+huginn-3.5b-bbh-ar 136/270 decode=53.575s tokens=377
+huginn-3.5b-bbh-ar 137/270 decode=29.466s tokens=205
+huginn-3.5b-bbh-ar 138/270 decode=54.251s tokens=379
+huginn-3.5b-bbh-ar 139/270 decode=36.369s tokens=256
+huginn-3.5b-bbh-ar 140/270 decode=17.501s tokens=123
+huginn-3.5b-bbh-ar 141/270 decode=73.220s tokens=512
+huginn-3.5b-bbh-ar 142/270 decode=15.664s tokens=111
+huginn-3.5b-bbh-ar 143/270 decode=18.487s tokens=131
+huginn-3.5b-bbh-ar 144/270 decode=15.800s tokens=112
+huginn-3.5b-bbh-ar 145/270 decode=19.010s tokens=133
+huginn-3.5b-bbh-ar 146/270 decode=14.512s tokens=104
+huginn-3.5b-bbh-ar 147/270 decode=11.399s tokens=82
+huginn-3.5b-bbh-ar 148/270 decode=72.599s tokens=512
+huginn-3.5b-bbh-ar 149/270 decode=26.713s tokens=187
+huginn-3.5b-bbh-ar 150/270 decode=44.536s tokens=313
+huginn-3.5b-bbh-ar 151/270 decode=9.843s tokens=68
+huginn-3.5b-bbh-ar 152/270 decode=16.344s tokens=116
+huginn-3.5b-bbh-ar 153/270 decode=32.653s tokens=232
+huginn-3.5b-bbh-ar 154/270 decode=32.038s tokens=225
+huginn-3.5b-bbh-ar 155/270 decode=18.611s tokens=133
+huginn-3.5b-bbh-ar 156/270 decode=13.778s tokens=99
+huginn-3.5b-bbh-ar 157/270 decode=21.074s tokens=149
+huginn-3.5b-bbh-ar 158/270 decode=17.221s tokens=123
+huginn-3.5b-bbh-ar 159/270 decode=24.719s tokens=175
+huginn-3.5b-bbh-ar 160/270 decode=17.990s tokens=126
+huginn-3.5b-bbh-ar 161/270 decode=6.855s tokens=49
+huginn-3.5b-bbh-ar 162/270 decode=17.661s tokens=125
+huginn-3.5b-bbh-ar 163/270 decode=26.991s tokens=190
+huginn-3.5b-bbh-ar 164/270 decode=73.321s tokens=512
+huginn-3.5b-bbh-ar 165/270 decode=4.159s tokens=30
+huginn-3.5b-bbh-ar 166/270 decode=50.178s tokens=353
+huginn-3.5b-bbh-ar 167/270 decode=40.347s tokens=285
+huginn-3.5b-bbh-ar 168/270 decode=4.100s tokens=30
+huginn-3.5b-bbh-ar 169/270 decode=10.333s tokens=74
+huginn-3.5b-bbh-ar 170/270 decode=24.890s tokens=175
+huginn-3.5b-bbh-ar 171/270 decode=17.212s tokens=123
+huginn-3.5b-bbh-ar 172/270 decode=17.740s tokens=127
+huginn-3.5b-bbh-ar 173/270 decode=3.787s tokens=28
+huginn-3.5b-bbh-ar 174/270 decode=9.445s tokens=67
+huginn-3.5b-bbh-ar 175/270 decode=60.728s tokens=428
+huginn-3.5b-bbh-ar 176/270 decode=10.256s tokens=71
+huginn-3.5b-bbh-ar 177/270 decode=24.524s tokens=173
+huginn-3.5b-bbh-ar 178/270 decode=29.492s tokens=208
+huginn-3.5b-bbh-ar 179/270 decode=22.573s tokens=158
+huginn-3.5b-bbh-ar 180/270 decode=28.303s tokens=200
+huginn-3.5b-bbh-ar 181/270 decode=27.410s tokens=192
+huginn-3.5b-bbh-ar 182/270 decode=51.368s tokens=361
+huginn-3.5b-bbh-ar 183/270 decode=18.311s tokens=128
+huginn-3.5b-bbh-ar 184/270 decode=17.741s tokens=125
+huginn-3.5b-bbh-ar 185/270 decode=37.799s tokens=264
+huginn-3.5b-bbh-ar 186/270 decode=52.747s tokens=369
+huginn-3.5b-bbh-ar 187/270 decode=27.550s tokens=193
+huginn-3.5b-bbh-ar 188/270 decode=7.500s tokens=53
+huginn-3.5b-bbh-ar 189/270 decode=20.366s tokens=144
+huginn-3.5b-bbh-ar 190/270 decode=30.687s tokens=215
+huginn-3.5b-bbh-ar 191/270 decode=30.523s tokens=215
+huginn-3.5b-bbh-ar 192/270 decode=36.481s tokens=255
+huginn-3.5b-bbh-ar 193/270 decode=41.046s tokens=288
+huginn-3.5b-bbh-ar 194/270 decode=8.374s tokens=60
+huginn-3.5b-bbh-ar 195/270 decode=21.216s tokens=150
+huginn-3.5b-bbh-ar 196/270 decode=3.673s tokens=27
+huginn-3.5b-bbh-ar 197/270 decode=44.943s tokens=316
+huginn-3.5b-bbh-ar 198/270 decode=42.854s tokens=301
+huginn-3.5b-bbh-ar 199/270 decode=16.473s tokens=114
+huginn-3.5b-bbh-ar 200/270 decode=49.434s tokens=350
+huginn-3.5b-bbh-ar 201/270 decode=17.193s tokens=121
+huginn-3.5b-bbh-ar 202/270 decode=17.700s tokens=126
+huginn-3.5b-bbh-ar 203/270 decode=18.787s tokens=132
+huginn-3.5b-bbh-ar 204/270 decode=31.813s tokens=222
+huginn-3.5b-bbh-ar 205/270 decode=36.037s tokens=255
+huginn-3.5b-bbh-ar 206/270 decode=28.649s tokens=202
+huginn-3.5b-bbh-ar 207/270 decode=39.419s tokens=276
+huginn-3.5b-bbh-ar 208/270 decode=41.033s tokens=288
+huginn-3.5b-bbh-ar 209/270 decode=24.042s tokens=170
+huginn-3.5b-bbh-ar 210/270 decode=20.548s tokens=144
+huginn-3.5b-bbh-ar 211/270 decode=18.226s tokens=129
+huginn-3.5b-bbh-ar 212/270 decode=18.458s tokens=131
+huginn-3.5b-bbh-ar 213/270 decode=42.312s tokens=297
+huginn-3.5b-bbh-ar 214/270 decode=72.993s tokens=512
+huginn-3.5b-bbh-ar 215/270 decode=21.659s tokens=153
+huginn-3.5b-bbh-ar 216/270 decode=19.761s tokens=141
+huginn-3.5b-bbh-ar 217/270 decode=14.724s tokens=103
+huginn-3.5b-bbh-ar 218/270 decode=20.238s tokens=144
+huginn-3.5b-bbh-ar 219/270 decode=44.850s tokens=317
+huginn-3.5b-bbh-ar 220/270 decode=32.072s tokens=226
+huginn-3.5b-bbh-ar 221/270 decode=72.973s tokens=512
+huginn-3.5b-bbh-ar 222/270 decode=9.952s tokens=71
+huginn-3.5b-bbh-ar 223/270 decode=44.362s tokens=310
+huginn-3.5b-bbh-ar 224/270 decode=19.850s tokens=140
+huginn-3.5b-bbh-ar 225/270 decode=36.617s tokens=257
+huginn-3.5b-bbh-ar 226/270 decode=25.829s tokens=182
+huginn-3.5b-bbh-ar 227/270 decode=26.809s tokens=189
+huginn-3.5b-bbh-ar 228/270 decode=17.017s tokens=120
+huginn-3.5b-bbh-ar 229/270 decode=33.206s tokens=234
+huginn-3.5b-bbh-ar 230/270 decode=37.541s tokens=262
+huginn-3.5b-bbh-ar 231/270 decode=39.593s tokens=280
+huginn-3.5b-bbh-ar 232/270 decode=35.650s tokens=252
+huginn-3.5b-bbh-ar 233/270 decode=23.610s tokens=168
+huginn-3.5b-bbh-ar 234/270 decode=58.897s tokens=413
+huginn-3.5b-bbh-ar 235/270 decode=12.985s tokens=91
+huginn-3.5b-bbh-ar 236/270 decode=49.035s tokens=342
+huginn-3.5b-bbh-ar 237/270 decode=22.663s tokens=158
+huginn-3.5b-bbh-ar 238/270 decode=12.125s tokens=86
+huginn-3.5b-bbh-ar 239/270 decode=9.997s tokens=71
+huginn-3.5b-bbh-ar 240/270 decode=34.260s tokens=243
+huginn-3.5b-bbh-ar 241/270 decode=9.233s tokens=66
+huginn-3.5b-bbh-ar 242/270 decode=36.880s tokens=260
+huginn-3.5b-bbh-ar 243/270 decode=44.234s tokens=310
+huginn-3.5b-bbh-ar 244/270 decode=51.267s tokens=359
+huginn-3.5b-bbh-ar 245/270 decode=10.163s tokens=72
+huginn-3.5b-bbh-ar 246/270 decode=73.255s tokens=512
+huginn-3.5b-bbh-ar 247/270 decode=40.693s tokens=284
+huginn-3.5b-bbh-ar 248/270 decode=45.740s tokens=325
+huginn-3.5b-bbh-ar 249/270 decode=19.019s tokens=134
+huginn-3.5b-bbh-ar 250/270 decode=41.452s tokens=294
+huginn-3.5b-bbh-ar 251/270 decode=25.380s tokens=178
+huginn-3.5b-bbh-ar 252/270 decode=33.558s tokens=235
+huginn-3.5b-bbh-ar 253/270 decode=15.064s tokens=106
+huginn-3.5b-bbh-ar 254/270 decode=2.929s tokens=21
+huginn-3.5b-bbh-ar 255/270 decode=29.666s tokens=208
+huginn-3.5b-bbh-ar 256/270 decode=16.464s tokens=116
+huginn-3.5b-bbh-ar 257/270 decode=29.991s tokens=211
+huginn-3.5b-bbh-ar 258/270 decode=72.419s tokens=512
+huginn-3.5b-bbh-ar 259/270 decode=33.650s tokens=239
+huginn-3.5b-bbh-ar 260/270 decode=8.897s tokens=64
+huginn-3.5b-bbh-ar 261/270 decode=39.869s tokens=283
+huginn-3.5b-bbh-ar 262/270 decode=73.240s tokens=512
+huginn-3.5b-bbh-ar 263/270 decode=45.188s tokens=315
+huginn-3.5b-bbh-ar 264/270 decode=18.037s tokens=128
+huginn-3.5b-bbh-ar 265/270 decode=25.203s tokens=179
+huginn-3.5b-bbh-ar 266/270 decode=3.578s tokens=25
+huginn-3.5b-bbh-ar 267/270 decode=38.630s tokens=271
+huginn-3.5b-bbh-ar 268/270 decode=20.231s tokens=142
+huginn-3.5b-bbh-ar 269/270 decode=11.076s tokens=78
+huginn-3.5b-bbh-ar 270/270 decode=19.625s tokens=138
+wandb: uploading requests.jsonl; updating run metadata
+wandb: uploading requests.jsonl
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading wandb-summary.json; uploading config.yaml
+wandb: uploading wandb-summary.json; uploading config.yaml; uploading history steps 268-269, summary, console lines 271-271
+wandb: 
+wandb: Run history:
+wandb:          aggregate/cap_stopped ▁▁▂▂▂▂▂▂▂▂▃▃▃▃▃▃▃▃▃▄▅▅▅▅▅▅▅▅▅▅▆▆▆▆▇▇▇▇██
+wandb:   aggregate/completed_requests ▁▂▂▂▂▂▂▂▂▂▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▇▇▇▇▇▇▇▇█████
+wandb:             aggregate/decode_s ▁▁▁▂▂▂▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▆▆▆▆▇▇▇████
+wandb:       aggregate/decode_token_s ███▇▆▆▅▅▅▆▆▇▇▇▆▅▄▃▃▃▂▃▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:        aggregate/decode_tokens ▁▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▇▇████
+wandb:           aggregate/draft_hits ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                aggregate/gamma ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           aggregate/loop_steps ▁▁▁▁▂▂▂▂▂▃▃▃▄▄▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇█████
+wandb: aggregate/mean_acceptance_rate ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        aggregate/mean_decode_s ██▇▄▄▄▃▂▂▂▂▃▂▃▂▂▂▂▂▁▁▁▂▂▂▁▁▁▁▁▁▂▂▂▂▂▂▂▂▂
+wandb:                             +6 ...
+wandb: 
+wandb: Run summary:
+wandb:          aggregate/cap_stopped 13
+wandb:   aggregate/completed_requests 270
+wandb:             aggregate/decode_s 7533.87899
+wandb:       aggregate/decode_token_s 7.01352
+wandb:        aggregate/decode_tokens 52839
+wandb:           aggregate/draft_hits 0
+wandb:                aggregate/gamma 1
+wandb:           aggregate/loop_steps 1690848
+wandb: aggregate/mean_acceptance_rate 0
+wandb:        aggregate/mean_decode_s 27.90326
+wandb:                            +35 ...
+wandb: 
+wandb: 🚀 View run huginn-3.5b-bbh-ar at: https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/e85db1383fde
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-bbh-ar/wandb/run-20261108_013101-e85db1383fde/logs

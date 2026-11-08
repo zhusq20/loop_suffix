@@ -1,0 +1,126 @@
+{
+  "verified_unix": 1794072654.830783,
+  "cells": [
+    {
+      "model": "huginn-3.5b",
+      "arm": "ar",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 1.0
+    },
+    {
+      "model": "huginn-3.5b",
+      "arm": "wavefront",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 2.7906976744186047
+    },
+    {
+      "model": "huginn-3.5b",
+      "arm": "loopspec-dual",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 2.526315789473684
+    },
+    {
+      "model": "huginn-3.5b",
+      "arm": "budget-suffix",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 1.1538461538461537
+    },
+    {
+      "model": "huginn-3.5b",
+      "arm": "budget-online",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 2.526315789473684
+    },
+    {
+      "model": "ouro-1.4b",
+      "arm": "ar",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 1.0
+    },
+    {
+      "model": "ouro-1.4b",
+      "arm": "wavefront",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 2.2222222222222223
+    },
+    {
+      "model": "ouro-1.4b",
+      "arm": "loopspec-dual",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 2.3076923076923075
+    },
+    {
+      "model": "ouro-1.4b",
+      "arm": "budget-suffix",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 1.1111111111111112
+    },
+    {
+      "model": "ouro-1.4b",
+      "arm": "budget-online",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 1,
+      "gamma": 2.926829268292683
+    },
+    {
+      "model": "ouro-2.6b",
+      "arm": "ar",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 1.0
+    },
+    {
+      "model": "ouro-2.6b",
+      "arm": "wavefront",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 2.5
+    },
+    {
+      "model": "ouro-2.6b",
+      "arm": "loopspec-dual",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 2.727272727272727
+    },
+    {
+      "model": "ouro-2.6b",
+      "arm": "budget-suffix",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 2.0
+    },
+    {
+      "model": "ouro-2.6b",
+      "arm": "budget-online",
+      "requests": 2,
+      "max_new_tokens": 16,
+      "matched_ar_requests": 2,
+      "gamma": 4.8
+    }
+  ],
+  "note": "Exact token agreement is diagnostic; BF16 numerical differences are permitted and not a proof of distribution equivalence."
+}

@@ -1,0 +1,427 @@
+Loading huginn-3.5b loopspec-dual mbppplus
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.35s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.32s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.40s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.15s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run a362918b1705
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-mbppplus-loopspec-dual/wandb/run-20261108_120319-a362918b1705
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-mbppplus-loopspec-dual
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/a362918b1705
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-mbppplus-loopspec-dual 1/378 decode=4.537s tokens=51
+huginn-3.5b-mbppplus-loopspec-dual 2/378 decode=8.692s tokens=165
+huginn-3.5b-mbppplus-loopspec-dual 3/378 decode=33.847s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 4/378 decode=22.404s tokens=344
+huginn-3.5b-mbppplus-loopspec-dual 5/378 decode=5.796s tokens=64
+huginn-3.5b-mbppplus-loopspec-dual 6/378 decode=1.304s tokens=25
+huginn-3.5b-mbppplus-loopspec-dual 7/378 decode=21.515s tokens=325
+huginn-3.5b-mbppplus-loopspec-dual 8/378 decode=2.996s tokens=50
+huginn-3.5b-mbppplus-loopspec-dual 9/378 decode=7.562s tokens=119
+huginn-3.5b-mbppplus-loopspec-dual 10/378 decode=2.607s tokens=41
+huginn-3.5b-mbppplus-loopspec-dual 11/378 decode=25.806s tokens=487
+huginn-3.5b-mbppplus-loopspec-dual 12/378 decode=32.242s tokens=324
+huginn-3.5b-mbppplus-loopspec-dual 13/378 decode=1.577s tokens=34
+huginn-3.5b-mbppplus-loopspec-dual 14/378 decode=7.152s tokens=155
+huginn-3.5b-mbppplus-loopspec-dual 15/378 decode=2.959s tokens=52
+huginn-3.5b-mbppplus-loopspec-dual 16/378 decode=20.483s tokens=309
+huginn-3.5b-mbppplus-loopspec-dual 17/378 decode=30.633s tokens=290
+huginn-3.5b-mbppplus-loopspec-dual 18/378 decode=15.345s tokens=352
+huginn-3.5b-mbppplus-loopspec-dual 19/378 decode=51.269s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 20/378 decode=3.557s tokens=66
+huginn-3.5b-mbppplus-loopspec-dual 21/378 decode=26.511s tokens=442
+huginn-3.5b-mbppplus-loopspec-dual 22/378 decode=2.434s tokens=38
+huginn-3.5b-mbppplus-loopspec-dual 23/378 decode=1.285s tokens=26
+huginn-3.5b-mbppplus-loopspec-dual 24/378 decode=4.753s tokens=80
+huginn-3.5b-mbppplus-loopspec-dual 25/378 decode=5.744s tokens=110
+huginn-3.5b-mbppplus-loopspec-dual 26/378 decode=7.756s tokens=123
+huginn-3.5b-mbppplus-loopspec-dual 27/378 decode=4.409s tokens=90
+huginn-3.5b-mbppplus-loopspec-dual 28/378 decode=5.735s tokens=136
+huginn-3.5b-mbppplus-loopspec-dual 29/378 decode=2.982s tokens=63
+huginn-3.5b-mbppplus-loopspec-dual 30/378 decode=34.235s tokens=411
+huginn-3.5b-mbppplus-loopspec-dual 31/378 decode=23.284s tokens=403
+huginn-3.5b-mbppplus-loopspec-dual 32/378 decode=39.655s tokens=504
+huginn-3.5b-mbppplus-loopspec-dual 33/378 decode=25.987s tokens=310
+huginn-3.5b-mbppplus-loopspec-dual 34/378 decode=21.667s tokens=300
+huginn-3.5b-mbppplus-loopspec-dual 35/378 decode=1.236s tokens=26
+huginn-3.5b-mbppplus-loopspec-dual 36/378 decode=14.617s tokens=273
+huginn-3.5b-mbppplus-loopspec-dual 37/378 decode=6.885s tokens=128
+huginn-3.5b-mbppplus-loopspec-dual 38/378 decode=40.510s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 39/378 decode=7.229s tokens=104
+huginn-3.5b-mbppplus-loopspec-dual 40/378 decode=5.646s tokens=90
+huginn-3.5b-mbppplus-loopspec-dual 41/378 decode=28.375s tokens=482
+huginn-3.5b-mbppplus-loopspec-dual 42/378 decode=4.487s tokens=78
+huginn-3.5b-mbppplus-loopspec-dual 43/378 decode=17.269s tokens=203
+huginn-3.5b-mbppplus-loopspec-dual 44/378 decode=39.243s tokens=468
+huginn-3.5b-mbppplus-loopspec-dual 45/378 decode=1.454s tokens=32
+huginn-3.5b-mbppplus-loopspec-dual 46/378 decode=8.009s tokens=157
+huginn-3.5b-mbppplus-loopspec-dual 47/378 decode=10.439s tokens=138
+huginn-3.5b-mbppplus-loopspec-dual 48/378 decode=2.023s tokens=33
+huginn-3.5b-mbppplus-loopspec-dual 49/378 decode=9.110s tokens=173
+huginn-3.5b-mbppplus-loopspec-dual 50/378 decode=49.648s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 51/378 decode=14.241s tokens=254
+huginn-3.5b-mbppplus-loopspec-dual 52/378 decode=1.407s tokens=16
+huginn-3.5b-mbppplus-loopspec-dual 53/378 decode=10.287s tokens=169
+huginn-3.5b-mbppplus-loopspec-dual 54/378 decode=2.415s tokens=48
+huginn-3.5b-mbppplus-loopspec-dual 55/378 decode=37.286s tokens=469
+huginn-3.5b-mbppplus-loopspec-dual 56/378 decode=0.991s tokens=17
+huginn-3.5b-mbppplus-loopspec-dual 57/378 decode=3.496s tokens=62
+huginn-3.5b-mbppplus-loopspec-dual 58/378 decode=6.696s tokens=113
+huginn-3.5b-mbppplus-loopspec-dual 59/378 decode=8.712s tokens=150
+huginn-3.5b-mbppplus-loopspec-dual 60/378 decode=46.381s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 61/378 decode=3.902s tokens=87
+huginn-3.5b-mbppplus-loopspec-dual 62/378 decode=4.413s tokens=94
+huginn-3.5b-mbppplus-loopspec-dual 63/378 decode=29.812s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 64/378 decode=8.671s tokens=172
+huginn-3.5b-mbppplus-loopspec-dual 65/378 decode=2.461s tokens=49
+huginn-3.5b-mbppplus-loopspec-dual 66/378 decode=12.178s tokens=220
+huginn-3.5b-mbppplus-loopspec-dual 67/378 decode=4.698s tokens=80
+huginn-3.5b-mbppplus-loopspec-dual 68/378 decode=5.590s tokens=161
+huginn-3.5b-mbppplus-loopspec-dual 69/378 decode=5.557s tokens=129
+huginn-3.5b-mbppplus-loopspec-dual 70/378 decode=17.742s tokens=306
+huginn-3.5b-mbppplus-loopspec-dual 71/378 decode=25.389s tokens=283
+huginn-3.5b-mbppplus-loopspec-dual 72/378 decode=17.059s tokens=264
+huginn-3.5b-mbppplus-loopspec-dual 73/378 decode=1.073s tokens=25
+huginn-3.5b-mbppplus-loopspec-dual 74/378 decode=26.997s tokens=504
+huginn-3.5b-mbppplus-loopspec-dual 75/378 decode=3.698s tokens=86
+huginn-3.5b-mbppplus-loopspec-dual 76/378 decode=1.070s tokens=22
+huginn-3.5b-mbppplus-loopspec-dual 77/378 decode=3.375s tokens=35
+huginn-3.5b-mbppplus-loopspec-dual 78/378 decode=10.289s tokens=199
+huginn-3.5b-mbppplus-loopspec-dual 79/378 decode=7.605s tokens=144
+huginn-3.5b-mbppplus-loopspec-dual 80/378 decode=6.886s tokens=146
+huginn-3.5b-mbppplus-loopspec-dual 81/378 decode=29.093s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 82/378 decode=1.946s tokens=33
+huginn-3.5b-mbppplus-loopspec-dual 83/378 decode=36.365s tokens=440
+huginn-3.5b-mbppplus-loopspec-dual 84/378 decode=14.706s tokens=240
+huginn-3.5b-mbppplus-loopspec-dual 85/378 decode=16.530s tokens=221
+huginn-3.5b-mbppplus-loopspec-dual 86/378 decode=6.984s tokens=122
+huginn-3.5b-mbppplus-loopspec-dual 87/378 decode=3.296s tokens=72
+huginn-3.5b-mbppplus-loopspec-dual 88/378 decode=3.348s tokens=59
+huginn-3.5b-mbppplus-loopspec-dual 89/378 decode=18.875s tokens=340
+huginn-3.5b-mbppplus-loopspec-dual 90/378 decode=27.729s tokens=484
+huginn-3.5b-mbppplus-loopspec-dual 91/378 decode=2.632s tokens=64
+huginn-3.5b-mbppplus-loopspec-dual 92/378 decode=18.595s tokens=227
+huginn-3.5b-mbppplus-loopspec-dual 93/378 decode=4.380s tokens=64
+huginn-3.5b-mbppplus-loopspec-dual 94/378 decode=40.096s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 95/378 decode=35.144s tokens=459
+huginn-3.5b-mbppplus-loopspec-dual 96/378 decode=0.954s tokens=17
+huginn-3.5b-mbppplus-loopspec-dual 97/378 decode=5.272s tokens=73
+huginn-3.5b-mbppplus-loopspec-dual 98/378 decode=8.518s tokens=144
+huginn-3.5b-mbppplus-loopspec-dual 99/378 decode=2.759s tokens=73
+huginn-3.5b-mbppplus-loopspec-dual 100/378 decode=12.919s tokens=195
+huginn-3.5b-mbppplus-loopspec-dual 101/378 decode=31.520s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 102/378 decode=3.574s tokens=70
+huginn-3.5b-mbppplus-loopspec-dual 103/378 decode=34.973s tokens=436
+huginn-3.5b-mbppplus-loopspec-dual 104/378 decode=3.154s tokens=55
+huginn-3.5b-mbppplus-loopspec-dual 105/378 decode=16.166s tokens=361
+huginn-3.5b-mbppplus-loopspec-dual 106/378 decode=1.503s tokens=29
+huginn-3.5b-mbppplus-loopspec-dual 107/378 decode=20.085s tokens=275
+huginn-3.5b-mbppplus-loopspec-dual 108/378 decode=12.077s tokens=200
+huginn-3.5b-mbppplus-loopspec-dual 109/378 decode=15.111s tokens=307
+huginn-3.5b-mbppplus-loopspec-dual 110/378 decode=7.834s tokens=86
+huginn-3.5b-mbppplus-loopspec-dual 111/378 decode=8.789s tokens=165
+huginn-3.5b-mbppplus-loopspec-dual 112/378 decode=22.971s tokens=296
+huginn-3.5b-mbppplus-loopspec-dual 113/378 decode=38.015s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 114/378 decode=23.753s tokens=367
+huginn-3.5b-mbppplus-loopspec-dual 115/378 decode=4.697s tokens=80
+huginn-3.5b-mbppplus-loopspec-dual 116/378 decode=1.282s tokens=23
+huginn-3.5b-mbppplus-loopspec-dual 117/378 decode=3.009s tokens=68
+huginn-3.5b-mbppplus-loopspec-dual 118/378 decode=2.984s tokens=69
+huginn-3.5b-mbppplus-loopspec-dual 119/378 decode=37.247s tokens=422
+huginn-3.5b-mbppplus-loopspec-dual 120/378 decode=5.093s tokens=110
+huginn-3.5b-mbppplus-loopspec-dual 121/378 decode=3.309s tokens=73
+huginn-3.5b-mbppplus-loopspec-dual 122/378 decode=32.641s tokens=442
+huginn-3.5b-mbppplus-loopspec-dual 123/378 decode=5.874s tokens=156
+huginn-3.5b-mbppplus-loopspec-dual 124/378 decode=8.169s tokens=173
+huginn-3.5b-mbppplus-loopspec-dual 125/378 decode=1.422s tokens=29
+huginn-3.5b-mbppplus-loopspec-dual 126/378 decode=4.844s tokens=71
+huginn-3.5b-mbppplus-loopspec-dual 127/378 decode=1.482s tokens=46
+huginn-3.5b-mbppplus-loopspec-dual 128/378 decode=27.144s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 129/378 decode=1.635s tokens=42
+huginn-3.5b-mbppplus-loopspec-dual 130/378 decode=1.385s tokens=29
+huginn-3.5b-mbppplus-loopspec-dual 131/378 decode=3.163s tokens=75
+huginn-3.5b-mbppplus-loopspec-dual 132/378 decode=21.457s tokens=333
+huginn-3.5b-mbppplus-loopspec-dual 133/378 decode=12.971s tokens=196
+huginn-3.5b-mbppplus-loopspec-dual 134/378 decode=2.180s tokens=57
+huginn-3.5b-mbppplus-loopspec-dual 135/378 decode=11.314s tokens=223
+huginn-3.5b-mbppplus-loopspec-dual 136/378 decode=6.066s tokens=90
+huginn-3.5b-mbppplus-loopspec-dual 137/378 decode=3.027s tokens=64
+huginn-3.5b-mbppplus-loopspec-dual 138/378 decode=13.183s tokens=227
+huginn-3.5b-mbppplus-loopspec-dual 139/378 decode=1.327s tokens=21
+huginn-3.5b-mbppplus-loopspec-dual 140/378 decode=39.107s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 141/378 decode=30.079s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 142/378 decode=44.041s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 143/378 decode=19.327s tokens=321
+huginn-3.5b-mbppplus-loopspec-dual 144/378 decode=42.660s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 145/378 decode=14.286s tokens=237
+huginn-3.5b-mbppplus-loopspec-dual 146/378 decode=13.802s tokens=224
+huginn-3.5b-mbppplus-loopspec-dual 147/378 decode=17.729s tokens=262
+huginn-3.5b-mbppplus-loopspec-dual 148/378 decode=3.884s tokens=48
+huginn-3.5b-mbppplus-loopspec-dual 149/378 decode=0.981s tokens=20
+huginn-3.5b-mbppplus-loopspec-dual 150/378 decode=2.279s tokens=43
+huginn-3.5b-mbppplus-loopspec-dual 151/378 decode=31.649s tokens=505
+huginn-3.5b-mbppplus-loopspec-dual 152/378 decode=4.272s tokens=70
+huginn-3.5b-mbppplus-loopspec-dual 153/378 decode=7.143s tokens=112
+huginn-3.5b-mbppplus-loopspec-dual 154/378 decode=50.990s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 155/378 decode=3.428s tokens=75
+huginn-3.5b-mbppplus-loopspec-dual 156/378 decode=20.671s tokens=439
+huginn-3.5b-mbppplus-loopspec-dual 157/378 decode=3.634s tokens=66
+huginn-3.5b-mbppplus-loopspec-dual 158/378 decode=23.552s tokens=500
+huginn-3.5b-mbppplus-loopspec-dual 159/378 decode=1.892s tokens=26
+huginn-3.5b-mbppplus-loopspec-dual 160/378 decode=14.632s tokens=197
+huginn-3.5b-mbppplus-loopspec-dual 161/378 decode=1.888s tokens=28
+huginn-3.5b-mbppplus-loopspec-dual 162/378 decode=1.123s tokens=19
+huginn-3.5b-mbppplus-loopspec-dual 163/378 decode=4.203s tokens=61
+huginn-3.5b-mbppplus-loopspec-dual 164/378 decode=28.914s tokens=361
+huginn-3.5b-mbppplus-loopspec-dual 165/378 decode=1.660s tokens=42
+huginn-3.5b-mbppplus-loopspec-dual 166/378 decode=26.660s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 167/378 decode=32.111s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 168/378 decode=46.453s tokens=482
+huginn-3.5b-mbppplus-loopspec-dual 169/378 decode=6.425s tokens=101
+huginn-3.5b-mbppplus-loopspec-dual 170/378 decode=1.530s tokens=26
+huginn-3.5b-mbppplus-loopspec-dual 171/378 decode=5.510s tokens=93
+huginn-3.5b-mbppplus-loopspec-dual 172/378 decode=2.195s tokens=39
+huginn-3.5b-mbppplus-loopspec-dual 173/378 decode=1.461s tokens=32
+huginn-3.5b-mbppplus-loopspec-dual 174/378 decode=8.320s tokens=178
+huginn-3.5b-mbppplus-loopspec-dual 175/378 decode=1.194s tokens=21
+huginn-3.5b-mbppplus-loopspec-dual 176/378 decode=2.580s tokens=52
+huginn-3.5b-mbppplus-loopspec-dual 177/378 decode=17.871s tokens=208
+huginn-3.5b-mbppplus-loopspec-dual 178/378 decode=1.540s tokens=21
+huginn-3.5b-mbppplus-loopspec-dual 179/378 decode=32.329s tokens=441
+huginn-3.5b-mbppplus-loopspec-dual 180/378 decode=35.850s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 181/378 decode=15.074s tokens=220
+huginn-3.5b-mbppplus-loopspec-dual 182/378 decode=1.547s tokens=28
+huginn-3.5b-mbppplus-loopspec-dual 183/378 decode=13.778s tokens=181
+huginn-3.5b-mbppplus-loopspec-dual 184/378 decode=2.671s tokens=55
+huginn-3.5b-mbppplus-loopspec-dual 185/378 decode=16.237s tokens=284
+huginn-3.5b-mbppplus-loopspec-dual 186/378 decode=5.730s tokens=109
+huginn-3.5b-mbppplus-loopspec-dual 187/378 decode=4.246s tokens=73
+huginn-3.5b-mbppplus-loopspec-dual 188/378 decode=6.626s tokens=106
+huginn-3.5b-mbppplus-loopspec-dual 189/378 decode=1.656s tokens=25
+huginn-3.5b-mbppplus-loopspec-dual 190/378 decode=1.316s tokens=32
+huginn-3.5b-mbppplus-loopspec-dual 191/378 decode=8.636s tokens=150
+huginn-3.5b-mbppplus-loopspec-dual 192/378 decode=6.005s tokens=123
+huginn-3.5b-mbppplus-loopspec-dual 193/378 decode=35.049s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 194/378 decode=2.163s tokens=39
+huginn-3.5b-mbppplus-loopspec-dual 195/378 decode=9.899s tokens=181
+huginn-3.5b-mbppplus-loopspec-dual 196/378 decode=16.794s tokens=243
+huginn-3.5b-mbppplus-loopspec-dual 197/378 decode=20.686s tokens=296
+huginn-3.5b-mbppplus-loopspec-dual 198/378 decode=29.921s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 199/378 decode=4.646s tokens=90
+huginn-3.5b-mbppplus-loopspec-dual 200/378 decode=27.137s tokens=416
+huginn-3.5b-mbppplus-loopspec-dual 201/378 decode=0.841s tokens=18
+huginn-3.5b-mbppplus-loopspec-dual 202/378 decode=29.576s tokens=453
+huginn-3.5b-mbppplus-loopspec-dual 203/378 decode=2.287s tokens=34
+huginn-3.5b-mbppplus-loopspec-dual 204/378 decode=0.995s tokens=18
+huginn-3.5b-mbppplus-loopspec-dual 205/378 decode=22.919s tokens=349
+huginn-3.5b-mbppplus-loopspec-dual 206/378 decode=6.618s tokens=80
+huginn-3.5b-mbppplus-loopspec-dual 207/378 decode=17.999s tokens=215
+huginn-3.5b-mbppplus-loopspec-dual 208/378 decode=5.859s tokens=127
+huginn-3.5b-mbppplus-loopspec-dual 209/378 decode=26.282s tokens=293
+huginn-3.5b-mbppplus-loopspec-dual 210/378 decode=19.843s tokens=335
+huginn-3.5b-mbppplus-loopspec-dual 211/378 decode=1.614s tokens=24
+huginn-3.5b-mbppplus-loopspec-dual 212/378 decode=24.542s tokens=313
+huginn-3.5b-mbppplus-loopspec-dual 213/378 decode=2.457s tokens=31
+huginn-3.5b-mbppplus-loopspec-dual 214/378 decode=15.581s tokens=242
+huginn-3.5b-mbppplus-loopspec-dual 215/378 decode=3.170s tokens=63
+huginn-3.5b-mbppplus-loopspec-dual 216/378 decode=21.062s tokens=324
+huginn-3.5b-mbppplus-loopspec-dual 217/378 decode=5.934s tokens=126
+huginn-3.5b-mbppplus-loopspec-dual 218/378 decode=1.509s tokens=33
+huginn-3.5b-mbppplus-loopspec-dual 219/378 decode=2.571s tokens=53
+huginn-3.5b-mbppplus-loopspec-dual 220/378 decode=24.920s tokens=347
+huginn-3.5b-mbppplus-loopspec-dual 221/378 decode=13.618s tokens=246
+huginn-3.5b-mbppplus-loopspec-dual 222/378 decode=2.262s tokens=51
+huginn-3.5b-mbppplus-loopspec-dual 223/378 decode=9.961s tokens=193
+huginn-3.5b-mbppplus-loopspec-dual 224/378 decode=5.931s tokens=118
+huginn-3.5b-mbppplus-loopspec-dual 225/378 decode=0.515s tokens=15
+huginn-3.5b-mbppplus-loopspec-dual 226/378 decode=16.230s tokens=261
+huginn-3.5b-mbppplus-loopspec-dual 227/378 decode=1.987s tokens=31
+huginn-3.5b-mbppplus-loopspec-dual 228/378 decode=22.395s tokens=279
+huginn-3.5b-mbppplus-loopspec-dual 229/378 decode=39.649s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 230/378 decode=18.865s tokens=334
+huginn-3.5b-mbppplus-loopspec-dual 231/378 decode=0.844s tokens=19
+huginn-3.5b-mbppplus-loopspec-dual 232/378 decode=9.002s tokens=202
+huginn-3.5b-mbppplus-loopspec-dual 233/378 decode=3.022s tokens=70
+huginn-3.5b-mbppplus-loopspec-dual 234/378 decode=5.672s tokens=93
+huginn-3.5b-mbppplus-loopspec-dual 235/378 decode=2.158s tokens=37
+huginn-3.5b-mbppplus-loopspec-dual 236/378 decode=2.897s tokens=70
+huginn-3.5b-mbppplus-loopspec-dual 237/378 decode=15.740s tokens=277
+huginn-3.5b-mbppplus-loopspec-dual 238/378 decode=3.655s tokens=68
+huginn-3.5b-mbppplus-loopspec-dual 239/378 decode=10.190s tokens=124
+huginn-3.5b-mbppplus-loopspec-dual 240/378 decode=1.027s tokens=25
+huginn-3.5b-mbppplus-loopspec-dual 241/378 decode=5.471s tokens=101
+huginn-3.5b-mbppplus-loopspec-dual 242/378 decode=17.750s tokens=238
+huginn-3.5b-mbppplus-loopspec-dual 243/378 decode=1.924s tokens=45
+huginn-3.5b-mbppplus-loopspec-dual 244/378 decode=18.318s tokens=353
+huginn-3.5b-mbppplus-loopspec-dual 245/378 decode=4.395s tokens=105
+huginn-3.5b-mbppplus-loopspec-dual 246/378 decode=1.218s tokens=27
+huginn-3.5b-mbppplus-loopspec-dual 247/378 decode=5.405s tokens=154
+huginn-3.5b-mbppplus-loopspec-dual 248/378 decode=19.816s tokens=346
+huginn-3.5b-mbppplus-loopspec-dual 249/378 decode=16.444s tokens=225
+huginn-3.5b-mbppplus-loopspec-dual 250/378 decode=2.678s tokens=19
+huginn-3.5b-mbppplus-loopspec-dual 251/378 decode=7.526s tokens=129
+huginn-3.5b-mbppplus-loopspec-dual 252/378 decode=4.262s tokens=97
+huginn-3.5b-mbppplus-loopspec-dual 253/378 decode=0.476s tokens=13
+huginn-3.5b-mbppplus-loopspec-dual 254/378 decode=19.100s tokens=307
+huginn-3.5b-mbppplus-loopspec-dual 255/378 decode=2.787s tokens=44
+huginn-3.5b-mbppplus-loopspec-dual 256/378 decode=20.716s tokens=430
+huginn-3.5b-mbppplus-loopspec-dual 257/378 decode=21.113s tokens=344
+huginn-3.5b-mbppplus-loopspec-dual 258/378 decode=2.588s tokens=42
+huginn-3.5b-mbppplus-loopspec-dual 259/378 decode=39.794s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 260/378 decode=3.902s tokens=56
+huginn-3.5b-mbppplus-loopspec-dual 261/378 decode=13.581s tokens=223
+huginn-3.5b-mbppplus-loopspec-dual 262/378 decode=6.879s tokens=135
+huginn-3.5b-mbppplus-loopspec-dual 263/378 decode=4.229s tokens=67
+huginn-3.5b-mbppplus-loopspec-dual 264/378 decode=35.961s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 265/378 decode=3.104s tokens=73
+huginn-3.5b-mbppplus-loopspec-dual 266/378 decode=1.805s tokens=41
+huginn-3.5b-mbppplus-loopspec-dual 267/378 decode=20.774s tokens=343
+huginn-3.5b-mbppplus-loopspec-dual 268/378 decode=12.190s tokens=226
+huginn-3.5b-mbppplus-loopspec-dual 269/378 decode=2.396s tokens=54
+huginn-3.5b-mbppplus-loopspec-dual 270/378 decode=7.458s tokens=96
+huginn-3.5b-mbppplus-loopspec-dual 271/378 decode=20.735s tokens=409
+huginn-3.5b-mbppplus-loopspec-dual 272/378 decode=46.820s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 273/378 decode=8.226s tokens=146
+huginn-3.5b-mbppplus-loopspec-dual 274/378 decode=19.768s tokens=283
+huginn-3.5b-mbppplus-loopspec-dual 275/378 decode=5.663s tokens=124
+huginn-3.5b-mbppplus-loopspec-dual 276/378 decode=1.389s tokens=25
+huginn-3.5b-mbppplus-loopspec-dual 277/378 decode=2.385s tokens=50
+huginn-3.5b-mbppplus-loopspec-dual 278/378 decode=24.785s tokens=282
+huginn-3.5b-mbppplus-loopspec-dual 279/378 decode=3.743s tokens=84
+huginn-3.5b-mbppplus-loopspec-dual 280/378 decode=27.002s tokens=461
+huginn-3.5b-mbppplus-loopspec-dual 281/378 decode=6.526s tokens=102
+huginn-3.5b-mbppplus-loopspec-dual 282/378 decode=5.157s tokens=71
+huginn-3.5b-mbppplus-loopspec-dual 283/378 decode=3.708s tokens=86
+huginn-3.5b-mbppplus-loopspec-dual 284/378 decode=23.623s tokens=300
+huginn-3.5b-mbppplus-loopspec-dual 285/378 decode=1.672s tokens=31
+huginn-3.5b-mbppplus-loopspec-dual 286/378 decode=13.505s tokens=270
+huginn-3.5b-mbppplus-loopspec-dual 287/378 decode=2.570s tokens=38
+huginn-3.5b-mbppplus-loopspec-dual 288/378 decode=7.485s tokens=74
+huginn-3.5b-mbppplus-loopspec-dual 289/378 decode=4.324s tokens=72
+huginn-3.5b-mbppplus-loopspec-dual 290/378 decode=2.572s tokens=36
+huginn-3.5b-mbppplus-loopspec-dual 291/378 decode=7.433s tokens=161
+huginn-3.5b-mbppplus-loopspec-dual 292/378 decode=8.842s tokens=143
+huginn-3.5b-mbppplus-loopspec-dual 293/378 decode=15.196s tokens=240
+huginn-3.5b-mbppplus-loopspec-dual 294/378 decode=2.786s tokens=61
+huginn-3.5b-mbppplus-loopspec-dual 295/378 decode=2.777s tokens=64
+huginn-3.5b-mbppplus-loopspec-dual 296/378 decode=23.046s tokens=377
+huginn-3.5b-mbppplus-loopspec-dual 297/378 decode=32.395s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 298/378 decode=6.758s tokens=138
+huginn-3.5b-mbppplus-loopspec-dual 299/378 decode=1.307s tokens=24
+huginn-3.5b-mbppplus-loopspec-dual 300/378 decode=17.921s tokens=282
+huginn-3.5b-mbppplus-loopspec-dual 301/378 decode=2.199s tokens=20
+huginn-3.5b-mbppplus-loopspec-dual 302/378 decode=5.853s tokens=125
+huginn-3.5b-mbppplus-loopspec-dual 303/378 decode=10.902s tokens=164
+huginn-3.5b-mbppplus-loopspec-dual 304/378 decode=2.368s tokens=41
+huginn-3.5b-mbppplus-loopspec-dual 305/378 decode=8.373s tokens=116
+huginn-3.5b-mbppplus-loopspec-dual 306/378 decode=14.275s tokens=318
+huginn-3.5b-mbppplus-loopspec-dual 307/378 decode=23.641s tokens=301
+huginn-3.5b-mbppplus-loopspec-dual 308/378 decode=1.478s tokens=37
+huginn-3.5b-mbppplus-loopspec-dual 309/378 decode=23.966s tokens=376
+huginn-3.5b-mbppplus-loopspec-dual 310/378 decode=30.529s tokens=456
+huginn-3.5b-mbppplus-loopspec-dual 311/378 decode=2.450s tokens=54
+huginn-3.5b-mbppplus-loopspec-dual 312/378 decode=2.792s tokens=62
+huginn-3.5b-mbppplus-loopspec-dual 313/378 decode=11.348s tokens=159
+huginn-3.5b-mbppplus-loopspec-dual 314/378 decode=14.722s tokens=244
+huginn-3.5b-mbppplus-loopspec-dual 315/378 decode=19.323s tokens=265
+huginn-3.5b-mbppplus-loopspec-dual 316/378 decode=2.528s tokens=27
+huginn-3.5b-mbppplus-loopspec-dual 317/378 decode=26.582s tokens=360
+huginn-3.5b-mbppplus-loopspec-dual 318/378 decode=1.493s tokens=32
+huginn-3.5b-mbppplus-loopspec-dual 319/378 decode=1.900s tokens=32
+huginn-3.5b-mbppplus-loopspec-dual 320/378 decode=4.494s tokens=98
+huginn-3.5b-mbppplus-loopspec-dual 321/378 decode=45.746s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 322/378 decode=38.734s tokens=488
+huginn-3.5b-mbppplus-loopspec-dual 323/378 decode=16.566s tokens=304
+huginn-3.5b-mbppplus-loopspec-dual 324/378 decode=13.205s tokens=224
+huginn-3.5b-mbppplus-loopspec-dual 325/378 decode=8.554s tokens=141
+huginn-3.5b-mbppplus-loopspec-dual 326/378 decode=27.541s tokens=357
+huginn-3.5b-mbppplus-loopspec-dual 327/378 decode=38.152s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 328/378 decode=7.127s tokens=138
+huginn-3.5b-mbppplus-loopspec-dual 329/378 decode=10.552s tokens=190
+huginn-3.5b-mbppplus-loopspec-dual 330/378 decode=31.449s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 331/378 decode=8.020s tokens=225
+huginn-3.5b-mbppplus-loopspec-dual 332/378 decode=18.653s tokens=322
+huginn-3.5b-mbppplus-loopspec-dual 333/378 decode=2.334s tokens=51
+huginn-3.5b-mbppplus-loopspec-dual 334/378 decode=11.601s tokens=203
+huginn-3.5b-mbppplus-loopspec-dual 335/378 decode=34.917s tokens=504
+huginn-3.5b-mbppplus-loopspec-dual 336/378 decode=0.993s tokens=19
+huginn-3.5b-mbppplus-loopspec-dual 337/378 decode=32.698s tokens=407
+huginn-3.5b-mbppplus-loopspec-dual 338/378 decode=2.378s tokens=49
+huginn-3.5b-mbppplus-loopspec-dual 339/378 decode=19.669s tokens=398
+huginn-3.5b-mbppplus-loopspec-dual 340/378 decode=34.276s tokens=507
+huginn-3.5b-mbppplus-loopspec-dual 341/378 decode=2.844s tokens=60
+huginn-3.5b-mbppplus-loopspec-dual 342/378 decode=9.269s tokens=178
+huginn-3.5b-mbppplus-loopspec-dual 343/378 decode=1.415s tokens=20
+huginn-3.5b-mbppplus-loopspec-dual 344/378 decode=1.241s tokens=24
+huginn-3.5b-mbppplus-loopspec-dual 345/378 decode=43.231s tokens=497
+huginn-3.5b-mbppplus-loopspec-dual 346/378 decode=32.195s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 347/378 decode=31.150s tokens=396
+huginn-3.5b-mbppplus-loopspec-dual 348/378 decode=5.248s tokens=90
+huginn-3.5b-mbppplus-loopspec-dual 349/378 decode=6.792s tokens=149
+huginn-3.5b-mbppplus-loopspec-dual 350/378 decode=13.932s tokens=193
+huginn-3.5b-mbppplus-loopspec-dual 351/378 decode=41.899s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 352/378 decode=1.401s tokens=24
+huginn-3.5b-mbppplus-loopspec-dual 353/378 decode=14.973s tokens=312
+huginn-3.5b-mbppplus-loopspec-dual 354/378 decode=1.012s tokens=7
+huginn-3.5b-mbppplus-loopspec-dual 355/378 decode=23.937s tokens=351
+huginn-3.5b-mbppplus-loopspec-dual 356/378 decode=7.848s tokens=182
+huginn-3.5b-mbppplus-loopspec-dual 357/378 decode=10.648s tokens=208
+huginn-3.5b-mbppplus-loopspec-dual 358/378 decode=12.082s tokens=187
+huginn-3.5b-mbppplus-loopspec-dual 359/378 decode=1.963s tokens=49
+huginn-3.5b-mbppplus-loopspec-dual 360/378 decode=2.686s tokens=67
+huginn-3.5b-mbppplus-loopspec-dual 361/378 decode=8.105s tokens=170
+huginn-3.5b-mbppplus-loopspec-dual 362/378 decode=2.381s tokens=62
+huginn-3.5b-mbppplus-loopspec-dual 363/378 decode=0.796s tokens=18
+huginn-3.5b-mbppplus-loopspec-dual 364/378 decode=1.628s tokens=29
+huginn-3.5b-mbppplus-loopspec-dual 365/378 decode=16.838s tokens=329
+huginn-3.5b-mbppplus-loopspec-dual 366/378 decode=7.689s tokens=155
+huginn-3.5b-mbppplus-loopspec-dual 367/378 decode=7.719s tokens=135
+huginn-3.5b-mbppplus-loopspec-dual 368/378 decode=17.483s tokens=325
+huginn-3.5b-mbppplus-loopspec-dual 369/378 decode=9.711s tokens=175
+huginn-3.5b-mbppplus-loopspec-dual 370/378 decode=24.456s tokens=257
+huginn-3.5b-mbppplus-loopspec-dual 371/378 decode=2.268s tokens=57
+huginn-3.5b-mbppplus-loopspec-dual 372/378 decode=6.732s tokens=114
+huginn-3.5b-mbppplus-loopspec-dual 373/378 decode=21.662s tokens=258
+huginn-3.5b-mbppplus-loopspec-dual 374/378 decode=5.811s tokens=75
+huginn-3.5b-mbppplus-loopspec-dual 375/378 decode=32.559s tokens=355
+huginn-3.5b-mbppplus-loopspec-dual 376/378 decode=28.163s tokens=436
+huginn-3.5b-mbppplus-loopspec-dual 377/378 decode=19.878s tokens=512
+huginn-3.5b-mbppplus-loopspec-dual 378/378 decode=7.684s tokens=128
+wandb: uploading requests.jsonl; updating run metadata
+wandb: uploading requests.jsonl
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading config.yaml
+wandb: uploading history steps 377-377, summary
+wandb: 
+wandb: Run history:
+wandb:          aggregate/cap_stopped ▁▁▁▁▁▁▂▂▂▃▃▃▃▃▃▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇▇█████
+wandb:   aggregate/completed_requests ▁▁▁▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇▇███
+wandb:             aggregate/decode_s ▁▁▁▁▁▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇████
+wandb:       aggregate/decode_token_s ▇█▆▂▄▁▁▁▄▅▆▆▅▆▆▆▆▆▆▆▆▆▆▆▆▇▇▇█▇████▇█████
+wandb:        aggregate/decode_tokens ▁▁▁▁▁▂▂▂▂▂▃▃▃▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▆▆▆▆▇▇█████
+wandb:           aggregate/draft_hits ▁▁▂▂▂▃▃▃▃▃▃▄▄▄▅▅▅▅▅▅▅▅▅▅▅▆▆▆▆▇▇▇▇▇▇█████
+wandb:                aggregate/gamma ▅█▄▂▃▂▂▂▂▁▁▂▃▄▄▄▄▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅▅▅▅▅▅▅▅
+wandb:           aggregate/loop_steps ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇█
+wandb: aggregate/mean_acceptance_rate ▁▃▃▄▅▄▄▄▄▆▆▆▆██▇▇▇▇▇▇▇▇▇▇██████████▇▇███
+wandb:        aggregate/mean_decode_s ▅▁▆█▇▅▄▅▅▅▄▅▅▅▅▄▄▄▄▄▄▃▃▃▃▃▃▂▂▂▁▁▂▂▂▂▂▂▃▂
+wandb:                             +6 ...
+wandb: 
+wandb: Run summary:
+wandb:          aggregate/cap_stopped 32
+wandb:   aggregate/completed_requests 378
+wandb:             aggregate/decode_s 4909.6163
+wandb:       aggregate/decode_token_s 15.21952
+wandb:        aggregate/decode_tokens 74722
+wandb:           aggregate/draft_hits 58346
+wandb:                aggregate/gamma 2.99935
+wandb:           aggregate/loop_steps 797208
+wandb: aggregate/mean_acceptance_rate 0.81098
+wandb:        aggregate/mean_decode_s 12.9884
+wandb:                            +35 ...
+wandb: 
+wandb: 🚀 View run huginn-3.5b-mbppplus-loopspec-dual at: https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/a362918b1705
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-mbppplus-loopspec-dual/wandb/run-20261108_120319-a362918b1705/logs

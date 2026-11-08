@@ -1,0 +1,652 @@
+{
+  "batch": "loopfill-preliminary-20261109",
+  "scope": "All experiment files except W&B caches, Python caches, lock and temporary files; manifest itself excluded from its file list",
+  "files": {
+    "launcher.json": {
+      "sha256": "53935a2e47a49e928562a5b42feae14cd12dc32d44921250805622ec92ac8df2",
+      "bytes": 58
+    },
+    "protocol.json": {
+      "sha256": "e6db14aa71d56b4eaccfc153728e709e4734e32d46dd11cf6b8c0643d1f6169f",
+      "bytes": 22515
+    },
+    "questions.jsonl": {
+      "sha256": "4b6d33e79484f9841c487ee87d1cf6aa8c6066f61d5d482ff09e5a007fafdf04",
+      "bytes": 698768
+    },
+    "queue-process.json": {
+      "sha256": "73402867fbecdb5f4ba31820b4712d3ef8b01f6c21f43e0b4d63714bc4024187",
+      "bytes": 20
+    },
+    "queue.log": {
+      "sha256": "420a2ac8d652bd457cb3a6c4a25b0655802c4b451efa3b40e51a8a4710c7e5d7",
+      "bytes": 829
+    },
+    "status.json": {
+      "sha256": "a6403f610d3fc7c54a22bbbceae2c35a83d3e158897893decc4adf91294aae3b",
+      "bytes": 611
+    },
+    "logs/pilot-0.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-1.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-2.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-3.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-4.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-5.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-6.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "logs/pilot-7.log": {
+      "sha256": "64d45c6cb8736cdc2f96b1103bfbf6a09b0325b021c2fb1912ab565f9edef628",
+      "bytes": 1806
+    },
+    "pilot/process-0.json": {
+      "sha256": "c895295567e033280fd79a371a17fa60f4220c3a34432592c904f56c19be30e4",
+      "bytes": 464
+    },
+    "pilot/process-1.json": {
+      "sha256": "4dadc14654a5d7d831c22f8b2217dbf2ebef8273dc4adf04479ff56b6b7c63b9",
+      "bytes": 464
+    },
+    "pilot/process-2.json": {
+      "sha256": "76a71c0b455aa17acf6c9124254cbc89bb2141935b302d84e284f9c9a5a0f1e1",
+      "bytes": 463
+    },
+    "pilot/process-3.json": {
+      "sha256": "633b7eccd9becbcf929c14116df4d3b079c0682770059f9bb44b537bfa0dd061",
+      "bytes": 463
+    },
+    "pilot/process-4.json": {
+      "sha256": "a25f2782284c439d8bb8772dd40503a393b1a815fcf6452e2d3b9afa69d2683f",
+      "bytes": 464
+    },
+    "pilot/process-5.json": {
+      "sha256": "03eae1aa2ab21ff18021499042a9b76bfea527df75ef0c66497db57fd5301711",
+      "bytes": 464
+    },
+    "pilot/process-6.json": {
+      "sha256": "6e30223a7e3b9b392962fe64fdb2a3bdb3137f77cef52fe48340ffa75cb52a6e",
+      "bytes": 464
+    },
+    "pilot/process-7.json": {
+      "sha256": "5a50384d5bfa55cd497ef6b2ef42c81d97a445863d9a71f6ae38714112d57bd4",
+      "bytes": 464
+    },
+    "pilot/progress-0.json": {
+      "sha256": "03cd6a04e98e5289e70745c20458cc0e591236828fcd7bb2cc206092924a6811",
+      "bytes": 87
+    },
+    "pilot/progress-1.json": {
+      "sha256": "97fdecb147e89ccb165d194b982b78ac5631e90b7a3497878a70ed43c655184e",
+      "bytes": 87
+    },
+    "pilot/progress-2.json": {
+      "sha256": "340470b17c762df10205d01816ba9e6891e41958b64912a237a14260a2e6b591",
+      "bytes": 87
+    },
+    "pilot/progress-3.json": {
+      "sha256": "b2c8a64822ed74f6385dafb78aeccc22e359c4e4a8bd9e45bb67e392010c6bb1",
+      "bytes": 87
+    },
+    "pilot/progress-4.json": {
+      "sha256": "8b644f0e4fbb7e73d7f0135e9c7cd0be5282350a9d37a3afae5705d216244d3e",
+      "bytes": 87
+    },
+    "pilot/progress-5.json": {
+      "sha256": "38993d2a101175dce7c3f140310c3442ea89c40acd8ba2ece7159323d124fccb",
+      "bytes": 87
+    },
+    "pilot/progress-6.json": {
+      "sha256": "bbc0f8c83bbf8862c8e483448e5fccdba9e3dd32b46f36826fbbd8df70c5f778",
+      "bytes": 87
+    },
+    "pilot/progress-7.json": {
+      "sha256": "ecd615d55642b5166ff33be4ec1cff26b7b829fdede78b4b8137f81bbaeb13ed",
+      "bytes": 87
+    },
+    "pilot/worker-0.json": {
+      "sha256": "cf8a9013dc9c4812c48032be49a799c8c12238dcc564155d2546de29cb217cbe",
+      "bytes": 2240
+    },
+    "pilot/worker-1.json": {
+      "sha256": "564aa0df7a79fbac2a0dd8d503a6a76c710c8e1476584efb409df868f60bcdc2",
+      "bytes": 2240
+    },
+    "pilot/worker-2.json": {
+      "sha256": "cfc99d9c409362691c7f44c5acd15895a79bb851da77caa4835f3ad2b2d07003",
+      "bytes": 2240
+    },
+    "pilot/worker-3.json": {
+      "sha256": "e8958bc4efdb7ba0a50802e7d64cdbc2109a99b777e1a13451b841d374869343",
+      "bytes": 2240
+    },
+    "pilot/worker-4.json": {
+      "sha256": "f43542a69b99c701d35dd6c32c2b5e71768a3c35bcd82cb63b3b1c7b65f47ac6",
+      "bytes": 2240
+    },
+    "pilot/worker-5.json": {
+      "sha256": "57c25c0552755643cf2c942426696d0aef984fcbbfb5c3ed6f505e091e071861",
+      "bytes": 2240
+    },
+    "pilot/worker-6.json": {
+      "sha256": "c6ce5eb7c49dfa1c2d18b55bf4bf59a620729be74e6e9d341df9a6a7d19de898",
+      "bytes": 2240
+    },
+    "pilot/worker-7.json": {
+      "sha256": "a432126c2211ff2112a22d178a8a4afd67d8570fec0ef544d8ccf89f1e351493",
+      "bytes": 2240
+    },
+    "source/docs/loopfill-preliminary-plan.md": {
+      "sha256": "7cab2a1dab233b17f4ef4bf24cb6576faffe0ddc59505c7bcb70e10c0059bb92",
+      "bytes": 4633
+    },
+    "source/scripts/loop_preliminary_suite.py": {
+      "sha256": "131fb23c8ba49143b8ecfc7cbaa0262a4c0c23d6e31a41fb237112a982d47d77",
+      "bytes": 23094
+    },
+    "source/scripts/loop_suffix_spec_readouts.py": {
+      "sha256": "e49e43367d90fd454f07aaa76173abf2bdb5d24e130c6c6161169f2d7895d414",
+      "bytes": 15849
+    },
+    "source/src/llm_memory_editability/__init__.py": {
+      "sha256": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+      "bytes": 239
+    },
+    "source/src/llm_memory_editability/loop_batch_suffix.py": {
+      "sha256": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+      "bytes": 2768
+    },
+    "source/src/llm_memory_editability/loop_model_registry.py": {
+      "sha256": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+      "bytes": 6768
+    },
+    "source/src/llm_memory_editability/loop_preliminary.py": {
+      "sha256": "67ed918def8472d36568190296685c4031b889b69cbc3d21aff65052866b458c",
+      "bytes": 7563
+    },
+    "source/tests/test_loop_preliminary.py": {
+      "sha256": "08f60d8ada09c52c9fcdfb50bda42662a6f84f601abb6e42c0f5540dfe6113d6",
+      "bytes": 5879
+    },
+    "suffix/arctic_inference/__init__.py": {
+      "sha256": "061df7164491227e3d9816ec4a90fa2bc25c65ecb6471f249f1831f4240125c3",
+      "bytes": 613
+    },
+    "suffix/arctic_inference/envs.py": {
+      "sha256": "faf54884d08dd909b010946e1d9d48908a537319eb1b6eb7c4eecb0fbba62e6b",
+      "bytes": 2611
+    },
+    "suffix/arctic_inference/patching.py": {
+      "sha256": "89c16caf99911c7bde8a53cd44a7be22634d5e2743d92f36aa72c5e54285dd91",
+      "bytes": 5106
+    },
+    "suffix/arctic_inference/py_custom_ops.py": {
+      "sha256": "2f4850cc5893eefc9e7702c9b39ec3788803257e7ca1b4ab767fbd9dbcf752fc",
+      "bytes": 3716
+    },
+    "suffix/arctic_inference/utils.py": {
+      "sha256": "1a17f89e40159ce08aa23d5595e389fb8bc6e45344ffff8d212c6eec21382892",
+      "bytes": 1643
+    },
+    "suffix/arctic_inference/common/__init__.py": {
+      "sha256": "061df7164491227e3d9816ec4a90fa2bc25c65ecb6471f249f1831f4240125c3",
+      "bytes": 613
+    },
+    "suffix/arctic_inference/common/swiftkv/__init__.py": {
+      "sha256": "4218e25763a4aeca334c5faacc0141d792b2f74f9f1a63742215354787c5da87",
+      "bytes": 687
+    },
+    "suffix/arctic_inference/common/swiftkv/configs.py": {
+      "sha256": "d1f78b8dc9a2b76af2fc93b3102ce3284d18fe15d1e5f757bf15004388e45b67",
+      "bytes": 1191
+    },
+    "suffix/arctic_inference/dynasor/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "suffix/arctic_inference/dynasor/cot.py": {
+      "sha256": "ef268f5a26e4167d2b04424dca5b5dc87ba7dd738e559b46b728b221556d6e85",
+      "bytes": 6607
+    },
+    "suffix/arctic_inference/dynasor/entropy.py": {
+      "sha256": "40247961530771dbe82d33099cf30c0a26fe062f0472056147a55280f67fab68",
+      "bytes": 7115
+    },
+    "suffix/arctic_inference/dynasor/evaluator.py": {
+      "sha256": "8ad33ac6cb9afeba1282b90ae9ca905f9493cf4768397dd6e3861c63bddfa37b",
+      "bytes": 22845
+    },
+    "suffix/arctic_inference/dynasor/openai_server.py": {
+      "sha256": "3b0b78435ed710f13e909b32c00601337e5430da82a9bd9317806200b1a18d3b",
+      "bytes": 15680
+    },
+    "suffix/arctic_inference/dynasor/util.py": {
+      "sha256": "d487fba0b071140d0e54ceccb184a80e0edcf3bda109a2a76fe5f09801e7599f",
+      "bytes": 2865
+    },
+    "suffix/arctic_inference/dynasor/vllm_server.py": {
+      "sha256": "70c9872e567cced5917ea456ba7e5bb67905b8490af6cebd60d1d7d0df742a1a",
+      "bytes": 3853
+    },
+    "suffix/arctic_inference/embedding/README.md": {
+      "sha256": "62c438ade2234b6bc52b0ab30cae3b52b5fcabf81fd093b806020d1737701ca7",
+      "bytes": 6421
+    },
+    "suffix/arctic_inference/embedding/client.py": {
+      "sha256": "387e664a67dca923cc8f0bbb6cca77906f0b46fc6db5fd662b83e4b3d4f70d2d",
+      "bytes": 10012
+    },
+    "suffix/arctic_inference/embedding/generate_proto.py": {
+      "sha256": "ef4514875437ea080ace08d4425b476b0db6b46ff6ec50476c0f71f386e4411e",
+      "bytes": 2403
+    },
+    "suffix/arctic_inference/embedding/replica.py": {
+      "sha256": "7b1827abc6d963f5d5b59932b79f214b7c5e0a7195bb1846a40bae2eb7018129",
+      "bytes": 17594
+    },
+    "suffix/arctic_inference/embedding/replica_manager.py": {
+      "sha256": "333f0f2685b38d94f8fcb939fc9f9d0bd41e0774b5d45c46357c9fede6d01698",
+      "bytes": 18236
+    },
+    "suffix/arctic_inference/embedding/proto/inference.proto": {
+      "sha256": "833d9be1a931be0e9443fa55f85c199e38f562f25d27ff57b456dce76b7fbb1e",
+      "bytes": 2049
+    },
+    "suffix/arctic_inference/op_builder/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "suffix/arctic_inference/op_builder/builder.py": {
+      "sha256": "b565541e618ca4b70225e0d5b08543bbc88faf7eca7def4259f29a4b3a89e121",
+      "bytes": 22641
+    },
+    "suffix/arctic_inference/op_builder/swiftkv_ops_builder.py": {
+      "sha256": "c99047af2584c8ec0f6680fbb1ece8c233d55a2ac32f65630de8dd97f8c40980",
+      "bytes": 939
+    },
+    "suffix/arctic_inference/semi_persistence/README.md": {
+      "sha256": "644fddafb7dc02590976b87ebed1355dc5f88d8e9382078383b0c216e863465d",
+      "bytes": 7917
+    },
+    "suffix/arctic_inference/semi_persistence/__init__.py": {
+      "sha256": "59e79372a0769c3337a6485449c57daa7895ee676ded1e49238ec99958674371",
+      "bytes": 1725
+    },
+    "suffix/arctic_inference/semi_persistence/_semip_worker.py": {
+      "sha256": "fb543a9c25ad1e554084224e21be8ff504bade6138b289da29590a6960f485b8",
+      "bytes": 1863
+    },
+    "suffix/arctic_inference/semi_persistence/abstract.py": {
+      "sha256": "d2d0f9cbc2fff572f352e636a8e63bb65f82dbe04ca2a63442af344e3b5b9b30",
+      "bytes": 20513
+    },
+    "suffix/arctic_inference/semi_persistence/ca_graph_rebind.py": {
+      "sha256": "3c7e6ff4f9e6bcc496e2ce146aca95b324644cfb6badf5231eb24253cd2ad99e",
+      "bytes": 194435
+    },
+    "suffix/arctic_inference/semi_persistence/client.py": {
+      "sha256": "c2b002df53ee90723fe11a993f4e0549f05c2a32fa14e91d401ef1f7e34dae9b",
+      "bytes": 35283
+    },
+    "suffix/arctic_inference/semi_persistence/dashboard.py": {
+      "sha256": "15e0c391044723bfe8537e8821694c1a8d8a30c6ee8bb82a761ac1408097bf71",
+      "bytes": 106163
+    },
+    "suffix/arctic_inference/semi_persistence/demuxer.py": {
+      "sha256": "85afd147e66415c156a14088572644b99fab9a7621fc8ccc3a2952fe67170bba",
+      "bytes": 8799
+    },
+    "suffix/arctic_inference/semi_persistence/instance.py": {
+      "sha256": "6ad9c7be72d385060ac2dd7e318fb798fde0e0d7670d3294890b431f320d0296",
+      "bytes": 38394
+    },
+    "suffix/arctic_inference/semi_persistence/orch_server.py": {
+      "sha256": "ef8b983f87778d280d30c9ee09693539a904d79a40a1ca6317ae37e09b0c8138",
+      "bytes": 1756
+    },
+    "suffix/arctic_inference/semi_persistence/orchestrator.py": {
+      "sha256": "53e370faadcac1427193a8d9394d90ea6aa7e93d429fdaaa56f095973a91cfe4",
+      "bytes": 91042
+    },
+    "suffix/arctic_inference/semi_persistence/pipeline.py": {
+      "sha256": "669469d6ed2847e5b0558f5f94b41e11542f8976d77252235fd017c7fd9a45e6",
+      "bytes": 68657
+    },
+    "suffix/arctic_inference/semi_persistence/semip_logging.py": {
+      "sha256": "4d3c690757d0fa3657c8d059ba65c4a709a9d7aa8260ce5cc865262bc528316e",
+      "bytes": 8198
+    },
+    "suffix/arctic_inference/semi_persistence/slots.py": {
+      "sha256": "ad3cad0aa97b5ceef3b64a06b0911320e293715e6fd64a29b4270c0ec26799e6",
+      "bytes": 12107
+    },
+    "suffix/arctic_inference/semi_persistence/state_server.py": {
+      "sha256": "ea70446f656e0073f05659a7836b027bb3b19d22b906381e2538e8efffb51359",
+      "bytes": 16816
+    },
+    "suffix/arctic_inference/semi_persistence/vllm_child.py": {
+      "sha256": "7c16cae1be70ab1389305227a13ba14587b81bd2846dbe7cb7738dccc60b0789",
+      "bytes": 104097
+    },
+    "suffix/arctic_inference/semi_persistence/worker.py": {
+      "sha256": "bd574ffb5cacdcb58c75315e9d96ba712591d963e89d778bd77e3575fc7b170e",
+      "bytes": 79341
+    },
+    "suffix/arctic_inference/semi_persistence/assets/figure1-sleep-wake-latency.png": {
+      "sha256": "177dc39b77200ec3ecd2dab412d46b9119937997f695177b875c2c64a52ba0f4",
+      "bytes": 100173
+    },
+    "suffix/arctic_inference/semi_persistence/reproduce/README.md": {
+      "sha256": "fe19d5030cc92f4ee53597ca830ac48c0f00bfc340540f2911eb37bc470255d2",
+      "bytes": 767
+    },
+    "suffix/arctic_inference/semi_persistence/reproduce/example_full.py": {
+      "sha256": "17c1715255ad5ae8cb256e98f0e98082810576324828290469034bb8393ded33",
+      "bytes": 5756
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/imgdiff.py": {
+      "sha256": "eded64a4a1be6982cd835308e1d3b63bd177a6d2d4825b4a8db3b8e95d0aad7e",
+      "bytes": 11970
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/main_test.py": {
+      "sha256": "ee2d9f5f892884adea0121d7fcbbaee251b19a95f890fe6c7a560df5c32461e2",
+      "bytes": 3857
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/pidcheck.py": {
+      "sha256": "55912e8ee7fd620dc30afbe7c063ccd2c8592d3f882ceadcffea96835320157e",
+      "bytes": 9002
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/register.py": {
+      "sha256": "43f0049f4de19c467e7f3ec65139bd442f17827becb5717273e77f7167c6ae0b",
+      "bytes": 3698
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/test_copy.py": {
+      "sha256": "a86c2e68a0dfca9fb1fe14b3dc2b62b1a676cb9ab7c90f56e2a3fafa5a940aab",
+      "bytes": 3179
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/test_env.py": {
+      "sha256": "d6d9def9f9be36a4cbce36d3d9ea8f69fdb957f4477e833f597a94a294d40087",
+      "bytes": 4187
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/test_generate.py": {
+      "sha256": "503bd66556d38d911511a27ddf3d3493545314b0c46234ac9631ba97a2f2fdca",
+      "bytes": 3312
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/test_image.py": {
+      "sha256": "5121325ee1397e0fb98f99f7f5e6e605c973133c8473676f3fe192be17747419",
+      "bytes": 1472
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/test_tp2.py": {
+      "sha256": "99a193cac64ca1b8cb070812fdaf77abe06a7981a0f27f8875c957d4cdde0d9d",
+      "bytes": 2794
+    },
+    "suffix/arctic_inference/semi_persistence/scripts/test_weights.py": {
+      "sha256": "e893ff49bcdc8c28a69f89f60a712f03318d3013c942afa95c3f1c6b2b7b80a0",
+      "bytes": 2629
+    },
+    "suffix/arctic_inference/semi_persistence/skills/CRIU_PLUMBING.md": {
+      "sha256": "57f377b565fc2e08744fac671475ce8139100658cdbe60697c0f2288efa96ea7",
+      "bytes": 42161
+    },
+    "suffix/arctic_inference/semi_persistence/skills/CROSS_NODE_RESTORE.md": {
+      "sha256": "24965d829fea1cdd5a941779e37d420a2bf8b05b3e0c3c9e4ae6de0f43e2befb",
+      "bytes": 16899
+    },
+    "suffix/arctic_inference/semi_persistence/skills/INSTALL.md": {
+      "sha256": "c8b04c6c403ee8b5ebea496dab0e0df72951b4dc804af115889544d3dd62aea0",
+      "bytes": 9003
+    },
+    "suffix/arctic_inference/semi_persistence/skills/SKILL.md": {
+      "sha256": "6255d2438785073ebbfce79759a1f195a8556654d73be5dfbc0a1ec1db826918",
+      "bytes": 12209
+    },
+    "suffix/arctic_inference/semi_persistence/skills/TEARDOWN_SCOPING.md": {
+      "sha256": "06d567602d584866a448f0c03d58c2a35325bdcce6f8b099046f4a62f4a7d2f2",
+      "bytes": 26355
+    },
+    "suffix/arctic_inference/semi_persistence/skills/async_generate_DETAILS.md": {
+      "sha256": "07fe88721829949a242b677fc261e322e0dee92259e0a1489c7cf2ec41f584ba",
+      "bytes": 61014
+    },
+    "suffix/arctic_inference/semi_persistence/skills/client_DESIGN.md": {
+      "sha256": "b9e30cb0ddc7d36a15e798d1c6d5608d7f6a2768893d2cc6e70c9fc1a57df326",
+      "bytes": 13704
+    },
+    "suffix/arctic_inference/semi_persistence/skills/instance_DESIGN.md": {
+      "sha256": "7b41a6a02a49c02b93ee1183c3732964188a69439c0992e26b8dedd7563a65b3",
+      "bytes": 44682
+    },
+    "suffix/arctic_inference/semi_persistence/skills/orchestrator_DESIGN.md": {
+      "sha256": "e21c02719528dfbd937a560187ba2794a895f8406574537427a1f25f8e6bbc13",
+      "bytes": 115723
+    },
+    "suffix/arctic_inference/semi_persistence/skills/pipeline_DESIGN.md": {
+      "sha256": "362b0584ff1c9adf9843181887d35300c7be507c590f68bc64d3af24350beb9a",
+      "bytes": 44410
+    },
+    "suffix/arctic_inference/semi_persistence/skills/reference.md": {
+      "sha256": "4b91da18f7ce9ca901efa348de30850294117ca9d9c10d97b4291f78d9e7914d",
+      "bytes": 18138
+    },
+    "suffix/arctic_inference/semi_persistence/skills/semi-p_DESIGN.md": {
+      "sha256": "00b33c8eeedcfaf16df23b2ac2fbbeda7ec80a720421bb0ee54552a141e83302",
+      "bytes": 9549
+    },
+    "suffix/arctic_inference/semi_persistence/skills/slots_DESIGN.md": {
+      "sha256": "64d075b73a64020dc674e3f0cc5331f63cdf26bca83b23ad6aca8883053af213",
+      "bytes": 12800
+    },
+    "suffix/arctic_inference/semi_persistence/skills/tp_DESIGN.md": {
+      "sha256": "a85052ca830a9d3f32bdf87cd74374d8d390416aac5029539c68a70f9bbe7fe3",
+      "bytes": 17625
+    },
+    "suffix/arctic_inference/semi_persistence/tests/test_pipeline.py": {
+      "sha256": "5a162d7edbe8f37475a59f8625f83c60a1d79a06ee32e1dcfb3123465f619f5e",
+      "bytes": 45847
+    },
+    "suffix/arctic_inference/semi_persistence/tests/test_slots.py": {
+      "sha256": "09bcc635fd81f1e7e0e429ec5e5281539dfc4ba7f6cfe0baa763bb8d59f5ee4f",
+      "bytes": 5837
+    },
+    "suffix/arctic_inference/server/__init__.py": {
+      "sha256": "30feb80d4f0ce7af050eaab1c97ea5c07a39f699ebc9ea04b6b6f83c1d6dd544",
+      "bytes": 431
+    },
+    "suffix/arctic_inference/server/api.py": {
+      "sha256": "36a33a94b61d0c5e1e2a7f6096d9ea5e6231029674474ec42faef75e48118655",
+      "bytes": 6387
+    },
+    "suffix/arctic_inference/server/cli.py": {
+      "sha256": "9c75cea88d27f557a8c8d739ef0fb1e84f3d679d5814b134256e824071da0ce7",
+      "bytes": 917
+    },
+    "suffix/arctic_inference/server/config.py": {
+      "sha256": "8e28ddf0fa68ef7c55b4464b4eb2ffff42197d357c5e67d9701d39fca6517c47",
+      "bytes": 4192
+    },
+    "suffix/arctic_inference/server/metrics.py": {
+      "sha256": "3aee174fae44fdd6afbb59a7dc1660c55b98bc00550e4eaf27c1859610b12ffb",
+      "bytes": 12354
+    },
+    "suffix/arctic_inference/server/multi_model.py": {
+      "sha256": "0bbea686fbcf85f1c5d402300200392c1d3a16365ce76c570a4c3375ad5dd195",
+      "bytes": 10111
+    },
+    "suffix/arctic_inference/server/pipeline.py": {
+      "sha256": "adec9747a1f7843d218a18b5a5f1de3f2f3725e09fcbcbaa7b76d312b3b7a1ab",
+      "bytes": 5549
+    },
+    "suffix/arctic_inference/server/replica_pool.py": {
+      "sha256": "81e89d61c70e7d41d418dbcc47d829bdf111155863405bdb6f57493b3fa63122",
+      "bytes": 39670
+    },
+    "suffix/arctic_inference/server/scheduler.py": {
+      "sha256": "30c573b04d18e2fdf7f8977f2738a10644b83eacac36386ec23a8cab1b6e02e6",
+      "bytes": 23866
+    },
+    "suffix/arctic_inference/server/testing.py": {
+      "sha256": "927d4d7ceb6db1d8d70708afcf96db0cbb7242f9e4775c782ec6ac4f32342332",
+      "bytes": 4389
+    },
+    "suffix/arctic_inference/server/worker.py": {
+      "sha256": "9277ea3e1b0bcfa251874ad484a7495770e555138f10617126e7395595ff813b",
+      "bytes": 20785
+    },
+    "suffix/arctic_inference/server/weight_sync/__init__.py": {
+      "sha256": "aa137347a550676c0235393cc8de4bfd524e66ad76e6172bfd447174ec562e4f",
+      "bytes": 1721
+    },
+    "suffix/arctic_inference/server/weight_sync/engine.py": {
+      "sha256": "2b76b6ad1d0dd88ab9e7e40dd6a4ea499a3a4e1f4dd34f5cf5defc788ddc50d2",
+      "bytes": 16448
+    },
+    "suffix/arctic_inference/server/weight_sync/ipc_engine.py": {
+      "sha256": "ff5b6d31ad1d2df3320eecd190d361c655740e44432a928af09a924627e25535",
+      "bytes": 4573
+    },
+    "suffix/arctic_inference/server/weight_sync/receiver.py": {
+      "sha256": "09f702a5fb349d580f7d62d95904c880793a949bbce37a55eb957332c46d6f3a",
+      "bytes": 31727
+    },
+    "suffix/arctic_inference/server/weight_sync/schedule.py": {
+      "sha256": "f8d5cfc37bbe151e8137b813c57defc259e4ba01f18d1de7701875c8b75344e6",
+      "bytes": 5519
+    },
+    "suffix/arctic_inference/server/weight_sync/sender.py": {
+      "sha256": "c876dc2b7fc5f1745ff2f185bcf8dcd77180a11a982ba4417ba0d9b4328464b3",
+      "bytes": 9001
+    },
+    "suffix/arctic_inference/server/weight_sync/utils.py": {
+      "sha256": "d65c4e9169f6e5c91cf79fbce4d2e8ea08ce31a388c4fce88831868c3bab4b44",
+      "bytes": 18320
+    },
+    "suffix/arctic_inference/suffix_decoding/_C.cpython-310-x86_64-linux-gnu.so": {
+      "sha256": "701f9e8ecf36fde76603533c76142f0e717ec3747587a0f85f200c27b1df7b5f",
+      "bytes": 197664
+    },
+    "suffix/arctic_inference/suffix_decoding/__init__.py": {
+      "sha256": "e2736d5f6d3472e74f2f25795de8f754ddb3279e9cf497b13f54e8fa164dd5bd",
+      "bytes": 731
+    },
+    "suffix/arctic_inference/suffix_decoding/cache.py": {
+      "sha256": "91c48e6cb335edbd202c8f440e5766df54315ea2d8e40decf8f7a130f3a5e126",
+      "bytes": 14502
+    },
+    "suffix/arctic_inference/suffix_decoding/simulator.py": {
+      "sha256": "ed576d5e1c8b85a2a3ac82031332337f34ee0c894ed2d3fee54d72922591e485",
+      "bytes": 20311
+    },
+    "suffix/arctic_inference/vllm/__init__.py": {
+      "sha256": "061df7164491227e3d9816ec4a90fa2bc25c65ecb6471f249f1831f4240125c3",
+      "bytes": 613
+    },
+    "suffix/arctic_inference/vllm/args.py": {
+      "sha256": "399d92a7cfedd64773978659fdebf33b2bd10689d0e458ee04a83ef52811d86f",
+      "bytes": 12423
+    },
+    "suffix/arctic_inference/vllm/config.py": {
+      "sha256": "2a33380ec4f753aac37a90222fdfe9835331db43c4068fc8d41e0832597ff004",
+      "bytes": 9651
+    },
+    "suffix/arctic_inference/vllm/fp32_lm_head.py": {
+      "sha256": "86bbd77f5bc2b7fa0557fde8145d5b25cd2150e3081323c7e129d10b9a41300e",
+      "bytes": 7451
+    },
+    "suffix/arctic_inference/vllm/model_runner.py": {
+      "sha256": "506bb60ab7bade6348cf254858f281e8dcdafa895a521933a1382ce122a0a06c",
+      "bytes": 97868
+    },
+    "suffix/arctic_inference/vllm/patches.py": {
+      "sha256": "cbd3e94a208cf9328332144ea99550378f9113d9e511d552d5dc5d05464d5335",
+      "bytes": 17402
+    },
+    "suffix/arctic_inference/vllm/plugin.py": {
+      "sha256": "810fc1a75f39f99e2afe3d1b1a2588a5f375a8471094cf1a8052c6b3e434e84b",
+      "bytes": 2741
+    },
+    "suffix/arctic_inference/vllm/sampling.py": {
+      "sha256": "f52d9f914da16d77d16a94b597bfeb472914bda02cee1dac3485cf8cee2fc98f",
+      "bytes": 3124
+    },
+    "suffix/arctic_inference/vllm/stats.py": {
+      "sha256": "1ba45939c0a95e41b50c78f83330672bb73e34f0e2a8825424d066a85c0d996d",
+      "bytes": 2472
+    },
+    "suffix/arctic_inference/vllm/structured_output.py": {
+      "sha256": "277d639f558520dcf9a80da2650d050634c2f26d552a5d8ae8ffa0516e16a5af",
+      "bytes": 1478
+    },
+    "suffix/arctic_inference/vllm/ulysses.py": {
+      "sha256": "990a3b75a098dfbe9a0ec16772189a76938e5fb1481ffec6ffc6f7db263d7782",
+      "bytes": 34823
+    },
+    "suffix/arctic_inference/vllm/attention/README.md": {
+      "sha256": "957d726ecadafccc82988aee175d6ebc210fddaa8c078888ce35efea37f7fb8c",
+      "bytes": 7269
+    },
+    "suffix/arctic_inference/vllm/attention/__init__.py": {
+      "sha256": "36f80e6ffd785a7f0518e77703224c604692e54b7b0c44e484a6ccafcf16cc89",
+      "bytes": 2622
+    },
+    "suffix/arctic_inference/vllm/attention/flash_attn_forest_cascade.py": {
+      "sha256": "b561410ffe392cebd4a1bcabf396bd79f8f9dbae547a125f63663a5ae64bc75b",
+      "bytes": 71166
+    },
+    "suffix/arctic_inference/vllm/spec_dec/__init__.py": {
+      "sha256": "ffafc758a2a63f95d78247b26c5a3169d1395da79b44dc1b6a5a68011f0c79b3",
+      "bytes": 611
+    },
+    "suffix/arctic_inference/vllm/spec_dec/arctic_proposer.py": {
+      "sha256": "deba68a5cdb8f0bb9c337da40e4b8ca2c7c298380f85b439c5512f622bf5d8d6",
+      "bytes": 12065
+    },
+    "suffix/arctic_inference/vllm/spec_dec/arctic_speculator.py": {
+      "sha256": "ad2e207a2ab4d95ea809cfbd468e1c8b454cc70305b81120239f34c1d43b947f",
+      "bytes": 42700
+    },
+    "suffix/arctic_inference/vllm/spec_dec/fp8.py": {
+      "sha256": "99f6d05d3228f8617a71134bb5630b58a1392f7050b5257488b1954fca11deee",
+      "bytes": 18015
+    },
+    "suffix/arctic_inference/vllm/spec_dec/logits_processor_opt.py": {
+      "sha256": "d3cc67392f431fa14de9960f4ece7459ed3c2959d7dfcef691295e2defd6fd6b",
+      "bytes": 3835
+    },
+    "suffix/arctic_inference/vllm/spec_dec/vocab_parallel_embedding.py": {
+      "sha256": "719cbcc341f6d8071008b201b87a70dce867cf3fa507678f9d3abdc3a010c7cd",
+      "bytes": 23197
+    },
+    "suffix/arctic_inference/vllm/swiftkv/__init__.py": {
+      "sha256": "8b19cf03ced93cd5b0e1015dc6f5975f508055b48c0f9cdff1616b2e7cb19ea6",
+      "bytes": 703
+    },
+    "suffix/arctic_inference/vllm/swiftkv/llama_swiftkv.py": {
+      "sha256": "0dc565d25a8dd28856eab292f8f278cfa5ad7522335dbcba80e38d81b97554d5",
+      "bytes": 40674
+    },
+    "suffix/LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    }
+  },
+  "file_count": 161,
+  "total_bytes": 3301094
+}

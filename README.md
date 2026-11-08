@@ -1,6 +1,8 @@
 # LoopFill (loop_suffix)
 
-**temperature=1 完整表1实验（2026-11-08）**：三个模型×六个数据集×五种方法，共90组、31,380次请求；B=1、最多512 token，统计decode latency、γ和候选命中率。独立八卡队列已启动，原greedy结果保留。见[协议与运行说明](docs/loopfill-latency512-t1.md)、[实时状态](results/loopfill-latency512-t1-20261108/status.json)、[汇总CSV](results/loopfill-latency512-t1-20261108/measurements.csv)。
+**Preliminary 命中率实验（2026-11-09）已完成**：Ouro-2.6B、480题、80,933个有效位置。loop 1/2/3 单层一致率为88.83%/95.63%/98.20%，累计覆盖率为88.83%/96.72%/98.95%。Suffix → +Shallow → +Requery 平均连续正确草稿长度为1.343 → 1.732 → 2.276；续查配对增量+0.544 token（95% CI [0.502, 0.587]），不代表实测速度收益。见[计划与结果](docs/loopfill-preliminary-plan.md)、[汇总](results/loopfill-preliminary-20261109-v2/full/summary.json)、[图（单层与额外命中率）](paper/figures/loopfill-preliminary-v2/preliminary-hit-rates.pdf)。
+
+**temperature=1 完整表1实验已完成（2026-11-09归档）**：三个模型×六个数据集×五种方法，90/90组、31,380/31,380次请求；B=1、最多512 token。LoopFill-online在六数据集上的延迟加速比几何均值：Huginn-3.5B 2.37×、Ouro-1.4B 3.22×、Ouro-2.6B 3.49×。原greedy结果保留。见[协议与验证](docs/loopfill-latency512-t1.md)、[结果表](results/loopfill-latency512-t1-20261108/table1.md)、[候选命中率](results/loopfill-latency512-t1-20261108/candidate-hit-rates.md)、[汇总CSV](results/loopfill-latency512-t1-20261108/measurements.csv)。
 
 **表 1、表 2 最终结果（2026-11-08）**：表1全部90组、31,380条请求完成；表2为74组成功、1组实测OOM（Huginn/WFD/B16）。表1曾因W&B上传超时标记失败的单元已补传，云端artifact下载哈希与本地一致，原失败记录保留。实验均为单次计时，BF16输出差异与任务质量需单独评估。
 

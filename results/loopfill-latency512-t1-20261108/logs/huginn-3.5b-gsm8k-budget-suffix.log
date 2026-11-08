@@ -1,0 +1,350 @@
+Loading huginn-3.5b budget-suffix gsm8k
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.13s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.33s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.31s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.07it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.06s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run b1f260a41233
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-gsm8k-budget-suffix/wandb/run-20261108_130610-b1f260a41233
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-gsm8k-budget-suffix
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/b1f260a41233
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-gsm8k-budget-suffix 1/300 decode=5.903s tokens=47
+huginn-3.5b-gsm8k-budget-suffix 2/300 decode=12.826s tokens=115
+huginn-3.5b-gsm8k-budget-suffix 3/300 decode=6.297s tokens=65
+huginn-3.5b-gsm8k-budget-suffix 4/300 decode=18.213s tokens=163
+huginn-3.5b-gsm8k-budget-suffix 5/300 decode=10.321s tokens=83
+huginn-3.5b-gsm8k-budget-suffix 6/300 decode=5.109s tokens=47
+huginn-3.5b-gsm8k-budget-suffix 7/300 decode=15.523s tokens=134
+huginn-3.5b-gsm8k-budget-suffix 8/300 decode=10.642s tokens=91
+huginn-3.5b-gsm8k-budget-suffix 9/300 decode=13.276s tokens=109
+huginn-3.5b-gsm8k-budget-suffix 10/300 decode=12.216s tokens=122
+huginn-3.5b-gsm8k-budget-suffix 11/300 decode=11.987s tokens=112
+huginn-3.5b-gsm8k-budget-suffix 12/300 decode=13.875s tokens=112
+huginn-3.5b-gsm8k-budget-suffix 13/300 decode=6.187s tokens=54
+huginn-3.5b-gsm8k-budget-suffix 14/300 decode=6.332s tokens=53
+huginn-3.5b-gsm8k-budget-suffix 15/300 decode=12.093s tokens=100
+huginn-3.5b-gsm8k-budget-suffix 16/300 decode=4.398s tokens=42
+huginn-3.5b-gsm8k-budget-suffix 17/300 decode=11.864s tokens=104
+huginn-3.5b-gsm8k-budget-suffix 18/300 decode=22.494s tokens=219
+huginn-3.5b-gsm8k-budget-suffix 19/300 decode=9.775s tokens=104
+huginn-3.5b-gsm8k-budget-suffix 20/300 decode=6.502s tokens=75
+huginn-3.5b-gsm8k-budget-suffix 21/300 decode=13.444s tokens=114
+huginn-3.5b-gsm8k-budget-suffix 22/300 decode=10.077s tokens=85
+huginn-3.5b-gsm8k-budget-suffix 23/300 decode=9.936s tokens=84
+huginn-3.5b-gsm8k-budget-suffix 24/300 decode=21.071s tokens=210
+huginn-3.5b-gsm8k-budget-suffix 25/300 decode=23.290s tokens=180
+huginn-3.5b-gsm8k-budget-suffix 26/300 decode=8.874s tokens=84
+huginn-3.5b-gsm8k-budget-suffix 27/300 decode=9.293s tokens=78
+huginn-3.5b-gsm8k-budget-suffix 28/300 decode=13.184s tokens=106
+huginn-3.5b-gsm8k-budget-suffix 29/300 decode=8.864s tokens=81
+huginn-3.5b-gsm8k-budget-suffix 30/300 decode=15.806s tokens=143
+huginn-3.5b-gsm8k-budget-suffix 31/300 decode=17.016s tokens=155
+huginn-3.5b-gsm8k-budget-suffix 32/300 decode=9.439s tokens=82
+huginn-3.5b-gsm8k-budget-suffix 33/300 decode=16.805s tokens=137
+huginn-3.5b-gsm8k-budget-suffix 34/300 decode=9.923s tokens=90
+huginn-3.5b-gsm8k-budget-suffix 35/300 decode=12.962s tokens=137
+huginn-3.5b-gsm8k-budget-suffix 36/300 decode=7.496s tokens=62
+huginn-3.5b-gsm8k-budget-suffix 37/300 decode=14.284s tokens=142
+huginn-3.5b-gsm8k-budget-suffix 38/300 decode=24.377s tokens=256
+huginn-3.5b-gsm8k-budget-suffix 39/300 decode=17.880s tokens=176
+huginn-3.5b-gsm8k-budget-suffix 40/300 decode=20.203s tokens=167
+huginn-3.5b-gsm8k-budget-suffix 41/300 decode=5.900s tokens=65
+huginn-3.5b-gsm8k-budget-suffix 42/300 decode=7.734s tokens=60
+huginn-3.5b-gsm8k-budget-suffix 43/300 decode=9.914s tokens=90
+huginn-3.5b-gsm8k-budget-suffix 44/300 decode=10.769s tokens=102
+huginn-3.5b-gsm8k-budget-suffix 45/300 decode=6.551s tokens=74
+huginn-3.5b-gsm8k-budget-suffix 46/300 decode=11.604s tokens=93
+huginn-3.5b-gsm8k-budget-suffix 47/300 decode=6.338s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 48/300 decode=34.933s tokens=268
+huginn-3.5b-gsm8k-budget-suffix 49/300 decode=18.013s tokens=149
+huginn-3.5b-gsm8k-budget-suffix 50/300 decode=41.588s tokens=376
+huginn-3.5b-gsm8k-budget-suffix 51/300 decode=2.720s tokens=30
+huginn-3.5b-gsm8k-budget-suffix 52/300 decode=30.417s tokens=250
+huginn-3.5b-gsm8k-budget-suffix 53/300 decode=14.653s tokens=145
+huginn-3.5b-gsm8k-budget-suffix 54/300 decode=16.678s tokens=171
+huginn-3.5b-gsm8k-budget-suffix 55/300 decode=11.799s tokens=117
+huginn-3.5b-gsm8k-budget-suffix 56/300 decode=35.315s tokens=305
+huginn-3.5b-gsm8k-budget-suffix 57/300 decode=8.647s tokens=78
+huginn-3.5b-gsm8k-budget-suffix 58/300 decode=14.054s tokens=130
+huginn-3.5b-gsm8k-budget-suffix 59/300 decode=10.164s tokens=93
+huginn-3.5b-gsm8k-budget-suffix 60/300 decode=11.496s tokens=97
+huginn-3.5b-gsm8k-budget-suffix 61/300 decode=7.440s tokens=65
+huginn-3.5b-gsm8k-budget-suffix 62/300 decode=9.650s tokens=99
+huginn-3.5b-gsm8k-budget-suffix 63/300 decode=10.142s tokens=82
+huginn-3.5b-gsm8k-budget-suffix 64/300 decode=14.720s tokens=117
+huginn-3.5b-gsm8k-budget-suffix 65/300 decode=18.465s tokens=180
+huginn-3.5b-gsm8k-budget-suffix 66/300 decode=5.128s tokens=45
+huginn-3.5b-gsm8k-budget-suffix 67/300 decode=14.512s tokens=120
+huginn-3.5b-gsm8k-budget-suffix 68/300 decode=3.000s tokens=23
+huginn-3.5b-gsm8k-budget-suffix 69/300 decode=14.763s tokens=118
+huginn-3.5b-gsm8k-budget-suffix 70/300 decode=4.944s tokens=39
+huginn-3.5b-gsm8k-budget-suffix 71/300 decode=17.749s tokens=192
+huginn-3.5b-gsm8k-budget-suffix 72/300 decode=10.066s tokens=90
+huginn-3.5b-gsm8k-budget-suffix 73/300 decode=4.817s tokens=42
+huginn-3.5b-gsm8k-budget-suffix 74/300 decode=13.791s tokens=127
+huginn-3.5b-gsm8k-budget-suffix 75/300 decode=8.210s tokens=67
+huginn-3.5b-gsm8k-budget-suffix 76/300 decode=11.701s tokens=111
+huginn-3.5b-gsm8k-budget-suffix 77/300 decode=9.418s tokens=80
+huginn-3.5b-gsm8k-budget-suffix 78/300 decode=4.050s tokens=38
+huginn-3.5b-gsm8k-budget-suffix 79/300 decode=10.239s tokens=94
+huginn-3.5b-gsm8k-budget-suffix 80/300 decode=17.207s tokens=142
+huginn-3.5b-gsm8k-budget-suffix 81/300 decode=17.170s tokens=169
+huginn-3.5b-gsm8k-budget-suffix 82/300 decode=7.785s tokens=68
+huginn-3.5b-gsm8k-budget-suffix 83/300 decode=13.268s tokens=119
+huginn-3.5b-gsm8k-budget-suffix 84/300 decode=7.382s tokens=64
+huginn-3.5b-gsm8k-budget-suffix 85/300 decode=8.613s tokens=93
+huginn-3.5b-gsm8k-budget-suffix 86/300 decode=9.001s tokens=78
+huginn-3.5b-gsm8k-budget-suffix 87/300 decode=8.782s tokens=72
+huginn-3.5b-gsm8k-budget-suffix 88/300 decode=12.004s tokens=95
+huginn-3.5b-gsm8k-budget-suffix 89/300 decode=3.930s tokens=35
+huginn-3.5b-gsm8k-budget-suffix 90/300 decode=47.570s tokens=399
+huginn-3.5b-gsm8k-budget-suffix 91/300 decode=13.895s tokens=120
+huginn-3.5b-gsm8k-budget-suffix 92/300 decode=6.408s tokens=56
+huginn-3.5b-gsm8k-budget-suffix 93/300 decode=15.050s tokens=147
+huginn-3.5b-gsm8k-budget-suffix 94/300 decode=5.429s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 95/300 decode=5.905s tokens=47
+huginn-3.5b-gsm8k-budget-suffix 96/300 decode=8.449s tokens=81
+huginn-3.5b-gsm8k-budget-suffix 97/300 decode=1.972s tokens=21
+huginn-3.5b-gsm8k-budget-suffix 98/300 decode=9.649s tokens=86
+huginn-3.5b-gsm8k-budget-suffix 99/300 decode=6.486s tokens=54
+huginn-3.5b-gsm8k-budget-suffix 100/300 decode=3.919s tokens=34
+huginn-3.5b-gsm8k-budget-suffix 101/300 decode=10.854s tokens=106
+huginn-3.5b-gsm8k-budget-suffix 102/300 decode=6.064s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 103/300 decode=11.736s tokens=107
+huginn-3.5b-gsm8k-budget-suffix 104/300 decode=17.386s tokens=181
+huginn-3.5b-gsm8k-budget-suffix 105/300 decode=2.422s tokens=21
+huginn-3.5b-gsm8k-budget-suffix 106/300 decode=40.178s tokens=414
+huginn-3.5b-gsm8k-budget-suffix 107/300 decode=8.724s tokens=81
+huginn-3.5b-gsm8k-budget-suffix 108/300 decode=12.507s tokens=125
+huginn-3.5b-gsm8k-budget-suffix 109/300 decode=7.470s tokens=78
+huginn-3.5b-gsm8k-budget-suffix 110/300 decode=11.034s tokens=96
+huginn-3.5b-gsm8k-budget-suffix 111/300 decode=6.655s tokens=65
+huginn-3.5b-gsm8k-budget-suffix 112/300 decode=22.801s tokens=221
+huginn-3.5b-gsm8k-budget-suffix 113/300 decode=8.541s tokens=73
+huginn-3.5b-gsm8k-budget-suffix 114/300 decode=5.143s tokens=49
+huginn-3.5b-gsm8k-budget-suffix 115/300 decode=5.431s tokens=71
+huginn-3.5b-gsm8k-budget-suffix 116/300 decode=18.046s tokens=170
+huginn-3.5b-gsm8k-budget-suffix 117/300 decode=17.162s tokens=160
+huginn-3.5b-gsm8k-budget-suffix 118/300 decode=6.621s tokens=63
+huginn-3.5b-gsm8k-budget-suffix 119/300 decode=10.944s tokens=100
+huginn-3.5b-gsm8k-budget-suffix 120/300 decode=9.052s tokens=87
+huginn-3.5b-gsm8k-budget-suffix 121/300 decode=5.875s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 122/300 decode=12.163s tokens=107
+huginn-3.5b-gsm8k-budget-suffix 123/300 decode=5.561s tokens=48
+huginn-3.5b-gsm8k-budget-suffix 124/300 decode=11.432s tokens=99
+huginn-3.5b-gsm8k-budget-suffix 125/300 decode=12.039s tokens=108
+huginn-3.5b-gsm8k-budget-suffix 126/300 decode=9.658s tokens=87
+huginn-3.5b-gsm8k-budget-suffix 127/300 decode=12.699s tokens=118
+huginn-3.5b-gsm8k-budget-suffix 128/300 decode=7.170s tokens=54
+huginn-3.5b-gsm8k-budget-suffix 129/300 decode=6.429s tokens=53
+huginn-3.5b-gsm8k-budget-suffix 130/300 decode=13.338s tokens=128
+huginn-3.5b-gsm8k-budget-suffix 131/300 decode=24.308s tokens=217
+huginn-3.5b-gsm8k-budget-suffix 132/300 decode=6.851s tokens=75
+huginn-3.5b-gsm8k-budget-suffix 133/300 decode=11.845s tokens=99
+huginn-3.5b-gsm8k-budget-suffix 134/300 decode=8.872s tokens=110
+huginn-3.5b-gsm8k-budget-suffix 135/300 decode=12.817s tokens=125
+huginn-3.5b-gsm8k-budget-suffix 136/300 decode=11.366s tokens=111
+huginn-3.5b-gsm8k-budget-suffix 137/300 decode=10.305s tokens=87
+huginn-3.5b-gsm8k-budget-suffix 138/300 decode=6.478s tokens=68
+huginn-3.5b-gsm8k-budget-suffix 139/300 decode=10.674s tokens=108
+huginn-3.5b-gsm8k-budget-suffix 140/300 decode=10.205s tokens=93
+huginn-3.5b-gsm8k-budget-suffix 141/300 decode=5.996s tokens=51
+huginn-3.5b-gsm8k-budget-suffix 142/300 decode=14.388s tokens=123
+huginn-3.5b-gsm8k-budget-suffix 143/300 decode=10.626s tokens=90
+huginn-3.5b-gsm8k-budget-suffix 144/300 decode=13.652s tokens=140
+huginn-3.5b-gsm8k-budget-suffix 145/300 decode=11.442s tokens=96
+huginn-3.5b-gsm8k-budget-suffix 146/300 decode=11.748s tokens=117
+huginn-3.5b-gsm8k-budget-suffix 147/300 decode=12.655s tokens=126
+huginn-3.5b-gsm8k-budget-suffix 148/300 decode=11.673s tokens=103
+huginn-3.5b-gsm8k-budget-suffix 149/300 decode=3.795s tokens=43
+huginn-3.5b-gsm8k-budget-suffix 150/300 decode=3.632s tokens=31
+huginn-3.5b-gsm8k-budget-suffix 151/300 decode=8.181s tokens=74
+huginn-3.5b-gsm8k-budget-suffix 152/300 decode=8.449s tokens=89
+huginn-3.5b-gsm8k-budget-suffix 153/300 decode=7.967s tokens=76
+huginn-3.5b-gsm8k-budget-suffix 154/300 decode=10.002s tokens=98
+huginn-3.5b-gsm8k-budget-suffix 155/300 decode=11.355s tokens=104
+huginn-3.5b-gsm8k-budget-suffix 156/300 decode=15.423s tokens=132
+huginn-3.5b-gsm8k-budget-suffix 157/300 decode=21.128s tokens=176
+huginn-3.5b-gsm8k-budget-suffix 158/300 decode=2.724s tokens=24
+huginn-3.5b-gsm8k-budget-suffix 159/300 decode=12.224s tokens=119
+huginn-3.5b-gsm8k-budget-suffix 160/300 decode=12.197s tokens=107
+huginn-3.5b-gsm8k-budget-suffix 161/300 decode=16.500s tokens=163
+huginn-3.5b-gsm8k-budget-suffix 162/300 decode=3.041s tokens=30
+huginn-3.5b-gsm8k-budget-suffix 163/300 decode=7.707s tokens=70
+huginn-3.5b-gsm8k-budget-suffix 164/300 decode=11.468s tokens=105
+huginn-3.5b-gsm8k-budget-suffix 165/300 decode=23.674s tokens=187
+huginn-3.5b-gsm8k-budget-suffix 166/300 decode=6.209s tokens=54
+huginn-3.5b-gsm8k-budget-suffix 167/300 decode=11.955s tokens=107
+huginn-3.5b-gsm8k-budget-suffix 168/300 decode=6.819s tokens=63
+huginn-3.5b-gsm8k-budget-suffix 169/300 decode=9.569s tokens=88
+huginn-3.5b-gsm8k-budget-suffix 170/300 decode=10.430s tokens=95
+huginn-3.5b-gsm8k-budget-suffix 171/300 decode=8.644s tokens=82
+huginn-3.5b-gsm8k-budget-suffix 172/300 decode=9.641s tokens=81
+huginn-3.5b-gsm8k-budget-suffix 173/300 decode=8.280s tokens=75
+huginn-3.5b-gsm8k-budget-suffix 174/300 decode=15.768s tokens=128
+huginn-3.5b-gsm8k-budget-suffix 175/300 decode=7.407s tokens=76
+huginn-3.5b-gsm8k-budget-suffix 176/300 decode=12.252s tokens=109
+huginn-3.5b-gsm8k-budget-suffix 177/300 decode=11.979s tokens=104
+huginn-3.5b-gsm8k-budget-suffix 178/300 decode=3.809s tokens=39
+huginn-3.5b-gsm8k-budget-suffix 179/300 decode=4.698s tokens=43
+huginn-3.5b-gsm8k-budget-suffix 180/300 decode=69.675s tokens=512
+huginn-3.5b-gsm8k-budget-suffix 181/300 decode=8.886s tokens=91
+huginn-3.5b-gsm8k-budget-suffix 182/300 decode=6.176s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 183/300 decode=20.145s tokens=167
+huginn-3.5b-gsm8k-budget-suffix 184/300 decode=20.036s tokens=177
+huginn-3.5b-gsm8k-budget-suffix 185/300 decode=4.844s tokens=41
+huginn-3.5b-gsm8k-budget-suffix 186/300 decode=9.037s tokens=92
+huginn-3.5b-gsm8k-budget-suffix 187/300 decode=7.259s tokens=67
+huginn-3.5b-gsm8k-budget-suffix 188/300 decode=6.065s tokens=61
+huginn-3.5b-gsm8k-budget-suffix 189/300 decode=35.360s tokens=306
+huginn-3.5b-gsm8k-budget-suffix 190/300 decode=8.856s tokens=73
+huginn-3.5b-gsm8k-budget-suffix 191/300 decode=21.727s tokens=194
+huginn-3.5b-gsm8k-budget-suffix 192/300 decode=21.668s tokens=203
+huginn-3.5b-gsm8k-budget-suffix 193/300 decode=4.191s tokens=41
+huginn-3.5b-gsm8k-budget-suffix 194/300 decode=16.702s tokens=172
+huginn-3.5b-gsm8k-budget-suffix 195/300 decode=12.691s tokens=140
+huginn-3.5b-gsm8k-budget-suffix 196/300 decode=7.521s tokens=68
+huginn-3.5b-gsm8k-budget-suffix 197/300 decode=10.870s tokens=87
+huginn-3.5b-gsm8k-budget-suffix 198/300 decode=9.224s tokens=91
+huginn-3.5b-gsm8k-budget-suffix 199/300 decode=17.555s tokens=180
+huginn-3.5b-gsm8k-budget-suffix 200/300 decode=7.799s tokens=76
+huginn-3.5b-gsm8k-budget-suffix 201/300 decode=12.409s tokens=133
+huginn-3.5b-gsm8k-budget-suffix 202/300 decode=9.100s tokens=85
+huginn-3.5b-gsm8k-budget-suffix 203/300 decode=12.312s tokens=112
+huginn-3.5b-gsm8k-budget-suffix 204/300 decode=9.388s tokens=102
+huginn-3.5b-gsm8k-budget-suffix 205/300 decode=12.404s tokens=127
+huginn-3.5b-gsm8k-budget-suffix 206/300 decode=14.914s tokens=126
+huginn-3.5b-gsm8k-budget-suffix 207/300 decode=29.199s tokens=240
+huginn-3.5b-gsm8k-budget-suffix 208/300 decode=7.862s tokens=66
+huginn-3.5b-gsm8k-budget-suffix 209/300 decode=5.604s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 210/300 decode=2.865s tokens=32
+huginn-3.5b-gsm8k-budget-suffix 211/300 decode=15.972s tokens=137
+huginn-3.5b-gsm8k-budget-suffix 212/300 decode=7.570s tokens=70
+huginn-3.5b-gsm8k-budget-suffix 213/300 decode=6.350s tokens=56
+huginn-3.5b-gsm8k-budget-suffix 214/300 decode=10.304s tokens=94
+huginn-3.5b-gsm8k-budget-suffix 215/300 decode=11.429s tokens=101
+huginn-3.5b-gsm8k-budget-suffix 216/300 decode=9.203s tokens=81
+huginn-3.5b-gsm8k-budget-suffix 217/300 decode=4.146s tokens=38
+huginn-3.5b-gsm8k-budget-suffix 218/300 decode=10.099s tokens=101
+huginn-3.5b-gsm8k-budget-suffix 219/300 decode=3.652s tokens=37
+huginn-3.5b-gsm8k-budget-suffix 220/300 decode=12.523s tokens=112
+huginn-3.5b-gsm8k-budget-suffix 221/300 decode=10.967s tokens=105
+huginn-3.5b-gsm8k-budget-suffix 222/300 decode=21.075s tokens=204
+huginn-3.5b-gsm8k-budget-suffix 223/300 decode=35.788s tokens=307
+huginn-3.5b-gsm8k-budget-suffix 224/300 decode=23.171s tokens=246
+huginn-3.5b-gsm8k-budget-suffix 225/300 decode=27.645s tokens=243
+huginn-3.5b-gsm8k-budget-suffix 226/300 decode=6.655s tokens=70
+huginn-3.5b-gsm8k-budget-suffix 227/300 decode=14.496s tokens=117
+huginn-3.5b-gsm8k-budget-suffix 228/300 decode=17.545s tokens=160
+huginn-3.5b-gsm8k-budget-suffix 229/300 decode=15.809s tokens=143
+huginn-3.5b-gsm8k-budget-suffix 230/300 decode=10.253s tokens=88
+huginn-3.5b-gsm8k-budget-suffix 231/300 decode=7.914s tokens=71
+huginn-3.5b-gsm8k-budget-suffix 232/300 decode=4.807s tokens=41
+huginn-3.5b-gsm8k-budget-suffix 233/300 decode=14.636s tokens=145
+huginn-3.5b-gsm8k-budget-suffix 234/300 decode=17.075s tokens=151
+huginn-3.5b-gsm8k-budget-suffix 235/300 decode=21.921s tokens=193
+huginn-3.5b-gsm8k-budget-suffix 236/300 decode=9.831s tokens=91
+huginn-3.5b-gsm8k-budget-suffix 237/300 decode=6.613s tokens=67
+huginn-3.5b-gsm8k-budget-suffix 238/300 decode=8.619s tokens=82
+huginn-3.5b-gsm8k-budget-suffix 239/300 decode=18.804s tokens=158
+huginn-3.5b-gsm8k-budget-suffix 240/300 decode=8.266s tokens=75
+huginn-3.5b-gsm8k-budget-suffix 241/300 decode=4.501s tokens=49
+huginn-3.5b-gsm8k-budget-suffix 242/300 decode=6.460s tokens=56
+huginn-3.5b-gsm8k-budget-suffix 243/300 decode=23.229s tokens=221
+huginn-3.5b-gsm8k-budget-suffix 244/300 decode=21.027s tokens=188
+huginn-3.5b-gsm8k-budget-suffix 245/300 decode=14.805s tokens=132
+huginn-3.5b-gsm8k-budget-suffix 246/300 decode=15.386s tokens=142
+huginn-3.5b-gsm8k-budget-suffix 247/300 decode=8.906s tokens=100
+huginn-3.5b-gsm8k-budget-suffix 248/300 decode=22.131s tokens=253
+huginn-3.5b-gsm8k-budget-suffix 249/300 decode=19.004s tokens=170
+huginn-3.5b-gsm8k-budget-suffix 250/300 decode=14.771s tokens=139
+huginn-3.5b-gsm8k-budget-suffix 251/300 decode=12.056s tokens=107
+huginn-3.5b-gsm8k-budget-suffix 252/300 decode=4.383s tokens=38
+huginn-3.5b-gsm8k-budget-suffix 253/300 decode=22.069s tokens=181
+huginn-3.5b-gsm8k-budget-suffix 254/300 decode=9.216s tokens=74
+huginn-3.5b-gsm8k-budget-suffix 255/300 decode=12.334s tokens=108
+huginn-3.5b-gsm8k-budget-suffix 256/300 decode=11.424s tokens=96
+huginn-3.5b-gsm8k-budget-suffix 257/300 decode=8.949s tokens=79
+huginn-3.5b-gsm8k-budget-suffix 258/300 decode=12.555s tokens=123
+huginn-3.5b-gsm8k-budget-suffix 259/300 decode=11.356s tokens=106
+huginn-3.5b-gsm8k-budget-suffix 260/300 decode=6.492s tokens=60
+huginn-3.5b-gsm8k-budget-suffix 261/300 decode=10.580s tokens=86
+huginn-3.5b-gsm8k-budget-suffix 262/300 decode=29.557s tokens=223
+huginn-3.5b-gsm8k-budget-suffix 263/300 decode=15.623s tokens=138
+huginn-3.5b-gsm8k-budget-suffix 264/300 decode=9.102s tokens=73
+huginn-3.5b-gsm8k-budget-suffix 265/300 decode=5.933s tokens=53
+huginn-3.5b-gsm8k-budget-suffix 266/300 decode=11.550s tokens=108
+huginn-3.5b-gsm8k-budget-suffix 267/300 decode=3.307s tokens=30
+huginn-3.5b-gsm8k-budget-suffix 268/300 decode=11.061s tokens=99
+huginn-3.5b-gsm8k-budget-suffix 269/300 decode=4.640s tokens=48
+huginn-3.5b-gsm8k-budget-suffix 270/300 decode=14.184s tokens=149
+huginn-3.5b-gsm8k-budget-suffix 271/300 decode=9.648s tokens=90
+huginn-3.5b-gsm8k-budget-suffix 272/300 decode=5.169s tokens=48
+huginn-3.5b-gsm8k-budget-suffix 273/300 decode=10.168s tokens=88
+huginn-3.5b-gsm8k-budget-suffix 274/300 decode=5.996s tokens=57
+huginn-3.5b-gsm8k-budget-suffix 275/300 decode=12.426s tokens=109
+huginn-3.5b-gsm8k-budget-suffix 276/300 decode=6.817s tokens=59
+huginn-3.5b-gsm8k-budget-suffix 277/300 decode=6.189s tokens=55
+huginn-3.5b-gsm8k-budget-suffix 278/300 decode=10.267s tokens=116
+huginn-3.5b-gsm8k-budget-suffix 279/300 decode=5.138s tokens=47
+huginn-3.5b-gsm8k-budget-suffix 280/300 decode=0.307s tokens=3
+huginn-3.5b-gsm8k-budget-suffix 281/300 decode=6.716s tokens=57
+huginn-3.5b-gsm8k-budget-suffix 282/300 decode=12.967s tokens=128
+huginn-3.5b-gsm8k-budget-suffix 283/300 decode=9.085s tokens=91
+huginn-3.5b-gsm8k-budget-suffix 284/300 decode=10.021s tokens=93
+huginn-3.5b-gsm8k-budget-suffix 285/300 decode=7.724s tokens=66
+huginn-3.5b-gsm8k-budget-suffix 286/300 decode=26.777s tokens=257
+huginn-3.5b-gsm8k-budget-suffix 287/300 decode=10.752s tokens=91
+huginn-3.5b-gsm8k-budget-suffix 288/300 decode=10.116s tokens=89
+huginn-3.5b-gsm8k-budget-suffix 289/300 decode=11.608s tokens=111
+huginn-3.5b-gsm8k-budget-suffix 290/300 decode=13.706s tokens=131
+huginn-3.5b-gsm8k-budget-suffix 291/300 decode=4.269s tokens=41
+huginn-3.5b-gsm8k-budget-suffix 292/300 decode=12.186s tokens=118
+huginn-3.5b-gsm8k-budget-suffix 293/300 decode=10.012s tokens=94
+huginn-3.5b-gsm8k-budget-suffix 294/300 decode=6.921s tokens=62
+huginn-3.5b-gsm8k-budget-suffix 295/300 decode=7.561s tokens=70
+huginn-3.5b-gsm8k-budget-suffix 296/300 decode=6.428s tokens=62
+huginn-3.5b-gsm8k-budget-suffix 297/300 decode=13.678s tokens=109
+huginn-3.5b-gsm8k-budget-suffix 298/300 decode=4.979s tokens=49
+huginn-3.5b-gsm8k-budget-suffix 299/300 decode=12.485s tokens=100
+huginn-3.5b-gsm8k-budget-suffix 300/300 decode=9.947s tokens=89
+wandb: updating run metadata
+wandb: updating run metadata; uploading requests.jsonl; uploading output.log; uploading wandb-summary.json
+wandb: updating run metadata; uploading requests.jsonl; uploading wandb-summary.json
+wandb: uploading requests.jsonl; uploading wandb-summary.json; updating run metadata
+wandb: uploading requests.jsonl; uploading config.yaml
+wandb: uploading history steps 299-299, summary
+wandb: 
+wandb: Run history:
+wandb:          aggregate/cap_stopped ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁██████████████
+wandb:   aggregate/completed_requests ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇▇██
+wandb:             aggregate/decode_s ▁▁▁▁▁▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:       aggregate/decode_token_s ▁▃▄▄▇▆▅▅▅▅▅▄▅▅▆▇▇███████▇▆▇▇▇▇▇▇▇▇▇▇▇██▇
+wandb:        aggregate/decode_tokens ▁▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▆▆▆▇▇▇▇▇▇▇███
+wandb:           aggregate/draft_hits ▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇█████
+wandb:                aggregate/gamma ▁▃▆▆▅▆▆▆▆▆▅▆▇▇▇▇▇███▇▇▇▇▇▇▇▇█▇██████▇▇▇█
+wandb:           aggregate/loop_steps ▁▁▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▇▇▇▇▇█████
+wandb: aggregate/mean_acceptance_rate ▁▁▂▆▅▄▅▆▅▆▆▆▅▅▅▅▅▆▆▆▇▇▇▇▇▇▇▇▇███████████
+wandb:        aggregate/mean_decode_s ▁▄▅▄▄▆▆▇▇█▇▇▇▇▇▇▇▇▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▆▇▆▆▆▆
+wandb:                             +6 ...
+wandb: 
+wandb: Run summary:
+wandb:          aggregate/cap_stopped 1
+wandb:   aggregate/completed_requests 300
+wandb:             aggregate/decode_s 3572.12557
+wandb:       aggregate/decode_token_s 9.01088
+wandb:        aggregate/decode_tokens 32188
+wandb:           aggregate/draft_hits 8679
+wandb:                aggregate/gamma 1.36148
+wandb:           aggregate/loop_steps 756544
+wandb: aggregate/mean_acceptance_rate 0.27077
+wandb:        aggregate/mean_decode_s 11.90709
+wandb:                            +35 ...
+wandb: 
+wandb: 🚀 View run huginn-3.5b-gsm8k-budget-suffix at: https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/b1f260a41233
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-gsm8k-budget-suffix/wandb/run-20261108_130610-b1f260a41233/logs

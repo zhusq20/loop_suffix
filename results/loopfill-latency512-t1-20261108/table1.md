@@ -1,0 +1,34 @@
+# Table 1 — Temperature=1 latency speedup and acceptance length
+
+90/90 cells complete; 31,380 requests. Each entry is latency speedup vs AR × / loop-normalized γ. B=1, up to 512 new tokens, decode-only timing, one repeat; temperature=1, top_p=1, no top-k truncation, sampling seed=0. GM is the unweighted geometric mean of six dataset speedups.
+
+## huginn-3.5b
+
+| Method | GSM8K | MATH-500 | BBH | HumanEval+ | MBPP+ | SpecBench | GM speedup |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AR | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 |
+| WFD | 1.58 / 2.08 | 1.78 / 2.46 | 2.08 / 2.71 | 1.74 / 2.52 | 1.84 / 2.44 | 1.50 / 1.93 | 1.74 |
+| LoopSpec | 1.82 / 2.67 | 2.15 / 3.04 | 2.36 / 3.41 | 2.53 / 3.17 | 2.13 / 3.00 | 1.65 / 2.23 | 2.08 |
+| Suffix-only | 1.21 / 1.36 | 1.48 / 1.61 | 1.80 / 1.93 | 1.49 / 1.52 | 1.38 / 1.47 | 1.20 / 1.26 | 1.41 |
+| LoopFill-online | 2.13 / 3.20 | 2.43 / 3.71 | 2.83 / 4.25 | 2.70 / 3.75 | 2.50 / 3.66 | 1.79 / 2.58 | 2.37 |
+
+## ouro-1.4b
+
+| Method | GSM8K | MATH-500 | BBH | HumanEval+ | MBPP+ | SpecBench | GM speedup |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AR | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 |
+| WFD | 2.25 / 2.37 | 2.32 / 2.50 | 2.18 / 2.36 | 2.40 / 2.69 | 2.08 / 2.43 | 1.72 / 1.96 | 2.15 |
+| LoopSpec | 2.29 / 2.59 | 2.43 / 2.66 | 2.34 / 2.55 | 2.55 / 2.85 | 2.28 / 2.58 | 1.80 / 2.10 | 2.27 |
+| Suffix-only | 1.41 / 1.56 | 1.54 / 1.64 | 1.69 / 1.84 | 1.65 / 1.81 | 1.40 / 1.57 | 1.21 / 1.39 | 1.47 |
+| LoopFill-online | 3.20 / 3.90 | 3.37 / 4.20 | 3.27 / 3.98 | 3.89 / 4.80 | 3.46 / 3.99 | 2.34 / 2.84 | 3.22 |
+
+## ouro-2.6b
+
+| Method | GSM8K | MATH-500 | BBH | HumanEval+ | MBPP+ | SpecBench | GM speedup |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| AR | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 |
+| WFD | 2.41 / 2.55 | 2.35 / 2.55 | 2.60 / 2.75 | 2.36 / 2.50 | 2.37 / 2.51 | 1.97 / 2.07 | 2.33 |
+| LoopSpec | 2.63 / 2.70 | 2.43 / 2.73 | 2.70 / 2.83 | 2.35 / 2.68 | 2.40 / 2.65 | 2.09 / 2.18 | 2.42 |
+| Suffix-only | 1.49 / 1.66 | 1.37 / 1.56 | 1.97 / 2.08 | 1.39 / 1.58 | 1.50 / 1.57 | 1.24 / 1.39 | 1.48 |
+| LoopFill-online | 3.65 / 4.15 | 3.47 / 4.18 | 4.45 / 5.12 | 3.54 / 4.27 | 3.60 / 4.13 | 2.52 / 3.04 | 3.49 |
+BF16, CUDA Graph off, same-engine baselines. Shared request/position random numbers do not guarantee identical outputs across different BF16 compute shapes. Single timing repeat and one sampling seed: no latency confidence intervals or task-quality claims. This batch is separate from temperature=0 results.

@@ -85,9 +85,53 @@ class OuroRunner:
     def _head(self, hidden: torch.Tensor) -> torch.Tensor:
         return self.model.lm_head(hidden)
 
+    def _new_cache(self):
+        # The released UniversalTransformerCache assigns to key_cache, which is
+        # a read-only property in Transformers 4.55. Ouro explicitly supports a
+        # growable DynamicCache; its layer_idx = loop * layers + physical_layer
+        # keeps all recurrence KV slots separate without modifying model code.
+        from transformers import DynamicCache
+
+        cache = DynamicCache()
+        # 4.55 calls this append_new_layers; empty slots prevent Ouro from
+        # replacing an undersized cache with its incompatible default class.
+        cache.append_new_layers(self.T * self.model.config.num_hidden_layers - 1)
+        return cache
+
+    @torch.no_grad()
+    def generate_with_readouts(self, prompt: torch.Tensor, max_new: int, stop: set[int]):
+        """Capture top-1 at each loop on the actual AR cache, including prefill.
+
+        Column i predicts output[i]. Each output-head call keeps the same [1,H]
+        shape as generate(); batching depths would change BF16 GEMM numerics.
+        The returned hidden states already include Ouro's per-loop final norm.
+        """
+        if max_new < 1:
+            raise ValueError("max_new must be positive")
+        tokens, reads = [], []
+        cache = self._new_cache()
+        step = prompt
+        while len(tokens) < max_new:
+            out, hs, _ = self.model.model(
+                input_ids=step, past_key_values=cache, use_cache=True
+            )
+            cache = out.past_key_values
+            if len(hs) != self.T:
+                raise ValueError("unexpected number of loop hidden states")
+            # Generate the full-depth reference before observing shallow heads.
+            target = int(self._head(hs[-1][:, -1]).argmax(-1))
+            reads.append([int(self._head(h[:, -1]).argmax(-1)) for h in hs[:-1]] + [target])
+            tokens.append(target)
+            if target in stop:
+                break
+            step = torch.tensor([[target]], device=prompt.device)
+        return tokens, np.asarray(reads, dtype=np.int32).T
+
     @torch.no_grad()
     def generate(self, prompt: torch.Tensor, max_new: int, stop: set[int]) -> list[int]:
-        out, hs, _ = self.model.model(input_ids=prompt, use_cache=True)
+        out, hs, _ = self.model.model(
+            input_ids=prompt, past_key_values=self._new_cache(), use_cache=True
+        )
         tokens = [int(self._head(hs[-1][:, -1]).argmax(-1))]
         cache = out.past_key_values
         while len(tokens) < max_new and tokens[-1] not in stop:

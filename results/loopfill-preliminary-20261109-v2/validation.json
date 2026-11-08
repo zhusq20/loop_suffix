@@ -1,0 +1,23 @@
+{
+  "unit_and_regression": {
+    "initial_all_45": "passed",
+    "after_cache_fix_cpu": {
+      "passed": 43
+    },
+    "after_cache_fix_gpu": {
+      "initial_attempt": "2 resource failures: GPU0 held in exclusive mode by experiment",
+      "rerun_on_locked_idle_gpu7": "2 passed"
+    }
+  },
+  "ruff": "passed",
+  "native_tiny_ouro": "online readouts == independent AR == no-cache full-sequence argmax, 8 separate KV slots",
+  "real_suffix_integration": "2 synthetic requests, 20 positions, completion-only cache, replay and bootstrap/plot passed",
+  "initial_failed_batch": "../loopfill-preliminary-20261109",
+  "pilot_gate": "all 12 independent full-length AR outputs must match exactly",
+  "pilot_result": {
+    "passed": true,
+    "requests": 12,
+    "eligible_positions": 4085,
+    "summary_sha256": "761fbb4c2fa16b4af797300b7fb6a948e30084d0c4127832922a9be88735dcd1"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "cpu_regression": {
+    "passed": 118,
+    "skipped": 36
+  },
+  "sampling_cpu_gpu_and_queue": {
+    "passed": 29
+  },
+  "frozen_source_files": 19,
+  "input_hashes_match_greedy_suite": true,
+  "real_checkpoint_smoke": {
+    "passed_cells": 15,
+    "requests_per_cell": 2,
+    "max_new_tokens": 16,
+    "details": "checks/real-checkpoint-smoke.json"
+  }
+}

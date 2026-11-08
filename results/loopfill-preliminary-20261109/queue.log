@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 451, in <module>
+    main()
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 447, in main
+    run(args.out)
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 406, in run
+    run_phase(out, 'pilot', protocol)
+  File "/ossfs/workspace/loop_suffix/results/loopfill-preliminary-20261109/source/scripts/loop_preliminary_suite.py", line 379, in run_phase
+    raise RuntimeError(f'{phase} workers failed: {outcomes}; inspect logs')
+RuntimeError: pilot workers failed: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}; inspect logs

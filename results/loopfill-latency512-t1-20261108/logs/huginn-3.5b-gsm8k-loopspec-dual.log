@@ -1,0 +1,347 @@
+Loading huginn-3.5b loopspec-dual gsm8k
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.32s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.23s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.33s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.02it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.10s/it]
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from WANDB_API_KEY.
+wandb: Currently logged in as: zhusq20 (zsqzz) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 6c8c9c2432bf
+wandb: Tracking run with wandb version 0.30.0
+wandb: Run data is saved locally in /ossfs/workspace/loop_suffix/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-gsm8k-loopspec-dual/wandb/run-20261108_101524-6c8c9c2432bf
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run huginn-3.5b-gsm8k-loopspec-dual
+wandb: ⭐️ View project at https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: 🚀 View run at https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/6c8c9c2432bf
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+huginn-3.5b-gsm8k-loopspec-dual 1/300 decode=4.605s tokens=81
+huginn-3.5b-gsm8k-loopspec-dual 2/300 decode=7.462s tokens=115
+huginn-3.5b-gsm8k-loopspec-dual 3/300 decode=3.617s tokens=65
+huginn-3.5b-gsm8k-loopspec-dual 4/300 decode=6.467s tokens=100
+huginn-3.5b-gsm8k-loopspec-dual 5/300 decode=8.888s tokens=102
+huginn-3.5b-gsm8k-loopspec-dual 6/300 decode=3.046s tokens=47
+huginn-3.5b-gsm8k-loopspec-dual 7/300 decode=3.795s tokens=47
+huginn-3.5b-gsm8k-loopspec-dual 8/300 decode=4.931s tokens=91
+huginn-3.5b-gsm8k-loopspec-dual 9/300 decode=13.811s tokens=145
+huginn-3.5b-gsm8k-loopspec-dual 10/300 decode=5.531s tokens=122
+huginn-3.5b-gsm8k-loopspec-dual 11/300 decode=4.236s tokens=93
+huginn-3.5b-gsm8k-loopspec-dual 12/300 decode=10.588s tokens=131
+huginn-3.5b-gsm8k-loopspec-dual 13/300 decode=4.072s tokens=61
+huginn-3.5b-gsm8k-loopspec-dual 14/300 decode=3.372s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 15/300 decode=7.893s tokens=107
+huginn-3.5b-gsm8k-loopspec-dual 16/300 decode=2.173s tokens=42
+huginn-3.5b-gsm8k-loopspec-dual 17/300 decode=5.231s tokens=100
+huginn-3.5b-gsm8k-loopspec-dual 18/300 decode=6.007s tokens=83
+huginn-3.5b-gsm8k-loopspec-dual 19/300 decode=5.994s tokens=106
+huginn-3.5b-gsm8k-loopspec-dual 20/300 decode=3.937s tokens=75
+huginn-3.5b-gsm8k-loopspec-dual 21/300 decode=11.694s tokens=129
+huginn-3.5b-gsm8k-loopspec-dual 22/300 decode=13.425s tokens=138
+huginn-3.5b-gsm8k-loopspec-dual 23/300 decode=12.157s tokens=141
+huginn-3.5b-gsm8k-loopspec-dual 24/300 decode=6.560s tokens=86
+huginn-3.5b-gsm8k-loopspec-dual 25/300 decode=18.715s tokens=138
+huginn-3.5b-gsm8k-loopspec-dual 26/300 decode=2.051s tokens=43
+huginn-3.5b-gsm8k-loopspec-dual 27/300 decode=5.522s tokens=84
+huginn-3.5b-gsm8k-loopspec-dual 28/300 decode=4.764s tokens=56
+huginn-3.5b-gsm8k-loopspec-dual 29/300 decode=5.003s tokens=81
+huginn-3.5b-gsm8k-loopspec-dual 30/300 decode=7.662s tokens=91
+huginn-3.5b-gsm8k-loopspec-dual 31/300 decode=6.230s tokens=98
+huginn-3.5b-gsm8k-loopspec-dual 32/300 decode=4.722s tokens=82
+huginn-3.5b-gsm8k-loopspec-dual 33/300 decode=10.093s tokens=136
+huginn-3.5b-gsm8k-loopspec-dual 34/300 decode=28.691s tokens=454
+huginn-3.5b-gsm8k-loopspec-dual 35/300 decode=13.321s tokens=185
+huginn-3.5b-gsm8k-loopspec-dual 36/300 decode=6.614s tokens=81
+huginn-3.5b-gsm8k-loopspec-dual 37/300 decode=17.947s tokens=228
+huginn-3.5b-gsm8k-loopspec-dual 38/300 decode=18.476s tokens=275
+huginn-3.5b-gsm8k-loopspec-dual 39/300 decode=6.263s tokens=83
+huginn-3.5b-gsm8k-loopspec-dual 40/300 decode=16.786s tokens=229
+huginn-3.5b-gsm8k-loopspec-dual 41/300 decode=4.576s tokens=65
+huginn-3.5b-gsm8k-loopspec-dual 42/300 decode=3.780s tokens=55
+huginn-3.5b-gsm8k-loopspec-dual 43/300 decode=3.685s tokens=69
+huginn-3.5b-gsm8k-loopspec-dual 44/300 decode=11.589s tokens=116
+huginn-3.5b-gsm8k-loopspec-dual 45/300 decode=9.280s tokens=172
+huginn-3.5b-gsm8k-loopspec-dual 46/300 decode=6.412s tokens=93
+huginn-3.5b-gsm8k-loopspec-dual 47/300 decode=3.255s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 48/300 decode=21.944s tokens=218
+huginn-3.5b-gsm8k-loopspec-dual 49/300 decode=8.033s tokens=95
+huginn-3.5b-gsm8k-loopspec-dual 50/300 decode=16.354s tokens=208
+huginn-3.5b-gsm8k-loopspec-dual 51/300 decode=3.096s tokens=38
+huginn-3.5b-gsm8k-loopspec-dual 52/300 decode=11.728s tokens=120
+huginn-3.5b-gsm8k-loopspec-dual 53/300 decode=3.733s tokens=68
+huginn-3.5b-gsm8k-loopspec-dual 54/300 decode=8.105s tokens=123
+huginn-3.5b-gsm8k-loopspec-dual 55/300 decode=2.427s tokens=56
+huginn-3.5b-gsm8k-loopspec-dual 56/300 decode=22.228s tokens=236
+huginn-3.5b-gsm8k-loopspec-dual 57/300 decode=4.275s tokens=78
+huginn-3.5b-gsm8k-loopspec-dual 58/300 decode=7.328s tokens=102
+huginn-3.5b-gsm8k-loopspec-dual 59/300 decode=7.330s tokens=128
+huginn-3.5b-gsm8k-loopspec-dual 60/300 decode=4.771s tokens=75
+huginn-3.5b-gsm8k-loopspec-dual 61/300 decode=4.321s tokens=65
+huginn-3.5b-gsm8k-loopspec-dual 62/300 decode=9.026s tokens=139
+huginn-3.5b-gsm8k-loopspec-dual 63/300 decode=5.006s tokens=70
+huginn-3.5b-gsm8k-loopspec-dual 64/300 decode=11.385s tokens=107
+huginn-3.5b-gsm8k-loopspec-dual 65/300 decode=12.530s tokens=238
+huginn-3.5b-gsm8k-loopspec-dual 66/300 decode=2.930s tokens=45
+huginn-3.5b-gsm8k-loopspec-dual 67/300 decode=19.733s tokens=205
+huginn-3.5b-gsm8k-loopspec-dual 68/300 decode=11.025s tokens=171
+huginn-3.5b-gsm8k-loopspec-dual 69/300 decode=3.502s tokens=46
+huginn-3.5b-gsm8k-loopspec-dual 70/300 decode=10.988s tokens=132
+huginn-3.5b-gsm8k-loopspec-dual 71/300 decode=7.840s tokens=151
+huginn-3.5b-gsm8k-loopspec-dual 72/300 decode=22.161s tokens=197
+huginn-3.5b-gsm8k-loopspec-dual 73/300 decode=9.313s tokens=110
+huginn-3.5b-gsm8k-loopspec-dual 74/300 decode=7.138s tokens=114
+huginn-3.5b-gsm8k-loopspec-dual 75/300 decode=6.463s tokens=84
+huginn-3.5b-gsm8k-loopspec-dual 76/300 decode=6.005s tokens=111
+huginn-3.5b-gsm8k-loopspec-dual 77/300 decode=17.676s tokens=216
+huginn-3.5b-gsm8k-loopspec-dual 78/300 decode=1.550s tokens=38
+huginn-3.5b-gsm8k-loopspec-dual 79/300 decode=4.071s tokens=56
+huginn-3.5b-gsm8k-loopspec-dual 80/300 decode=11.698s tokens=182
+huginn-3.5b-gsm8k-loopspec-dual 81/300 decode=2.911s tokens=42
+huginn-3.5b-gsm8k-loopspec-dual 82/300 decode=5.800s tokens=83
+huginn-3.5b-gsm8k-loopspec-dual 83/300 decode=5.391s tokens=69
+huginn-3.5b-gsm8k-loopspec-dual 84/300 decode=4.234s tokens=64
+huginn-3.5b-gsm8k-loopspec-dual 85/300 decode=11.463s tokens=128
+huginn-3.5b-gsm8k-loopspec-dual 86/300 decode=3.568s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 87/300 decode=7.315s tokens=92
+huginn-3.5b-gsm8k-loopspec-dual 88/300 decode=7.796s tokens=80
+huginn-3.5b-gsm8k-loopspec-dual 89/300 decode=2.968s tokens=40
+huginn-3.5b-gsm8k-loopspec-dual 90/300 decode=14.153s tokens=172
+huginn-3.5b-gsm8k-loopspec-dual 91/300 decode=6.030s tokens=98
+huginn-3.5b-gsm8k-loopspec-dual 92/300 decode=3.473s tokens=56
+huginn-3.5b-gsm8k-loopspec-dual 93/300 decode=7.676s tokens=116
+huginn-3.5b-gsm8k-loopspec-dual 94/300 decode=10.272s tokens=157
+huginn-3.5b-gsm8k-loopspec-dual 95/300 decode=4.721s tokens=66
+huginn-3.5b-gsm8k-loopspec-dual 96/300 decode=3.939s tokens=81
+huginn-3.5b-gsm8k-loopspec-dual 97/300 decode=1.215s tokens=21
+huginn-3.5b-gsm8k-loopspec-dual 98/300 decode=4.378s tokens=83
+huginn-3.5b-gsm8k-loopspec-dual 99/300 decode=5.031s tokens=72
+huginn-3.5b-gsm8k-loopspec-dual 100/300 decode=8.090s tokens=104
+huginn-3.5b-gsm8k-loopspec-dual 101/300 decode=3.895s tokens=94
+huginn-3.5b-gsm8k-loopspec-dual 102/300 decode=3.141s tokens=55
+huginn-3.5b-gsm8k-loopspec-dual 103/300 decode=10.094s tokens=131
+huginn-3.5b-gsm8k-loopspec-dual 104/300 decode=42.355s tokens=371
+huginn-3.5b-gsm8k-loopspec-dual 105/300 decode=1.519s tokens=21
+huginn-3.5b-gsm8k-loopspec-dual 106/300 decode=11.230s tokens=190
+huginn-3.5b-gsm8k-loopspec-dual 107/300 decode=6.491s tokens=76
+huginn-3.5b-gsm8k-loopspec-dual 108/300 decode=4.755s tokens=84
+huginn-3.5b-gsm8k-loopspec-dual 109/300 decode=5.756s tokens=72
+huginn-3.5b-gsm8k-loopspec-dual 110/300 decode=4.549s tokens=77
+huginn-3.5b-gsm8k-loopspec-dual 111/300 decode=3.429s tokens=66
+huginn-3.5b-gsm8k-loopspec-dual 112/300 decode=9.484s tokens=153
+huginn-3.5b-gsm8k-loopspec-dual 113/300 decode=8.202s tokens=125
+huginn-3.5b-gsm8k-loopspec-dual 114/300 decode=2.807s tokens=49
+huginn-3.5b-gsm8k-loopspec-dual 115/300 decode=3.208s tokens=71
+huginn-3.5b-gsm8k-loopspec-dual 116/300 decode=11.842s tokens=183
+huginn-3.5b-gsm8k-loopspec-dual 117/300 decode=5.792s tokens=97
+huginn-3.5b-gsm8k-loopspec-dual 118/300 decode=3.464s tokens=63
+huginn-3.5b-gsm8k-loopspec-dual 119/300 decode=11.237s tokens=144
+huginn-3.5b-gsm8k-loopspec-dual 120/300 decode=5.104s tokens=87
+huginn-3.5b-gsm8k-loopspec-dual 121/300 decode=3.693s tokens=49
+huginn-3.5b-gsm8k-loopspec-dual 122/300 decode=4.572s tokens=88
+huginn-3.5b-gsm8k-loopspec-dual 123/300 decode=3.713s tokens=44
+huginn-3.5b-gsm8k-loopspec-dual 124/300 decode=4.677s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 125/300 decode=10.044s tokens=129
+huginn-3.5b-gsm8k-loopspec-dual 126/300 decode=10.367s tokens=123
+huginn-3.5b-gsm8k-loopspec-dual 127/300 decode=4.672s tokens=79
+huginn-3.5b-gsm8k-loopspec-dual 128/300 decode=0.588s tokens=4
+huginn-3.5b-gsm8k-loopspec-dual 129/300 decode=10.172s tokens=150
+huginn-3.5b-gsm8k-loopspec-dual 130/300 decode=7.525s tokens=110
+huginn-3.5b-gsm8k-loopspec-dual 131/300 decode=14.954s tokens=207
+huginn-3.5b-gsm8k-loopspec-dual 132/300 decode=6.050s tokens=119
+huginn-3.5b-gsm8k-loopspec-dual 133/300 decode=7.075s tokens=99
+huginn-3.5b-gsm8k-loopspec-dual 134/300 decode=3.016s tokens=64
+huginn-3.5b-gsm8k-loopspec-dual 135/300 decode=7.608s tokens=124
+huginn-3.5b-gsm8k-loopspec-dual 136/300 decode=8.419s tokens=156
+huginn-3.5b-gsm8k-loopspec-dual 137/300 decode=17.388s tokens=239
+huginn-3.5b-gsm8k-loopspec-dual 138/300 decode=3.651s tokens=68
+huginn-3.5b-gsm8k-loopspec-dual 139/300 decode=11.151s tokens=150
+huginn-3.5b-gsm8k-loopspec-dual 140/300 decode=5.453s tokens=74
+huginn-3.5b-gsm8k-loopspec-dual 141/300 decode=3.640s tokens=51
+huginn-3.5b-gsm8k-loopspec-dual 142/300 decode=6.694s tokens=111
+huginn-3.5b-gsm8k-loopspec-dual 143/300 decode=10.189s tokens=122
+huginn-3.5b-gsm8k-loopspec-dual 144/300 decode=36.480s tokens=239
+huginn-3.5b-gsm8k-loopspec-dual 145/300 decode=13.679s tokens=136
+huginn-3.5b-gsm8k-loopspec-dual 146/300 decode=9.935s tokens=131
+huginn-3.5b-gsm8k-loopspec-dual 147/300 decode=10.678s tokens=163
+huginn-3.5b-gsm8k-loopspec-dual 148/300 decode=7.005s tokens=100
+huginn-3.5b-gsm8k-loopspec-dual 149/300 decode=2.085s tokens=43
+huginn-3.5b-gsm8k-loopspec-dual 150/300 decode=1.986s tokens=31
+huginn-3.5b-gsm8k-loopspec-dual 151/300 decode=4.656s tokens=72
+huginn-3.5b-gsm8k-loopspec-dual 152/300 decode=4.747s tokens=89
+huginn-3.5b-gsm8k-loopspec-dual 153/300 decode=4.404s tokens=84
+huginn-3.5b-gsm8k-loopspec-dual 154/300 decode=6.364s tokens=98
+huginn-3.5b-gsm8k-loopspec-dual 155/300 decode=11.609s tokens=170
+huginn-3.5b-gsm8k-loopspec-dual 156/300 decode=10.471s tokens=179
+huginn-3.5b-gsm8k-loopspec-dual 157/300 decode=12.110s tokens=112
+huginn-3.5b-gsm8k-loopspec-dual 158/300 decode=1.981s tokens=24
+huginn-3.5b-gsm8k-loopspec-dual 159/300 decode=4.847s tokens=68
+huginn-3.5b-gsm8k-loopspec-dual 160/300 decode=4.954s tokens=67
+huginn-3.5b-gsm8k-loopspec-dual 161/300 decode=5.290s tokens=92
+huginn-3.5b-gsm8k-loopspec-dual 162/300 decode=5.981s tokens=130
+huginn-3.5b-gsm8k-loopspec-dual 163/300 decode=4.638s tokens=70
+huginn-3.5b-gsm8k-loopspec-dual 164/300 decode=9.847s tokens=143
+huginn-3.5b-gsm8k-loopspec-dual 165/300 decode=34.148s tokens=327
+huginn-3.5b-gsm8k-loopspec-dual 166/300 decode=3.498s tokens=54
+huginn-3.5b-gsm8k-loopspec-dual 167/300 decode=9.410s tokens=131
+huginn-3.5b-gsm8k-loopspec-dual 168/300 decode=4.245s tokens=55
+huginn-3.5b-gsm8k-loopspec-dual 169/300 decode=5.899s tokens=90
+huginn-3.5b-gsm8k-loopspec-dual 170/300 decode=13.320s tokens=150
+huginn-3.5b-gsm8k-loopspec-dual 171/300 decode=4.089s tokens=83
+huginn-3.5b-gsm8k-loopspec-dual 172/300 decode=6.405s tokens=82
+huginn-3.5b-gsm8k-loopspec-dual 173/300 decode=8.372s tokens=110
+huginn-3.5b-gsm8k-loopspec-dual 174/300 decode=6.796s tokens=110
+huginn-3.5b-gsm8k-loopspec-dual 175/300 decode=8.529s tokens=143
+huginn-3.5b-gsm8k-loopspec-dual 176/300 decode=21.792s tokens=194
+huginn-3.5b-gsm8k-loopspec-dual 177/300 decode=9.847s tokens=158
+huginn-3.5b-gsm8k-loopspec-dual 178/300 decode=3.491s tokens=48
+huginn-3.5b-gsm8k-loopspec-dual 179/300 decode=4.277s tokens=57
+huginn-3.5b-gsm8k-loopspec-dual 180/300 decode=8.446s tokens=129
+huginn-3.5b-gsm8k-loopspec-dual 181/300 decode=5.886s tokens=103
+huginn-3.5b-gsm8k-loopspec-dual 182/300 decode=3.483s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 183/300 decode=9.428s tokens=113
+huginn-3.5b-gsm8k-loopspec-dual 184/300 decode=11.770s tokens=130
+huginn-3.5b-gsm8k-loopspec-dual 185/300 decode=3.840s tokens=51
+huginn-3.5b-gsm8k-loopspec-dual 186/300 decode=4.756s tokens=92
+huginn-3.5b-gsm8k-loopspec-dual 187/300 decode=3.450s tokens=67
+huginn-3.5b-gsm8k-loopspec-dual 188/300 decode=6.173s tokens=76
+huginn-3.5b-gsm8k-loopspec-dual 189/300 decode=5.438s tokens=62
+huginn-3.5b-gsm8k-loopspec-dual 190/300 decode=4.558s tokens=51
+huginn-3.5b-gsm8k-loopspec-dual 191/300 decode=5.577s tokens=77
+huginn-3.5b-gsm8k-loopspec-dual 192/300 decode=12.349s tokens=182
+huginn-3.5b-gsm8k-loopspec-dual 193/300 decode=3.025s tokens=40
+huginn-3.5b-gsm8k-loopspec-dual 194/300 decode=13.494s tokens=201
+huginn-3.5b-gsm8k-loopspec-dual 195/300 decode=10.367s tokens=157
+huginn-3.5b-gsm8k-loopspec-dual 196/300 decode=4.676s tokens=71
+huginn-3.5b-gsm8k-loopspec-dual 197/300 decode=24.799s tokens=265
+huginn-3.5b-gsm8k-loopspec-dual 198/300 decode=4.939s tokens=76
+huginn-3.5b-gsm8k-loopspec-dual 199/300 decode=11.669s tokens=192
+huginn-3.5b-gsm8k-loopspec-dual 200/300 decode=1.788s tokens=32
+huginn-3.5b-gsm8k-loopspec-dual 201/300 decode=7.577s tokens=133
+huginn-3.5b-gsm8k-loopspec-dual 202/300 decode=4.488s tokens=62
+huginn-3.5b-gsm8k-loopspec-dual 203/300 decode=5.934s tokens=65
+huginn-3.5b-gsm8k-loopspec-dual 204/300 decode=7.759s tokens=135
+huginn-3.5b-gsm8k-loopspec-dual 205/300 decode=3.508s tokens=66
+huginn-3.5b-gsm8k-loopspec-dual 206/300 decode=13.430s tokens=120
+huginn-3.5b-gsm8k-loopspec-dual 207/300 decode=9.017s tokens=107
+huginn-3.5b-gsm8k-loopspec-dual 208/300 decode=5.093s tokens=66
+huginn-3.5b-gsm8k-loopspec-dual 209/300 decode=3.361s tokens=58
+huginn-3.5b-gsm8k-loopspec-dual 210/300 decode=2.237s tokens=32
+huginn-3.5b-gsm8k-loopspec-dual 211/300 decode=12.848s tokens=138
+huginn-3.5b-gsm8k-loopspec-dual 212/300 decode=2.601s tokens=59
+huginn-3.5b-gsm8k-loopspec-dual 213/300 decode=4.345s tokens=69
+huginn-3.5b-gsm8k-loopspec-dual 214/300 decode=3.023s tokens=51
+huginn-3.5b-gsm8k-loopspec-dual 215/300 decode=6.308s tokens=90
+huginn-3.5b-gsm8k-loopspec-dual 216/300 decode=8.026s tokens=105
+huginn-3.5b-gsm8k-loopspec-dual 217/300 decode=1.909s tokens=38
+huginn-3.5b-gsm8k-loopspec-dual 218/300 decode=6.448s tokens=102
+huginn-3.5b-gsm8k-loopspec-dual 219/300 decode=1.576s tokens=37
+huginn-3.5b-gsm8k-loopspec-dual 220/300 decode=7.120s tokens=91
+huginn-3.5b-gsm8k-loopspec-dual 221/300 decode=10.804s tokens=151
+huginn-3.5b-gsm8k-loopspec-dual 222/300 decode=6.783s tokens=82
+huginn-3.5b-gsm8k-loopspec-dual 223/300 decode=31.167s tokens=397
+huginn-3.5b-gsm8k-loopspec-dual 224/300 decode=11.026s tokens=123
+huginn-3.5b-gsm8k-loopspec-dual 225/300 decode=8.867s tokens=114
+huginn-3.5b-gsm8k-loopspec-dual 226/300 decode=3.419s tokens=70
+huginn-3.5b-gsm8k-loopspec-dual 227/300 decode=4.159s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 228/300 decode=7.863s tokens=160
+huginn-3.5b-gsm8k-loopspec-dual 229/300 decode=11.208s tokens=143
+huginn-3.5b-gsm8k-loopspec-dual 230/300 decode=5.554s tokens=71
+huginn-3.5b-gsm8k-loopspec-dual 231/300 decode=4.147s tokens=71
+huginn-3.5b-gsm8k-loopspec-dual 232/300 decode=4.494s tokens=55
+huginn-3.5b-gsm8k-loopspec-dual 233/300 decode=8.733s tokens=146
+huginn-3.5b-gsm8k-loopspec-dual 234/300 decode=5.878s tokens=90
+huginn-3.5b-gsm8k-loopspec-dual 235/300 decode=6.627s tokens=82
+huginn-3.5b-gsm8k-loopspec-dual 236/300 decode=7.461s tokens=82
+huginn-3.5b-gsm8k-loopspec-dual 237/300 decode=3.176s tokens=67
+huginn-3.5b-gsm8k-loopspec-dual 238/300 decode=6.169s tokens=85
+huginn-3.5b-gsm8k-loopspec-dual 239/300 decode=9.661s tokens=147
+huginn-3.5b-gsm8k-loopspec-dual 240/300 decode=9.767s tokens=81
+huginn-3.5b-gsm8k-loopspec-dual 241/300 decode=2.438s tokens=49
+huginn-3.5b-gsm8k-loopspec-dual 242/300 decode=3.898s tokens=55
+huginn-3.5b-gsm8k-loopspec-dual 243/300 decode=12.144s tokens=145
+huginn-3.5b-gsm8k-loopspec-dual 244/300 decode=6.728s tokens=89
+huginn-3.5b-gsm8k-loopspec-dual 245/300 decode=6.208s tokens=88
+huginn-3.5b-gsm8k-loopspec-dual 246/300 decode=15.914s tokens=191
+huginn-3.5b-gsm8k-loopspec-dual 247/300 decode=10.135s tokens=155
+huginn-3.5b-gsm8k-loopspec-dual 248/300 decode=21.335s tokens=270
+huginn-3.5b-gsm8k-loopspec-dual 249/300 decode=24.623s tokens=306
+huginn-3.5b-gsm8k-loopspec-dual 250/300 decode=10.430s tokens=120
+huginn-3.5b-gsm8k-loopspec-dual 251/300 decode=13.441s tokens=144
+huginn-3.5b-gsm8k-loopspec-dual 252/300 decode=1.750s tokens=34
+huginn-3.5b-gsm8k-loopspec-dual 253/300 decode=13.460s tokens=108
+huginn-3.5b-gsm8k-loopspec-dual 254/300 decode=5.293s tokens=66
+huginn-3.5b-gsm8k-loopspec-dual 255/300 decode=9.021s tokens=186
+huginn-3.5b-gsm8k-loopspec-dual 256/300 decode=9.438s tokens=112
+huginn-3.5b-gsm8k-loopspec-dual 257/300 decode=11.628s tokens=132
+huginn-3.5b-gsm8k-loopspec-dual 258/300 decode=9.609s tokens=155
+huginn-3.5b-gsm8k-loopspec-dual 259/300 decode=21.033s tokens=288
+huginn-3.5b-gsm8k-loopspec-dual 260/300 decode=3.235s tokens=60
+huginn-3.5b-gsm8k-loopspec-dual 261/300 decode=13.594s tokens=171
+huginn-3.5b-gsm8k-loopspec-dual 262/300 decode=10.294s tokens=122
+huginn-3.5b-gsm8k-loopspec-dual 263/300 decode=10.667s tokens=156
+huginn-3.5b-gsm8k-loopspec-dual 264/300 decode=10.969s tokens=155
+huginn-3.5b-gsm8k-loopspec-dual 265/300 decode=3.347s tokens=53
+huginn-3.5b-gsm8k-loopspec-dual 266/300 decode=6.729s tokens=99
+huginn-3.5b-gsm8k-loopspec-dual 267/300 decode=5.128s tokens=82
+huginn-3.5b-gsm8k-loopspec-dual 268/300 decode=5.679s tokens=95
+huginn-3.5b-gsm8k-loopspec-dual 269/300 decode=3.168s tokens=52
+huginn-3.5b-gsm8k-loopspec-dual 270/300 decode=4.236s tokens=65
+huginn-3.5b-gsm8k-loopspec-dual 271/300 decode=23.179s tokens=240
+huginn-3.5b-gsm8k-loopspec-dual 272/300 decode=1.739s tokens=33
+huginn-3.5b-gsm8k-loopspec-dual 273/300 decode=9.571s tokens=119
+huginn-3.5b-gsm8k-loopspec-dual 274/300 decode=2.393s tokens=57
+huginn-3.5b-gsm8k-loopspec-dual 275/300 decode=6.962s tokens=115
+huginn-3.5b-gsm8k-loopspec-dual 276/300 decode=4.641s tokens=74
+huginn-3.5b-gsm8k-loopspec-dual 277/300 decode=2.974s tokens=52
+huginn-3.5b-gsm8k-loopspec-dual 278/300 decode=4.639s tokens=116
+huginn-3.5b-gsm8k-loopspec-dual 279/300 decode=2.750s tokens=47
+huginn-3.5b-gsm8k-loopspec-dual 280/300 decode=0.383s tokens=3
+huginn-3.5b-gsm8k-loopspec-dual 281/300 decode=3.558s tokens=57
+huginn-3.5b-gsm8k-loopspec-dual 282/300 decode=7.915s tokens=142
+huginn-3.5b-gsm8k-loopspec-dual 283/300 decode=7.555s tokens=102
+huginn-3.5b-gsm8k-loopspec-dual 284/300 decode=9.970s tokens=133
+huginn-3.5b-gsm8k-loopspec-dual 285/300 decode=4.032s tokens=70
+huginn-3.5b-gsm8k-loopspec-dual 286/300 decode=15.456s tokens=252
+huginn-3.5b-gsm8k-loopspec-dual 287/300 decode=9.827s tokens=99
+huginn-3.5b-gsm8k-loopspec-dual 288/300 decode=6.857s tokens=97
+huginn-3.5b-gsm8k-loopspec-dual 289/300 decode=7.185s tokens=106
+huginn-3.5b-gsm8k-loopspec-dual 290/300 decode=7.638s tokens=133
+huginn-3.5b-gsm8k-loopspec-dual 291/300 decode=5.681s tokens=62
+huginn-3.5b-gsm8k-loopspec-dual 292/300 decode=10.910s tokens=153
+huginn-3.5b-gsm8k-loopspec-dual 293/300 decode=3.886s tokens=78
+huginn-3.5b-gsm8k-loopspec-dual 294/300 decode=4.108s tokens=62
+huginn-3.5b-gsm8k-loopspec-dual 295/300 decode=3.101s tokens=47
+huginn-3.5b-gsm8k-loopspec-dual 296/300 decode=3.540s tokens=62
+huginn-3.5b-gsm8k-loopspec-dual 297/300 decode=10.833s tokens=110
+huginn-3.5b-gsm8k-loopspec-dual 298/300 decode=5.394s tokens=62
+huginn-3.5b-gsm8k-loopspec-dual 299/300 decode=7.017s tokens=77
+huginn-3.5b-gsm8k-loopspec-dual 300/300 decode=7.623s tokens=88
+wandb: uploading requests.jsonl; updating run metadata
+wandb: uploading config.yaml; uploading output.log; uploading wandb-summary.json
+wandb: uploading wandb-summary.json
+wandb: 
+wandb: Run history:
+wandb:          aggregate/cap_stopped ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   aggregate/completed_requests ▁▁▁▁▁▁▂▂▂▃▃▄▄▅▅▅▅▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇▇████
+wandb:             aggregate/decode_s ▁▁▁▂▂▂▂▂▂▂▃▃▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▇▇▇▇▇▇▇█
+wandb:       aggregate/decode_token_s █▄▅▁▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        aggregate/decode_tokens ▁▁▂▂▂▂▂▂▃▃▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇████
+wandb:           aggregate/draft_hits ▁▁▁▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▄▄▄▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇▇███
+wandb:                aggregate/gamma ▆▃▇▇█▃▂▂▁▁▂▁▁▁▁▂▂▁▂▂▂▂▁▁▁▁▁▁▂▂▁▁▁▁▁▁▁▁▂▂
+wandb:           aggregate/loop_steps ▁▁▁▁▁▂▂▂▂▃▃▃▃▃▃▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▆▇▇▇▇████
+wandb: aggregate/mean_acceptance_rate █▅▇▄▃▃▂▁▂▂▁▁▁▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+wandb:        aggregate/mean_decode_s ▁▃▂▅▄▇████▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▆▇▇▇▇▇▇▇▇▇▇
+wandb:                             +6 ...
+wandb: 
+wandb: Run summary:
+wandb:          aggregate/cap_stopped 0
+wandb:   aggregate/completed_requests 300
+wandb:             aggregate/decode_s 2372.9631
+wandb:       aggregate/decode_token_s 13.50463
+wandb:        aggregate/decode_tokens 32046
+wandb:           aggregate/draft_hits 23855
+wandb:                aggregate/gamma 2.66978
+wandb:           aggregate/loop_steps 384104
+wandb: aggregate/mean_acceptance_rate 0.75975
+wandb:        aggregate/mean_decode_s 7.90988
+wandb:                            +35 ...
+wandb: 
+wandb: 🚀 View run huginn-3.5b-gsm8k-loopspec-dual at: https://wandb.ai/zsqzz/loopfill-latency512-t1/runs/6c8c9c2432bf
+wandb: ⭐️ View project at: https://wandb.ai/zsqzz/loopfill-latency512-t1
+wandb: Synced 5 W&B file(s), 0 media file(s), 4 artifact file(s) and 2 other file(s)
+wandb: Find logs at: ./results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-gsm8k-loopspec-dual/wandb/run-20261108_101524-6c8c9c2432bf/logs
