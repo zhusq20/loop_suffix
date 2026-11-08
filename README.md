@@ -11,7 +11,7 @@
 - LaTeX：[表1](paper/tables/table1-latency512.tex)、[表2](paper/tables/table2-throughput.tex)。使用 `python scripts/loop_final_tables.py` 从汇总数据重新生成。
 - 协议与归档：[表1](docs/loopfill-latency512.md)、[表2](docs/loopfill-table2.md)、[归档范围](docs/loopfill-table12-archive.md)。
 
-**论文实验规划**：[当前精简计划](docs/loopfill-paper-experiments.md)统一主指标（throughput 与按 loop steps 归一化的平均接受长度 γ）、三维消融雷达图及机制分析；与旧实验计划冲突时以此文为准。
+**论文实验规划**：[当前精简计划](docs/loopfill-paper-experiments.md)统一主指标（throughput 与按 loop steps 归一化的平均接受长度 γ）、一行四面板消融雷达图（节点预算、浅层读出、suffix接续预算、权重控制）及机制分析；每模型/B共14个唯一消融配置，与旧实验计划冲突时以此文为准。
 
 LoopFill 是面向循环（looped / recurrent-depth）语言模型的免训练投机解码。它把两种草稿来源放进同一棵草稿树：
 
