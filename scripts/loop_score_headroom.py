@@ -86,7 +86,9 @@ class OracleRanking:
                       length_conditioned=length_conditioned)
         others = [c for path, c in pool.items() if path != root]
         hits = sorted((c for c in others if self.on_path(c.path)), key=lambda c: len(c.path))
-        rest = [] if self.only else sorted(
+        # Once the root leaves the reference, both oracle modes must fall back
+        # to ordinary scoring; otherwise oracle-only silently becomes AR.
+        rest = [] if self.only and self.on_path(root) else sorted(
             (c for c in others if not self.on_path(c.path) and (not positive_only or c.p > 0)),
             key=lambda c: (-c.p, len(c.path), c.path))
         # Reference-path nodes form one chain whose ancestors are also on the path, and

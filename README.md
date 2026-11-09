@@ -1,5 +1,9 @@
 # LoopFill (loop_suffix)
 
+**分数协调上限诊断（2026-11-09）已完成**：三模型、N16/B1/greedy、36组/4,320次请求，审计通过。oracle-first相对c=1的全体γ改善：Huginn **+19.4%**、Ouro-1.4B **+1.9%**、Ouro-2.6B **+1.7%**；全部变体共同输出子集为+30.2%/+5.0%/+3.0%。最佳固定c的全体改善仅+2.73%/+0.60%/+0.34%，online未显示稳定优势。此为排序诊断，不是吞吐或严格全局上界。见[结论与限制](docs/loopfill-score-headroom.md)、[完整结果](results/loopfill-score-headroom-t0-20261109/report.md)、[曲线](results/loopfill-score-headroom-t0-20261109/score-headroom.pdf)、[审计](results/loopfill-score-headroom-t0-20261109/audit.json)。
+
+**候选树概率采样实验（2026-11-09，已完成）**：按用户要求仅种子0、单次计时，两模型四臂，8/8个B16完整480题流、3,840次请求完成且审计通过。树采样将平均草稿数降至约8个、rows/token减少21%—36%，但相对同评分Top-N的吞吐下降 **11.4%—14.6%**，本轮不支持替换Top-N，未触发B1补测。见[设计与实测结论](docs/loopfill-tree-sampling-plan.md)、[完整报告](results/loopfill-tree-sampling-b16-seed0-20261109/report.md)、[指标CSV](results/loopfill-tree-sampling-b16-seed0-20261109/measurements.csv)、[图PDF](results/loopfill-tree-sampling-b16-seed0-20261109/tree-sampling.pdf)。
+
 **四组消融已完成（2026-11-09）**：Huginn-3.5B与Ouro-2.6B，B16完成节点预算、浅层读出、suffix接续预算、权重控制四组，以吞吐为主；B1补充N=8/16/32/64，以单请求decode latency为主。36/36个单元完成，复用4个表2母配置，新增32组完整480题实验；greedy、最多1024 token、表2冻结推理版本。后续控制器诊断/调参/配对评测计划已按用户要求取消，不纳入本轮结果。见[执行记录](docs/loopfill-paper-experiments.md)、[协议](results/loopfill-four-ablation-20261109/protocol.json)、[完成状态](results/loopfill-four-ablation-20261109/status.json)、[指标CSV](results/loopfill-four-ablation-20261109/measurements.csv)。
 
 **Preliminary 命中率实验（2026-11-09）已完成**：Ouro-2.6B、480题、80,933个有效位置。loop 1/2/3 单层一致率为88.83%/95.63%/98.20%，累计覆盖率为88.83%/96.72%/98.95%。Suffix → +Shallow → +Requery 平均连续正确草稿长度为1.343 → 1.732 → 2.276；续查配对增量+0.544 token（95% CI [0.502, 0.587]），不代表实测速度收益。见[计划与结果](docs/loopfill-preliminary-plan.md)、[汇总](results/loopfill-preliminary-20261109-v2/full/summary.json)、[图（单层与额外命中率）](paper/figures/loopfill-preliminary-v2/preliminary-hit-rates.pdf)。

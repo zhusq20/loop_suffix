@@ -43,7 +43,7 @@ def test_extra_scores_share_full_softmax_and_preserve_topk_ties(device):
 
 
 class ExactFakeLoop(BudgetFakeLoop):
-    def readout_top(self, tree, groups, full, m, extra_token_ids=None):
+    def readout_top(self, tree, groups, full, m, extra_token_ids=None, return_log_probs=False):
         weights = torch.tensor([.55, .2, .1, .06, .04, .03, .01, .004, .003, .002, .001])
         logits, sizes = [], []
         for depth, nodes in groups:
@@ -51,7 +51,7 @@ class ExactFakeLoop(BudgetFakeLoop):
             for node in nodes:
                 first = shallow_next(self.context(tree, node), depth)
                 logits.append(torch.roll(weights, first).log())
-        scores = _top_probs(torch.stack(logits), m, extra_token_ids) if logits else []
+        scores = _top_probs(torch.stack(logits), m, extra_token_ids, return_log_probs) if logits else []
         reads, at = [], 0
         for size in sizes:
             reads.append(scores[at:at + size])
@@ -88,13 +88,17 @@ def test_outside_topk_is_rescored_without_new_proposals_and_preserves_greedy(pos
 @pytest.mark.parametrize("family", ["ouro", "huginn"])
 @pytest.mark.parametrize("positive_only", [False, True])
 @pytest.mark.parametrize("device", ["cpu", "cuda"])
+@pytest.mark.parametrize("selection", ["top_n", "sample"])
 @torch.no_grad()
-def test_single_fused_and_packed_exact_scores_preserve_ar_and_recycled_slots(family, positive_only, device):
+def test_single_fused_and_packed_exact_scores_preserve_ar_and_recycled_slots(family, positive_only, device, selection):
+    if selection == "sample" and positive_only:
+        pytest.skip("sampling and positive-only are separate selection policies")
     if device == "cuda" and not torch.cuda.is_available():
         pytest.skip("CUDA unavailable")
     make = setup(family, device, torch.bfloat16 if device == "cuda" else torch.float32, max_nodes=5)
     cfg = config(4, scoring="raw", top_m=2, suffix_room=4,
-                 existing_child_probs=True, positive_only=positive_only)
+                 existing_child_probs=True, positive_only=positive_only,
+                 selection_policy=selection, draft_model_id=family)
     reqs = [BatchRequest(i, p, n) for i, (p, n) in enumerate([
         ([1, 2, 3, 1, 2], 20), ([6, 7, 8], 13), ([4, 2, 1, 4], 17), ([7, 2], 1)])]
     refs, serial = [], []

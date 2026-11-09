@@ -531,7 +531,7 @@ def tree_attention(q, k, v, kv: LoopKV, rows: Rows, layer: int, fast: bool | Non
     return ((out_p * w_p + out_t * w_t) / (w_p + w_t)).to(q.dtype)
 
 
-def _top_probs(logits: torch.Tensor, m: int, extra_token_ids=None) -> list[tuple[list[int], list[float]]]:
+def _top_probs(logits: torch.Tensor, m: int, extra_token_ids=None, return_log_probs=False):
     """Top-m first, optionally followed by scoring-only existing children.
 
     Extra IDs are per row in readout order. They share the full-vocabulary
@@ -560,6 +560,19 @@ def _top_probs(logits: torch.Tensor, m: int, extra_token_ids=None) -> list[tuple
             for (row, token), value in zip(pairs, values, strict=True):
                 out[row][0].append(token)
                 out[row][1].append(value)
+    if return_log_probs:
+        # Gather from the same logits without another forward/readout. Logsumexp
+        # recovers valid tiny probabilities even when the FP32 softmax is zero.
+        pairs = [(row, token) for row, (ids, _) in enumerate(out) for token in ids]
+        indices = torch.tensor(pairs, dtype=torch.long, device=logits.device)
+        z = logits.float()
+        values = (z[indices[:, 0], indices[:, 1]] - z.logsumexp(-1)[indices[:, 0]]).tolist()
+        at = 0
+        logged = []
+        for ids, ps in out:
+            logged.append((ids, ps, values[at:at+len(ids)]))
+            at += len(ids)
+        return logged
     return out
 
 
@@ -679,7 +692,7 @@ class OuroLoop(_Backbone):
         return _top(logits[:len(shallow)], m), [[t] for t in target_tokens(
             self, logits[len(shallow):], [tree.position(n)+1 for n in full])]
 
-    def readout_top(self, tree, groups, full, m, extra_token_ids=None):
+    def readout_top(self, tree, groups, full, m, extra_token_ids=None, return_log_probs=False):
         """groups: [(depth, nodes)]. Per group: (ids, probs) of the top-m per node; and the
         full-depth argmax per node of `full`. m=0 returns grouped argmax IDs only.
         Ouro reads every depth through lm_head."""
@@ -690,7 +703,7 @@ class OuroLoop(_Backbone):
         idx = self.kv.upload(np.array([n.idx for n in nodes]))
         logits = self.lm.lm_head(self.hidden[idx]).float()
         k = sum(sizes)
-        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids)
+        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids, return_log_probs)
         return _split(reads, sizes), target_tokens(self, logits[k:], [tree.position(n)+1 for n in full])
 
 
@@ -841,7 +854,7 @@ class HuginnLoop(_Backbone):
         return _top(shallow_logits, m), [[t] for t in target_tokens(
             self, full_logits, [tree.position(n)+1 for n in full])]
 
-    def readout_top(self, tree, groups, full, m, extra_token_ids=None):
+    def readout_top(self, tree, groups, full, m, extra_token_ids=None, return_log_probs=False):
         """As OuroLoop.readout_top. A depth-r readout attends to depth-r coda states: the
         shallow coda cache for the draft depth, an extra one per deeper readout depth."""
         sizes = [len(g) for _, g in groups]
@@ -862,5 +875,5 @@ class HuginnLoop(_Backbone):
         order = self.kv.upload(np.array([at[n.idx] for n in nodes]))
         logits = logits[order]
         k = sum(sizes)
-        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids)
+        reads = logits[:k].argmax(-1).tolist() if m == 0 else _top_probs(logits[:k], m, extra_token_ids, return_log_probs)
         return _split(reads, sizes), target_tokens(self, logits[k:], [tree.position(n)+1 for n in full])

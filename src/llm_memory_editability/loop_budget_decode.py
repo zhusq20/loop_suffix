@@ -11,6 +11,7 @@ import heapq
 import math
 import sys
 import time
+from collections import Counter
 from dataclasses import dataclass
 
 import numpy as np
@@ -19,6 +20,7 @@ import torch
 from .loop_decode_steps import ModelCall, run_single
 from .loop_prob_tree import _edge_probs
 from .loop_tree_decode import DraftTree, TreeNode
+from .loop_tree_sampling import DraftTreeSampler, sample_candidates
 
 Path = tuple[int, ...]
 
@@ -47,8 +49,17 @@ class BudgetConfig:
     child_suffix_caps: tuple[int, ...] | None = None
     c_initial: float = 1.0
     existing_child_probs: bool = False
+    selection_policy: str = "top_n"
+    draft_seed: int = 0
+    draft_model_id: str = ""
 
     def __post_init__(self):
+        if self.selection_policy not in ("top_n", "sample"):
+            raise ValueError("selection_policy must be top_n or sample")
+        if type(self.draft_seed) is not int or self.draft_seed < 0:
+            raise ValueError("draft seed must be a nonnegative integer")
+        if self.selection_policy == "sample" and (self.positive_only or not self.draft_model_id):
+            raise ValueError("sampling requires model identity and no positive_only override")
         if not isinstance(self.draft_node_budget, int) or self.draft_node_budget < 0:
             raise ValueError("draft_node_budget must be a nonnegative integer")
         if self.scoring not in (
@@ -246,6 +257,7 @@ class Candidate:
     e: float = 0.0
     model_rank: int | None = None
     suffix_match_len: int | None = None
+    raw_log_score: float | None = None
 
 
 def select_candidates(pool: dict[Path, Candidate], root: Path, budget: int, coefficient: float,
@@ -359,6 +371,8 @@ def budget_tree_decode_steps(
     use_suffix = cfg.use_suffix and cache is not None and N > 0
     depths = sorted(cfg.readout_depths) if cfg.use_model and N else []
     controller = SuffixController(cfg)
+    sampler = (DraftTreeSampler(cfg.draft_seed, cfg.draft_model_id, req_id)
+               if cfg.selection_policy == "sample" else None)
     # Extra physical buffers, if supplied for other arms, do not enlarge this tree.
     tree = RecyclingTree(N + 1)
     prompt = [int(t) for t in prompt]
@@ -400,6 +414,12 @@ def budget_tree_decode_steps(
                   for rank in range(1, cfg.top_m + 1)
                   for metric in ("queries", "returned_nodes", "skipped")})
     pool: dict[Path, Candidate] = {}
+    histograms = {k: Counter() for k in (
+        "retained_drafts", "unfinished_nodes", "execution_rows", "retained_depth",
+        "sample_unique", "sample_closure", "sample_retained")}
+    sampling_totals = Counter()
+    rebuilt_paths: set[Path] = set()
+    stats.update(nodes_released=0, computed_nodes_rebuilt=0, zero_score_rows=0, sampling_s=0.0)
     tick = 0
 
     def emit(event, **data):
@@ -408,6 +428,9 @@ def budget_tree_decode_steps(
 
     def release(c, wasted=True, reason="rejected"):
         if c.node is not None:
+            stats["nodes_released"] += 1
+            if reason == "budget" and c.node.step > 0:
+                rebuilt_paths.add(c.path)
             if observer is not None:
                 emit("release", path=c.path, tick=tick, spent=c.node.step,
                      reason=reason if wasted else "committed")
@@ -470,8 +493,10 @@ def budget_tree_decode_steps(
     def model_candidates(c, depth, top):
         if max_pos is not None and len(prompt) + len(c.path) >= max_pos:
             return
-        ids, probs = top
+        ids, probs = top[:2]
+        log_probs = top[2] if len(top) > 2 else [math.log(p) if p else -math.inf for p in probs]
         existing_probs = dict(zip(ids[cfg.top_m:], probs[cfg.top_m:], strict=True))
+        existing_logs = dict(zip(ids[cfg.top_m:], log_probs[cfg.top_m:], strict=True))
         seen = set()
         for rank, (token, probability) in enumerate(zip(ids, probs, strict=True)):
             if rank >= cfg.top_m:
@@ -494,6 +519,7 @@ def budget_tree_decode_steps(
             # Rank belongs to this parent's latest model readout, not admission order
             # or the candidate's original source (which may have been suffix).
             pool[path].model_rank = rank
+            pool[path].raw_log_score = log_probs[rank]
         for path, child in pool.items():
             if path[:-1] == c.path and path[-1] not in seen:
                 # Existing children can be scored without proposing more than top-m.
@@ -505,13 +531,24 @@ def budget_tree_decode_steps(
                         emit("rescore", path=path, tick=tick, previous_source=child.score_source,
                              score=probability, depth=depth, absent=True)
                     child.raw_score, child.score_source = probability, "model"
+                    child.raw_log_score = existing_logs[path[-1]] if cfg.existing_child_probs else -math.inf
 
-    def choose(root):
+    def choose(root, *, sample=False):
         nonlocal pool
         start = time.perf_counter()
-        selected = select_candidates(pool, root, N, controller.c,
-                                     positive_only=cfg.positive_only,
-                                     length_conditioned=controller.length_conditioned)
+        if sample:
+            selected, counts = sample_candidates(pool, root, N, controller.c, sampler.generator(),
+                                                length_conditioned=controller.length_conditioned)
+            stats["sampling_s"] += time.perf_counter() - start
+            sampling_totals.update(counts)
+            for metric, key in (("unique_draws", "sample_unique"), ("closure_nodes", "sample_closure"),
+                                ("retained", "sample_retained")):
+                histograms[key][counts[metric]] += 1
+            emit("sampling", tick=tick, event_id=sampler.event-1, root=root, **counts)
+        else:
+            selected = select_candidates(pool, root, N, controller.c,
+                                         positive_only=cfg.positive_only,
+                                         length_conditioned=controller.length_conditioned)
         if observer is not None:
             emit("selection_candidates", root=root, tick=tick, coefficient=controller.c,
                  length_conditioned=controller.length_conditioned, budget=N,
@@ -546,6 +583,9 @@ def budget_tree_decode_steps(
                 if c.node is None:
                     raise AssertionError("N+1 recyclable slots must fit the selected tree")
                 stats["nodes"] += 1
+                if path in rebuilt_paths:
+                    stats["computed_nodes_rebuilt"] += 1
+                    rebuilt_paths.remove(path)
                 if observer is not None:
                     emit("allocate", path=path, tick=tick, slot=c.node.idx, root=root)
         if observer is not None:
@@ -560,16 +600,18 @@ def budget_tree_decode_steps(
                 suffix_match_lengths={p: c.suffix_match_len for p, c in pool.items()},
             )
 
-    def boundary(root, due, query_root):
+    def boundary(root, due, query_root, *, initial=False):
         # One coefficient is used throughout this entire proposal/selection boundary.
         for c, depth, top in due:
             if c.path in pool:
                 model_candidates(c, depth, top)
         if query_root and use_suffix:
             suffix(pool[root])
-        choose(root)
+        # The preselection preserves the existing continuation-query schedule.
+        has_continuation = use_suffix and cfg.child_suffix_policy != "none"
+        choose(root, sample=sampler is not None and not initial and not has_continuation)
         # Only newly selected model children trigger immediate suffix continuation.
-        if use_suffix and cfg.child_suffix_policy != "none":
+        if has_continuation:
             children = [c for c in pool.values()
                         if c.path != root and c.node is None and c.score_source == "model"]
             if cfg.child_suffix_policy == "best1":
@@ -589,8 +631,11 @@ def budget_tree_decode_steps(
                     stats[f"child_suffix_rank{rank + 1}_queries"] += 1
                     stats[f"child_suffix_rank{rank + 1}_returned_nodes"] += returned
                 emit("child_suffix_query", path=c.path, rank=rank, cap=cap, returned_nodes=returned)
-            choose(root)
+            choose(root, sample=sampler is not None and not initial)
         allocate(root)
+        histograms["retained_drafts"][len(pool)-1] += 1
+        histograms["unfinished_nodes"][sum(c.node.step < T for c in pool.values())] += 1
+        histograms["retained_depth"].update(len(p)-len(root) for p in pool if p != root)
         if cfg.trace_controller:
             stats["peak_feedback_metadata_bytes_estimate"] = max(
                 stats["peak_feedback_metadata_bytes_estimate"], controller.metadata_bytes()
@@ -610,7 +655,7 @@ def budget_tree_decode_steps(
         tree.base_pos = backbone.length
         pool[root] = Candidate(root, 1.0, "model", "root")
         if len(out) < max_new_tokens and out[-1] not in stop:
-            boundary(root, [], True)
+            boundary(root, [], True, initial=True)
         while len(out) < max_new_tokens and out[-1] not in stop:
             fresh = tree.take_fresh()
             if fresh:
@@ -626,6 +671,9 @@ def budget_tree_decode_steps(
                 n.step += 1
             stats["calls"] += 1
             stats["rows"] += len(live)
+            histograms["execution_rows"][len(live)] += 1
+            live_slots = {n.idx for n in live}
+            stats["zero_score_rows"] += sum(c.p == 0 and c.node.idx in live_slots for c in pool.values())
             stats["max_rows"] = max(stats["max_rows"], len(live))
             groups = [(d, [n for n in live if n.step == d]) for d in depths]
             full = [n for n in live if n.step == T]
@@ -634,6 +682,10 @@ def budget_tree_decode_steps(
                 existing = [list(n.children) for _, group in groups for n in group]
                 stats["existing_probability_values"] += sum(map(len, existing))
                 readout_args += (existing,)
+            if sampler is not None:
+                if not cfg.existing_child_probs:
+                    readout_args += (None,)
+                readout_args += (True,)
             reads, tops = yield ModelCall("readout_top", readout_args)
             stats["readout_rows"] += sum(len(g) for _, g in groups) + len(full)
             by_slot = {c.node.idx: c for c in pool.values()}
@@ -687,6 +739,7 @@ def budget_tree_decode_steps(
                 pool = kept
                 root = nxt
                 controller.retain_prefix(root)
+                rebuilt_paths.intersection_update(p for p in rebuilt_paths if p[:len(root)] == root)
                 if root not in pool:
                     pool[root] = Candidate(root, 1.0, "model", "root")
                 if out[-1] in stop or len(out) >= max_new_tokens:
@@ -729,6 +782,13 @@ def budget_tree_decode_steps(
             draft_node_budget=N,
             positive_only=cfg.positive_only,
             existing_child_probs=cfg.existing_child_probs,
+            selection_policy=cfg.selection_policy,
+            draft_seed=cfg.draft_seed,
+            draft_model_id=cfg.draft_model_id,
+            sampling_events=sampler.event if sampler is not None else 0,
+            sampling_counts=dict(sampling_totals),
+            tree_histograms={k: dict(v) for k, v in histograms.items()},
+            stop_reason="stop_token" if out[-1] in stop else "max_new_tokens",
             controller_scope="request",
             update_event="verified_parent",
             c_initial=cfg.c_initial,

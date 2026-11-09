@@ -60,6 +60,14 @@ def test_oracle_off_reference_is_the_score_order():
     assert off.counts["root_on_path"] == 0 and off.counts["on_path_candidates"] == 0
 
 
+def test_oracle_only_off_reference_falls_back_but_on_reference_filters():
+    root, pool = pool_of(ITEMS)
+    for budget in range(5):
+        assert list(OracleRanking([8], only=True)(pool, root, budget, 1.0)) == list(
+            select_candidates(pool, root, budget, 1.0))
+    assert list(OracleRanking([7, 4], only=True)(pool, root, 4, 1.0)) == [root]
+
+
 def test_ranking_context_restores_decoder_rule():
     original = budget_module.select_candidates
     with pytest.raises(RuntimeError):
@@ -147,6 +155,12 @@ def test_stratified_subset_is_deterministic_and_balanced():
     assert suite.stratified_subset(rows, 99) == rows
 
 
+def test_stratified_subset_accepts_integer_source_ids():
+    rows = [dict(source_id=i, category="x") for i in range(10)]
+    assert len(suite.stratified_subset(rows, 4)) == 4
+    assert suite.stratified_subset(rows, 4) == suite.stratified_subset(rows, 4)
+
+
 def test_prepare_and_analyze_end_to_end(tmp_path):
     inputs = tmp_path / "in"
     inputs.mkdir()
@@ -188,6 +202,7 @@ def test_prepare_and_analyze_end_to_end(tmp_path):
     assert head["oracle_first_same_output"] == 3
     assert head["best_fixed_c"] in protocol["fixed_cs"]
     assert not report["missing_jobs"]
+    assert all(r["source_id"].startswith(r["dataset"] + "/") for r in records)
     by_variant = {r["variant"]: r for r in report["table"]}
     assert set(by_variant) == set(protocol["variants"])
     base = by_variant["fixed-c1"]

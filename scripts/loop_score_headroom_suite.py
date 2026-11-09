@@ -46,7 +46,7 @@ def stratified_subset(rows, k):
     groups = defaultdict(list)
     for i, row in enumerate(rows):
         groups[row.get("category") or "_"].append(
-            (hashlib.sha256(row["source_id"].encode()).hexdigest(), i))
+            (hashlib.sha256(str(row["source_id"]).encode()).hexdigest(), i))
     for g in groups.values():
         g.sort()
     chosen, depth = [], 0
@@ -94,6 +94,12 @@ def prepare(out, assets, python, models, inputs_dir, datasets, per_dataset, budg
         rows = [json.loads(line) for line in (Path(inputs_dir) / f"{dataset}.jsonl").read_text().splitlines()
                 if line.strip()]
         subset = stratified_subset(rows, per_dataset)
+        # Dataset-local IDs include integers and overlap between datasets.
+        # Oracle reference lookup and cross-variant pairing require global IDs.
+        subset = [dict(r, original_source_id=r["source_id"],
+                       source_id=f"{dataset}/{r['source_id']}") for r in subset]
+        if len({r["source_id"] for r in subset}) != len(subset):
+            raise ValueError(f"duplicate source IDs in {dataset}")
         path = out / "inputs" / f"{dataset}.jsonl"
         path.write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in subset))
         inputs[dataset] = dict(count=len(subset), sha256=digest(path),

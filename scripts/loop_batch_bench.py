@@ -68,6 +68,8 @@ def parser():
     p.add_argument("--child-suffix-caps", type=int, nargs="+",
                    help="per-model-rank suffix node caps; zero skips that child's query; root cap unchanged")
     p.add_argument("--positive-only", action="store_true")
+    p.add_argument("--tree-selection", choices=("top_n", "sample"), default="top_n")
+    p.add_argument("--draft-seed", type=int, default=0)
     p.add_argument("--existing-child-probs", action="store_true",
                    help="budget model arms: score existing children outside top-k with their full-vocabulary softmax probability")
     p.add_argument("--progress-every", type=int, default=0,
@@ -134,7 +136,10 @@ def arm_config(name, T, d, deep, suffix_max_draft, *, draft_node_budget=64,
                suffix_eta=0.1, suffix_c_min=0.25, suffix_c_max=2.0, trace_controller=False,
                model_top_k=8, child_suffix_policy="all", positive_only=False, child_suffix_caps=None,
                suffix_c_initial=1.0, model_readout_depths=None, existing_child_probs=False,
-               loopspec_depths=None, wavefront_depth=None):
+               loopspec_depths=None, wavefront_depth=None,
+               tree_selection="top_n", draft_seed=0, draft_model_id=""):
+    if tree_selection != "top_n" and not name.startswith("budget-"):
+        raise ValueError("tree sampling requires budget arms")
     if model_readout_depths is not None and not name.startswith("budget-"):
         raise ValueError("model readout override requires budget arms")
     if existing_child_probs and (not name.startswith("budget-") or name == "budget-suffix"):
@@ -157,6 +162,7 @@ def arm_config(name, T, d, deep, suffix_max_draft, *, draft_node_budget=64,
             child_suffix_caps=tuple(child_suffix_caps) if child_suffix_caps is not None else None,
             c_initial=suffix_c_initial,
             existing_child_probs=existing_child_probs,
+            selection_policy=tree_selection, draft_seed=draft_seed, draft_model_id=draft_model_id,
             trace_controller=trace_controller,
         )
     if name.startswith("prob-"):
@@ -326,6 +332,7 @@ def main():
             suffix_c_initial=args.suffix_c_initial,
             model_readout_depths=args.model_readout_depths,
             existing_child_probs=args.existing_child_probs,
+            tree_selection=args.tree_selection, draft_seed=args.draft_seed, draft_model_id=args.model,
             loopspec_depths=args.loopspec_depths or spec.loopspec_depths,
             wavefront_depth=args.wavefront_depth or spec.wavefront_depth,
         )

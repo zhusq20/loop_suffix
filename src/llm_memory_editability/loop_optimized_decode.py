@@ -500,7 +500,8 @@ class PackedLoopExecutor(FusedLoopExecutor):
             m=jobs[j][1].args[3]
             if name == 'readout_top':
                 extra = jobs[j][1].args[4] if len(jobs[j][1].args) > 4 else None
-                results[j]=(_split(part[:split].argmax(-1).tolist() if m==0 else _top_probs(part[:split],m,extra),group_sizes),target_tokens(b,part[split:],[tree.position(n)+1 for n in nodes[split:]]))
+                logs = jobs[j][1].args[5] if len(jobs[j][1].args) > 5 else False
+                results[j]=(_split(part[:split].argmax(-1).tolist() if m==0 else _top_probs(part[:split],m,extra,logs),group_sizes),target_tokens(b,part[split:],[tree.position(n)+1 for n in nodes[split:]]))
             else:
                 results[j]=(_top(part[:split],m), [[t] for t in target_tokens(
                     b,part[split:],[tree.position(n)+1 for n in nodes[split:]])])

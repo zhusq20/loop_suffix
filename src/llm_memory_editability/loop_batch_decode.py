@@ -188,7 +188,9 @@ class FusedLoopExecutor:
             if name == "readout_top":
                 results[j] = (
                     _split(part[:k].argmax(-1).tolist() if m == 0 else
-                           _top_probs(part[:k], m, jobs[j][1].args[4] if len(jobs[j][1].args) > 4 else None), group_sizes),
+                           _top_probs(part[:k], m,
+                                      jobs[j][1].args[4] if len(jobs[j][1].args) > 4 else None,
+                                      jobs[j][1].args[5] if len(jobs[j][1].args) > 5 else False), group_sizes),
                     part[k:].argmax(-1).tolist(),
                 )
             else:
