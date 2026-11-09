@@ -1,0 +1,14 @@
+{
+  "time": 1794186982.750959,
+  "reason": "Correct two inherited descriptive fields from the Table 2 parent protocol. Execution parameters, commands, frozen source and inputs are unchanged.",
+  "previous": {
+    "tracking": "fsync per completed request; separate W&B worker logs every request and live files; durable local W&B spool",
+    "resource_policy": "Shared cell queue on eight identical exclusive GPUs; refill immediately. Each cell binds one GPU UUID and four local NUMA CPU cores; no cross-method physical-GPU pairing."
+  },
+  "corrected": {
+    "tracking": "Local durable per-request journals, frozen source/input hashes and supervisor logs; no network upload.",
+    "resource_policy": "Two exclusive GPUs, one per model; four arms sequentially share that GPU and four local CPU cores."
+  },
+  "original_sha256": "926b04e59b8f14032f88e39dbd5a0a49f0a1c70ad36063fa0513da2f22abd6ee",
+  "corrected_sha256": "8ab8aff294840c5dbfbdd7db38060c4ca64540ba6ecfb1b7dd0dd528603552c2"
+}

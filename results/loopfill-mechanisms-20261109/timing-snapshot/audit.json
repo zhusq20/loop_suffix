@@ -1,0 +1,35 @@
+{
+  "complete_streams": 8,
+  "planned_streams": 32,
+  "all_complete": false,
+  "pairs": [
+    {
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "ar",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0363725107615602
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "loopspec-dual",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0266994889039542
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "ar",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0287066877715523
+    }
+  ],
+  "normal_timing_streams": 5
+}

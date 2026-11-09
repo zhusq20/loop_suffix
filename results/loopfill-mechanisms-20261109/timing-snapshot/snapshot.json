@@ -1,0 +1,89 @@
+{
+  "snapshot_utc": "2026-11-09T03:17:02.310219+00:00",
+  "complete_streams": 8,
+  "planned_streams": 32,
+  "final": false,
+  "cells": [
+    {
+      "key": "huginn-3.5b-b16-ar-diagnostic",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "ar",
+      "mode": "diagnostic",
+      "started_unix": 1794193676.2935731,
+      "finished_unix": 1794193806.8585672,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111"
+    },
+    {
+      "key": "huginn-3.5b-b16-ar-normal",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "ar",
+      "mode": "normal",
+      "started_unix": 1794193545.6532187,
+      "finished_unix": 1794193676.2640517,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111"
+    },
+    {
+      "key": "huginn-3.5b-b16-budget-suffix-normal",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "budget-suffix",
+      "mode": "normal",
+      "started_unix": 1794193947.605065,
+      "finished_unix": 1794194038.0472057,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111"
+    },
+    {
+      "key": "huginn-3.5b-b16-loopspec-dual-diagnostic",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "loopspec-dual",
+      "mode": "diagnostic",
+      "started_unix": 1794193877.244043,
+      "finished_unix": 1794193947.5788963,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111"
+    },
+    {
+      "key": "huginn-3.5b-b16-loopspec-dual-normal",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "loopspec-dual",
+      "mode": "normal",
+      "started_unix": 1794193806.8865762,
+      "finished_unix": 1794193877.2190666,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111"
+    },
+    {
+      "key": "ouro-2.6b-b16-ar-diagnostic",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "ar",
+      "mode": "diagnostic",
+      "started_unix": 1794193766.6993697,
+      "finished_unix": 1794193997.6703377,
+      "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b"
+    },
+    {
+      "key": "ouro-2.6b-b16-ar-normal",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "ar",
+      "mode": "normal",
+      "started_unix": 1794193545.6755345,
+      "finished_unix": 1794193766.6734242,
+      "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b"
+    },
+    {
+      "key": "ouro-2.6b-b16-loopspec-dual-normal",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "loopspec-dual",
+      "mode": "normal",
+      "started_unix": 1794193997.7113466,
+      "finished_unix": 1794194108.224242,
+      "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b"
+    }
+  ],
+  "note": "Immutable archive of completed streams only. The live timing queue continues separately. No provisional stage figure is included."
+}

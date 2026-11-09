@@ -1,0 +1,40 @@
+{
+  "huginn-3.5b": {
+    "historical_job": "results/loopfill-four-ablation-20261109/jobs/huginn-3.5b-b16-fixed-c1.0.json",
+    "requests": 480,
+    "same_outputs": 480,
+    "same_work_counts": 480,
+    "work_keys": [
+      "tokens",
+      "calls",
+      "rows",
+      "readout_rows",
+      "speculate_calls",
+      "wasted_rows"
+    ],
+    "note": "Output/work regression only. Historical throughput is not reused.",
+    "evidence_sha256": {
+      "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-fixed-c1.0/attempt1/budget-fixed-b16-seed0.jsonl": "b5814f0604123fafab42f893494599bb79925bdc25b8216eced2b13a853d28bc",
+      "/ossfs/workspace/loop_suffix/results/loopfill-tree-sampling-b16-seed0-20261109/runs/huginn-3.5b-b16-A-attempt1/budget-raw-b16-seed0.jsonl": "31994d2cf65a88fdfe4ff04c16d4426b86f5578c905c32cbfad48cfc48a02141"
+    }
+  },
+  "ouro-2.6b": {
+    "historical_job": "results/loopfill-four-ablation-20261109/jobs/ouro-2.6b-b16-fixed-c1.0.json",
+    "requests": 480,
+    "same_outputs": 480,
+    "same_work_counts": 480,
+    "work_keys": [
+      "tokens",
+      "calls",
+      "rows",
+      "readout_rows",
+      "speculate_calls",
+      "wasted_rows"
+    ],
+    "note": "Output/work regression only. Historical throughput is not reused.",
+    "evidence_sha256": {
+      "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-fixed-c1.0/attempt1/budget-fixed-b16-seed0.jsonl": "e43f92a4b1728bd85ca6901a95c145f04e64570e91f99d6be23a48c9184ce2ca",
+      "/ossfs/workspace/loop_suffix/results/loopfill-tree-sampling-b16-seed0-20261109/runs/ouro-2.6b-b16-A-attempt1/budget-raw-b16-seed0.jsonl": "b52c19453753a2f03c600de734e73900c007e459cde210274db637732056b23b"
+    }
+  }
+}

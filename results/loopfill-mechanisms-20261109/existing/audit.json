@@ -1,0 +1,244 @@
+{
+  "passed": true,
+  "ablation_configurations": 36,
+  "ablation_requests": 17280,
+  "readiness_requests": 240,
+  "source_protocols": {
+    "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/protocol.json": "164e847194fa804ad4a1280b3d8809e0267ff8a67907c4034e06404322f20537",
+    "/ossfs/workspace/loop_suffix/results/loopfill-score-headroom-t0-20261109/protocol.json": "c1ff9fc84b3357de8533fe2a51f1998e71a227db51ea6e5641741ead83bdb6c1"
+  },
+  "provenance": [
+    {
+      "key": "huginn-3.5b-b1-n32",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b1-n32/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "2de354f5f830758e8fc8148e8f89e6f43fad7640469294b62e28e444b1a055b3"
+    },
+    {
+      "key": "huginn-3.5b-b1-n64",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b1-n64/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "ea2a863a371b6b2af40140e87d13cd347e6ee36f06f49ee4b59251ba561786f2"
+    },
+    {
+      "key": "huginn-3.5b-b1-n8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b1-n8/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "29f99dfdecf8d874d0be622d7a6b47c75c1bff58175b34c9c4d85ec59179adcf"
+    },
+    {
+      "key": "huginn-3.5b-b1-r2-k2-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b1-budget-online/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "bad25f5320a4d3001bdb61167b42b16274cd70596d78312ca54c93d88d75d9d6"
+    },
+    {
+      "key": "huginn-3.5b-b16-fixed-c0.5",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-fixed-c0.5/attempt1/budget-fixed-b16-seed0.jsonl",
+      "sha256": "126e76dd13d02deafcaa9be217dd82d054cfe198530a8c96db40ef11d64de00f"
+    },
+    {
+      "key": "huginn-3.5b-b16-fixed-c0.7",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-fixed-c0.7/attempt1/budget-fixed-b16-seed0.jsonl",
+      "sha256": "8070d39991145572f900faaf6e4eb9ad5549b3fa7cf26aa04d62f770ce1643ec"
+    },
+    {
+      "key": "huginn-3.5b-b16-fixed-c1.0",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-fixed-c1.0/attempt1/budget-fixed-b16-seed0.jsonl",
+      "sha256": "b5814f0604123fafab42f893494599bb79925bdc25b8216eced2b13a853d28bc"
+    },
+    {
+      "key": "huginn-3.5b-b16-n32",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-n32/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "f1b964442f14f673d839adcec90e57ac0353e21c1abdc0db68b05da2e4834e90"
+    },
+    {
+      "key": "huginn-3.5b-b16-n64",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-n64/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "850932cabc46de7c9345bf5a78739afc4511cf2cdeda1627fcd3a5762074da80"
+    },
+    {
+      "key": "huginn-3.5b-b16-n8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-n8/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "4160a736e3079643f8781d601b7f12a95066245b5f6af0cf67a3a8aecacf2b7b"
+    },
+    {
+      "key": "huginn-3.5b-b16-r1-k1-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r1-k1-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "6aa96be069842833f089d7e22cd5fbef551adf7ad7b896d721c71c2eae321a6b"
+    },
+    {
+      "key": "huginn-3.5b-b16-r1-k2-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r1-k2-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "8be707e7e3238b3a5c9ce9a70c0cb4aa774289bc26bad0f9ceacba231905ef70"
+    },
+    {
+      "key": "huginn-3.5b-b16-r1-k2-q8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r1-k2-q8/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "66eab022e6b50f2043497574f7e6d4862767b274ea0d55b465a9d84ccce302be"
+    },
+    {
+      "key": "huginn-3.5b-b16-r1-k4-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r1-k4-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "22e9b075107705963262120adf5c4355cd56d74d8b608247a678f9f12cbd603f"
+    },
+    {
+      "key": "huginn-3.5b-b16-r2-k1-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r2-k1-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "dc47f5988df92cd0b3b7dbabd2a4a43a7d02cccaa69f85fb56ea1b549fc14dac"
+    },
+    {
+      "key": "huginn-3.5b-b16-r2-k2-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b16-budget-online/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "0c264f6527bc24024033ecf50b1534b28f228e1a152f2edbefe62b147bee7644"
+    },
+    {
+      "key": "huginn-3.5b-b16-r2-k2-q8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r2-k2-q8/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "f26993d7fc59c9485c7d07e8dc02d2dbf8ba70cfa118e24c9d138c891ac3cddf"
+    },
+    {
+      "key": "huginn-3.5b-b16-r2-k4-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/huginn-3.5b-b16-r2-k4-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "fa91fee590b2cc4e799dc937f3a116b19ebc50158cf39a4b6f1582e67d72d715"
+    },
+    {
+      "key": "ouro-2.6b-b1-n32",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b1-n32/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "87871ac8d58e25cfd4b4019f8b187fd1cb832be1759128eb1b6c58eb561ed39e"
+    },
+    {
+      "key": "ouro-2.6b-b1-n64",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b1-n64/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "70cb18b0b5cfb0b81d5662c056782627878633a95a6cb259fad18d41a67e0536"
+    },
+    {
+      "key": "ouro-2.6b-b1-n8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b1-n8/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "c5463c3a05b135e7d58b329544dc41bc036de4f82e6bda5bc3c2e233c52a58c5"
+    },
+    {
+      "key": "ouro-2.6b-b1-r2-k2-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b1-budget-online/attempt1/budget-online-b1-seed0.jsonl",
+      "sha256": "1acf4a28ad2e4bc53e8cf4bc0fdb2efc9ee442aad2170c8e2d5f094c7b504552"
+    },
+    {
+      "key": "ouro-2.6b-b16-fixed-c0.5",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-fixed-c0.5/attempt1/budget-fixed-b16-seed0.jsonl",
+      "sha256": "857e3f719b723488d18fb99d1f0b06fd27eedf60ec9d83513e83dd4694a470a3"
+    },
+    {
+      "key": "ouro-2.6b-b16-fixed-c0.7",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-fixed-c0.7/attempt1/budget-fixed-b16-seed0.jsonl",
+      "sha256": "ee4d1af63d872bd8745a79ca44c7917ca09a4c6e5b75b95ffe889186b2cc9c0f"
+    },
+    {
+      "key": "ouro-2.6b-b16-fixed-c1.0",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-fixed-c1.0/attempt1/budget-fixed-b16-seed0.jsonl",
+      "sha256": "e43f92a4b1728bd85ca6901a95c145f04e64570e91f99d6be23a48c9184ce2ca"
+    },
+    {
+      "key": "ouro-2.6b-b16-n32",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-n32/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "e9176492fb6de4379db09d2f540d2bc16ebf1b0a14d6c7df0cd06f3a551b93e4"
+    },
+    {
+      "key": "ouro-2.6b-b16-n64",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-n64/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "4746ad6f39ef46fd605530b4208fe327c96745d679e23973c14b9a5fbb8d0fad"
+    },
+    {
+      "key": "ouro-2.6b-b16-n8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-n8/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "62982878414f85d1b055ff1dda71b719d235b89e49f2db8330e0f4d91dff34dc"
+    },
+    {
+      "key": "ouro-2.6b-b16-r1-k1-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r1-k1-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "296c0d310f32d41ae8bdbbaf7bcfbef7c2f9eea2e7547166f753a7354b29f8d8"
+    },
+    {
+      "key": "ouro-2.6b-b16-r1-k2-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r1-k2-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "e957640a1fe09693bf7e1f53a7ece11de3ce4a242c441e023758f17acf3154f6"
+    },
+    {
+      "key": "ouro-2.6b-b16-r1-k2-q8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r1-k2-q8/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "ab58babb8158fc22b5429ee09ca7315f630b2816fc5069391f40379e60f5da1e"
+    },
+    {
+      "key": "ouro-2.6b-b16-r1-k4-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r1-k4-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "1add09506d053615fdf545c8c8722a292fa91dee7bc7ec289657435c455de2c2"
+    },
+    {
+      "key": "ouro-2.6b-b16-r2-k1-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r2-k1-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "158923cb54c425a0d32b8d5698557af393e2542dbb8b18b8bfa28aa8bd35de40"
+    },
+    {
+      "key": "ouro-2.6b-b16-r2-k2-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b16-budget-online/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "f6c9be4b7c29ce879b17abba3181cff0d25ecdfd9ff28fad5e494ec9f31ce993"
+    },
+    {
+      "key": "ouro-2.6b-b16-r2-k2-q8",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r2-k2-q8/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "d3c1ee4e75f161816f9e93f92d5cda906521ec2e0099941a90f54ad7b655fa45"
+    },
+    {
+      "key": "ouro-2.6b-b16-r2-k4-q4",
+      "requests": 480,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/runs/ouro-2.6b-b16-r2-k4-q4/attempt1/budget-online-b16-seed0.jsonl",
+      "sha256": "0912baf7a21f851699e2b914be618264bb4c6a445575779991efc2cd4f0f38c9"
+    },
+    {
+      "key": "huginn-3.5b-n16-online-c0.7",
+      "requests": 120,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-score-headroom-t0-20261109/runs/huginn-3.5b-n16-online-c0.7/requests.jsonl",
+      "sha256": "f04761d4330c39b2e8c1b0775ffb95e590a539802816b30cad04d0dd904dfa31"
+    },
+    {
+      "key": "ouro-2.6b-n16-online-c0.7",
+      "requests": 120,
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-score-headroom-t0-20261109/runs/ouro-2.6b-n16-online-c0.7/requests.jsonl",
+      "sha256": "e38ad7f4f87b98df43a1a7c812a27d8eb81ea30240ad3a5304a05a9a75f76903"
+    }
+  ],
+  "missing_fields": [
+    "Headroom journals omit per-handover origin and lifecycle events; source-transition progress cannot be reconstructed."
+  ],
+  "scope": "Readiness: existing B1/N16/512-token diagnostics, 20 requests each from GSM8K/MATH500/BBH/HumanEval+/MBPP+/SpecBench. Not the full480 protocol."
+}

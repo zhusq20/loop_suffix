@@ -1,5 +1,9 @@
 # LoopFill (loop_suffix)
 
+**论文数据归档**：[图表数据索引](paper/data/README.md)列出主表、四组消融、来源构成、分数协调、树采样和机制图所需的CSV/JSON及压缩逐请求统计。支持仅用已提交数据重画；耗时补采保存明确标记的已完成部分快照。
+
+**三项机制分析（2026-11-09，已开始）**：36组消融/17,280条请求及240条提前计算诊断已重新核验，负载—预算曲线、进度CDF与等待分解图已生成。阶段耗时小样本队列已启动：两模型、B1/B16、四方法，每流固定六任务分层24题，正常计时与诊断分开；本轮不补B4/B8。见[执行范围、已有结果与计时口径](docs/loopfill-mechanisms.md)、[补采实时状态](results/loopfill-mechanisms-20261109/timing/status.json)。
+
 **最终接受token来源统计（2026-11-09，已完成）**：复用表2三模型×五档B的15组、7,200次请求，无新推理。B16下后缀来源占Huginn/Ouro-1.4B/Ouro-2.6B最终decode输出的38.19%/41.41%/42.23%，浅层模型合计56.56%/56.35%/56.67%；其余为未命中候选的全深度输出，prefill首token单列。逐请求计数与哈希审计通过。见[口径、结果与分任务图](docs/loopfill-token-sources.md)。长上下文、历史积累、高熵场景分析已按用户要求取消。
 
 **分数协调上限诊断（2026-11-09）已完成**：三模型、N16/B1/greedy、36组/4,320次请求，审计通过。oracle-first相对c=1的全体γ改善：Huginn **+19.4%**、Ouro-1.4B **+1.9%**、Ouro-2.6B **+1.7%**；全部变体共同输出子集为+30.2%/+5.0%/+3.0%。最佳固定c的全体改善仅+2.73%/+0.60%/+0.34%，online未显示稳定优势。此为排序诊断，不是吞吐或严格全局上界。见[结论与限制](docs/loopfill-score-headroom.md)、[完整结果](results/loopfill-score-headroom-t0-20261109/report.md)、[曲线](results/loopfill-score-headroom-t0-20261109/score-headroom.pdf)、[审计](results/loopfill-score-headroom-t0-20261109/audit.json)。

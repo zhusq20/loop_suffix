@@ -1,0 +1,48 @@
+{
+  "host_exclusive_wall_s": {
+    "synchronization_host": 0.0009266212582588196,
+    "prefill": 6.744515307247639,
+    "tree_allocate_prune": 0.03188356012105942,
+    "metadata_upload_and_wait": 1.5209667906165123,
+    "embedding_host": 0.2128574401140213,
+    "recurrent_forward": 184.07864876836538,
+    "recurrent_host": 1.662664756178856,
+    "combined_readout_host": 0.9956822693347931,
+    "combined_readout_forward": 0.2196749523282051,
+    "kv_commit": 0.24585355073213577,
+    "scheduler_and_unattributed": 1.1398573070764542
+  },
+  "host_calls": {
+    "synchronization_host": 33,
+    "prefill": 65,
+    "tree_allocate_prune": 4721,
+    "metadata_upload_and_wait": 36058,
+    "embedding_host": 2410,
+    "recurrent_forward": 4105,
+    "recurrent_host": 4105,
+    "combined_readout_host": 4105,
+    "combined_readout_forward": 2390,
+    "kv_commit": 4721
+  },
+  "cuda_stream_span_s": {
+    "prefill": 6.747314682006836,
+    "recurrent_forward": 184.2397114105224,
+    "combined_readout_forward": 0.31855148783326126,
+    "kv_commit": 0.4726152321696268
+  },
+  "cuda_event_pairs": {
+    "prefill": 65,
+    "recurrent_forward": 4105,
+    "combined_readout_forward": 2390,
+    "kv_commit": 4721
+  },
+  "diagnostic_wall_s": 196.85353132337332,
+  "host_accounting_error_s": 0.0,
+  "instrumented": true,
+  "formal_throughput": false,
+  "output_tokens": 4745,
+  "decode_tokens": 4721,
+  "benchmark_wall_s": 196.8527112454176,
+  "definitions": "Opt-in stage diagnostics around the frozen benchmark; never formal throughput.\n\nHost scopes measure exclusive wall time (including waits), not CPU utilization.\nCUDA events measure stream spans, which can include host submission gaps, not\nkernel-active time. Host and device measurements must never be added together.\n",
+  "merged_stages": "Shallow and full-depth readouts share fused calls; combined_readout includes coda, LM head, and full-depth verification. Recurrent includes attention KV reads/writes. No per-row time allocation."
+}

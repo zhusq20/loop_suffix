@@ -1,0 +1,52 @@
+{
+  "host_exclusive_wall_s": {
+    "synchronization_host": 0.0010200366377830505,
+    "prefill": 5.318656273186207,
+    "tree_allocate_prune": 0.10073967278003693,
+    "metadata_upload_and_wait": 1.4155931398272514,
+    "embedding_forward": 5.383711531758308,
+    "embedding_host": 0.8121370002627373,
+    "recurrent_forward": 13.293271899223328,
+    "recurrent_host": 2.4947276636958122,
+    "combined_readout_forward": 5.561387695372105,
+    "combined_readout_host": 3.1751532182097435,
+    "kv_commit": 0.16273154318332672,
+    "scheduler_and_unattributed": 1.1746873781085014
+  },
+  "host_calls": {
+    "synchronization_host": 33,
+    "prefill": 63,
+    "tree_allocate_prune": 25577,
+    "metadata_upload_and_wait": 26619,
+    "embedding_forward": 2032,
+    "embedding_host": 2032,
+    "recurrent_forward": 2562,
+    "recurrent_host": 2562,
+    "combined_readout_forward": 2012,
+    "combined_readout_host": 2012,
+    "kv_commit": 2541
+  },
+  "cuda_stream_span_s": {
+    "prefill": 5.3237119293212904,
+    "embedding_forward": 5.492494461297991,
+    "recurrent_forward": 17.57485886621477,
+    "combined_readout_forward": 4.609227838873855,
+    "kv_commit": 0.3093674881234766
+  },
+  "cuda_event_pairs": {
+    "prefill": 63,
+    "embedding_forward": 2032,
+    "recurrent_forward": 2562,
+    "combined_readout_forward": 2012,
+    "kv_commit": 2541
+  },
+  "diagnostic_wall_s": 38.89381705224514,
+  "host_accounting_error_s": 0.0,
+  "instrumented": true,
+  "formal_throughput": false,
+  "output_tokens": 2565,
+  "decode_tokens": 2541,
+  "benchmark_wall_s": 38.89295678585768,
+  "definitions": "Opt-in stage diagnostics around the frozen benchmark; never formal throughput.\n\nHost scopes measure exclusive wall time (including waits), not CPU utilization.\nCUDA events measure stream spans, which can include host submission gaps, not\nkernel-active time. Host and device measurements must never be added together.\n",
+  "merged_stages": "Shallow and full-depth readouts share fused calls; combined_readout includes coda, LM head, and full-depth verification. Recurrent includes attention KV reads/writes. No per-row time allocation."
+}

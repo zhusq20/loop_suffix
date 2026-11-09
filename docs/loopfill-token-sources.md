@@ -45,7 +45,7 @@
 
 ## 产物、审计与复现
 
-- [总体CSV](../paper/figures/loopfill-token-sources/overall.csv)、[六任务CSV](../paper/figures/loopfill-token-sources/by-task.csv)已随论文图表入库；完整报告与逐请求CSV保留在本地`results/loopfill-token-sources-20261109/`。
+- [总体CSV](../paper/figures/loopfill-token-sources/overall.csv)、[六任务CSV](../paper/figures/loopfill-token-sources/by-task.csv)已随论文图表入库；[完整报告](../results/loopfill-token-sources-20261109/report.md)与[逐请求CSV](../results/loopfill-token-sources-20261109/per-request.csv)也已按归档要求纳入Git。
 - [总体PDF](../paper/figures/loopfill-token-sources/token-sources.pdf)、[分任务PDF](../paper/figures/loopfill-token-sources/token-sources-by-task.pdf)。
 - [审计JSON](../paper/figures/loopfill-token-sources/audit.json)：15组均来自job指定的完成attempt，排除W&B副本；输入和冻结源码哈希核对通过；每组480个唯一请求，六任务各80题；输出总量与原summary一致。
 - 逐请求验证四来源计数之和等于`covered_tokens`、五类之和等于`stats.tokens`、加prefill后等于真实输出长度。零decode请求保留，相关百分比为空。
