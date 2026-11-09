@@ -57,6 +57,72 @@
       "sha256": "0f04d3f6ad57bba435f38a9b743885de87840ad225d4480aac845b13e72fffe6"
     },
     {
+      "path": "results/loopfill-four-ablation-q2-20261109/execution-manifest.json",
+      "group": "four-ablations-q2",
+      "bytes": 1000,
+      "sha256": "768b687577dba93c3e8a6bfdf81b51777f97ced77b23580338de727023fa25af"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/measurements.csv",
+      "group": "four-ablations-q2",
+      "bytes": 17892,
+      "sha256": "4af6bf8c5946692965affcea9a105e2c6e1e1fe5103ba0eec0f500d07ecc055d"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/paper-data-manifest.json",
+      "group": "four-ablations-q2",
+      "bytes": 2122230,
+      "sha256": "7a3f43bc236fd7a5d45406bccba2b1f09ba5e63cf291fd250a5088dedebc19f2"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/paper-data.jsonl.gz",
+      "group": "four-ablations-q2",
+      "bytes": 6798893,
+      "sha256": "9bbfa4fbcf7b5ce76eeed013a6158b68b413cf88e1826f1ee632b89aed966097"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/protocol.json",
+      "group": "four-ablations-q2",
+      "bytes": 25783,
+      "sha256": "1690afc5f53bff2b4e66d200345e0ccac006bae741853121721ef9df104477b7"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/reuse-audit.json",
+      "group": "four-ablations-q2",
+      "bytes": 12446,
+      "sha256": "fd656a5fb93bce7a3c1c7df8c00b35802d0ba3b8f3d0a6f4ba641e72cadbd5fc"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/runtime.json",
+      "group": "four-ablations-q2",
+      "bytes": 28531,
+      "sha256": "c07bd79420be01e9f61ef6d2a94b6531c4e39192724293ee209bdab2ffbf85a5"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/status.json",
+      "group": "four-ablations-q2",
+      "bytes": 158,
+      "sha256": "f7132ad2db1a2987eb74e0438bad9bd1b0582f2a85e6b36b1e2b217718a4c3a5"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/suite-finished.json",
+      "group": "four-ablations-q2",
+      "bytes": 158,
+      "sha256": "f7132ad2db1a2987eb74e0438bad9bd1b0582f2a85e6b36b1e2b217718a4c3a5"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/task-metrics.csv",
+      "group": "four-ablations-q2",
+      "bytes": 49524,
+      "sha256": "0749d24a21d5ff1d1db5868cedb6df9da7038863872bd72f93c98629d33c8ab5"
+    },
+    {
+      "path": "results/loopfill-four-ablation-q2-20261109/validation.json",
+      "group": "four-ablations-q2",
+      "bytes": 1978,
+      "sha256": "ccaeab3bbd07f155e221a8ae1c59170ebe426c04d23135705d0eb573121e50b6"
+    },
+    {
       "path": "results/loopfill-latency512-20261107/measurements.csv",
       "group": "table1-greedy",
       "bytes": 13893,
@@ -711,11 +777,13 @@
       "sha256": "187bb4a95908ca4708ccd751107cd2e8fd7ab6f8355f584fa56e558c0c325f61"
     }
   ],
-  "file_count": 118,
-  "total_bytes": 19289088,
+  "file_count": 129,
+  "total_bytes": 28347681,
   "notes": [
     "Existing full Table1/Table2/Preliminary journals already tracked; this index lists their primary plotting inputs.",
     "Timing is a partial immutable snapshot; planned and completed counts are recorded separately.",
-    "Compressed numerical records retain all statistics and output hashes."
-  ]
+    "Compressed numerical records retain all statistics and output hashes.",
+    "The child-Q=2 ablation archive contains all 40 cells, including 36 reused cells from the original archive; only four cells are new measurements."
+  ],
+  "updated_utc": "2026-11-09T04:56:53.977360+00:00"
 }

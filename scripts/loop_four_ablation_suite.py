@@ -2,6 +2,8 @@
 
 The existing Table 2 worker supplies GPU locks, durable results and W&B tracking.
 Only the supervisor and analysis are new; inference code is copied byte-for-byte.
+Prepare from an existing ablation directory to audit and reuse completed cells;
+the child-Q=2 extension adds four B16 streams to the original 36-cell matrix.
 """
 from __future__ import annotations
 
@@ -36,9 +38,10 @@ def variants():
         for k in [1, 2, 4]:
             result.append(dict(variant=f'r{readouts}-k{k}-q4', readouts=readouts,
                                top_k=k, child_q=4, nodes=16, c=.7, arm='budget-online'))
-    for r in [1, 2]:
-        result.append(dict(variant=f'r{r}-k2-q8', readouts=r, top_k=2,
-                           child_q=8, nodes=16, c=.7, arm='budget-online'))
+    for q in [2, 8]:
+        for r in [1, 2]:
+            result.append(dict(variant=f'r{r}-k2-q{q}', readouts=r, top_k=2,
+                               child_q=q, nodes=16, c=.7, arm='budget-online'))
     mother = result[4]
     assert mother['variant'] == 'r2-k2-q4'
     result += [dict(mother, variant=f'n{n}', nodes=n) for n in [8, 32, 64]]
@@ -47,10 +50,10 @@ def variants():
     return result
 
 
-def cells():
+def cells(variant_specs=None):
     rows = []
     for batch in [16, 1]:
-        for v in variants():
+        for v in variants() if variant_specs is None else variant_specs:
             if batch == 1 and v['variant'] not in ['r2-k2-q4', 'n8', 'n32', 'n64']:
                 continue
             for model in MODELS:
@@ -172,6 +175,8 @@ def prepare(out, parent):
     if out.exists():
         raise FileExistsError(out)
     p = read(parent/'protocol.json')
+    parent_is_ablation = 'mother_configs' in p
+    planned = cells()
     old_source = Path(p['source'])
     for name, sha in p['source_sha256'].items():
         assert digest(old_source/name)==sha, name
@@ -183,15 +188,15 @@ def prepare(out, parent):
     shutil.copytree(parent/'inputs', out/'inputs')
     for folder in ['jobs','runs','logs','preflight']:
         (out/folder).mkdir()
-    p.update(version='four-ablation-v1', created_unix=time.time(), source=str(out/'source'),
+    p.update(version='four-ablation-v2-child-q2', created_unix=time.time(), source=str(out/'source'),
              python=sys.executable, parent_protocol=str(parent/'protocol.json'),
              group=out.name, project='llm-memory-editability', models={m:p['models'][m] for m in MODELS},
-             planned_cells=36, batches=[16,1], mother_configs={},
+             planned_cells=len(planned), batches=[16,1], mother_configs={},
              generation='greedy', main_figure_model='ouro-2.6b',
              primary_metric='B16 end-to-end output throughput; B1 node-budget decode latency',
              secondary_metrics='gamma=T*sum(stats.tokens)/sum(stats.calls); rows/token and task breakdown',
              b1_decode_latency='latency_s - ttft_s; includes scheduler and suffix work after first token; token-weighted ms/token also reported',
-             scope='B16: 14 variants/model; B1: N8/16/32/64 only; no repeat timing',
+             scope=f'B16: {len(variants())} variants/model, child Q=2/4/8; B1: N8/16/32/64 only; no repeat timing',
              diagnostic_trace='Separate follow-up collection; never mixed into measured throughput',
              history='cold_start_completion_only; reset before each stream; warmup discarded',
              limitations=['SpecBench has informed parameter design; not held-out confirmation.',
@@ -203,7 +208,8 @@ def prepare(out, parent):
         for kind in ['inputs','smoke_inputs']:
             model[kind] = str(out/'inputs'/Path(model[kind]).name)
             assert digest(model[kind]) == model[kind+'_sha256']
-        old = read(parent/'jobs'/f'{m}-b16-budget-online.json')
+        mother_key = f'{m}-b16-r2-k2-q4' if parent_is_ablation else f'{m}-b16-budget-online'
+        old = read(parent/'jobs'/f'{mother_key}.json')
         meta = read(Path(old['output'])/'metadata.json')
         p['mother_configs'][m] = meta['configs']['budget-online']
         p['engine_versions'] = {k:meta[k] for k in ['torch','transformers']}
@@ -219,9 +225,14 @@ def prepare(out, parent):
     save(out/'runtime.json',runtime)
     save(out/'protocol.json',p)
     reuse = []
-    for j in cells():
-        if j['variant']=='r2-k2-q4':
+    for j in planned:
+        if parent_is_ablation:
+            path = parent/'jobs'/f"{j['key']}.json"
+        elif j['variant']=='r2-k2-q4':
             path = parent/'jobs'/f"{j['model']}-b{j['batch']}-budget-online.json"
+        else:
+            path = None
+        if path is not None and path.exists():
             old = read(path)
             assert old['outcome']=='complete'
             j.update({k:old[k] for k in ['output','gpu','gpu_uuid','cpus','wandb_url']})
@@ -229,15 +240,17 @@ def prepare(out, parent):
             j.update(outcome='complete',reused_from=str(path))
             reuse.append(dict(key=j['key'], from_job=str(path),
                               metadata_sha256=digest(Path(j['output'])/'metadata.json'),
-                              records_sha256=digest(Path(j['output'])/f"budget-online-b{j['batch']}-seed0.jsonl")))
+                              records_sha256=digest(Path(j['output'])/f"{j['arm']}-b{j['batch']}-seed0.jsonl")))
         save(out/'jobs'/f"{j['key']}.json",j)
     save(out/'reuse-audit.json',reuse)
     summarize(out)
-    print(json.dumps(dict(planned=36,reused=len(reuse),new=36-len(reuse))),flush=True)
+    print(json.dumps(dict(planned=len(planned),reused=len(reuse),new=len(planned)-len(reuse))),flush=True)
 
 
 def run(out):
     protocol = read(out/'protocol.json')
+    # A historical frozen protocol must retain its original experiment matrix.
+    planned = cells(protocol['variants'])
     lock = (out/'supervisor.lock').open('a')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     for name, sha in protocol['source_sha256'].items():
@@ -289,11 +302,11 @@ def run(out):
                     save(path,current)
                 with status_lock:
                     summarize(out)
-        with ThreadPoolExecutor(max_workers=8) as pool:
-            list(pool.map(lane,range(8)))
+        with ThreadPoolExecutor(max_workers=len(protocol['lanes'])) as pool:
+            list(pool.map(lane,range(len(protocol['lanes']))))
 
     smokes = []
-    for j in cells():
+    for j in planned:
         if j['batch'] != 16 or read(out/'jobs'/f"{j['key']}.json")['outcome']=='complete':
             continue
         path = out/'preflight'/f"{j['key']}.json"
@@ -306,7 +319,7 @@ def run(out):
     if failures:
         save(out/'preflight-failed.json',failures)
         raise RuntimeError(f'Preflight failed: {failures}')
-    phase([out/'jobs'/f"{j['key']}.json" for j in cells()
+    phase([out/'jobs'/f"{j['key']}.json" for j in planned
            if read(out/'jobs'/f"{j['key']}.json")['outcome'] not in ['complete','oom']],False)
     summarize(out)
     save(out/'suite-finished.json',read(out/'status.json'))

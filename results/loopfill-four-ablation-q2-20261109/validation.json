@@ -1,0 +1,89 @@
+{
+  "tests_passed": 33,
+  "test_files": [
+    "test_loop_four_ablation_suite.py",
+    "test_loop_readout_ablation.py",
+    "test_loop_rank_suffix.py",
+    "test_loop_online_selected.py"
+  ],
+  "changed_source_files": [
+    "scripts/loop_four_ablation_suite.py"
+  ],
+  "inference_identical_to_parent": true,
+  "reused_cells": 36,
+  "new_cells": [
+    "huginn-3.5b-b16-r1-k2-q2",
+    "huginn-3.5b-b16-r2-k2-q2",
+    "ouro-2.6b-b16-r1-k2-q2",
+    "ouro-2.6b-b16-r2-k2-q2"
+  ],
+  "notes": "Initial regression invocation lacked ArcticInference PYTHONPATH and selected an occupied GPU. All 33 checks then passed with ArcticInference and an exclusive lock on GPU 6.",
+  "time_unix": 1794198025.749505,
+  "preflight_passed": 4,
+  "preflight": [
+    {
+      "key": "huginn-3.5b-b16-r1-k2-q2",
+      "requests": 8,
+      "gpu": 6,
+      "readout_depths": [
+        4
+      ],
+      "child_suffix_caps": [
+        2,
+        2
+      ],
+      "root_suffix_room": 4
+    },
+    {
+      "key": "huginn-3.5b-b16-r2-k2-q2",
+      "requests": 8,
+      "gpu": 6,
+      "readout_depths": [
+        4,
+        8
+      ],
+      "child_suffix_caps": [
+        2,
+        2
+      ],
+      "root_suffix_room": 4
+    },
+    {
+      "key": "ouro-2.6b-b16-r1-k2-q2",
+      "requests": 8,
+      "gpu": 6,
+      "readout_depths": [
+        1
+      ],
+      "child_suffix_caps": [
+        2,
+        2
+      ],
+      "root_suffix_room": 4
+    },
+    {
+      "key": "ouro-2.6b-b16-r2-k2-q2",
+      "requests": 8,
+      "gpu": 6,
+      "readout_depths": [
+        1,
+        2
+      ],
+      "child_suffix_caps": [
+        2,
+        2
+      ],
+      "root_suffix_room": 4
+    }
+  ],
+  "preflight_audited_unix": 1794198209.0487618,
+  "final_audit_unix": 1794200131.0480196,
+  "complete_cells": 40,
+  "new_complete_cells": 4,
+  "requests": 19200,
+  "new_requests": 1920,
+  "all_cells_audited": true,
+  "source_hashes_verified": 103,
+  "archive_verified_against_measurements": true,
+  "archived_requests": 19200
+}

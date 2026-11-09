@@ -1,0 +1,35 @@
+{
+  "created_unix": 1794200213.0966196,
+  "active_models": [
+    "huginn-3.5b",
+    "ouro-2.6b"
+  ],
+  "active_arms": [
+    "budget-online",
+    "budget-fixed"
+  ],
+  "core_batch": 16,
+  "node_budget_extra_batch": 1,
+  "planned_cells": 40,
+  "complete_cells": 40,
+  "reused_cells": 36,
+  "new_cells": 4,
+  "new_cell_keys": [
+    "huginn-3.5b-b16-r1-k2-q2",
+    "huginn-3.5b-b16-r2-k2-q2",
+    "ouro-2.6b-b16-r1-k2-q2",
+    "ouro-2.6b-b16-r2-k2-q2"
+  ],
+  "requests": 19200,
+  "new_requests": 1920,
+  "child_suffix_budgets": [
+    2,
+    4,
+    8
+  ],
+  "root_suffix_budget": 4,
+  "parent_protocol": "/ossfs/workspace/loop_suffix/results/loopfill-four-ablation-20261109/protocol.json",
+  "protocol_sha256": "1690afc5f53bff2b4e66d200345e0ccac006bae741853121721ef9df104477b7",
+  "note": "The parent arms field is inherited Table 2 metadata; executed variants and jobs define this ablation scope. Existing 36 streams are reused, not repeated timings.",
+  "full_queue_is_automatic_after_preflight": true
+}

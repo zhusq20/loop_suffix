@@ -10,12 +10,25 @@ from dataclasses import asdict
 
 def test_matrix_has_only_authorized_cells():
     jobs = suite.cells()
-    assert len(jobs) == len({j['key'] for j in jobs}) == 36
+    assert len(jobs) == len({j['key'] for j in jobs}) == 40
     for model in suite.MODELS:
-        assert len([j for j in jobs if j['model']==model and j['batch']==16])==14
+        assert len([j for j in jobs if j['model']==model and j['batch']==16])==16
+        child_budget = [j for j in jobs if j['model']==model and j['batch']==16
+                        and j['top_k']==2 and j['nodes']==16 and j['arm']=='budget-online']
+        assert {(j['readouts'], j['child_q']) for j in child_budget} == {
+            (r, q) for r in [1, 2] for q in [2, 4, 8]}
         b1 = [j for j in jobs if j['model']==model and j['batch']==1]
         assert {j['nodes'] for j in b1}=={8,16,32,64}
         assert all(j['readouts']==2 and j['top_k']==2 and j['child_q']==4 and j['arm']=='budget-online' for j in b1)
+
+
+def test_historical_matrix_does_not_schedule_new_q2_cells():
+    previous_variants = [v for v in suite.variants() if v['child_q'] != 2]
+    previous_jobs = suite.cells(previous_variants)
+    assert len(previous_jobs) == 36
+    assert all(j['child_q'] in [4, 8] for j in previous_jobs)
+    added = {j['key'] for j in suite.cells()} - {j['key'] for j in previous_jobs}
+    assert added == {f'{model}-b16-r{r}-k2-q2' for model in suite.MODELS for r in [1, 2]}
 
 
 def test_every_command_reconstructs_exact_frozen_config():
@@ -31,6 +44,7 @@ def test_every_command_reconstructs_exact_frozen_config():
             cmd = suite.command(p,dict(cpus='0-3'),j,Path('/out'),smoke)
             args = parser().parse_args(cmd[5:])
             expected = suite.expected_config(p,j)
+            assert expected['suffix_room'] == args.suffix_max_draft == 4
             assert args.batch_sizes == ('2' if smoke else str(j['batch']))
             assert args.max_new_tokens == (16 if smoke else 1024)
             assert args.model_readout_depths == expected['readout_depths']
