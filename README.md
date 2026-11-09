@@ -1,5 +1,7 @@
 # LoopFill (loop_suffix)
 
+**最终接受token来源统计（2026-11-09，已完成）**：复用表2三模型×五档B的15组、7,200次请求，无新推理。B16下后缀来源占Huginn/Ouro-1.4B/Ouro-2.6B最终decode输出的38.19%/41.41%/42.23%，浅层模型合计56.56%/56.35%/56.67%；其余为未命中候选的全深度输出，prefill首token单列。逐请求计数与哈希审计通过。见[口径、结果与分任务图](docs/loopfill-token-sources.md)。长上下文、历史积累、高熵场景分析已按用户要求取消。
+
 **分数协调上限诊断（2026-11-09）已完成**：三模型、N16/B1/greedy、36组/4,320次请求，审计通过。oracle-first相对c=1的全体γ改善：Huginn **+19.4%**、Ouro-1.4B **+1.9%**、Ouro-2.6B **+1.7%**；全部变体共同输出子集为+30.2%/+5.0%/+3.0%。最佳固定c的全体改善仅+2.73%/+0.60%/+0.34%，online未显示稳定优势。此为排序诊断，不是吞吐或严格全局上界。见[结论与限制](docs/loopfill-score-headroom.md)、[完整结果](results/loopfill-score-headroom-t0-20261109/report.md)、[曲线](results/loopfill-score-headroom-t0-20261109/score-headroom.pdf)、[审计](results/loopfill-score-headroom-t0-20261109/audit.json)。
 
 **候选树概率采样实验（2026-11-09，已完成）**：按用户要求仅种子0、单次计时，两模型四臂，8/8个B16完整480题流、3,840次请求完成且审计通过。树采样将平均草稿数降至约8个、rows/token减少21%—36%，但相对同评分Top-N的吞吐下降 **11.4%—14.6%**，本轮不支持替换Top-N，未触发B1补测。见[设计与实测结论](docs/loopfill-tree-sampling-plan.md)、[完整报告](results/loopfill-tree-sampling-b16-seed0-20261109/report.md)、[指标CSV](results/loopfill-tree-sampling-b16-seed0-20261109/measurements.csv)、[图PDF](results/loopfill-tree-sampling-b16-seed0-20261109/tree-sampling.pdf)。

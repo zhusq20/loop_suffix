@@ -1,0 +1,206 @@
+{
+  "passed": true,
+  "cells": 15,
+  "requests": 7200,
+  "decode_tokens": 1348184,
+  "output_tokens": 1355384,
+  "formula": "sum(source counts) / sum(emitted decode tokens); prefill excluded",
+  "attribution": "origin of the surviving candidate incarnation at verification",
+  "source_fields": [
+    "suffix",
+    "fill",
+    "sibling",
+    "deep",
+    "uncovered"
+  ],
+  "duplicate_proposals": "not counted twice",
+  "terminal_tokens": "included exactly as stored in generated outputs",
+  "overlap": "not recoverable from these aggregate logs",
+  "new_inference": false,
+  "protocol_sha256": "49e2609728153a2d85ed3f2e0c13c2923aad702ddc38cdb6762ce19bbdb6a920",
+  "analyzer_sha256": "f7ff26b2d641d73973399168a2e59ab7dbfb4a28e82913e0c7fd5b8f05da7a3d",
+  "frozen_sources": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2"
+  },
+  "inputs": [
+    {
+      "key": "huginn-3.5b-b1-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/huginn-3.5b-b1-budget-online.json": "e938b04cc4c473aabdda6853052584bb3f45196f81617ca6c797e95f6ebe91be",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b1-budget-online/attempt1/budget-online-b1-seed0.jsonl": "bad25f5320a4d3001bdb61167b42b16274cd70596d78312ca54c93d88d75d9d6",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b1-budget-online/attempt1/metadata.json": "b51c5b5bcd959df66fcb98bbf687c5c907b53a100cd288b1d4f0c6a3d012324b",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b1-budget-online/attempt1/complete.json": "d949ebf93fba8951bc2f7150c7a2c9d8e01211941d6b8053742b0e6df5c8c2ec",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b1-budget-online/attempt1/budget-online-b1-seed0-summary.json": "c65d137230b1001e4a87ec87271e938970c246bc336712284045608374f2578d",
+        "results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e"
+      }
+    },
+    {
+      "key": "huginn-3.5b-b2-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/huginn-3.5b-b2-budget-online.json": "5b67f2a5b195101453cd197607e41571d91c5457a84305fe15ab8e3a7bf19625",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b2-budget-online/attempt1/budget-online-b2-seed0.jsonl": "c399215d43d81488e044511f8baa9083180436a861d60d980e67fc55745d04ea",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b2-budget-online/attempt1/metadata.json": "17c018cc08e1a1defffe9666e24ea6cfe7e5071fe96ad5eaf4a41c89afee308f",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b2-budget-online/attempt1/complete.json": "3f04c2320500bdfd12da2247734adf875137e3228ce7c71caa8feca2df6af6b0",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b2-budget-online/attempt1/budget-online-b2-seed0-summary.json": "f1dd33e8978c3c8074e68bcaa9915e07b10a463d3d9e7ec6642a38ce736fca35",
+        "results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e"
+      }
+    },
+    {
+      "key": "huginn-3.5b-b4-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/huginn-3.5b-b4-budget-online.json": "243e285d81eac3fbcaa2f82e590890056857aa224d87f26cb24ae8cfe5aed88f",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b4-budget-online/attempt1/budget-online-b4-seed0.jsonl": "aa4ceec1d2a08ea992e4949a91c4b373ffe5c09f6768b381736e9a65462dc59e",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b4-budget-online/attempt1/metadata.json": "b3f955afe64874f91273a110e2cf55872ff550c680cf143519c64a55a784cee2",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b4-budget-online/attempt1/complete.json": "58d9e5a987cf01cae7140e4ec344a673c11b86e0fc486fe751e31df39b9b3c5e",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b4-budget-online/attempt1/budget-online-b4-seed0-summary.json": "066dc7283bd6f79f3b6fe4e050cdf45aea882ab43e0355d8a8e42a20b3007a6c",
+        "results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e"
+      }
+    },
+    {
+      "key": "huginn-3.5b-b8-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/huginn-3.5b-b8-budget-online.json": "f1b47d8a14935fcf3c6e1e7a898fb1f7418b3c8c8313ae61645616fbf0e02393",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b8-budget-online/attempt1/budget-online-b8-seed0.jsonl": "64d19c17280080431dd79c0e8d07c9a9124cbb7f4bcf0096887dc946e58aa8e9",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b8-budget-online/attempt1/metadata.json": "cba72fc00631841430ca0657c1721bb7b9555053dc8bb8532f27fdabe068a252",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b8-budget-online/attempt1/complete.json": "321baffdfa8a1a5677022e13531c4f0422449bb6f4f7790da41e4977c9d652dd",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b8-budget-online/attempt1/budget-online-b8-seed0-summary.json": "542bcf093716c5d95ac65ae099fcca31bfcfc3a2f753bfb52960d83cc99e4212",
+        "results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e"
+      }
+    },
+    {
+      "key": "huginn-3.5b-b16-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/huginn-3.5b-b16-budget-online.json": "20550b1d213468fc5f682d982bdb0be8509fd927fbc766a2afa3e66ca802cb40",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b16-budget-online/attempt1/budget-online-b16-seed0.jsonl": "0c264f6527bc24024033ecf50b1534b28f228e1a152f2edbefe62b147bee7644",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b16-budget-online/attempt1/metadata.json": "4151ce4740ebd05f5b0e8837f74b4cfb4fcbad2da4422a21753ab9908085f8e5",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b16-budget-online/attempt1/complete.json": "23eee543d46fa6fb13184f615797ada404611324374d9442c0de151498130c8a",
+        "results/loopfill-table2-20261107-v2/runs/huginn-3.5b-b16-budget-online/attempt1/budget-online-b16-seed0-summary.json": "7e382a63bb46c3c92bb8141072a3c59ce907c4b1eaca88ec926a34eb3e5e0014",
+        "results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e"
+      }
+    },
+    {
+      "key": "ouro-1.4b-b1-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-1.4b-b1-budget-online.json": "2a2e8125df508caed988f5f731cb9dc43070b82801d2ad05d58772531ad69f79",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b1-budget-online/attempt1/budget-online-b1-seed0.jsonl": "14ac4593d6600796371a11d7e4dd0c4afa2a14644117b8fb547dafd836ed3137",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b1-budget-online/attempt1/metadata.json": "5f8bef25fe958e060a9e14209d8baa14f678ee610586a241dd4f1df08e3b9ff5",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b1-budget-online/attempt1/complete.json": "dcc8f11a6c1d8fb265059b426e8138ec71dea8706d6dc91fca3853ce16722cb5",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b1-budget-online/attempt1/budget-online-b1-seed0-summary.json": "52047f94bb9fcbf8f4d15a3c2b74df4e4baa22d4caa146852abbd4499ef4f9be",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-1.4b.jsonl": "925e841c57256f78dea79285bd4bb75a5610d29fb44c906f2bcc69545282191d"
+      }
+    },
+    {
+      "key": "ouro-1.4b-b2-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-1.4b-b2-budget-online.json": "ceb3b9bbb8d70f88c27a7a3592c9fd3f83a22ccceec23f702940f32a058ea269",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b2-budget-online/attempt1/budget-online-b2-seed0.jsonl": "3b296f4792c2572a9c0f1ea061c3b30800932ba89197c5af4a3b3e27fe4d8b79",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b2-budget-online/attempt1/metadata.json": "ccdf1e3adc2b6eeb6c66f1ff3ff63b6f041e9d60e8f27ecd1bf8bb7de868d9d1",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b2-budget-online/attempt1/complete.json": "7d9871b3a9971e6bacd3dd695d9a265ee8243fd58d3299e010bbca6704ef09f9",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b2-budget-online/attempt1/budget-online-b2-seed0-summary.json": "e5a38037b0e8e65e72339a8b085afc5caf0bf49e5c124b88b79f002f5aaa5ed6",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-1.4b.jsonl": "925e841c57256f78dea79285bd4bb75a5610d29fb44c906f2bcc69545282191d"
+      }
+    },
+    {
+      "key": "ouro-1.4b-b4-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-1.4b-b4-budget-online.json": "515cee3b9d5f1e875b58ea0ccadb2ee3f257d8edcd958e0a5a22ea56ad43d29e",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b4-budget-online/attempt1/budget-online-b4-seed0.jsonl": "d191a1ab4bf0f807556388977f23d992083952df7d43c6510338da91cfb052be",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b4-budget-online/attempt1/metadata.json": "3638f4afa44ef0e2e2d18cbe240aae740b3d2669bbff47b83dea582f6300a7a7",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b4-budget-online/attempt1/complete.json": "6efb1a0a3bda020912ab3587181609d40e16f4c5066812527ed49c1f7b852d7c",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b4-budget-online/attempt1/budget-online-b4-seed0-summary.json": "125c0ec70c19f47f58a15ec13126caec9385ffad9d4fa0b10a53e29bec7f2e39",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-1.4b.jsonl": "925e841c57256f78dea79285bd4bb75a5610d29fb44c906f2bcc69545282191d"
+      }
+    },
+    {
+      "key": "ouro-1.4b-b8-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-1.4b-b8-budget-online.json": "743840cec1b0301226ef70b16c20968dd89e6fef4e3419d6ba905b11a83fd044",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b8-budget-online/attempt1/budget-online-b8-seed0.jsonl": "e17057e2b8038de85be772c0c778a81113cb27844d67e99a189e9c7847a5b4bb",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b8-budget-online/attempt1/metadata.json": "cd1e6f7e288d7e40b56eb545118905fde52c2cc366e695a4a8d37238165a36ae",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b8-budget-online/attempt1/complete.json": "2275198cd015daa9f8761d3ac0e846175bab96bc74a018cacbe20c2a8d7c1aa3",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b8-budget-online/attempt1/budget-online-b8-seed0-summary.json": "676a302f47249fbc1acb0c6026897a2cbb1c4696112a230e3357d2998f46799e",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-1.4b.jsonl": "925e841c57256f78dea79285bd4bb75a5610d29fb44c906f2bcc69545282191d"
+      }
+    },
+    {
+      "key": "ouro-1.4b-b16-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-1.4b-b16-budget-online.json": "f5074bc18051d33e661599e7297cc5ebbaed86faae291fb199960142206ec093",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b16-budget-online/attempt1/budget-online-b16-seed0.jsonl": "036b987e4f76050a7e3abc00a33e1e87814b2266a145a2d61292844c6b788092",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b16-budget-online/attempt1/metadata.json": "9935a2488d13fea66970841ac1ab0b88d624b2ed85bd0f021c76d86fe8e850e0",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b16-budget-online/attempt1/complete.json": "0bf0cafd8f3f00a8f70e138f4ab3307f8ec617456b342d805e8488eaec7c9b80",
+        "results/loopfill-table2-20261107-v2/runs/ouro-1.4b-b16-budget-online/attempt1/budget-online-b16-seed0-summary.json": "1ee9d0b9e9c2c5f7f4a764a220cd19dde15ee89a92e9c4b3f24232515bd671ff",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-1.4b.jsonl": "925e841c57256f78dea79285bd4bb75a5610d29fb44c906f2bcc69545282191d"
+      }
+    },
+    {
+      "key": "ouro-2.6b-b1-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-2.6b-b1-budget-online.json": "81990f787a80e76727e913b7727e8648c78f903ad2ee2d014c2557a4c0c3e3c7",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b1-budget-online/attempt1/budget-online-b1-seed0.jsonl": "1acf4a28ad2e4bc53e8cf4bc0fdb2efc9ee442aad2170c8e2d5f094c7b504552",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b1-budget-online/attempt1/metadata.json": "1035c98569ad3f573e7d68f26aec2d04e52b3416546ec138c3459da43c75dcbc",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b1-budget-online/attempt1/complete.json": "46d74263790c5060f6faedc2e76e9a81321763144b74d6af4e6b80a464f2571f",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b1-budget-online/attempt1/budget-online-b1-seed0-summary.json": "9904ed7d1fefdfe67f74403aa2cba755bf63eb113266b2a6e6a5c698b4292727",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-2.6b.jsonl": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d"
+      }
+    },
+    {
+      "key": "ouro-2.6b-b2-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-2.6b-b2-budget-online.json": "afab1dd65deff40c8c1aeca91822c3cbde0c5f5923f389af1042c9a68d635652",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b2-budget-online/attempt1/budget-online-b2-seed0.jsonl": "bcee2346c9add93ed780f330c5e21dc78c1d066784f74a7882d3d7c36e08a99a",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b2-budget-online/attempt1/metadata.json": "b17b440b2fe50bd91828e712efb648797ad7985034b3acf558802aa0a416d2bd",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b2-budget-online/attempt1/complete.json": "3dcdf5d6728ec2df08e977db99e25b44350fc9a02fcdbef2d122497551084203",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b2-budget-online/attempt1/budget-online-b2-seed0-summary.json": "182269a151d95da6df8f97baca898948c00065d4e6d572b2c93dfcb83f94d6e2",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-2.6b.jsonl": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d"
+      }
+    },
+    {
+      "key": "ouro-2.6b-b4-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-2.6b-b4-budget-online.json": "5ba688d6277d53861d3c7cf2955403a688b247f2fb3d59238fc587aa79d4e489",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b4-budget-online/attempt1/budget-online-b4-seed0.jsonl": "5e96f23ed0fe6d45d7f111027593dc9308f2dfb85c9ceffe8b284b6f80a77623",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b4-budget-online/attempt1/metadata.json": "b2a8567e32d952cfdae0076a85cc032740955fd7dc43f9fe97c4c7e990b5aecd",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b4-budget-online/attempt1/complete.json": "a94dc953dff5bc3e70d8c7f2870ee1ce413b35ca22c329fae87eecbbcaf2a6a3",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b4-budget-online/attempt1/budget-online-b4-seed0-summary.json": "e0228bc88ca57a49bbab8455c82f4cba7182f3c729a6c3071b205890c88b4399",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-2.6b.jsonl": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d"
+      }
+    },
+    {
+      "key": "ouro-2.6b-b8-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-2.6b-b8-budget-online.json": "143cc7d5ae36cde31f6ce6540feca278627fb98b2feac379a522ff785ef796a5",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b8-budget-online/attempt1/budget-online-b8-seed0.jsonl": "6a2c9b76887bedb896bd88bc2c506a8f1585a603ce74b44b739796f354f3ecab",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b8-budget-online/attempt1/metadata.json": "23619309fd25ab9233004fa6cdb2660458860f4acf9998bad89b1dd247a86191",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b8-budget-online/attempt1/complete.json": "81941bbfbd64c62debc6dc390d9e597dc3c4227057e93f9d1c03b1be31f68ad0",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b8-budget-online/attempt1/budget-online-b8-seed0-summary.json": "8a109d4695993c4c6f67b2fad323b3588bc8e7f3cb500a0110b666b2d90bc1c1",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-2.6b.jsonl": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d"
+      }
+    },
+    {
+      "key": "ouro-2.6b-b16-budget-online",
+      "files": {
+        "results/loopfill-table2-20261107-v2/jobs/ouro-2.6b-b16-budget-online.json": "19ee3b242efc9d098ea70d33dbd442320dd272e971f171019f735c2e31586306",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b16-budget-online/attempt1/budget-online-b16-seed0.jsonl": "f6c9be4b7c29ce879b17abba3181cff0d25ecdfd9ff28fad5e494ec9f31ce993",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b16-budget-online/attempt1/metadata.json": "93f782d17d23ef98bd69d762daeba7895032e414749120380d16cce1fb833630",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b16-budget-online/attempt1/complete.json": "a1eff76f951ad50a601713eb71a19ea0cefa07a46c42d194e6468bd6b9c69dc1",
+        "results/loopfill-table2-20261107-v2/runs/ouro-2.6b-b16-budget-online/attempt1/budget-online-b16-seed0-summary.json": "1aa921981ed5799b8d554ba0f21c3f88ca3f4fa1f40cbc9b9515ec7ba1ce44ae",
+        "results/loopfill-table2-20261107-v2/inputs/ouro-2.6b.jsonl": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d"
+      }
+    }
+  ]
+}
