@@ -5,6 +5,36 @@
 [`results/dflash-table12-packed-20261112-v2/`](../results/dflash-table12-packed-20261112-v2/)。
 无 `v2` 的目录仅用于准备检查，没有 GPU 测量。
 
+**2026-11-12 八卡调度更新**：按用户要求，尚未启动的单元已交给
+[`gpu-balanced-queue-20261112-v1`](../results/gpu-balanced-queue-20261112-v1/status.json)，
+允许使用 GPU 0–7，优先补跑 LoopAhead/Ouro-2.6B/SpecBench/T=1 的锁冲突单元，
+随后按历史 AR 耗时估计优先派发长任务，空闲卡自动领取。
+Agentic 尚未完成的同卡比较组保留绑定，已有训练和测速进程正常完成。
+原 DFlash 控制器暂停领取新单元，继续回收自己启动的工作进程并记录真实退出码；
+这些进程全部退出后，新队列合并记录并接管原目录的状态和汇总。
+过渡期间以链接中的共享队列状态及原 `dispatch.json` 合并查看，避免遗漏已迁移单元。
+冻结推理源码、输入和参数保持原协议；调度修订见
+[`plan.json`](../results/gpu-balanced-queue-20261112-v1/plan.json)。
+
+**2026-11-12 调度器恢复**：原控制器停止后写出的状态不含 `active`，共享队列因此
+触发 `KeyError`。已修复停止状态兼容性，并增加显式 `--resume`、进程身份校验、
+启动凭据与队列状态核对。恢复时保留原进程及其 GPU 锁，未中断正在计时的任务。
+新任务由独立监护进程等待真实退出并原子写入凭据，控制器退出后仍可恢复。
+
+旧共享控制器崩溃后，部分工作进程已由系统接管，无法补领真实退出码。
+即使 `complete.json` 和产物哈希通过，这类 attempt 仍保留为 `interrupted`，
+使用新 attempt 完整重跑；不推断退出码为零、不拼接计时、不改动原结果。
+已结束的 LoopAhead SpecBench T=1 的 `lockretry-v1` 同样保留，正式补跑使用
+`lockretry-v2`。因此恢复后的正式完成数可能少于按完成文件统计的产物数。
+恢复前快照、源码哈希和验证记录见
+[`recovery-amendment.json`](../results/gpu-balanced-queue-20261112-v1/recovery-amendment.json)。
+
+共享队列恢复入口（有活动控制器时由互斥锁拒绝重复启动）：
+
+```bash
+/opt/conda/bin/python -u results/gpu-balanced-queue-20261112-v1/controller.py --resume
+```
+
 ## 范围与协议
 
 | 项目 | 本轮配置 |
@@ -49,7 +79,7 @@ drafter KV、T=0/1 与串行参考对齐、EOS、输出预算、槽位复用及 
 每个模型先在真实目标权重和真实 drafter 上做 FP32 B2 串行/批处理对照，通过后
 才能运行该模型的正式单元。每个表二单元在相同 batch 和上下文容量下预热。
 
-GPU仅使用当前分配策略允许的2/3/4/6号卡。调度器等待已有任务释放设备，通过
+初始调度使用2/3/4/6号卡；后续八卡分配遵循上面的调度修订。调度器等待已有任务释放设备，通过
 `/tmp/loopfill-<UUID>.lock` 与其他队列互斥，锁文件描述符传给工作进程，控制器退出
 不会提前释放仍在运行的 GPU 工作进程的锁。每单元绑定四个 NUMA 本地 CPU 核，
 实际频率、显存和温度写入 `telemetry.jsonl`。

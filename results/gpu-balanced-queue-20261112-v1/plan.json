@@ -1,0 +1,79 @@
+{
+  "created_unix": 1794428505.1986759,
+  "authorization": "User requested retrying the lock-conflict cell and balancing queued work over all eight GPUs.",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "cpu_bindings": {
+    "0": "0-3",
+    "1": "4-7",
+    "2": "8-11",
+    "3": "12-15",
+    "4": "48-51",
+    "5": "52-55",
+    "6": "56-59",
+    "7": "60-63"
+  },
+  "original_controller": {
+    "pid": 458341,
+    "start_ticks": "43744157",
+    "state": "S",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_suite.py",
+      "run",
+      "--out",
+      "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2"
+    ]
+  },
+  "dflash_protocol_sha256": "6d06a4e8491ce7a17ead410ba562186e79081f0de3489c0fce299a6ef4d8b149",
+  "controller_sha256": "81b64c089bfadc59357a9121396ca802c8d0d5c46b85aea8c945ff2fcaedc28d",
+  "lock_handoff_sha256": "fbd162d7f739886dbabe2788a713236f4ff9fc60954aff227bd4353b165d96b4",
+  "retry_original_argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "specbench",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-v1",
+    "--admission",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+  ],
+  "retry_name": "loopahead-ouro-2.6b-specbench-t1-lockretry-v1",
+  "retry_original_failure": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-specbench-t1-v1.log",
+  "previous_failure_sha256": {
+    "finished.json": "2b856358126c172d758e18a365341d84f31a831e984b0a88cece9d4303829e91",
+    "loopahead-ouro-2.6b-specbench-t1-finished.json": "50dba711d61166a416d46d1ca45325ea296cc31715d081969e28b5934ba7df61",
+    "loopahead-ouro-2.6b-specbench-t1-v1-finished.json": "0876e1af8c302a26c6eb73f43083848da6fe58392c0ed82128ca6b9615323cf1",
+    "loopahead-ouro-2.6b-specbench-t1-v1-launcher.json": "aa14763743b281ab37671a2cb018fd13fa0622f2fa09b1b48719a87c71702d19",
+    "loopahead-ouro-2.6b-specbench-t1-v1.log": "f06dc2421a069fe65ecee5f5d6192b068f59eaac9f5d50d92bee42e539fc1f1c",
+    "loopahead-ouro-2.6b-specbench-t1-worker-exit.json": "ac5687bdd91a07291adc45b30306819c87b38d9a56a05a0c5ff0f4c446b267eb",
+    "status.json": "2b856358126c172d758e18a365341d84f31a831e984b0a88cece9d4303829e91"
+  },
+  "scope": "Placement and startup only. Original inference sources, inputs, seeds, precision, checkpoints and timing preserved.",
+  "queue_policy": "Retry first; longest estimated remaining jobs first on next free GPU; preserve active SQL comparison lanes and running training reservation; no GPU worker preemption.",
+  "status": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/status.json",
+  "stop_content": "{\"owner\": \"/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1\", \"reason\": \"All-eight-GPU dispatch migration; current children finish under original parent\"}\n",
+  "paused_unix": 1794428505.3167527
+}

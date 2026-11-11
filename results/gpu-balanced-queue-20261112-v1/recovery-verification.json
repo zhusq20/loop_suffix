@@ -1,0 +1,61 @@
+{
+  "verified_unix": 1794434474.1660619,
+  "controller_pid": 91957,
+  "stage": "running",
+  "heartbeat_age_s": 1.0712316036224365,
+  "worker_pids_preserved": {
+    "table1-ouro-2.6b-math500-t0": 24069,
+    "table1-ouro-2.6b-math500-t1": 26008,
+    "table1-huginn-3.5b-math500-t1": 27179,
+    "table1-ouro-2.6b-specbench-t1": 46374,
+    "table1-ouro-2.6b-specbench-t0": 59111,
+    "table1-ouro-2.6b-mbppplus-t1": 88956,
+    "loopahead-ouro-2.6b-specbench-t1": 88946
+  },
+  "teacher_pid_preserved": 10995,
+  "pending": 21,
+  "failed": {},
+  "progress": {
+    "table1-ouro-2.6b-math500-t0": {
+      "requests": 224,
+      "expected": 500,
+      "updated_unix": 1794434466.435945
+    },
+    "table1-ouro-2.6b-math500-t1": {
+      "requests": 200,
+      "expected": 500,
+      "updated_unix": 1794434446.7016802
+    },
+    "table1-huginn-3.5b-math500-t1": {
+      "requests": 361,
+      "expected": 500,
+      "updated_unix": 1794434457.8914895
+    },
+    "table1-ouro-2.6b-specbench-t1": {
+      "requests": 269,
+      "expected": 480,
+      "updated_unix": 1794434449.0582695
+    },
+    "table1-ouro-2.6b-specbench-t0": {
+      "requests": 282,
+      "expected": 480,
+      "updated_unix": 1794434473.2456992
+    },
+    "table1-ouro-2.6b-mbppplus-t1": {
+      "requests": 9,
+      "expected": 378,
+      "updated_unix": 1794434446.6386797
+    },
+    "loopahead-ouro-2.6b-specbench-t1": {
+      "requests": 25,
+      "decode_tokens": 3765,
+      "output_tokens": 3790,
+      "decode_s": 199.59782391041517,
+      "tok_s": 18.862931099338198,
+      "loop_steps": 4053,
+      "gamma": 3.7157660991857884
+    }
+  },
+  "tests_passed": 19,
+  "source_hashes_verified_at_controller_start": true
+}

@@ -1,5 +1,12 @@
 # LoopFill (loop_suffix)
 
+**八卡任务调度与失败单元重跑（2026-11-12）**：剩余 DFlash 重测单元进入 GPU 0–7 共享队列，
+优先补跑 LoopAhead/Ouro-2.6B/SpecBench/T=1 的启动锁冲突单元。
+已有 GPU 工作进程继续完成；待运行长任务优先填入空闲卡，同卡比较组保留绑定。
+见[共享队列实时状态](results/gpu-balanced-queue-20261112-v1/status.json)、
+[重跑状态](results/gpu-balanced-queue-20261112-v1/retry-status.json)与
+[调度修订](docs/dflash-table12-remeasurement.md)。
+
 **Agentic Table 1 补充（2026-11-12）**：Huginn-3.5B、Ouro-2.6B × 全部七方法 × temperature=0/1，
 共28项、2,800次SQL执行—修复请求回放；仅使用本轮指定的GPU 0/1/5/7。
 见[实验协议](docs/loopfill-agentic.md)、[实时状态](results/loopfill-agentic-sql-table1-20261112/status.json)和
