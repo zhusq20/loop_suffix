@@ -1,0 +1,39 @@
+{
+  "suite": "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-table1-20261112",
+  "dataset": "Spider development SQL execution/repair request replay",
+  "semantics": "Fixed causal SQL request replay. Ouro-2.6B greedy teacher, actual read-only SQLite execution, at most two error-triggered repairs. No gold SQL feedback. Successful execution ends a trace. Current teacher response, tool result and future calls removed from replay inputs. No live-agent or official Spider accuracy claim. Distinct from the unpublished SuffixDecoding AgenticSQL dataset.",
+  "input_sha256": "32cefe4fb8f50a911d669be7eeba8a4ab5ce1c8a2452a86f1d6a46cfbd30a9f2",
+  "phase_counts": {
+    "early": 74,
+    "middle": 13,
+    "late": 13
+  },
+  "models": [
+    "huginn-3.5b",
+    "ouro-2.6b"
+  ],
+  "methods": [
+    "ar",
+    "wavefront",
+    "loopspec-dual",
+    "budget-suffix",
+    "loopahead",
+    "dflash",
+    "budget-online"
+  ],
+  "temperatures": [
+    0,
+    1
+  ],
+  "max_new_tokens": 512,
+  "batch": 1,
+  "sampling_seed": 0,
+  "timing_repeats": 1,
+  "audit_sha256": "f13430a0d4c177261dfc3c184fd35d9cb33fbc83b33c65d1809ec91c22ebb10a",
+  "outputs": {
+    "paper/tables/table1-agentic-sql.tex": "3d205204a92a30218b630c8536f2e56bf636d549d2de01bfe5e70988663e1e76",
+    "paper/data/agentic-sql-measurements.csv": "46a36c77a03fe71575e7c7b173482da5e36e1a427bcbb765c51c0c3c9f9ebd59"
+  },
+  "timing": "Decode-only; prefill, warmup, loading and journal I/O excluded. Includes suffix publication.",
+  "limitations": "Fixed historical SQL requests, not closed-loop task performance. B1 token/s is not concurrent serving throughput. Output lengths can differ."
+}
