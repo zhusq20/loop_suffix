@@ -1,87 +1,101 @@
-# OpenHands agent 请求解码实验（2026-11-12）
+# Table 1 agentic 补充实验（2026-11-12）
 
-按用户确认的计划，首先执行 Ouro-2.6B 的 B=1、temperature=0/1 五方法比较。
-结果目录为 [loopfill-agentic-20261112](../results/loopfill-agentic-20261112/)，
-实时进展以 [status.json](../results/loopfill-agentic-20261112/status.json) 为准。
-[report.md](../results/loopfill-agentic-20261112/report.md) 与 measurements.csv 随完成单元更新。
-排队和 CPU 验证完成不代表 GPU 实验已完成。
+本轮只补充 Table 1：Huginn-3.5B、Ouro-2.6B 两组模型，AR、WFD、LoopSpec、
+Suffix-only、LoopAhead、DFlash、LoopFill-online 全部七个方法，temperature=0/1。
+共28个正式单元，每个单元100次相同历史请求、最多512新token、B=1。
+GPU仅使用用户本轮明确指定的空闲卡0、1、5、7；不在2、3、4、6排队。
 
-## 输入与适用范围
+正式数据目录是 [loopfill-agentic-sql-table1-20261112](../results/loopfill-agentic-sql-table1-20261112/)。
+轨迹生成状态见 [trace-status.json](../results/loopfill-agentic-sql-table1-20261112/trace-status.json)。
+100次输入已冻结，正式批次已启动；实时测速状态见
+[status.json](../results/loopfill-agentic-sql-table1-20261112/status.json)，
+[report.md](../results/loopfill-agentic-sql-table1-20261112/report.md)随完成单元更新。
+GPU接口验证不等于正式测速完成。
 
-来源为 SWE-bench Verified 的 OpenHands + Devstral Small 2505 公开轨迹，
-[官方提交元数据](https://github.com/SWE-bench/experiments/blob/main/evaluation/verified/20250520_openhands_devstral_small/metadata.yaml)
-指向公开 S3 桶。已下载500条轨迹，共92,564,662字节；逐文件URL、ETag和SHA256保存在
-[输入清单](../results/loopfill-agentic-20261112/inputs/manifest.json)。
+## 工作负载
 
-每次调用只使用它之前的完整消息，通过 Ouro 发布的原生 chat template 编码。
-目标模型重新生成下一条回复；当前参考回复和未来消息不会作为当前请求输入。
-完整历史中已有的助手输出、工具观察保留。不同调用使用预先冻结的历史，不把新生成的
-工具调用实际执行后接入下一轮，因此这是固定 agent 请求的解码性能实验，不能报告
-SWE-bench 解决率或完整 agent 的端到端速度。
+原方案使用公开OpenHands轨迹。Huginn最多4096上下文；两模型共同筛选完整请求后，
+100次调用中99次来自原轨迹早期、1次来自中期，无法充分覆盖多轮重复。
+该输入仅用于接口验证，未产生正式表格数据。两模型×七方法×两温度的28项验证全部通过，
+记录位于 [validation](../results/loopfill-agentic-table1-20261112/validation/)。
+更早的单Ouro、16K方案已标记SUPERSEDED，不能用于本轮Table 1。
 
-初始希望取早、中、晚各约三分之一。以原始轨迹的助手调用序号划分三个阶段，
-在最大15,840个prompt token的预算内，分别有3,295、148、18次合格调用。
-晚期全部纳入，缺额在其他阶段均分；最终100次调用为早期42、中期40、晚期18，
-来自57个任务、12个仓库。各阶段内按仓库轮转、固定SHA256排名抽样，不按成功率、
-输出重复率或实测速度筛选。完整上下文不截断；全部超长排除项保留。
-prompt长度为6,367–15,839 token，均值12,485.19。
+本轮默认推进公开 [Spider开发集](https://yale-lily.github.io/spider) 上的SQL执行—修复工作流，
+与SuffixDecoding论文未公开的AgenticSQL数据集明确区分。官方分发ZIP约206MB；
+下载来源和SHA256保存在trace-protocol.json，开发集、SQLite文件另有逐文件哈希。
 
-输入文件SHA256：`78453b1481b188368d0040618181128a844ec08d3a7fb68591f749fe96ea6360`。
-该长度筛选和阶段配额意味着样本不代表全部500条轨迹的自然请求分布；阶段结果单列。
+在1034道开发集题目中，以数据库轮转和固定SHA256排序预选100题，覆盖20个数据库。
+初始完整schema与问题须同时满足两模型不超过1900个prompt token；本次没有题目因此排除。
+不按正确率、输出重复率、suffix命中率或测速结果挑题。标准答案不进入任务输入。
 
-## 冻结比较
+固定Ouro-2.6B、greedy、512 token上限的AR teacher生成查询，并实际执行只读SQLite。
+成功执行即结束；格式错误或真实执行错误最多触发两次修复。错误信息来自实际工具，
+不伪造错误，不把标准SQL当作反馈。执行成功仅代表SQL可运行，不代表答案正确。
+SQLite查询限时2秒，反馈保留实际错误；SQL工具及trace构建时间不计入模型解码指标。
 
-主实验为 AR、Suffix-only、LoopAhead、DFlash、LoopFill-online，两个温度，共10单元、
-1,000次请求。五方法均使用新的同环境计时、相同完整目标权重及 packed 目标执行器，
-不复用旧AR分母。温度0为greedy；温度1为完整softmax，无top-p/top-k截断；seed=0。
-BF16、最多512新token、EOS/chat-end停止、Graph/compile/行填充关闭、B=1。
-输出上限包含prefill产生的首token；decode指标不包含该首token。
+每个调用保存它生成之前的完整消息，用两组模型各自发布的chat template编码。
+所有方法使用相同历史文本、相同每模型token输入；不执行被测方法新生成的工具调用。
+因此这是固定agent请求回放上的自由生成，不能报告闭环agent速度或Spider准确率。
+本次teacher的当前回复、当前执行结果、未来回复从当前回放输入中删除。
+历史中已经发生的SQL和错误反馈保留；不预填充suffix cache。
 
-LoopFill / Suffix-only 主配置为N16、根Q4、孩子Q(4,4)、浅层Top2；online初值0.7。
-LoopAhead复用已完成训练选出的LAD及既有开发集采样准入表，不在agent测试集调参。
-DFlash复用已完成训练的block16 drafter，通过新packed adapter执行目标验证。
-其训练配置的max_position_embeddings为3,072；本组所有prompt都超出这一长度，属于
-上下文外推比较，必须与结果一起说明。没有重新训练或改变位置配置。
-这是本次用户授权的新实验，不恢复其他已停止的DFlash旧表队列。
+输入冻结时计划从初次请求、第一次修复、第二次修复各取34/33/33次调用。
+某阶段数量不足时，缺额按预定规则分配到仍有容量的阶段，不复制或人为制造修复。
+最终100次调用为74次初始、13次首次修复、13次二次修复，来自78道题。
+原始100题共生成126次调用，87题成功执行、13题达到三次调用上限；无上下文排除。
+Huginn输入242–1226 token，Ouro输入238–1289 token；含512输出预算均未超过3072。
+详情以inputs/manifest.json为准。
+完整历史必须在两个tokenizer下均不超过3548 token，不截断历史。
+这套阶段配额并非自然流量分布，必须连同结果一起报告。
 
-每个温度的各方法绑定同一GPU。运行每个方法前，先对所选输入的最短和最长上下文
-做两条、最多24 token的真实GPU smoke验证；失败保留日志并停止继续派发。
-正式请求前另做两条、最多32 token预热；suffix预热缓存独立。
+## 比较协议
 
-主实验从空全局suffix cache开始，仅在请求完成后发布本方法实际生成的输出，
-随后请求逐步积累历史。恢复中断时，仅从已完成日志重建同一历史前缀。
-参考答案、其他方法输出和预热输出不进入正式缓存。
+两温度均固定seed=0；T0 greedy，T1完整softmax，无top-p/top-k截断。
+BF16、Graph/compile/行填充关闭；使用相同packed完整目标执行器与新测AR分母。
+Huginn固定32次循环、Ouro固定4次循环；Huginn位置噪声表固定seed=0。
+所有方法沿用已冻结配置与训练检查点，不在agentic测试数据上训练或调参。
 
-主实验完成后，自动执行预先固定的补充单元：
+LoopFill与Suffix-only使用N16、根Q4、孩子Q(4,4)、浅层Top2；online初值0.7。
+LoopAhead复用既有selected LAD及Ouro T1准入表。DFlash复用block16 drafter，
+Huginn使用已完成的narrow projected drafter，Ouro使用既有正式检查点。
+DFlash训练配置长度3072；超过此长度的请求属于上下文外推，逐请求保留长度供审计。
 
-- T1：两种suffix方法分别在每次请求重置缓存，隔离跨请求历史收益，共2单元。
-- T1：两种suffix方法分别测N64/Q16和N64/Q64，共4单元；全部报告，不事后只选最快点。
-- T0/T1：两种suffix方法各对前12次请求做实际查询诊断，共4单元、48次请求。
-  诊断计时不进入性能表；区分根与孩子查询，记录非空检索、匹配长度和根候选路径覆盖。
+每个正式单元开始时全局suffix cache为空，只发布本方法已经完成的实际输出。
+预热缓存独立；中断恢复仅从本单元已完成日志重建历史，其他方法和teacher输出不注入缓存。
+每个方法先验证所选输入中的最短与最长上下文（各最多24 token），全部通过才派发正式单元。
+正式计时前另做两条最多32 token预热。任何验证失败停止继续派发并保留日志。
+本轮不自动追加参数扫描、缓存消融或并发吞吐实验，以完成Table 1为先。
 
-合计20个单元：10个主比较、6个消融、4个诊断；正式和消融1,600次请求，诊断48次。
-smoke及预热单列，不计入上述数量。
+## 指标与产物
 
-## 指标与复现
+Table 1单元按既有口径导出 latency speedup / loop-normalized γ。
+同时保存平均/p50/p95 decode latency、总decode token/s、相对AR的token/s比、
+输出长度比、prefill时间、触顶数量、峰值显存和适用方法的候选覆盖率。
+时钟在同步prefill之后开始，包含draft、验证、采样和suffix发布；排除模型加载、
+预热、磁盘日志与prefill。prefill产生的首token不计入decode token/s。
+输出长度可能不同；延迟比必须结合token/s与输出长度比解读。
 
-主指标为平均/p50/p95 decode latency、总decode token/s、γ（按完整目标循环深度归一化）、
-相对新AR的延迟比和token/s比。另存输出长度比、触顶数量、prefill时间、峰值显存、
-阶段分组统计及可适用方法的候选覆盖率。单请求decode token/s不是并发服务吞吐。
-检索非空率、目标候选覆盖率与计算复用不可混为一谈；instrumented诊断速度不进入正式表。
-仅一个随机种子和一次计时，不能据此给出跨种子稳定性、速度置信区间或任务质量结论。
+这里只有B=1 decode token/s，不等于Table 2并发服务吞吐。
+仅一个采样种子和一次计时，不据此报告跨种子稳定性或速度置信区间。
+候选覆盖率也不是suffix检索非空率，不能直接称为树hit rate。
 
-调度遵循现有GPU白名单（当前2/3/4/6）、独占模式和UUID锁；等待已有
-`loopahead-table2-20261112-v2` 控制器退出后再派发，不停止其他作业，不使用已释放GPU。
-驱动库修复仅作用于子进程环境，沿用已验证的native_cuda_env包装器。
-源码、ArcticInference扩展、输入、准入表和drafter检查点均记录哈希；冻结源码不在运行中修改。
+正式单元完成后自动更新report.md、measurements.csv、phase-measurements.csv和
+独立的table1-agentic.tex。缺失单元显示--。28项全部完成后，后台finalization watcher
+逐项核对冻结输入/源码哈希、题序、prompt哈希、GPU一致性和2800条日志，复算时间、
+token/s与γ；审计通过才导出paper/tables/table1-agentic-sql.tex、
+paper/data/agentic-sql-measurements.csv与provenance.json，不覆盖原Table 1数据列。
+审计失败保留checks/finalization-status.json，不写成实验完成。
+正式指标输出目录会保存输入、源码、依赖扩展、准入表和drafter哈希及逐请求日志。
 
-准备入口：[loop_agentic_inputs.py](../scripts/loop_agentic_inputs.py)；
-单元执行：[loop_agentic_worker.py](../scripts/loop_agentic_worker.py)；
-冻结、排队与汇总：[loop_agentic_suite.py](../scripts/loop_agentic_suite.py)。
+GPU绑定为Huginn/T0→0、Huginn/T1→1、Ouro/T0→5、Ouro/T1→7，
+确保同模型同温度的方法在同一设备比较。调度同时检查占用和Exclusive_Process模式，
+使用UUID文件锁；不修改全局分配文件，不终止其他实验。
+驱动库修复通过既有native_cuda_env.py只作用于子进程环境。
+
+入口：[SQL轨迹构建](../scripts/loop_agentic_sql.py)、
+[单元执行](../scripts/loop_agentic_worker.py)、[冻结/调度/汇总](../scripts/loop_agentic_suite.py)、
+[最终核验与论文导出](../scripts/loop_agentic_finalize.py)。
 
 ```bash
-python scripts/loop_agentic_suite.py summarize --suite results/loopfill-agentic-20261112
+python scripts/loop_agentic_suite.py summarize --suite results/loopfill-agentic-sql-table1-20261112
 ```
-
-重复启动前检查controller.lock与已记录的控制器PID；单实例锁阻止重复派发。
-本批不把后续B4/8/16并发吞吐或Spider执行—修复工作流写成已完成实验。

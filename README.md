@@ -1,5 +1,15 @@
 # LoopFill (loop_suffix)
 
+**Agentic Table 1 补充（2026-11-12）**：Huginn-3.5B、Ouro-2.6B × 全部七方法 × temperature=0/1，
+共28项、2,800次SQL执行—修复请求回放；仅使用本轮指定的GPU 0/1/5/7。
+见[实验协议](docs/loopfill-agentic.md)、[实时状态](results/loopfill-agentic-sql-table1-20261112/status.json)和
+[结果报告](results/loopfill-agentic-sql-table1-20261112/report.md)。全部完成且逐请求审计通过后自动导出论文表格。
+
+**DFlash 表一/表二重测（2026-11-12）**：新增共享 KV 的多请求目标验证和 batched drafter，
+按原冻结输入准备 Huginn-3.5B、Ouro-2.6B 的34个单元，表二覆盖 B=1/2/4/8/16。
+真实权重验证通过后才进入对应正式单元；进度、协议和恢复入口见
+[重测说明](docs/dflash-table12-remeasurement.md)。
+
 **DFlash / LoopAhead 独立入口（2026-11-12）**：实现位于仓库根目录的 [`baselines/`](baselines/)，根目录运行 `python run_baseline.py --help`。支持训练、特征提取、推理与回归测试，运行时无需 SZ checkout；权重和数据通过显式路径传入。Huginn DFlash 默认332.6M drafter。[安装与命令](docs/standalone-baselines.md)。
 
 **DFlash 共用目标执行器（2026-11-12）**：新增 B=1 的 packed target 适配器，复用已训练 drafter，将目标特征提取、块验证和 KV 回退接入 LoopFill 后端。独立验证与同 GPU 小样本比较见[实现和运行说明](docs/dflash-packed-backend.md)；诊断结果不混入已有正式表。

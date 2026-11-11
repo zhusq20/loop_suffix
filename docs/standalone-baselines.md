@@ -137,6 +137,10 @@ confirmation。`complete.json` 的 `selected_checkpoint` 指向可推理的 `lad
 
 ## 推理和逐题测试
 
+正式表一/表二重测及新多请求批处理入口见
+[DFlash 表一、表二重测](dflash-table12-remeasurement.md)。该入口冻结全量输入、预热、
+逐请求日志和队列；下述 `infer` 命令仍是原 B=1 逐题诊断接口。
+
 输入 JSONL 支持 `source_id` + `prompt_tokens`，或者 `source_id` + `prompt` 文本。
 文本默认 raw；需要 chat template 时显式加 `--prompt-format chat`。
 传 token IDs 且显式给出 `--stop-ids` 时，不需要 tokenizer。

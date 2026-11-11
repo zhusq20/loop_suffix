@@ -1,5 +1,9 @@
 # DFlash 的 LoopFill 目标后端
 
+**后续批处理扩展**：新增 `baselines/dflash/batch.py`，支持多请求 packed 验证、
+独立 KV 回退和 batched drafter；正式表一/表二重测见
+[新协议与运行状态](dflash-table12-remeasurement.md)。本文下方保留初版 B=1 探针结果。
+
 **独立运行入口已提供**：当前仓库的训练、推理和测试命令见
 [独立运行 DFlash 和 LoopAhead](standalone-baselines.md)。下文 probe 命令保留为
 此前接入 SZ 冻结实验的历史诊断流程；独立入口不需要它。

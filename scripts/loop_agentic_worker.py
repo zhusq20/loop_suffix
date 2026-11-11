@@ -78,16 +78,17 @@ def run(args):
         if digest(source/rel) != expected:
             raise ValueError('Frozen source changed: '+rel)
     sys.path[:0] = [str(source), str(source/'src'), str(source/'scripts'), str(source/'suffix')]
-    input_path = suite/'inputs'/'openhands100.jsonl'
-    if digest(input_path) != protocol['input_sha256']:
+    model_record=protocol['models'][args.model]
+    input_path = suite/'inputs'/f'{args.model}.jsonl'
+    if digest(input_path) != model_record['input_sha256']:
         raise ValueError('Input changed')
     for rel, expected in protocol['input_files_sha256'].items():
         if digest(suite/'inputs'/rel) != expected:
             raise ValueError('Frozen input/config changed: '+rel)
-    for name, filename in [('loopahead', protocol['loopahead_checkpoint']),
-                           ('dflash', str(Path(protocol['dflash_checkpoint'])/'model.safetensors')),
-                           ('dflash_config', str(Path(protocol['dflash_checkpoint'])/'config.json'))]:
-        if digest(filename) != protocol['checkpoint_sha256'][name]:
+    for name, filename in [('loopahead', model_record['loopahead_checkpoint']),
+                           ('dflash', str(Path(model_record['dflash_checkpoint'])/'model.safetensors')),
+                           ('dflash_config', str(Path(model_record['dflash_checkpoint'])/'config.json'))]:
+        if digest(filename) != model_record['checkpoint_sha256'][name]:
             raise ValueError('Checkpoint changed: '+name)
     rows = [json.loads(line) for line in input_path.open()]
     for row in rows:
@@ -112,36 +113,41 @@ def run(args):
     from loop_latency_worker import drive, load_journal, summarize
     from llm_memory_editability.loop_model_registry import MODELS, resolve_stop_ids
     from llm_memory_editability.loop_sampling import TargetSampler, request_seed
-    from llm_memory_editability.loop_tree_decode import OuroLoop, tree_decode_steps
+    from llm_memory_editability.loop_tree_decode import OuroLoop, HuginnLoop, tree_decode_steps
     from llm_memory_editability.loop_budget_decode import budget_tree_decode_steps
+    from llm_memory_editability.loop_loopspec_decode import LoopSpecConfig, loopspec_decode_steps
     from llm_memory_editability.loop_optimized_decode import SharedKVPool, PackedLoopExecutor
     from llm_memory_editability.loop_batch_suffix import CompletionSuffixCache
     from baselines.dflash.target import LoopTarget
-    spec = MODELS['ouro-2.6b']
+    spec = MODELS[args.model]
     torch.set_num_threads(1)
     torch.manual_seed(0)
     torch.cuda.set_device(0)
-    model_path = protocol['model_path']
+    model_path = model_record['model_path']
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True, local_files_only=True)
-    native = LoopTarget.load(model_path, 'ouro', protocol['max_seq'])
+    native = LoopTarget.load(model_path, spec.backend, protocol['max_seq'])
     model = native.model
-    generation = json.loads((Path(model_path)/'generation_config.json').read_text())
+    generation_path=Path(model_path)/'generation_config.json'
+    generation=json.loads(generation_path.read_text()) if generation_path.exists() else {}
     stops, stop_audit = resolve_stop_ids(spec, tokenizer, model.config.eos_token_id,
         generation.get('eos_token_id'), model.config.vocab_size, 'chat')
     # Remove unused HF feature hooks; the packed adapter has its own observations.
     native.close()
     kwargs = dict(draft_node_budget=args.n, model_top_k=2, child_suffix_caps=(args.q,args.q),
                   suffix_c_initial=.7 if args.arm == 'budget-online' else 1., suffix_eta=.1)
-    config = arm_config(args.arm if args.arm in ('ar','budget-suffix','budget-online') else 'ar',
-                        4, 1, 2, args.q, **kwargs)
+    config = arm_config(args.arm if args.arm in ('ar','wavefront','loopspec-dual','budget-suffix','budget-online') else 'ar',
+                        spec.depth_total,*spec.loopfill_readout_depths,args.q,
+                        loopspec_depths=spec.loopspec_depths,wavefront_depth=spec.wavefront_depth,**kwargs)
     draft, policy = None, None
     if args.arm == 'dflash':
         from baselines.dflash.packed_target import PackedDFlashTarget
         from baselines.vendor.dflash_inference import DFlashDraftModel
         from baselines.dflash.decode import generate as dflash_generate
+        from baselines.dflash.projected_draft import inference_draft_class
         target = PackedDFlashTarget(native)
-        checkpoint = protocol['dflash_checkpoint']
-        draft, info = DFlashDraftModel.from_pretrained(checkpoint, torch_dtype=torch.bfloat16,
+        checkpoint = model_record['dflash_checkpoint']
+        draft_cls=inference_draft_class() if spec.backend=='huginn' else DFlashDraftModel
+        draft, info = draft_cls.from_pretrained(checkpoint, torch_dtype=torch.bfloat16,
             local_files_only=True, attn_implementation='sdpa', output_loading_info=True)
         if any(info[k] for k in ('missing_keys','unexpected_keys','mismatched_keys','error_msgs')):
             raise ValueError(f'Drafter load mismatch: {info}')
@@ -149,24 +155,32 @@ def run(args):
         assert draft.block_size == 16 and draft.target_layer_ids == native.expanded_ids
         backbone, engine = target.backbone, target.engine
     else:
-        nodes = 32 if args.arm == 'loopahead' else args.n+1 if args.arm.startswith('budget') else 1
-        backbone = OuroLoop(model, 4, protocol['max_seq'], nodes,
-                            kv_factory=SharedKVPool(1, pad_decode_rows=False))
+        nodes = (32 if args.arm == 'loopahead' else args.n+1 if args.arm.startswith('budget') else
+                 config.physical_nodes if isinstance(config,LoopSpecConfig) else 1152 if args.arm=='wavefront' else 1)
+        pool=SharedKVPool(1,pad_decode_rows=False)
+        if spec.backend=='ouro':
+            backbone=OuroLoop(model,spec.depth_total,protocol['max_seq'],nodes,kv_factory=pool)
+        else:
+            backbone=HuginnLoop(model,spec.depth_total,protocol['max_seq'],nodes,0,protocol['max_seq'],
+                               extra_depths=(8,),kv_factory=pool)
+            backbone.init=native.noise
         backbone.position_limit = protocol['max_seq']
         if args.arm == 'loopahead':
             from baselines.loopahead.lad import LADConfig, LookaheadDrafter
             from baselines.loopahead.engine import LoopAheadExecutor
             from baselines.loopahead.decode import LoopAheadConfig, decode_steps
             from baselines.loopahead.admission import AdmissionPolicy
-            ckpt = torch.load(protocol['loopahead_checkpoint'], map_location='cpu', weights_only=True)
+            ckpt = torch.load(model_record['loopahead_checkpoint'], map_location='cpu', weights_only=True)
             draft = LookaheadDrafter(LADConfig(**ckpt['config']))
             draft.load_state_dict(ckpt['model'])
             draft = draft.to(device='cuda', dtype=torch.bfloat16).eval()
             engine = LoopAheadExecutor(backbone, draft, ckpt['frequent_ids'], temperature=args.temperature)
-            config = LoopAheadConfig(temperature=args.temperature)
-            if args.temperature:
+            config = (LoopAheadConfig(temperature=args.temperature) if spec.backend=='ouro' else
+                      LoopAheadConfig(total=32,first=4,second=8,future=2,guard=1,stride=2,
+                                      family='huginn',temperature=args.temperature))
+            if args.temperature and spec.backend=='ouro':
                 policy = AdmissionPolicy.load(suite/'inputs'/'loopahead-admission.json')
-                assert policy.record['checkpoint_sha256'] == protocol['checkpoint_sha256']['loopahead']
+                assert policy.record['checkpoint_sha256'] == model_record['checkpoint_sha256']['loopahead']
         else:
             engine = PackedLoopExecutor([backbone], cuda_graph=False)
 
@@ -179,7 +193,7 @@ def run(args):
 
     def generate(row, cache, cap, warmup=False):
         prompt = row['prompt_token_ids']
-        seed = request_seed(0, 'ouro-2.6b', 'openhands100'+('/warmup' if warmup else ''), row['source_id'])
+        seed = request_seed(0, args.model, row['dataset']+('/warmup' if warmup else ''), row['source_id'])
         sampler = TargetSampler(args.temperature, seed, protocol['max_seq']+2, 'cuda') if args.temperature else None
         backbone.target_sampler = sampler
         with torch.inference_mode():
@@ -198,27 +212,30 @@ def run(args):
                 steps = budget_tree_decode_steps(backbone, prompt, config, cap, stops, cache=cache,
                     req_id=row['question_id'], max_nodes=nodes,
                     observer=cache.observe if args.diagnostic else None)
+            elif isinstance(config,LoopSpecConfig):
+                steps=loopspec_decode_steps(backbone,prompt,config,cap,stops,max_nodes=nodes)
             else:
                 steps = tree_decode_steps(backbone, prompt, config, cap, stops, max_nodes=nodes)
             return drive(backbone, engine, steps)
 
-    metadata = dict(arm=args.arm, temperature=args.temperature, q=args.q, n=args.n, cache_mode=args.cache_mode,
+    metadata = dict(model=args.model,arm=args.arm, temperature=args.temperature, q=args.q, n=args.n, cache_mode=args.cache_mode,
         config=asdict(config), batch=1, max_new_tokens=limit, max_seq=protocol['max_seq'],
-        input_sha256=protocol['input_sha256'], source_sha256=protocol['source_sha256'],
-        checkpoint_sha256=protocol['checkpoint_sha256'], stop_audit=stop_audit,
+        input_sha256=model_record['input_sha256'], source_sha256=protocol['source_sha256'],
+        checkpoint_sha256=model_record['checkpoint_sha256'], stop_audit=stop_audit,
         gpu_uuid=str(torch.cuda.get_device_properties(0).uuid), gpu=torch.cuda.get_device_name(0),
         cpu_affinity=sorted(os.sched_getaffinity(0)), torch=torch.__version__,
         transformers=transformers.__version__, dtype='bfloat16', cuda_graph=False, compile=False,
         smoke=args.smoke, diagnostic=args.diagnostic, count=len(rows), sampling_seed=0,
         top_p=1., top_k=0, history='completed outputs only; isolated warmup; cold start per cell',
-        dflash_trained_max_positions=3072 if args.arm=='dflash' else None,
-        context_note='Long-context evaluation exceeds the DFlash training configuration; '
-                     'no weight change or retuning. Smoke checks exercise maximum selected prompt length.',
+        dflash_trained_max_positions=draft.config.max_position_embeddings if args.arm=='dflash' else None,
+        context_note='DFlash training configuration has 3072 positions; requests beyond that limit '
+                     'are context extrapolation. No weight change or retuning. '
+                     'Smoke checks exercise maximum selected prompt length.',
         timing='synchronized decode after prefill; includes drafting, sampling and suffix publication; '
                'prefill, loading, warmup, journal I/O excluded; diagnostic timings not reportable')
     if (path/'metadata.json').exists():
         previous = json.loads((path/'metadata.json').read_text())
-        for key in ('arm','temperature','q','n','cache_mode','input_sha256','source_sha256',
+        for key in ('model','arm','temperature','q','n','cache_mode','input_sha256','source_sha256',
                     'checkpoint_sha256','count','smoke','diagnostic','gpu_uuid'):
             if previous[key] != metadata[key]:
                 raise ValueError('Resume identity mismatch: '+key)
@@ -255,7 +272,7 @@ def run(args):
             save(path/'progress.json', dict(completed=len(prior), total=len(rows), updated_unix=time.time()))
             print(f"{args.arm} T={args.temperature:g} {len(prior)}/{len(rows)} "
                   f"tokens={len(tokens)} decode={stats['decode_s']:.2f}s", flush=True)
-    summary = summarize(prior, 4)
+    summary = summarize(prior, spec.depth_total)
     # Rejection-sampling baselines do not share candidate-coverage semantics.
     if args.arm in ('loopahead','dflash'):
         for key in ('draft_hits','mean_acceptance_rate','pooled_acceptance_rate'):
@@ -274,7 +291,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--suite', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
-    parser.add_argument('--arm', choices=['ar','budget-suffix','budget-online','loopahead','dflash'], required=True)
+    parser.add_argument('--model',choices=['huginn-3.5b','ouro-2.6b'],required=True)
+    parser.add_argument('--arm', choices=['ar','wavefront','loopspec-dual','budget-suffix','budget-online','loopahead','dflash'], required=True)
     parser.add_argument('--temperature', type=float, choices=[0.,1.], required=True)
     parser.add_argument('--q', type=int, default=4)
     parser.add_argument('--n', type=int, default=16)

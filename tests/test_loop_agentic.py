@@ -4,8 +4,9 @@ from types import SimpleNamespace
 
 import pytest
 
-from scripts.loop_agentic_inputs import causal_candidates
+from scripts.loop_agentic_inputs import causal_candidates, normalize_messages
 from scripts.loop_agentic_worker import RetrievalProbe, digest_tokens
+from scripts.loop_agentic_sql import execute_response, repair_message
 
 
 def trajectory():
@@ -59,3 +60,35 @@ def test_probe_separates_nonempty_from_correct_and_child_queries():
 def test_token_hash_detects_order_changes():
     assert digest_tokens([1,2,3])!=digest_tokens([1,3,2])
     assert digest_tokens([1,2,3])==digest_tokens([1,2,3])
+
+
+def test_tool_fields_are_preserved_and_api_cache_metadata_is_removed():
+    raw=[dict(role='assistant',content=[dict(type='text',text='inspect',cache_control={'type':'ephemeral'})],
+              tool_calls=[dict(id='call1',function=dict(name='bash',arguments='{"command":"pwd"}'))]),
+         dict(role='tool',content=[dict(type='text',text='/workspace')],name='bash',tool_call_id='call1',
+              cache_control={'type':'ephemeral'})]
+    rows=normalize_messages(raw)
+    assert rows[0]['role']=='assistant' and 'pwd' in rows[0]['content'] and 'call1' in rows[0]['content']
+    assert rows[1]['role']=='user' and '/workspace' in rows[1]['content'] and 'call1' in rows[1]['content']
+    assert 'ephemeral' not in json.dumps(rows)
+    with pytest.raises(ValueError,match='Non-text'):
+        normalize_messages([dict(role='user',content=[dict(type='image',data='image')])])
+
+
+def test_sql_tool_uses_actual_errors_and_stops_on_success(tmp_path):
+    import sqlite3
+    database=tmp_path/'example.sqlite'
+    with sqlite3.connect(database) as connection:
+        connection.execute('CREATE TABLE items (value INTEGER)')
+        connection.execute('INSERT INTO items VALUES (7)')
+    failed=execute_response('SELECT missing FROM items', database)
+    assert not failed['ok'] and failed['kind']=='sqlite'
+    assert 'no such column: missing' in repair_message(failed)['content']
+    success=execute_response('```sql\nSELECT value FROM items;\n```', database)
+    assert success['ok'] and success['preview_rows']==[[7]]
+    with pytest.raises(ValueError,match='Successful execution'):
+        repair_message(success)
+    assert not execute_response('DROP TABLE items',database)['ok']
+    assert not execute_response('WITH x AS (SELECT 1) DELETE FROM items',database)['ok']
+    assert not execute_response('SELECT 1; DROP TABLE items',database)['ok']
+    assert execute_response('SELECT value FROM items',database)['preview_rows']==[[7]]

@@ -9,7 +9,7 @@ from dataclasses import dataclass
 import torch
 
 from llm_memory_editability.loop_decode_steps import ModelCall
-from llm_memory_editability.loop_optimized_decode import PackedLoopExecutor, SharedKVPool
+from llm_memory_editability.loop_optimized_decode import PackedLoopExecutor, SharedKVPool, chunk_attention
 from llm_memory_editability.loop_tree_decode import DraftTree, HuginnLoop, OuroLoop
 
 
@@ -32,14 +32,14 @@ class PackedTargetCache:
 class PackedDFlashTarget:
     """Implement the existing DFlash target interface without HF dynamic caches."""
 
-    def __init__(self, target, block_size=16):
+    def __init__(self, target, block_size=16, *, pool=None):
         if block_size < 1:
             raise ValueError('block_size must be positive')
         for key in ('model', 'family', 'max_seq', 'depth', 'device', 'dtype',
                     'embedding', 'head', 'hidden_size', 'physical_ids', 'expanded_ids', 'capture_at'):
             setattr(self, key, getattr(target, key))
         self.block_size = block_size
-        pool = SharedKVPool(1, pad_decode_rows=False)
+        pool = pool if pool is not None else SharedKVPool(1, pad_decode_rows=False)
         if self.family == 'ouro':
             b = OuroLoop(self.model, self.depth, self.max_seq, block_size, kv_factory=pool)
             layers = b.layers
@@ -111,33 +111,60 @@ class PackedDFlashTarget:
         self._features.clear()
         self._logits = None
 
-    def _prefill(self, ids):
+    def _prefill(self, ids, start=0, *, chunked=False):
         """Same dense prefill operators as LoopFill, retaining all feature rows."""
         b = self.backbone
         size = ids.shape[1]
-        positions = torch.arange(size, device=self.device)
+        positions = torch.arange(start, start + size, device=self.device)
+        def attend(slot):
+            return chunk_attention(b.kv, slot, start, start + size) if chunked else b.kv.dense(slot)
         if self.family == 'ouro':
             x = b.inner.embed_tokens(ids)
             cos, sin = b.inner.rotary_emb(x, positions[None])
             for step in range(self.depth):
                 for index, layer in enumerate(b.layers):
-                    x = b._layer(layer, x, cos, sin, b.kv.dense(step * b.n_layers + index))
+                    x = b._layer(layer, x, cos, sin, attend(step * b.n_layers + index))
                 x = b.inner.norm(x)
             self.head(x)
         else:
             freqs = b._positions(positions)
             x = b._embed_tokens(ids)
             for index, layer in enumerate(b.prelude):
-                x = b._block(layer, x, freqs, b.kv.dense(index))
-            h = b.init[:size][None]
+                x = b._block(layer, x, freqs, attend(index))
+            h = b.init[start:start + size][None]
             for step in range(self.depth):
                 h = self.model.transformer.adapter(torch.cat([h, x], dim=-1))
                 for index, layer in enumerate(b.core):
                     h = b._block(layer, h, freqs,
-                                 b.kv.dense(b.n_pre + step * b.n_core + index))
-            y = b._coda(h, freqs, lambda index: b.kv.dense(b.coda_full + index))
+                                 attend(b.n_pre + step * b.n_core + index))
+            y = b._coda(h, freqs, lambda index: attend(b.coda_full + index))
             self.head(self.model.transformer.ln_f(y))
-        b.kv.length = size
+        b.kv.length = start + size
+
+    @torch.inference_mode()
+    def prefill_chunk(self, input_ids, cache, *, features=True):
+        """Append a contiguous prompt chunk, retaining all training feature rows."""
+        self._check_cache(cache)
+        if input_ids.ndim != 2 or input_ids.shape[0] != 1 or input_ids.shape[1] < 1:
+            raise ValueError('Expected nonempty batch-one prompt chunk')
+        start, size = cache.get_seq_length(), input_ids.shape[1]
+        if start + size > self.max_seq:
+            raise ValueError('Prompt exceeds target context capacity')
+        self._counts, self._features, self._logits = {}, {}, None
+        self._active, self._capture = True, features
+        try:
+            self._prefill(input_ids, start, chunked=True)
+            if features and self._counts != self.capture_at:
+                raise RuntimeError('Incomplete prompt chunk features')
+            selected = torch.cat([self._features[i] for i in self.physical_ids], -1) if features else None
+            return PackedTargetOutput(self._logits.reshape(1, size, -1), selected, cache)
+        except Exception:
+            self._cache = None
+            raise
+        finally:
+            self._active = self._capture = False
+            self._features.clear()
+            self._logits = None
 
     def _verify(self, ids):
         b, tree = self.backbone, self.tree

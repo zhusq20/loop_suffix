@@ -44,7 +44,7 @@ def normalize_messages(raw):
         if role=='tool':
             content='Tool result '+json.dumps({k:message[k] for k in ('name','tool_call_id') if k in message},sort_keys=True)+':\n'+content
             role='user'
-        unexpected=set(message)-{'role','content','tool_calls','tool_call_id','name'}
+        unexpected=set(message)-{'role','content','tool_calls','tool_call_id','name','cache_control'}
         if unexpected:
             raise ValueError(f'Unknown message fields: {unexpected}')
         result.append(dict(role=role,content=content))
