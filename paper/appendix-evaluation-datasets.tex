@@ -1,0 +1,59 @@
+% Include this subsection in the manuscript appendix.
+% Requires \usepackage{booktabs} and the bibliography entry
+% xia2024unlocking in suffix-loop-design.bib.
+% Full evaluation-set counts verified against the upstream source snapshots
+% in results/loopfill-latency512-20261107/inputs/sources/; their provenance
+% and SHA256 hashes are recorded in inputs/manifest.json.
+% Sources:
+% https://github.com/openai/grade-school-math
+% https://huggingface.co/datasets/HuggingFaceH4/MATH-500
+% https://github.com/suzgunmirac/BIG-Bench-Hard
+% https://huggingface.co/datasets/evalplus/humanevalplus
+% https://huggingface.co/datasets/evalplus/mbppplus
+% https://aclanthology.org/2024.findings-acl.456/ (Appendix B.1, Table 4)
+% Throughput protocol: results/loopfill-table2-20261107-v2/protocol.json.
+
+\subsection{Evaluation Datasets}
+\label{app:evaluation-datasets}
+
+Table~\ref{tab:evaluation-datasets} summarizes the full evaluation-set
+sizes of the six benchmarks considered in our experiments.
+Counts refer to the complete released evaluation sets and exclude
+training splits.
+
+\begin{table*}[t]
+  \centering
+  \small
+  \caption{Full evaluation-set sizes of the six benchmarks, before
+  any experiment-specific subsampling. Counts denote benchmark
+  examples, with each dialogue counted once.}
+  \label{tab:evaluation-datasets}
+  \begin{tabular}{lrl}
+    \toprule
+    Dataset & Full evaluation-set size & Coverage \\
+    \midrule
+    GSM8K      & 1,319 & Complete test split \\
+    MATH-500   & 500   & Complete MATH-500 test split \\
+    BBH        & 6,511 & All 27 task configurations \\
+    HumanEval+ & 164   & Complete EvalPlus release \\
+    MBPP+      & 378   & Complete EvalPlus release \\
+    Spec-Bench~\cite{xia2024unlocking}
+               & 480   & Six task categories, 80 examples each \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+Spec-Bench was introduced by Xia et al.~\cite{xia2024unlocking}
+as a benchmark for evaluating speculative decoding across multi-turn
+conversation, translation, summarization, question answering,
+mathematical reasoning, and retrieval-augmented generation.
+Its 480 examples include 80 two-turn MT-Bench conversations and
+400 single-turn examples. Our experiments use the first turn of
+each example.
+
+The decode-latency experiments use batch size 1 and a maximum of
+512 newly generated tokens per request. The throughput experiments
+use all 480 SpecBench prompts at batch sizes
+$B\in\{1,2,4,8,16\}$, with a maximum of 1,024 newly generated tokens
+per request. These limits exclude prompt tokens; generation stops
+earlier upon an end-of-sequence or end-of-turn token.

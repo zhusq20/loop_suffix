@@ -1,0 +1,150 @@
+% Requires \usepackage{booktabs} and the bibliography entries
+% liu2026loopahead and chen2026dflash in suffix-loop-design.bib.
+% Scope: the implemented Ouro-2.6B and Huginn-3.5B training protocols.
+% Huginn 332.6M projected DFlash training was ongoing when this section was prepared;
+% no final training cost or completed-run claim is included.
+
+\subsection{Training the LoopAhead and DFlash Baselines}
+\label{app:drafter-training}
+
+We follow the architecture and training recipes reported for
+LoopAhead~\cite{liu2026loopahead} and DFlash~\cite{chen2026dflash},
+with the data and target-model adaptations described below.
+We train a separate drafter for each target model, keeping the target
+parameters, token embeddings, and output projection frozen.
+Our targets are Ouro-2.6B with four recurrent passes and Huginn-3.5B
+with 32 passes. Huginn is an adaptation beyond the target models
+evaluated in the original papers.
+
+\paragraph{Training data.}
+Table~\ref{tab:drafter-data} summarizes the prompt pools.
+For LoopAhead, we retain the original split sizes and domain quotas,
+but replace its BBH component with Nemotron V1 STEM questions.
+The original BBH split identifiers are unavailable, so this substitution
+allows us to exclude the entire BBH evaluation source from training.
+For DFlash, we use a predefined budget of 50,000 prompts, compared with
+approximately 800,000 examples in the original paper, allocating 40\%
+to mathematics, 30\% to code, and 30\% to dialogue.
+We use the publicly accessible Nemotron V1 because V2 was access-restricted
+during data preparation. Missing Nemotron code prompts are recovered
+from verified TACO training-set records, and UltraChat replaces the
+unavailable dialogue prompts. These are adaptations of the published
+data recipes, rather than identical training corpora.
+
+\begin{table*}[t]
+  \centering
+  \small
+  \caption{Prompt counts for training and held-out splits.
+  Counts precede target-specific response filtering.
+  UltraChat uses the first user request from its \texttt{train\_sft} split.
+  The confirmation split is used only for LoopAhead.}
+  \label{tab:drafter-data}
+  \begin{tabular}{llrrr}
+    \toprule
+    Method & Source & Train & Development & Confirmation \\
+    \midrule
+    LoopAhead & GSM8K training split & 2,000 & 128 & 128 \\
+              & CodeAlpaca, Python subset & 2,000 & 128 & 128 \\
+              & MATH training split & 2,000 & 128 & 128 \\
+              & Nemotron V1 STEM & 2,025 & 270 & 270 \\
+              & UltraChat & 1,000 & 128 & 128 \\
+              & \textbf{Total} & \textbf{9,025} & \textbf{782} & \textbf{782} \\
+    \midrule
+    DFlash & Nemotron V1 mathematics & 20,000 & 400 & -- \\
+           & Nemotron V1 code / TACO train & 10,000 & 200 & -- \\
+           & CodeAlpaca & 5,000 & 100 & -- \\
+           & UltraChat & 15,000 & 300 & -- \\
+           & \textbf{Total} & \textbf{50,000} & \textbf{1,000} & -- \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
+
+\paragraph{Selection and teacher trajectories.}
+We select prompts deterministically with seed 42 from fixed source
+versions and shards.
+We remove normalized exact duplicates within each training set and
+screen candidates against evaluation questions, few-shot demonstrations,
+and both methods' held-out splits using normalized matching, containment
+checks, and token 5-gram similarity with a Jaccard threshold of 0.9.
+These checks address lexical overlap but cannot exclude all semantic
+paraphrases.
+Each frozen target generates its own full-depth greedy responses,
+which replace the source answers as training labels.
+The maximum sequence length is 3,072 tokens, comprising at most
+2,560 prompt tokens and 512 generated tokens,
+using task-specific completion prompts for LoopAhead and the target's
+released chat template for DFlash.
+For DFlash, discarding responses shorter than 32 tokens leaves
+48,137 training examples for Ouro-2.6B and 47,387 for Huginn-3.5B.
+All 9,025 LoopAhead training prompts are retained for both targets.
+
+\paragraph{LoopAhead configuration.}
+The lookahead drafter has two causal Transformer layers with hidden
+width 512, eight attention heads, and feed-forward width 1,536.
+It conditions on 64 preceding target states and a teacher anchor token,
+and learns to predict up to seven future tokens using cross-entropy.
+States are extracted after the first recurrent pass for Ouro and after
+the fourth pass, including the corresponding readout, for Huginn.
+For Huginn, we train this base drafter directly on fourth-pass states
+without the additional Raven-specific residual adaptation.
+The resulting drafters contain 11.1M and 17.7M trainable parameters,
+respectively.
+We evaluate every 500 optimizer updates and at the final update,
+selecting the checkpoint with the highest domain-averaged accepted
+prefix length on the development set, with cross-entropy breaking ties.
+The selected checkpoint is evaluated once on the confirmation set.
+
+\paragraph{DFlash configuration.}
+We use the five-layer block-diffusion drafter and training objective
+implemented in SpecForge, with a block size of 16 comprising one anchor
+and 15 masked positions. Five target features are fused and injected
+into the drafter's key--value representations.
+For Ouro, these features are taken from evenly spaced layers within
+the final recurrent pass; for Huginn, they comprise the final prelude
+layer, two layers of the final recurrent pass, and both coda layers.
+For Ouro-2.6B, the drafter retains the target width and has 277.9M
+trainable parameters. For Huginn-3.5B, we use a narrower drafter with
+hidden width 2,048, feed-forward width 5,632, and 16 query and key--value
+heads of dimension 128. Trainable linear projections map the frozen
+5,280-dimensional target embeddings to the drafter width, fuse the five
+target features from 26,400 to 2,048 dimensions, and map the drafter
+output back to 5,280 dimensions for the frozen target output head.
+This Huginn adaptation has 332,621,056 (332.6M) trainable parameters,
+including the feature-fusion and input/output projections but excluding
+the frozen target embeddings and output head, and is trained from scratch.
+Training uses masked-token cross-entropy with exponential positional
+decay of scale 7, and target features are computed online.
+The evaluation protocol uses the final checkpoint after six epochs.
+
+\paragraph{Optimization.}
+Table~\ref{tab:drafter-optimization} lists the optimization settings.
+Both methods use BF16 computation with FP32 optimizer master weights,
+gradient-norm clipping at 1.0, and training seed 42 on NVIDIA L20X GPUs.
+The two methods have distinct data and
+optimization budgets, following their respective training recipes.
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \caption{Optimization settings. Batch sizes are global.
+  LoopAhead samples anchors per sequence per epoch; DFlash samples
+  anchors each time a sequence is presented.}
+  \label{tab:drafter-optimization}
+  \begin{tabular}{@{}lcc@{}}
+    \toprule
+    Setting & LoopAhead & DFlash \\
+    \midrule
+    Epochs & 3 & 6 \\
+    Batch size & 64 windows & 32 sequences \\
+    Anchors per sequence & 32 & 512 \\
+    Optimizer & AdamW & AdamW \\
+    Adam $(\beta_1,\beta_2)$ & $(0.9,0.95)$ & $(0.9,0.999)$ \\
+    Weight decay & 0.01 & 0 \\
+    Peak learning rate & $2\times10^{-4}$ & $6\times10^{-4}$ \\
+    Warmup fraction & 5\% & 4\% \\
+    LR decay & Cosine & Cosine \\
+    Minimum LR & $2\times10^{-5}$ & 0 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
