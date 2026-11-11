@@ -15,9 +15,17 @@ dev = ["pytest>=8,<10", "ruff>=0.6,<1"]
 models = ["torch>=2.5,<3", "transformers"]
 analysis = ["matplotlib>=3.9,<4"]
 tracking = ["wandb==0.30.0"]
+baselines = ["torch>=2.6,<3", "transformers==4.57.1", "safetensors>=0.5,<1", "accelerate>=1.6,<2"]
+
+[project.scripts]
+loop-baseline = "baselines.__main__:main"
+
+[tool.setuptools.package-data]
+"baselines" = ["configs/*.json", "vendor/LICENSE.*", "vendor/ORIGINS.json"]
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["src", "."]
+include = ["llm_memory_editability*", "baselines*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

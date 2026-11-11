@@ -1,5 +1,9 @@
 # LoopFill (loop_suffix)
 
+**DFlash / LoopAhead 独立入口（2026-11-12）**：实现位于仓库根目录的 [`baselines/`](baselines/)，根目录运行 `python run_baseline.py --help`。支持训练、特征提取、推理与回归测试，运行时无需 SZ checkout；权重和数据通过显式路径传入。Huginn DFlash 默认332.6M drafter。[安装与命令](docs/standalone-baselines.md)。
+
+**DFlash 共用目标执行器（2026-11-12）**：新增 B=1 的 packed target 适配器，复用已训练 drafter，将目标特征提取、块验证和 KV 回退接入 LoopFill 后端。独立验证与同 GPU 小样本比较见[实现和运行说明](docs/dflash-packed-backend.md)；诊断结果不混入已有正式表。
+
 **论文数据归档**：[图表数据索引](paper/data/README.md)列出主表、四组消融、来源构成、分数协调、树采样和机制图所需的CSV/JSON及压缩逐请求统计。支持仅用已提交数据重画；耗时补采保存明确标记的已完成部分快照。
 
 **三项机制分析（2026-11-09，已开始）**：36组消融/17,280条请求及240条提前计算诊断已重新核验，负载—预算曲线、进度CDF与等待分解图已生成。阶段耗时小样本队列已启动：两模型、B1/B16、四方法，每流固定六任务分层24题，正常计时与诊断分开；本轮不补B4/B8。见[执行范围、已有结果与计时口径](docs/loopfill-mechanisms.md)、[补采实时状态](results/loopfill-mechanisms-20261109/timing/status.json)。
