@@ -1,0 +1,71 @@
+{
+  "model": "ouro-2.6b",
+  "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v1/report.json",
+  "audit_report_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+  "weights_sha256": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+  "reused_existing_audit": true,
+  "training_gpu_hours": 12.010792617665397,
+  "training_name": "dflash-ouro-2.6b-formal-v1",
+  "actual_torchrun_exit": {
+    "name": "dflash-ouro-2.6b-formal-v1",
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/torchrun",
+      "--standalone",
+      "--nproc_per_node=2",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--teachers",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/ouro-2.6b",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1",
+      "--cpu-groups",
+      "8-11,48-51",
+      "--epochs",
+      "6",
+      "--micro-batch",
+      "4",
+      "--accumulation",
+      "4",
+      "--save-every",
+      "500"
+    ],
+    "pid": 210027,
+    "started_unix": 1794320971.5641465,
+    "exit_code": 0,
+    "finished_unix": 1794342600.8256054
+  },
+  "launcher_sha256": "9c8e05cd05394ae71ac9f7bf3add104e24bcaab48393545c0fda00b698437373",
+  "finished_receipt_sha256": "fcd1b15f7981ed287bd5f2470a8acd58cfada124a5290dd9da59f0af7ad9d661",
+  "export_files_verified_against_checkpoints": {
+    "metadata.json": "2365af833cb3018edaff2e426d0e1f38414e8f42e8fb69a344a55b5e47c7a416",
+    "complete.json": "e7b2570e8a39066ec9607fe986345419e06f6ef03ae5acd06421a4c578e4d235",
+    "latest.json": "4cbfaccc058c9da22aaae346ccac86678fa7a30af49935c11f4347c95c79e2d4",
+    "metrics.jsonl": "51323ce5a868c2261e0f25edcc375649a1acd4d3a16575eb23d7f211966e0413",
+    "progress.json": "7f3479ebecdee4a1dd4ac50881e4da3f07726347b8706932c822e1b42d693fde",
+    "source-manifest.json": "3fead49ac0abd23fe2220ab6a548e2f2218504b6e53f94b853ec21040d79cfc3",
+    "reservation-cost-rank0.jsonl": "54cd3e88d9182a2989910e74b4d0b3f5db112b10646daccd690cc2c557a0b9dc",
+    "reservation-cost-rank1.jsonl": "8cf2902d297463c95576ae4d2751bb804fcec1c98c19fbe0067215c66c758c02",
+    "source/train_dflash.py": "dca8aafb4eb8600c8a252e150d61018a2b0a017395c57615beacbb1a0c9518d4",
+    "source/dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "source/provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "reservations": [
+    {
+      "started_unix": 1794320977.0378494,
+      "finished_unix": 1794342596.4509099,
+      "reserved_gpu_seconds": 21619.41306066513,
+      "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+      "status": "complete"
+    },
+    {
+      "started_unix": 1794320976.9830792,
+      "finished_unix": 1794342596.423442,
+      "reserved_gpu_seconds": 21619.440362930298,
+      "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+      "status": "complete"
+    }
+  ],
+  "checked_unix": 1794350933.9185877
+}

@@ -1,0 +1,88 @@
+{
+  "stage": "partial_teacher_audit_not_benchmark",
+  "observed_unix": 1794312386.832917,
+  "model": "ouro-2.6b",
+  "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+  "completed_shards": [
+    {
+      "shard": 0,
+      "requests": 6262,
+      "teachers_sha256": "5cea97d378ca9bd9f91ee520112e7d7500d7776a20a27a909d236c9f4026a6ae",
+      "output_tokens": 2571667,
+      "finished_unix": 1794304913.9252827,
+      "exact_assigned_ids": true,
+      "unique_ids": true,
+      "manifest_fields_and_token_bounds_valid": true
+    },
+    {
+      "shard": 1,
+      "requests": 6255,
+      "teachers_sha256": "c5a0bf742b3675115e010b9bd9b39464b6de03501725675351200cf4734df72d",
+      "output_tokens": 2576711,
+      "finished_unix": 1794305163.7713602,
+      "exact_assigned_ids": true,
+      "unique_ids": true,
+      "manifest_fields_and_token_bounds_valid": true
+    },
+    {
+      "shard": 2,
+      "requests": 6253,
+      "teachers_sha256": "c31bb8770e7080733b09f348bef89f0879edc520267807f6121e4f80bd54bf5f",
+      "output_tokens": 2569736,
+      "finished_unix": 1794308056.731789,
+      "exact_assigned_ids": true,
+      "unique_ids": true,
+      "manifest_fields_and_token_bounds_valid": true
+    },
+    {
+      "shard": 3,
+      "requests": 6251,
+      "teachers_sha256": "885fb3bcf1a90cbdbf86e21e12b3c1672bb5bfe195596135975db2ef06c6ac52",
+      "output_tokens": 2563229,
+      "finished_unix": 1794307834.9739845,
+      "exact_assigned_ids": true,
+      "unique_ids": true,
+      "manifest_fields_and_token_bounds_valid": true
+    },
+    {
+      "shard": 4,
+      "requests": 6248,
+      "teachers_sha256": "2110cf228c18d1e19bcd1744f04c5185dabf9745192b45683c1933a5ade4edb3",
+      "output_tokens": 2571433,
+      "finished_unix": 1794312076.2557373,
+      "exact_assigned_ids": true,
+      "unique_ids": true,
+      "manifest_fields_and_token_bounds_valid": true
+    },
+    {
+      "shard": 5,
+      "requests": 6247,
+      "teachers_sha256": "203553676afc71b8851af66b780f6cbd899a084a31bd90812e8ab8d339103c52",
+      "output_tokens": 2562168,
+      "finished_unix": 1794312324.9227638,
+      "exact_assigned_ids": true,
+      "unique_ids": true,
+      "manifest_fields_and_token_bounds_valid": true
+    }
+  ],
+  "running_shards": [
+    {
+      "shard": 6,
+      "planned_requests": 6245,
+      "exact_assignment_execution_id_set": true,
+      "observed_graph_batches": 126,
+      "observed_graph_replays": 311617
+    },
+    {
+      "shard": 7,
+      "planned_requests": 6239,
+      "exact_assignment_execution_id_set": true,
+      "observed_graph_batches": 134,
+      "observed_graph_replays": 331765
+    }
+  ],
+  "completed_requests": 37516,
+  "total_frozen_requests": 50000,
+  "all_eight_shard_assignments_disjoint_and_exhaustive": true,
+  "global_assignment_sha256": "72f65716cc4946bc03515a1dc68cb9f9b7bd4d85f48c0672fdcc2985b75ed2da"
+}

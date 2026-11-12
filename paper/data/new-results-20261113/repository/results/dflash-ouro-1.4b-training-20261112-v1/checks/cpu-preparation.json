@@ -1,0 +1,23 @@
+{
+  "status": "passed_cpu_preparation_not_GPU_training",
+  "parameters": 277898496,
+  "breakdown": {
+    "layers": 256922880,
+    "norm": 2048,
+    "rotary_emb": 0,
+    "fc": 20971520,
+    "hidden_norm": 2048
+  },
+  "manifest_requests": 50000,
+  "source_files": 62,
+  "input_hashes": 10,
+  "gpu_initialized": false,
+  "feature_layers": [
+    73,
+    78,
+    83,
+    88,
+    93
+  ],
+  "weights_bf16_MiB": 530.04931640625
+}

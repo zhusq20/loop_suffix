@@ -1,0 +1,325 @@
+{
+  "status": "passed_cpu_tiny_checks",
+  "tiny": true,
+  "reportable": false,
+  "started_unix": 1794418969.0116265,
+  "engine_source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/source/src",
+  "models": {
+    "huginn-3.5b": {
+      "model": "huginn-3.5b",
+      "path": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+      "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c"
+    },
+    "ouro-1.4b": {
+      "model": "ouro-1.4b",
+      "path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-1.4B/snapshots/574fa66cb8bf5abdc979642d01cf2b79b16bfab1",
+      "revision": "574fa66cb8bf5abdc979642d01cf2b79b16bfab1"
+    },
+    "ouro-2.6b": {
+      "model": "ouro-2.6b",
+      "path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd",
+      "revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd"
+    }
+  },
+  "checks": {
+    "huginn-3.5b": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "logits",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "features",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "logits",
+          "width": 4,
+          "max_abs": 5.960464477539062e-07
+        },
+        {
+          "kind": "features",
+          "width": 4,
+          "max_abs": 8.642673492431641e-07
+        },
+        {
+          "kind": "logits",
+          "width": 3,
+          "max_abs": 5.364418029785156e-07
+        },
+        {
+          "kind": "features",
+          "width": 3,
+          "max_abs": 7.152557373046875e-07
+        },
+        {
+          "kind": "logits",
+          "width": 1,
+          "max_abs": 3.129243850708008e-07
+        },
+        {
+          "kind": "features",
+          "width": 1,
+          "max_abs": 7.152557373046875e-07
+        }
+      ],
+      "tolerance": 5e-05,
+      "logits_top1_equal": true,
+      "partial_rejection_and_recompute": true,
+      "decode": [
+        {
+          "temperature": 0.0,
+          "budget": 1,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 1,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 2,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 2,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 17,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 17,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 33,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 33,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 1,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 1,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 2,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 2,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 17,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 17,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 33,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 33,
+          "method": "dflash",
+          "tokens_equal": true
+        }
+      ]
+    },
+    "ouro-2.6b": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "logits",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "features",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "logits",
+          "width": 4,
+          "max_abs": 2.682209014892578e-07
+        },
+        {
+          "kind": "features",
+          "width": 4,
+          "max_abs": 1.0013580322265625e-05
+        },
+        {
+          "kind": "logits",
+          "width": 3,
+          "max_abs": 1.341104507446289e-07
+        },
+        {
+          "kind": "features",
+          "width": 3,
+          "max_abs": 5.7220458984375e-06
+        },
+        {
+          "kind": "logits",
+          "width": 1,
+          "max_abs": 1.2293457984924316e-07
+        },
+        {
+          "kind": "features",
+          "width": 1,
+          "max_abs": 4.76837158203125e-06
+        }
+      ],
+      "tolerance": 5e-05,
+      "logits_top1_equal": true,
+      "partial_rejection_and_recompute": true,
+      "decode": [
+        {
+          "temperature": 0.0,
+          "budget": 1,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 1,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 2,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 2,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 17,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 17,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 33,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 0.0,
+          "budget": 33,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 1,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 1,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 2,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 2,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 17,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 17,
+          "method": "dflash",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 33,
+          "method": "ar",
+          "tokens_equal": true
+        },
+        {
+          "temperature": 1.0,
+          "budget": 33,
+          "method": "dflash",
+          "tokens_equal": true
+        }
+      ]
+    }
+  },
+  "benchmarks": {},
+  "limitations": [
+    "Bounded diagnostics only; not a full benchmark matrix.",
+    "BF16 outputs may differ by execution shape; report exact agreement separately.",
+    "No claim of a proportional speed benefit or task-quality equivalence."
+  ],
+  "finished_unix": 1794419003.989248
+}

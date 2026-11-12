@@ -1,0 +1,720 @@
+{
+  "status": "complete_training_audit_not_benchmark",
+  "model": "ouro-1.4b",
+  "training_root": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training",
+  "checkpoint": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/checkpoint-009108",
+  "recipe": {
+    "model": "ouro-1.4b",
+    "epochs": 6,
+    "world_size": 1,
+    "micro_batch": 4,
+    "accumulation": 8,
+    "seed": 42,
+    "num_anchors": 512,
+    "loss_decay_gamma": 7.0,
+    "lr": 0.0006,
+    "warmup_ratio": 0.04,
+    "max_grad_norm": 1.0,
+    "max_seq": 3072,
+    "attention": "flex_attention",
+    "dtype": "torch.bfloat16",
+    "gradient_checkpointing": false,
+    "bounded_experiment": false,
+    "draft_parameters": 163597568,
+    "target_path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-1.4B/snapshots/574fa66cb8bf5abdc979642d01cf2b79b16bfab1"
+  },
+  "epochs": 6,
+  "global_batch": 32,
+  "world_size": 1,
+  "examples": 48550,
+  "excluded_under_32_tokens": 1450,
+  "metadata_sha256": "abdf5d09c371d531bbcf380464269d217fbe79bb3348e2170af647023f845184",
+  "complete_sha256": "ea6244b8c847c9f5cb34e87ffd0e8b19077fdf9e40a2281fc3d3f586913959de",
+  "metrics_sha256": "4569a8b91e8d7e1ddf0093b3399991031514421783151f87de81c7dcf440740e",
+  "weights_sha256": "d25b56c5c1f43e35d1c4ced2f32eb9bb102cb3f34e5f0b03a378a8cf2bd48742",
+  "checkpoint_config_sha256": "fdf148c9ba31650aa9efeadd48a7534a845d1274e57d7e3a734f4e94fba04b65",
+  "artifact_hashes": {
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/plan.json": "d7af5950bc356bb78edb67cc243a1a75f2b5e9914ff417907056e5789c920c87",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/complete.json": "c554a04c44b089deac9ce48ec6f015acdbfcfa7cf5852df73d6298840369a1f0",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/checks/training-audit.json": "2f7f44b57f54e702bcd803f0e7417718590efa194bc428796bd24f33bb17e438",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/metadata.json": "abdf5d09c371d531bbcf380464269d217fbe79bb3348e2170af647023f845184",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/metrics.jsonl": "4569a8b91e8d7e1ddf0093b3399991031514421783151f87de81c7dcf440740e",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/complete.json": "ea6244b8c847c9f5cb34e87ffd0e8b19077fdf9e40a2281fc3d3f586913959de",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/checkpoint-009108/config.json": "fdf148c9ba31650aa9efeadd48a7534a845d1274e57d7e3a734f4e94fba04b65",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/checkpoint-009108/complete.json": "1a5052e6e4c801d7297a53efd0e73728eb3182971ff40c81143f51fa17d1f999",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/latest.json": "048ad5f05268fec6672eda20ca28083d04e75039592b55e2fe3c9a6a3e4ba0cb",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-launcher.json": "7e59520b00c6c9346a8b1dc0e2b98e696fa07eeae1ab9c2791c888a6ef02da8a",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-exit.json": "30f478f79a575d64977792159ba5c702831438fec567b7113bb29cf6bff00e7c",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/smoke-launcher.json": "8eaf8d845c095d6a1ed48da15647bfdad9ad86e45b57d7164c56eaac29abc124",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/smoke-exit.json": "3809f3a1c185bb2713f47593702926fde83473f05f9aaba6ec7dcfda39ab5654",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/train-launcher.json": "137511c411c1e76043e79d2fe5bcb0dc6284d7eb5fd01099ad57d385693facf6",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/train-exit.json": "4501ae0cfb33e73bb3b666cebd3f6c914dc764791bbf5d93447c45934c9131d6",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/audit-launcher.json": "f500025e51e1693ed1e9e6cdbda1713ba3be24855cd966cd734c7380d532fb74",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/audit-exit.json": "a00fdabb99f17c98558084782eb7eb33ea75da1b2d44f04fadb2b4666af9694d"
+  },
+  "metrics": {
+    "updates": 9108,
+    "updates_per_epoch_from_recipe": 1518,
+    "all_logged_updates_present_and_finite": true,
+    "first_loss": 11.962845802307129,
+    "final_loss": 1.8019193410873413,
+    "max_grad_norm": 81.47955322265625,
+    "sum_logged_update_wall_s": 23884.65935739875,
+    "epoch_observation": "Epoch boundaries inferred from the frozen recipe and contiguous steps; not logged.",
+    "timing_scope": "Logged update durations exclude checkpoint writes; reservation cost is separate.",
+    "peak_allocated_bytes": null
+  },
+  "learning_rate_schedule": {
+    "all_logged_learning_rates_match": true,
+    "max_absolute_error": 0.0,
+    "scheduler_source_sha256": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "torch": "2.9.1+cu128",
+    "specforge_commit": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "pinned_dependency_hashes": {
+      "specforge/lr_scheduler.py": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+      "specforge/optimizer.py": "f0aedfad5fe11100470e7f49518b20d439cf47ec9afc195af089dfeca3affc54"
+    },
+    "logged_max_lr": 0.0006000000193629139,
+    "nominal_lr": 0.0006,
+    "note": "Replay the pinned official scheduler, including its warmup-to-cosine boundary behavior."
+  },
+  "weights": {
+    "parameters": 163597568,
+    "tensor_count": 60,
+    "all_weights_finite": true,
+    "cuda_initialized": false,
+    "tensors": [
+      {
+        "name": "fc.weight",
+        "shape": [
+          1536,
+          10240
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 15728640,
+        "max_abs": 0.255859375
+      },
+      {
+        "name": "hidden_norm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.1640625
+      },
+      {
+        "name": "input_projection.weight",
+        "shape": [
+          1536,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 3145728,
+        "max_abs": 0.34765625
+      },
+      {
+        "name": "layers.0.input_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.171875
+      },
+      {
+        "name": "layers.0.mlp.down_proj.weight",
+        "shape": [
+          1536,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.56640625
+      },
+      {
+        "name": "layers.0.mlp.gate_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.1884765625
+      },
+      {
+        "name": "layers.0.mlp.up_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.1943359375
+      },
+      {
+        "name": "layers.0.post_attention_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 0.83984375
+      },
+      {
+        "name": "layers.0.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.5703125
+      },
+      {
+        "name": "layers.0.self_attn.k_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.328125
+      },
+      {
+        "name": "layers.0.self_attn.o_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.58984375
+      },
+      {
+        "name": "layers.0.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.4609375
+      },
+      {
+        "name": "layers.0.self_attn.q_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.1943359375
+      },
+      {
+        "name": "layers.0.self_attn.v_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.1787109375
+      },
+      {
+        "name": "layers.1.input_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.0859375
+      },
+      {
+        "name": "layers.1.mlp.down_proj.weight",
+        "shape": [
+          1536,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.421875
+      },
+      {
+        "name": "layers.1.mlp.gate_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.2041015625
+      },
+      {
+        "name": "layers.1.mlp.up_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.31640625
+      },
+      {
+        "name": "layers.1.post_attention_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 0.953125
+      },
+      {
+        "name": "layers.1.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.6015625
+      },
+      {
+        "name": "layers.1.self_attn.k_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.314453125
+      },
+      {
+        "name": "layers.1.self_attn.o_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.443359375
+      },
+      {
+        "name": "layers.1.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.6171875
+      },
+      {
+        "name": "layers.1.self_attn.q_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.298828125
+      },
+      {
+        "name": "layers.1.self_attn.v_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.197265625
+      },
+      {
+        "name": "layers.2.input_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.125
+      },
+      {
+        "name": "layers.2.mlp.down_proj.weight",
+        "shape": [
+          1536,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.419921875
+      },
+      {
+        "name": "layers.2.mlp.gate_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.2236328125
+      },
+      {
+        "name": "layers.2.mlp.up_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.2158203125
+      },
+      {
+        "name": "layers.2.post_attention_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.03125
+      },
+      {
+        "name": "layers.2.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.703125
+      },
+      {
+        "name": "layers.2.self_attn.k_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.259765625
+      },
+      {
+        "name": "layers.2.self_attn.o_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.369140625
+      },
+      {
+        "name": "layers.2.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.6953125
+      },
+      {
+        "name": "layers.2.self_attn.q_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.328125
+      },
+      {
+        "name": "layers.2.self_attn.v_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.2294921875
+      },
+      {
+        "name": "layers.3.input_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.234375
+      },
+      {
+        "name": "layers.3.mlp.down_proj.weight",
+        "shape": [
+          1536,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.458984375
+      },
+      {
+        "name": "layers.3.mlp.gate_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.212890625
+      },
+      {
+        "name": "layers.3.mlp.up_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.22265625
+      },
+      {
+        "name": "layers.3.post_attention_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.0703125
+      },
+      {
+        "name": "layers.3.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.546875
+      },
+      {
+        "name": "layers.3.self_attn.k_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.359375
+      },
+      {
+        "name": "layers.3.self_attn.o_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.53515625
+      },
+      {
+        "name": "layers.3.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.5703125
+      },
+      {
+        "name": "layers.3.self_attn.q_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.283203125
+      },
+      {
+        "name": "layers.3.self_attn.v_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.2255859375
+      },
+      {
+        "name": "layers.4.input_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.234375
+      },
+      {
+        "name": "layers.4.mlp.down_proj.weight",
+        "shape": [
+          1536,
+          4096
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.416015625
+      },
+      {
+        "name": "layers.4.mlp.gate_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.2265625
+      },
+      {
+        "name": "layers.4.mlp.up_proj.weight",
+        "shape": [
+          4096,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 6291456,
+        "max_abs": 0.220703125
+      },
+      {
+        "name": "layers.4.post_attention_layernorm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 1.078125
+      },
+      {
+        "name": "layers.4.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.625
+      },
+      {
+        "name": "layers.4.self_attn.k_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.314453125
+      },
+      {
+        "name": "layers.4.self_attn.o_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.5234375
+      },
+      {
+        "name": "layers.4.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.6328125
+      },
+      {
+        "name": "layers.4.self_attn.q_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.25390625
+      },
+      {
+        "name": "layers.4.self_attn.v_proj.weight",
+        "shape": [
+          1536,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2359296,
+        "max_abs": 0.2265625
+      },
+      {
+        "name": "norm.weight",
+        "shape": [
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 1536,
+        "max_abs": 0.98828125
+      },
+      {
+        "name": "output_projection.weight",
+        "shape": [
+          2048,
+          1536
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 3145728,
+        "max_abs": 0.1865234375
+      }
+    ]
+  },
+  "frozen_training_sources_verified": {
+    "__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "__main__.py": "9f82f480661bb39a09940afc1c0ecfd5ddd7811c9224851cd3b1dc0af670dccc",
+    "common.py": "e5ca2e0cd93d7bcc28dd991b88da8bfe4a2716f45688e091fd026fd0920cc633",
+    "configs/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "dflash/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "dflash/batch.py": "0d350771e3d30d7bb6d7bcf596b156ae9f510d0f3241c52b7af647268a846e09",
+    "dflash/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "dflash/packed_target.py": "cb20439bc49601dbd7a5beb1bad9bd82faae4474593146c1b380b65a21ec4a2e",
+    "dflash/projected_draft.py": "977190c4aa0d7b1f094875883beb9d57aaa4668ebcfcce0ac3415d1f882a3aa5",
+    "dflash/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "extract_features.py": "f2e3412b32a403b14d491927f91d586219400919491431b52a4380242c69e0dc",
+    "infer.py": "e972e464437945b8446da52f55f449741cd0fd9d85420e422cfb926ea506c7b9",
+    "loopahead/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/engine.py": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/training_data.py": "e1f81b5dfde26127b6358108349b00ce05d5f2a1b54913d12db1acd6fc6e1e2a",
+    "train_dflash.py": "bde92ba47d964599fb13fd2afc2e8186b52763b35eed14af3fc85c26abc820e6",
+    "train_loopahead.py": "008c1ac5e4a6b88359855d383ecabfd84b361c60375258373263818142def1be",
+    "vendor/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "vendor/dflash_inference.py": "6dfb12d0eeebe085d78d23fc816a481a8b25257fd76891e939a41423c29c697b",
+    "vendor/dflash_loss.py": "0ec797d25243774a2271b49f731d5ef0286488128b71777db8ce3c64cca25861",
+    "vendor/dflash_train.py": "da5ab1738b954800950405131f1d1d97c3345f37e32676d511d3a25dfddd9d75",
+    "vendor/lr_scheduler.py": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "vendor/optimizer.py": "fa28c4935037e729c938763bdca8a1d154df125c90a7a0fa12a2e97b75cb16e2"
+  },
+  "optimizer_defaults": {
+    "weight_decay": 0.0,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "portable_source_sha256": "fa28c4935037e729c938763bdca8a1d154df125c90a7a0fa12a2e97b75cb16e2"
+  },
+  "rng_files": {
+    "rng-rank0.pt": {
+      "bytes": 6901,
+      "sha256": "87860fdefb876b5faefcf16aff19f54892446c2263e8e07c05ca167221ff2a99"
+    }
+  },
+  "optimizer_state_bytes": 2290534533,
+  "limitations": [
+    "Training evidence only; not benchmark accuracy, equivalence or speed.",
+    "No epoch timestamps or peak GPU-memory measurement were logged.",
+    "Optimizer presence/size and RNG hash only; no deserialization or resume test.",
+    "Final weight inspection does not inspect every intermediate checkpoint."
+  ],
+  "started_unix": 1794495972.112985,
+  "finished_unix": 1794495982.0489073,
+  "cuda_initialized": false
+}

@@ -1,0 +1,52 @@
+{
+  "pid": 279845,
+  "argv": [
+    "python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+    "--execute",
+    "--resume",
+    "--huginn-training-gpus",
+    "4"
+  ],
+  "started_unix": 1794326506.7140987,
+  "preserved_workers": {
+    "train-ouro-2.6b": {
+      "pid": 210022,
+      "gpus": [
+        2,
+        4
+      ],
+      "started_unix": 1794320971.3908956
+    },
+    "loopahead-huginn-3.5b-math500-t0": {
+      "pid": 263754,
+      "gpus": [
+        1
+      ],
+      "started_unix": 1794325325.1430774
+    },
+    "loopahead-ouro-2.6b-math500-t0": {
+      "pid": 264951,
+      "gpus": [
+        6
+      ],
+      "started_unix": 1794325416.3817854
+    },
+    "loopahead-huginn-3.5b-bbh-t0": {
+      "pid": 265171,
+      "gpus": [
+        3
+      ],
+      "started_unix": 1794325431.604361
+    },
+    "loopahead-ouro-2.6b-bbh-t0": {
+      "pid": 265480,
+      "gpus": [
+        5
+      ],
+      "started_unix": 1794325446.8829107
+    }
+  },
+  "reason": "Wait for4 GPUs for the heavier Huginn DFlash training; global batch32 and6 epochs unchanged. Original base plan plus this explicit runtime override are retained."
+}

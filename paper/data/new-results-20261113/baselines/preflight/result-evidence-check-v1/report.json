@@ -1,0 +1,505 @@
+{
+  "status": "cpu_artifact_admission_checks_passed",
+  "checked_unix": 1794383713.3886132,
+  "completed_runs_checked": {
+    "archived-ar-huginn-3.5b-bbh-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-bbh-ar",
+      "requests_sha256": "433ae1e30911fbad68494edbea6d662ab2b67da269e9b7732440e0d61bff73c1",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-bbh-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-bbh-ar",
+      "requests_sha256": "99dc13f6558b0b8535f5f7c2a3c8312445bc99d1bad2f924cade209c5eb372d1",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-gsm8k-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-gsm8k-ar",
+      "requests_sha256": "7bb991a398a050874013eae832253772952cc5569e9cac1b61132ff7f050bf07",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-gsm8k-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-gsm8k-ar",
+      "requests_sha256": "f04b86fda535d05cc52c68f1c0797aeca779ecff1271a31acc507dd3c63ae162",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-humanevalplus-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-humanevalplus-ar",
+      "requests_sha256": "5513819d7428d7c7c5c75efdef7d66dc0e0ebf4bbfd1e92f4a165abd78c1e4f7",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-humanevalplus-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-humanevalplus-ar",
+      "requests_sha256": "5e96148c6f716f5641564546d7623d943fec620e836a42336bc0a8d0aa47e374",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-math500-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-math500-ar",
+      "requests_sha256": "5e931648819e34ea820db7321fd851ddaf2f6139be7e333d659a9c2aea912664",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-math500-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-math500-ar",
+      "requests_sha256": "277efd5be06f47f6e2a03731f97f0bacdacaf641fef4d3fb4cf38807467276ce",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-mbppplus-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-mbppplus-ar",
+      "requests_sha256": "967dafc9dd226731dfae3b779e3212649ce05c1ded3036775d3682da60a1cbde",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-mbppplus-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-mbppplus-ar",
+      "requests_sha256": "88c6c2ead3c84b419b26ea77e438393ab446221440b2dff402efeadf8a9d992d",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-specbench-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-specbench-ar",
+      "requests_sha256": "ecc4f6d80195d981e62cec07a2925c9380dc964aa5b58c1a5a49416842dcb789",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-huginn-3.5b-specbench-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-specbench-ar",
+      "requests_sha256": "9ffab1f9fa12e1a566251be3be7b9a6be50e0647560b286f2bdef426284b46bb",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-bbh-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-bbh-ar",
+      "requests_sha256": "6d32d20381a892a5ba90f631ebf6acab5dae7341e9eb95604208affb08eeffc7",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-bbh-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-bbh-ar",
+      "requests_sha256": "200a8c9770d86484c0bb4add757b5d21e2b817243b98a61180b0f9ec8f399740",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-gsm8k-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-gsm8k-ar",
+      "requests_sha256": "63f54f66c43291257407e42da23a94800a725e37ad3a12d8fd273d60384d7841",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-gsm8k-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-gsm8k-ar",
+      "requests_sha256": "550b2707998d11196ae96730c08b3e7fbcaa158f7b7e7afffe4b9d8b804c1b3d",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-humanevalplus-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-humanevalplus-ar",
+      "requests_sha256": "492b0eb07f7783086dd3d3db71699c3ed02ce39181ccc6e3ff6b1a2fb8f9cbe3",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-humanevalplus-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-humanevalplus-ar",
+      "requests_sha256": "48129e2a8adb9571509383e24e633b0a76f8e7030c4c6eb39f48737ae9dbf97e",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-math500-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-math500-ar",
+      "requests_sha256": "2f43e6e39369af64370d2767aa2bb303f85296df9636b668e05d6dc2da49bf32",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-math500-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-math500-ar",
+      "requests_sha256": "082ebb6a8cae2a461b49ee7228b38a33b6fceb9f23c17eb3ea2246b1dbce76d3",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-mbppplus-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-mbppplus-ar",
+      "requests_sha256": "f78c1954e734e658224649defe9c8b1b32cedd9fa49e61dc72179682e1782d3d",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-mbppplus-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-mbppplus-ar",
+      "requests_sha256": "8a98a37ae49b781e9a286c9cf33e05808c6b217f64575f4935f80dcc38e1269d",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-specbench-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-specbench-ar",
+      "requests_sha256": "79508b4a03186179f60fda9c54ad07ac4bde9d2e829c2fcf9ffd9f3dbd928d8f",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-1.4b-specbench-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-specbench-ar",
+      "requests_sha256": "44b6a4b088f78ce7e899614c03d75a9b8aad1d3d742ba5e61e14ad1bf24feae9",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-bbh-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-bbh-ar",
+      "requests_sha256": "54f98661fa4b96aaa045e5d25c7796238d5ea6dd381a783016b2404da8fabc1c",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-bbh-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-bbh-ar",
+      "requests_sha256": "edb3b53ebf7433fbf1ee837c6b3ffb759b2500be8f40a2ac0c72c9dd7c63e5c2",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-gsm8k-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-gsm8k-ar",
+      "requests_sha256": "de5254cfa5759dd28b695a1478923779624169b6983e6681373438ac053bde0d",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-gsm8k-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-gsm8k-ar",
+      "requests_sha256": "dc4eb4f90a3b3bd7d3886fd13720ca7247b393b410cde807daa09253ca1f9ef7",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-humanevalplus-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-humanevalplus-ar",
+      "requests_sha256": "fee83b50ce5e7bdeb426094a52feb3adb46b2188e16aef0468366d1203c90b7c",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-humanevalplus-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-humanevalplus-ar",
+      "requests_sha256": "d7a61649a2b50f779ae70ac9f9aa86222140adb81d8a91819ea32314f5d17cea",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-math500-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-math500-ar",
+      "requests_sha256": "b645e7064e21d40c1be833a0d05ea9f156cdf763b45cf3801b8ddb592ba482c7",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-math500-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-math500-ar",
+      "requests_sha256": "8218ffdc14b858c3925d62f566f91c5fd8eb73384b7543e0b48839c888e0cf88",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-mbppplus-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-mbppplus-ar",
+      "requests_sha256": "0ced0c15a197442f65d6d16920567704e5b61c7137b266812c193f8e121d3261",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-mbppplus-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-mbppplus-ar",
+      "requests_sha256": "ec0041c7c2968f91cabea1b149fb0c491eb969329e426a2ea67029e64c88f874",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-specbench-t0": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-specbench-ar",
+      "requests_sha256": "88701b4cd9536bcc1b844133825d285778b96d96e37aa588d9957fc90296c8c5",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "archived-ar-ouro-2.6b-specbench-t1": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-specbench-ar",
+      "requests_sha256": "d1c885713ba1e1a61bc93b8f53c60673246433fae42c07eddf83ad917014b176",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    },
+    "dflash-stack-ouro-2.6b-bbh-t0-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 448210,
+      "launch_sha256": "9430aefdb62a17016bdf72a454d20728494ca27135b9bc25972aa3e0d448743e",
+      "exit_receipt_sha256": "04b36d18787e6993e8aaa38e9f7302b09873a54c86f849e709a2a4f6c67a92f2",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-bbh-t0-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 6898,
+      "launch_sha256": "038e97fb95f47179b3dbd3afeecea02b4dbfe8c39b5acb84e30622ed73ccd183",
+      "exit_receipt_sha256": "f76aa9ca2cecb3c79e237f40755f802dd6b2cc29b65b3b9897ab851f39fa7857",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-bbh-t0-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 509829,
+      "launch_sha256": "d2fd949d35bc0121ad63e6d2b15cd5de9c9a121ed95912690e38684286f0b214",
+      "exit_receipt_sha256": "d83bb36008e509ad855cb1eec25f6faf77b93b2fb8a97bb73c30655411dc8dae",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 433217,
+      "launch_sha256": "b63cb51a15c2494d7fcdf3a3d9936c1036e1d0101a12bbbb632b4d25425213c6",
+      "exit_receipt_sha256": "2c0d447ff911e31fb7391542e36654827988afad3cc141beed673b6216ea44ca",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-gsm8k-t0-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 499054,
+      "launch_sha256": "b850b93e0031936e24b1bde746104b6b2592174995468c13144eaccd30fb969e",
+      "exit_receipt_sha256": "537f020791824f93b5a553d773e02f5f7de8a3e47a3b39b8135cf83469ef68fa",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-gsm8k-t0-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 485708,
+      "launch_sha256": "bced10688e4d41af569034a3c066736bb7672795f6e3fd902c2c03b31448b8ba",
+      "exit_receipt_sha256": "fea96f832bf6b120598e68e8910354e4f1170e993086d96f3c3afaba552dbc66",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 101799,
+      "launch_sha256": "1bb6070b9e8d330eb28567400b80ac69a129eec88d0db6e1168c1b44b2dad133",
+      "exit_receipt_sha256": "d333a9c814cda65182b6db3e1df99d68a266369c2867783e7e22090146be2e53",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 223505,
+      "launch_sha256": "edcc7ec25df9bea4b1676c33be5e28c3c8b965d9613531e13c6bc18bb85ed338",
+      "exit_receipt_sha256": "4370715b67050d0a91de57bd01f42c3cb297e997e1b1748418340181a23537bd",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 181571,
+      "launch_sha256": "111be50af1245b05d1a5e5e3dc66206c24b16cd052798142307e02c3b20491f2",
+      "exit_receipt_sha256": "0dcc95361a897b0dccf6111edc67e76708ecc059e4dca22ebf383352b03db412",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 508135,
+      "launch_sha256": "f77eefbd10b36e8831ea0e331692506f053c6e0aa4cee7c8eea9c067d1dd845a",
+      "exit_receipt_sha256": "bc245c146ff696957a7139ab5e401a6cc0a63afb9b3b16e49cba1dfc1d898037",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 49977,
+      "launch_sha256": "3011744de717fb0d6a9ad2d8871e392577c35b128c142bcbadf3dec9ff998a46",
+      "exit_receipt_sha256": "7f85824e92ed21f0acbef4651d683db95d4e76757781b3e3a9d9c781fd6468b9",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 39965,
+      "launch_sha256": "3c8ad95931298b61b653397658932fc6d7cbc817eca438b6f5143c81a02a4cc2",
+      "exit_receipt_sha256": "7b558b0980720e131acfeb1941d9c34e076cfb04d032cebb402d1b562ab62fdd",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-math500-t0-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 433218,
+      "launch_sha256": "db01a3cb3aa2b072c7551b24ce7a7f1eac9f55d956c116b62b9ca31680948d7e",
+      "exit_receipt_sha256": "2dc7e3f9095fa3fa1b3efa419e37d5e4d3777aae077d83520955449334e7ec4d",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-math500-t0-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 336063,
+      "launch_sha256": "5dc14c7387bc54c0180971ffab7ff1ea7a990509c3bad44c4c28b3e1a26eca1d",
+      "exit_receipt_sha256": "7e5565de792790108b0304a9fb0a81f62643ef5777ca6cbd8edd37f937c7f031",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-math500-t0-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 222750,
+      "launch_sha256": "26e9696b846d69f2faad384084284176ab48525b97782ece3971b1fea127bfca",
+      "exit_receipt_sha256": "2f61e2d691e188c9797da8f86b36fd9d9803827b1d7a7c93238a642bac7b7789",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 514462,
+      "launch_sha256": "b2435ae2a905cfc88333052a43af07b02c978503160f47eabfc68ad1ba3099c6",
+      "exit_receipt_sha256": "c8d789a7f2bb4e2524cae3afbaa8cd9cb82d9e8ff731549e524a2c85ee754128",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 264404,
+      "launch_sha256": "8bd2e13a215837d6afffaa7de6226a4819abfdef66de3d43120b131cc45b1588",
+      "exit_receipt_sha256": "b31636352bcf07c21872b257133de740f94d7b75becdfe19df6a7b321e339b7a",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 77179,
+      "launch_sha256": "bcec304b7842959aa4bed6308c69b908d584ab5aa352fc1bac6ce98d921a2f67",
+      "exit_receipt_sha256": "3ee8408ed436774179cd6388ddea3e70e8bd72fff6e53cf387635fb8b94b6f7c",
+      "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+    },
+    "dflash-stack-ouro-2.6b-specbench-t0-ar-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 287005,
+      "launch_sha256": "d8db2c593944be88b6fe329c5a7d90fa52129053543d5b98cda199236d9cffdd",
+      "exit_receipt_sha256": "47c6f412e37914948127dbd3999c18c4b7bf58294a4ab35e9ad14594ac5ea5a4",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-specbench-t0-dflash-profile-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 430917,
+      "launch_sha256": "9d6c40d7270135e9ddaff45d008abecaf1d904976b34d96b4df19a18e36aef4e",
+      "exit_receipt_sha256": "3c386b19e72f64ae3f2e89065eda0e7a0fee99e5b11b15468236641123fb2c70",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash-stack-ouro-2.6b-specbench-t0-dflash-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 390394,
+      "launch_sha256": "6f4cac9d319e7ae5923fddb5b0ed63132ac8c41d4717a5bfc7de7f57e1163cf1",
+      "exit_receipt_sha256": "0fd9471e92f317d85a5e3206506d7729f4e7c9a24b5ceada11353ac4989da372",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "loopahead-huginn-3.5b-bbh-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 265176,
+      "launch_sha256": "6e80b02a2875de302513e0747debd85ef92b4fd67d2bc1f1f749a1f3acd609e6",
+      "exit_receipt_sha256": "2a43cb036f50f5efa73c41e9ebe8ca15ebb62a797ed9b13f0ddac9d56433d794",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-gsm8k-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 250968,
+      "launch_sha256": "55cd01d5de3cbc474c56691fe60ff4cfb9fe8ab58f4c9bb8aa189fa88eaa3c8c",
+      "exit_receipt_sha256": "fb2c0cab6ca926c2b53e7736356dc6b0126f2a15fa4578b126439e5fd8d2ca2a",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-gsm8k-t1-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 359300,
+      "launch_sha256": "61a7abdcaae1aebc3d25478e624525be25d52a5e09e532d4b3317b4ab086aa85",
+      "exit_receipt_sha256": "e43a19418ab3964ad8c8b2b03a20bab028bd7645a1155789a0941ba6678f6e7e",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-humanevalplus-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 290475,
+      "launch_sha256": "5ebd56fcc25acc8106124b34b2af9840f11d31e3d50cda4f33fb655a5d442fe5",
+      "exit_receipt_sha256": "14edf2b1e92e7b537721cda943eb71e39608db59a03c9430f6b07d41fabe7f6c",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-math500-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 263757,
+      "launch_sha256": "381fd93780b86f63384a549c8021736125f0af1cd81df42b0af25667cf39181a",
+      "exit_receipt_sha256": "623cff508b4f608d48153830adf011782c53aeb4643d93356a394bc5962a9751",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-math500-t1-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 380835,
+      "launch_sha256": "8d006cb421dcca3bce5ff0c0b887331c183247f26a9039b0b6ea326c3100858f",
+      "exit_receipt_sha256": "ac25cd4154b254ba42e90b9ae257639f6306ec21a34bfbed69dd548ec2c6182c",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-mbppplus-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 302122,
+      "launch_sha256": "40a7e3055974acce41f6d4cf881bb2d8592ee60a582517bb991cf78710b67fd9",
+      "exit_receipt_sha256": "0c20a16a49c969af94f68e323ab34db5a28a0d894a5ed2c9c32d4381182b3cf1",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-huginn-3.5b-specbench-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 325196,
+      "launch_sha256": "83627cb40f2511da7e5932d16273cb6a41840f0d5d3c41319f6c7b5b2d5653ea",
+      "exit_receipt_sha256": "4ad9d788ca31d84073ef440eacb3660244f6c8b6355fe2264320d953611a2868",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-bbh-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 265501,
+      "launch_sha256": "fbf0396c4cec3b4a658407977b81352b045ca8cb67ce5463076cf265e1907ca4",
+      "exit_receipt_sha256": "22a1278f47540b1819c7830019e7d04cab1ac0492523164d1b00de8f1f1c9135",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-gsm8k-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 250675,
+      "launch_sha256": "ce9fa505a2e200e4607ba13eaeeefaf072d0eff62b32654dd0c9fef9845bac7f",
+      "exit_receipt_sha256": "81f6884276fddb1d38ffe57e4656c358345a685c3a3ba3e06c436c6e7096776b",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-gsm8k-t1-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 378284,
+      "launch_sha256": "f653d00d1bf5ff2ad193059368062ab1bf79e94d71ae18c60560261c4cac6acf",
+      "exit_receipt_sha256": "f02d4318a4ba5b00e2044059a2068a8668aec6d2700366098f55343f7c0fe33f",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-humanevalplus-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 297236,
+      "launch_sha256": "2c6f5631a3db2c71b910da9a272d8bde5035afa425cfd0f13189ea1bf0f8100c",
+      "exit_receipt_sha256": "4d93f01f45f3140ddd1c923d0dad93bdd4b181e29602f901c467ac2bbb9af4b9",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-math500-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 264956,
+      "launch_sha256": "e0e65892184c4db003bb7e727965aac960220613a18697f790f0ef0b5dbc593c",
+      "exit_receipt_sha256": "b26aa8646ac6d3766acd0f0061e49f0c62626891210d41d9229a85d1fe3381b5",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-math500-t1-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 403223,
+      "launch_sha256": "1e76f595b583d5cea1b0f0b14d634d242698b7b066ef653e827e11910549b84a",
+      "exit_receipt_sha256": "25efff354dadc4b148c8a420e358355084eb5fd029c071b51c588c7709ea4055",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-mbppplus-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 302789,
+      "launch_sha256": "33028adb1a5f5d81d09a124ef84b7502e154902d32464ab1b0c9e5588dce62d0",
+      "exit_receipt_sha256": "33b2b8722c130fd6c25438c415770c10f4cd1bbc5505c53d35224e4453a3f3e8",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "loopahead-ouro-2.6b-specbench-t0-v1": {
+      "kind": "actual_successful_process_exit",
+      "pid": 346640,
+      "launch_sha256": "d45db2066d9c5591748cc53095a6a5d799474b8e916554df2571f466d7bcbf50",
+      "exit_receipt_sha256": "2852c37a03f28be1a6eebb7a821fd8f5f3f4ab8d809375e1638ea3fe9c93b514",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    }
+  },
+  "tests": [
+    "reject_receipt_exit_code",
+    "reject_receipt_pid",
+    "reject_receipt_finished_unix",
+    "await_missing_exit_receipt",
+    "wrong_revision",
+    "wrong_checkpoint",
+    "profile_flag_mismatch",
+    "wrong_temperature_source",
+    "negative_request_latency",
+    "wrong_request_token_count",
+    "changed_archived_AR_bytes",
+    "existing_rows_and_agreements_unchanged",
+    "partial_collection_does_not_promote_missing_exit",
+    "strict_collection_requires_exit_receipt"
+  ],
+  "production_outputs_unchanged": true,
+  "existing_formal_rows_verified": 23,
+  "torch_imported": false,
+  "development_correction": "Initial read-only check assumed T0 frozen sources for T1. Corrected to the existing temperature-specific source suite; no experiment or result was changed.",
+  "limitations": [
+    "Metadata, byte identity and actual exit evidence only; not a numerical or sampling-distribution proof.",
+    "Historical AR remains an archived measurement, with uncorrected cross-date timing differences."
+  ]
+}

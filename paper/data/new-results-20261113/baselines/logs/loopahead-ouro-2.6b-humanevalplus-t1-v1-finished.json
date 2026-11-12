@@ -1,0 +1,30 @@
+{
+  "name": "loopahead-ouro-2.6b-humanevalplus-t1-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "humanevalplus",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1",
+    "--admission",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+  ],
+  "pid": 440602,
+  "started_unix": 1794421206.3509963,
+  "exit_code": 0,
+  "finished_unix": 1794423240.0662432
+}

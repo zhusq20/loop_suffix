@@ -1,0 +1,83 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.41s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.37s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.02it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.12s/it]
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"request": 1, "tokens": 308, "decode_s": 13.146211691200733, "gamma": 5.581818181818182}
+{"request": 2, "tokens": 222, "decode_s": 7.557594493031502, "gamma": 5.261904761904762}
+{"request": 3, "tokens": 168, "decode_s": 7.810770019888878, "gamma": 3.5531914893617023}
+{"request": 4, "tokens": 303, "decode_s": 13.835157170891762, "gamma": 4.4411764705882355}
+{"request": 5, "tokens": 214, "decode_s": 8.594924442470074, "gamma": 4.630434782608695}
+{"request": 6, "tokens": 113, "decode_s": 8.123113073408604, "gamma": 3.393939393939394}
+{"request": 7, "tokens": 512, "decode_s": 35.47804080694914, "gamma": 4.913461538461538}
+{"request": 8, "tokens": 278, "decode_s": 15.401590421795845, "gamma": 3.4625}
+{"request": 9, "tokens": 512, "decode_s": 13.458995305001736, "gamma": 7.861538461538461}
+{"request": 10, "tokens": 281, "decode_s": 11.526092566549778, "gamma": 4.827586206896552}
+{"request": 11, "tokens": 201, "decode_s": 9.595013931393623, "gamma": 3.8461538461538463}
+{"request": 12, "tokens": 208, "decode_s": 8.267909847199917, "gamma": 4.5}
+{"request": 13, "tokens": 80, "decode_s": 2.0247659012675285, "gamma": 6.076923076923077}
+{"request": 14, "tokens": 293, "decode_s": 15.145103953778744, "gamma": 3.7435897435897436}
+{"request": 15, "tokens": 512, "decode_s": 34.52191185951233, "gamma": 3.361842105263158}
+{"request": 16, "tokens": 116, "decode_s": 6.023085445165634, "gamma": 3.9655172413793105}
+{"request": 17, "tokens": 225, "decode_s": 5.585131354629993, "gamma": 7.0}
+{"request": 18, "tokens": 147, "decode_s": 4.140403084456921, "gamma": 5.407407407407407}
+{"request": 19, "tokens": 177, "decode_s": 5.011020481586456, "gamma": 6.285714285714286}
+{"request": 20, "tokens": 166, "decode_s": 7.17344456911087, "gamma": 4.125}
+{"request": 21, "tokens": 54, "decode_s": 2.869066007435322, "gamma": 3.7857142857142856}
+{"request": 22, "tokens": 219, "decode_s": 11.621338091790676, "gamma": 3.6333333333333333}
+{"request": 23, "tokens": 235, "decode_s": 9.646043442189693, "gamma": 4.588235294117647}
+{"request": 24, "tokens": 199, "decode_s": 9.740819185972214, "gamma": 3.8076923076923075}
+{"request": 25, "tokens": 512, "decode_s": 31.465508453547955, "gamma": 3.4066666666666667}
+{"request": 26, "tokens": 324, "decode_s": 22.135344296693802, "gamma": 3.0186915887850465}
+{"request": 27, "tokens": 203, "decode_s": 10.850939698517323, "gamma": 3.4827586206896552}
+{"request": 28, "tokens": 141, "decode_s": 8.873245790600777, "gamma": 3.255813953488372}
+{"request": 29, "tokens": 94, "decode_s": 5.1214782148599625, "gamma": 3.4444444444444446}
+{"request": 30, "tokens": 271, "decode_s": 10.746668867766857, "gamma": 5.294117647058823}
+{"request": 31, "tokens": 103, "decode_s": 5.850649997591972, "gamma": 3.5172413793103448}
+{"request": 32, "tokens": 308, "decode_s": 11.819563791155815, "gamma": 5.203389830508475}
+{"request": 33, "tokens": 144, "decode_s": 3.649903230369091, "gamma": 5.958333333333333}
+{"request": 34, "tokens": 156, "decode_s": 6.340135879814625, "gamma": 4.305555555555555}
+{"request": 35, "tokens": 84, "decode_s": 4.39229179173708, "gamma": 3.608695652173913}
+{"request": 36, "tokens": 228, "decode_s": 11.37493073195219, "gamma": 4.127272727272727}
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py", line 201, in <module>
+    main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py", line 83, in main
+    run(args, uuid)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py", line 177, in run
+    result = run_one(row, prompt, 512, trace)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py", line 167, in run_one
+    return generate(target, torch.tensor([prompt], device=target.device), limit, stops, draft=draft,
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/dflash_impl/decode.py", line 114, in generate
+    verified = target.forward(block, target_cache, features=draft is not None)
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/dflash_impl/target.py", line 134, in forward
+    output = self.model(input_ids, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/.cache/huggingface/modules/transformers_modules/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py", line 682, in forward
+    x, num_steps_no_grad, num_steps_with_grad, xk, block_idx = self.iterate_forward(
+  File "/root/.cache/huggingface/modules/transformers_modules/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py", line 751, in iterate_forward
+    x, block_idx = self.core_block_forward(
+  File "/root/.cache/huggingface/modules/transformers_modules/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py", line 777, in core_block_forward
+    x = block(x, freqs_cis, block_idx, mask, past_key_values)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1845, in _call_impl
+    return inner()
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1793, in inner
+    result = forward_call(*args, **kwargs)
+  File "/root/.cache/huggingface/modules/transformers_modules/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py", line 533, in forward
+    attn_out = self.attn(self.norm_1(x), freqs_cis, step_idx, mask, past_key_values)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/.cache/huggingface/modules/transformers_modules/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py", line 472, in forward
+    q, k = apply_rotary_emb_complex_like(q, k, freqs_cis=freqs_cis)
+  File "/root/.cache/huggingface/modules/transformers_modules/bb6621b65e90b6a4b9b29ef88dc83866d450470c/raven_modeling_minimal.py", line 1680, in apply_rotary_emb_complex_like
+    qk_r2 = torch.cat([q, k], dim=2).unflatten(dim=-1, sizes=(-1, 2)).float()  # cast to float32 for smooth skin
+KeyboardInterrupt

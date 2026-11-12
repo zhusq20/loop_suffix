@@ -1,0 +1,168 @@
+{
+  "status": "completed_AR_and_live_DFlash_stage_verified_not_complete_cell",
+  "checked_unix": 1794393572.5887709,
+  "ar_summary": {
+    "decode_tokens": 69158,
+    "decode_s": 5918.854849174619,
+    "loops": 276632,
+    "tok_s": 11.684354788603077,
+    "gamma": 1.0
+  },
+  "ar_journal_sha256": "e1ad71a10830a89de3f2442860e0c6cd55b0d459e6d20dc8541b6458a10a5d67",
+  "ar_execution_evidence": {
+    "kind": "actual_successful_process_exit",
+    "pid": 39200,
+    "launch_sha256": "61e98666eb40c06fdf689c752901aa757bd8b76288a0cbce6fe409a1cfc69a07",
+    "exit_receipt_sha256": "d8f4f5ab089373cc5c4d0b3f9d393c374610622406a49d705cb3847b399d448f",
+    "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+  },
+  "ar_actual_exit": {
+    "name": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "ar",
+      "--dataset",
+      "bbh",
+      "--temperature",
+      "1",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1"
+    ],
+    "pid": 39200,
+    "started_unix": 1794387467.0731647,
+    "exit_code": 0,
+    "finished_unix": 1794393438.9832778
+  },
+  "dflash_launcher": {
+    "name": "dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "bbh",
+      "--temperature",
+      "1",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+    ],
+    "pid": 117735,
+    "started_unix": 1794393439.0319028
+  },
+  "dflash_start_ticks": "40847532",
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "metadata_sha256": {
+    "ar": "172ccaf45c6dbb531b26cbf271aeb2bf06aa776cac9aec2aece73767ee03d798",
+    "dflash": "48cb86dd0cdfe1273700fd81696231e35ab02929b27ae5aab1bcfe67bedf057c"
+  },
+  "source_manifest_sha256": {
+    "ar": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9",
+    "dflash": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+  },
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "checkpoint_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "training_audit_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "loaded_libcuda": [
+    "/usr/lib64/libcuda.so.570.148.08"
+  ],
+  "ld_library_path": "/tmp/loopfill-native-driver-570.148.08::/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 117735,
+    "started_unix": 1794393440.8258917,
+    "acquired_unix": 1794393441.602072,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "gpu_contexts": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029, 117735, 11622 MiB\nGPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3, 65472, 30620 MiB\nGPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda, 420686, 9102 MiB\nGPU-e54049b5-ca93-d066-efc5-6942d59bf762, 65473, 30860 MiB\n",
+  "observed_requests": 9,
+  "observed_prefix_sha256": "e3d3b2f2c7a71f4b12f68ea3e5ce3c06160321e399316776cfb4330d24f9a04a",
+  "allocation": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794353566.114057,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": [
+      3,
+      6
+    ]
+  },
+  "completed_cells": 25,
+  "results_unchanged": {
+    "results.csv": "46ec2382abdfade1f0143ecbf9ba5c22587d32cc44cc404eb139b9bb21aea052",
+    "table2_rows.md": "65efd8ea42833103135194a0c4ceb1627bd9cd60356acd337dbff5d002282d9c",
+    "formal-agreement.json": "8f453500ba03bd87b59660a8074a6e66d1b8c2d5e64acbc7047ad64041e807e6",
+    "formal-matrix-status.json": "34370152e1d9b9aa7122255d8a26c3e5434afbc3ba504a24fb4c560449c94cd0"
+  },
+  "verification_source_sha256": "0e05c09287c3c41a07fd97e22432685f437270cc251c1d8057b36590d77aa147",
+  "limitations": [
+    "DFlash timing and its separate full-task profile remain incomplete; no speed ratio is reported for this cell.",
+    "Actual normal CUDA acquisition and driver mapping verified; no real busy-retry or old-parent self-reexec is claimed.",
+    "Shared-host timing variation is retained without correction.",
+    "The original failed startup remains in its recovery archive."
+  ]
+}

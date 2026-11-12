@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "checked_unix": 1794516910.015757,
+  "sql_state": {
+    "status": "waiting_for_gpu",
+    "completed": 7,
+    "total": 14,
+    "main_completed": 7,
+    "prior_pids": [],
+    "failed": [],
+    "updated_unix": 1794516909.9201808,
+    "running": {},
+    "bindings": {},
+    "placement": "first_idle_per_cell",
+    "allowed_gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cell_gpus": {
+      "ouro-1.4b-ar-t0": 5,
+      "ouro-1.4b-budget-online-t0": 5,
+      "ouro-1.4b-budget-suffix-t0": 5,
+      "ouro-1.4b-dflash-t0": 5,
+      "ouro-1.4b-loopahead-t0": 5,
+      "ouro-1.4b-loopspec-dual-t0": 5,
+      "ouro-1.4b-wavefront-t0": 5
+    }
+  },
+  "other_existing_queues": [
+    {
+      "queue": "dflash-evaluation",
+      "plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/plan-no-output-diagnostics.json",
+      "plan_sha256": "1eb9641bdd9c554d90f5439fc3d81df193017d082e5376bf5385fde7aae0f05e",
+      "policy": "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/gpu-allocation.json",
+      "policy_sha256": "ccd2ccb8ba859cc41a132bff82f07d98bfb26210b5b24c2c89759e286bf5e992",
+      "allowed_gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "configuration_change_required": false
+    },
+    {
+      "queue": "dflash-existing-followups",
+      "plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json",
+      "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+      "policy": "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/gpu-allocation.json",
+      "policy_sha256": "ccd2ccb8ba859cc41a132bff82f07d98bfb26210b5b24c2c89759e286bf5e992",
+      "allowed_gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "configuration_change_required": false
+    },
+    {
+      "queue": "loopahead-existing-continuation",
+      "plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/plan.json",
+      "plan_sha256": "994a83735b8ff36410e856979802e7fd91fab2cc62c34d3f0008918fa6fb2a8e",
+      "policy": "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/gpu-allocation.json",
+      "policy_sha256": "ccd2ccb8ba859cc41a132bff82f07d98bfb26210b5b24c2c89759e286bf5e992",
+      "allowed_gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "configuration_change_required": false
+    }
+  ],
+  "completed_cells_preserved": 7,
+  "frozen_inputs_and_sources_verified": true,
+  "tests_passed": 15,
+  "ruff_passed": true
+}

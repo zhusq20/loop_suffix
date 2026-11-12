@@ -1,0 +1,24 @@
+{
+  "name": "dflash-stack-ouro-2.6b-bbh-t0-ar-v1",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "ar",
+    "--dataset",
+    "bbh",
+    "--temperature",
+    "0",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-ar-v1"
+  ],
+  "pid": 448210,
+  "started_unix": 1794343743.111624
+}

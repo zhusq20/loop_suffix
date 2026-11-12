@@ -1,0 +1,32 @@
+{
+  "job": {
+    "id": "table1-ouro-2.6b-specbench-t1",
+    "kind": "latency",
+    "model": "ouro-2.6b",
+    "dataset": "specbench",
+    "temperature": 1,
+    "batch": 1,
+    "max_seq": 2304,
+    "max_new_tokens": 512,
+    "count": 480,
+    "inputs": "inputs/ouro-2.6b-specbench.jsonl",
+    "inputs_sha256": "a83d2e8eeaf1be131cd0f0b22f29697fe755008a4d57d7305b833521c37fcef8",
+    "original_inputs_sha256": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c"
+  },
+  "stage": "profile",
+  "timed": {
+    "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t1/attempt1",
+    "hashes": {
+      "metadata.json": "19fdbcf5dc6bb88457c050ded58cfd1bb88f3567f12807cfe10ff5d46768c1d5",
+      "complete.json": "e80d86098fd3f17d4b2f03a4faa0e6704e1f044c3b690c72e096deefb9ade223",
+      "requests.jsonl": "2f8c60d371e9ff17ef364f8728c85bc9fbcc9cc9228b33d78d0a776954bdea17",
+      "summary.json": "85aba067309234407d53ba67f409195a7afdc8c28e828a4f57529871f9c2015d"
+    },
+    "exit_evidence": {
+      "actual_exit_code": null,
+      "limitation": "Original parent exit receipt unavailable; artifacts verified independently. No synthetic exit status and no timed rerun."
+    }
+  },
+  "plan_sha256": "0e398011930f446630667e45cdcac5ab15b7ef6f5af2d813d9defbe46927340d",
+  "created_unix": 1794466826.989458
+}

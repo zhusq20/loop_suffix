@@ -1,0 +1,47 @@
+{
+  "group": "loopahead-huginn-3.5b-math500-v1",
+  "step": "loopahead-huginn-3.5b-math500-v1-fp32",
+  "gpu": 1,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "4-7",
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t0",
+    "--loopahead",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t0-v1",
+    "--observed-margin-report",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1/report.json",
+    "--gpu",
+    "1",
+    "--cpus",
+    "4-7",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1/fp32-common-prefix"
+  ],
+  "started_unix": 1794475216.5324512,
+  "pid": 170150,
+  "start_ticks": "49025282",
+  "supervisor_identity": {
+    "pid": 170147,
+    "state": "R",
+    "start_ticks": "49025276",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-fp32-launcher.json.supervisor.json",
+      "--lock-fd",
+      "6"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794479291.603492,
+  "exit_evidence": "supervisor_waitpid"
+}

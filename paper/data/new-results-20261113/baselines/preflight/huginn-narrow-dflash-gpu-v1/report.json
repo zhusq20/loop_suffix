@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "model": "huginn-3.5b",
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "started_unix": 1794352154.878146,
+  "error": "Traceback (most recent call last):\n  File \"/ossfs/workspace/sz/loopfill/experiments/baselines/probe_projected_dflash_gpu.py\", line 47, in main\n    run(args,report)\n  File \"/ossfs/workspace/sz/loopfill/experiments/baselines/probe_projected_dflash_gpu.py\", line 62, in run\n    torch.cuda.set_device(0)  # Before SpecForge's optional CUDA-dependent imports.\n    ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/loopfill-specforge-venv/lib/python3.11/site-packages/torch/cuda/__init__.py\", line 567, in set_device\n    torch._C._cuda_setDevice(device)\ntorch.AcceleratorError: CUDA error: CUDA-capable device(s) is/are busy or unavailable\nSearch for `cudaErrorDevicesUnavailable' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "finished_unix": 1794352156.7811325
+}

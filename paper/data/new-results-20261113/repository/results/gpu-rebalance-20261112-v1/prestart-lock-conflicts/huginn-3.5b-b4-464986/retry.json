@@ -1,0 +1,29 @@
+{
+  "reason": "GPU reservation raced before CUDA initialization; empty attempt archived.",
+  "archived_unix": 1794422917.5066779,
+  "receipt": {
+    "pid": 464986,
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source/evaluate_loopahead_throughput.py",
+      "--model",
+      "huginn-3.5b",
+      "--batch",
+      "4",
+      "--mode",
+      "formal",
+      "--gpu",
+      "5",
+      "--cpus",
+      "52-55",
+      "--out",
+      "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b4"
+    ],
+    "gpu": 5,
+    "started_unix": 1794422778.7228792,
+    "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/plan.json",
+    "exit_code": 1,
+    "finished_unix": 1794422788.82641
+  }
+}

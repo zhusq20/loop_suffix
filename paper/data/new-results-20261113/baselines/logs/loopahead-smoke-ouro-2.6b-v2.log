@@ -1,0 +1,25 @@
+ar 64 10.276385433971882
+loopahead 64 3.4534553438425064
+repeat 64 3.3836034163832664
+sampling 64 3.4676304683089256
+{
+  "model": "ouro-2.6b",
+  "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+  "started_unix": 1794293913.1538918,
+  "stage": "untrained_LAD_compatibility",
+  "prompt_tokens": 88,
+  "greedy_ar_equal": false,
+  "repeat_exact": true,
+  "first_divergence": 6,
+  "lad_calls": 64,
+  "draft_parameters": 11051008,
+  "peak_allocated_bytes": 6330398208,
+  "limitations": [
+    "untrained LAD",
+    "synthetic prompt only",
+    "sampling admission has not been calibrated",
+    "not a benchmark result"
+  ],
+  "status": "complete",
+  "finished_unix": 1794293940.678464
+}

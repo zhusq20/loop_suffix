@@ -1,0 +1,2347 @@
+{
+  "status": "complete",
+  "model": "ouro-2.6b",
+  "dataset": "bbh",
+  "cases": 50,
+  "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+  "results": [
+    {
+      "source_id": "bbh/salient_translation_error_detection/84",
+      "position": 98,
+      "ar": {
+        "top_ids": [
+          44618,
+          2158,
+          1546
+        ],
+        "top_logits": [
+          15.0,
+          14.9375,
+          14.5
+        ],
+        "top_probs": [
+          0.20168949663639069,
+          0.18946973979473114,
+          0.12233085930347443
+        ],
+        "top2_probability_margin": 0.012219756841659546,
+        "top1_logit_margin": 0.0625,
+        "argmax": 44618
+      },
+      "loopahead": {
+        "top_ids": [
+          44618,
+          2158,
+          1546
+        ],
+        "top_logits": [
+          14.875,
+          14.875,
+          14.4375
+        ],
+        "top_probs": [
+          0.18925738334655762,
+          0.18925738334655762,
+          0.12219375371932983
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2158
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/logical_deduction_seven_objects/142",
+      "position": 213,
+      "ar": {
+        "top_ids": [
+          5615,
+          429,
+          1569
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          14.625
+        ],
+        "top_probs": [
+          0.4897997975349426,
+          0.4897997975349426,
+          0.010165469720959663
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 429
+      },
+      "loopahead": {
+        "top_ids": [
+          5615,
+          429,
+          1569
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          14.625
+        ],
+        "top_probs": [
+          0.5197847485542297,
+          0.45870843529701233,
+          0.010787787847220898
+        ],
+        "top2_probability_margin": 0.06107631325721741,
+        "top1_logit_margin": 0.125,
+        "argmax": 5615
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/multistep_arithmetic_two/144",
+      "position": 130,
+      "ar": {
+        "top_ids": [
+          731,
+          25,
+          1232
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          17.5
+        ],
+        "top_probs": [
+          0.470803439617157,
+          0.470803439617157,
+          0.05622945353388786
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 25
+      },
+      "loopahead": {
+        "top_ids": [
+          731,
+          25,
+          1232
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          17.5
+        ],
+        "top_probs": [
+          0.4984070360660553,
+          0.43984267115592957,
+          0.0595262311398983
+        ],
+        "top2_probability_margin": 0.05856436491012573,
+        "top1_logit_margin": 0.125,
+        "argmax": 731
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/hyperbaton/89",
+      "position": 307,
+      "ar": {
+        "top_ids": [
+          8264,
+          1573,
+          3201
+        ],
+        "top_logits": [
+          11.125,
+          11.125,
+          11.0
+        ],
+        "top_probs": [
+          0.03112759441137314,
+          0.03112759441137314,
+          0.027470005676150322
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1573
+      },
+      "loopahead": {
+        "top_ids": [
+          8264,
+          1573,
+          3201
+        ],
+        "top_logits": [
+          11.125,
+          11.0625,
+          11.0
+        ],
+        "top_probs": [
+          0.03153015673160553,
+          0.029619842767715454,
+          0.027825266122817993
+        ],
+        "top2_probability_margin": 0.0019103139638900757,
+        "top1_logit_margin": 0.0625,
+        "argmax": 8264
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/word_sorting/53",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          1644,
+          10987,
+          3569
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          17.125
+        ],
+        "top_probs": [
+          0.3645947575569153,
+          0.32175374031066895,
+          0.17222237586975098
+        ],
+        "top2_probability_margin": 0.04284101724624634,
+        "top1_logit_margin": 0.125,
+        "argmax": 1644
+      },
+      "loopahead": {
+        "top_ids": [
+          10987,
+          1644,
+          3569
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          16.875
+        ],
+        "top_probs": [
+          0.3829514980316162,
+          0.33795350790023804,
+          0.14088000357151031
+        ],
+        "top2_probability_margin": 0.044997990131378174,
+        "top1_logit_margin": 0.125,
+        "argmax": 10987
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "bbh/logical_deduction_five_objects/79",
+      "position": 100,
+      "ar": {
+        "top_ids": [
+          41038,
+          613,
+          4461
+        ],
+        "top_logits": [
+          15.625,
+          15.5625,
+          15.3125
+        ],
+        "top_probs": [
+          0.2736579477787018,
+          0.2570778727531433,
+          0.20021243393421173
+        ],
+        "top2_probability_margin": 0.01658007502555847,
+        "top1_logit_margin": 0.0625,
+        "argmax": 41038
+      },
+      "loopahead": {
+        "top_ids": [
+          41038,
+          613,
+          4461
+        ],
+        "top_logits": [
+          15.625,
+          15.625,
+          15.375
+        ],
+        "top_probs": [
+          0.26185688376426697,
+          0.26185688376426697,
+          0.20393434166908264
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 613
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/tracking_shuffled_objects_seven_objects/24",
+      "position": 43,
+      "ar": {
+        "top_ids": [
+          12282,
+          480,
+          42
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          14.5
+        ],
+        "top_probs": [
+          0.4771168828010559,
+          0.4771168828010559,
+          0.02096305415034294
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 480
+      },
+      "loopahead": {
+        "top_ids": [
+          12282,
+          480,
+          42
+        ],
+        "top_logits": [
+          17.75,
+          17.625,
+          14.5625
+        ],
+        "top_probs": [
+          0.5071653723716736,
+          0.44757187366485596,
+          0.02093321643769741
+        ],
+        "top2_probability_margin": 0.05959349870681763,
+        "top1_logit_margin": 0.125,
+        "argmax": 12282
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/causal_judgement/172",
+      "position": 9,
+      "ar": {
+        "top_ids": [
+          476,
+          260,
+          11384
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          12.8125
+        ],
+        "top_probs": [
+          0.4912899136543274,
+          0.4912899136543274,
+          0.0051270704716444016
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          476,
+          260,
+          11384
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          12.8125
+        ],
+        "top_probs": [
+          0.5225066542625427,
+          0.46111050248146057,
+          0.0048121195286512375
+        ],
+        "top2_probability_margin": 0.06139615178108215,
+        "top1_logit_margin": 0.125,
+        "argmax": 476
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/movie_recommendation/215",
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          6903,
+          2092,
+          1101
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          16.75
+        ],
+        "top_probs": [
+          0.4451633393764496,
+          0.4451633393764496,
+          0.053167179226875305
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2092
+      },
+      "loopahead": {
+        "top_ids": [
+          6903,
+          2092,
+          1101
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          16.625
+        ],
+        "top_probs": [
+          0.4728718101978302,
+          0.41730791330337524,
+          0.04984031990170479
+        ],
+        "top2_probability_margin": 0.055563896894454956,
+        "top1_logit_margin": 0.125,
+        "argmax": 6903
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/hyperbaton/54",
+      "position": 279,
+      "ar": {
+        "top_ids": [
+          8264,
+          1573,
+          3953
+        ],
+        "top_logits": [
+          11.5625,
+          11.5,
+          11.3125
+        ],
+        "top_probs": [
+          0.04527581110596657,
+          0.04253268986940384,
+          0.03526083752512932
+        ],
+        "top2_probability_margin": 0.002743121236562729,
+        "top1_logit_margin": 0.0625,
+        "argmax": 8264
+      },
+      "loopahead": {
+        "top_ids": [
+          8264,
+          1573,
+          3953
+        ],
+        "top_logits": [
+          11.5625,
+          11.5625,
+          11.3125
+        ],
+        "top_probs": [
+          0.04547832906246185,
+          0.04547832906246185,
+          0.0354185588657856
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1573
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/snarks/82",
+      "position": 84,
+      "ar": {
+        "top_ids": [
+          22263,
+          4138,
+          6450
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          15.375
+        ],
+        "top_probs": [
+          0.36008256673812866,
+          0.3177717328071594,
+          0.1169016882777214
+        ],
+        "top2_probability_margin": 0.04231083393096924,
+        "top1_logit_margin": 0.125,
+        "argmax": 22263
+      },
+      "loopahead": {
+        "top_ids": [
+          4138,
+          22263,
+          6450
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          15.375
+        ],
+        "top_probs": [
+          0.35932859778404236,
+          0.31710636615753174,
+          0.11665691435337067
+        ],
+        "top2_probability_margin": 0.04222223162651062,
+        "top1_logit_margin": 0.125,
+        "argmax": 4138
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "bbh/multistep_arithmetic_two/231",
+      "position": 160,
+      "ar": {
+        "top_ids": [
+          731,
+          446,
+          1232
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          18.25
+        ],
+        "top_probs": [
+          0.3875771462917328,
+          0.3420356214046478,
+          0.26637762784957886
+        ],
+        "top2_probability_margin": 0.04554152488708496,
+        "top1_logit_margin": 0.125,
+        "argmax": 731
+      },
+      "loopahead": {
+        "top_ids": [
+          731,
+          446,
+          1232
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          18.25
+        ],
+        "top_probs": [
+          0.3584388792514801,
+          0.3584388792514801,
+          0.2791524827480316
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 446
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/boolean_expressions/10",
+      "position": 113,
+      "ar": {
+        "top_ids": [
+          441,
+          3635,
+          365
+        ],
+        "top_logits": [
+          17.875,
+          17.625,
+          17.625
+        ],
+        "top_probs": [
+          0.3543969988822937,
+          0.2760046422481537,
+          0.2760046422481537
+        ],
+        "top2_probability_margin": 0.07839235663414001,
+        "top1_logit_margin": 0.25,
+        "argmax": 441
+      },
+      "loopahead": {
+        "top_ids": [
+          441,
+          365,
+          3635
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          17.625
+        ],
+        "top_probs": [
+          0.3142801821231842,
+          0.3142801821231842,
+          0.2773512899875641
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 365
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/causal_judgement/16",
+      "position": 62,
+      "ar": {
+        "top_ids": [
+          284,
+          28,
+          43
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          18.375
+        ],
+        "top_probs": [
+          0.4236900210380554,
+          0.37390512228012085,
+          0.09453802555799484
+        ],
+        "top2_probability_margin": 0.04978489875793457,
+        "top1_logit_margin": 0.125,
+        "argmax": 284
+      },
+      "loopahead": {
+        "top_ids": [
+          284,
+          28,
+          43
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          18.375
+        ],
+        "top_probs": [
+          0.39360588788986206,
+          0.39360588788986206,
+          0.09951914846897125
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/sports_understanding/59",
+      "position": 9,
+      "ar": {
+        "top_ids": [
+          16352,
+          14862,
+          13159
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          16.25
+        ],
+        "top_probs": [
+          0.38280436396598816,
+          0.33782365918159485,
+          0.18082398176193237
+        ],
+        "top2_probability_margin": 0.04498070478439331,
+        "top1_logit_margin": 0.125,
+        "argmax": 16352
+      },
+      "loopahead": {
+        "top_ids": [
+          16352,
+          14862,
+          13159
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          16.25
+        ],
+        "top_probs": [
+          0.35324233770370483,
+          0.35324233770370483,
+          0.1890770047903061
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 14862
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/logical_deduction_three_objects/172",
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          19362,
+          365,
+          24
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          12.75
+        ],
+        "top_probs": [
+          0.4918019473552704,
+          0.4918019473552704,
+          0.009007667191326618
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 365
+      },
+      "loopahead": {
+        "top_ids": [
+          19362,
+          365,
+          24
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          12.6875
+        ],
+        "top_probs": [
+          0.5222567319869995,
+          0.4608899652957916,
+          0.00898592360317707
+        ],
+        "top2_probability_margin": 0.061366766691207886,
+        "top1_logit_margin": 0.125,
+        "argmax": 19362
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/snarks/45",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          1937,
+          198,
+          4460
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          12.625
+        ],
+        "top_probs": [
+          0.5295743346214294,
+          0.4673477113246918,
+          0.00025848273071460426
+        ],
+        "top2_probability_margin": 0.06222662329673767,
+        "top1_logit_margin": 0.125,
+        "argmax": 1937
+      },
+      "loopahead": {
+        "top_ids": [
+          1937,
+          198,
+          4460
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          12.625
+        ],
+        "top_probs": [
+          0.4985421597957611,
+          0.4985421597957611,
+          0.00024333607871085405
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/salient_translation_error_detection/232",
+      "position": 129,
+      "ar": {
+        "top_ids": [
+          354,
+          260,
+          253
+        ],
+        "top_logits": [
+          16.625,
+          16.5,
+          16.5
+        ],
+        "top_probs": [
+          0.3465719223022461,
+          0.3058486580848694,
+          0.3058486580848694
+        ],
+        "top2_probability_margin": 0.04072326421737671,
+        "top1_logit_margin": 0.125,
+        "argmax": 354
+      },
+      "loopahead": {
+        "top_ids": [
+          354,
+          260,
+          253
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          16.5
+        ],
+        "top_probs": [
+          0.3189111053943634,
+          0.3189111053943634,
+          0.3189111053943634
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/penguins_in_a_table/98",
+      "position": 72,
+      "ar": {
+        "top_ids": [
+          198,
+          2,
+          65
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          14.875
+        ],
+        "top_probs": [
+          0.5033221244812012,
+          0.4441801905632019,
+          0.03217630460858345
+        ],
+        "top2_probability_margin": 0.05914193391799927,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          2,
+          65
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          14.8125
+        ],
+        "top_probs": [
+          0.47346118092536926,
+          0.47346118092536926,
+          0.03221943601965904
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/dyck_languages/20",
+      "position": 170,
+      "ar": {
+        "top_ids": [
+          2986,
+          933,
+          1662
+        ],
+        "top_logits": [
+          15.8125,
+          15.8125,
+          15.75
+        ],
+        "top_probs": [
+          0.22182437777519226,
+          0.22182437777519226,
+          0.208384707570076
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 933
+      },
+      "loopahead": {
+        "top_ids": [
+          2986,
+          1662,
+          933
+        ],
+        "top_logits": [
+          15.875,
+          15.75,
+          15.75
+        ],
+        "top_probs": [
+          0.23747149109840393,
+          0.2095678448677063,
+          0.2095678448677063
+        ],
+        "top2_probability_margin": 0.027903646230697632,
+        "top1_logit_margin": 0.125,
+        "argmax": 2986
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/reasoning_about_colored_objects/65",
+      "position": 72,
+      "ar": {
+        "top_ids": [
+          1385,
+          378,
+          198
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          18.625
+        ],
+        "top_probs": [
+          0.42763587832450867,
+          0.3773873448371887,
+          0.15731845796108246
+        ],
+        "top2_probability_margin": 0.050248533487319946,
+        "top1_logit_margin": 0.125,
+        "argmax": 1385
+      },
+      "loopahead": {
+        "top_ids": [
+          1385,
+          378,
+          198
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          18.625
+        ],
+        "top_probs": [
+          0.4070582389831543,
+          0.4070582389831543,
+          0.14974837005138397
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/navigate/123",
+      "position": 92,
+      "ar": {
+        "top_ids": [
+          33,
+          32,
+          38
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          17.625
+        ],
+        "top_probs": [
+          0.4718470275402069,
+          0.4718470275402069,
+          0.03418048471212387
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 32
+      },
+      "loopahead": {
+        "top_ids": [
+          33,
+          32,
+          38
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          17.5
+        ],
+        "top_probs": [
+          0.5028559565544128,
+          0.44376879930496216,
+          0.032146502286195755
+        ],
+        "top2_probability_margin": 0.059087157249450684,
+        "top1_logit_margin": 0.125,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/causal_judgement/151",
+      "position": 45,
+      "ar": {
+        "top_ids": [
+          14388,
+          2332,
+          34920
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.75
+        ],
+        "top_probs": [
+          0.3280179500579834,
+          0.28947484493255615,
+          0.15494471788406372
+        ],
+        "top2_probability_margin": 0.038543105125427246,
+        "top1_logit_margin": 0.125,
+        "argmax": 14388
+      },
+      "loopahead": {
+        "top_ids": [
+          14388,
+          2332,
+          34920
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          17.75
+        ],
+        "top_probs": [
+          0.31615808606147766,
+          0.31615808606147766,
+          0.14934250712394714
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2332
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/snarks/51",
+      "position": 10,
+      "ar": {
+        "top_ids": [
+          1488,
+          260,
+          357
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.25
+        ],
+        "top_probs": [
+          0.24097120761871338,
+          0.24097120761871338,
+          0.1461564302444458
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          1488,
+          260,
+          357
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.25
+        ],
+        "top_probs": [
+          0.25661975145339966,
+          0.2264661341905594,
+          0.1373586654663086
+        ],
+        "top2_probability_margin": 0.03015361726284027,
+        "top1_logit_margin": 0.125,
+        "argmax": 1488
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/geometric_shapes/235",
+      "position": 340,
+      "ar": {
+        "top_ids": [
+          1348,
+          24,
+          2696
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          16.125
+        ],
+        "top_probs": [
+          0.4920751750469208,
+          0.43425479531288147,
+          0.014859382063150406
+        ],
+        "top2_probability_margin": 0.05782037973403931,
+        "top1_logit_margin": 0.125,
+        "argmax": 1348
+      },
+      "loopahead": {
+        "top_ids": [
+          1348,
+          24,
+          2696
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          16.125
+        ],
+        "top_probs": [
+          0.46605414152145386,
+          0.46605414152145386,
+          0.014073614962399006
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 24
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/sports_understanding/157",
+      "position": 23,
+      "ar": {
+        "top_ids": [
+          284,
+          28,
+          30
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          18.625
+        ],
+        "top_probs": [
+          0.3250337839126587,
+          0.3250337839126587,
+          0.22339224815368652
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          284,
+          28,
+          30
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          18.625
+        ],
+        "top_probs": [
+          0.338906466960907,
+          0.2990838885307312,
+          0.23292678594589233
+        ],
+        "top2_probability_margin": 0.03982257843017578,
+        "top1_logit_margin": 0.125,
+        "argmax": 284
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/date_understanding/18",
+      "position": 20,
+      "ar": {
+        "top_ids": [
+          12899,
+          3627,
+          216
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          14.625
+        ],
+        "top_probs": [
+          0.4705509543418884,
+          0.4152597486972809,
+          0.043768055737018585
+        ],
+        "top2_probability_margin": 0.055291205644607544,
+        "top1_logit_margin": 0.125,
+        "argmax": 12899
+      },
+      "loopahead": {
+        "top_ids": [
+          12899,
+          3627,
+          216
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          14.625
+        ],
+        "top_probs": [
+          0.44593092799186707,
+          0.44593092799186707,
+          0.04147803410887718
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3627
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/navigate/157",
+      "position": 137,
+      "ar": {
+        "top_ids": [
+          37,
+          32,
+          33
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          16.375
+        ],
+        "top_probs": [
+          0.48583969473838806,
+          0.48583969473838806,
+          0.01662451960146427
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 32
+      },
+      "loopahead": {
+        "top_ids": [
+          37,
+          32,
+          33
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          16.5
+        ],
+        "top_probs": [
+          0.5143153667449951,
+          0.45388174057006836,
+          0.01994217187166214
+        ],
+        "top2_probability_margin": 0.06043362617492676,
+        "top1_logit_margin": 0.125,
+        "argmax": 37
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/formal_fallacies/130",
+      "position": 38,
+      "ar": {
+        "top_ids": [
+          21113,
+          643,
+          25
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          14.0625
+        ],
+        "top_probs": [
+          0.5184355974197388,
+          0.4575177729129791,
+          0.014706885442137718
+        ],
+        "top2_probability_margin": 0.060917824506759644,
+        "top1_logit_margin": 0.125,
+        "argmax": 21113
+      },
+      "loopahead": {
+        "top_ids": [
+          21113,
+          643,
+          25
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          14.0625
+        ],
+        "top_probs": [
+          0.48734357953071594,
+          0.48734357953071594,
+          0.015665633603930473
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 643
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/logical_deduction_seven_objects/141",
+      "position": 161,
+      "ar": {
+        "top_ids": [
+          5724,
+          2537,
+          10245
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.5
+        ],
+        "top_probs": [
+          0.43283843994140625,
+          0.3819785714149475,
+          0.15923237800598145
+        ],
+        "top2_probability_margin": 0.05085986852645874,
+        "top1_logit_margin": 0.125,
+        "argmax": 5724
+      },
+      "loopahead": {
+        "top_ids": [
+          5724,
+          2537,
+          10245
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.5
+        ],
+        "top_probs": [
+          0.4018755257129669,
+          0.4018755257129669,
+          0.16752663254737854
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2537
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/salient_translation_error_detection/33",
+      "position": 134,
+      "ar": {
+        "top_ids": [
+          2723,
+          2711,
+          4784
+        ],
+        "top_logits": [
+          14.8125,
+          14.5625,
+          13.6875
+        ],
+        "top_probs": [
+          0.2825045585632324,
+          0.2200147807598114,
+          0.09171580523252487
+        ],
+        "top2_probability_margin": 0.06248977780342102,
+        "top1_logit_margin": 0.25,
+        "argmax": 2723
+      },
+      "loopahead": {
+        "top_ids": [
+          2723,
+          2711,
+          4784
+        ],
+        "top_logits": [
+          14.6875,
+          14.6875,
+          13.5
+        ],
+        "top_probs": [
+          0.24651865661144257,
+          0.24651865661144257,
+          0.0751839429140091
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2711
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/tracking_shuffled_objects_five_objects/8",
+      "position": 181,
+      "ar": {
+        "top_ids": [
+          407,
+          378,
+          43290
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          15.0
+        ],
+        "top_probs": [
+          0.508318305015564,
+          0.44858935475349426,
+          0.03682245686650276
+        ],
+        "top2_probability_margin": 0.0597289502620697,
+        "top1_logit_margin": 0.125,
+        "argmax": 407
+      },
+      "loopahead": {
+        "top_ids": [
+          407,
+          378,
+          43290
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          14.9375
+        ],
+        "top_probs": [
+          0.4782375395298004,
+          0.4782375395298004,
+          0.036877721548080444
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/ruin_names/219",
+      "position": 135,
+      "ar": {
+        "top_ids": [
+          274,
+          1002,
+          1519
+        ],
+        "top_logits": [
+          15.0,
+          14.9375,
+          14.0625
+        ],
+        "top_probs": [
+          0.34420350193977356,
+          0.323349267244339,
+          0.1347920149564743
+        ],
+        "top2_probability_margin": 0.02085423469543457,
+        "top1_logit_margin": 0.0625,
+        "argmax": 274
+      },
+      "loopahead": {
+        "top_ids": [
+          1002,
+          274,
+          1519
+        ],
+        "top_logits": [
+          15.0,
+          14.875,
+          14.0625
+        ],
+        "top_probs": [
+          0.35063663125038147,
+          0.30943572521209717,
+          0.13731126487255096
+        ],
+        "top2_probability_margin": 0.0412009060382843,
+        "top1_logit_margin": 0.125,
+        "argmax": 1002
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "bbh/movie_recommendation/184",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          1130,
+          281,
+          1092
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          17.25
+        ],
+        "top_probs": [
+          0.4833030104637146,
+          0.4265134036540985,
+          0.06540794670581818
+        ],
+        "top2_probability_margin": 0.05678960680961609,
+        "top1_logit_margin": 0.125,
+        "argmax": 1130
+      },
+      "loopahead": {
+        "top_ids": [
+          1130,
+          281,
+          1092
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          17.25
+        ],
+        "top_probs": [
+          0.4514969289302826,
+          0.4514969289302826,
+          0.0692392960190773
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 281
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/disambiguation_qa/194",
+      "position": 161,
+      "ar": {
+        "top_ids": [
+          563,
+          338,
+          282
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          15.6875
+        ],
+        "top_probs": [
+          0.5264933109283447,
+          0.4646287262439728,
+          0.004279083106666803
+        ],
+        "top2_probability_margin": 0.06186458468437195,
+        "top1_logit_margin": 0.125,
+        "argmax": 563
+      },
+      "loopahead": {
+        "top_ids": [
+          563,
+          338,
+          282
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          15.75
+        ],
+        "top_probs": [
+          0.49578776955604553,
+          0.49578776955604553,
+          0.004289404489099979
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 338
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/reasoning_about_colored_objects/190",
+      "position": 64,
+      "ar": {
+        "top_ids": [
+          6219,
+          2049,
+          335
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          17.875
+        ],
+        "top_probs": [
+          0.4537868797779083,
+          0.4004655182361603,
+          0.07885632663965225
+        ],
+        "top2_probability_margin": 0.05332136154174805,
+        "top1_logit_margin": 0.125,
+        "argmax": 6219
+      },
+      "loopahead": {
+        "top_ids": [
+          6219,
+          2049,
+          335
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          17.875
+        ],
+        "top_probs": [
+          0.42811456322669983,
+          0.42811456322669983,
+          0.07439514994621277
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2049
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/snarks/80",
+      "position": 31,
+      "ar": {
+        "top_ids": [
+          11800,
+          4814,
+          314
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          18.125
+        ],
+        "top_probs": [
+          0.2980327308177948,
+          0.26301294565200806,
+          0.26301294565200806
+        ],
+        "top2_probability_margin": 0.03501978516578674,
+        "top1_logit_margin": 0.125,
+        "argmax": 11800
+      },
+      "loopahead": {
+        "top_ids": [
+          11800,
+          4814,
+          314
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          18.125
+        ],
+        "top_probs": [
+          0.273007333278656,
+          0.273007333278656,
+          0.273007333278656
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/movie_recommendation/243",
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          18233,
+          6378,
+          1463
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          16.125
+        ],
+        "top_probs": [
+          0.2570602595806122,
+          0.22685487568378448,
+          0.1766747534275055
+        ],
+        "top2_probability_margin": 0.030205383896827698,
+        "top1_logit_margin": 0.125,
+        "argmax": 18233
+      },
+      "loopahead": {
+        "top_ids": [
+          18233,
+          6378,
+          1463
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          16.125
+        ],
+        "top_probs": [
+          0.25084665417671204,
+          0.25084665417671204,
+          0.1724042147397995
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 6378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/snarks/92",
+      "position": 53,
+      "ar": {
+        "top_ids": [
+          2390,
+          1250,
+          10897
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          17.0
+        ],
+        "top_probs": [
+          0.20070990920066833,
+          0.17712587118148804,
+          0.12173671275377274
+        ],
+        "top2_probability_margin": 0.023584038019180298,
+        "top1_logit_margin": 0.125,
+        "argmax": 2390
+      },
+      "loopahead": {
+        "top_ids": [
+          2390,
+          1250,
+          10897
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          17.125
+        ],
+        "top_probs": [
+          0.1789500117301941,
+          0.1789500117301941,
+          0.13936640322208405
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1250
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/ruin_names/69",
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          40,
+          38,
+          41
+        ],
+        "top_logits": [
+          16.375,
+          16.125,
+          15.3125
+        ],
+        "top_probs": [
+          0.39112532138824463,
+          0.30460870265960693,
+          0.13516929745674133
+        ],
+        "top2_probability_margin": 0.0865166187286377,
+        "top1_logit_margin": 0.25,
+        "argmax": 40
+      },
+      "loopahead": {
+        "top_ids": [
+          40,
+          38,
+          41
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          15.1875
+        ],
+        "top_probs": [
+          0.3537848889827728,
+          0.3537848889827728,
+          0.1222647950053215
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 38
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/movie_recommendation/99",
+      "position": 136,
+      "ar": {
+        "top_ids": [
+          40341,
+          5049,
+          1986
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          17.25
+        ],
+        "top_probs": [
+          0.25250259041786194,
+          0.22283275425434113,
+          0.1966492235660553
+        ],
+        "top2_probability_margin": 0.029669836163520813,
+        "top1_logit_margin": 0.125,
+        "argmax": 40341
+      },
+      "loopahead": {
+        "top_ids": [
+          40341,
+          5049,
+          840
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.25
+        ],
+        "top_probs": [
+          0.23756714165210724,
+          0.23756714165210724,
+          0.18501748144626617
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 5049
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/date_understanding/121",
+      "position": 52,
+      "ar": {
+        "top_ids": [
+          216,
+          28,
+          282
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          17.375
+        ],
+        "top_probs": [
+          0.4553329348564148,
+          0.4553329348564148,
+          0.06982757151126862
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          216,
+          28,
+          282
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          17.375
+        ],
+        "top_probs": [
+          0.48109328746795654,
+          0.42456331849098206,
+          0.07377804815769196
+        ],
+        "top2_probability_margin": 0.05652996897697449,
+        "top1_logit_margin": 0.125,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/multistep_arithmetic_two/73",
+      "position": 184,
+      "ar": {
+        "top_ids": [
+          17481,
+          731,
+          365
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          16.25
+        ],
+        "top_probs": [
+          0.49096211791038513,
+          0.49096211791038513,
+          0.014825771562755108
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 731
+      },
+      "loopahead": {
+        "top_ids": [
+          17481,
+          731,
+          365
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          16.375
+        ],
+        "top_probs": [
+          0.5210736989974976,
+          0.4598459005355835,
+          0.015735061839222908
+        ],
+        "top2_probability_margin": 0.06122779846191406,
+        "top1_logit_margin": 0.125,
+        "argmax": 17481
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/logical_deduction_seven_objects/67",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          9148,
+          365,
+          24706
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          12.9375
+        ],
+        "top_probs": [
+          0.48711326718330383,
+          0.48711326718330383,
+          0.005760340951383114
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 365
+      },
+      "loopahead": {
+        "top_ids": [
+          9148,
+          365,
+          24706
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          12.875
+        ],
+        "top_probs": [
+          0.5173275470733643,
+          0.45653992891311646,
+          0.005746989976614714
+        ],
+        "top2_probability_margin": 0.0607876181602478,
+        "top1_logit_margin": 0.125,
+        "argmax": 9148
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/boolean_expressions/71",
+      "position": 119,
+      "ar": {
+        "top_ids": [
+          441,
+          365,
+          4178
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          17.0
+        ],
+        "top_probs": [
+          0.45392096042633057,
+          0.40058383345603943,
+          0.11476919054985046
+        ],
+        "top2_probability_margin": 0.05333712697029114,
+        "top1_logit_margin": 0.125,
+        "argmax": 441
+      },
+      "loopahead": {
+        "top_ids": [
+          441,
+          365,
+          4178
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          16.875
+        ],
+        "top_probs": [
+          0.4308311343193054,
+          0.4308311343193054,
+          0.10893116891384125
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 365
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/disambiguation_qa/54",
+      "position": 112,
+      "ar": {
+        "top_ids": [
+          2273,
+          718,
+          260
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.625
+        ],
+        "top_probs": [
+          0.3325810134410858,
+          0.3325810134410858,
+          0.17801779508590698
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 718
+      },
+      "loopahead": {
+        "top_ids": [
+          2273,
+          718,
+          260
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          16.75
+        ],
+        "top_probs": [
+          0.3522394597530365,
+          0.31085023283958435,
+          0.18854020535945892
+        ],
+        "top2_probability_margin": 0.04138922691345215,
+        "top1_logit_margin": 0.125,
+        "argmax": 2273
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/formal_fallacies/146",
+      "position": 190,
+      "ar": {
+        "top_ids": [
+          198,
+          2,
+          65
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          13.375
+        ],
+        "top_probs": [
+          0.5163294672966003,
+          0.4556591808795929,
+          0.009456904605031013
+        ],
+        "top2_probability_margin": 0.060670286417007446,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          2,
+          65
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          13.3125
+        ],
+        "top_probs": [
+          0.4871554374694824,
+          0.4871554374694824,
+          0.008381972089409828
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/word_sorting/33",
+      "position": 397,
+      "ar": {
+        "top_ids": [
+          9523,
+          476,
+          6002
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          13.875
+        ],
+        "top_probs": [
+          0.4921180009841919,
+          0.4921180009841919,
+          0.006194851361215115
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 476
+      },
+      "loopahead": {
+        "top_ids": [
+          9523,
+          476,
+          6002
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          13.9375
+        ],
+        "top_probs": [
+          0.5221558213233948,
+          0.4608008861541748,
+          0.006996891926974058
+        ],
+        "top2_probability_margin": 0.06135493516921997,
+        "top1_logit_margin": 0.125,
+        "argmax": 9523
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/boolean_expressions/138",
+      "position": 71,
+      "ar": {
+        "top_ids": [
+          441,
+          365,
+          3635
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          15.75
+        ],
+        "top_probs": [
+          0.48324814438819885,
+          0.48324814438819885,
+          0.02726299688220024
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 365
+      },
+      "loopahead": {
+        "top_ids": [
+          441,
+          365,
+          3635
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          15.75
+        ],
+        "top_probs": [
+          0.514400839805603,
+          0.45395714044570923,
+          0.025610508397221565
+        ],
+        "top2_probability_margin": 0.0604436993598938,
+        "top1_logit_margin": 0.125,
+        "argmax": 441
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "bbh/formal_fallacies/205",
+      "position": 225,
+      "ar": {
+        "top_ids": [
+          3087,
+          2931,
+          7230
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          18.5
+        ],
+        "top_probs": [
+          0.32524219155311584,
+          0.28702521324157715,
+          0.09318345040082932
+        ],
+        "top2_probability_margin": 0.038216978311538696,
+        "top1_logit_margin": 0.125,
+        "argmax": 3087
+      },
+      "loopahead": {
+        "top_ids": [
+          3087,
+          2931,
+          7230
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          18.5
+        ],
+        "top_probs": [
+          0.2998887002468109,
+          0.2998887002468109,
+          0.09735960513353348
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2931
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "started_unix": 1794481983.4453888,
+  "input_provenance": {
+    "scope": "frozen-benchmark-input",
+    "path": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/inputs/bbh.jsonl",
+    "sha256": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+    "prompt_format": "chat",
+    "max_new_tokens": 512,
+    "stop_ids": [
+      0,
+      2
+    ]
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t0",
+      "sha256": "54f98661fa4b96aaa045e5d25c7796238d5ea6dd381a783016b2404da8fabc1c"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t0-v1",
+      "sha256": "29925cab87c9586817bcf97dbab8dc669f1bd06c8f3410fb15868bd195902e4e"
+    }
+  },
+  "limitations": [
+    "Instrumented BF16 replay only; timings are excluded from the benchmark.",
+    "Probability ties/margins describe actual reproduced divergences, not proof that all discrepancies disappear in FP32."
+  ],
+  "cuda_acquisition": {
+    "gpu": 3,
+    "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+    "pid": 253586,
+    "started_unix": 1794481984.6288934,
+    "acquired_unix": 1794481985.437966,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "finished_unix": 1794483111.9964502
+}

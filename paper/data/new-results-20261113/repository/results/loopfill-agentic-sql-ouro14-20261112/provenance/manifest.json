@@ -1,0 +1,452 @@
+{
+  "dataset": "Spider development SQL execution/repair request replay",
+  "dataset_id": "spider-repair100",
+  "source_metadata": "https://yale-lily.github.io/spider",
+  "model_paths": {
+    "huginn-3.5b": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+    "ouro-2.6b": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd"
+  },
+  "model_inputs": {
+    "huginn-3.5b": {
+      "path": "huginn-3.5b.jsonl",
+      "sha256": "1126951797d1f391d3f78721eb971f8666b38d4a21d9d8361c483ffc3b6ef9eb",
+      "min_prompt_tokens": 242,
+      "max_prompt_tokens": 1226,
+      "mean_prompt_tokens": 495.62
+    },
+    "ouro-2.6b": {
+      "path": "ouro-2.6b.jsonl",
+      "sha256": "4bb590ded577a98294b3b4fbdb5ec37b6717feb25cc71cecc69d54990b79e243",
+      "min_prompt_tokens": 238,
+      "max_prompt_tokens": 1289,
+      "mean_prompt_tokens": 502.02
+    }
+  },
+  "count": 100,
+  "instances": 78,
+  "phase_counts": {
+    "early": 74,
+    "middle": 13,
+    "late": 13
+  },
+  "requested_phase_counts": {
+    "early": 34,
+    "middle": 33,
+    "late": 33
+  },
+  "eligible_by_phase": {
+    "early": 100,
+    "middle": 13,
+    "late": 13
+  },
+  "trace_outcomes": {
+    "execution_success": 87,
+    "context_excluded": 0
+  },
+  "max_prompt_tokens": 3548,
+  "input_sha256": "32cefe4fb8f50a911d669be7eeba8a4ab5ce1c8a2452a86f1d6a46cfbd30a9f2",
+  "sources": [
+    {
+      "path": "traces/spider-dev-0503.json",
+      "sha256": "6a6714d7df1e4fbaf7180aa00c95a2759629dfbbbf1c81515e7620af2af01672"
+    },
+    {
+      "path": "traces/spider-dev-0011.json",
+      "sha256": "8af161a6cd1cf9352089238a5d4e17ab755413b6e02e020ee781fc6e06805bed"
+    },
+    {
+      "path": "traces/spider-dev-0555.json",
+      "sha256": "65252e92a72350961571614ef0ec4d590f7a90f496984afa4a81ae8880f33114"
+    },
+    {
+      "path": "traces/spider-dev-0986.json",
+      "sha256": "567a2b37f532cd76dfd1065894d8cac20b5c37b737a11ec82c1b19b4cebf3a45"
+    },
+    {
+      "path": "traces/spider-dev-0121.json",
+      "sha256": "a34fd4e94342bdc8ee6964440e0535129c8e8c5725e503b3208dd6c6fc3d30de"
+    },
+    {
+      "path": "traces/spider-dev-0048.json",
+      "sha256": "4ecae81508b4b7ae9845b2d3854f59937608567705dabb7842d475467c285568"
+    },
+    {
+      "path": "traces/spider-dev-0554.json",
+      "sha256": "f4ea02bb827eac813cb4dea7e6e2779e71a4f5b5b9c262987907c27f0a33384d"
+    },
+    {
+      "path": "traces/spider-dev-0641.json",
+      "sha256": "ec91b386ffaeb8efec9564e89b3a02cdf0f9b09d896a6e040ecd2102181f645c"
+    },
+    {
+      "path": "traces/spider-dev-0830.json",
+      "sha256": "718a46c4a1a19e820037f08b6b0bee780065e32857ba23c553acd5f1f42b828e"
+    },
+    {
+      "path": "traces/spider-dev-0308.json",
+      "sha256": "d680bc903f3837b0866e3d1828596dc8ce05d247eb6ac49cc1b1a2e88146d7a6"
+    },
+    {
+      "path": "traces/spider-dev-0348.json",
+      "sha256": "a122752ddf7b5fe483d7e9807f895c7622599ecffbc683a05e12fc9661cfc5fe"
+    },
+    {
+      "path": "traces/spider-dev-0469.json",
+      "sha256": "27503fb91decacc3427a0e7a95b65346ee19533be4a2136e62977d6f9223c2b8"
+    },
+    {
+      "path": "traces/spider-dev-0438.json",
+      "sha256": "a22d7f562932910d360dca2a3e4c8a95100fdc17e788f0197928f85ab77e8396"
+    },
+    {
+      "path": "traces/spider-dev-0323.json",
+      "sha256": "6b39cf982278b058a7450ec3777f5230ca6e375d6708e4fc70c6a7d2e13d2a87"
+    },
+    {
+      "path": "traces/spider-dev-0784.json",
+      "sha256": "96019aa976ce86b1fb82a1e04636fca6bcb9a03490579d83e8a3fe260a2b2195"
+    },
+    {
+      "path": "traces/spider-dev-0944.json",
+      "sha256": "71f2925cc9c4a8dcdedbc052ba93e0d57087763e05eab1986217abe8c656439e"
+    },
+    {
+      "path": "traces/spider-dev-0412.json",
+      "sha256": "0da45d44d7f6b6605c0029bed21a102e19e776a9d1fcd54f0118a8907c37b3df"
+    },
+    {
+      "path": "traces/spider-dev-0333.json",
+      "sha256": "d7b577307ad58a513be1b5f703eb5e2a9969bbccd1e4db3990a26b6a5b2c89aa"
+    },
+    {
+      "path": "traces/spider-dev-0456.json",
+      "sha256": "9d75b9072d18b1349ea9a86e00f1d35fee5efae0130cd188bbaf060f2183fa8d"
+    },
+    {
+      "path": "traces/spider-dev-0576.json",
+      "sha256": "9dd93e7c47ead1e16efd694c94d353c50ff99c75d7789889feef8d144934dbfe"
+    },
+    {
+      "path": "traces/spider-dev-1001.json",
+      "sha256": "b870f73c90d0ca646c423d5353de47721b6589173e0c643595e1af648f208075"
+    },
+    {
+      "path": "traces/spider-dev-0420.json",
+      "sha256": "0611f02fdd4ded7b0963193199a1e06714cc0c5cdb532268f128413c4f380757"
+    },
+    {
+      "path": "traces/spider-dev-0319.json",
+      "sha256": "6b79f98491974d854d1cb01371b7e8e5bb74a4686d02aee3a76f7e71932e9aef"
+    },
+    {
+      "path": "traces/spider-dev-0402.json",
+      "sha256": "5673eb502d899293523eea23bdad595cf2825aaec6f34bfdf2709dd7a1570f34"
+    },
+    {
+      "path": "traces/spider-dev-0129.json",
+      "sha256": "35f0925adf503e6575d00a8f25526a6b3904af8ac4a7aced7ef4ec9b7dd8c97c"
+    },
+    {
+      "path": "traces/spider-dev-0659.json",
+      "sha256": "aba4dcbde9f622d8ecc1c6014bb8ac1858283e8605d9835b73273aaaecb0dcfc"
+    },
+    {
+      "path": "traces/spider-dev-0866.json",
+      "sha256": "129f4bb3cdb9619830f2453b0336c76268824626352505ab3a2bf1949f80061f"
+    },
+    {
+      "path": "traces/spider-dev-0510.json",
+      "sha256": "fa406771c16402a1f40adf5d2e13ca061a2e496f1cfcdac67153d36317436f8b"
+    },
+    {
+      "path": "traces/spider-dev-0293.json",
+      "sha256": "321799fe529738347927a60fbff32ff60fe65ca9245a44f7f29267feb7f4f2a6"
+    },
+    {
+      "path": "traces/spider-dev-0499.json",
+      "sha256": "32b5a0f3b9b605194257bef853b12da279524a31554496ddcdd27ad21bab45b5"
+    },
+    {
+      "path": "traces/spider-dev-0561.json",
+      "sha256": "89a6e78a3ef58d1c03d59d9eebf44f76fad7699cb69f23c9b2e3458bc71aef89"
+    },
+    {
+      "path": "traces/spider-dev-0746.json",
+      "sha256": "a09aee4f0326577fbaf71049b44ed1bd75f2e2faf825aa88124c96682e544d8e"
+    },
+    {
+      "path": "traces/spider-dev-0454.json",
+      "sha256": "ae01e40d2049a1761ad11f2625faef8d1cbc6793fd29917e9bb1484934687ef5"
+    },
+    {
+      "path": "traces/spider-dev-0031.json",
+      "sha256": "be6881d552144d1cefad0c68c50517d61d38cc6cccf34b659fc05d4cc95a2917"
+    },
+    {
+      "path": "traces/spider-dev-0091.json",
+      "sha256": "67d827e259b7e6dde40babea8a5b4e12a67fca75fc80f2fd9378a63baede3de9"
+    },
+    {
+      "path": "traces/spider-dev-0711.json",
+      "sha256": "16018d39a05465cd45b4c20cd8a53e6a847c255d65f75c2bef53d1666b70c016"
+    },
+    {
+      "path": "traces/spider-dev-0803.json",
+      "sha256": "2f88e373a5b2721bf9511fb7b2bb7fcd63688c747d4ebbbcc9116dd69c829d8f"
+    },
+    {
+      "path": "traces/spider-dev-0597.json",
+      "sha256": "99897d6e968653eaefccc0a84b7eb55458a64d155447f3c96fb57d48db1500eb"
+    },
+    {
+      "path": "traces/spider-dev-1025.json",
+      "sha256": "38c8c14d382c9b83b1f871df8d3b7e31c2faefd3c5cee7ae3ab13c2a85984c52"
+    },
+    {
+      "path": "traces/spider-dev-0865.json",
+      "sha256": "bee3f38fe945f3ecd3517b3335533d32ba708c597797c7fe0d3774fb3ba9239d"
+    },
+    {
+      "path": "traces/spider-dev-0959.json",
+      "sha256": "44bc15b6dfe4550e6bca4a4a73c27afc61820c050072bac8dfaf8a0be4e25a8f"
+    },
+    {
+      "path": "traces/spider-dev-1016.json",
+      "sha256": "7a2daf4220200e67d5d66f143ccdf1c4194a55e3565dd4aab0344dbbb4672136"
+    },
+    {
+      "path": "traces/spider-dev-0211.json",
+      "sha256": "e2588439f0f4aac8748842ff451498f46e5e9a83b77f98184e7f8f1d1e3ad9ce"
+    },
+    {
+      "path": "traces/spider-dev-0459.json",
+      "sha256": "56acde4ec010354c97ab04b253624da478604a9432d61f2e6e31e84daa2a2d14"
+    },
+    {
+      "path": "traces/spider-dev-0392.json",
+      "sha256": "077b2b1d1c5c1092efa4214a160d35530c11b1e98231becc30c8b84348081528"
+    },
+    {
+      "path": "traces/spider-dev-0203.json",
+      "sha256": "c66a015bf57b0913c66988cab68f250c8466b18c0e9171aa1e0e5b4ca844ba5d"
+    },
+    {
+      "path": "traces/spider-dev-0041.json",
+      "sha256": "b9a12a7eafdeb9649217384ca52a8e28f89240f9833311c168d4d46f8f2635bc"
+    },
+    {
+      "path": "traces/spider-dev-0092.json",
+      "sha256": "13b674632200ccc363595219a47ff7f88ce38fc758ba7d9e428c65ed6e64177f"
+    },
+    {
+      "path": "traces/spider-dev-0605.json",
+      "sha256": "daef4e1444289dea61146ff2749e63a6e0992bcccde8042018e013edea0c97b0"
+    },
+    {
+      "path": "traces/spider-dev-0890.json",
+      "sha256": "c17b2d72b197f58ba5167591c2790dac63ef7ba06e3ceda134ea4412a7563f90"
+    },
+    {
+      "path": "traces/spider-dev-0065.json",
+      "sha256": "fab84d7442a333bf6550323506a9ce79c62222098bc08014d0b021ff42e82e72"
+    },
+    {
+      "path": "traces/spider-dev-0033.json",
+      "sha256": "80a7e8efb2fd81e8a46844b0d9f4c8aee7b35e7afdbe8f591ece4d6a214ac8de"
+    },
+    {
+      "path": "traces/spider-dev-0212.json",
+      "sha256": "d80e40d958520fcbb701be84b655051335b32777f8618a5551d5c390fe333dff"
+    },
+    {
+      "path": "traces/spider-dev-0996.json",
+      "sha256": "69d9468799888ca488bcf83b57dd5536d61fb30ca7b52de17ea7b5fdf54a7424"
+    },
+    {
+      "path": "traces/spider-dev-1010.json",
+      "sha256": "39e019b91a2d6a5bc7e2a3c01a451bec444a12f1e2929facc13ee0105a102e34"
+    },
+    {
+      "path": "traces/spider-dev-0591.json",
+      "sha256": "498a75613e2e38449080fce89c81d8bdabcf7da8074b882717b310b8215e501e"
+    },
+    {
+      "path": "traces/spider-dev-0156.json",
+      "sha256": "ddbcf194acbe3599a31cc4e776dc3fe3e7e431d31efcdd60db53405406650161"
+    },
+    {
+      "path": "traces/spider-dev-0120.json",
+      "sha256": "bdb6c21caf335382bc38e6c21b2e11d464df7047cf652e3b9ba95a50e5fe6641"
+    },
+    {
+      "path": "traces/spider-dev-0264.json",
+      "sha256": "9c4bbb43a27cd951944b02ba3e729b1a242977976528b764db0d67bb5f6957fc"
+    },
+    {
+      "path": "traces/spider-dev-0640.json",
+      "sha256": "5747f7c75d92b46c98ef5fe568cab9bfe0f8e4fd45911cfdcbb8b5a67af5e757"
+    },
+    {
+      "path": "traces/spider-dev-0504.json",
+      "sha256": "f384f8a62a502e0a54be154881a1ab39912192f7fdbb5ae00e992dface097ada"
+    },
+    {
+      "path": "traces/spider-dev-0856.json",
+      "sha256": "fa0ffc00769cef68021ce6cdf3d0d77e59fabdd959766edc8bb8cb393107d567"
+    },
+    {
+      "path": "traces/spider-dev-0829.json",
+      "sha256": "fb0102a386418c94cb2bfe68375f9102af5eb054a722819fdc4a0e5a857b4e24"
+    },
+    {
+      "path": "traces/spider-dev-0941.json",
+      "sha256": "b5ee86384f0eaa123472aa200be2e24519abf5746656684b1d3c1372db925367"
+    },
+    {
+      "path": "traces/spider-dev-0773.json",
+      "sha256": "e9918d6139b2f9087f85d0e6f7c240315c0dc2895c4897310b6294f01af99e38"
+    },
+    {
+      "path": "traces/spider-dev-0391.json",
+      "sha256": "3f41af55ac1f4fdce0db79bdfc16ab78025b9639e4ae95e3e6394fc0edfd494c"
+    },
+    {
+      "path": "traces/spider-dev-0047.json",
+      "sha256": "f9f6197a66c0f7298e22126d04d8405c9f15321276e17a863ab3cdb23a52d530"
+    },
+    {
+      "path": "traces/spider-dev-0064.json",
+      "sha256": "99d9f93923b01bc8d9b2657e3db5a3074e223785e655fe5d181c714dbb1767bf"
+    },
+    {
+      "path": "traces/spider-dev-0416.json",
+      "sha256": "72914286ebede3134dc9f3fd27ecb3e6fce24afd599a74933e5417d357b0776f"
+    },
+    {
+      "path": "traces/spider-dev-0027.json",
+      "sha256": "c1b26ab9f8b6e33b1ec20fd9ce64b07eb0c3b2c7f6960567f74413ecaf723107"
+    },
+    {
+      "path": "traces/spider-dev-0384.json",
+      "sha256": "288d53aba765d92f642661973e6ac27c79f147f08c50040d33edb461029d0ff4"
+    },
+    {
+      "path": "traces/spider-dev-0417.json",
+      "sha256": "3d57ee6d5da7d8e19bf860fce7daca0b8f8402f1f63f7e5b79a7d08ecfd2d6df"
+    },
+    {
+      "path": "traces/spider-dev-0862.json",
+      "sha256": "796ca779e5c14d4fbf1d106ad68453ab4ea1732f37df86868308354361ef166a"
+    },
+    {
+      "path": "traces/spider-dev-0824.json",
+      "sha256": "6d472c3e1d7081fa76d9f25eb58f2d21a8fa3804d929ee1d37a4211c0c425eda"
+    },
+    {
+      "path": "traces/spider-dev-0249.json",
+      "sha256": "4e58b1d486eff1829330f31406d81d6f38adc64df08bc4db4983ab967b71ace1"
+    },
+    {
+      "path": "traces/spider-dev-0658.json",
+      "sha256": "254c88843a50a3b6b9e2a674d56786e5390dc01166d8d5efab6947115a528c8e"
+    },
+    {
+      "path": "traces/spider-dev-1000.json",
+      "sha256": "62365233af46c4864a1dbc42ad2df0ad01ae7183de7694b67721105515a6db6f"
+    },
+    {
+      "path": "traces/spider-dev-0072.json",
+      "sha256": "9020521018b43c7fc1b64b7bc4e4f1b272248eb36aaa2741c6fb05b6b63eeb3b"
+    },
+    {
+      "path": "traces/spider-dev-0282.json",
+      "sha256": "71bd3c494d3499b2baf78b071c528fa1fbcb8c0df6e7e50a76f87bfb3d357e18"
+    },
+    {
+      "path": "traces/spider-dev-0259.json",
+      "sha256": "bf465c2dc91158deb58684179cee983200d572c1f1e9ee8c224ef8179fb4b144"
+    },
+    {
+      "path": "traces/spider-dev-0413.json",
+      "sha256": "5be459e0881572264af4e3665ef79258398c23fd102d2ce6ec9597e3792a13ca"
+    },
+    {
+      "path": "traces/spider-dev-0223.json",
+      "sha256": "2357a761ca1fafec47f08cfb2bd4650f04b8fd2254b1e019c14a5743d9a7f182"
+    },
+    {
+      "path": "traces/spider-dev-0502.json",
+      "sha256": "852b6fc76ffed1a96ea93751ead22495d7bf36d229cea08accf35d5b2b13af20"
+    },
+    {
+      "path": "traces/spider-dev-0883.json",
+      "sha256": "4e5471141c258b8fddb17d7f448acaa64404f54a5fdcb5c3a475cbc81661c3bc"
+    },
+    {
+      "path": "traces/spider-dev-0263.json",
+      "sha256": "c4501f2759cc26209cbf6f27953232eb5197794d537dbf236754f1301999f540"
+    },
+    {
+      "path": "traces/spider-dev-0693.json",
+      "sha256": "11653d0a5d0ad9c0d928f19dee87c40c3d7dd6e7489e8989072180cabdc90719"
+    },
+    {
+      "path": "traces/spider-dev-0397.json",
+      "sha256": "d647f4b20bd522930e5f193dde316a8145acb1bf48a422d9bcb98e7035123d8c"
+    },
+    {
+      "path": "traces/spider-dev-0661.json",
+      "sha256": "2c760b22fd970526b6bc79d93b4080abec286bf8cb17c4103b169383a1a3c952"
+    },
+    {
+      "path": "traces/spider-dev-0684.json",
+      "sha256": "610b8bb8535eda76f62dfa217a120514abb035329d42b47e534a8b20d4a78209"
+    },
+    {
+      "path": "traces/spider-dev-0838.json",
+      "sha256": "65d48b50a9427f990ac9e9005b7a276a53cd5fc6827a66dc909958f77e3abdc7"
+    },
+    {
+      "path": "traces/spider-dev-0690.json",
+      "sha256": "88aa5b61ff48fd61ed8c88ea33e141d0c6dbb530fad5e5b68476b27f74c5c7ea"
+    },
+    {
+      "path": "traces/spider-dev-0501.json",
+      "sha256": "5b966e577e839da0d0a24bf931456cc31d74bd173aed6029c2bf973b5be1c3c3"
+    },
+    {
+      "path": "traces/spider-dev-0650.json",
+      "sha256": "645fc4cef1ee96794907d30bd1ba686656ecfc97adabc6fa51ff8c7a6b1827ca"
+    },
+    {
+      "path": "traces/spider-dev-1030.json",
+      "sha256": "c051feea05234c7a902953b168d31b916273452ccf2f237b9d24058a354eba2b"
+    },
+    {
+      "path": "traces/spider-dev-0700.json",
+      "sha256": "0ab8542d7643c1c3d36cc747a8b2eb2001bbbcec3d3edbe7a04da156d29478ac"
+    },
+    {
+      "path": "traces/spider-dev-1031.json",
+      "sha256": "2c3b7b5dae0f8524676e0852956e7257d239734fec77d94325fc7176c4aa8617"
+    },
+    {
+      "path": "traces/spider-dev-1032.json",
+      "sha256": "97913125efd58f64e55a12871e8443e0f1ef1e0cabcefd33990d4b2c362945dc"
+    },
+    {
+      "path": "traces/spider-dev-0701.json",
+      "sha256": "fa5f204eb4520e239cfc2c70a4c0451588bc71eb67f07b8e9cc33d3d65b2407d"
+    },
+    {
+      "path": "traces/spider-dev-0694.json",
+      "sha256": "1a7a92d73114a6304940fe94c388959704a750cde95f27b0e8b9993628fb5895"
+    },
+    {
+      "path": "traces/spider-dev-1033.json",
+      "sha256": "63cf1bd8bb0173e4d39282ae422f2f7903a311b8da7039cbfc498beab16c45b4"
+    }
+  ],
+  "selection": "Database round-robin; SHA256 ranking; initial prompt <=1900 tokens in both models. No answer-quality or repetition filtering. Call quotas 34 initial / 33 first repair / 33 second repair; capacity-limited deficits redistributed; SHA256 ranking within phase; chronological order within task.",
+  "semantics": "Fixed causal SQL request replay. Ouro-2.6B greedy teacher, actual read-only SQLite execution, at most two error-triggered repairs. No gold SQL feedback. Successful execution ends a trace. Current teacher response, tool result and future calls removed from replay inputs. No live-agent or official Spider accuracy claim. Distinct from the unpublished SuffixDecoding AgenticSQL dataset."
+}

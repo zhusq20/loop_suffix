@@ -1,0 +1,732 @@
+{
+  "captured_at": "2026-11-11T18:59:38.203289+00:00",
+  "verdict": "NOT_STRICTLY_IDENTICAL",
+  "scope": "Original six-dataset Table 1 (T0/T1) and SpecBench480 Table 2 versus current DFlash packed v2 and LoopAhead runs. Agentic supplement excluded. Different physical GPU indices are permitted.",
+  "experiment_mutations": false,
+  "protocol_evidence": {
+    "table1_t0": {
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-latency512-20261107/protocol.json",
+      "sha256": "b9317d2b7f44b795368a61bdb00dfa862b9a2d501a486bcb46526c0b6d2ee781"
+    },
+    "table1_t1": {
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-latency512-t1-20261108/protocol.json",
+      "sha256": "9a823041c6cf1237c2dcb3d43dbb9bc0ce042f794775818687ef166a55529d48"
+    },
+    "table2": {
+      "path": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/protocol.json",
+      "sha256": "49e2609728153a2d85ed3f2e0c13c2923aad702ddc38cdb6762ce19bbdb6a920"
+    },
+    "dflash": {
+      "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/protocol.json",
+      "sha256": "6d06a4e8491ce7a17ead410ba562186e79081f0de3489c0fce299a6ef4d8b149"
+    },
+    "loopahead_table2": {
+      "path": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/protocol.json",
+      "sha256": "004241288bded6604edb3a1a73106f3a8d53d278fb1c7710f1dfec0a721de6d7"
+    }
+  },
+  "hardware_snapshot": "index, name, uuid, memory.total [MiB], driver_version, compute_mode, clocks.current.sm [MHz], clocks.current.memory [MHz], power.limit [W]\n0, NVIDIA L20X, GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n1, NVIDIA L20X, GPU-520fad11-804c-b419-7096-2a19c219449b, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n2, NVIDIA L20X, GPU-861ad2de-b899-21ca-707e-44c0a1ce1029, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n3, NVIDIA L20X, GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n4, NVIDIA L20X, GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n5, NVIDIA L20X, GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n6, NVIDIA L20X, GPU-e54049b5-ca93-d066-efc5-6942d59bf762, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n7, NVIDIA L20X, GPU-afc353e9-924d-40c1-75bb-c126dc83e41e, 143771 MiB, 570.148.08, Exclusive_Process, 1980 MHz, 3201 MHz, 700.00 W\n",
+  "old_hardware_policy": {
+    "graphics_clock_mhz": 1980,
+    "memory_clock_mhz": 3201,
+    "power_limit_w": 700,
+    "resource_policy": "Shared cell queue on eight identical exclusive GPUs; refill immediately. Each cell binds one GPU UUID and four local NUMA CPU cores; no cross-method physical-GPU pairing."
+  },
+  "current_environments": {
+    "original_and_loopahead": {
+      "python": "3.10.16 (main, Dec 11 2024, 16:24:50) [GCC 11.2.0]",
+      "executable": "/tmp/loopfill-venv/bin/python",
+      "numpy": "1.23.5",
+      "numpy_path": "/opt/conda/lib/python3.10/site-packages/numpy/__init__.py",
+      "torch": "2.6.0+cu126",
+      "cuda": "12.6",
+      "transformers": "4.55.0",
+      "transformers_path": "/tmp/loopfill-venv/lib/python3.10/site-packages/transformers/__init__.py",
+      "triton": "3.2.0",
+      "safetensors": "0.5.3",
+      "accelerate": "1.6.0"
+    },
+    "dflash": {
+      "python": "3.10.16 (main, Dec 11 2024, 16:24:50) [GCC 11.2.0]",
+      "executable": "/tmp/loopfill-dflash-venv/bin/python",
+      "numpy": "1.23.5",
+      "numpy_path": "/opt/conda/lib/python3.10/site-packages/numpy/__init__.py",
+      "torch": "2.6.0+cu126",
+      "cuda": "12.6",
+      "transformers": "4.57.1",
+      "transformers_path": "/tmp/loopfill-dflash-venv/lib/python3.10/site-packages/transformers/__init__.py",
+      "triton": "3.2.0",
+      "safetensors": "0.5.3",
+      "accelerate": "1.6.0"
+    }
+  },
+  "archived_runtime": {
+    "path": "/ossfs/workspace/loop_suffix/results/loopfill-table2-20261107-v2/runtime.json",
+    "packages": [
+      "accelerate==1.6.0",
+      "numpy==1.26.4",
+      "safetensors==0.5.3",
+      "torch==2.6.0+cu126",
+      "transformers==4.55.0",
+      "triton==3.2.0"
+    ]
+  },
+  "frozen_source_integrity": {
+    "table1_t0": {
+      "checked": 18,
+      "mismatches": []
+    },
+    "table1_t1": {
+      "checked": 19,
+      "mismatches": []
+    },
+    "table2": {
+      "checked": 102,
+      "mismatches": []
+    },
+    "dflash": {
+      "checked": 51,
+      "mismatches": []
+    },
+    "loopahead_table2": {
+      "checked": 20,
+      "mismatches": []
+    }
+  },
+  "dflash_core_comparison": {
+    "table1_t0": {
+      "src/llm_memory_editability/__init__.py": {
+        "original": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "dflash": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_batch_decode.py": {
+        "original": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "dflash": "931aafbb16fa6ab0091a44840996ef7e1974497adfe4f1c86d70dfd7e1e48c66",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_batch_suffix.py": {
+        "original": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "dflash": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_budget_decode.py": {
+        "original": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "dflash": "fb6e9f50104b050a52957c00f58d671792ea91d29a56907d65aefcc16f7bf9d0",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_decode_steps.py": {
+        "original": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "dflash": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_loopspec_decode.py": {
+        "original": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+        "dflash": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_model_registry.py": {
+        "original": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "dflash": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_optimized_decode.py": {
+        "original": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+        "dflash": "29885b3acfe99f46c3be7c30845f49eafb67fcd92029f14a7da6d1b6fda014a8",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_prob_decode.py": {
+        "original": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "dflash": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_prob_tree.py": {
+        "original": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "dflash": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_raven_decode.py": {
+        "original": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "dflash": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_score_ablation.py": {
+        "original": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "dflash": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_suffix_spec.py": {
+        "original": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "dflash": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_tree_decode.py": {
+        "original": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2",
+        "dflash": "58a022864d131d09f0726431534d012b8a9581352b7e4a779605fa97c5402a96",
+        "identical": false
+      }
+    },
+    "table1_t1": {
+      "src/llm_memory_editability/__init__.py": {
+        "original": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "dflash": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_batch_decode.py": {
+        "original": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "dflash": "931aafbb16fa6ab0091a44840996ef7e1974497adfe4f1c86d70dfd7e1e48c66",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_batch_suffix.py": {
+        "original": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "dflash": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_budget_decode.py": {
+        "original": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "dflash": "fb6e9f50104b050a52957c00f58d671792ea91d29a56907d65aefcc16f7bf9d0",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_decode_steps.py": {
+        "original": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "dflash": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_loopspec_decode.py": {
+        "original": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+        "dflash": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_model_registry.py": {
+        "original": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "dflash": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_optimized_decode.py": {
+        "original": "0dfdf55dd5380dc4502e26fd41b4778b200a940d372c48fb325d0d95471347e6",
+        "dflash": "29885b3acfe99f46c3be7c30845f49eafb67fcd92029f14a7da6d1b6fda014a8",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_prob_decode.py": {
+        "original": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "dflash": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_prob_tree.py": {
+        "original": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "dflash": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_raven_decode.py": {
+        "original": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "dflash": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_sampling.py": {
+        "original": "03488c4a739c412711b0812e92d73c20f05da157c02b2da452c61c108bdde6c3",
+        "dflash": "03488c4a739c412711b0812e92d73c20f05da157c02b2da452c61c108bdde6c3",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_score_ablation.py": {
+        "original": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "dflash": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_suffix_spec.py": {
+        "original": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "dflash": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_tree_decode.py": {
+        "original": "03a55dae40f45bf4081b14197e7d079e29d318f0370b9535cc9e6177ac8b760b",
+        "dflash": "58a022864d131d09f0726431534d012b8a9581352b7e4a779605fa97c5402a96",
+        "identical": false
+      }
+    },
+    "table2": {
+      "src/llm_memory_editability/__init__.py": {
+        "original": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "dflash": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_batch_decode.py": {
+        "original": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "dflash": "931aafbb16fa6ab0091a44840996ef7e1974497adfe4f1c86d70dfd7e1e48c66",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_batch_suffix.py": {
+        "original": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "dflash": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_budget_decode.py": {
+        "original": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "dflash": "fb6e9f50104b050a52957c00f58d671792ea91d29a56907d65aefcc16f7bf9d0",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_decode_steps.py": {
+        "original": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "dflash": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_loopspec_decode.py": {
+        "original": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+        "dflash": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_model_registry.py": {
+        "original": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "dflash": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_optimized_decode.py": {
+        "original": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+        "dflash": "29885b3acfe99f46c3be7c30845f49eafb67fcd92029f14a7da6d1b6fda014a8",
+        "identical": false
+      },
+      "src/llm_memory_editability/loop_prob_decode.py": {
+        "original": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "dflash": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_prob_tree.py": {
+        "original": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "dflash": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_raven_decode.py": {
+        "original": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "dflash": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_score_ablation.py": {
+        "original": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "dflash": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_suffix_spec.py": {
+        "original": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "dflash": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "identical": true
+      },
+      "src/llm_memory_editability/loop_tree_decode.py": {
+        "original": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2",
+        "dflash": "58a022864d131d09f0726431534d012b8a9581352b7e4a779605fa97c5402a96",
+        "identical": false
+      }
+    }
+  },
+  "dflash_source_difference_interpretation": "Same PackedLoopExecutor/SharedKVPool framework, different frozen revision. Relative to original T1, executor/backbone diffs add optional return_log_probs support; inspected DFlash target calls readout_top with m=0 and does not request this option. No performance effect established merely from differing hashes.",
+  "inputs": {
+    "huginn-3.5b": {
+      "table2_ordered_ids_and_token_ids_match": true,
+      "table1": {
+        "gsm8k": {
+          "count": 300,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "math500": {
+          "count": 500,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "bbh": {
+          "count": 270,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "humanevalplus": {
+          "count": 164,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "mbppplus": {
+          "count": 378,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "specbench": {
+          "count": 480,
+          "ordered_ids_and_prompt_hashes_match": true
+        }
+      }
+    },
+    "ouro-2.6b": {
+      "table2_ordered_ids_and_token_ids_match": true,
+      "table1": {
+        "gsm8k": {
+          "count": 300,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "math500": {
+          "count": 500,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "bbh": {
+          "count": 270,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "humanevalplus": {
+          "count": 164,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "mbppplus": {
+          "count": 378,
+          "ordered_ids_and_prompt_hashes_match": true
+        },
+        "specbench": {
+          "count": 480,
+          "ordered_ids_and_prompt_hashes_match": true
+        }
+      }
+    }
+  },
+  "loopahead_table2_order": {
+    "huginn-3.5b": {
+      "expected_seed0_first5": [
+        217,
+        294,
+        181,
+        223,
+        475
+      ],
+      "actual_B1_journal_first5": [
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "observed_requests": 480,
+      "actual_is_unshuffled_file_prefix": true,
+      "first5_match_old_protocol": false,
+      "impact": "Formal admission order and warmup requests differ; input set is unchanged."
+    },
+    "ouro-2.6b": {
+      "expected_seed0_first5": [
+        217,
+        294,
+        181,
+        223,
+        475
+      ],
+      "actual_B1_journal_first5": [
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "observed_requests": 399,
+      "actual_is_unshuffled_file_prefix": true,
+      "first5_match_old_protocol": false,
+      "impact": "Formal admission order and warmup requests differ; input set is unchanged."
+    }
+  },
+  "loopahead_table1_metadata": [
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 1.0,
+      "reportable": true
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t0-v1/metadata.json",
+      "torch": "2.6.0+cu126",
+      "transformers": "4.55.0",
+      "input_hash_matches": true,
+      "frozen_source_manifest_matches": true,
+      "max_new_tokens": 512,
+      "temperature": 0.0,
+      "reportable": true
+    }
+  ],
+  "live_status": {
+    "dflash": {
+      "status": "waiting_for_gpu",
+      "counts": {
+        "pending": 34,
+        "running": 0,
+        "complete": 0,
+        "failed": 0,
+        "oom": 0,
+        "interrupted": 0
+      },
+      "active": {},
+      "blocked_by_validation": [],
+      "allowed_gpus": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "planned": 34,
+      "updated_unix": 1794423580.5610108
+    },
+    "loopahead_table2": {
+      "updated_unix": 1794423572.7401774,
+      "stage": "formal",
+      "completed": [
+        "huginn-3.5b-fp32-b2",
+        "ouro-2.6b-fp32-b2",
+        "ouro-2.6b-bf16-b16",
+        "huginn-3.5b-bf16-b16",
+        "huginn-3.5b-b2",
+        "huginn-3.5b-b1",
+        "ouro-2.6b-b2"
+      ],
+      "failed": [],
+      "formal_completed": 3,
+      "formal_oom": 0,
+      "planned_cells": 10,
+      "running": {
+        "ouro-2.6b-b1": {
+          "pid": 417115,
+          "gpu": 3,
+          "started_unix": 1794419625.2834544
+        }
+      },
+      "pending": [
+        "huginn-3.5b-b4",
+        "ouro-2.6b-b4",
+        "huginn-3.5b-b8",
+        "ouro-2.6b-b8",
+        "huginn-3.5b-b16",
+        "ouro-2.6b-b16"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "mismatch",
+      "finding": "DFlash Transformers 4.57.1 versus original 4.55.0; same Python and torch 2.6.0+cu126/CUDA build 12.6."
+    },
+    {
+      "id": "F2",
+      "severity": "mismatch",
+      "finding": "LoopAhead Table 2 omits random.Random(0).shuffle before warmup and formal run. B1 journals confirm file order 81,82,83,84,85 rather than 217,294,181,223,475."
+    },
+    {
+      "id": "F3",
+      "severity": "environment_drift",
+      "finding": "Original Table2 pip_freeze records NumPy 1.26.4; both current inference environments actually import NumPy 1.23.5 from shared /opt/conda site-packages. Historical import path was not recorded, so this is an archive-versus-current discrepancy."
+    },
+    {
+      "id": "F4",
+      "severity": "source_revision_difference",
+      "finding": "DFlash uses a newer frozen common source revision; LoopAhead imports and checks the original table-specific frozen common code. Shared framework identity does not establish byte-identical revision."
+    }
+  ],
+  "recommendation": "Align inference dependency versions and common target backend to table-specific baselines in a separate prepared environment/source snapshot; restore Table2 seed0 request shuffle and original warmup selection in a new frozen LoopAhead attempt; rerun affected throughput cells. Preserve original measurements and do not edit frozen running sources in place."
+}

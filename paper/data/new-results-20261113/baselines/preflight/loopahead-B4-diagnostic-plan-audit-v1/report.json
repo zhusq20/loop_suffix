@@ -1,0 +1,409 @@
+{
+  "status": "passed_cpu_plan_audit",
+  "b4": {
+    "row": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "paper-humaneval164",
+      "temperature": "0",
+      "paper_check": true,
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-B4-ouro-2.6b-humaneval-ar-v1",
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-B4-ouro-2.6b-humaneval-loopahead-v1"
+    },
+    "cases": 67,
+    "summary_sha256": "c18fbf24f1717a42b319c0b779e38ce34bc6477f38e48fc4ff2acb6efd14ca33",
+    "input_provenance": {
+      "scope": "B4-paper-check",
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/paper-inputs/humaneval.jsonl",
+      "sha256": "a9e455e5983275b9ef82716e6c32dae97b15e07a0c14a2810b40c65362635e8d",
+      "prompt_format": "completion",
+      "max_new_tokens": 1024,
+      "stop_ids": [
+        0
+      ],
+      "historical_evaluator_sha256": {
+        "ar": "edd47657bfda4fd5c87e6b9018b29492b29644951b71e6b7c0736adf18b814d0",
+        "loopahead": "14d75e6557012807624c81047dcb0924c38481dafa7db15993807b019858e955"
+      },
+      "physical_nodes": {
+        "ar": 1,
+        "loopahead": 32
+      },
+      "source_manifest_sha256": "941dab3a2f139c12ac741eb3be5ca607170725a180b7a75ed947c7786581d93a",
+      "isolation_audit_sha256": "c5d8d04997854bb82f655a75f66fb8674e659cb0f45df511a308c0ff34dbf8eb"
+    },
+    "source_runs": {
+      "ar": {
+        "metadata.json": "f3bafa8cbe51e35dad9236a747ce6d0c4e13b6fabce50c400980ce5cd34ba400",
+        "source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471",
+        "complete.json": "43b2e109e61b9d1d10a21f193864c01f4a87be8b2c1464fc6fd19949fb6caef6",
+        "requests.jsonl": "90dc6eb6cc4d8d0b2ced6061d4294c460ebde01fd545a89b13a5c5f15596d957"
+      },
+      "loopahead": {
+        "metadata.json": "8d5a013199dca31b0aeb2a1bcab404d375673f9e6f1ab4dc1e2cf669b37f7ae4",
+        "source-manifest.json": "b59452931631b4cc9d98b2ebdf50f5406d98d63aa440d928989e89711a6bec19",
+        "complete.json": "0ad7b03429eacd2b0ff8a288534d254c67ec68bdc5b579430aefdee378776852",
+        "requests.jsonl": "f99c53b09def7a1c1956e42c17fe908750a14ee8fb7fa59dd4bbadc0d9ec8700"
+      }
+    }
+  },
+  "checks": {
+    "implicit_B4_scope_rejected": true,
+    "max_new_tokens_mutation_rejected": true,
+    "prompt_format_mutation_rejected": true,
+    "input_sha256_mutation_rejected": true,
+    "model_mutation_rejected": true,
+    "count_mutation_rejected": true,
+    "formal_as_B4_rejected": true
+  },
+  "b4_case_positions": [
+    {
+      "source_id": "HumanEval/10",
+      "position": 1
+    },
+    {
+      "source_id": "HumanEval/16",
+      "position": 17
+    },
+    {
+      "source_id": "HumanEval/18",
+      "position": 195
+    },
+    {
+      "source_id": "HumanEval/23",
+      "position": 283
+    },
+    {
+      "source_id": "HumanEval/24",
+      "position": 101
+    },
+    {
+      "source_id": "HumanEval/30",
+      "position": 135
+    },
+    {
+      "source_id": "HumanEval/31",
+      "position": 96
+    },
+    {
+      "source_id": "HumanEval/35",
+      "position": 15
+    },
+    {
+      "source_id": "HumanEval/36",
+      "position": 404
+    },
+    {
+      "source_id": "HumanEval/39",
+      "position": 96
+    },
+    {
+      "source_id": "HumanEval/40",
+      "position": 321
+    },
+    {
+      "source_id": "HumanEval/43",
+      "position": 44
+    },
+    {
+      "source_id": "HumanEval/44",
+      "position": 58
+    },
+    {
+      "source_id": "HumanEval/49",
+      "position": 62
+    },
+    {
+      "source_id": "HumanEval/50",
+      "position": 40
+    },
+    {
+      "source_id": "HumanEval/51",
+      "position": 943
+    },
+    {
+      "source_id": "HumanEval/53",
+      "position": 109
+    },
+    {
+      "source_id": "HumanEval/60",
+      "position": 403
+    },
+    {
+      "source_id": "HumanEval/61",
+      "position": 872
+    },
+    {
+      "source_id": "HumanEval/62",
+      "position": 83
+    },
+    {
+      "source_id": "HumanEval/63",
+      "position": 302
+    },
+    {
+      "source_id": "HumanEval/64",
+      "position": 53
+    },
+    {
+      "source_id": "HumanEval/65",
+      "position": 39
+    },
+    {
+      "source_id": "HumanEval/67",
+      "position": 224
+    },
+    {
+      "source_id": "HumanEval/68",
+      "position": 35
+    },
+    {
+      "source_id": "HumanEval/72",
+      "position": 12
+    },
+    {
+      "source_id": "HumanEval/73",
+      "position": 172
+    },
+    {
+      "source_id": "HumanEval/74",
+      "position": 1
+    },
+    {
+      "source_id": "HumanEval/77",
+      "position": 114
+    },
+    {
+      "source_id": "HumanEval/81",
+      "position": 122
+    },
+    {
+      "source_id": "HumanEval/82",
+      "position": 2
+    },
+    {
+      "source_id": "HumanEval/83",
+      "position": 98
+    },
+    {
+      "source_id": "HumanEval/84",
+      "position": 190
+    },
+    {
+      "source_id": "HumanEval/87",
+      "position": 15
+    },
+    {
+      "source_id": "HumanEval/91",
+      "position": 33
+    },
+    {
+      "source_id": "HumanEval/96",
+      "position": 171
+    },
+    {
+      "source_id": "HumanEval/100",
+      "position": 169
+    },
+    {
+      "source_id": "HumanEval/102",
+      "position": 1
+    },
+    {
+      "source_id": "HumanEval/106",
+      "position": 78
+    },
+    {
+      "source_id": "HumanEval/108",
+      "position": 208
+    },
+    {
+      "source_id": "HumanEval/113",
+      "position": 225
+    },
+    {
+      "source_id": "HumanEval/114",
+      "position": 127
+    },
+    {
+      "source_id": "HumanEval/115",
+      "position": 151
+    },
+    {
+      "source_id": "HumanEval/120",
+      "position": 507
+    },
+    {
+      "source_id": "HumanEval/121",
+      "position": 87
+    },
+    {
+      "source_id": "HumanEval/122",
+      "position": 137
+    },
+    {
+      "source_id": "HumanEval/123",
+      "position": 126
+    },
+    {
+      "source_id": "HumanEval/124",
+      "position": 437
+    },
+    {
+      "source_id": "HumanEval/127",
+      "position": 173
+    },
+    {
+      "source_id": "HumanEval/128",
+      "position": 28
+    },
+    {
+      "source_id": "HumanEval/131",
+      "position": 488
+    },
+    {
+      "source_id": "HumanEval/132",
+      "position": 126
+    },
+    {
+      "source_id": "HumanEval/134",
+      "position": 133
+    },
+    {
+      "source_id": "HumanEval/135",
+      "position": 180
+    },
+    {
+      "source_id": "HumanEval/136",
+      "position": 283
+    },
+    {
+      "source_id": "HumanEval/138",
+      "position": 140
+    },
+    {
+      "source_id": "HumanEval/143",
+      "position": 190
+    },
+    {
+      "source_id": "HumanEval/145",
+      "position": 143
+    },
+    {
+      "source_id": "HumanEval/146",
+      "position": 148
+    },
+    {
+      "source_id": "HumanEval/147",
+      "position": 30
+    },
+    {
+      "source_id": "HumanEval/152",
+      "position": 167
+    },
+    {
+      "source_id": "HumanEval/153",
+      "position": 34
+    },
+    {
+      "source_id": "HumanEval/155",
+      "position": 3
+    },
+    {
+      "source_id": "HumanEval/157",
+      "position": 1
+    },
+    {
+      "source_id": "HumanEval/160",
+      "position": 42
+    },
+    {
+      "source_id": "HumanEval/161",
+      "position": 29
+    },
+    {
+      "source_id": "HumanEval/162",
+      "position": 85
+    }
+  ],
+  "b4_requests": 164,
+  "b4_exact_sequences": 97,
+  "b4_prompt_length_min": 40,
+  "b4_prompt_length_max": 395,
+  "completion_without_added_special_tokens": true,
+  "formal_cases": [
+    {
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "cases": 83
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "cases": 157
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "cases": 55
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "cases": 26
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "cases": 74
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "cases": 121
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "cases": 98
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "cases": 429
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "cases": 50
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "cases": 41
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "cases": 186
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "cases": 165
+    }
+  ],
+  "reused_completed_formal_diagnostic": {
+    "method": "loopahead",
+    "model": "huginn-3.5b",
+    "benchmark": "gsm8k",
+    "cases": 83,
+    "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1",
+    "result_sha256": "73e779b71c1ae16326cceab121f22f90c8f375efe3ea10000b74b06a59aa4f43",
+    "loopahead_fp32_report_sha256": "48e623a086920c8505443bd895994f9b9ed02fa63fb6f065c255ee0b146e32ba"
+  },
+  "traced20_input_sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+  "historical_evaluator_diff_sha256": "918409d8b6765ec73d02fe8961e645553e3e2524cf1f66e8977c4412393033a7",
+  "cuda_initialized": false,
+  "limitation": "CPU planning/input/source checks only. The additional67 B4 BF16/FP32 replays remain pending."
+}

@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "4-7",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/diagnose_packed_dflash.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+    "--job",
+    "table1-huginn-3.5b-bbh-t0",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t0-ar",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/packed-dflash-greedy-v1/table1-huginn-3.5b-bbh-t0",
+    "--lock-fd",
+    "6"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-bbh-t0-greedy-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-bbh-t0-greedy-exit.json",
+  "metadata": {
+    "group": "table1-huginn-3.5b-bbh-t0-greedy",
+    "step": "table1-huginn-3.5b-bbh-t0-greedy",
+    "gpu": 1,
+    "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill/experiments/baselines",
+  "extra_launcher": null,
+  "extra_exit": null
+}

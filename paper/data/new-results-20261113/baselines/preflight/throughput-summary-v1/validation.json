@@ -1,0 +1,63 @@
+{
+  "status": "passed_with_declared_throughput_order_mismatch",
+  "throughput_actual_renderer_exit_code": 0,
+  "throughput_measured_cells": 20,
+  "throughput_reference_order_aligned_cells": 10,
+  "throughput_reference_order_unaligned_cells": 10,
+  "new_gpu_runs": 0,
+  "latency_collector_actual_exit_code": 0,
+  "latency_completed": 48,
+  "latency_old47_unchanged": true,
+  "latency_added": [
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "gsm8k",
+      "temperature": "1",
+      "eta": "1.7856756944563723",
+      "gamma": "1.9906220483065713",
+      "method_tok_s": "12.222533374645488",
+      "ar_tok_s": "6.844766612767551",
+      "drafter_time_frac": "0.02212452367031497",
+      "match_rate": "0.0",
+      "engine": "official_dflash_with_packed_loop_target",
+      "status": "complete_with_declared_limitations",
+      "notes": "Official frozen DFlash drafter/decoder with our packed full-loop target adapter; fresh own-stack AR; separate full-task profile matches every token and verification; numerical diagnostics not all completed. ",
+      "eta_latency": "1.8175703255690145",
+      "eta_throughput": "1.7856756944563723",
+      "aligned_token_match_rate": "0.04402601289760823",
+      "method_decode_tokens": "29505",
+      "ar_decode_tokens": "30032",
+      "method_decode_s": "2413.9839995205402",
+      "ar_decode_s": "4387.58568392694",
+      "ar_provenance": "new_same_packed_stack_AR",
+      "ar_first_completed_unix": "1794443631.5930648",
+      "ar_last_completed_unix": "1794448051.4631176",
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-ar",
+      "target_backend": "packed_full_loop",
+      "method_exit_evidence": "actual_exit0",
+      "profile_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-profile",
+      "numerical_diagnostics": "not_all_completed"
+    }
+  ],
+  "source_sha256": "344dd1ba41c3d412eeeff54cb97cdc4d76b4828f345a32d348612ff737530043",
+  "throughput_evidence_sha256": "4477d745de125d7f39397c3a32605cbd417151c236fb8a1d54d8e4ba454dd343",
+  "latency_csv_sha256": "8f02e4ea53887f24c415e7a8402c34ea67943ef9dd9051be2090a451968ebcda",
+  "checked_unix": 1794466990.7563763,
+  "future_entry_regression": {
+    "actual_exit_code": 0,
+    "tests": 2,
+    "archived_cell_order_comparisons": 20,
+    "probe_modes_unchanged": [
+      "validate",
+      "smoke"
+    ],
+    "new_gpu_measurements": 0,
+    "source_sha256": {
+      "evaluate_loopahead_throughput.py": "169696951d897afdd1333b361fc2978f386c6baa39448ef73b116c7b1ba6e310",
+      "test_throughput_order.py": "ee0494c7f876c8ca35f783108624393a9337880df13dc6b163e489cfbfe5341b"
+    },
+    "limitation": "CPU order regression only; existing frozen LoopAhead throughput measurements retain their admission-order mismatch."
+  }
+}

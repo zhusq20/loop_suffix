@@ -1,0 +1,47 @@
+{
+  "group": "loopahead-ouro-2.6b-gsm8k-v1",
+  "step": "loopahead-ouro-2.6b-gsm8k-v1-fp32",
+  "gpu": 6,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "56-59",
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t0",
+    "--loopahead",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t0-v1",
+    "--observed-margin-report",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1/report.json",
+    "--gpu",
+    "6",
+    "--cpus",
+    "56-59",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1/fp32-common-prefix"
+  ],
+  "started_unix": 1794481950.6419768,
+  "pid": 253215,
+  "start_ticks": "49698693",
+  "supervisor_identity": {
+    "pid": 253214,
+    "state": "R",
+    "start_ticks": "49698687",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-fp32-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794483440.133504,
+  "exit_evidence": "supervisor_waitpid"
+}

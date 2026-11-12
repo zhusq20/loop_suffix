@@ -1,0 +1,25 @@
+{
+  "pid": 465127,
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source/evaluate_loopahead_throughput.py",
+    "--model",
+    "huginn-3.5b",
+    "--batch",
+    "16",
+    "--mode",
+    "formal",
+    "--gpu",
+    "7",
+    "--cpus",
+    "60-63",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b16"
+  ],
+  "gpu": 7,
+  "started_unix": 1794422789.4437757,
+  "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/plan.json",
+  "exit_code": 1,
+  "finished_unix": 1794422799.7099087
+}

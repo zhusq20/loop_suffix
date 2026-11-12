@@ -1,0 +1,24 @@
+[
+  {
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v1/source/teacher/experiments/baselines/generate_teachers.py",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: generate_teachers.py [-h] --model {ouro-2.6b,huginn-3.5b,ouro-1.4b}\n                            --manifest MANIFEST --shard SHARD --shards SHARDS\n                            [--max-batch MAX_BATCH]\n                            [--kv-budget-gib KV_BUDGET_GIB] --gpu GPU --cpus\n                            CPUS --out OUT [--resume]\n                            [--production-cache-proof PRODUCTION_CACHE_PROOF]\n                            [--packed-graph-proof PACKED_GRAPH_PROOF]\n\noptions:\n  -h, --help            show this help message and exit\n  --model {ouro-2.6b,huginn-3.5b,ouro-1.4b}\n  --manifest MANIFEST\n  --shard SHARD\n  --shards SHARDS\n  --max-batch MAX_BATCH\n  --kv-budget-gib KV_BUDGET_GIB\n                        Logical KV ceiling; defaults to32 for dictionary-cache\n                        Huginn,70 for Ouro\n  --gpu GPU\n  --cpus CPUS\n  --out OUT\n  --resume\n  --production-cache-proof PRODUCTION_CACHE_PROOF\n                        completed real Huginn equivalence probe; enables\n                        teacher-only preallocated KV\n  --packed-graph-proof PACKED_GRAPH_PROOF\n                        completed same-engine graph and native FP32\n                        equivalence probe; production only\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "-m",
+      "baselines",
+      "train-dflash",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: __main__.py [-h] --model {ouro-2.6b,ouro-1.4b,huginn-3.5b}\n                   --target-path TARGET_PATH [--device DEVICE]\n                   [--dtype {float32,bfloat16}] [--max-seq MAX_SEQ] --teachers\n                   TEACHERS [--manifest MANIFEST] [--stage STAGE] --out OUT\n                   [--draft-config DRAFT_CONFIG] [--epochs EPOCHS]\n                   [--micro-batch MICRO_BATCH] [--accumulation ACCUMULATION]\n                   [--num-anchors NUM_ANCHORS]\n                   [--attention {sdpa,flex_attention}] [--checkpoint-layers]\n                   [--save-every SAVE_EVERY] [--resume RESUME]\n                   [--max-updates MAX_UPDATES] [--stop-after STOP_AFTER]\n\nPortable DFlash training with frozen targets, FP32 masters and resumable DDP.\n\noptions:\n  -h, --help            show this help message and exit\n  --model {ouro-2.6b,ouro-1.4b,huginn-3.5b}\n  --target-path TARGET_PATH\n                        Local HF snapshot, including its model implementation\n                        and tokenizer\n  --device DEVICE       cpu, cuda, or cuda:N\n  --dtype {float32,bfloat16}\n  --max-seq MAX_SEQ\n  --teachers TEACHERS\n  --manifest MANIFEST\n  --stage STAGE         Split key in the optional manifest\n  --out OUT\n  --draft-config DRAFT_CONFIG\n                        Defaults to Huginn 332.6M or target-width Ouro config\n  --epochs EPOCHS\n  --micro-batch MICRO_BATCH\n  --accumulation ACCUMULATION\n  --num-anchors NUM_ANCHORS\n  --attention {sdpa,flex_attention}\n  --checkpoint-layers\n  --save-every SAVE_EVERY\n  --resume RESUME       New portable trainer checkpoint directory\n  --max-updates MAX_UPDATES\n                        Bounded experiment; recorded as such\n  --stop-after STOP_AFTER\n                        Checkpoint and stop without changing the LR schedule\n",
+    "stderr": ""
+  }
+]

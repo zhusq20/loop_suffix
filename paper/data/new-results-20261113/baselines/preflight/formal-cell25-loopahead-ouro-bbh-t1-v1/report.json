@@ -1,0 +1,171 @@
+{
+  "status": "complete_formal_sampling_cell_with_declared_limitations",
+  "checked_unix": 1794387500.90233,
+  "completed_cells": 25,
+  "expected_cells": 72,
+  "previous_commit": "2744252fbde44d6127dbba6cb0efb0a1e5dabbc9",
+  "previous_24_rows_and_agreements_unchanged": true,
+  "requests": 270,
+  "summaries": {
+    "loopahead": {
+      "decode_tokens": 70247,
+      "decode_s": 3401.9323197826743,
+      "loops": 70576,
+      "tok_s": 20.649146836785864,
+      "gamma": 3.98135343459533
+    },
+    "ar": {
+      "decode_tokens": 73445,
+      "decode_s": 11319.684950225055,
+      "loops": 293780,
+      "tok_s": 6.488254781202174,
+      "gamma": 1.0
+    }
+  },
+  "journal_sha256": {
+    "loopahead": "e0aaf3104f871e3009696db3be8f08ba078afbbc27de4d55958fda5b7945f1c9",
+    "ar": "edb3b53ebf7433fbf1ee837c6b3ffb759b2500be8f40a2ac0c72c9dd7c63e5c2"
+  },
+  "metadata_sha256": {
+    "loopahead": "acdd796f5bc7a64b0761378e3897d37427850af8ae761c651aecce5a06450907",
+    "ar": "50f2b9971f48e06ac1d982d0e85e88bc36df719402c8e9f5a4a98643855cf30a"
+  },
+  "execution_evidence": {
+    "loopahead": {
+      "kind": "actual_successful_process_exit",
+      "pid": 516319,
+      "launch_sha256": "0060bc3d8c3f7b8342d3d2aaaf01a6ef211689946379b69ef076dcd0af88b294",
+      "exit_receipt_sha256": "2ae0667e029bdf923b80d1fdee60857146fa13e7fcf42a5ee114658bfb9ed9cf",
+      "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+    },
+    "ar": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-bbh-ar",
+      "requests_sha256": "edb3b53ebf7433fbf1ee837c6b3ffb759b2500be8f40a2ac0c72c9dd7c63e5c2",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    }
+  },
+  "actual_exit_receipt": {
+    "name": "loopahead-ouro-2.6b-bbh-t1-v1",
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "loopahead",
+      "--dataset",
+      "bbh",
+      "--temperature",
+      "1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+      "--admission",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+    ],
+    "pid": 516319,
+    "started_unix": 1794384004.8486924,
+    "exit_code": 0,
+    "finished_unix": 1794387458.8252745
+  },
+  "worker_exit": {
+    "worker_pid": 516314,
+    "started_unix": 1794384004.8162813,
+    "job_sha256": "5f6eb8fd16bbb9e8bfc6143400c5e32d1e4692eab08708b2d026a6d76eb62037",
+    "source_sha256": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "exit_code": 0,
+    "finished_unix": 1794387458.8506694
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794387466.6011417,
+    "completion_basis": "direct_child_exit_code"
+  },
+  "config": {
+    "total": 4,
+    "first": 1,
+    "second": 2,
+    "future": 3,
+    "retain": 32,
+    "execute": 16,
+    "guard": 2,
+    "stride": 1,
+    "family": "ouro",
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+  "training_audit_sha256": "c7bc6c34e17f2e4628aedad29573e1b743782d22976cd714c35dc62bc414deec",
+  "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+  "admission_sha256": "c57d108b3ae86468803ac676b1a9c2dda7c0c12bd6daf47b3790e7cda82ee7ef",
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 516319,
+    "started_unix": 1794384006.7305467,
+    "acquired_unix": 1794384007.8113048,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "native_driver_live_evidence_sha256": "2a219e3384108e6f79f7e2da0632c00aa0e98e6002a970840f5214ab37bcf1bd",
+  "result": {
+    "method": "loopahead",
+    "model": "ouro-2.6b",
+    "benchmark": "bbh",
+    "temperature": "1",
+    "eta": "3.182542537726901",
+    "gamma": "3.98135343459533",
+    "method_tok_s": "20.649146836785864",
+    "ar_tok_s": "6.488254781202174",
+    "drafter_time_frac": "NA",
+    "match_rate": "0.007407407407407408",
+    "engine": "ours",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+    "eta_latency": "3.32742802800621",
+    "eta_throughput": "3.182542537726901",
+    "aligned_token_match_rate": "0.11770013211458523",
+    "method_decode_tokens": "70247",
+    "ar_decode_tokens": "73445",
+    "method_decode_s": "3401.9323197826743",
+    "ar_decode_s": "11319.684950225055",
+    "ar_provenance": "archived_same_host_AR",
+    "ar_first_completed_unix": "1794077126.8878706",
+    "ar_last_completed_unix": "1794088404.4735916",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t1"
+  },
+  "agreement": {
+    "match_rate": 0.007407407407407408,
+    "aligned_token_match_rate": 0.11770013211458523,
+    "exact_sequences": 2,
+    "requests": 270
+  },
+  "output_sha256": {
+    "results.csv": "46ec2382abdfade1f0143ecbf9ba5c22587d32cc44cc404eb139b9bb21aea052",
+    "table2_rows.md": "65efd8ea42833103135194a0c4ceb1627bd9cd60356acd337dbff5d002282d9c",
+    "formal-agreement.json": "8f453500ba03bd87b59660a8074a6e66d1b8c2d5e64acbc7047ad64041e807e6",
+    "formal-matrix-status.json": "34370152e1d9b9aa7122255d8a26c3e5434afbc3ba504a24fb4c560449c94cd0"
+  },
+  "collector_exit_code": 0,
+  "collector_stdout": "{\"completed\": 25, \"expected\": 72, \"missing\": 47}\n",
+  "collection_source_sha256": {
+    "collect_results.py": "7afc730570a04c2a350e7e6b347c7e39e80ceaf5bedca7db1bf19996cd40a770",
+    "result_evidence.py": "d3b438b9ca068a48f6f68f00cad358e6b52d95ad7a713609846faba9161d0d2a"
+  },
+  "verification_source_sha256": "5153bfa5906ef04bed70336f1cff194da52a0655343a15fafd70544f602605c5",
+  "limitations": [
+    "Own paper-based implementation; no author training code or weights used.",
+    "AR uses the approved archived same-host measurement; cross-date and shared-host timing differences remain uncorrected.",
+    "T1 same-seed token agreement is descriptive, not a sampling-distribution proof.",
+    "Original CUDA-startup failure remains archived.",
+    "25/72 cells complete; final training, remaining benchmarks and diagnostics are pending."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "status": "resumed_cpu_queue_waiting_for_measurements",
+  "controller": {
+    "recovery": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1",
+    "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+    "authorization_context_sha256": "693286ccac4d1abf972fc665eb3f3f422186f65f4ce9837dc364d7de87fe0546",
+    "argv": [
+      "taskset",
+      "--cpu-list",
+      "80-83",
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+      "--plan",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+    ],
+    "started_unix": 1794509233.9147525,
+    "pid": 48618,
+    "start_ticks": "52427020",
+    "supervisor_identity": {
+      "pid": 48615,
+      "state": "R",
+      "start_ticks": "52427014",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/loop_queue_recovery.py",
+        "--spec",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1/controller-launcher.json.supervisor.json",
+        "--lock-fd",
+        "4"
+      ]
+    }
+  },
+  "live_identity": {
+    "pid": 48618,
+    "state": "S",
+    "start_ticks": "52427020",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+      "--plan",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+    ]
+  },
+  "initial_status": {
+    "stage": "waiting_for_measurement_priority",
+    "controller_pid": 48618,
+    "updated_unix": 1794509234.804456,
+    "expected_groups": 6,
+    "validated_groups": [],
+    "running": {},
+    "ready": [
+      "table1-ouro-1.4b-bbh-t0-greedy",
+      "table1-ouro-1.4b-humanevalplus-t0-greedy"
+    ],
+    "priority_pending": [
+      "table1-ouro-1.4b-gsm8k-t1-profile",
+      "table1-ouro-1.4b-math500-t0-profile",
+      "table1-ouro-1.4b-math500-t1-profile",
+      "table1-ouro-1.4b-bbh-t0-profile",
+      "table1-ouro-1.4b-bbh-t1-profile",
+      "table1-ouro-1.4b-humanevalplus-t0-profile",
+      "table1-ouro-1.4b-humanevalplus-t1-profile",
+      "table1-ouro-1.4b-mbppplus-t0-profile",
+      "table1-ouro-1.4b-mbppplus-t1-profile",
+      "table1-ouro-1.4b-specbench-t0-profile",
+      "table1-ouro-1.4b-specbench-t1-profile"
+    ],
+    "failures": {}
+  },
+  "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+  "spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c",
+  "prior_evidence_sha256": {
+    "STOP": "eb4db1ffa608dd3737dfa8e23d6a31e54517c27f190cdc3a6956744f6d85de32",
+    "cancellation.json": "0555b90358f47efd339fc597618d77be05495bfd3b4305562e575a0f06691a7c",
+    "status.json": "0555b90358f47efd339fc597618d77be05495bfd3b4305562e575a0f06691a7c",
+    "waiter-status.json": "0555b90358f47efd339fc597618d77be05495bfd3b4305562e575a0f06691a7c",
+    "incremental-launcher.json": "180c32b6b886425cf04937f12bdf25ffd00f8e6369dc2ed8397d25e7402b81b2",
+    "incremental-exit.json": "c3826633b1299ed72ad58375ee8d6e8861725590ff775bf045cbf623dc5a1bb8"
+  },
+  "authorization_context_sha256": "693286ccac4d1abf972fc665eb3f3f422186f65f4ce9837dc364d7de87fe0546",
+  "unchanged_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "new_gpu_runs": 0,
+  "signalled_processes": [],
+  "source_sha256": "8e9f1fe0c5beef92696f502ec09f401a0701cf42755dd46aec1b94580aca49b4",
+  "completed_unix": 1794509235.519518,
+  "limitation": "Six groups are queued, not complete. Main LoopAhead MATH remains separately interrupted."
+}

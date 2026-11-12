@@ -1,0 +1,32 @@
+{
+  "model": "ouro-1.4b",
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "started_unix": 1794439374.3250058,
+  "stage": "untrained_LAD_compatibility",
+  "dtype": "float32",
+  "cuda_acquisition": {
+    "gpu": 3,
+    "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+    "pid": 257213,
+    "started_unix": 1794439375.5141644,
+    "acquired_unix": 1794439376.4143202,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "prompt_tokens": 88,
+  "greedy_ar_equal": true,
+  "repeat_exact": true,
+  "first_divergence": null,
+  "lad_calls": 82,
+  "draft_parameters": 11051008,
+  "peak_allocated_bytes": 6819342336,
+  "limitations": [
+    "untrained LAD",
+    "synthetic prompt only",
+    "sampling admission has not been calibrated",
+    "not a benchmark result"
+  ],
+  "status": "complete",
+  "finished_unix": 1794439393.8771071
+}

@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/native_cuda_env.py",
+    "--record",
+    "/ossfs/workspace/loop_suffix/results/dflash-packed-backend-20261112/gpu-driver-environment.json",
+    "--",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/scripts/loop_dflash_packed_probe.py",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--wait-seconds",
+    "5400",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-packed-backend-20261112/gpu-v1",
+    "--release-reservation"
+  ],
+  "pid": 410434,
+  "started_unix": 1794419095.5850837
+}

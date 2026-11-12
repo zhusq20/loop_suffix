@@ -1,0 +1,44 @@
+{
+  "job_id": "table1-ouro-2.6b-mbppplus-t1",
+  "stage": "profile",
+  "gpu": 4,
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "48-51",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+    "--binding",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-ouro-2.6b-mbppplus-t1-profile.json",
+    "--job",
+    "table1-ouro-2.6b-mbppplus-t1",
+    "--stage",
+    "profile",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-profile",
+    "--lock-fd",
+    "10"
+  ],
+  "started_unix": 1794466213.307159,
+  "pid": 56397,
+  "start_ticks": "48124960",
+  "supervisor_identity": {
+    "pid": 56383,
+    "state": "R",
+    "start_ticks": "48124953",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-ouro-2.6b-mbppplus-t1-profile-launcher.json.supervisor.json",
+      "--lock-fd",
+      "10"
+    ]
+  }
+}

@@ -1,15 +1,37 @@
 # Table 1 agentic 补充实验（2026-11-12）
 
+**Ouro-1.4B 补充（2026-11-12）**：新增独立批次
+[loopfill-agentic-sql-ouro14-20261112](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/plan.json)，
+复用原批次完全相同的100条请求、顺序和历史消息，以Ouro-1.4B自身tokenizer重新编码；
+不重新生成teacher、不重新选题、不截断。全部七方法×T=0/1共14组、1,400次请求，
+B1/max512、N16/Q4、seed0、单次计时及计时边界沿用下文。
+LoopAhead使用该模型已完成的selected LAD及独立准入表；DFlash使用163,597,568参数的
+projected drafter，等待5万条teacher生成、六轮正式训练和训练验收完成后绑定检查点哈希。
+随后全部14项最短/最长上下文接口验证通过，才开始正式测速。
+**2026-11-13调度修订**：用户明确要求所有剩余实验按单个单元并行派发，取消温度组同卡限制。
+已完成的T0七组保留；剩余T1七组各自从GPU 0–7领取空闲且UUID锁可用的设备，
+有多张空闲卡就同时运行多个方法，正在运行的任务继续完成。原冻结推理源码和输入不变。
+实际设备逐单元记录；AR仍为同模型、同温度对照，跨卡差异不再通过同卡绑定控制。
+调度及验收实现独立冻结在
+[并行调度修订](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/amendments/parallel-cells-20261113/scheduling.json)，
+原计划和协议中的GPU5/7绑定作为历史记录保留，由该修订覆盖。
+见[实时状态](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/status.json)和
+[输入核验](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/checks/input-audit.json)。
+完整结果经逐请求审计及真实退出码核验后自动导出独立的
+`paper/tables/table1-agentic-sql-ouro-1.4b.tex`与对应CSV，原两模型结果保留。
+按用户要求，输出差异诊断已取消；接口验证及产物完整性检查继续。
+以下两模型、28组和原GPU绑定描述的是原批次协议。
+
 本轮只补充 Table 1：Huginn-3.5B、Ouro-2.6B 两组模型，AR、WFD、LoopSpec、
 Suffix-only、LoopAhead、DFlash、LoopFill-online 全部七个方法，temperature=0/1。
 共28个正式单元，每个单元100次相同历史请求、最多512新token、B=1。
 GPU仅使用用户本轮明确指定的空闲卡0、1、5、7；不在2、3、4、6排队。
 
 正式数据目录是 [loopfill-agentic-sql-table1-20261112](../results/loopfill-agentic-sql-table1-20261112/)。
-轨迹生成状态见 [trace-status.json](../results/loopfill-agentic-sql-table1-20261112/trace-status.json)。
+轨迹生成状态见 [trace-status.json](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-table1-20261112/trace-status.json)。
 100次输入已冻结，正式批次已启动；实时测速状态见
-[status.json](../results/loopfill-agentic-sql-table1-20261112/status.json)，
-[report.md](../results/loopfill-agentic-sql-table1-20261112/report.md)随完成单元更新。
+[status.json](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-table1-20261112/status.json)，
+[report.md](../paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-table1-20261112/report.md)随完成单元更新。
 GPU接口验证不等于正式测速完成。
 
 ## 工作负载

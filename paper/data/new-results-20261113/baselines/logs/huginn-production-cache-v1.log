@@ -1,0 +1,41 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.33s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.30s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.39s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.14s/it]
+dictionary {"wall_s": 18.928068205714226, "forward_gpu_s": 18.3015869140625, "peak_allocated_bytes": 23513829376, "peak_reserved_bytes": 26218594304, "cache_slots": 132, "cache_length": 146}
+preallocated {"wall_s": 9.708551451563835, "forward_gpu_s": 8.763357254028321, "peak_allocated_bytes": 13951282176, "peak_reserved_bytes": 14061404160, "cache_slots": 132, "cache_length": 146}
+{
+  "stage": "production_cache_diagnostic",
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "started_unix": 1794298110.467871,
+  "batch": 16,
+  "prompt_tokens": 18,
+  "decode_steps": 128,
+  "noise_capacity": 512,
+  "cache_capacity": 146,
+  "dictionary": {
+    "wall_s": 18.928068205714226,
+    "forward_gpu_s": 18.3015869140625,
+    "peak_allocated_bytes": 23513829376,
+    "peak_reserved_bytes": 26218594304,
+    "cache_slots": 132,
+    "cache_length": 146
+  },
+  "preallocated": {
+    "wall_s": 9.708551451563835,
+    "forward_gpu_s": 8.763357254028321,
+    "peak_allocated_bytes": 13951282176,
+    "peak_reserved_bytes": 14061404160,
+    "cache_slots": 132,
+    "cache_length": 146
+  },
+  "exact_logit_steps": 128,
+  "top1_matches": 2048,
+  "comparisons": 2048,
+  "max_abs_logit_difference": 0.0,
+  "limitations": [
+    "synthetic fixed-prefix compatibility test only",
+    "not a benchmark speedup",
+    "production optimization must not silently replace the timed DFlash inference cache"
+  ],
+  "status": "complete",
+  "finished_unix": 1794298150.5282078
+}

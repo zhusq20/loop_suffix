@@ -1,0 +1,82 @@
+[
+  {
+    "pid": 279845,
+    "argv": [
+      "python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+      "--execute",
+      "--resume",
+      "--huginn-training-gpus",
+      "4"
+    ],
+    "start_ticks": "34154300",
+    "signal": 15,
+    "sent_unix": 1794351121.369906
+  },
+  {
+    "pid": 271873,
+    "argv": [
+      "python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_appendix.py",
+      "--execute"
+    ],
+    "start_ticks": "34096972",
+    "signal": 15,
+    "sent_unix": 1794351121.3699622
+  },
+  {
+    "pid": 244559,
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/weather-reservation-guard.py"
+    ],
+    "start_ticks": "33826485",
+    "signal": 15,
+    "sent_unix": 1794351121.370015
+  },
+  {
+    "pid": 11094,
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_training_audits.py",
+      "--execute"
+    ],
+    "start_ticks": "36596917",
+    "signal": 15,
+    "sent_unix": 1794351121.3700628
+  },
+  {
+    "pid": 317144,
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "/tmp/loopfill-specforge-venv/bin/torchrun",
+      "--standalone",
+      "--nproc_per_node=4",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--teachers",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-3.5b-formal-v1",
+      "--cpu-groups",
+      "0-3,4-7,52-55,60-63",
+      "--epochs",
+      "6",
+      "--micro-batch",
+      "4",
+      "--accumulation",
+      "2",
+      "--save-every",
+      "500",
+      "--checkpoint-layers"
+    ],
+    "start_ticks": "34549921",
+    "signal": 2,
+    "sent_unix": 1794351121.376099
+  }
+]

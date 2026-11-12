@@ -1,0 +1,86 @@
+{
+  "suite": "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112",
+  "dataset": "Spider development SQL execution/repair request replay",
+  "semantics": "Fixed causal SQL request replay. Ouro-2.6B greedy teacher, actual read-only SQLite execution, at most two error-triggered repairs. No gold SQL feedback. Successful execution ends a trace. Current teacher response, tool result and future calls removed from replay inputs. No live-agent or official Spider accuracy claim. Distinct from the unpublished SuffixDecoding AgenticSQL dataset.",
+  "input_sha256": "32cefe4fb8f50a911d669be7eeba8a4ab5ce1c8a2452a86f1d6a46cfbd30a9f2",
+  "phase_counts": {
+    "early": 74,
+    "middle": 13,
+    "late": 13
+  },
+  "models": [
+    "ouro-1.4b"
+  ],
+  "methods": [
+    "ar",
+    "wavefront",
+    "loopspec-dual",
+    "budget-suffix",
+    "loopahead",
+    "dflash",
+    "budget-online"
+  ],
+  "temperatures": [
+    0,
+    1
+  ],
+  "max_new_tokens": 512,
+  "batch": 1,
+  "sampling_seed": 0,
+  "timing_repeats": 1,
+  "audit_sha256": "fbdd6bc3bd40adcf9a4de68d9ed416eafef365e57d675867e17d6134f599c9e7",
+  "outputs": {
+    "paper/tables/table1-agentic-sql-ouro-1.4b.tex": "392667d1204b4e99f2dfa155ed771161dc5772f8b2988058d51905b3ef8cf668",
+    "paper/data/agentic-sql-ouro-1.4b-measurements.csv": "f5e60c0729468a64bbc7b58ab18a44c15e7b3007ce520fdc1778e90191b2a94a"
+  },
+  "timing": "Decode-only; prefill, warmup, loading and journal I/O excluded. Includes suffix publication.",
+  "limitations": "Fixed historical SQL requests, not closed-loop task performance. B1 token/s is not concurrent serving throughput. Output lengths can differ. Methods may run on different GPUs; AR ratios are not controlled for device variation.",
+  "scheduling": {
+    "placement": "first_idle_per_cell",
+    "allowed_gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "created_unix": 1794516852.146294,
+    "authorization": "User explicitly requested every remaining experiment to run independently in parallel on free GPUs; no same-device method grouping.",
+    "protocol_sha256": "589fb96b34f1911bec0b3d8142892acfdb72607e940a5a6d50731cb016d05dc8",
+    "jobs_sha256": "b2276ffa8d4bb79504ae57067824ac41db55799f456fca249626835f90f1bd62",
+    "scheduler_root": "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/amendments/parallel-cells-20261113/source",
+    "scheduler_sha256": {
+      "loop_agentic_suite.py": "c1353daef5340d2e3e197dc1524d2ee35a598930a5f5c502d56b7e33b4f25402",
+      "loop_agentic_ouro14.py": "830d2ac127027612598cba95cab2d4eba3881a2642bf9da157510b5bf5b762d9",
+      "loop_agentic_finalize.py": "05434870cf52cd6050dc28dbcc5622057c484936bdfeb1f30ad54ebe7ea6bb87"
+    },
+    "original_inference_sources_unchanged": true,
+    "completed_measurements_preserved": true,
+    "comparison": "AR remains the same model/temperature reference; device differences are disclosed, not controlled by co-location."
+  },
+  "cell_gpus": {
+    "ouro-1.4b-ar-t0": 5,
+    "ouro-1.4b-budget-online-t0": 5,
+    "ouro-1.4b-budget-suffix-t0": 5,
+    "ouro-1.4b-dflash-t0": 5,
+    "ouro-1.4b-loopahead-t0": 5,
+    "ouro-1.4b-loopspec-dual-t0": 5,
+    "ouro-1.4b-wavefront-t0": 5,
+    "ouro-1.4b-ar-t1": 7,
+    "ouro-1.4b-wavefront-t1": 7,
+    "ouro-1.4b-loopspec-dual-t1": 7,
+    "ouro-1.4b-budget-suffix-t1": 6,
+    "ouro-1.4b-loopahead-t1": 5,
+    "ouro-1.4b-dflash-t1": 7,
+    "ouro-1.4b-budget-online-t1": 5
+  },
+  "export_formatting": {
+    "file": "paper/tables/table1-agentic-sql-ouro-1.4b.tex",
+    "change": "Removed one trailing blank line for the paper export; measurements unchanged.",
+    "original_export_sha256": "6ea1468cce9372c854fb26a5b2d256a5756a78d63875f4b3f91e13b12c1eefaa",
+    "original_export_archive": "paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/table1-agentic.tex"
+  }
+}

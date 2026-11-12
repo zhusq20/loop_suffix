@@ -1,0 +1,24 @@
+{
+  "status": "passed_completed_external_latency_archive",
+  "actual_archiver_exit_code": 0,
+  "manifest": "/ossfs/workspace/sz/loopfill/experiments/baselines/external-evidence/packed-measurements/manifest-1794470457761975789.json",
+  "manifest_sha256": "b8e095f61b36c657bafc6a5f594114b891a1a60e03598408ed157f4e6da37103",
+  "files": 149,
+  "bytes": 10985496,
+  "completed_external_cells": 8,
+  "known_actual_exit0": 7,
+  "unknown_original_exit": [
+    "dflash/huginn-3.5b/math500/0"
+  ],
+  "all_copies_byte_identical": true,
+  "results_unchanged": true,
+  "source_sha256": "1b3c7c9abd84797aad87ed22ba3df747000d094fb7afedaeb96443508c5fddeb",
+  "new_gpu_measurements": 0,
+  "checked_unix": 1794470550.230005,
+  "limitations": [
+    "Copies retain original absolute paths; use this mapping to locate archived artifacts.",
+    "Unknown original exit status remains unknown; copies do not recreate process receipts.",
+    "Only completed external canonical latency evidence is covered here. Running training and additional throughput artifacts are outside this archive scope.",
+    "Target model and trained weights retain their separately recorded checkpoint locations."
+  ]
+}

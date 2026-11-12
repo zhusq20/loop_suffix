@@ -1,0 +1,67 @@
+{
+  "model": "ouro-2.6b",
+  "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "method": "dflash",
+  "dataset": "math500",
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "count": 500,
+  "full_count": 500,
+  "max_new_tokens": 512,
+  "max_seq": 2304,
+  "input_sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "cpu_affinity": [
+    48,
+    49,
+    50,
+    51
+  ],
+  "torch": "2.6.0+cu126",
+  "dtype": "bfloat16",
+  "transformers": "4.57.1",
+  "cuda": "12.6",
+  "graph": false,
+  "compile": false,
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "stage": "formal",
+  "trace": false,
+  "profiling": false,
+  "reportable": true,
+  "denominator": "full-depth HF LoopTarget AR, same target version and precision",
+  "sampling": "frozen positional target uniforms for AR; DFlash softmax-q rejection with request-hashed seed",
+  "source_sha256": {
+    "evaluate_dflash.py": "5c892070cc4a804866ec7cdc46b1db31935d4decebfe33c81f2a3caae692168a",
+    "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+  }
+}

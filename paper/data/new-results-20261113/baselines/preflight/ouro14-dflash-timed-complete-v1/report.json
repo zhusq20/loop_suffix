@@ -1,0 +1,332 @@
+{
+  "status": "complete_timed_runs_not_complete_benchmark_cells",
+  "expected_timed_runs": 12,
+  "verified_timed_runs": 12,
+  "requests": 4184,
+  "results": {
+    "table1-ouro-1.4b-gsm8k-t0": {
+      "summary": {
+        "requests": 300,
+        "decode_tokens": 131459,
+        "decode_s": 3620.6503928154707,
+        "decode_token_s": 36.308117530722306,
+        "gamma": 3.4521796218487393,
+        "output_tokens": 131759,
+        "target_verifications": 38080,
+        "cap_stopped": 187
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t0/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t0-timed-exit.json",
+      "requests_sha256": "284081748639169ac0fffaa00f07950829268756fb67928e7eab3cbfff2618f8"
+    },
+    "table1-ouro-1.4b-gsm8k-t1": {
+      "summary": {
+        "requests": 300,
+        "decode_tokens": 91976,
+        "decode_s": 3223.3483449593186,
+        "decode_token_s": 28.534303512008663,
+        "gamma": 2.7485879927083645,
+        "output_tokens": 92276,
+        "target_verifications": 33463,
+        "cap_stopped": 118
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t1-timed-exit.json",
+      "requests_sha256": "41126c6bb0a302b67a67eda57a2b42cc01489851d765eace9a7fe90c85252936"
+    },
+    "table1-ouro-1.4b-math500-t0": {
+      "summary": {
+        "requests": 500,
+        "decode_tokens": 251162,
+        "decode_s": 6219.217289067805,
+        "decode_token_s": 40.38482470157375,
+        "gamma": 3.8178059495037013,
+        "output_tokens": 251662,
+        "target_verifications": 65787,
+        "cap_stopped": 474
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-math500-t0-timed-exit.json",
+      "requests_sha256": "e8f2e57dca09a634369ef17315be96a8c34c6a2344d49c6e6cee6e1d279f5259"
+    },
+    "table1-ouro-1.4b-math500-t1": {
+      "summary": {
+        "requests": 500,
+        "decode_tokens": 208866,
+        "decode_s": 7175.134183935821,
+        "decode_token_s": 29.109699504662007,
+        "gamma": 2.795016593512472,
+        "output_tokens": 209366,
+        "target_verifications": 74728,
+        "cap_stopped": 326
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t1/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-math500-t1-timed-exit.json",
+      "requests_sha256": "cd3225928fb0618262ee0e1c09bd8d5bb33c4013d701d463f4da1b758c56fe9f"
+    },
+    "table1-ouro-1.4b-bbh-t0": {
+      "summary": {
+        "requests": 270,
+        "decode_tokens": 53321,
+        "decode_s": 1262.5018605813384,
+        "decode_token_s": 42.23439320354548,
+        "gamma": 3.9827457424559305,
+        "output_tokens": 53591,
+        "target_verifications": 13388,
+        "cap_stopped": 19
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t0-timed-exit.json",
+      "requests_sha256": "4db7597e0a42ff0a830298fc38e416b9d9a30cd2c445d94e4b3e259a97f9dd87"
+    },
+    "table1-ouro-1.4b-bbh-t1": {
+      "summary": {
+        "requests": 270,
+        "decode_tokens": 69158,
+        "decode_s": 2503.0719840452075,
+        "decode_token_s": 27.629249354720496,
+        "gamma": 2.6869997668816534,
+        "output_tokens": 69428,
+        "target_verifications": 25738,
+        "cap_stopped": 69
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t1-timed-exit.json",
+      "requests_sha256": "d49a7aaad801dd1e138ccdf1c73894c419090ea26fb1c73aa5d66ae9b19606fe"
+    },
+    "table1-ouro-1.4b-humanevalplus-t0": {
+      "summary": {
+        "requests": 164,
+        "decode_tokens": 35132,
+        "decode_s": 643.3533014431596,
+        "decode_token_s": 54.60763148520801,
+        "gamma": 5.167230475069863,
+        "output_tokens": 35296,
+        "target_verifications": 6799,
+        "cap_stopped": 9
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t0-timed-exit.json",
+      "requests_sha256": "8461ef6b2384f2a43f64b8f2e0546a2ae092906d9c55f8a551355815b96e1e96"
+    },
+    "table1-ouro-1.4b-humanevalplus-t1": {
+      "summary": {
+        "requests": 164,
+        "decode_tokens": 40622,
+        "decode_s": 1108.2080891504884,
+        "decode_token_s": 36.65557073413833,
+        "gamma": 3.478208750749208,
+        "output_tokens": 40786,
+        "target_verifications": 11679,
+        "cap_stopped": 15
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t1/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t1-timed-exit.json",
+      "requests_sha256": "fb6a67a56f5e14fdda4da2f2a4ae720fdbba6e2190fb145b88682f883b37b67d"
+    },
+    "table1-ouro-1.4b-mbppplus-t0": {
+      "summary": {
+        "requests": 378,
+        "decode_tokens": 78667,
+        "decode_s": 1443.8026915863156,
+        "decode_token_s": 54.485976829401835,
+        "gamma": 5.180231792440406,
+        "output_tokens": 79045,
+        "target_verifications": 15186,
+        "cap_stopped": 15
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t0/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-mbppplus-t0-timed-exit.json",
+      "requests_sha256": "cd5cb5222683dcbfdbbb65b6057b8c7038175160187138e0bde74a30ef09a8cc"
+    },
+    "table1-ouro-1.4b-mbppplus-t1": {
+      "summary": {
+        "requests": 378,
+        "decode_tokens": 83348,
+        "decode_s": 2602.6713638603687,
+        "decode_token_s": 32.02402007312036,
+        "gamma": 3.058754449704576,
+        "output_tokens": 83726,
+        "target_verifications": 27249,
+        "cap_stopped": 33
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t1/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-mbppplus-t1-timed-exit.json",
+      "requests_sha256": "ab1a2ed2c720ae019fb689e9713a51c2b00b86ff624026358d0e66248336e12f"
+    },
+    "table1-ouro-1.4b-specbench-t0": {
+      "summary": {
+        "requests": 480,
+        "decode_tokens": 87964,
+        "decode_s": 2802.878365650773,
+        "decode_token_s": 31.383452481562287,
+        "gamma": 2.9736655285487306,
+        "output_tokens": 88444,
+        "target_verifications": 29581,
+        "cap_stopped": 66
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t0/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-specbench-t0-timed-exit.json",
+      "requests_sha256": "256e45e37f75caa102fe693a845b994e7df524994738cced1d3310056406889d"
+    },
+    "table1-ouro-1.4b-specbench-t1": {
+      "summary": {
+        "requests": 480,
+        "decode_tokens": 99278,
+        "decode_s": 4456.885395221412,
+        "decode_token_s": 22.27519695849572,
+        "gamma": 2.1153133189866407,
+        "output_tokens": 99758,
+        "target_verifications": 46933,
+        "cap_stopped": 85
+      },
+      "actual_exit_code": 0,
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t1/attempt1",
+      "receipt": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-specbench-t1-timed-exit.json",
+      "requests_sha256": "181651dbd32cc89108e644dfd246e6cf8ed4699ec369940c42aa39a2ad56c98a"
+    }
+  },
+  "artifact_sha256": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t0/attempt1/metadata.json": "d5a3e83fdaccd6b6268d22be84ae9622f36d80e32021a3930348343f150d394d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t0/attempt1/complete.json": "0e883811a81c3dcb0b8815b8061d79b702aa9cd5bcff19f005a153dd7545eddf",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t0/attempt1/requests.jsonl": "284081748639169ac0fffaa00f07950829268756fb67928e7eab3cbfff2618f8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t0/attempt1/summary.json": "1be960c9dd97a4d905a0745811076f9654ccebd10e48fca01ec5355752fb9b9c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t0/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t0-timed-launcher.json": "00d1ed785a6f3a3b5a1f0c2f746289007a7239f1d6536e0b69f0bbceda5470c2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t0-timed-exit.json": "ad2ff76ed330be41d855ff30df2979d406e7a7ae7c3eefa2b1bbe4a6c2305851",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-gsm8k-t0-attempt1-exit.json": "ad2ff76ed330be41d855ff30df2979d406e7a7ae7c3eefa2b1bbe4a6c2305851",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/metadata.json": "fecc8e643298068cd8f91c5fa639eba114f8e86f1ce26ab57653e1c69a7ebeb7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/complete.json": "cd48cfa618602a15dffa3166f8348620385293b44a384d89895101848cca6283",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/requests.jsonl": "41126c6bb0a302b67a67eda57a2b42cc01489851d765eace9a7fe90c85252936",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/summary.json": "ba0a956e417b5801d3a36c3de4944d003804389dd63ec92c6514b8794125d64c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t1-timed-launcher.json": "dbc7b5a908edc045adce858aefae90f758042c062f438de984142e0ef5ade091",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t1-timed-exit.json": "7a96b902bf524fd376925a05202750d38f1d90f3b51bccc9c8dbf098e32add87",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-gsm8k-t1-attempt1-exit.json": "7a96b902bf524fd376925a05202750d38f1d90f3b51bccc9c8dbf098e32add87",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1/metadata.json": "ac0be61b4e9704cada386fc12f485857f13f5732ed272930d1364ecb409f2d33",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1/complete.json": "817e6b7ee7946f55532678b1cb9c1cbe4b2346f6fd6ea5318387883be7e0bb2c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1/requests.jsonl": "e8f2e57dca09a634369ef17315be96a8c34c6a2344d49c6e6cee6e1d279f5259",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1/summary.json": "03808864a4031b7d24cf1ddd195977f851479477e709d982503bd6fc0ae316dd",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-math500-t0-timed-launcher.json": "5a7d0942dc5c9e306f2b789902c2266249816077d1fd90f00be7ce27dc0ff454",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-math500-t0-timed-exit.json": "96690bb1cdc3bb8696b7a2b6cef918eb540c0f76399fd841c5efbbd9b48e6129",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-math500-t0-attempt1-exit.json": "96690bb1cdc3bb8696b7a2b6cef918eb540c0f76399fd841c5efbbd9b48e6129",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t1/attempt1/metadata.json": "bcfc0420636bf8bac4328ab62e37b35e439c99609629ac7d0c2ab7cd8fc7b21c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t1/attempt1/complete.json": "4b3d4d2c89d8d00f3a924c5fefb5e0d09d36154b314bf0dba98ab96362200222",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t1/attempt1/requests.jsonl": "cd3225928fb0618262ee0e1c09bd8d5bb33c4013d701d463f4da1b758c56fe9f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t1/attempt1/summary.json": "0a1e9ea27cb57c612ba0abc83acdf5d13cfdb8c3e00d568dd794e8b93e7bfc40",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t1/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-math500-t1-timed-launcher.json": "eb885649a54112cc52c8ca84b3f4383ed83b6ac82e7ee4a72a7102496e77f058",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-math500-t1-timed-exit.json": "1b5492d3643bc831a52dba6fcc95d1503c33c9fdaf6e1da4be03ed2e9620513b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-math500-t1-attempt1-exit.json": "1b5492d3643bc831a52dba6fcc95d1503c33c9fdaf6e1da4be03ed2e9620513b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1/metadata.json": "045014481d8ef07f03c464aff56db12952394fa4b14a3d9045a5909ac9df3b7d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1/complete.json": "7544193b6fe080f67c779345230e9f0ce8cb976f11f0b202cff9922fefda1227",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1/requests.jsonl": "4db7597e0a42ff0a830298fc38e416b9d9a30cd2c445d94e4b3e259a97f9dd87",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1/summary.json": "690be18f30ad0a9cb5ea6f46b9c1fbc023c025b26fb9b5a18cfced0e23267729",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t0-timed-launcher.json": "eedeffda57b2b44bd5758bd2b0994b217caadead116e3ec63d9258be9ececcf1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t0-timed-exit.json": "e9845d811853b85c58869514331e3f31d82c5a7754fefd08c409f15cb5f1c3a6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-bbh-t0-attempt1-exit.json": "e9845d811853b85c58869514331e3f31d82c5a7754fefd08c409f15cb5f1c3a6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1/metadata.json": "9c461e7dcfebf6bcf44a538218700786ee3893e2685d5d79c785bd06849ef515",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1/complete.json": "50a19acace13c9251e97f53406177411abb28f6e3a7017f6d3d731cd9b6478b2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1/requests.jsonl": "d49a7aaad801dd1e138ccdf1c73894c419090ea26fb1c73aa5d66ae9b19606fe",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1/summary.json": "6b5a0d5eae4d1d995978833901929bcf66cce766a7b2bc494338e0273d306c3e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t1-timed-launcher.json": "d9682239a6728266ec2633cf87fed5d9f45e8532191df364cf1fb4a42a732787",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t1-timed-exit.json": "d9c670cb6cc65948d8295a7e9f1a21c8bef9c3e73bd136207268404a3423357c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-bbh-t1-attempt1-exit.json": "d9c670cb6cc65948d8295a7e9f1a21c8bef9c3e73bd136207268404a3423357c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1/metadata.json": "de77fe085b0cfeb2619365f981c06cc2ead7cd66acbf62e0315252256734b357",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1/complete.json": "fd1099050cc1a3818677fb1c7df062c7bd5c60215ebc49cd2c7fba76f66c987c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1/requests.jsonl": "8461ef6b2384f2a43f64b8f2e0546a2ae092906d9c55f8a551355815b96e1e96",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1/summary.json": "a18ce5405acf30672252a3b26b28aee8fd9bb937314173fa528c09aca8373517",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t0-timed-launcher.json": "8df5e0136b32e0bd398d64c07487054be9fc3579ff4b1bd97f8d17d91efa6fae",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t0-timed-exit.json": "dcc9eb2c8156a4cf3754a01fe7fd04b68b2a04415b1bb5920f25e2744833caa9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-humanevalplus-t0-attempt1-exit.json": "dcc9eb2c8156a4cf3754a01fe7fd04b68b2a04415b1bb5920f25e2744833caa9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t1/attempt1/metadata.json": "681a500790d2374a33d2fa484db8adb4bb5b93fce6e104beb989561829bc99ff",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t1/attempt1/complete.json": "ce834e48e16c52f805a4f83dc4a33e0d397551d532941c6525ee1d48f84bcb3d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t1/attempt1/requests.jsonl": "fb6a67a56f5e14fdda4da2f2a4ae720fdbba6e2190fb145b88682f883b37b67d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t1/attempt1/summary.json": "133870fd5962a9d42fb2f8cfaa685adf41da048777caecd665a6f83c6ce63f49",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t1/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t1-timed-launcher.json": "a5c381f9cd080e93df298da7de69a722dece755341c5c3066a20363668c0214c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t1-timed-exit.json": "71e855309af9f1ef257090d424dd4b8e5ee530c59edf6958b7631440e6ac31d0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-humanevalplus-t1-attempt1-exit.json": "71e855309af9f1ef257090d424dd4b8e5ee530c59edf6958b7631440e6ac31d0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t0/attempt1/metadata.json": "ac04e7a1809b61886c5b574f391f3b3be5b41f734960e383cc21e1cdf92705b7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t0/attempt1/complete.json": "6a4d7dac222afa36442405e97274279565b5365499afa8ae8667722c430d5f58",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t0/attempt1/requests.jsonl": "cd5cb5222683dcbfdbbb65b6057b8c7038175160187138e0bde74a30ef09a8cc",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t0/attempt1/summary.json": "3e71723fc80732d866a7daf0ecde3b4ee7fce8568a69bdd25b741857cf26dae5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t0/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-mbppplus-t0-timed-launcher.json": "6f1606acf10dd73dfa9841e0372d9a42f9562212159268c4c3fd0657a82df1c9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-mbppplus-t0-timed-exit.json": "bc5646f45857ccee3b94fc95dd84e66f8f391e6bb43814ce9a477efc8d377248",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-mbppplus-t0-attempt1-exit.json": "bc5646f45857ccee3b94fc95dd84e66f8f391e6bb43814ce9a477efc8d377248",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t1/attempt1/metadata.json": "04bcd055a2fa553037898ee9fbf14ddfa076454a9a823d7742bf0db665928084",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t1/attempt1/complete.json": "337e9680a8d77db6199699486dba3da861225f78954c6fa03b63f4b3a14b7551",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t1/attempt1/requests.jsonl": "ab1a2ed2c720ae019fb689e9713a51c2b00b86ff624026358d0e66248336e12f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t1/attempt1/summary.json": "3d7bad18ebf6d41acc63b640272d60c61869525592c045a8bae2726deb0c556f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-mbppplus-t1/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-mbppplus-t1-timed-launcher.json": "0af08b622f84e361a38c61b614406fc4600ae17a7549a39d6bba0d3ca05dfbe0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-mbppplus-t1-timed-exit.json": "0e20c9e332e460659f43a7a20d3c494788f9337e895327bf464e828c008321ae",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-mbppplus-t1-attempt1-exit.json": "0e20c9e332e460659f43a7a20d3c494788f9337e895327bf464e828c008321ae",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t0/attempt1/metadata.json": "d3a244aa51b5b2853f33409939406ed3f7ae8db73207c42db9318e7f07bf829c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t0/attempt1/complete.json": "020cbab07db1a43ece07f2d107700e6502fc11ade7c9d61642d9ae7c19c1eef1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t0/attempt1/requests.jsonl": "256e45e37f75caa102fe693a845b994e7df524994738cced1d3310056406889d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t0/attempt1/summary.json": "068d37713649da04d3dbeea9b5ae88e1cf93b0d4a4f8f4bf4982cafd6b9e6fad",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t0/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-specbench-t0-timed-launcher.json": "a6963b22f05c99fd82fc5cd3113745b142707bdd337c0126ce9c5ae9b9feecc3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-specbench-t0-timed-exit.json": "8dcc470e7a3f87e57051620af1986d30f04569d29f0d3f5de0b58dfabdb63b98",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-specbench-t0-attempt1-exit.json": "8dcc470e7a3f87e57051620af1986d30f04569d29f0d3f5de0b58dfabdb63b98",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t1/attempt1/metadata.json": "5dca45428282089ac9229b5c2e51a4f829497924326a4187e28cc6be88034926",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t1/attempt1/complete.json": "b7c2ca694a93742a6100ceb67be5b066d1c7d6fa4a9cfdeece95405b5f18730c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t1/attempt1/requests.jsonl": "181651dbd32cc89108e644dfd246e6cf8ed4699ec369940c42aa39a2ad56c98a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t1/attempt1/summary.json": "90b05827874f32b1d276d0fd877de945877fae70ded6c29141e0b8cdd0d54c45",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-specbench-t1/attempt1/preflight.json": "10d8ea71d58a2d492ef1e8dd25cf56029c74c898fbbb5f9ad333368f659eb1ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-specbench-t1-timed-launcher.json": "52a63134a6da2771d46798418fc283bae265a7ca10aa6b69076b31de2128287a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-specbench-t1-timed-exit.json": "278e4e5e19c98f1c521d094fa82c4dbcb9488e645d8a76cad5a290b28cca925b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-specbench-t1-attempt1-exit.json": "278e4e5e19c98f1c521d094fa82c4dbcb9488e645d8a76cad5a290b28cca925b"
+  },
+  "plan_sha256": "1eb9641bdd9c554d90f5439fc3d81df193017d082e5376bf5385fde7aae0f05e",
+  "original_plan_sha256": "ebf2e61ad4346c6a6d639a0cdff8bc97b30e08ad3ef6b0fb65ea250b7a23c7f0",
+  "protocol_sha256": "a362a712d76cb8d27f4b796df0c055f896f26eac015512d20bcbddead39b32cf",
+  "jobs_sha256": "226c3eb32df811679d423f89989333a6d77b0fc1d4c80624e3f45508c54e4487",
+  "checkpoint_sha256": {
+    "model.safetensors": "d25b56c5c1f43e35d1c4ced2f32eb9bb102cb3f34e5f0b03a378a8cf2bd48742",
+    "config.json": "fdf148c9ba31650aa9efeadd48a7534a845d1274e57d7e3a734f4e94fba04b65",
+    "complete.json": "1a5052e6e4c801d7297a53efd0e73728eb3182971ff40c81143f51fa17d1f999"
+  },
+  "preflight_per_timed_run": {
+    "requests": 2,
+    "max_new_tokens": 16,
+    "included_in_timing": false
+  },
+  "warmup_per_timed_run": {
+    "requests": 2,
+    "max_new_tokens": 32,
+    "included_in_timing": false
+  },
+  "request_seed_policy": "Frozen SHA256 derivation from base seed 0, model, dataset and source_id; all recorded request seeds checked.",
+  "collected_cells_at_check": 60,
+  "unchanged_combined_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "source_sha256": {
+    "preflight/ouro14-dflash-timed-complete-v1/verify.py": "9a2a156a915883dbd4e8295fd77d82ca5cc52ef46d60e8bdbeeea00ea623db4d",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "new_gpu_runs": 0,
+  "checked_unix": 1794503834.8605413,
+  "limitations": [
+    "Timed method measurements only. Each speedup still requires its own completed AR and profile evidence.",
+    "Separate frozen numerical checks and final 72-cell collection remain required.",
+    "Original BF16 outputs and all measurement values are preserved. No timing reruns or final-table publication."
+  ]
+}

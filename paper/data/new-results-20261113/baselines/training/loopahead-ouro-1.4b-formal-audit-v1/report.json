@@ -1,0 +1,297 @@
+{
+  "status": "complete_LAD_training_audit_not_benchmark",
+  "model": "ouro-1.4b",
+  "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1",
+  "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+  "selected_step": 13533,
+  "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+  "parameters": 11051008,
+  "approved_LAD_config_verified": true,
+  "target_config_sha256": "ce9cc13da41591b8b4deca053d7dfee06424c0228628ee862ea86d725bc163f3",
+  "epochs": 3,
+  "updates": 13533,
+  "logged_optimization_records": 543,
+  "all_logged_values_finite": true,
+  "logged_learning_rate_max_error": 4.0657581468206416e-20,
+  "saved_checkpoints": [
+    {
+      "step": 500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-000500/lad.pt",
+      "sha256": "953a46f073bed835608ea3886f538c945ec255f7f472a0fd40bfbbcf82d2296d",
+      "all_weights_finite": true
+    },
+    {
+      "step": 1000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-001000/lad.pt",
+      "sha256": "e635d9de95c630624727d8e940d1772b099388b73aeff3c3970fc662f742f207",
+      "all_weights_finite": true
+    },
+    {
+      "step": 1500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-001500/lad.pt",
+      "sha256": "2804c941bcb847e7ad45c30f5b421c06b4ba0ea851bc30619a643c923a02f3f0",
+      "all_weights_finite": true
+    },
+    {
+      "step": 2000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-002000/lad.pt",
+      "sha256": "abf9ec37c164e0ee3e9a1282b24c81fd83a455140b0954ce7be22c2cbe151e48",
+      "all_weights_finite": true
+    },
+    {
+      "step": 2500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-002500/lad.pt",
+      "sha256": "43df868a31b871bc24b6d6b9a0f16ad404dfe5ff5854d87d5226ebc95fc38004",
+      "all_weights_finite": true
+    },
+    {
+      "step": 3000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-003000/lad.pt",
+      "sha256": "d03b76f4dd9d059079ac671b8e985e3430889f4792f95be8ff483db5fb0e7ba6",
+      "all_weights_finite": true
+    },
+    {
+      "step": 3500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-003500/lad.pt",
+      "sha256": "4957735907d821be6fbd8572fdea1de6e4683d943ff5359f13ff555d5694254d",
+      "all_weights_finite": true
+    },
+    {
+      "step": 4000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-004000/lad.pt",
+      "sha256": "7b8f745ac97a34498410b6706cc339c7962fd48570bbd9ac65ec3344dd9b5a56",
+      "all_weights_finite": true
+    },
+    {
+      "step": 4500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-004500/lad.pt",
+      "sha256": "b63aec3047e38cfba01733c36d4c867a9cd211ed9a7b9ab149b40c647237a55c",
+      "all_weights_finite": true
+    },
+    {
+      "step": 5000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-005000/lad.pt",
+      "sha256": "9464ef7cbf1756d1c0e4e5c3147c698813fa71399e619e024897f0443d9c11e9",
+      "all_weights_finite": true
+    },
+    {
+      "step": 5500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-005500/lad.pt",
+      "sha256": "26fa6aa57b49e0f3902db75849ad5fe8cc498362b2ee1cd063a6e71570202b01",
+      "all_weights_finite": true
+    },
+    {
+      "step": 6000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-006000/lad.pt",
+      "sha256": "bb9137f7812c67c788a54ab8091fbfb457822c20c73599f252495899e7db6f5d",
+      "all_weights_finite": true
+    },
+    {
+      "step": 6500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-006500/lad.pt",
+      "sha256": "5cb6fb91c6d87259b234f05491fdf6fb4776951b260f8e5da1ee387b5de6df3c",
+      "all_weights_finite": true
+    },
+    {
+      "step": 7000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-007000/lad.pt",
+      "sha256": "7d4b7c3696db42ef3f86e5bf98ff1ee68cd821877d1ee7d0e621798b75f882d3",
+      "all_weights_finite": true
+    },
+    {
+      "step": 7500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-007500/lad.pt",
+      "sha256": "7e9d589354604c56b881e8b8e6229899f4073fa811c3ac7d5bab168138b101ea",
+      "all_weights_finite": true
+    },
+    {
+      "step": 8000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-008000/lad.pt",
+      "sha256": "a24472cb79e4c65036fc7bdc4e637f20ef5c57e1893ebf4ec78bf1764ba87cbe",
+      "all_weights_finite": true
+    },
+    {
+      "step": 8500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-008500/lad.pt",
+      "sha256": "ed7b1838393ff2c5d42148d8edc6438556a31d5e307f9f6e943373c64873b246",
+      "all_weights_finite": true
+    },
+    {
+      "step": 9000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-009000/lad.pt",
+      "sha256": "b7b1cf27f0a3e3b7f71d96363558ee3ac7c2882aaa53bd897c1f0e2efed98a4a",
+      "all_weights_finite": true
+    },
+    {
+      "step": 9500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-009500/lad.pt",
+      "sha256": "0f09e39419214e7fdebb24488481bb6e4d6e3be54af33a3b5e12c4fe33d6fcfe",
+      "all_weights_finite": true
+    },
+    {
+      "step": 10000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-010000/lad.pt",
+      "sha256": "090300bcb1c0ee3d44c6f29a8bd84c008507806da89fba16e742db4eed8959e6",
+      "all_weights_finite": true
+    },
+    {
+      "step": 10500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-010500/lad.pt",
+      "sha256": "eb53780273d4154169727356f5a5b9314540ab860ea8863355804b983bbd9f8d",
+      "all_weights_finite": true
+    },
+    {
+      "step": 11000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-011000/lad.pt",
+      "sha256": "595ac578d713649f00e5f524255c216bfa9879a714dd0f558e4f1675b1e39db9",
+      "all_weights_finite": true
+    },
+    {
+      "step": 11500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-011500/lad.pt",
+      "sha256": "c3866618cc0f5b775e36a748742b54f2522f807a99707fb8f01b6bae95e78e7b",
+      "all_weights_finite": true
+    },
+    {
+      "step": 12000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-012000/lad.pt",
+      "sha256": "31911d50a29812ad04454a4d8def9ae5964688ff06424cc826bbde246be0320e",
+      "all_weights_finite": true
+    },
+    {
+      "step": 12500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-012500/lad.pt",
+      "sha256": "34ac08fec5d32cf2e2a0536bc30a10a1ae72fa78a2d2943f837a76ddbedbd45b",
+      "all_weights_finite": true
+    },
+    {
+      "step": 13000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013000/lad.pt",
+      "sha256": "f5623d7cbf24beccf8db58fb6cb441cc02645771a3f73a66d918d666af53de57",
+      "all_weights_finite": true
+    },
+    {
+      "step": 13500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013500/lad.pt",
+      "sha256": "a8d146da270c79e1fcae2759abb71400f648480b4d56b08f4c763d63bbac0ade",
+      "all_weights_finite": true
+    },
+    {
+      "step": 13533,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+      "sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+      "all_weights_finite": true
+    }
+  ],
+  "all_saved_parameters_finite": true,
+  "selected_by_frozen_dev_rule": true,
+  "confirmation_files": 1,
+  "dev_accepted_prefix": 2.025607638888889,
+  "confirmation_accepted_prefix": 2.012701099537037,
+  "frequent8192_exactly_recomputed_from_training_counts": true,
+  "feature_index_coverage": {
+    "train": {
+      "requests": 9025,
+      "eligible": 9022,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/ouro-1.4b/shard0/index.json",
+          "sha256": "e8642a9bbea5ec4b6fa16d2b1b54ba2dde0162d76dcf126b4bb05e4768959d08"
+        }
+      ]
+    },
+    "dev": {
+      "requests": 782,
+      "eligible": 782,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/ouro-1.4b/shard0/index.json",
+          "sha256": "19a35916ba86e70b74b53627eb75d43339591fcbbd5e0ed8392b1432f37fcd8e"
+        }
+      ]
+    },
+    "confirmation": {
+      "requests": 782,
+      "eligible": 782,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/ouro-1.4b/shard0/index.json",
+          "sha256": "74bd3da5c264f4a5c6eb12283f93562f01075557662949e7c8a722d821a50d71"
+        }
+      ]
+    }
+  },
+  "frozen_source_hashes": {
+    "train_loopahead.py": "4579a46249af06a3d0e991bb2de1ba5bd76ce13503f46478cb6e729528c99cd0",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/training_data.py": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "gpu_startup.py": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88"
+  },
+  "artifact_hashes": {
+    "metadata.json": "e1cd71d67f2588c7a580bb314a27ababfe096e9c52a285e1b112fafa77dccb6f",
+    "complete.json": "1ebeed11ab297516913eb4a5ea401cfae80b7c0e2976976792ba32076d19fa03",
+    "best.json": "2e06f92569c948ba003adb192dbc005924bda3dd7fe45ca870ca0617fd2f9570",
+    "confirmation.json": "55760d24c0fb31819aa54fa330586c1e65e51a10878e5054f1354520223d2344",
+    "metrics.jsonl": "ee515af5e8da82d9c1ab20963fcb54b3b96b292de591da9e1c8e9bd88bac2c1d",
+    "dev-metrics.jsonl": "75102798aa5fb2aaed893a9d0101acf90c63a93dc47ce6a16f42c0e2fac2fb25",
+    "frequent-token-ids.json": "ba7dd74fffae6fcf1aebe09ffae914da409a1f11ac5ef5edb12197a025f59c00"
+  },
+  "actual_training_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-formal-v1-finished.json",
+    "sha256": "9157927f2da8014a64d890c5cd7679b4098721fb1f555ea3fa430ad7bc09e2fc",
+    "receipt": {
+      "name": "loopahead-ouro-1.4b-formal-v1",
+      "gpu": 3,
+      "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/train_loopahead.py",
+        "--model",
+        "ouro-1.4b",
+        "--gpu",
+        "3",
+        "--cpus",
+        "12-15",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1",
+        "--features",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/features"
+      ],
+      "started_unix": 1794448576.1300766,
+      "pid": 366502,
+      "start_ticks": "46361242",
+      "supervisor_identity": {
+        "pid": 366501,
+        "state": "R",
+        "start_ticks": "46361236",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+          "--spec",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-formal-v1-launcher.json.supervisor.json",
+          "--lock-fd",
+          "4"
+        ]
+      },
+      "exit_code": 0,
+      "finished_unix": 1794449106.6876543,
+      "exit_evidence": "supervisor_waitpid"
+    }
+  },
+  "training_gpu_hours": 0.14642724653085074,
+  "cuda_initialized": false,
+  "started_unix": 1794451774.7537708,
+  "finished_unix": 1794451777.9651947,
+  "limitations": [
+    "Checks every recorded optimization row at the actual1/25/final cadence; not a full per-update log.",
+    "Recomputes checkpoint selection from saved domain metrics; does not rerun GPU dev/confirmation evaluation.",
+    "One confirmation artifact and trainer control flow support the once-after-selection procedure; not an external invocation count.",
+    "Checks feature index hashes/IDs/counts; large feature tensors and frozen head contents retain their separate data audits.",
+    "Finite trained weights and selection checks do not establish decoding correctness or benchmark speed."
+  ]
+}

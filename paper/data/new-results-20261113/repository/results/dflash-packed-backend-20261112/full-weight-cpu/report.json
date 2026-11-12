@@ -1,0 +1,111 @@
+{
+  "status": "passed_full_weight_cpu_checks",
+  "device": "cpu",
+  "dtype": "float32",
+  "cpu_affinity": [
+    80,
+    81,
+    82,
+    83
+  ],
+  "started_unix": 1794419126.8156402,
+  "checks": {
+    "ouro-2.6b": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "logits",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "features",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "logits",
+          "width": 4,
+          "max_abs": 1.1444091796875e-05
+        },
+        {
+          "kind": "features",
+          "width": 4,
+          "max_abs": 2.86102294921875e-06
+        },
+        {
+          "kind": "logits",
+          "width": 3,
+          "max_abs": 1.3828277587890625e-05
+        },
+        {
+          "kind": "features",
+          "width": 3,
+          "max_abs": 1.5497207641601562e-06
+        },
+        {
+          "kind": "logits",
+          "width": 1,
+          "max_abs": 1.609325408935547e-05
+        },
+        {
+          "kind": "features",
+          "width": 1,
+          "max_abs": 2.86102294921875e-06
+        }
+      ],
+      "tolerance": 0.0005,
+      "logits_top1_equal": true,
+      "partial_rejection_and_recompute": true
+    },
+    "huginn-3.5b": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "logits",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "features",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "logits",
+          "width": 4,
+          "max_abs": 4.76837158203125e-06
+        },
+        {
+          "kind": "features",
+          "width": 4,
+          "max_abs": 7.152557373046875e-06
+        },
+        {
+          "kind": "logits",
+          "width": 3,
+          "max_abs": 5.841255187988281e-06
+        },
+        {
+          "kind": "features",
+          "width": 3,
+          "max_abs": 1.1444091796875e-05
+        },
+        {
+          "kind": "logits",
+          "width": 1,
+          "max_abs": 5.7220458984375e-06
+        },
+        {
+          "kind": "features",
+          "width": 1,
+          "max_abs": 7.62939453125e-06
+        }
+      ],
+      "tolerance": 0.0005,
+      "logits_top1_equal": true,
+      "partial_rejection_and_recompute": true
+    }
+  },
+  "finished_unix": 1794419194.924617
+}

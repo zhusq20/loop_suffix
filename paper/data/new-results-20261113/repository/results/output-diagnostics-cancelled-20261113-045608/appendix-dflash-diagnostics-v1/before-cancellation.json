@@ -1,0 +1,38 @@
+{
+  "stage": "cancelled_by_user",
+  "updated_unix": 1794505269.5824735,
+  "user_instruction_verbatim": "为什么要输出差异诊断？这不用跑",
+  "reason": "Explicit user instruction in the current loop_suffix conversation on 2026-11-13: 为什么要输出差异诊断？这不用跑",
+  "controller_stopped": true,
+  "expected_groups": 6,
+  "validated_groups": [],
+  "cancelled_groups": [
+    "table1-ouro-1.4b-gsm8k-t0-greedy",
+    "table1-ouro-1.4b-math500-t0-greedy",
+    "table1-ouro-1.4b-bbh-t0-greedy",
+    "table1-ouro-1.4b-humanevalplus-t0-greedy",
+    "table1-ouro-1.4b-mbppplus-t0-greedy",
+    "table1-ouro-1.4b-specbench-t0-greedy"
+  ],
+  "cancelled_count": 6,
+  "running": {},
+  "ready": [],
+  "pending": [],
+  "failures": {},
+  "stopped_processes": [
+    {
+      "pid": 519800,
+      "state": "S",
+      "start_ticks": "52007532",
+      "argv": "/opt/conda/bin/python -u /ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py --plan /ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json ",
+      "role": "controller",
+      "signal": "SIGTERM"
+    }
+  ],
+  "exit_receipts": {},
+  "automatic_restart_allowed": false,
+  "requires_new_explicit_user_authorization_to_resume": true,
+  "prior_results_preserved": true,
+  "original_plan_preserved": true,
+  "audit_root": "/ossfs/workspace/loop_suffix/results/output-diagnostics-cancelled-20261113"
+}

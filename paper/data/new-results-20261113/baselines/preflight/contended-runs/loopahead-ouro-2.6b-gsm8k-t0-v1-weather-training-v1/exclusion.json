@@ -1,0 +1,16 @@
+{
+  "status": "excluded_from_formal_results",
+  "reason": "Conservative remeasurement: known weather training invocation with192-core affinity, and subsequent same worker executable overlapped this timed run for >10s. Potential CPU contention cannot be isolated; restart the entire cell, not selected slow requests.",
+  "worker_intervals": [
+    {
+      "pid": 241085,
+      "start_unix": 1794323090.3,
+      "terminated_unix": 1794323228.679
+    }
+  ],
+  "weather_affinity_evidence": "logs/weather-contention-recovery-v4.json",
+  "run_started_unix": 1794322922.7263293,
+  "partial_requests": 124,
+  "terminated_evaluation_pid": 239233,
+  "terminated_unix": 1794323533.2537804
+}

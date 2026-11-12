@@ -1,0 +1,76 @@
+{
+  "status": "completed_teachers_and_running_recipe_verified",
+  "model": "ouro-1.4b",
+  "requests": 50000,
+  "output_tokens": 21342831,
+  "source_counts": {
+    "codealpaca": 5000,
+    "nemotron_code": 10000,
+    "nemotron_math": 20000,
+    "ultrachat": 15000
+  },
+  "eligible": 48550,
+  "eligible_source_counts": {
+    "codealpaca": 4033,
+    "nemotron_code": 9953,
+    "nemotron_math": 19942,
+    "ultrachat": 14622
+  },
+  "excluded": 1450,
+  "batches": 1563,
+  "recipe": {
+    "model": "ouro-1.4b",
+    "epochs": 6,
+    "world_size": 1,
+    "micro_batch": 4,
+    "accumulation": 8,
+    "seed": 42,
+    "num_anchors": 512,
+    "loss_decay_gamma": 7.0,
+    "lr": 0.0006,
+    "warmup_ratio": 0.04,
+    "max_grad_norm": 1.0,
+    "max_seq": 3072,
+    "attention": "flex_attention",
+    "dtype": "torch.bfloat16",
+    "gradient_checkpointing": false,
+    "bounded_experiment": false,
+    "draft_parameters": 163597568,
+    "target_path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-1.4B/snapshots/574fa66cb8bf5abdc979642d01cf2b79b16bfab1"
+  },
+  "expected_formal_updates": 9108,
+  "teachers_actual_exit_code": 0,
+  "smoke_actual_exit_code": 0,
+  "teacher_gpu_hours": 12.060123348765902,
+  "closed_pipeline_gpu_hours": 12.073984357118606,
+  "artifact_sha256": {
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/plan.json": "d7af5950bc356bb78edb67cc243a1a75f2b5e9914ff417907056e5789c920c87",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-launcher.json": "7e59520b00c6c9346a8b1dc0e2b98e696fa07eeae1ab9c2791c888a6ef02da8a",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-exit.json": "30f478f79a575d64977792159ba5c702831438fec567b7113bb29cf6bff00e7c",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/smoke-launcher.json": "8eaf8d845c095d6a1ed48da15647bfdad9ad86e45b57d7164c56eaac29abc124",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/smoke-exit.json": "3809f3a1c185bb2713f47593702926fde83473f05f9aaba6ec7dcfda39ab5654",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/train-launcher.json": "137511c411c1e76043e79d2fe5bcb0dc6284d7eb5fd01099ad57d385693facf6",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/complete.json": "f95e42bd7d83f900329a200eba62046c72e7c04800ade1b0e43e1478dab5bc5b",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/metadata.json": "ed83584ee86bfa886609306ee6df1232816b0489120d9cc6f897ed79091cd0ca",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/batches.jsonl": "eb903704494a07cda546a0b61f6fbdd7c4dd335657c6c9209f1a4d4a18107689",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/teachers.jsonl": "ce49437ee3f6beb8026c49c331ebe96ac45465f777efa5d5d40ad08dfe8ad89f",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/checks/teacher-audit.json": "9be537799b916cbfb4de4e93b24d0cb1135e81263e1ec356039452f4c0e03c05",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/checks/training-smoke/complete.json": "9b7509e369f8925833ee063a98efd6e65d4324949dd2572cf1103cb0bc008624",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/metadata.json": "abdf5d09c371d531bbcf380464269d217fbe79bb3348e2170af647023f845184"
+  },
+  "source_sha256": {
+    "preflight/ouro14-dflash-teachers-complete-v1/check.py": "7e31f691aaf8be589b9f16d632517f48a8773b3c42d8887719e0ce54b26d58e8",
+    "audit_portable_dflash_training.py": "b15aaaeee89773aa4eed4b791d2def8a97b52b08d6f42cc8f2a99c08b21d582d",
+    "audit_dflash_training.py": "e29285e8ca356bf8c985fc6ae5ee6fa1c3749dd3afc7c667d86bd333fe91339f",
+    "external_dflash_costs.py": "bc0d340798915e94b631f6036d511c0a42e8231efc9c1bd100623c207c74e5a7",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "checked_unix": 1794472206.05606,
+  "new_gpu_measurements": 0,
+  "limitations": [
+    "Formal training is running; its completion, final weights, metrics and cost are not yet audited.",
+    "Teacher tokens are checked against recorded IDs, prompts, hashes, ranges and batches; no model regeneration.",
+    "No benchmark speed, output equivalence or model quality conclusion follows from this check."
+  ]
+}

@@ -1,0 +1,1025 @@
+[
+  {
+    "suite": "results/loopfill-latency512-20261107",
+    "checks": [
+      {
+        "path": "results/loopfill-latency512-20261107/source/scripts/loop_batch_bench.py",
+        "expected": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+        "observed": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/scripts/loop_latency_inputs.py",
+        "expected": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+        "observed": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/scripts/loop_latency_suite.py",
+        "expected": "126d66f3c24ec53100182cf0c58057eb71dade51084912c1d9c1d69b4a9faf5d",
+        "observed": "126d66f3c24ec53100182cf0c58057eb71dade51084912c1d9c1d69b4a9faf5d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/scripts/loop_latency_worker.py",
+        "expected": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+        "observed": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/__init__.py",
+        "expected": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "observed": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_batch_decode.py",
+        "expected": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "observed": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_batch_suffix.py",
+        "expected": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "observed": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_budget_decode.py",
+        "expected": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "observed": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_decode_steps.py",
+        "expected": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "observed": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_loopspec_decode.py",
+        "expected": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+        "observed": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_model_registry.py",
+        "expected": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "observed": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_optimized_decode.py",
+        "expected": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+        "observed": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_prob_decode.py",
+        "expected": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "observed": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_prob_tree.py",
+        "expected": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "observed": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_raven_decode.py",
+        "expected": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "observed": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_score_ablation.py",
+        "expected": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "observed": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_suffix_spec.py",
+        "expected": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "observed": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_tree_decode.py",
+        "expected": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2",
+        "observed": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/inputs/gsm8k.jsonl",
+        "expected": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+        "observed": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/inputs/math500.jsonl",
+        "expected": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+        "observed": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/inputs/bbh.jsonl",
+        "expected": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+        "observed": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/inputs/humanevalplus.jsonl",
+        "expected": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+        "observed": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/inputs/mbppplus.jsonl",
+        "expected": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+        "observed": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-20261107/inputs/specbench.jsonl",
+        "expected": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+        "observed": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+        "ok": true
+      }
+    ],
+    "inputs": {
+      "gsm8k": {
+        "count": 300,
+        "sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+        "path": "results/loopfill-latency512-20261107/inputs/gsm8k.jsonl"
+      },
+      "math500": {
+        "count": 500,
+        "sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+        "path": "results/loopfill-latency512-20261107/inputs/math500.jsonl"
+      },
+      "bbh": {
+        "count": 270,
+        "sha256": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+        "path": "results/loopfill-latency512-20261107/inputs/bbh.jsonl"
+      },
+      "humanevalplus": {
+        "count": 164,
+        "sha256": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+        "path": "results/loopfill-latency512-20261107/inputs/humanevalplus.jsonl"
+      },
+      "mbppplus": {
+        "count": 378,
+        "sha256": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+        "path": "results/loopfill-latency512-20261107/inputs/mbppplus.jsonl"
+      },
+      "specbench": {
+        "count": 480,
+        "sha256": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+        "path": "results/loopfill-latency512-20261107/inputs/specbench.jsonl"
+      }
+    },
+    "settings": {
+      "max_new_tokens": 512,
+      "cuda_graph": false,
+      "batches": [
+        1
+      ],
+      "metric": "speedup=sum(AR decode seconds)/sum(method decode seconds); also report pooled decode-token/s ratio and loop-normalized gamma",
+      "timing": "decode only after synchronized prefill; includes suffix work, excludes W&B and persistence"
+    },
+    "protocol_sha256": "b9317d2b7f44b795368a61bdb00dfa862b9a2d501a486bcb46526c0b6d2ee781"
+  },
+  {
+    "suite": "results/loopfill-latency512-t1-20261108",
+    "checks": [
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/scripts/loop_batch_bench.py",
+        "expected": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+        "observed": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/scripts/loop_latency_inputs.py",
+        "expected": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+        "observed": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/scripts/loop_latency_suite.py",
+        "expected": "bfacd730288af7962b5e88ac3c828a9ef8476b7bfc862bcea436d7a779f4fc62",
+        "observed": "bfacd730288af7962b5e88ac3c828a9ef8476b7bfc862bcea436d7a779f4fc62",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/scripts/loop_latency_worker.py",
+        "expected": "9133eed7f81f24861263be2fae0fdab2b0783b0ab3a3bfe849da5d35d35e702c",
+        "observed": "9133eed7f81f24861263be2fae0fdab2b0783b0ab3a3bfe849da5d35d35e702c",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/__init__.py",
+        "expected": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "observed": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_batch_decode.py",
+        "expected": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "observed": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_batch_suffix.py",
+        "expected": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "observed": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_budget_decode.py",
+        "expected": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "observed": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_decode_steps.py",
+        "expected": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "observed": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_loopspec_decode.py",
+        "expected": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+        "observed": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_model_registry.py",
+        "expected": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "observed": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_optimized_decode.py",
+        "expected": "0dfdf55dd5380dc4502e26fd41b4778b200a940d372c48fb325d0d95471347e6",
+        "observed": "0dfdf55dd5380dc4502e26fd41b4778b200a940d372c48fb325d0d95471347e6",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_prob_decode.py",
+        "expected": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "observed": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_prob_tree.py",
+        "expected": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "observed": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_raven_decode.py",
+        "expected": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "observed": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_sampling.py",
+        "expected": "03488c4a739c412711b0812e92d73c20f05da157c02b2da452c61c108bdde6c3",
+        "observed": "03488c4a739c412711b0812e92d73c20f05da157c02b2da452c61c108bdde6c3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_score_ablation.py",
+        "expected": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "observed": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_suffix_spec.py",
+        "expected": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "observed": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/source/src/llm_memory_editability/loop_tree_decode.py",
+        "expected": "03a55dae40f45bf4081b14197e7d079e29d318f0370b9535cc9e6177ac8b760b",
+        "observed": "03a55dae40f45bf4081b14197e7d079e29d318f0370b9535cc9e6177ac8b760b",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/inputs/gsm8k.jsonl",
+        "expected": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+        "observed": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/inputs/math500.jsonl",
+        "expected": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+        "observed": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/inputs/bbh.jsonl",
+        "expected": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+        "observed": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/inputs/humanevalplus.jsonl",
+        "expected": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+        "observed": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/inputs/mbppplus.jsonl",
+        "expected": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+        "observed": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-latency512-t1-20261108/inputs/specbench.jsonl",
+        "expected": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+        "observed": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+        "ok": true
+      }
+    ],
+    "inputs": {
+      "gsm8k": {
+        "count": 300,
+        "sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+        "path": "results/loopfill-latency512-t1-20261108/inputs/gsm8k.jsonl"
+      },
+      "math500": {
+        "count": 500,
+        "sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+        "path": "results/loopfill-latency512-t1-20261108/inputs/math500.jsonl"
+      },
+      "bbh": {
+        "count": 270,
+        "sha256": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373",
+        "path": "results/loopfill-latency512-t1-20261108/inputs/bbh.jsonl"
+      },
+      "humanevalplus": {
+        "count": 164,
+        "sha256": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+        "path": "results/loopfill-latency512-t1-20261108/inputs/humanevalplus.jsonl"
+      },
+      "mbppplus": {
+        "count": 378,
+        "sha256": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+        "path": "results/loopfill-latency512-t1-20261108/inputs/mbppplus.jsonl"
+      },
+      "specbench": {
+        "count": 480,
+        "sha256": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+        "path": "results/loopfill-latency512-t1-20261108/inputs/specbench.jsonl"
+      }
+    },
+    "settings": {
+      "max_new_tokens": 512,
+      "cuda_graph": false,
+      "batches": [
+        1
+      ],
+      "metric": "speedup=sum(AR decode seconds)/sum(method decode seconds); also report pooled decode-token/s ratio and loop-normalized gamma",
+      "timing": "decode only after synchronized prefill; includes suffix work, excludes W&B and persistence",
+      "temperature": 1.0,
+      "top_p": 1.0,
+      "top_k": 0,
+      "sampling_seed": 0
+    },
+    "protocol_sha256": "9a823041c6cf1237c2dcb3d43dbb9bc0ce042f794775818687ef166a55529d48"
+  },
+  {
+    "suite": "results/loopfill-table2-20261107-v2",
+    "checks": [
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/pyproject.toml",
+        "expected": "b2cea2bd3f5ac33c010f174d2b6f4af1b858dd2085ebaa7d88fd0b1a48c5dfd3",
+        "observed": "b2cea2bd3f5ac33c010f174d2b6f4af1b858dd2085ebaa7d88fd0b1a48c5dfd3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/configs/experiment-tracking-defaults.json",
+        "expected": "004e6655634aed12fed8fd2f9262d92ec8c77c3029c099a5ddd334ffbb831c76",
+        "observed": "004e6655634aed12fed8fd2f9262d92ec8c77c3029c099a5ddd334ffbb831c76",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/configs/loopfill-eager.args",
+        "expected": "0d5b5f6986a2e1515b82d9a9f032100d491616b7f901ae6ad52a2924dd45c55d",
+        "observed": "0d5b5f6986a2e1515b82d9a9f032100d491616b7f901ae6ad52a2924dd45c55d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/configs/loopfill-online-suffix.json",
+        "expected": "63b7e344ae8ce12ec9fff211096ddf89c577ce40174bab0f63db8b88cde0c3cf",
+        "observed": "63b7e344ae8ce12ec9fff211096ddf89c577ce40174bab0f63db8b88cde0c3cf",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_accepted_length.py",
+        "expected": "ff21ae1ac938bacc7777a0682cf7ef86d62d4fc306b415ad4925f5e3edcff386",
+        "observed": "ff21ae1ac938bacc7777a0682cf7ef86d62d4fc306b415ad4925f5e3edcff386",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_backend_diagnose.py",
+        "expected": "5bcc58f97f5ec07dfa26989ccadc7b5f02862ba0568115437a377188b69ff189",
+        "observed": "5bcc58f97f5ec07dfa26989ccadc7b5f02862ba0568115437a377188b69ff189",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_batch_bench.py",
+        "expected": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+        "observed": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_batch_sweep.py",
+        "expected": "8c92b131a28eef1f5b41ef89354a31c6c9eb1463f81c7f78493b620d1510200f",
+        "observed": "8c92b131a28eef1f5b41ef89354a31c6c9eb1463f81c7f78493b620d1510200f",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_calibration_probe.py",
+        "expected": "59acba9d96190faab9f46d31e85d6198611ad67f39cb18fb1729e931ef72b30b",
+        "observed": "59acba9d96190faab9f46d31e85d6198611ad67f39cb18fb1729e931ef72b30b",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_capacity_suite.py",
+        "expected": "95f2af03f40a7500950521ad3cf742eb4bb7ea872b88836776cb87d59329d23f",
+        "observed": "95f2af03f40a7500950521ad3cf742eb4bb7ea872b88836776cb87d59329d23f",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_confirm_suite.py",
+        "expected": "927b8ae99a26993fd4bc11d2f69f6bce1e6c6633fc4bcc4ce69ea009c80d5e6e",
+        "observed": "927b8ae99a26993fd4bc11d2f69f6bce1e6c6633fc4bcc4ce69ea009c80d5e6e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_draft_trace.py",
+        "expected": "b5a9526a679dc6c75d14a589637a3ba00be8eb5594fe1f88ad8caae281e090be",
+        "observed": "b5a9526a679dc6c75d14a589637a3ba00be8eb5594fe1f88ad8caae281e090be",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_draft_trace_analyze.py",
+        "expected": "4c86e5c9f2e78336917ef46de762ba3463e132639fbaf9db2df0d9c699b5750d",
+        "observed": "4c86e5c9f2e78336917ef46de762ba3463e132639fbaf9db2df0d9c699b5750d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_eager_suite.py",
+        "expected": "672a23c5c52a025e51ac4fe3a93f837f439842123c469ad33856820961bffc2e",
+        "observed": "672a23c5c52a025e51ac4fe3a93f837f439842123c469ad33856820961bffc2e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_existing_probs_suite.py",
+        "expected": "29a6c18822fe3b2ebb383acf30169772eb7082959d399a61860e6924f329c54e",
+        "observed": "29a6c18822fe3b2ebb383acf30169772eb7082959d399a61860e6924f329c54e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_external_readouts.py",
+        "expected": "0c3d7093585e2af3a33cb4a244993bee8e7578c2260c2550ee75574599c504bc",
+        "observed": "0c3d7093585e2af3a33cb4a244993bee8e7578c2260c2550ee75574599c504bc",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_fit_external.py",
+        "expected": "59b3340f884ef8bc9501ed9cc338e38f84a8e158feffd33a407410b5857e9124",
+        "observed": "59b3340f884ef8bc9501ed9cc338e38f84a8e158feffd33a407410b5857e9124",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_latency_inputs.py",
+        "expected": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+        "observed": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_latency_worker.py",
+        "expected": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+        "observed": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_missing_baselines.py",
+        "expected": "78779bfe07461297db4be0a403f4c94b4c95a803bca793e1f34cf87145ea23ec",
+        "observed": "78779bfe07461297db4be0a403f4c94b4c95a803bca793e1f34cf87145ea23ec",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_model_expansion_suite.py",
+        "expected": "9da48eb413ab56af3c0622b40d1dd1e461d44abf3f574d69fb7267c122dc447d",
+        "observed": "9da48eb413ab56af3c0622b40d1dd1e461d44abf3f574d69fb7267c122dc447d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_model_validate.py",
+        "expected": "5c94cb1e3c44be665080e0b0a3ef60ba91dfd676db35e67fda17adbf9d561f59",
+        "observed": "5c94cb1e3c44be665080e0b0a3ef60ba91dfd676db35e67fda17adbf9d561f59",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_official_preflight.py",
+        "expected": "08286ca3cccd53297c56076d2e540eea8ad3643a661a9d5a36706c357073a6f9",
+        "observed": "08286ca3cccd53297c56076d2e540eea8ad3643a661a9d5a36706c357073a6f9",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_online_batch_suite.py",
+        "expected": "c1021e221a2ad0356d4dd1320107fd5a0576cdc11ae0891d2d95e738ebb5cc1f",
+        "observed": "c1021e221a2ad0356d4dd1320107fd5a0576cdc11ae0891d2d95e738ebb5cc1f",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_online_suite.py",
+        "expected": "525a2f3ccc1203336ad9af0212e44f002bf5c29b4dd9b78f8588cabd8adf7c7a",
+        "observed": "525a2f3ccc1203336ad9af0212e44f002bf5c29b4dd9b78f8588cabd8adf7c7a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_output_diagnostic.py",
+        "expected": "d04663f58d26f71070c88d8af0bc90f08231b8cf6d59e164d915c95fded54ad8",
+        "observed": "d04663f58d26f71070c88d8af0bc90f08231b8cf6d59e164d915c95fded54ad8",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prepare_external.py",
+        "expected": "6a3b769861027290c555d38427c03773b9dd31e826f5600348aac23f43e8dc54",
+        "observed": "6a3b769861027290c555d38427c03773b9dd31e826f5600348aac23f43e8dc54",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prob_tree_ablation.py",
+        "expected": "a8a743a5f65761fa60e740e80e2e632653671712a1fca81d1f9fc88e0bd86a22",
+        "observed": "a8a743a5f65761fa60e740e80e2e632653671712a1fca81d1f9fc88e0bd86a22",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prob_tree_analyze.py",
+        "expected": "f1268c5cfc75bd2ceb2650d78ddab771787753ee08472415db289be9787d713f",
+        "observed": "f1268c5cfc75bd2ceb2650d78ddab771787753ee08472415db289be9787d713f",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prob_tree_microbench.py",
+        "expected": "7902d5300c744d1b8d5f1e57b3e33caf48c90686e15413f4a99ba96a13e1b40c",
+        "observed": "7902d5300c744d1b8d5f1e57b3e33caf48c90686e15413f4a99ba96a13e1b40c",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prob_tree_multireq.py",
+        "expected": "ccffc0aa016f40c8a845d519d9d1b447c91a30fcae4b6b83aa717708e5214870",
+        "observed": "ccffc0aa016f40c8a845d519d9d1b447c91a30fcae4b6b83aa717708e5214870",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prob_tree_replay.py",
+        "expected": "aad99396d05af8b5887912a5bf1e47454d5524f9aa0050fcb01f1411640102b2",
+        "observed": "aad99396d05af8b5887912a5bf1e47454d5524f9aa0050fcb01f1411640102b2",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_prob_tree_wallclock_analyze.py",
+        "expected": "8ef2c6c954d228e4794d49d7f2eab38402cbbfae7d4ebb93ca61f1a347d5170e",
+        "observed": "8ef2c6c954d228e4794d49d7f2eab38402cbbfae7d4ebb93ca61f1a347d5170e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_readout_ablation_analyze.py",
+        "expected": "5f1f41b4a93b41b2801a7d256e7c132e8cce63eb05521f0d96d28b23c7a9966c",
+        "observed": "5f1f41b4a93b41b2801a7d256e7c132e8cce63eb05521f0d96d28b23c7a9966c",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_resume_e00.py",
+        "expected": "a533d5279b6d217a38995a868bf3dba8b2a72aac9ae9259aed0e2bc3a3e88c0b",
+        "observed": "a533d5279b6d217a38995a868bf3dba8b2a72aac9ae9259aed0e2bc3a3e88c0b",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_source_waste_analyze.py",
+        "expected": "50b25ba8812ff9e80b92d934bc4719274cfc19d46a17144c7077c55941da5ffa",
+        "observed": "50b25ba8812ff9e80b92d934bc4719274cfc19d46a17144c7077c55941da5ffa",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_spec_correction_suite.py",
+        "expected": "66cd24ccbf69be69750ebb9971f646714726756a6db674660d78da46c7188194",
+        "observed": "66cd24ccbf69be69750ebb9971f646714726756a6db674660d78da46c7188194",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_spec_reuse_analyze.py",
+        "expected": "9c7dada0d644c19cc5f51aadc3eb061163ea52e8f6a04d83b38ea1309317ef3f",
+        "observed": "9c7dada0d644c19cc5f51aadc3eb061163ea52e8f6a04d83b38ea1309317ef3f",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_spec_reuse_run.py",
+        "expected": "2d6df392d74ed35973cf6d194eb3753324c5e44f2a5ebc3b5a27bd2e202262b7",
+        "observed": "2d6df392d74ed35973cf6d194eb3753324c5e44f2a5ebc3b5a27bd2e202262b7",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_spec_sibling.py",
+        "expected": "0fc1e7714196981d8a6c2a7d368360852514b689d744ef8d501a26f2039c5f89",
+        "observed": "0fc1e7714196981d8a6c2a7d368360852514b689d744ef8d501a26f2039c5f89",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_cache_diagnose.py",
+        "expected": "fcebfafa626e9c00877b098cb3856795f762371ddd7a4cf54d0457541ac5a510",
+        "observed": "fcebfafa626e9c00877b098cb3856795f762371ddd7a4cf54d0457541ac5a510",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_hit_diagnose.py",
+        "expected": "aa5d7ccfa502ee4802a13186e42619356add037e0bbbaec9fc64ccb8c875b0f0",
+        "observed": "aa5d7ccfa502ee4802a13186e42619356add037e0bbbaec9fc64ccb8c875b0f0",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_length_suite.py",
+        "expected": "b917955c8855b0fe54bc4c67ceab982a5deb2d06499964c2d0d6415aa79905e2",
+        "observed": "b917955c8855b0fe54bc4c67ceab982a5deb2d06499964c2d0d6415aa79905e2",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_schedule_compare.py",
+        "expected": "b3a8a3e3ed70b40b1e7ac9f66e2be5f6a8eb9627c5e35c3bea9dcd001c267291",
+        "observed": "b3a8a3e3ed70b40b1e7ac9f66e2be5f6a8eb9627c5e35c3bea9dcd001c267291",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_schedule_report.py",
+        "expected": "911ca1f2b60b76afaf185c92e35add011cd2b9ff64f5d27ba994176a197c7423",
+        "observed": "911ca1f2b60b76afaf185c92e35add011cd2b9ff64f5d27ba994176a197c7423",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_sources_probe.py",
+        "expected": "3005b2823f9771929659b848a36721f92b72832bba5f65c6011c77705cc53b97",
+        "observed": "3005b2823f9771929659b848a36721f92b72832bba5f65c6011c77705cc53b97",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_spec_env_monitor.py",
+        "expected": "37bef413c1ec6e7abf9ca5edd790f1b1534d50b9d2f56727ff7c44e5397ff678",
+        "observed": "37bef413c1ec6e7abf9ca5edd790f1b1534d50b9d2f56727ff7c44e5397ff678",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_spec_ledger.py",
+        "expected": "b444461d9040cbc303fff67c36cc0f3c5901337e63f9ae18a6023b31293de2f2",
+        "observed": "b444461d9040cbc303fff67c36cc0f3c5901337e63f9ae18a6023b31293de2f2",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_spec_readouts.py",
+        "expected": "2b84962b80742f1688974c68e8ae70dd69199957dd8b9ceb7af717c5394705c4",
+        "observed": "2b84962b80742f1688974c68e8ae70dd69199957dd8b9ceb7af717c5394705c4",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_spec_simulate.py",
+        "expected": "66a925d25463f9b43a3ca83b59c16a0cb72b2c07f0f00e38bf9076fad160debf",
+        "observed": "66a925d25463f9b43a3ca83b59c16a0cb72b2c07f0f00e38bf9076fad160debf",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_spec_wallclock.py",
+        "expected": "9926bf606f1a1195d20dd93b8bef03aa82aa8904999b79f3fa9baecbd66c97d4",
+        "observed": "9926bf606f1a1195d20dd93b8bef03aa82aa8904999b79f3fa9baecbd66c97d4",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_suffix_union_probe.py",
+        "expected": "0ff713fda6e26cfde59f708802b47f60d201ee62819db928ef854293f65acbed",
+        "observed": "0ff713fda6e26cfde59f708802b47f60d201ee62819db928ef854293f65acbed",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_table2_suite.py",
+        "expected": "5f58a6a891195452e83159781da279785765493a5f2784a409d5c6c91f4a0969",
+        "observed": "5f58a6a891195452e83159781da279785765493a5f2784a409d5c6c91f4a0969",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_trace_root.py",
+        "expected": "328da454c5d0ada567512b0a2e9cff5c2f0634ba5f8ca2e790ec91153d0f900a",
+        "observed": "328da454c5d0ada567512b0a2e9cff5c2f0634ba5f8ca2e790ec91153d0f900a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/scripts/loop_transfer_analyze.py",
+        "expected": "f5dd702383c20e30fec219478591e5605cf038ef4eb65baf8e774f21db7257c6",
+        "observed": "f5dd702383c20e30fec219478591e5605cf038ef4eb65baf8e774f21db7257c6",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/__init__.py",
+        "expected": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "observed": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_batch_decode.py",
+        "expected": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "observed": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_batch_suffix.py",
+        "expected": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "observed": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_budget_decode.py",
+        "expected": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "observed": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_decode_steps.py",
+        "expected": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "observed": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_loopspec_decode.py",
+        "expected": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+        "observed": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_model_registry.py",
+        "expected": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "observed": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_optimized_decode.py",
+        "expected": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+        "observed": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_prob_decode.py",
+        "expected": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "observed": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_prob_tree.py",
+        "expected": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "observed": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_raven_decode.py",
+        "expected": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "observed": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_score_ablation.py",
+        "expected": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "observed": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_suffix_spec.py",
+        "expected": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "observed": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/src/llm_memory_editability/loop_tree_decode.py",
+        "expected": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2",
+        "observed": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_batch_decode.py",
+        "expected": "7374b4cef00229cbaaf9634b519b43ac4af96abfc4b4d278b60d3b43a7889aa5",
+        "observed": "7374b4cef00229cbaaf9634b519b43ac4af96abfc4b4d278b60d3b43a7889aa5",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_batch_sweep.py",
+        "expected": "bbe42b5a6e4dc083c3e09dfad3ad4850d4794fcbd8df08986911a80e1d343590",
+        "observed": "bbe42b5a6e4dc083c3e09dfad3ad4850d4794fcbd8df08986911a80e1d343590",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_budget_alignment.py",
+        "expected": "628ba8176dd2424e45edbdec966821ea778cc9bb8348fbe690edb74ff576d6f3",
+        "observed": "628ba8176dd2424e45edbdec966821ea778cc9bb8348fbe690edb74ff576d6f3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_budget_decode.py",
+        "expected": "ee634188c2cea53017d70df516be3424112e63192788a7aa37966184d5148f26",
+        "observed": "ee634188c2cea53017d70df516be3424112e63192788a7aa37966184d5148f26",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_capacity_suite.py",
+        "expected": "664917c0d525a7e22fb16853570b4bca5b6837f806e396e0f2ce85a018d88042",
+        "observed": "664917c0d525a7e22fb16853570b4bca5b6837f806e396e0f2ce85a018d88042",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_confirm_suite.py",
+        "expected": "bfc492359e8a19b25750cd8ffd9e06961f09026ad7c394ca27f0e1f7b87a4190",
+        "observed": "bfc492359e8a19b25750cd8ffd9e06961f09026ad7c394ca27f0e1f7b87a4190",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_continuous_batch.py",
+        "expected": "02d1edd2093f85b5e8fc2b5801e0544f456dd0dd0a5d71e9ea175ec103848526",
+        "observed": "02d1edd2093f85b5e8fc2b5801e0544f456dd0dd0a5d71e9ea175ec103848526",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_draft_trace.py",
+        "expected": "72ca45f9469b480a8c9af6694f461c2a601afa588eea55a78fd00de88acfe674",
+        "observed": "72ca45f9469b480a8c9af6694f461c2a601afa588eea55a78fd00de88acfe674",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_eager_suite.py",
+        "expected": "dbac311963d67c413e94784d5af4362a10958d83221879889d5edef2448e137e",
+        "observed": "dbac311963d67c413e94784d5af4362a10958d83221879889d5edef2448e137e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_existing_probs.py",
+        "expected": "d97bd55cb18b5c1e65f59b3f28e9993cf60afcb54e62f330f74570db1aa724fb",
+        "observed": "d97bd55cb18b5c1e65f59b3f28e9993cf60afcb54e62f330f74570db1aa724fb",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_loopspec_decode.py",
+        "expected": "10b3aba67f18df9cf167f7bc7c454ea84a7e07f3930870f0f1e83e74ba033090",
+        "observed": "10b3aba67f18df9cf167f7bc7c454ea84a7e07f3930870f0f1e83e74ba033090",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_missing_baselines.py",
+        "expected": "651ab8731b9707e6200b4c93115f0ce7516c1e9d195e19a68a0bd8275234479c",
+        "observed": "651ab8731b9707e6200b4c93115f0ce7516c1e9d195e19a68a0bd8275234479c",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_model_expansion_suite.py",
+        "expected": "1c1580ebbeefe9ca21283ccb1b95a9619770ab729b624ec9a1f13b5d4cbc448e",
+        "observed": "1c1580ebbeefe9ca21283ccb1b95a9619770ab729b624ec9a1f13b5d4cbc448e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_model_registry.py",
+        "expected": "d6817eec51058b9fcd8a1f4db13878298560a4ee451028887a0f9c0fe468060c",
+        "observed": "d6817eec51058b9fcd8a1f4db13878298560a4ee451028887a0f9c0fe468060c",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_online_selected.py",
+        "expected": "11b82acb515d2084740853b5e37fbeda18c334995b221b286989bba0963339a4",
+        "observed": "11b82acb515d2084740853b5e37fbeda18c334995b221b286989bba0963339a4",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_online_tuning.py",
+        "expected": "c4f6e2c6559ec79607a26578ad684e12249903ec0f8b15df2ef825a735801f68",
+        "observed": "c4f6e2c6559ec79607a26578ad684e12249903ec0f8b15df2ef825a735801f68",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_optimized_decode.py",
+        "expected": "17cd251dcc817f3b14f54d01c4a9877ea58e601d5cbea5598ac7f0fc241375c5",
+        "observed": "17cd251dcc817f3b14f54d01c4a9877ea58e601d5cbea5598ac7f0fc241375c5",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_prob_decode.py",
+        "expected": "e56558f4df0868a9dcee5d9d948b6365d0fda8e07fa1ac6fff57cd33ffc99ba7",
+        "observed": "e56558f4df0868a9dcee5d9d948b6365d0fda8e07fa1ac6fff57cd33ffc99ba7",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_prob_tree.py",
+        "expected": "f034134e79287796a55d255243ab8d2af94398cecc77b5f0679687be82d3797e",
+        "observed": "f034134e79287796a55d255243ab8d2af94398cecc77b5f0679687be82d3797e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_rank_suffix.py",
+        "expected": "85699da1edbce1482e8c088f2db84cc0f0867487d804c71492b08536f6634f0f",
+        "observed": "85699da1edbce1482e8c088f2db84cc0f0867487d804c71492b08536f6634f0f",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_raven_decode.py",
+        "expected": "b5e74d2da8d3251719b598ef92f40677f9a341a9ee28dbff76f2f7138ff90675",
+        "observed": "b5e74d2da8d3251719b598ef92f40677f9a341a9ee28dbff76f2f7138ff90675",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_readout_ablation.py",
+        "expected": "a0ed2273523bacf35780576ea83912d12f2b5463e6e3a6bdf48d8e49050f2fc3",
+        "observed": "a0ed2273523bacf35780576ea83912d12f2b5463e6e3a6bdf48d8e49050f2fc3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_score_ablation.py",
+        "expected": "b06c7a775fb325a9e6501e7c03421a5cda34dde2d5e919772664496146c9f90e",
+        "observed": "b06c7a775fb325a9e6501e7c03421a5cda34dde2d5e919772664496146c9f90e",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_spec_correction.py",
+        "expected": "2e95a1a40ab0bd93544fc079a8fbd1c05977a5be8e58cc8313d925c209d9852a",
+        "observed": "2e95a1a40ab0bd93544fc079a8fbd1c05977a5be8e58cc8313d925c209d9852a",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_spec_correction_suite.py",
+        "expected": "9a99c4abe930ae63bcdfea490009bf86528f38aef90baf00d137748702866dc2",
+        "observed": "9a99c4abe930ae63bcdfea490009bf86528f38aef90baf00d137748702866dc2",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_spec_reuse_analyze.py",
+        "expected": "ace39edc6aed7bd622ea729f2706c5fffdd8d6af4c37fa6c033a86f1e548de08",
+        "observed": "ace39edc6aed7bd622ea729f2706c5fffdd8d6af4c37fa6c033a86f1e548de08",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_spec_sibling.py",
+        "expected": "c9183139cd21f676cbca8b554e96da02426e497d538594bf68ebe515999b6691",
+        "observed": "c9183139cd21f676cbca8b554e96da02426e497d538594bf68ebe515999b6691",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_suffix_length.py",
+        "expected": "65adb7f4b9ec4f39ee14a7676d67ae998ccb03839beee30d323090a0a69b733d",
+        "observed": "65adb7f4b9ec4f39ee14a7676d67ae998ccb03839beee30d323090a0a69b733d",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_suffix_sources_probe.py",
+        "expected": "a0ae1ba9212d806ed7f8292061b95a8500180fcf5d29af5be40152cdcf3523a6",
+        "observed": "a0ae1ba9212d806ed7f8292061b95a8500180fcf5d29af5be40152cdcf3523a6",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_suffix_spec.py",
+        "expected": "9eeefe691f66a43a96007ccd922e6d73ea19a47c19bf4f64c8663f7621535214",
+        "observed": "9eeefe691f66a43a96007ccd922e6d73ea19a47c19bf4f64c8663f7621535214",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_suffix_union_probe.py",
+        "expected": "11185c4f023930832046ca3564d56ffb7aae31e8f8cafadbbcc53000328c15e3",
+        "observed": "11185c4f023930832046ca3564d56ffb7aae31e8f8cafadbbcc53000328c15e3",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_table2_suite.py",
+        "expected": "645b9e2095c3cb91596950cba58fd69e250328294507fc335dbf3f4e5ac278d9",
+        "observed": "645b9e2095c3cb91596950cba58fd69e250328294507fc335dbf3f4e5ac278d9",
+        "ok": true
+      },
+      {
+        "path": "results/loopfill-table2-20261107-v2/source/tests/test_loop_tree_decode.py",
+        "expected": "7a913e9faa6f8bac11b5d64c12b6aa4fc48b69b45ffb4923d5193dad327a4b04",
+        "observed": "7a913e9faa6f8bac11b5d64c12b6aa4fc48b69b45ffb4923d5193dad327a4b04",
+        "ok": true
+      }
+    ],
+    "inputs": {},
+    "settings": {
+      "max_new_tokens": 1024,
+      "cuda_graph": false,
+      "batches": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "metric": "generated output tokens / synchronized wall time including prefill, decode, CPU scheduling, suffix work and local result persistence; exclude model loading, warmup and network upload"
+    },
+    "protocol_sha256": "49e2609728153a2d85ed3f2e0c13c2923aad702ddc38cdb6762ce19bbdb6a920"
+  }
+]

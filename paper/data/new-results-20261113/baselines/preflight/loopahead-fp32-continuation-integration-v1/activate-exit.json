@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-continuation-integration-v1/activate.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines"
+  ],
+  "pid": 64208,
+  "started_unix": 1794510570.067459,
+  "source_sha256": "eb6be4683b14c914191f47c0b07c5588caf358f5c4c0b05d509206a32dc869ca",
+  "exit_code": 0,
+  "finished_unix": 1794510571.8222945,
+  "exit_evidence": "subprocess_wait"
+}

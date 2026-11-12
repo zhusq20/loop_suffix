@@ -1,0 +1,57 @@
+{
+  "bindings": {
+    "ouro-1.4b/t0": 5,
+    "ouro-1.4b/t1": 7
+  },
+  "attempts": {
+    "ouro-1.4b-ar-t1": 2,
+    "ouro-1.4b-wavefront-t1": 2,
+    "ouro-1.4b-loopspec-dual-t1": 2,
+    "ouro-1.4b-budget-suffix-t1": 2,
+    "ouro-1.4b-loopahead-t1": 2,
+    "ouro-1.4b-dflash-t1": 2,
+    "ouro-1.4b-budget-online-t1": 2,
+    "ouro-1.4b-ar-t0": 2,
+    "ouro-1.4b-wavefront-t0": 2,
+    "ouro-1.4b-loopspec-dual-t0": 2,
+    "ouro-1.4b-budget-suffix-t0": 2,
+    "ouro-1.4b-loopahead-t0": 2,
+    "ouro-1.4b-dflash-t0": 2,
+    "ouro-1.4b-budget-online-t0": 2
+  },
+  "workers": {},
+  "failed": [],
+  "placement": "first_idle_per_cell",
+  "cell_gpus": {
+    "ouro-1.4b-ar-t0": 5,
+    "ouro-1.4b-budget-online-t0": 5,
+    "ouro-1.4b-budget-suffix-t0": 5,
+    "ouro-1.4b-dflash-t0": 5,
+    "ouro-1.4b-loopahead-t0": 5,
+    "ouro-1.4b-loopspec-dual-t0": 5,
+    "ouro-1.4b-wavefront-t0": 5,
+    "ouro-1.4b-ar-t1": 7,
+    "ouro-1.4b-wavefront-t1": 7,
+    "ouro-1.4b-loopspec-dual-t1": 7,
+    "ouro-1.4b-budget-suffix-t1": 6,
+    "ouro-1.4b-loopahead-t1": 5,
+    "ouro-1.4b-dflash-t1": 7,
+    "ouro-1.4b-budget-online-t1": 5
+  },
+  "cell_gpu_uuids": {
+    "ouro-1.4b-ar-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-budget-online-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-budget-suffix-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-dflash-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-loopahead-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-loopspec-dual-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-wavefront-t0": "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-ar-t1": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+    "ouro-1.4b-wavefront-t1": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+    "ouro-1.4b-loopspec-dual-t1": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+    "ouro-1.4b-budget-suffix-t1": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+    "ouro-1.4b-loopahead-t1": "GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a",
+    "ouro-1.4b-dflash-t1": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+    "ouro-1.4b-budget-online-t1": "GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a"
+  }
+}

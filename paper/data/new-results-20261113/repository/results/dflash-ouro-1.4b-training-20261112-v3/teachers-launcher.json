@@ -1,0 +1,33 @@
+{
+  "stage": "teachers",
+  "pid": 10995,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "0-3",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/source/teacher/experiments/baselines/generate_teachers.py",
+    "--model",
+    "ouro-1.4b",
+    "--manifest",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/inputs/dflash-train.jsonl",
+    "--shard",
+    "0",
+    "--shards",
+    "1",
+    "--max-batch",
+    "32",
+    "--kv-budget-gib",
+    "70",
+    "--gpu",
+    "0",
+    "--cpus",
+    "0-3",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0"
+  ],
+  "gpu": 0,
+  "started_unix": 1794428119.7968464,
+  "log": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/logs/teachers.log"
+}

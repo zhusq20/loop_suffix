@@ -1,0 +1,39 @@
+{
+  "ultrachat:over_12000_chars": 34,
+  "ultrachat:empty": 1,
+  "nemotron_code:restored_taco_train_source_checked": 22638,
+  "nemotron_code:redacted_other_source_or_nontrain": 18814,
+  "nemotron_chat:empty": 186656,
+  "codealpaca:candidate_count": 20022,
+  "python:candidate_count": 7326,
+  "math:candidate_count": 7500,
+  "ultrachat:candidate_count": 207830,
+  "nemotron_math:candidate_count": 51432,
+  "nemotron_code:candidate_count": 22638,
+  "reasoning:candidate_count": 31307,
+  "gsm8k:candidate_count": 7473
+}
+loopahead/dev/gsm8k 128
+loopahead/dev/python 128
+loopahead/dev/math 128
+loopahead/dev/reasoning 270
+loopahead/dev/ultrachat 128
+loopahead/confirmation/gsm8k 128
+loopahead/confirmation/python 128
+loopahead/confirmation/math 128
+loopahead/confirmation/reasoning 270
+loopahead/confirmation/ultrachat 128
+dflash/dev/nemotron_math 400
+dflash/dev/nemotron_code 200
+dflash/dev/codealpaca 100
+dflash/dev/ultrachat 300
+loopahead/train/gsm8k 2000
+loopahead/train/python 2000
+loopahead/train/math 2000
+loopahead/train/reasoning 2025
+loopahead/train/ultrachat 1000
+dflash/train/nemotron_math 20000
+dflash/train/nemotron_code 10000
+dflash/train/codealpaca 5000
+dflash/train/ultrachat 15000
+MANIFEST COMPLETE {'loopahead-dev': 782, 'loopahead-confirmation': 782, 'dflash-dev': 1000, 'loopahead-train': 9025, 'dflash-train': 50000, 'dflash-pilot': 2000}

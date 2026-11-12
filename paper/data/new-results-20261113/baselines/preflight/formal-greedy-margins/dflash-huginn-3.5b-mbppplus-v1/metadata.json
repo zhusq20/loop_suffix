@@ -1,0 +1,20 @@
+{
+  "model": "huginn-3.5b",
+  "dataset": "mbppplus",
+  "shard": 0,
+  "shards": 1,
+  "checkpoint_sha256": {
+    "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1",
+      "sha256": "6e9a3d483d4cd89dc02eb6d1e25822eb0fff7c10ca149a7cffd511a6d11b2f5f"
+    },
+    "dflash": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1",
+      "sha256": "c86d72fa5fce9b73604907c9c63c4772d14f8a8d470d1aa9224ea85a73403aab"
+    }
+  }
+}

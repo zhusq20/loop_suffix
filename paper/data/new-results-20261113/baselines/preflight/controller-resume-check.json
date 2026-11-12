@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "cases": 12,
+  "checks": [
+    "disappeared worker without receipt fails",
+    "valid success receipt accepted",
+    "failure receipt remains failed",
+    "wrong receipt PID rejected",
+    "wrong job hash rejected",
+    "unrelated live process rejected",
+    "real live worker adopted: train-ouro-2.6b",
+    "stale start time rejected: train-ouro-2.6b",
+    "real live worker adopted: loopahead-ouro-2.6b-gsm8k-t0",
+    "stale start time rejected: loopahead-ouro-2.6b-gsm8k-t0",
+    "real live worker adopted: loopahead-huginn-3.5b-gsm8k-t0",
+    "stale start time rejected: loopahead-huginn-3.5b-gsm8k-t0"
+  ],
+  "source_sha256": "79c2d16005bb73c518e159c94f0bf5d501a5569f3f476e65b12a1afb5f656995",
+  "tested_unix": 1794323915.8765922,
+  "note": "Temporary receipt fixtures are outside benchmark outputs; live worker checks are read-only."
+}

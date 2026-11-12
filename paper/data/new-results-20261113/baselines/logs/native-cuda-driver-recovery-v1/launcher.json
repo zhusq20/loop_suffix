@@ -1,0 +1,65 @@
+{
+  "pid": 477516,
+  "start_ticks": "39622686",
+  "started_unix": 1794381190.5758479,
+  "argv": [
+    "/opt/conda/bin/python",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/native_cuda_env.py",
+    "--record",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/controller-environment.json",
+    "--",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+    "--execute",
+    "--resume",
+    "--retry-failed",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "--retry-failed",
+    "dflash-ouro-2.6b-bbh-t1",
+    "--retry-failed",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "--retry-failed",
+    "dflash-ouro-2.6b-humanevalplus-t1"
+  ],
+  "resume_argv": [
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+    "--execute",
+    "--resume",
+    "--retry-failed",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "--retry-failed",
+    "dflash-ouro-2.6b-bbh-t1",
+    "--retry-failed",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "--retry-failed",
+    "dflash-ouro-2.6b-humanevalplus-t1"
+  ],
+  "adopted_worker": {
+    "dflash-ouro-2.6b-math500-t1": {
+      "pid": 420683,
+      "gpus": [
+        4
+      ],
+      "started_unix": 1794377022.6200492
+    }
+  },
+  "retry_failed": [
+    "loopahead-huginn-3.5b-bbh-t1",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "dflash-ouro-2.6b-bbh-t1",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "dflash-ouro-2.6b-humanevalplus-t1"
+  ]
+}

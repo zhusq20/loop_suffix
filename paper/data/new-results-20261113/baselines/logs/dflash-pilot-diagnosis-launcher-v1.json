@@ -1,0 +1,50 @@
+[
+  {
+    "name": "dflash-pilot-first-divergence-shard0-v1",
+    "pid": 475583,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_dflash.py",
+      "--ar",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-ouro-2.6b-gsm8k-ar-t0-n20-v1",
+      "--dflash",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-ouro-2.6b-gsm8k-dflash-t0-n20-v1",
+      "--gpu",
+      "1",
+      "--cpus",
+      "4-7",
+      "--shard",
+      "0",
+      "--shards",
+      "2",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-first-divergence-shard0-v1"
+    ],
+    "started_unix": 1794293505.3873687
+  },
+  {
+    "name": "dflash-pilot-first-divergence-shard1-v1",
+    "pid": 475584,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_dflash.py",
+      "--ar",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-ouro-2.6b-gsm8k-ar-t0-n20-v1",
+      "--dflash",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-ouro-2.6b-gsm8k-dflash-t0-n20-v1",
+      "--gpu",
+      "5",
+      "--cpus",
+      "52-55",
+      "--shard",
+      "1",
+      "--shards",
+      "2",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-first-divergence-shard1-v1"
+    ],
+    "started_unix": 1794293505.4011889
+  }
+]

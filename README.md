@@ -1,18 +1,30 @@
 # LoopFill (loop_suffix)
 
+**本轮新实验全部完成（2026-11-13）**：DFlash/LoopAhead三模型延迟基线72/72组、额外吞吐20组、SQL回放42组均已结束；六个正式草稿器训练完成。新增[最终结果与历史证据归档](paper/data/new-results-20261113/README.md)，包含逐请求数据、冻结配置/源码、训练成本与退出凭据，并保留历史后端、AR分母及吞吐入场顺序限制。[草稿器权重发布清单](paper/data/published-drafter-weights.json)提供Hugging Face仓库、固定revision及SHA256。差异诊断保持取消。
+
+**差异诊断全部取消（2026-11-13 04:56）**：用户最新明确要求“不要做差异诊断实验”（原话：“不需要做差异诊断实验”）。已停止正在运行的 Ouro-1.4B/DFlash/GSM8K 诊断，并取消其余5组 DFlash 诊断和1组 LoopAhead/MATH500 FP32续跑；两个诊断调度进程已退出，相关队列设置 `STOP` 并标记 `cancelled_by_user`。正式测速、AR对照、耗时分析和SQL评测继续。只有用户后续明确要求恢复差异诊断时才能重启；一般性的“继续实验”不恢复已取消项目。见[取消与退出凭据](paper/data/new-results-20261113/repository/results/output-diagnostics-cancelled-20261113-045608/cancellation.json)。
+
+**剩余实验按单元并行调度（2026-11-13）**：按用户最新要求，Ouro-1.4B SQL剩余七组取消同温度绑定GPU7，改为各单元独立领取GPU 0–7的空闲设备；多卡空闲时并行派发。其他现存待运行队列已采用八卡空闲领取。完成结果保留，跨卡设备和调度修订进入最终验收记录。见[实时状态](paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/status.json)及[调度修订](paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/amendments/parallel-cells-20261113/scheduling.json)。
+
+**输出差异诊断再次停止（2026-11-13）**：用户再次明确要求不运行输出差异诊断。已停止恢复队列中正在运行的 Ouro-2.6B/LoopAhead/MATH500 FP32 诊断，并取消待运行的6组 Ouro-1.4B DFlash 数值诊断；两个诊断控制器均已停止并设置 `STOP` 标记。已有产物保留，正式测速、AR对照、耗时分析和完整性检查继续。未经用户后续明确要求不得恢复该类诊断。见[本次取消及退出凭据](paper/data/new-results-20261113/repository/results/output-diagnostics-cancelled-20261113/cancellation.json)。
+
+**Ouro-1.4B Agentic SQL补测（2026-11-12）**：沿用已完成两模型的同一100条SQL历史请求，新增七方法×T=0/1共14组、1,400次评测。等待该模型DFlash完整训练验收后，自动进行接口验证、正式测速及独立结果导出。见[协议](docs/loopfill-agentic.md)、[输入核验](paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/checks/input-audit.json)及[队列状态](paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-ouro14-20261112/status.json)。
+
+**输出差异诊断已取消（2026-11-12）**：按用户要求，停止27组诊断队列中的26组待做任务，保留已有1组结果；Ouro-1.4B后续DFlash评测中的6项差异诊断也已撤下。训练、正式测速、AR对照、耗时分析及结果完整性检查继续。见[取消记录](paper/data/new-results-20261113/repository/results/output-diagnostics-cancelled-20261112/cancellation.json)。
+
 **论文新数据归档（2026-11-12）**：[集中索引](paper/data/new-results-20261112/README.md)提供 DFlash/LoopAhead 新基线、SQL补充、完整机制耗时分析、五个已完成草稿器的训练与成本，以及进行中任务的状态快照。包含184个已结束请求流、48,744条逐请求记录与SHA256清单，可用标准Python离线核验；各后端、AR分母和缺失退出码状态保留。
 
 **八卡任务调度与失败单元重跑（2026-11-12）**：剩余 DFlash 重测单元进入 GPU 0–7 共享队列，
 优先补跑 LoopAhead/Ouro-2.6B/SpecBench/T=1 的启动锁冲突单元。
 已有 GPU 工作进程继续完成；待运行长任务优先填入空闲卡，同卡比较组保留绑定。
-见[共享队列实时状态](results/gpu-balanced-queue-20261112-v1/status.json)、
-[重跑状态](results/gpu-balanced-queue-20261112-v1/retry-status.json)与
+见[共享队列实时状态](paper/data/new-results-20261113/repository/results/gpu-balanced-queue-20261112-v1/status.json)、
+[重跑状态](paper/data/new-results-20261113/repository/results/gpu-balanced-queue-20261112-v1/retry-status.json)与
 [调度修订](docs/dflash-table12-remeasurement.md)。
 
 **Agentic Table 1 补充（2026-11-12）**：Huginn-3.5B、Ouro-2.6B × 全部七方法 × temperature=0/1，
 共28项、2,800次SQL执行—修复请求回放；仅使用本轮指定的GPU 0/1/5/7。
-见[实验协议](docs/loopfill-agentic.md)、[实时状态](results/loopfill-agentic-sql-table1-20261112/status.json)和
-[结果报告](results/loopfill-agentic-sql-table1-20261112/report.md)。全部完成且逐请求审计通过后自动导出论文表格。
+见[实验协议](docs/loopfill-agentic.md)、[实时状态](paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-table1-20261112/status.json)和
+[结果报告](paper/data/new-results-20261113/repository/results/loopfill-agentic-sql-table1-20261112/report.md)。全部完成且逐请求审计通过后自动导出论文表格。
 
 **DFlash 表一/表二重测（2026-11-12）**：新增共享 KV 的多请求目标验证和 batched drafter，
 按原冻结输入准备 Huginn-3.5B、Ouro-2.6B 的34个单元，表二覆盖 B=1/2/4/8/16。
@@ -25,7 +37,7 @@
 
 **论文数据归档**：[图表数据索引](paper/data/README.md)列出主表、四组消融、来源构成、分数协调、树采样和机制图所需的CSV/JSON及压缩逐请求统计。支持仅用已提交数据重画；耗时补采保存明确标记的已完成部分快照。
 
-**三项机制分析（2026-11-09，已开始）**：36组消融/17,280条请求及240条提前计算诊断已重新核验，负载—预算曲线、进度CDF与等待分解图已生成。阶段耗时小样本队列已启动：两模型、B1/B16、四方法，每流固定六任务分层24题，正常计时与诊断分开；本轮不补B4/B8。见[执行范围、已有结果与计时口径](docs/loopfill-mechanisms.md)、[补采实时状态](results/loopfill-mechanisms-20261109/timing/status.json)。
+**三项机制分析（2026-11-09，已开始）**：36组消融/17,280条请求及240条提前计算诊断已重新核验，负载—预算曲线、进度CDF与等待分解图已生成。阶段耗时小样本队列已启动：两模型、B1/B16、四方法，每流固定六任务分层24题，正常计时与诊断分开；本轮不补B4/B8。见[执行范围、已有结果与计时口径](docs/loopfill-mechanisms.md)、[补采实时状态](paper/data/new-results-20261112/repository/results/loopfill-mechanisms-20261109/timing/status.json)。
 
 **最终接受token来源统计（2026-11-09，已完成）**：复用表2三模型×五档B的15组、7,200次请求，无新推理。B16下后缀来源占Huginn/Ouro-1.4B/Ouro-2.6B最终decode输出的38.19%/41.41%/42.23%，浅层模型合计56.56%/56.35%/56.67%；其余为未命中候选的全深度输出，prefill首token单列。逐请求计数与哈希审计通过。见[口径、结果与分任务图](docs/loopfill-token-sources.md)。长上下文、历史积累、高熵场景分析已按用户要求取消。
 

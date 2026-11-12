@@ -1,0 +1,167 @@
+{
+  "status": "complete_formal_sampling_cell_with_declared_limitations",
+  "checked_unix": 1794384103.0924995,
+  "completed_cells": 24,
+  "expected_cells": 72,
+  "previous_commit": "8a472adb255232420db4b20385d5b25d10ca792a",
+  "previous_23_rows_and_agreements_unchanged": true,
+  "requests": 270,
+  "summaries": {
+    "loopahead": {
+      "decode_tokens": 55112,
+      "decode_s": 2633.1633433550596,
+      "loops": 384424,
+      "tok_s": 20.9299586898315,
+      "gamma": 4.587601190352319
+    },
+    "ar": {
+      "decode_tokens": 52839,
+      "decode_s": 7533.878991141915,
+      "loops": 1690848,
+      "tok_s": 7.0135185423241255,
+      "gamma": 1.0
+    }
+  },
+  "journal_sha256": {
+    "loopahead": "b290fcabc8085c836b953171aa7b4033a0e08d266524270cc4ccb70cfdbd522d",
+    "ar": "99dc13f6558b0b8535f5f7c2a3c8312445bc99d1bad2f924cade209c5eb372d1"
+  },
+  "metadata_sha256": {
+    "loopahead": "162af8e0123ee939e57f29cd1ec5cacdd7cc0b51461bfa97c80e080d2ca8f2e3",
+    "ar": "482338f8b352ea808d08d14f053a49db69b3a40e0342f7fd9821700e9e2a0d10"
+  },
+  "execution_evidence": {
+    "loopahead": {
+      "kind": "actual_successful_process_exit",
+      "pid": 478437,
+      "launch_sha256": "e28489c682ba348dcfb003799027c0301f987926d28660ec7da8cb6bc376c85f",
+      "exit_receipt_sha256": "cc4f35e343fe19a5bc0379e9611a5b684bb9dc8a0e10f1d7ac55744a86ad1fd7",
+      "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+    },
+    "ar": {
+      "kind": "verified_archived_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-bbh-ar",
+      "requests_sha256": "99dc13f6558b0b8535f5f7c2a3c8312445bc99d1bad2f924cade209c5eb372d1",
+      "limitation": "Historical measurement, not a new process exit or same-date timing."
+    }
+  },
+  "actual_exit_receipt": {
+    "name": "loopahead-huginn-3.5b-bbh-t1-v1",
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "loopahead",
+      "--dataset",
+      "bbh",
+      "--temperature",
+      "1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1"
+    ],
+    "pid": 478437,
+    "started_unix": 1794381268.0077837,
+    "exit_code": 0,
+    "finished_unix": 1794383996.784104
+  },
+  "worker_exit": {
+    "worker_pid": 478426,
+    "started_unix": 1794381267.9763517,
+    "job_sha256": "75257ffea98ff640eb79ccfc6dadb8d3f8c1da2234e6dd213f38f251ebdd2d38",
+    "source_sha256": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "exit_code": 0,
+    "finished_unix": 1794383996.8084824
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794384004.410418,
+    "completion_basis": "direct_child_exit_code"
+  },
+  "config": {
+    "total": 32,
+    "first": 4,
+    "second": 8,
+    "future": 2,
+    "retain": 32,
+    "execute": 16,
+    "guard": 1,
+    "stride": 2,
+    "family": "huginn",
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+  "training_audit_sha256": "d4a29c8c6e48ff6c9e830ba41f332536e71e8b761afaa76335924d55d25f5379",
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "native_driver_recovery_report_sha256": "58183898d276d7caeecfd5421e1527ea1704943a5d6d1f896061491ab8333397",
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 478437,
+    "started_unix": 1794381269.782065,
+    "acquired_unix": 1794381270.6292198,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "result": {
+    "method": "loopahead",
+    "model": "huginn-3.5b",
+    "benchmark": "bbh",
+    "temperature": "1",
+    "eta": "2.9842308911748843",
+    "gamma": "4.587601190352319",
+    "method_tok_s": "20.9299586898315",
+    "ar_tok_s": "7.0135185423241255",
+    "drafter_time_frac": "NA",
+    "match_rate": "0.007407407407407408",
+    "engine": "ours",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected; Huginn migration, not a model evaluated in the LoopAhead paper",
+    "eta_latency": "2.86115140185059",
+    "eta_throughput": "2.9842308911748843",
+    "aligned_token_match_rate": "0.1631296789747494",
+    "method_decode_tokens": "55112",
+    "ar_decode_tokens": "52839",
+    "method_decode_s": "2633.1633433550596",
+    "ar_decode_s": "7533.878991141915",
+    "ar_provenance": "archived_same_host_AR",
+    "ar_first_completed_unix": "1794072706.5598738",
+    "ar_last_completed_unix": "1794080274.373129",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t1"
+  },
+  "agreement": {
+    "match_rate": 0.007407407407407408,
+    "aligned_token_match_rate": 0.1631296789747494,
+    "exact_sequences": 2,
+    "requests": 270
+  },
+  "output_sha256": {
+    "results.csv": "c49ecdd1ef1d68a265ac140e0c970d8bc169c7ccb3ff2bc44a3a65f74e025867",
+    "table2_rows.md": "b8db379b025c5f0e21cbaac18f563a974d96c80441cfb8cb6b5b0fcb2a1886a5",
+    "formal-agreement.json": "f1fdf5cdda091d4fc20ac21e2ee2f4f7d54e089df0c4bb51a66078c409fefe0f",
+    "formal-matrix-status.json": "2e4291caf772ea6e1ae5371b0d29c6ea3ee3e123e6ba7ddbd1b78ebbb313b327"
+  },
+  "collector_exit_code": 0,
+  "collector_stdout": "{\"completed\": 24, \"expected\": 72, \"missing\": 48}\n",
+  "collection_source_sha256": {
+    "collect_results.py": "7afc730570a04c2a350e7e6b347c7e39e80ceaf5bedca7db1bf19996cd40a770",
+    "result_evidence.py": "d3b438b9ca068a48f6f68f00cad358e6b52d95ad7a713609846faba9161d0d2a"
+  },
+  "limitations": [
+    "Huginn is our adaptation, not an original-paper evaluated model or author checkpoint.",
+    "AR is the approved archived same-host denominator; cross-date timing differences and shared-host conditions are not corrected.",
+    "T1 same-seed token agreement is descriptive; this cell alone is not a sampling-distribution proof.",
+    "The original CUDA-startup failure remains archived and has not been relabelled.",
+    "24/72 cells complete; final training, remaining benchmarks and greedy diagnostics are still pending."
+  ]
+}

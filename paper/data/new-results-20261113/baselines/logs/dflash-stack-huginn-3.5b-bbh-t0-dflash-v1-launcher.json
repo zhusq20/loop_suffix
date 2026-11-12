@@ -1,0 +1,26 @@
+{
+  "name": "dflash-stack-huginn-3.5b-bbh-t0-dflash-v1",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "dflash",
+    "--dataset",
+    "bbh",
+    "--temperature",
+    "0",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-v1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886"
+  ],
+  "pid": 368685,
+  "started_unix": 1794415630.9732687
+}

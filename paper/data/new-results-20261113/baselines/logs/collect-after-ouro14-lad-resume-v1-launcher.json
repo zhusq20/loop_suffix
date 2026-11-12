@@ -1,0 +1,27 @@
+{
+  "name": "collect-after-ouro14-lad-resume-v1",
+  "gpu": 3,
+  "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+  "argv": [
+    "/opt/conda/bin/python",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/collect_results.py",
+    "--partial"
+  ],
+  "started_unix": 1794481944.9851506,
+  "pid": 253147,
+  "start_ticks": "49698127",
+  "supervisor_identity": {
+    "pid": 253146,
+    "state": "R",
+    "start_ticks": "49698121",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/collect-after-ouro14-lad-resume-v1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  }
+}

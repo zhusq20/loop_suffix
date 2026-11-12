@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_numerical_matrix.py",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/numerical-matrix-partial-v24",
+    "--partial"
+  ],
+  "pid": 62962,
+  "started_unix": 1794510487.0493634,
+  "source_sha256": "d1fd94843ba67717bfc9a52457029630bfd3cde10ace9ae1b2bea009376d42a6"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "same_training_evidence_with_fresh_actual_CPU_audit_exit",
+  "previous_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v1/report.json",
+  "previous_report_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "new_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v2/report.json",
+  "new_report_sha256": "65ab92d93a2c5929d68fa13ae7ac494597cca6a56bcb71805721bb096cbbdc62",
+  "actual_audit_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/audit-dflash-ouro-2.6b-formal-v2-finished.json",
+    "sha256": "283dbc158626e8d6c0b4764cc600975b085e3a0e7f1705d7323fcabf2450f365",
+    "exit_code": 0
+  },
+  "actual_audit_launcher_sha256": "838609a98e7456aed89f5fbe8ce2cdd58715d27b8702616538bf6b0795b7fe68",
+  "all_fields_except_audit_timestamps_equal": true,
+  "new_gpu_runs": 0,
+  "measured_checkpoint_unchanged": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+  "checked_unix": 1794517232.1429372,
+  "limitation": "This records a new CPU recheck of existing training artifacts. It does not invent a missing earlier audit-process receipt or replace benchmark provenance."
+}

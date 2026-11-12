@@ -1,0 +1,35 @@
+{
+  "status": "actual_live_next_same_stack_AR_not_completed",
+  "observed_unix": 1794399267.003966,
+  "pid": 182221,
+  "parent": 182214,
+  "state": "R",
+  "start_ticks": "41420567",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "ar",
+    "--dataset",
+    "gsm8k",
+    "--temperature",
+    "0",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1"
+  ],
+  "metadata_sha256": "f87f955d671045687c72e03dd695518247591426a49889ae8720f22423acc3f2",
+  "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+  "prefix_requests": 3,
+  "prefix_sha256": "6e7d531feeff377bca77c8cc927cc33c103da3391c4d989979ea56f1709f0841",
+  "native_driver_map": "/usr/lib64/libcuda.so.570.148.08",
+  "limitations": [
+    "Live AR stage only; final narrow DFlash timed/profile stages remain pending."
+  ]
+}

@@ -146,7 +146,9 @@ def run(args):
         from baselines.dflash.projected_draft import inference_draft_class
         target = PackedDFlashTarget(native)
         checkpoint = model_record['dflash_checkpoint']
-        draft_cls=inference_draft_class() if spec.backend=='huginn' else DFlashDraftModel
+        draft_config = json.loads((Path(checkpoint)/'config.json').read_text())
+        projected = 'ProjectedDFlashDraftModel' in draft_config.get('architectures', [])
+        draft_cls=inference_draft_class() if projected else DFlashDraftModel
         draft, info = draft_cls.from_pretrained(checkpoint, torch_dtype=torch.bfloat16,
             local_files_only=True, attn_implementation='sdpa', output_loading_info=True)
         if any(info[k] for k in ('missing_keys','unexpected_keys','mismatched_keys','error_msgs')):
@@ -179,7 +181,8 @@ def run(args):
                       LoopAheadConfig(total=32,first=4,second=8,future=2,guard=1,stride=2,
                                       family='huginn',temperature=args.temperature))
             if args.temperature and spec.backend=='ouro':
-                policy = AdmissionPolicy.load(suite/'inputs'/'loopahead-admission.json')
+                policy = AdmissionPolicy.load(suite/'inputs'/model_record.get(
+                    'loopahead_admission', 'loopahead-admission.json'))
                 assert policy.record['checkpoint_sha256'] == model_record['checkpoint_sha256']['loopahead']
         else:
             engine = PackedLoopExecutor([backbone], cuda_graph=False)
@@ -291,7 +294,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--suite', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
-    parser.add_argument('--model',choices=['huginn-3.5b','ouro-2.6b'],required=True)
+    parser.add_argument('--model',choices=['huginn-3.5b','ouro-2.6b','ouro-1.4b'],required=True)
     parser.add_argument('--arm', choices=['ar','wavefront','loopspec-dual','budget-suffix','budget-online','loopahead','dflash'], required=True)
     parser.add_argument('--temperature', type=float, choices=[0.,1.], required=True)
     parser.add_argument('--q', type=int, default=4)

@@ -1,0 +1,44 @@
+{
+  "gpu": 2,
+  "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/plan.json",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "8-11",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2",
+    "--job",
+    "table1-huginn-3.5b-specbench-t1",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-specbench-t1/attempt1",
+    "--lock-fd",
+    "7"
+  ],
+  "started_unix": 1794438976.827492,
+  "pid": 252765,
+  "start_ticks": "45401312",
+  "supervisor_identity": {
+    "pid": 252764,
+    "state": "R",
+    "start_ticks": "45401305",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/table1-huginn-3.5b-specbench-t1-attempt1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "7"
+    ]
+  },
+  "outcome": "complete",
+  "attempt": 1,
+  "out": "runs/table1-huginn-3.5b-specbench-t1/attempt1",
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "exit_code": 0,
+  "exit_evidence": "supervisor_waitpid",
+  "finished_unix": 1794442879.3739097
+}

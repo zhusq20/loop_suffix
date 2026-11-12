@@ -1,0 +1,27 @@
+{
+  "name": "dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "dflash",
+    "--dataset",
+    "humanevalplus",
+    "--temperature",
+    "0",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+    "--profile"
+  ],
+  "pid": 336954,
+  "started_unix": 1794412850.568588
+}

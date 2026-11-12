@@ -1,0 +1,10 @@
+Set TORCH_CUDA_ARCH_LIST to 9.0
+/ossfs/workspace/sz/loopfill/experiments/baselines/third_party/SpecForge/specforge/modeling/draft/llama3_eagle.py:33: UserWarning: flash_attn is not found, falling back to flex_attention. Please install flash_attn if you want to use the flash attention backend.
+  warnings.warn(
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+`torch_dtype` is deprecated! Use `dtype` instead!
+{"model": "ouro-2.6b", "revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd", "seed": 42, "epochs": 1, "world_size": 1, "micro_batch": 4, "accumulation": 1, "global_batch": 4, "examples": 32, "max_seq": 3072, "num_anchors": 512, "block_size": 16, "loss_decay_gamma": 7.0, "lr": 0.0006, "warmup_ratio": 0.04, "max_grad_norm": 1.0, "weight_decay": 0.0, "adam_betas": [0.9, 0.999], "total_updates": 1, "target_features": [145, 156, 167, 178, 189], "mask_token_id": 0, "draft_parameters": 277898496, "smoke": true, "torch": "2.9.1+cu128", "transformers": "4.57.1", "gradient_checkpointing": false, "distributed": "DDP", "final_global_batch": "deterministically pad from shuffled epoch start", "target_generation_software": "recorded in teacher sources; target features recomputed in training environment", "source_sha256": "88854a5016c9c23e936b57a251a97b1ce277d7b7621f4d87ae275c0115d3be19"}
+/tmp/loopfill-specforge-venv/lib/python3.11/site-packages/torch/nn/attention/flex_attention.py:1622: FutureWarning: return_lse is deprecated and will be removed in v2.10. Please use return_aux=AuxRequest(lse=True) instead.
+  _warn_once(
+{"step": 1, "total_updates": 1, "epoch": 0, "loss": 11.36240291595459, "accuracy": 0.0, "lr": 0.0, "grad_norm": 116.24474334716797, "update_wall_s": 6.255057767033577, "peak_allocated_bytes": 36400125440, "finished_unix": 1794292518.8731396}

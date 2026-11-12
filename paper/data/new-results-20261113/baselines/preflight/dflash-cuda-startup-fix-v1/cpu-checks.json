@@ -1,0 +1,101 @@
+{
+  "existing_source_identities_verified": [
+    "dflash-stack-ouro-2.6b-bbh-t0-ar-v1",
+    "dflash-stack-ouro-2.6b-bbh-t0-dflash-profile-v1",
+    "dflash-stack-ouro-2.6b-bbh-t0-dflash-v1",
+    "dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1",
+    "dflash-stack-ouro-2.6b-gsm8k-t0-dflash-profile-v1",
+    "dflash-stack-ouro-2.6b-gsm8k-t0-dflash-v1",
+    "dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1",
+    "dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1",
+    "dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-profile-v1",
+    "dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1",
+    "dflash-stack-ouro-2.6b-math500-t0-ar-v1",
+    "dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+    "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1"
+  ],
+  "reused_completed_stages": [
+    {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+      "original_gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+      "requests": 378,
+      "requests_sha256": "e046de04323928dda5028242192d7bd64fd9baea5e1481a02b0413770611ec60",
+      "actual_exit_receipt": {
+        "name": "dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+        "argv": [
+          "/tmp/loopfill-dflash-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+          "--model",
+          "ouro-2.6b",
+          "--method",
+          "ar",
+          "--dataset",
+          "mbppplus",
+          "--temperature",
+          "0",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1"
+        ],
+        "pid": 514462,
+        "started_unix": 1794349368.1231291,
+        "exit_code": 0,
+        "finished_unix": 1794355391.2220597
+      },
+      "reused_unix": 1794357180.4223478,
+      "note": "Existing measurement retained; no request rerun."
+    },
+    {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+      "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+      "original_gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+      "requests": 378,
+      "requests_sha256": "2440351e5519929e25a5ea94319d08352d79750f05daad165e61e2c79a76ec9c",
+      "actual_exit_receipt": {
+        "name": "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+        "argv": [
+          "/tmp/loopfill-dflash-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+          "--model",
+          "ouro-2.6b",
+          "--method",
+          "dflash",
+          "--dataset",
+          "mbppplus",
+          "--temperature",
+          "0",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+          "--checkpoint",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+        ],
+        "pid": 77179,
+        "started_unix": 1794355391.261442,
+        "exit_code": 0,
+        "finished_unix": 1794356778.9513283
+      },
+      "reused_unix": 1794357181.1579149,
+      "note": "Existing measurement retained; no request rerun."
+    }
+  ],
+  "mismatched_task_rejected": true,
+  "corrupt_archived_decode_rejected": true,
+  "cuda_initialized": false,
+  "note": "CPU checks only; startup race test uses mocks, real next acquisition pending.",
+  "fault_injection_unittest": {
+    "command": "taskset -c 80-83 python experiments/baselines/test_gpu_startup.py",
+    "passed": 6,
+    "failed": 0,
+    "scope": "CPU mocked CUDA and process queries, not real GPU acquisition"
+  }
+}

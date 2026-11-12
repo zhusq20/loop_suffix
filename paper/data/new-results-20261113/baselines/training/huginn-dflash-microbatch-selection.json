@@ -1,0 +1,18 @@
+{
+  "trials": [
+    {
+      "micro_batch": 4,
+      "status": "complete",
+      "peak_allocated_bytes": 58022046720,
+      "smoke": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-micro4-memory-smoke-v1",
+      "update_wall_s": 11.007435463368893
+    }
+  ],
+  "selected_micro_batch": 4,
+  "peak_budget_bytes": 128849018880,
+  "world_size": 4,
+  "global_batch": 32,
+  "accumulation": 2,
+  "selected_unix": 1794330462.8913133,
+  "note": "One-update memory probes use the longest32 eligible examples from the completed50k teacher set; formal training starts fresh."
+}

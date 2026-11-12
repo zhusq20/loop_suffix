@@ -1,0 +1,10 @@
+...................s.s.s.s.s.s.s.s.s.s.                                  [100%]
+=============================== warnings summary ===============================
+../../../opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:129
+  /opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 803: system has unsupported display driver / cuda driver combination (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:109.)
+    return torch._C._cuda_getDeviceCount() > 0
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [10] tests/test_loop_sampling.py:37: CUDA unavailable
+29 passed, 10 skipped, 1 warning in 7.84s

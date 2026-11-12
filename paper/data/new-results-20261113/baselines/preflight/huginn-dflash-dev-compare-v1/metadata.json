@@ -1,0 +1,265 @@
+{
+  "plan": {
+    "model": "huginn-3.5b",
+    "stage": "heldout_feasibility",
+    "reportable": false,
+    "manifest_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/dflash-dev.jsonl",
+    "manifest_sha256": "03b2009bf320d758be73a2204aa0844278b820a081b7cb4f91e71c726947af99",
+    "count": 20,
+    "selection": "Lowest SHA256(seed:source_id) in each source pool, then same hash order",
+    "selection_seed": 20261111,
+    "pool_counts": {
+      "nemotron_math": 8,
+      "nemotron_code": 4,
+      "codealpaca": 2,
+      "ultrachat": 6
+    },
+    "exclusion_manifests": {
+      "dflash-train": {
+        "count": 50000,
+        "sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4"
+      },
+      "dflash-pilot": {
+        "count": 2000,
+        "sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16"
+      },
+      "loopahead-train": {
+        "count": 9025,
+        "sha256": "7bfb0f750708ad9b09d0f700f913eb849eba20984d3c6f645352f0933de4ae34"
+      }
+    },
+    "max_new_tokens": 128,
+    "temperature": 0.0,
+    "graph": false,
+    "compile": false,
+    "rows": [
+      {
+        "source_id": "nemotron-v1/e89837cf-9207-443b-99df-5b22f0ce3c7f",
+        "pool": "nemotron_math",
+        "prompt_sha256": "9e8aa6a4e914d739c5b88e153c3e269cc92d1ff4896c83dc509de842b7dcf28f",
+        "normalized_question_sha256": "ef11e2e875256a5f66a3ddc708ef754677e81110d83e38b38ffe83cbaed88b5f"
+      },
+      {
+        "source_id": "nemotron-v1/a3e49dea-96ff-4e4f-a2f2-c8cb253e4d46",
+        "pool": "nemotron_math",
+        "prompt_sha256": "b6d575b9feb3daa6fde8685360142ed7487f7cb9f6f6ac3308223f9ea51d6878",
+        "normalized_question_sha256": "39d7099d8db8cdc813422f3a1ae67d97cb99babef7c3bc11d547b0529f0d4f9d"
+      },
+      {
+        "source_id": "ultrachat/adcda52b719987653efa3dfe733701bd01474cc0bc10ee6823fdafc68c588a68",
+        "pool": "ultrachat",
+        "prompt_sha256": "adcda52b719987653efa3dfe733701bd01474cc0bc10ee6823fdafc68c588a68",
+        "normalized_question_sha256": "5472de1053ce4f5a2a37610d618b4a599e27a5e8cdcc52743aa8703eedafb2f7"
+      },
+      {
+        "source_id": "nemotron-v1/b68a9b60-7f65-467e-a7f5-9f646860bf52",
+        "pool": "nemotron_math",
+        "prompt_sha256": "6cf5d334830717b184e6f1b9c1efb22b2b7b0d8830f1ccbe9ef8c28eb535be85",
+        "normalized_question_sha256": "3262e077aad197a4178364c446ee24dd89ffead6e407ae196f2bb5f5b1884b40"
+      },
+      {
+        "source_id": "nemotron-v1/a322ade6-c8e8-42c7-aec4-a783ff417bb8",
+        "pool": "nemotron_math",
+        "prompt_sha256": "1e4df15dfe40ee1fcd2d326ddff6e3a28a4da4210e412b8928ae5d5731a3aa94",
+        "normalized_question_sha256": "6619f2fae778770c14506f3247f4c98064d67ccd9b2ff62e0d2b2bfce1752561"
+      },
+      {
+        "source_id": "ultrachat/e7d03eefaa0b8068850fb7a01f7d74ccb829c470541a549391dfc6d3f4437eaf",
+        "pool": "ultrachat",
+        "prompt_sha256": "e7d03eefaa0b8068850fb7a01f7d74ccb829c470541a549391dfc6d3f4437eaf",
+        "normalized_question_sha256": "15832642e244f00acb1f45de8b9fe4ec14d0167bc38c85f9c770b36b6c0d8ed1"
+      },
+      {
+        "source_id": "nemotron-v1/d84168e0-787c-49fa-a41d-e3734f07a9e1",
+        "pool": "nemotron_math",
+        "prompt_sha256": "ef98e8870f4bdea3ad54e484fd62b7b6f6088f592262515caa2a4c23c4ba02c9",
+        "normalized_question_sha256": "1fb91c2ffa4f5975155606719c408699555b6029a7ad5c476e7904ad8db24df9"
+      },
+      {
+        "source_id": "nemotron-v1/644b6135-3f1a-4780-bf7c-9f0c29eea9f0",
+        "pool": "nemotron_code",
+        "prompt_sha256": "3fd43ba7c9ff84dcb359e0699ac08207ee956e078bdb6c83fdc7900315633491",
+        "normalized_question_sha256": "4ba77ffa2c0a80b4d492afc44448c7548324e9002ec850faa40cb1c3cce56c8f"
+      },
+      {
+        "source_id": "codealpaca/722",
+        "pool": "codealpaca",
+        "prompt_sha256": "b3dbd747d823451704ced0bcd7cd7a680d81fe0a9b50c7396f03dbb189a5d494",
+        "normalized_question_sha256": "98a885c700d299c77afbe740156f2b847d91ed9137ff48242892b7d87f522587"
+      },
+      {
+        "source_id": "nemotron-v1/008836db-6c90-4b52-a78c-8d4e38a7fdbf",
+        "pool": "nemotron_math",
+        "prompt_sha256": "e1ac44f7571fb7678b97e53f7d63b2ef5008363ca5c6c1179b3f55490b17152b",
+        "normalized_question_sha256": "ee6febe378414e031d5954f6a689220a1f9aa55c6387d70ffa95a3bd19e3c622"
+      },
+      {
+        "source_id": "nemotron-v1/079624e4-255f-4a4b-8daa-c11e39d6537a",
+        "pool": "nemotron_math",
+        "prompt_sha256": "82528604acfe72ebb535ca4230734c505cb6e7d072c3809533c9eb5d917dcef8",
+        "normalized_question_sha256": "27e1fa3f575bcdcba1ec3e42ebb5186d9002d8050556540901aaae33f7c13ca0"
+      },
+      {
+        "source_id": "codealpaca/17510",
+        "pool": "codealpaca",
+        "prompt_sha256": "095cece35c0a57fc91cd5df579a417ccdef14f8330c6a3c886573a0098b0d5cc",
+        "normalized_question_sha256": "2f3117e93a28e3fb72a0c48fe38ace396792b10c160cd7a4de17b29c49b7bfc2"
+      },
+      {
+        "source_id": "ultrachat/bb6f66ff5c67053129dc3b9f2afaff7790873cd69667fb15957c99d9879f73eb",
+        "pool": "ultrachat",
+        "prompt_sha256": "bb6f66ff5c67053129dc3b9f2afaff7790873cd69667fb15957c99d9879f73eb",
+        "normalized_question_sha256": "3e2d2dcf64d08054db880b74225c3616c097dfad5e506fcf9378e21932f69090"
+      },
+      {
+        "source_id": "nemotron-v1/a0f6b5d0-01eb-4c4c-a68b-710a2f36aa73",
+        "pool": "nemotron_code",
+        "prompt_sha256": "051c8dbdf8c32f952feb33bff7a6d1f95e3a2bb60904876bb2857d3e4f0ead8b",
+        "normalized_question_sha256": "f514ddf75696f7c6ed73bba81738f3a2e56fd0e570186c0a67688e215c58e538"
+      },
+      {
+        "source_id": "nemotron-v1/7410adfe-3e9f-4ac8-a525-ec370a8ae2d3",
+        "pool": "nemotron_math",
+        "prompt_sha256": "5a2d90325ce8fe41e457e064931f5930e64142e4c5784f04391fc1eff53cfe15",
+        "normalized_question_sha256": "12f0e5822d3eb104715c05ad6a3234566b4387545342cee1ad493d77cd2e0017"
+      },
+      {
+        "source_id": "ultrachat/10517dfd119469bd5ffa2b6601f25353ce2d92ab9ce10529c85537effa2224e1",
+        "pool": "ultrachat",
+        "prompt_sha256": "10517dfd119469bd5ffa2b6601f25353ce2d92ab9ce10529c85537effa2224e1",
+        "normalized_question_sha256": "a003f2e9051e00df0acb49097e3b7ba921fdc0355d68f08ea8ed6d9762b4938b"
+      },
+      {
+        "source_id": "ultrachat/7533291e998e8947ab4d0aca7e02f8c9730d814e719c2aae4f80321e5fc93630",
+        "pool": "ultrachat",
+        "prompt_sha256": "7533291e998e8947ab4d0aca7e02f8c9730d814e719c2aae4f80321e5fc93630",
+        "normalized_question_sha256": "7b345205abb412b7fcec95fcf4023834005d7524d95e3ff66499b9633c23b0d7"
+      },
+      {
+        "source_id": "ultrachat/6eb7f07554ec4b978b4231cf28549a9b81f91be10d24deb9cee5baa64c6ed3f4",
+        "pool": "ultrachat",
+        "prompt_sha256": "6eb7f07554ec4b978b4231cf28549a9b81f91be10d24deb9cee5baa64c6ed3f4",
+        "normalized_question_sha256": "d2385ae75292cb3b8adcbe4fc221388794294d020f8bc92a44cdc07c8da50290"
+      },
+      {
+        "source_id": "nemotron-v1/5f969982-5e75-4028-96ef-ac01ecb977d6",
+        "pool": "nemotron_code",
+        "prompt_sha256": "2ffce44e980b8bfd8fe4c10fdd0b6405242eb85889b3d9c85dc3d80eca3826bc",
+        "normalized_question_sha256": "c90695173081b6657e4412a732ca61a228e36bcf9411c84c501430b6762bec7e"
+      },
+      {
+        "source_id": "nemotron-v1/056b39b9-7827-451a-9c4b-3c4f92703933",
+        "pool": "nemotron_code",
+        "prompt_sha256": "8b683e8752b33757e55dde988eba7825a8cc55ad28d528ad458bc32d686aeb5c",
+        "normalized_question_sha256": "2abd77df2ef404c7cb904af240ab3e643ff2c7c818470234609ae8cc48ba6402"
+      }
+    ],
+    "limitations": [
+      "20 held-out prompts and max128 only; not the max512 benchmark or final quality.",
+      "Pilot2000 epoch1 versus interrupted wide50k step4000: unequal training budgets.",
+      "Finite-precision sequence disagreement is recorded, not assumed to be numerical.",
+      "GPU exclusively held; shared host CPU/memory contention is not isolated.",
+      "Stratified source mix is fixed before decoding; no test benchmark used for selection."
+    ]
+  },
+  "plan_sha256": "79d093f0d4e1a0e417b30e5841d5436d4854746c38f50f2e118aacc64a58f01c",
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "cpu_affinity": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "torch": "2.6.0+cu126",
+  "transformers": "4.57.1",
+  "cuda": "12.6",
+  "dtype": "bfloat16",
+  "target_depth": 32,
+  "target_features": [
+    1,
+    126,
+    128,
+    130,
+    131
+  ],
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        65505
+      ],
+      "generation_config": [
+        65505,
+        65508
+      ],
+      "model_config": [
+        65505
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "model_config",
+    "stop_ids": [
+      65505,
+      65508
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "max_seq": 3072,
+  "checkpoints": {
+    "narrow": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-pilot-v1/checkpoint-000060",
+      "step": 60,
+      "training_examples": 1893,
+      "training_epochs_planned": 1,
+      "parameters": 332621056,
+      "hashes": {
+        "model.safetensors": "f7cd716a686b7d887d89cbe5f3261cc58b9414aedeb9cfdfd7a8aa0cbdc0222c"
+      },
+      "config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+      "training_metadata_sha256": "782a9588caf69e7a1ae8f9a8ef411b9de7e4b04e144c3ef9a81c82341eba8c8d",
+      "loading": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": []
+      }
+    },
+    "wide": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-3.5b-formal-v1/checkpoint-004000",
+      "step": 4000,
+      "training_examples": 47387,
+      "training_epochs_planned": 6,
+      "parameters": 2116288320,
+      "hashes": {
+        "model.safetensors": "709b03867ffd6364f7d6466b0314df2f835a3d4090b4d54c467dde074a9f0edd"
+      },
+      "config_sha256": "27bac5503098f82c7f5ec8a9aa75c76c6ab727c5464988f45325bc503e0fc496",
+      "training_metadata_sha256": "f7e7663a7221736adb79098deb7ff0ccd72a5793af15f4c9e47bfab2975e610e",
+      "loading": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": []
+      }
+    }
+  },
+  "inputs_sha256": "aec11336b2ca404571136a18b5a320d285bf43fda6debff00c31b744c3d12cc7",
+  "method_order": "Cycle ar/narrow/wide per request; profiles after uninstrumented passes",
+  "warmups": "First two selected prompts,32 output tokens per method",
+  "source_sha256": {
+    "compare_huginn_dflash_dev.py": "a18fe81375fd55312ee6291e5214a3aea6fd437d79c3656ea15cded08b613603",
+    "evaluate_dflash.py": "b6e27deba90ac3b0a52d53f17556c2022b3419f206e399573829cd2c661edaac",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "configs/gpu-allocation.json": "1a270136e8832baaff3f697b365ab83dc5522fe6e2b76c038ea1cecad52ab645",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "dflash_impl/projected_draft.py": "c2ad128db2ef2cc8d56c245e2fc90848c0c6f6c17c201236b70dbf2a99af6d88",
+    "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "preflight/huginn-dflash-dev-plan-v1/plan.json": "79d093f0d4e1a0e417b30e5841d5436d4854746c38f50f2e118aacc64a58f01c"
+  }
+}

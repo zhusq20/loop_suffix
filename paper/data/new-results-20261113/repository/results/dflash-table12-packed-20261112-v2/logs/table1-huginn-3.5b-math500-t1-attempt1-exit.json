@@ -1,0 +1,31 @@
+{
+  "pid": 27179,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "52-55",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2",
+    "--job",
+    "table1-huginn-3.5b-math500-t1",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t1/attempt1",
+    "--lock-fd",
+    "10"
+  ],
+  "gpu": 5,
+  "started_unix": 1794429398.961505,
+  "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/plan.json",
+  "outcome": "complete_artifact_exit_unavailable",
+  "attempt": 1,
+  "out": "runs/table1-huginn-3.5b-math500-t1/attempt1",
+  "gpu_uuid": "GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a",
+  "exit_code": null,
+  "exit_evidence": "unavailable_after_controller_crash",
+  "finished_unix": 1794436467.4886544,
+  "recovery_reason": "Complete measurement artifacts pass audit; retain without automatic rerun per user instruction. Process exit remains unknown and must be disclosed.",
+  "preserved_artifact_audit": "passed"
+}

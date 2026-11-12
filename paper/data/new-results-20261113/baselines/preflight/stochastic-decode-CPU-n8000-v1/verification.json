@@ -1,0 +1,19 @@
+{
+  "status": "saved_stochastic_integration_and_source_binding_verified",
+  "configurations": 4,
+  "sequences": 32000,
+  "enumerated_outcomes_each": 63,
+  "actual_exit_code": 0,
+  "measured_T1_cells_with_identical_sampling_sources": 28,
+  "source_coverage_sha256": "144161e7518d1f27a37fb4b2811362a2f9737e6b5da2f15352085a1016d360b1",
+  "actual_exit_sha256": "9c4e9a21c37d0270c9b6d8b64eef4a64b56582c2626ec6a12adc5bc240c51083",
+  "report_sha256": "b60e216848851c248215d987c7c9f87bbbcac34edf6b06c515a7ff175d101660",
+  "verification_source_sha256": "49ec9c5f77ff3244a35e98309b350245117bf792d8f19c83027b9e1c3d486a1e",
+  "checked_unix": 1794477523.2180665,
+  "new_gpu_runs": 0,
+  "limitations": [
+    "Synthetic CPU evidence only; no real-model benchmark reruns.",
+    "These stochastic scenarios triggered no cascade commits or retention evictions; those are covered only by separate scheduler oracles.",
+    "Tiny-vocabulary finite sampling is not a universal real-model distribution proof."
+  ]
+}

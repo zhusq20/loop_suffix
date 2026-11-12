@@ -1,0 +1,102 @@
+{
+  "status": "CPU_startup_source_compatibility_not_appendix_execution",
+  "entries": {
+    "generate_teachers.py": {
+      "old_sha256": "0f98a595e788012bc358d42baf0135e758f7e1a835e60f83465fa4458f2ecfe0",
+      "new_sha256": "2be6e24f40712d4f8d9826521631ddef4a7a19bf470cdaaabdd85c48179581dc",
+      "all_non_main_ast_identical": true
+    },
+    "extract_loopahead_features.py": {
+      "old_sha256": "56fac6cb54239d4d8ac7497b511d137fdcd7d757426c7ebb0e93dcb0fd276cce",
+      "new_sha256": "2400cf693f415da2692e386f02bd3859cbc8ec3c74758fa47462e47df8a39379",
+      "all_non_main_ast_identical": true
+    },
+    "train_loopahead.py": {
+      "old_sha256": "0c7f4a57799c26e2f7e2e2e637de31514735ea43ec46b60cefb1916dc32ce300",
+      "new_sha256": "4579a46249af06a3d0e991bb2de1ba5bd76ce13503f46478cb6e729528c99cd0",
+      "all_non_main_ast_identical": true
+    },
+    "probe_dflash_target.py": {
+      "old_sha256": "534cce1773db7c72ee81e7d4af5e537306966f03f24886af5529646e2f34c82b",
+      "new_sha256": "a020438010b4756c45cf5582470b90668abff64ed2f5d93c3bdac868c8737039",
+      "all_non_main_ast_identical": true
+    },
+    "smoke_dflash.py": {
+      "old_sha256": "94efa1fd1c0f136e715fb4d1c1359e8cbfd11a7eed02491357a9df2150e5f24d",
+      "new_sha256": "8c5d9bfa96c7659301a7207557b3945f6fba7abd08c54b2782e1d054467df9e0",
+      "all_non_main_ast_identical": true
+    },
+    "smoke_loopahead.py": {
+      "old_sha256": "84ce41ebdae4c95044268ca65820fd95927db1a46e1cfc571dd1b9476da6eac8",
+      "new_sha256": "f1ba89997f7299fdee1948390702fa4ba099ca094095fb7cf8ad8fbced0a025d",
+      "all_non_main_ast_identical": true
+    },
+    "probe_teacher_graph.py": {
+      "old_sha256": "a4cb73e70ff8528c33412eae23f40e106ee5e0e95e47323b6b08d11caa9914cf",
+      "new_sha256": "39690591a8f2a5759336cbdf54ba11d8aaa887cdd9e943b9dca487cee044fcd3",
+      "all_non_main_ast_identical": true
+    }
+  },
+  "shared_helper_unchanged": true,
+  "existing_LAD_audits_still_bound": [
+    {
+      "model": "ouro-2.6b",
+      "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-2.6b-formal-audit-v2/report.json",
+      "audit_report_sha256": "c7bc6c34e17f2e4628aedad29573e1b743782d22976cd714c35dc62bc414deec",
+      "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+      "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+      "actual_audit_exit": {
+        "name": "audit-loopahead-ouro-2.6b-formal-v2",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+          "--model",
+          "ouro-2.6b",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-2.6b-formal-audit-v2"
+        ],
+        "pid": 71711,
+        "started_unix": 1794354881.2629638,
+        "exit_code": 0,
+        "finished_unix": 1794354885.8070312
+      },
+      "training_gpu_hours": 0.14824656864007313
+    },
+    {
+      "model": "huginn-3.5b",
+      "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-huginn-3.5b-formal-audit-v2/report.json",
+      "audit_report_sha256": "d4a29c8c6e48ff6c9e830ba41f332536e71e8b761afaa76335924d55d25f5379",
+      "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+      "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+      "actual_audit_exit": {
+        "name": "audit-loopahead-huginn-3.5b-formal-v2",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+          "--model",
+          "huginn-3.5b",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-huginn-3.5b-formal-audit-v2"
+        ],
+        "pid": 71753,
+        "started_unix": 1794354885.8423781,
+        "exit_code": 0,
+        "finished_unix": 1794354891.5099359
+      },
+      "training_gpu_hours": 0.1995019594166014
+    }
+  ],
+  "live_narrow_trainer_unchanged": true,
+  "appendix_started": false,
+  "cuda_initialized": false,
+  "limitations": [
+    "No new GPU task was started; appendix remains gated on main48.",
+    "DDP DFlash trainer acquires its CUDA device before model/teacher loading and remains unchanged; an occupied-device failure there still requires investigation."
+  ],
+  "original_DFlash_trainer_unchanged_from_preserved_wide_run": {
+    "sha256": "dca8aafb4eb8600c8a252e150d61018a2b0a017395c57615beacbb1a0c9518d4",
+    "archived_source": "experiments/baselines/checkpoints/dflash-huginn-3.5b-formal-v1/source/train_dflash.py"
+  }
+}

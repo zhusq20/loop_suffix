@@ -1,0 +1,126 @@
+{
+  "status": "independently_recomputed",
+  "configurations": {
+    "ouro-default": {
+      "max_event_absolute_error": 0.0038750000000029594,
+      "retention_evictions": 5315,
+      "cascade_commits": 20168
+    },
+    "ouro-retain8": {
+      "max_event_absolute_error": 0.0036295127789386372,
+      "retention_evictions": 118523,
+      "cascade_commits": 11115
+    },
+    "huginn-default": {
+      "max_event_absolute_error": 0.00580625000000079,
+      "retention_evictions": 127923,
+      "cascade_commits": 9629
+    }
+  },
+  "synthetic_sequences": 96000,
+  "exact_terminal_sequences": 8191,
+  "events_per_configuration": 8295,
+  "negative_control_rejected": true,
+  "measured_LoopAhead_T1_cells": 18,
+  "measured_path_counts": {
+    "requests": 6276,
+    "retention_evictions": 685498,
+    "retention_evictions_requests": 5437,
+    "cascade_commits": 292814,
+    "cascade_commits_requests": 5697
+  },
+  "measured_artifacts": {
+    "huginn-3.5b/gsm8k": {
+      "requests_sha256": "fe11041003eb66019dfd98d69ef6cbdf8de3c02aa3fd13d2bc1c636e12b36178",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "huginn-3.5b/math500": {
+      "requests_sha256": "2c4faeba000cb713c8a0967118d479ed5c7146b26e55a0c17221b92cd39f352d",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "huginn-3.5b/bbh": {
+      "requests_sha256": "b290fcabc8085c836b953171aa7b4033a0e08d266524270cc4ccb70cfdbd522d",
+      "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+    },
+    "huginn-3.5b/humanevalplus": {
+      "requests_sha256": "d463e59b142841e67a5694be4d3a23b65687f96910ade468caa1b79887474d81",
+      "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+    },
+    "huginn-3.5b/mbppplus": {
+      "requests_sha256": "60ffe166b94893641deb0381be68f2c4571a46b63138ad839e8d1556bca522db",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "huginn-3.5b/specbench": {
+      "requests_sha256": "64b9fa034b2fcf31cf6d87f0d0105494188d5e8999528cf1280eeb5c13864f3d",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-2.6b/gsm8k": {
+      "requests_sha256": "1c3538b06913cceab39c5b4d6cf0dd6609dbd5c9e877b30ecc9a7263e75437e7",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "ouro-2.6b/math500": {
+      "requests_sha256": "7b180120a6f1162328a250f53535e932d1843b45471f6b57af61d58709abc3e8",
+      "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+    },
+    "ouro-2.6b/bbh": {
+      "requests_sha256": "e0aaf3104f871e3009696db3be8f08ba078afbbc27de4d55958fda5b7945f1c9",
+      "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+    },
+    "ouro-2.6b/humanevalplus": {
+      "requests_sha256": "fe65e0f6b6633920ebe92cab74187677c447b0af08404496949338a5e4a7d13e",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-2.6b/mbppplus": {
+      "requests_sha256": "36f676f1e95c9139a10a13a2ddd0d40b8f8916cdb605d0b43308ddf0aca48cff",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-2.6b/specbench": {
+      "requests_sha256": "e0e492b9f8a9c9c37da14a978b8be9813aa931c167fc652c036a0106af4328a9",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-1.4b/gsm8k": {
+      "requests_sha256": "dec93486eef80c1fb533d6d6d7a6a328c08f192f19613c8232f83b54bd4c2c18",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-1.4b/math500": {
+      "requests_sha256": "564201186fb73251533a423f271d70fd16b09f7376fea1e540aca5166f3899d3",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-1.4b/bbh": {
+      "requests_sha256": "786d8add2679a358f33a433ebb980f535470799cfac2dd2cf30ce11cf00cc2eb",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-1.4b/humanevalplus": {
+      "requests_sha256": "9c4ceca96121be4a32d0e8d128548776b191a19e8f7173326bdc63764e3e5a86",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-1.4b/mbppplus": {
+      "requests_sha256": "c4757aa071d25d5eb86b0b93c51fda8b8e7e8a72e0709732c36c993ec4ee79c1",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    },
+    "ouro-1.4b/specbench": {
+      "requests_sha256": "a832268e57bffd87bad0f64a5324ffd1820ebf6b26f170bdae04f5ca2bb407e8",
+      "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+    }
+  },
+  "source_sha256": {
+    "check_loopahead_retention_sampling.py": "abca8f1cdaf0ce47c87f089b2991c66222686d63239ec4e6de9e6970687b9780",
+    "check_stochastic_decode.py": "055dc5c29b703d73da40ef22d91f1f27f07e2f5e3dff761f1180708eecd1edfb",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "report_sha256": "4082eb0329ebc136b8a7d9d95c1899f63c7d444bb9aa7b098256b6245043459b",
+  "plan_sha256": "2edb2e4aa66ddb56769618475d363aa5b8b3f476c553a5e8886f09c003dc22aa",
+  "actual_exit_sha256": "b83d63105c33a85068e4db467bc5db3805a40ade174a30bfe00474cd34f7f8ab",
+  "verifier_sha256": "e9f817bd11ad87c2eb75f31108d4c450f24faa7f771ec809023854d39874b6ed",
+  "verified_unix": 1794490238.7225144,
+  "new_gpu_runs": 0,
+  "limitations": [
+    "Finite synthetic sampling evidence, not a universal distribution proof.",
+    "Real target numerical differences and correctness of model tensor operations remain separately scoped."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "updated_unix": 1794422912.1733706,
+  "controller_pid": 464974,
+  "stage": "running",
+  "allowed_gpus": [
+    0,
+    1,
+    5,
+    7
+  ],
+  "running": {},
+  "pending": [],
+  "completed": [],
+  "failed": {
+    "huginn-3.5b-b4": 1,
+    "ouro-2.6b-b4": 1,
+    "huginn-3.5b-b8": 1,
+    "ouro-2.6b-b8": 1,
+    "huginn-3.5b-b16": 1,
+    "ouro-2.6b-b16": 1
+  },
+  "original_running": {
+    "ouro-2.6b-b1": {
+      "pid": 417115,
+      "gpu": 3,
+      "started_unix": 1794419625.2834544
+    }
+  },
+  "original_status": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/status.json",
+  "note": "Migrated jobs are tracked here until final reconciliation; original dispatch remains paused."
+}

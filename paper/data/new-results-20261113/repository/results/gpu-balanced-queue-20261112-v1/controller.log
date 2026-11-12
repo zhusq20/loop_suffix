@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/controller.py", line 310, in <module>
+    main()
+  File "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/controller.py", line 208, in main
+    and not read(SUITE / 'status.json')['active']):
+KeyError: 'active'

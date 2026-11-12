@@ -1,0 +1,92 @@
+{
+  "status": "verified_completed_training_audit_artifacts",
+  "audit": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v1/report.json",
+  "audit_sha256": "736990ffd79895f739d5b3d669003f305e62dd9be0b9d252b635489c664a6367",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+  "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+  "parameters": 11051008,
+  "updates": 13533,
+  "feature_coverage": {
+    "train": {
+      "requests": 9025,
+      "eligible": 9022,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/ouro-1.4b/shard0/index.json",
+          "sha256": "e8642a9bbea5ec4b6fa16d2b1b54ba2dde0162d76dcf126b4bb05e4768959d08"
+        }
+      ]
+    },
+    "dev": {
+      "requests": 782,
+      "eligible": 782,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/ouro-1.4b/shard0/index.json",
+          "sha256": "19a35916ba86e70b74b53627eb75d43339591fcbbd5e0ed8392b1432f37fcd8e"
+        }
+      ]
+    },
+    "confirmation": {
+      "requests": 782,
+      "eligible": 782,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/ouro-1.4b/shard0/index.json",
+          "sha256": "74bd3da5c264f4a5c6eb12283f93562f01075557662949e7c8a722d821a50d71"
+        }
+      ]
+    }
+  },
+  "excluded_no_real_64_state_context": [
+    "codealpaca/1324",
+    "ultrachat/4e3c52e5beac7f550141b1541e5c04cd3bce8b0a44b6cd92a2b40d4aa467fd39",
+    "ultrachat/f5582ae78cfe119db684ff441790842c9305b8ff7d263e8977447fc0a3153ffe"
+  ],
+  "actual_training_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-formal-v1-finished.json",
+    "sha256": "9157927f2da8014a64d890c5cd7679b4098721fb1f555ea3fa430ad7bc09e2fc",
+    "receipt": {
+      "name": "loopahead-ouro-1.4b-formal-v1",
+      "gpu": 3,
+      "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/train_loopahead.py",
+        "--model",
+        "ouro-1.4b",
+        "--gpu",
+        "3",
+        "--cpus",
+        "12-15",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1",
+        "--features",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/features"
+      ],
+      "started_unix": 1794448576.1300766,
+      "pid": 366502,
+      "start_ticks": "46361242",
+      "supervisor_identity": {
+        "pid": 366501,
+        "state": "R",
+        "start_ticks": "46361236",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+          "--spec",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-formal-v1-launcher.json.supervisor.json",
+          "--lock-fd",
+          "4"
+        ]
+      },
+      "exit_code": 0,
+      "finished_unix": 1794449106.6876543,
+      "exit_evidence": "supervisor_waitpid"
+    }
+  },
+  "verified_unix": 1794464020.5382478
+}

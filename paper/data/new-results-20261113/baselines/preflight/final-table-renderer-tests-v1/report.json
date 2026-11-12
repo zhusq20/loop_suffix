@@ -1,0 +1,19 @@
+{
+  "status": "renderer_CPU_regressions_passed_not_final_results",
+  "tests": 5,
+  "actual_exit_sha256": "5b57694ad861d9d0e7c412a40ef76c365b6b432b6955aaec308d1171a1325f5e",
+  "source_sha256": {
+    "render_final_results.py": "0611dd86bb2512f4da4cbfe09256bbeaa6402ad2ab239f453c60d2d9f0b4e1ad",
+    "test_render_final_results.py": "2644990984643ea4a3cd59f0263ab4e026a5634830851e93792c0d55eaadaabc"
+  },
+  "current_measurement_count": 58,
+  "combined_csv_unchanged_sha256": "897349b248727bd29e11133d6bfc36130ba96ff1fa781745ba60d82285f9714b",
+  "new_gpu_runs": 0,
+  "final_results_created": false,
+  "checked_unix": 1794476704.8915458,
+  "limitations": [
+    "The 72-cell positive rendering fixture is synthetic and only in memory; it is not experimental evidence.",
+    "Actual partial data is rejected before creating a final output folder.",
+    "End-to-end final rendering awaits all 72 cells and all 39 numerical checks; six training audits, measured costs, T1 evidence and final document review are separate."
+  ]
+}

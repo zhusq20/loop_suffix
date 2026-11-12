@@ -1,0 +1,229 @@
+{
+  "passed": true,
+  "cells": 14,
+  "requests": 1400,
+  "verified_unix": 1794518967.7958176,
+  "same_device_per_model_temperature": false,
+  "scheduling": {
+    "placement": "first_idle_per_cell",
+    "allowed_gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "created_unix": 1794516852.146294,
+    "authorization": "User explicitly requested every remaining experiment to run independently in parallel on free GPUs; no same-device method grouping.",
+    "protocol_sha256": "589fb96b34f1911bec0b3d8142892acfdb72607e940a5a6d50731cb016d05dc8",
+    "jobs_sha256": "b2276ffa8d4bb79504ae57067824ac41db55799f456fca249626835f90f1bd62",
+    "scheduler_root": "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/amendments/parallel-cells-20261113/source",
+    "scheduler_sha256": {
+      "loop_agentic_suite.py": "c1353daef5340d2e3e197dc1524d2ee35a598930a5f5c502d56b7e33b4f25402",
+      "loop_agentic_ouro14.py": "830d2ac127027612598cba95cab2d4eba3881a2642bf9da157510b5bf5b762d9",
+      "loop_agentic_finalize.py": "05434870cf52cd6050dc28dbcc5622057c484936bdfeb1f30ad54ebe7ea6bb87"
+    },
+    "original_inference_sources_unchanged": true,
+    "completed_measurements_preserved": true,
+    "comparison": "AR remains the same model/temperature reference; device differences are disclosed, not controlled by co-location."
+  },
+  "actual_gpu_uuids": {
+    "ouro-1.4b/t0": [
+      "2dc90f87-ad67-93a7-d0c5-218a3543318a"
+    ],
+    "ouro-1.4b/t1": [
+      "2dc90f87-ad67-93a7-d0c5-218a3543318a",
+      "afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "e54049b5-ca93-d066-efc5-6942d59bf762"
+    ]
+  },
+  "complete_input_and_source_hashes": true,
+  "cells_audited": [
+    {
+      "cell": "ouro-1.4b-ar-t0",
+      "requests": 100,
+      "requests_sha256": "4570474b447399eb2a7c44483cdb5b76fe1ab528a77a4f29272585ff32d9db10",
+      "decode_tokens": 3624,
+      "decode_s": 299.7894827052951,
+      "decode_token_s": 12.088482782308061,
+      "gamma": 1.0,
+      "mean_decode_s": 2.997894827052951,
+      "prefill_s": 4.655251018702984,
+      "output_tokens": 3724,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-wavefront-t0",
+      "requests": 100,
+      "requests_sha256": "20c95609acc4ef2c2642080472a0cd7943d06a5563a8bd29d47b6a822a001344",
+      "decode_tokens": 3649,
+      "decode_s": 122.07378536462784,
+      "decode_token_s": 29.891757588253967,
+      "gamma": 2.6816094065772553,
+      "mean_decode_s": 1.2207378536462783,
+      "prefill_s": 4.697639875113964,
+      "output_tokens": 3749,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-loopspec-dual-t0",
+      "requests": 100,
+      "requests_sha256": "b9a40364ea21b1257cb34b9051913bf8f32a9f9b8232dfd5543f337a2a463ecb",
+      "decode_tokens": 3650,
+      "decode_s": 107.95128712803125,
+      "decode_token_s": 33.811546829182916,
+      "gamma": 3.069806560134567,
+      "mean_decode_s": 1.0795128712803126,
+      "prefill_s": 4.59468536823988,
+      "output_tokens": 3750,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-budget-suffix-t0",
+      "requests": 100,
+      "requests_sha256": "89087f39dfd767ab80b439f98adff36c7f3835d1b91c5fa528f1847ff8c6675b",
+      "decode_tokens": 3654,
+      "decode_s": 161.92438708990812,
+      "decode_token_s": 22.566088195048255,
+      "gamma": 2.028872848417546,
+      "mean_decode_s": 1.6192438708990813,
+      "prefill_s": 4.599653407931328,
+      "output_tokens": 3754,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-loopahead-t0",
+      "requests": 100,
+      "requests_sha256": "dff1b6f88718b6eb5542e3385cdc2c626c85a9d4fa5e1bfc0bbdacbb08cfda48",
+      "decode_tokens": 3686,
+      "decode_s": 105.2930174767971,
+      "decode_token_s": 35.0070696835359,
+      "gamma": 3.524743007410949,
+      "mean_decode_s": 1.0529301747679711,
+      "prefill_s": 4.810680113732815,
+      "output_tokens": 3786,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-dflash-t0",
+      "requests": 100,
+      "requests_sha256": "95573db6d46addf1b6c6064788011cf8c15fe3d5db364073c7712b451bae979d",
+      "decode_tokens": 3575,
+      "decode_s": 117.89029241353273,
+      "decode_token_s": 30.32480390717584,
+      "gamma": 2.8784219001610305,
+      "mean_decode_s": 1.1789029241353273,
+      "prefill_s": 4.6662285178899765,
+      "output_tokens": 3675,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-budget-online-t0",
+      "requests": 100,
+      "requests_sha256": "e2675b63a6e24e3e3e2bfc16fb78f8c5dd35d814a25226beaa21ea19bbabc552",
+      "decode_tokens": 3627,
+      "decode_s": 65.91744543612003,
+      "decode_token_s": 55.02337015646171,
+      "gamma": 5.3893016344725115,
+      "mean_decode_s": 0.6591744543612004,
+      "prefill_s": 4.623413868248463,
+      "output_tokens": 3727,
+      "cap_stopped": 0
+    },
+    {
+      "cell": "ouro-1.4b-ar-t1",
+      "requests": 100,
+      "requests_sha256": "c90fa72a467ab3d55a527cc6010a7204ae002f6b42c5cfb471bbfc12461cb4be",
+      "decode_tokens": 9549,
+      "decode_s": 791.1862071976066,
+      "decode_token_s": 12.069219499948945,
+      "gamma": 1.0,
+      "mean_decode_s": 7.911862071976065,
+      "prefill_s": 4.636462226510048,
+      "output_tokens": 9649,
+      "cap_stopped": 5
+    },
+    {
+      "cell": "ouro-1.4b-wavefront-t1",
+      "requests": 100,
+      "requests_sha256": "7ca33003649d11a5104fcea9cca31c1fe74f91698cd933d4083b90d714c22d77",
+      "decode_tokens": 7345,
+      "decode_s": 297.9683242663741,
+      "decode_token_s": 24.65027119269834,
+      "gamma": 2.19860809698421,
+      "mean_decode_s": 2.979683242663741,
+      "prefill_s": 5.152902148663998,
+      "output_tokens": 7445,
+      "cap_stopped": 3
+    },
+    {
+      "cell": "ouro-1.4b-loopspec-dual-t1",
+      "requests": 100,
+      "requests_sha256": "e651027a9260188adac1a25e842ae1f5daf765384306c30e313f0633b573446a",
+      "decode_tokens": 8356,
+      "decode_s": 330.87438498437405,
+      "decode_token_s": 25.254297036002416,
+      "gamma": 2.3119596043439166,
+      "mean_decode_s": 3.3087438498437405,
+      "prefill_s": 4.605120398104191,
+      "output_tokens": 8456,
+      "cap_stopped": 5
+    },
+    {
+      "cell": "ouro-1.4b-budget-suffix-t1",
+      "requests": 100,
+      "requests_sha256": "626d6be8a554b7bf1082eea38332b0bf77a274f7ad2665833884e9d4ed0ed41a",
+      "decode_tokens": 8712,
+      "decode_s": 441.84832817316055,
+      "decode_token_s": 19.71717316668394,
+      "gamma": 1.7689340101522844,
+      "mean_decode_s": 4.418483281731605,
+      "prefill_s": 4.708523750305176,
+      "output_tokens": 8812,
+      "cap_stopped": 4
+    },
+    {
+      "cell": "ouro-1.4b-loopahead-t1",
+      "requests": 100,
+      "requests_sha256": "9e8797f064878dac7fa70502bb3b60da3742e80dc80915fe07b6022d13468ad1",
+      "decode_tokens": 7493,
+      "decode_s": 268.6718590632081,
+      "decode_token_s": 27.889039165196632,
+      "gamma": 2.903700833171866,
+      "mean_decode_s": 2.686718590632081,
+      "prefill_s": 4.84426274895668,
+      "output_tokens": 7593,
+      "cap_stopped": 4
+    },
+    {
+      "cell": "ouro-1.4b-dflash-t1",
+      "requests": 100,
+      "requests_sha256": "99c105f3f86ecc16b5a87bb70032e576c32903a4e98624d1e22fe7ea1cd62a17",
+      "decode_tokens": 9422,
+      "decode_s": 423.00083566457033,
+      "decode_token_s": 22.27418767435113,
+      "gamma": 2.152124257651896,
+      "mean_decode_s": 4.230008356645703,
+      "prefill_s": 4.707776486873627,
+      "output_tokens": 9522,
+      "cap_stopped": 7
+    },
+    {
+      "cell": "ouro-1.4b-budget-online-t1",
+      "requests": 100,
+      "requests_sha256": "30ca7dd58f71192d812d5f491e27f4506199264838bdc81f6ae76ab65676d0f0",
+      "decode_tokens": 9891,
+      "decode_s": 269.9284320920706,
+      "decode_token_s": 36.64304617094302,
+      "gamma": 3.6257331378299122,
+      "mean_decode_s": 2.6992843209207056,
+      "prefill_s": 4.773790329694748,
+      "output_tokens": 9991,
+      "cap_stopped": 6
+    }
+  ],
+  "note": "Integrity and metric audit, not a task-quality evaluation."
+}

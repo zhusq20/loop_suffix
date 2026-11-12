@@ -1,0 +1,41 @@
+{
+  "status": "future_actual_receipt_paths_connected_not_diagnostics_passed",
+  "aliases": [
+    {
+      "alias": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-dev-huginn-dflash-narrow-v1-launcher.json",
+      "canonical": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-narrow-launcher.json",
+      "relative_target": "baseline-diagnostics-resume-v1/logs/development-narrow-launcher.json",
+      "group": "development-narrow",
+      "stage": "launcher"
+    },
+    {
+      "alias": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-dev-huginn-dflash-narrow-v1-finished.json",
+      "canonical": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-narrow-exit.json",
+      "relative_target": "baseline-diagnostics-resume-v1/logs/development-narrow-exit.json",
+      "group": "development-narrow",
+      "stage": "finished"
+    },
+    {
+      "alias": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-dev-huginn-dflash-wide-v1-launcher.json",
+      "canonical": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-wide-launcher.json",
+      "relative_target": "baseline-diagnostics-resume-v1/logs/development-wide-launcher.json",
+      "group": "development-wide",
+      "stage": "launcher"
+    },
+    {
+      "alias": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-dev-huginn-dflash-wide-v1-finished.json",
+      "canonical": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-wide-exit.json",
+      "relative_target": "baseline-diagnostics-resume-v1/logs/development-wide-exit.json",
+      "group": "development-wide",
+      "stage": "finished"
+    }
+  ],
+  "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "unchanged_validator_sha256": "db9433443425f21d4fac0377c0b4cb11908a7c48098c12e2fe7d5a28393506bc",
+  "no_development_job_dispatched_yet": true,
+  "no_launcher_or_exit_contents_created": true,
+  "source_or_scheduler_changed": false,
+  "new_gpu_runs": 0,
+  "checked_unix": 1794475103.9121518,
+  "limitation": "These aliases are dangling until the existing supervisor writes its actual launcher and waitpid receipt. They do not report an exit code or mark any diagnostic complete."
+}

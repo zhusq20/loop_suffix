@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "observed_unix": 1794437118.708928,
+  "controller": {
+    "pid": 153662,
+    "state": "S",
+    "start_ticks": "45175843",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/orchestrate_packed_dflash_supplements.py",
+      "--plan",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json"
+    ]
+  },
+  "queue_status": {
+    "stage": "waiting_for_existing_measurements",
+    "controller_pid": 153662,
+    "updated_unix": 1794437117.676536,
+    "completed_cells": 0,
+    "expected_cells": 12,
+    "expected_supplement_runs": 24,
+    "running": {},
+    "awaiting_timed_measurements": [
+      "table1-huginn-3.5b-bbh-t0",
+      "table1-huginn-3.5b-specbench-t0",
+      "table1-huginn-3.5b-bbh-t1",
+      "table1-huginn-3.5b-gsm8k-t1",
+      "table1-huginn-3.5b-humanevalplus-t1",
+      "table1-ouro-2.6b-humanevalplus-t1",
+      "table1-huginn-3.5b-mbppplus-t1",
+      "table1-ouro-2.6b-mbppplus-t1",
+      "table1-huginn-3.5b-specbench-t1",
+      "table1-ouro-2.6b-specbench-t1"
+    ],
+    "existing_queue_pending": [
+      "table1-huginn-3.5b-bbh-t1",
+      "table1-huginn-3.5b-specbench-t1",
+      "table1-huginn-3.5b-specbench-t0",
+      "table1-ouro-2.6b-humanevalplus-t1",
+      "table1-huginn-3.5b-gsm8k-t1",
+      "table1-huginn-3.5b-humanevalplus-t1",
+      "table2-ouro-2.6b-b8",
+      "table2-ouro-2.6b-b16",
+      "table2-huginn-3.5b-b16"
+    ],
+    "ready_supplements": [
+      "table1-huginn-3.5b-math500-t0-ar",
+      "table1-huginn-3.5b-math500-t1-ar",
+      "table1-huginn-3.5b-math500-t0-profile",
+      "table1-huginn-3.5b-math500-t1-profile"
+    ],
+    "failures": {}
+  },
+  "plan_sha256": "0e398011930f446630667e45cdcac5ab15b7ef6f5af2d813d9defbe46927340d",
+  "limitation": "CPU startup only; GPU work waits behind existing measurement priority."
+}

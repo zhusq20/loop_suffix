@@ -1,0 +1,84 @@
+{
+  "status": "complete_teacher_training_split_only",
+  "model": "huginn-3.5b",
+  "stage": "loopahead-train",
+  "requests": 9025,
+  "output_tokens": 4514165,
+  "source_counts": {
+    "ultrachat": 1000,
+    "python": 2000,
+    "math": 2000,
+    "gsm8k": 2000,
+    "reasoning": 2025
+  },
+  "manifest_sha256": "7bfb0f750708ad9b09d0f700f913eb849eba20984d3c6f645352f0933de4ae34",
+  "global_assignment_sha256": "54c9a7cc6f9c17c795dfd54af18da5110cd2a09013916c78f0af4db846e352ec",
+  "records": [
+    {
+      "shard": 0,
+      "requests": 1215,
+      "teachers_sha256": "64defafc750977676aaac104fdc86fd5cdfda2e0964f10a8e1cddf6372a2dadd",
+      "output_tokens": 608972,
+      "validated_graph_batches": 0,
+      "full_depth": 32
+    },
+    {
+      "shard": 1,
+      "requests": 1094,
+      "teachers_sha256": "db47ae4be111172bfbcba54ca39a59c396b78cead0f86ee639b85feff6bdb79d",
+      "output_tokens": 547265,
+      "validated_graph_batches": 0,
+      "full_depth": 32
+    },
+    {
+      "shard": 2,
+      "requests": 1125,
+      "teachers_sha256": "141772ff4f450eb647032f4c4e311db1d31bd98c08ea5266ce01e81c76829727",
+      "output_tokens": 561285,
+      "validated_graph_batches": 74,
+      "full_depth": 32
+    },
+    {
+      "shard": 3,
+      "requests": 1106,
+      "teachers_sha256": "0e0f51f042ce8a0c0c539ff977be15169f783a91b2f5da92958422f3d4e4458f",
+      "output_tokens": 550719,
+      "validated_graph_batches": 72,
+      "full_depth": 32
+    },
+    {
+      "shard": 4,
+      "requests": 1153,
+      "teachers_sha256": "7209e63cc99755398c4a2a97f827bc5eb75d49ecaf44f41ff185c0492fda6180",
+      "output_tokens": 576087,
+      "validated_graph_batches": 76,
+      "full_depth": 32
+    },
+    {
+      "shard": 5,
+      "requests": 1120,
+      "teachers_sha256": "9a159445e58969268a67d4b87ef1db103f1fc2a32625ed0f64b2467070ba5349",
+      "output_tokens": 561053,
+      "validated_graph_batches": 73,
+      "full_depth": 32
+    },
+    {
+      "shard": 6,
+      "requests": 1155,
+      "teachers_sha256": "d3faabd6adad2961bd9ceb7e9aad82c7132d2a6d4c291a6b14961c3c2a5e96a1",
+      "output_tokens": 578963,
+      "validated_graph_batches": 76,
+      "full_depth": 32
+    },
+    {
+      "shard": 7,
+      "requests": 1057,
+      "teachers_sha256": "4379db1f919edcff873e34c05e4446328a93478788577774f0d2d213fb712df5",
+      "output_tokens": 529821,
+      "validated_graph_batches": 69,
+      "full_depth": 32
+    }
+  ],
+  "finished_unix": 1794317484.9631503,
+  "limitation": "Training answers only; all dev/confirmation teachers and24 feature stages are still required before LAD training."
+}

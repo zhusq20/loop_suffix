@@ -1,0 +1,316 @@
+{
+  "stage": "trained_20_request_BF16_check_not_formal_benchmark",
+  "model": "huginn-3.5b",
+  "requests": 20,
+  "exact_sequences": 15,
+  "first_divergences": [
+    {
+      "source_id": "gsm8k/test/1194",
+      "position": 28,
+      "ar_length": 107,
+      "method_length": 176,
+      "trace": {
+        "ar": {
+          "position": 28,
+          "top_ids": [
+            291,
+            286,
+            725
+          ],
+          "top_logits": [
+            19.0,
+            18.875,
+            17.875
+          ],
+          "top_probs": [
+            0.4434596598148346,
+            0.39135175943374634,
+            0.14397026598453522
+          ],
+          "top2_probability_margin": 0.05210790038108826,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 28,
+          "token": 286,
+          "top_ids": [
+            291,
+            286,
+            725
+          ],
+          "top_logits": [
+            18.875,
+            18.875,
+            17.75
+          ],
+          "top_probs": [
+            0.4204639792442322,
+            0.4204639792442322,
+            0.136504665017128
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      },
+      "ar_token": 291,
+      "loopahead_token": 286
+    },
+    {
+      "source_id": "gsm8k/test/901",
+      "position": 19,
+      "ar_length": 69,
+      "method_length": 68,
+      "trace": {
+        "ar": {
+          "position": 19,
+          "top_ids": [
+            18014,
+            16251,
+            2649
+          ],
+          "top_logits": [
+            18.75,
+            18.625,
+            16.0
+          ],
+          "top_probs": [
+            0.47484979033470154,
+            0.41905346512794495,
+            0.03035612963140011
+          ],
+          "top2_probability_margin": 0.05579632520675659,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 19,
+          "token": 16251,
+          "top_ids": [
+            18014,
+            16251,
+            2649
+          ],
+          "top_logits": [
+            18.75,
+            18.75,
+            16.0
+          ],
+          "top_probs": [
+            0.44978365302085876,
+            0.44978365302085876,
+            0.028753705322742462
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      },
+      "ar_token": 18014,
+      "loopahead_token": 16251
+    },
+    {
+      "source_id": "gsm8k/test/745",
+      "position": 102,
+      "ar_length": 175,
+      "method_length": 175,
+      "trace": {
+        "ar": {
+          "position": 102,
+          "top_ids": [
+            16587,
+            3334,
+            13039
+          ],
+          "top_logits": [
+            16.875,
+            16.875,
+            15.8125
+          ],
+          "top_probs": [
+            0.2905927002429962,
+            0.2905927002429962,
+            0.10042615234851837
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        },
+        "loopahead": {
+          "position": 102,
+          "token": 16587,
+          "top_ids": [
+            16587,
+            3334,
+            13039
+          ],
+          "top_logits": [
+            17.0,
+            16.875,
+            15.8125
+          ],
+          "top_probs": [
+            0.31457749009132385,
+            0.27761366963386536,
+            0.09594070911407471
+          ],
+          "top2_probability_margin": 0.036963820457458496,
+          "top1_logit_margin": 0.125
+        }
+      },
+      "ar_token": 3334,
+      "loopahead_token": 16587
+    },
+    {
+      "source_id": "gsm8k/test/804",
+      "position": 4,
+      "ar_length": 85,
+      "method_length": 86,
+      "trace": {
+        "ar": {
+          "position": 4,
+          "top_ids": [
+            893,
+            494,
+            330
+          ],
+          "top_logits": [
+            17.875,
+            17.75,
+            16.625
+          ],
+          "top_probs": [
+            0.3728903830051422,
+            0.3290746212005615,
+            0.10683488845825195
+          ],
+          "top2_probability_margin": 0.04381576180458069,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 4,
+          "token": 494,
+          "top_ids": [
+            893,
+            494,
+            330
+          ],
+          "top_logits": [
+            17.75,
+            17.75,
+            16.625
+          ],
+          "top_probs": [
+            0.3437053859233856,
+            0.3437053859233856,
+            0.11158480495214462
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      },
+      "ar_token": 893,
+      "loopahead_token": 494
+    },
+    {
+      "source_id": "gsm8k/test/1185",
+      "position": 3,
+      "ar_length": 115,
+      "method_length": 63,
+      "trace": {
+        "ar": {
+          "position": 3,
+          "top_ids": [
+            5147,
+            893,
+            5752
+          ],
+          "top_logits": [
+            18.75,
+            18.75,
+            15.6875
+          ],
+          "top_probs": [
+            0.47341397404670715,
+            0.47341397404670715,
+            0.022141868248581886
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        },
+        "loopahead": {
+          "position": 3,
+          "token": 5147,
+          "top_ids": [
+            5147,
+            893,
+            5752
+          ],
+          "top_logits": [
+            18.875,
+            18.75,
+            15.6875
+          ],
+          "top_probs": [
+            0.5045032501220703,
+            0.4452225863933563,
+            0.020823337137699127
+          ],
+          "top2_probability_margin": 0.05928066372871399,
+          "top1_logit_margin": 0.125
+        }
+      },
+      "ar_token": 893,
+      "loopahead_token": 5147
+    }
+  ],
+  "sources": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-ar-bfloat16-n20-v1",
+      "requests_sha256": "2af58e329df65e12ffa6752fa7480294e88c4fea1a604ca87a168744728b663b",
+      "summary": {
+        "requests": 20,
+        "decode_tokens": 2114,
+        "output_tokens": 2134,
+        "decode_s": 322.6968846023083,
+        "tok_s": 6.551039383616282,
+        "loop_steps": 67648,
+        "gamma": 1.0
+      }
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-loopahead-bfloat16-n20-v1",
+      "requests_sha256": "64d47fdfe60a1ee04a633a1d35570c3f1ebfdab6ef7e8250d6912cbcb0f45d8e",
+      "summary": {
+        "requests": 20,
+        "decode_tokens": 2131,
+        "output_tokens": 2151,
+        "decode_s": 87.69426199048758,
+        "tok_s": 24.300335639191022,
+        "loop_steps": 12260,
+        "gamma": 5.562153344208809
+      }
+    }
+  },
+  "fp32_followup": "queued by formal controller; not yet passed",
+  "limitation": "Do not attribute all five BF16 differences to numerical effects before FP32 follow-up. Observed timings retained, but AR CPU affinity overlapped weather worker; no uncontended speedup claim.",
+  "timing_incident": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/weather-contention-recovery-v3.json",
+    "sha256": "b0e473b801f622ff0396828125f35ef64b2b17e897d1c7dbb3619708cf177198",
+    "interval_unix": [
+      1794320724.9,
+      1794320968.3478656
+    ],
+    "potentially_affected_ar_requests": [
+      "gsm8k/test/659",
+      "gsm8k/test/1293",
+      "gsm8k/test/804",
+      "gsm8k/test/54",
+      "gsm8k/test/1150",
+      "gsm8k/test/1185",
+      "gsm8k/test/1121",
+      "gsm8k/test/717",
+      "gsm8k/test/242",
+      "gsm8k/test/461",
+      "gsm8k/test/136"
+    ]
+  },
+  "created_unix": 1794321107.1258569,
+  "diagnostic_trace_coverage": "Both actual BF16 first-divergence distributions include top3 probabilities/logits and top2 probability margins; traces precede output divergence."
+}

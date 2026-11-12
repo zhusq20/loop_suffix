@@ -1,0 +1,7 @@
+{
+  "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=src:tests /tmp/loopfill-venv/bin/python -m pytest -q tests/test_baselines/test_portable_training.py",
+  "exit_code": 0,
+  "passed": 5,
+  "wall_seconds": 12.06,
+  "scope": "CPU training, resume, frozen targets and inference; not full-weight GPU validation"
+}

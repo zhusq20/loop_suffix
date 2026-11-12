@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 390, in <module>
+    if __name__=='__main__':main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 305, in main
+    try:worker(entry['job'],entry['gpus'],uuids)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 261, in worker
+    run_command(name,argv,env)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 49, in run_command
+    if code:raise RuntimeError(f'{name} exited {code}; see {log}')
+RuntimeError: dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1 exited 1; see /ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1.log

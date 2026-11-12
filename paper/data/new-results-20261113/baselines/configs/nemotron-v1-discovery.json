@@ -1,0 +1,4107 @@
+{
+  "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+  "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+  "gated": false,
+  "files": [
+    {
+      "name": ".gitattributes",
+      "size": 2461
+    },
+    {
+      "name": "README.md",
+      "size": 11540
+    },
+    {
+      "name": "data/chat-00000-of-00008.parquet",
+      "size": 149037549
+    },
+    {
+      "name": "data/chat-00001-of-00008.parquet",
+      "size": 147832061
+    },
+    {
+      "name": "data/chat-00002-of-00008.parquet",
+      "size": 146822584
+    },
+    {
+      "name": "data/chat-00003-of-00008.parquet",
+      "size": 150023239
+    },
+    {
+      "name": "data/chat-00004-of-00008.parquet",
+      "size": 347172549
+    },
+    {
+      "name": "data/chat-00005-of-00008.parquet",
+      "size": 349341940
+    },
+    {
+      "name": "data/chat-00006-of-00008.parquet",
+      "size": 349063014
+    },
+    {
+      "name": "data/chat-00007-of-00008.parquet",
+      "size": 350859915
+    },
+    {
+      "name": "data/code-00000-of-00183.parquet",
+      "size": 160394214
+    },
+    {
+      "name": "data/code-00001-of-00183.parquet",
+      "size": 157778339
+    },
+    {
+      "name": "data/code-00002-of-00183.parquet",
+      "size": 150948381
+    },
+    {
+      "name": "data/code-00003-of-00183.parquet",
+      "size": 167016110
+    },
+    {
+      "name": "data/code-00004-of-00183.parquet",
+      "size": 192433787
+    },
+    {
+      "name": "data/code-00005-of-00183.parquet",
+      "size": 178204227
+    },
+    {
+      "name": "data/code-00006-of-00183.parquet",
+      "size": 156441074
+    },
+    {
+      "name": "data/code-00007-of-00183.parquet",
+      "size": 165087818
+    },
+    {
+      "name": "data/code-00008-of-00183.parquet",
+      "size": 190981300
+    },
+    {
+      "name": "data/code-00009-of-00183.parquet",
+      "size": 149119688
+    },
+    {
+      "name": "data/code-00010-of-00183.parquet",
+      "size": 163687550
+    },
+    {
+      "name": "data/code-00011-of-00183.parquet",
+      "size": 185090479
+    },
+    {
+      "name": "data/code-00012-of-00183.parquet",
+      "size": 175543386
+    },
+    {
+      "name": "data/code-00013-of-00183.parquet",
+      "size": 160554484
+    },
+    {
+      "name": "data/code-00014-of-00183.parquet",
+      "size": 153195869
+    },
+    {
+      "name": "data/code-00015-of-00183.parquet",
+      "size": 166607743
+    },
+    {
+      "name": "data/code-00016-of-00183.parquet",
+      "size": 182730205
+    },
+    {
+      "name": "data/code-00017-of-00183.parquet",
+      "size": 173721559
+    },
+    {
+      "name": "data/code-00018-of-00183.parquet",
+      "size": 163471931
+    },
+    {
+      "name": "data/code-00019-of-00183.parquet",
+      "size": 144473404
+    },
+    {
+      "name": "data/code-00020-of-00183.parquet",
+      "size": 169028445
+    },
+    {
+      "name": "data/code-00021-of-00183.parquet",
+      "size": 181752236
+    },
+    {
+      "name": "data/code-00022-of-00183.parquet",
+      "size": 163579900
+    },
+    {
+      "name": "data/code-00023-of-00183.parquet",
+      "size": 146853365
+    },
+    {
+      "name": "data/code-00024-of-00183.parquet",
+      "size": 164366297
+    },
+    {
+      "name": "data/code-00025-of-00183.parquet",
+      "size": 172281243
+    },
+    {
+      "name": "data/code-00026-of-00183.parquet",
+      "size": 152005912
+    },
+    {
+      "name": "data/code-00027-of-00183.parquet",
+      "size": 163610666
+    },
+    {
+      "name": "data/code-00028-of-00183.parquet",
+      "size": 183270663
+    },
+    {
+      "name": "data/code-00029-of-00183.parquet",
+      "size": 150354556
+    },
+    {
+      "name": "data/code-00030-of-00183.parquet",
+      "size": 166067168
+    },
+    {
+      "name": "data/code-00031-of-00183.parquet",
+      "size": 185201830
+    },
+    {
+      "name": "data/code-00032-of-00183.parquet",
+      "size": 159744735
+    },
+    {
+      "name": "data/code-00033-of-00183.parquet",
+      "size": 150806345
+    },
+    {
+      "name": "data/code-00034-of-00183.parquet",
+      "size": 164082665
+    },
+    {
+      "name": "data/code-00035-of-00183.parquet",
+      "size": 182820538
+    },
+    {
+      "name": "data/code-00036-of-00183.parquet",
+      "size": 150360876
+    },
+    {
+      "name": "data/code-00037-of-00183.parquet",
+      "size": 166456647
+    },
+    {
+      "name": "data/code-00038-of-00183.parquet",
+      "size": 179776257
+    },
+    {
+      "name": "data/code-00039-of-00183.parquet",
+      "size": 157145855
+    },
+    {
+      "name": "data/code-00040-of-00183.parquet",
+      "size": 175911040
+    },
+    {
+      "name": "data/code-00041-of-00183.parquet",
+      "size": 140040622
+    },
+    {
+      "name": "data/code-00042-of-00183.parquet",
+      "size": 194493772
+    },
+    {
+      "name": "data/code-00043-of-00183.parquet",
+      "size": 169199877
+    },
+    {
+      "name": "data/code-00044-of-00183.parquet",
+      "size": 154524336
+    },
+    {
+      "name": "data/code-00045-of-00183.parquet",
+      "size": 175366145
+    },
+    {
+      "name": "data/code-00046-of-00183.parquet",
+      "size": 155742293
+    },
+    {
+      "name": "data/code-00047-of-00183.parquet",
+      "size": 142104288
+    },
+    {
+      "name": "data/code-00048-of-00183.parquet",
+      "size": 163546847
+    },
+    {
+      "name": "data/code-00049-of-00183.parquet",
+      "size": 184489299
+    },
+    {
+      "name": "data/code-00050-of-00183.parquet",
+      "size": 183527103
+    },
+    {
+      "name": "data/code-00051-of-00183.parquet",
+      "size": 165541903
+    },
+    {
+      "name": "data/code-00052-of-00183.parquet",
+      "size": 200741510
+    },
+    {
+      "name": "data/code-00053-of-00183.parquet",
+      "size": 194942045
+    },
+    {
+      "name": "data/code-00054-of-00183.parquet",
+      "size": 202899705
+    },
+    {
+      "name": "data/code-00055-of-00183.parquet",
+      "size": 188245628
+    },
+    {
+      "name": "data/code-00056-of-00183.parquet",
+      "size": 220013011
+    },
+    {
+      "name": "data/code-00057-of-00183.parquet",
+      "size": 229799887
+    },
+    {
+      "name": "data/code-00058-of-00183.parquet",
+      "size": 215771623
+    },
+    {
+      "name": "data/code-00059-of-00183.parquet",
+      "size": 232865297
+    },
+    {
+      "name": "data/code-00060-of-00183.parquet",
+      "size": 196772509
+    },
+    {
+      "name": "data/code-00061-of-00183.parquet",
+      "size": 210724109
+    },
+    {
+      "name": "data/code-00062-of-00183.parquet",
+      "size": 220800766
+    },
+    {
+      "name": "data/code-00063-of-00183.parquet",
+      "size": 233016077
+    },
+    {
+      "name": "data/code-00064-of-00183.parquet",
+      "size": 215977430
+    },
+    {
+      "name": "data/code-00065-of-00183.parquet",
+      "size": 181974872
+    },
+    {
+      "name": "data/code-00066-of-00183.parquet",
+      "size": 218588745
+    },
+    {
+      "name": "data/code-00067-of-00183.parquet",
+      "size": 212316801
+    },
+    {
+      "name": "data/code-00068-of-00183.parquet",
+      "size": 205859349
+    },
+    {
+      "name": "data/code-00069-of-00183.parquet",
+      "size": 209604098
+    },
+    {
+      "name": "data/code-00070-of-00183.parquet",
+      "size": 193695577
+    },
+    {
+      "name": "data/code-00071-of-00183.parquet",
+      "size": 190362414
+    },
+    {
+      "name": "data/code-00072-of-00183.parquet",
+      "size": 208155442
+    },
+    {
+      "name": "data/code-00073-of-00183.parquet",
+      "size": 191604740
+    },
+    {
+      "name": "data/code-00074-of-00183.parquet",
+      "size": 204814328
+    },
+    {
+      "name": "data/code-00075-of-00183.parquet",
+      "size": 174007752
+    },
+    {
+      "name": "data/code-00076-of-00183.parquet",
+      "size": 204443311
+    },
+    {
+      "name": "data/code-00077-of-00183.parquet",
+      "size": 225985599
+    },
+    {
+      "name": "data/code-00078-of-00183.parquet",
+      "size": 204412040
+    },
+    {
+      "name": "data/code-00079-of-00183.parquet",
+      "size": 168847786
+    },
+    {
+      "name": "data/code-00080-of-00183.parquet",
+      "size": 177734650
+    },
+    {
+      "name": "data/code-00081-of-00183.parquet",
+      "size": 234951041
+    },
+    {
+      "name": "data/code-00082-of-00183.parquet",
+      "size": 228519188
+    },
+    {
+      "name": "data/code-00083-of-00183.parquet",
+      "size": 219425227
+    },
+    {
+      "name": "data/code-00084-of-00183.parquet",
+      "size": 209549072
+    },
+    {
+      "name": "data/code-00085-of-00183.parquet",
+      "size": 232818123
+    },
+    {
+      "name": "data/code-00086-of-00183.parquet",
+      "size": 206750946
+    },
+    {
+      "name": "data/code-00087-of-00183.parquet",
+      "size": 212772671
+    },
+    {
+      "name": "data/code-00088-of-00183.parquet",
+      "size": 214334052
+    },
+    {
+      "name": "data/code-00089-of-00183.parquet",
+      "size": 189003449
+    },
+    {
+      "name": "data/code-00090-of-00183.parquet",
+      "size": 191142475
+    },
+    {
+      "name": "data/code-00091-of-00183.parquet",
+      "size": 217324998
+    },
+    {
+      "name": "data/code-00092-of-00183.parquet",
+      "size": 178341160
+    },
+    {
+      "name": "data/code-00093-of-00183.parquet",
+      "size": 202701832
+    },
+    {
+      "name": "data/code-00094-of-00183.parquet",
+      "size": 208287098
+    },
+    {
+      "name": "data/code-00095-of-00183.parquet",
+      "size": 199940011
+    },
+    {
+      "name": "data/code-00096-of-00183.parquet",
+      "size": 184247858
+    },
+    {
+      "name": "data/code-00097-of-00183.parquet",
+      "size": 229613445
+    },
+    {
+      "name": "data/code-00098-of-00183.parquet",
+      "size": 230793705
+    },
+    {
+      "name": "data/code-00099-of-00183.parquet",
+      "size": 210911171
+    },
+    {
+      "name": "data/code-00100-of-00183.parquet",
+      "size": 182907369
+    },
+    {
+      "name": "data/code-00101-of-00183.parquet",
+      "size": 213215260
+    },
+    {
+      "name": "data/code-00102-of-00183.parquet",
+      "size": 189640180
+    },
+    {
+      "name": "data/code-00103-of-00183.parquet",
+      "size": 211526670
+    },
+    {
+      "name": "data/code-00104-of-00183.parquet",
+      "size": 201060076
+    },
+    {
+      "name": "data/code-00105-of-00183.parquet",
+      "size": 178643814
+    },
+    {
+      "name": "data/code-00106-of-00183.parquet",
+      "size": 162591434
+    },
+    {
+      "name": "data/code-00107-of-00183.parquet",
+      "size": 236928192
+    },
+    {
+      "name": "data/code-00108-of-00183.parquet",
+      "size": 235577152
+    },
+    {
+      "name": "data/code-00109-of-00183.parquet",
+      "size": 214504744
+    },
+    {
+      "name": "data/code-00110-of-00183.parquet",
+      "size": 215329034
+    },
+    {
+      "name": "data/code-00111-of-00183.parquet",
+      "size": 229936563
+    },
+    {
+      "name": "data/code-00112-of-00183.parquet",
+      "size": 213677712
+    },
+    {
+      "name": "data/code-00113-of-00183.parquet",
+      "size": 187699514
+    },
+    {
+      "name": "data/code-00114-of-00183.parquet",
+      "size": 208337330
+    },
+    {
+      "name": "data/code-00115-of-00183.parquet",
+      "size": 198279516
+    },
+    {
+      "name": "data/code-00116-of-00183.parquet",
+      "size": 217892817
+    },
+    {
+      "name": "data/code-00117-of-00183.parquet",
+      "size": 183581860
+    },
+    {
+      "name": "data/code-00118-of-00183.parquet",
+      "size": 215274435
+    },
+    {
+      "name": "data/code-00119-of-00183.parquet",
+      "size": 182883551
+    },
+    {
+      "name": "data/code-00120-of-00183.parquet",
+      "size": 199387277
+    },
+    {
+      "name": "data/code-00121-of-00183.parquet",
+      "size": 193966677
+    },
+    {
+      "name": "data/code-00122-of-00183.parquet",
+      "size": 190015581
+    },
+    {
+      "name": "data/code-00123-of-00183.parquet",
+      "size": 210394363
+    },
+    {
+      "name": "data/code-00124-of-00183.parquet",
+      "size": 193964265
+    },
+    {
+      "name": "data/code-00125-of-00183.parquet",
+      "size": 193136315
+    },
+    {
+      "name": "data/code-00126-of-00183.parquet",
+      "size": 203503163
+    },
+    {
+      "name": "data/code-00127-of-00183.parquet",
+      "size": 189814865
+    },
+    {
+      "name": "data/code-00128-of-00183.parquet",
+      "size": 209539840
+    },
+    {
+      "name": "data/code-00129-of-00183.parquet",
+      "size": 197353336
+    },
+    {
+      "name": "data/code-00130-of-00183.parquet",
+      "size": 213209852
+    },
+    {
+      "name": "data/code-00131-of-00183.parquet",
+      "size": 185772821
+    },
+    {
+      "name": "data/code-00132-of-00183.parquet",
+      "size": 212701307
+    },
+    {
+      "name": "data/code-00133-of-00183.parquet",
+      "size": 182215365
+    },
+    {
+      "name": "data/code-00134-of-00183.parquet",
+      "size": 205657446
+    },
+    {
+      "name": "data/code-00135-of-00183.parquet",
+      "size": 186895095
+    },
+    {
+      "name": "data/code-00136-of-00183.parquet",
+      "size": 211298358
+    },
+    {
+      "name": "data/code-00137-of-00183.parquet",
+      "size": 190217499
+    },
+    {
+      "name": "data/code-00138-of-00183.parquet",
+      "size": 211561811
+    },
+    {
+      "name": "data/code-00139-of-00183.parquet",
+      "size": 218369358
+    },
+    {
+      "name": "data/code-00140-of-00183.parquet",
+      "size": 181603694
+    },
+    {
+      "name": "data/code-00141-of-00183.parquet",
+      "size": 209864348
+    },
+    {
+      "name": "data/code-00142-of-00183.parquet",
+      "size": 186000124
+    },
+    {
+      "name": "data/code-00143-of-00183.parquet",
+      "size": 206063414
+    },
+    {
+      "name": "data/code-00144-of-00183.parquet",
+      "size": 187518044
+    },
+    {
+      "name": "data/code-00145-of-00183.parquet",
+      "size": 214053666
+    },
+    {
+      "name": "data/code-00146-of-00183.parquet",
+      "size": 188271595
+    },
+    {
+      "name": "data/code-00147-of-00183.parquet",
+      "size": 213708772
+    },
+    {
+      "name": "data/code-00148-of-00183.parquet",
+      "size": 219177663
+    },
+    {
+      "name": "data/code-00149-of-00183.parquet",
+      "size": 185813738
+    },
+    {
+      "name": "data/code-00150-of-00183.parquet",
+      "size": 216229360
+    },
+    {
+      "name": "data/code-00151-of-00183.parquet",
+      "size": 184180919
+    },
+    {
+      "name": "data/code-00152-of-00183.parquet",
+      "size": 204245138
+    },
+    {
+      "name": "data/code-00153-of-00183.parquet",
+      "size": 188075379
+    },
+    {
+      "name": "data/code-00154-of-00183.parquet",
+      "size": 209053683
+    },
+    {
+      "name": "data/code-00155-of-00183.parquet",
+      "size": 198087584
+    },
+    {
+      "name": "data/code-00156-of-00183.parquet",
+      "size": 205827503
+    },
+    {
+      "name": "data/code-00157-of-00183.parquet",
+      "size": 195070116
+    },
+    {
+      "name": "data/code-00158-of-00183.parquet",
+      "size": 191064298
+    },
+    {
+      "name": "data/code-00159-of-00183.parquet",
+      "size": 199923169
+    },
+    {
+      "name": "data/code-00160-of-00183.parquet",
+      "size": 200511997
+    },
+    {
+      "name": "data/code-00161-of-00183.parquet",
+      "size": 210716608
+    },
+    {
+      "name": "data/code-00162-of-00183.parquet",
+      "size": 193816993
+    },
+    {
+      "name": "data/code-00163-of-00183.parquet",
+      "size": 211698404
+    },
+    {
+      "name": "data/code-00164-of-00183.parquet",
+      "size": 182387583
+    },
+    {
+      "name": "data/code-00165-of-00183.parquet",
+      "size": 209739040
+    },
+    {
+      "name": "data/code-00166-of-00183.parquet",
+      "size": 193980996
+    },
+    {
+      "name": "data/code-00167-of-00183.parquet",
+      "size": 204799121
+    },
+    {
+      "name": "data/code-00168-of-00183.parquet",
+      "size": 184370686
+    },
+    {
+      "name": "data/code-00169-of-00183.parquet",
+      "size": 202052428
+    },
+    {
+      "name": "data/code-00170-of-00183.parquet",
+      "size": 191157713
+    },
+    {
+      "name": "data/code-00171-of-00183.parquet",
+      "size": 212206592
+    },
+    {
+      "name": "data/code-00172-of-00183.parquet",
+      "size": 212504849
+    },
+    {
+      "name": "data/code-00173-of-00183.parquet",
+      "size": 188321836
+    },
+    {
+      "name": "data/code-00174-of-00183.parquet",
+      "size": 215830048
+    },
+    {
+      "name": "data/code-00175-of-00183.parquet",
+      "size": 180021029
+    },
+    {
+      "name": "data/code-00176-of-00183.parquet",
+      "size": 211720881
+    },
+    {
+      "name": "data/code-00177-of-00183.parquet",
+      "size": 186127860
+    },
+    {
+      "name": "data/code-00178-of-00183.parquet",
+      "size": 205131194
+    },
+    {
+      "name": "data/code-00179-of-00183.parquet",
+      "size": 187834954
+    },
+    {
+      "name": "data/code-00180-of-00183.parquet",
+      "size": 207363257
+    },
+    {
+      "name": "data/code-00181-of-00183.parquet",
+      "size": 188242378
+    },
+    {
+      "name": "data/code-00182-of-00183.parquet",
+      "size": 219992663
+    },
+    {
+      "name": "data/math-00000-of-00159.parquet",
+      "size": 208493334
+    },
+    {
+      "name": "data/math-00001-of-00159.parquet",
+      "size": 207408978
+    },
+    {
+      "name": "data/math-00002-of-00159.parquet",
+      "size": 208731300
+    },
+    {
+      "name": "data/math-00003-of-00159.parquet",
+      "size": 209702981
+    },
+    {
+      "name": "data/math-00004-of-00159.parquet",
+      "size": 207279207
+    },
+    {
+      "name": "data/math-00005-of-00159.parquet",
+      "size": 207815428
+    },
+    {
+      "name": "data/math-00006-of-00159.parquet",
+      "size": 210026193
+    },
+    {
+      "name": "data/math-00007-of-00159.parquet",
+      "size": 208572698
+    },
+    {
+      "name": "data/math-00008-of-00159.parquet",
+      "size": 206797995
+    },
+    {
+      "name": "data/math-00009-of-00159.parquet",
+      "size": 209014013
+    },
+    {
+      "name": "data/math-00010-of-00159.parquet",
+      "size": 207979868
+    },
+    {
+      "name": "data/math-00011-of-00159.parquet",
+      "size": 205671489
+    },
+    {
+      "name": "data/math-00012-of-00159.parquet",
+      "size": 208872797
+    },
+    {
+      "name": "data/math-00013-of-00159.parquet",
+      "size": 208285467
+    },
+    {
+      "name": "data/math-00014-of-00159.parquet",
+      "size": 208284276
+    },
+    {
+      "name": "data/math-00015-of-00159.parquet",
+      "size": 208562037
+    },
+    {
+      "name": "data/math-00016-of-00159.parquet",
+      "size": 208527912
+    },
+    {
+      "name": "data/math-00017-of-00159.parquet",
+      "size": 206922883
+    },
+    {
+      "name": "data/math-00018-of-00159.parquet",
+      "size": 209657935
+    },
+    {
+      "name": "data/math-00019-of-00159.parquet",
+      "size": 209902758
+    },
+    {
+      "name": "data/math-00020-of-00159.parquet",
+      "size": 208533574
+    },
+    {
+      "name": "data/math-00021-of-00159.parquet",
+      "size": 208767238
+    },
+    {
+      "name": "data/math-00022-of-00159.parquet",
+      "size": 207577426
+    },
+    {
+      "name": "data/math-00023-of-00159.parquet",
+      "size": 209090496
+    },
+    {
+      "name": "data/math-00024-of-00159.parquet",
+      "size": 207683626
+    },
+    {
+      "name": "data/math-00025-of-00159.parquet",
+      "size": 207545282
+    },
+    {
+      "name": "data/math-00026-of-00159.parquet",
+      "size": 192683488
+    },
+    {
+      "name": "data/math-00027-of-00159.parquet",
+      "size": 177293671
+    },
+    {
+      "name": "data/math-00028-of-00159.parquet",
+      "size": 178816796
+    },
+    {
+      "name": "data/math-00029-of-00159.parquet",
+      "size": 177535833
+    },
+    {
+      "name": "data/math-00030-of-00159.parquet",
+      "size": 177394990
+    },
+    {
+      "name": "data/math-00031-of-00159.parquet",
+      "size": 178070038
+    },
+    {
+      "name": "data/math-00032-of-00159.parquet",
+      "size": 178581832
+    },
+    {
+      "name": "data/math-00033-of-00159.parquet",
+      "size": 177415444
+    },
+    {
+      "name": "data/math-00034-of-00159.parquet",
+      "size": 178678318
+    },
+    {
+      "name": "data/math-00035-of-00159.parquet",
+      "size": 177897898
+    },
+    {
+      "name": "data/math-00036-of-00159.parquet",
+      "size": 178010975
+    },
+    {
+      "name": "data/math-00037-of-00159.parquet",
+      "size": 177944258
+    },
+    {
+      "name": "data/math-00038-of-00159.parquet",
+      "size": 176956163
+    },
+    {
+      "name": "data/math-00039-of-00159.parquet",
+      "size": 177481609
+    },
+    {
+      "name": "data/math-00040-of-00159.parquet",
+      "size": 177760775
+    },
+    {
+      "name": "data/math-00041-of-00159.parquet",
+      "size": 178009925
+    },
+    {
+      "name": "data/math-00042-of-00159.parquet",
+      "size": 177540986
+    },
+    {
+      "name": "data/math-00043-of-00159.parquet",
+      "size": 178324560
+    },
+    {
+      "name": "data/math-00044-of-00159.parquet",
+      "size": 177421226
+    },
+    {
+      "name": "data/math-00045-of-00159.parquet",
+      "size": 177956194
+    },
+    {
+      "name": "data/math-00046-of-00159.parquet",
+      "size": 178011848
+    },
+    {
+      "name": "data/math-00047-of-00159.parquet",
+      "size": 177656591
+    },
+    {
+      "name": "data/math-00048-of-00159.parquet",
+      "size": 177755487
+    },
+    {
+      "name": "data/math-00049-of-00159.parquet",
+      "size": 177267510
+    },
+    {
+      "name": "data/math-00050-of-00159.parquet",
+      "size": 176951892
+    },
+    {
+      "name": "data/math-00051-of-00159.parquet",
+      "size": 179659372
+    },
+    {
+      "name": "data/math-00052-of-00159.parquet",
+      "size": 177561552
+    },
+    {
+      "name": "data/math-00053-of-00159.parquet",
+      "size": 178663389
+    },
+    {
+      "name": "data/math-00054-of-00159.parquet",
+      "size": 176853317
+    },
+    {
+      "name": "data/math-00055-of-00159.parquet",
+      "size": 176677183
+    },
+    {
+      "name": "data/math-00056-of-00159.parquet",
+      "size": 178740977
+    },
+    {
+      "name": "data/math-00057-of-00159.parquet",
+      "size": 178795459
+    },
+    {
+      "name": "data/math-00058-of-00159.parquet",
+      "size": 179022505
+    },
+    {
+      "name": "data/math-00059-of-00159.parquet",
+      "size": 211173924
+    },
+    {
+      "name": "data/math-00060-of-00159.parquet",
+      "size": 224030364
+    },
+    {
+      "name": "data/math-00061-of-00159.parquet",
+      "size": 222084152
+    },
+    {
+      "name": "data/math-00062-of-00159.parquet",
+      "size": 223435101
+    },
+    {
+      "name": "data/math-00063-of-00159.parquet",
+      "size": 224392439
+    },
+    {
+      "name": "data/math-00064-of-00159.parquet",
+      "size": 224379782
+    },
+    {
+      "name": "data/math-00065-of-00159.parquet",
+      "size": 222560982
+    },
+    {
+      "name": "data/math-00066-of-00159.parquet",
+      "size": 222434385
+    },
+    {
+      "name": "data/math-00067-of-00159.parquet",
+      "size": 221847495
+    },
+    {
+      "name": "data/math-00068-of-00159.parquet",
+      "size": 223173642
+    },
+    {
+      "name": "data/math-00069-of-00159.parquet",
+      "size": 222895103
+    },
+    {
+      "name": "data/math-00070-of-00159.parquet",
+      "size": 224009055
+    },
+    {
+      "name": "data/math-00071-of-00159.parquet",
+      "size": 223331053
+    },
+    {
+      "name": "data/math-00072-of-00159.parquet",
+      "size": 224836182
+    },
+    {
+      "name": "data/math-00073-of-00159.parquet",
+      "size": 223355941
+    },
+    {
+      "name": "data/math-00074-of-00159.parquet",
+      "size": 223035378
+    },
+    {
+      "name": "data/math-00075-of-00159.parquet",
+      "size": 223226322
+    },
+    {
+      "name": "data/math-00076-of-00159.parquet",
+      "size": 262699781
+    },
+    {
+      "name": "data/math-00077-of-00159.parquet",
+      "size": 261310559
+    },
+    {
+      "name": "data/math-00078-of-00159.parquet",
+      "size": 263716164
+    },
+    {
+      "name": "data/math-00079-of-00159.parquet",
+      "size": 263728330
+    },
+    {
+      "name": "data/math-00080-of-00159.parquet",
+      "size": 263752624
+    },
+    {
+      "name": "data/math-00081-of-00159.parquet",
+      "size": 264833178
+    },
+    {
+      "name": "data/math-00082-of-00159.parquet",
+      "size": 264498903
+    },
+    {
+      "name": "data/math-00083-of-00159.parquet",
+      "size": 262547034
+    },
+    {
+      "name": "data/math-00084-of-00159.parquet",
+      "size": 263849897
+    },
+    {
+      "name": "data/math-00085-of-00159.parquet",
+      "size": 263263458
+    },
+    {
+      "name": "data/math-00086-of-00159.parquet",
+      "size": 265118616
+    },
+    {
+      "name": "data/math-00087-of-00159.parquet",
+      "size": 264656085
+    },
+    {
+      "name": "data/math-00088-of-00159.parquet",
+      "size": 264448643
+    },
+    {
+      "name": "data/math-00089-of-00159.parquet",
+      "size": 264503340
+    },
+    {
+      "name": "data/math-00090-of-00159.parquet",
+      "size": 263612379
+    },
+    {
+      "name": "data/math-00091-of-00159.parquet",
+      "size": 264481269
+    },
+    {
+      "name": "data/math-00092-of-00159.parquet",
+      "size": 263736021
+    },
+    {
+      "name": "data/math-00093-of-00159.parquet",
+      "size": 242311881
+    },
+    {
+      "name": "data/math-00094-of-00159.parquet",
+      "size": 233253673
+    },
+    {
+      "name": "data/math-00095-of-00159.parquet",
+      "size": 233985230
+    },
+    {
+      "name": "data/math-00096-of-00159.parquet",
+      "size": 233228571
+    },
+    {
+      "name": "data/math-00097-of-00159.parquet",
+      "size": 232510187
+    },
+    {
+      "name": "data/math-00098-of-00159.parquet",
+      "size": 233220954
+    },
+    {
+      "name": "data/math-00099-of-00159.parquet",
+      "size": 232996373
+    },
+    {
+      "name": "data/math-00100-of-00159.parquet",
+      "size": 233847165
+    },
+    {
+      "name": "data/math-00101-of-00159.parquet",
+      "size": 233441151
+    },
+    {
+      "name": "data/math-00102-of-00159.parquet",
+      "size": 234000070
+    },
+    {
+      "name": "data/math-00103-of-00159.parquet",
+      "size": 231633120
+    },
+    {
+      "name": "data/math-00104-of-00159.parquet",
+      "size": 233689065
+    },
+    {
+      "name": "data/math-00105-of-00159.parquet",
+      "size": 233285306
+    },
+    {
+      "name": "data/math-00106-of-00159.parquet",
+      "size": 233126419
+    },
+    {
+      "name": "data/math-00107-of-00159.parquet",
+      "size": 233885872
+    },
+    {
+      "name": "data/math-00108-of-00159.parquet",
+      "size": 233940863
+    },
+    {
+      "name": "data/math-00109-of-00159.parquet",
+      "size": 234642249
+    },
+    {
+      "name": "data/math-00110-of-00159.parquet",
+      "size": 236812603
+    },
+    {
+      "name": "data/math-00111-of-00159.parquet",
+      "size": 234469934
+    },
+    {
+      "name": "data/math-00112-of-00159.parquet",
+      "size": 234294352
+    },
+    {
+      "name": "data/math-00113-of-00159.parquet",
+      "size": 235297455
+    },
+    {
+      "name": "data/math-00114-of-00159.parquet",
+      "size": 235048487
+    },
+    {
+      "name": "data/math-00115-of-00159.parquet",
+      "size": 235754749
+    },
+    {
+      "name": "data/math-00116-of-00159.parquet",
+      "size": 236474120
+    },
+    {
+      "name": "data/math-00117-of-00159.parquet",
+      "size": 235696664
+    },
+    {
+      "name": "data/math-00118-of-00159.parquet",
+      "size": 234304870
+    },
+    {
+      "name": "data/math-00119-of-00159.parquet",
+      "size": 233635402
+    },
+    {
+      "name": "data/math-00120-of-00159.parquet",
+      "size": 235916002
+    },
+    {
+      "name": "data/math-00121-of-00159.parquet",
+      "size": 234240676
+    },
+    {
+      "name": "data/math-00122-of-00159.parquet",
+      "size": 236864156
+    },
+    {
+      "name": "data/math-00123-of-00159.parquet",
+      "size": 234679998
+    },
+    {
+      "name": "data/math-00124-of-00159.parquet",
+      "size": 236285268
+    },
+    {
+      "name": "data/math-00125-of-00159.parquet",
+      "size": 234515037
+    },
+    {
+      "name": "data/math-00126-of-00159.parquet",
+      "size": 236381138
+    },
+    {
+      "name": "data/math-00127-of-00159.parquet",
+      "size": 235003140
+    },
+    {
+      "name": "data/math-00128-of-00159.parquet",
+      "size": 236675473
+    },
+    {
+      "name": "data/math-00129-of-00159.parquet",
+      "size": 234828871
+    },
+    {
+      "name": "data/math-00130-of-00159.parquet",
+      "size": 234923130
+    },
+    {
+      "name": "data/math-00131-of-00159.parquet",
+      "size": 235423280
+    },
+    {
+      "name": "data/math-00132-of-00159.parquet",
+      "size": 247296816
+    },
+    {
+      "name": "data/math-00133-of-00159.parquet",
+      "size": 288007694
+    },
+    {
+      "name": "data/math-00134-of-00159.parquet",
+      "size": 286554629
+    },
+    {
+      "name": "data/math-00135-of-00159.parquet",
+      "size": 286878994
+    },
+    {
+      "name": "data/math-00136-of-00159.parquet",
+      "size": 286808850
+    },
+    {
+      "name": "data/math-00137-of-00159.parquet",
+      "size": 287789567
+    },
+    {
+      "name": "data/math-00138-of-00159.parquet",
+      "size": 284729780
+    },
+    {
+      "name": "data/math-00139-of-00159.parquet",
+      "size": 286789562
+    },
+    {
+      "name": "data/math-00140-of-00159.parquet",
+      "size": 287692510
+    },
+    {
+      "name": "data/math-00141-of-00159.parquet",
+      "size": 286138762
+    },
+    {
+      "name": "data/math-00142-of-00159.parquet",
+      "size": 286716516
+    },
+    {
+      "name": "data/math-00143-of-00159.parquet",
+      "size": 286179824
+    },
+    {
+      "name": "data/math-00144-of-00159.parquet",
+      "size": 288278623
+    },
+    {
+      "name": "data/math-00145-of-00159.parquet",
+      "size": 288175368
+    },
+    {
+      "name": "data/math-00146-of-00159.parquet",
+      "size": 286885757
+    },
+    {
+      "name": "data/math-00147-of-00159.parquet",
+      "size": 286373147
+    },
+    {
+      "name": "data/math-00148-of-00159.parquet",
+      "size": 285920990
+    },
+    {
+      "name": "data/math-00149-of-00159.parquet",
+      "size": 288305590
+    },
+    {
+      "name": "data/math-00150-of-00159.parquet",
+      "size": 285627872
+    },
+    {
+      "name": "data/math-00151-of-00159.parquet",
+      "size": 285673098
+    },
+    {
+      "name": "data/math-00152-of-00159.parquet",
+      "size": 285187721
+    },
+    {
+      "name": "data/math-00153-of-00159.parquet",
+      "size": 287400343
+    },
+    {
+      "name": "data/math-00154-of-00159.parquet",
+      "size": 287578183
+    },
+    {
+      "name": "data/math-00155-of-00159.parquet",
+      "size": 287737903
+    },
+    {
+      "name": "data/math-00156-of-00159.parquet",
+      "size": 287132608
+    },
+    {
+      "name": "data/math-00157-of-00159.parquet",
+      "size": 289069933
+    },
+    {
+      "name": "data/math-00158-of-00159.parquet",
+      "size": 288062579
+    },
+    {
+      "name": "data/stem-00000-of-00660.parquet",
+      "size": 178477131
+    },
+    {
+      "name": "data/stem-00001-of-00660.parquet",
+      "size": 179273432
+    },
+    {
+      "name": "data/stem-00002-of-00660.parquet",
+      "size": 180176661
+    },
+    {
+      "name": "data/stem-00003-of-00660.parquet",
+      "size": 187055454
+    },
+    {
+      "name": "data/stem-00004-of-00660.parquet",
+      "size": 183557167
+    },
+    {
+      "name": "data/stem-00005-of-00660.parquet",
+      "size": 185806043
+    },
+    {
+      "name": "data/stem-00006-of-00660.parquet",
+      "size": 189367289
+    },
+    {
+      "name": "data/stem-00007-of-00660.parquet",
+      "size": 186172066
+    },
+    {
+      "name": "data/stem-00008-of-00660.parquet",
+      "size": 193621530
+    },
+    {
+      "name": "data/stem-00009-of-00660.parquet",
+      "size": 192584005
+    },
+    {
+      "name": "data/stem-00010-of-00660.parquet",
+      "size": 185108352
+    },
+    {
+      "name": "data/stem-00011-of-00660.parquet",
+      "size": 188369946
+    },
+    {
+      "name": "data/stem-00012-of-00660.parquet",
+      "size": 185529695
+    },
+    {
+      "name": "data/stem-00013-of-00660.parquet",
+      "size": 190507561
+    },
+    {
+      "name": "data/stem-00014-of-00660.parquet",
+      "size": 187405512
+    },
+    {
+      "name": "data/stem-00015-of-00660.parquet",
+      "size": 190714728
+    },
+    {
+      "name": "data/stem-00016-of-00660.parquet",
+      "size": 190551529
+    },
+    {
+      "name": "data/stem-00017-of-00660.parquet",
+      "size": 193003326
+    },
+    {
+      "name": "data/stem-00018-of-00660.parquet",
+      "size": 312345207
+    },
+    {
+      "name": "data/stem-00019-of-00660.parquet",
+      "size": 297428694
+    },
+    {
+      "name": "data/stem-00020-of-00660.parquet",
+      "size": 325095485
+    },
+    {
+      "name": "data/stem-00021-of-00660.parquet",
+      "size": 319772205
+    },
+    {
+      "name": "data/stem-00022-of-00660.parquet",
+      "size": 323669746
+    },
+    {
+      "name": "data/stem-00023-of-00660.parquet",
+      "size": 298389475
+    },
+    {
+      "name": "data/stem-00024-of-00660.parquet",
+      "size": 324357776
+    },
+    {
+      "name": "data/stem-00025-of-00660.parquet",
+      "size": 324825129
+    },
+    {
+      "name": "data/stem-00026-of-00660.parquet",
+      "size": 377080805
+    },
+    {
+      "name": "data/stem-00027-of-00660.parquet",
+      "size": 384214735
+    },
+    {
+      "name": "data/stem-00028-of-00660.parquet",
+      "size": 330201473
+    },
+    {
+      "name": "data/stem-00029-of-00660.parquet",
+      "size": 335289081
+    },
+    {
+      "name": "data/stem-00030-of-00660.parquet",
+      "size": 402545063
+    },
+    {
+      "name": "data/stem-00031-of-00660.parquet",
+      "size": 380438410
+    },
+    {
+      "name": "data/stem-00032-of-00660.parquet",
+      "size": 342032062
+    },
+    {
+      "name": "data/stem-00033-of-00660.parquet",
+      "size": 383310156
+    },
+    {
+      "name": "data/stem-00034-of-00660.parquet",
+      "size": 371776298
+    },
+    {
+      "name": "data/stem-00035-of-00660.parquet",
+      "size": 359594584
+    },
+    {
+      "name": "data/stem-00036-of-00660.parquet",
+      "size": 301122055
+    },
+    {
+      "name": "data/stem-00037-of-00660.parquet",
+      "size": 231214819
+    },
+    {
+      "name": "data/stem-00038-of-00660.parquet",
+      "size": 227139334
+    },
+    {
+      "name": "data/stem-00039-of-00660.parquet",
+      "size": 151062813
+    },
+    {
+      "name": "data/stem-00040-of-00660.parquet",
+      "size": 166533461
+    },
+    {
+      "name": "data/stem-00041-of-00660.parquet",
+      "size": 178512806
+    },
+    {
+      "name": "data/stem-00042-of-00660.parquet",
+      "size": 205982200
+    },
+    {
+      "name": "data/stem-00043-of-00660.parquet",
+      "size": 212080210
+    },
+    {
+      "name": "data/stem-00044-of-00660.parquet",
+      "size": 223195109
+    },
+    {
+      "name": "data/stem-00045-of-00660.parquet",
+      "size": 173344677
+    },
+    {
+      "name": "data/stem-00046-of-00660.parquet",
+      "size": 228863401
+    },
+    {
+      "name": "data/stem-00047-of-00660.parquet",
+      "size": 200526653
+    },
+    {
+      "name": "data/stem-00048-of-00660.parquet",
+      "size": 193379708
+    },
+    {
+      "name": "data/stem-00049-of-00660.parquet",
+      "size": 202225650
+    },
+    {
+      "name": "data/stem-00050-of-00660.parquet",
+      "size": 202236842
+    },
+    {
+      "name": "data/stem-00051-of-00660.parquet",
+      "size": 205603775
+    },
+    {
+      "name": "data/stem-00052-of-00660.parquet",
+      "size": 207564197
+    },
+    {
+      "name": "data/stem-00053-of-00660.parquet",
+      "size": 203298120
+    },
+    {
+      "name": "data/stem-00054-of-00660.parquet",
+      "size": 241707296
+    },
+    {
+      "name": "data/stem-00055-of-00660.parquet",
+      "size": 209671353
+    },
+    {
+      "name": "data/stem-00056-of-00660.parquet",
+      "size": 197322836
+    },
+    {
+      "name": "data/stem-00057-of-00660.parquet",
+      "size": 195882894
+    },
+    {
+      "name": "data/stem-00058-of-00660.parquet",
+      "size": 203757032
+    },
+    {
+      "name": "data/stem-00059-of-00660.parquet",
+      "size": 197522059
+    },
+    {
+      "name": "data/stem-00060-of-00660.parquet",
+      "size": 206450071
+    },
+    {
+      "name": "data/stem-00061-of-00660.parquet",
+      "size": 223509651
+    },
+    {
+      "name": "data/stem-00062-of-00660.parquet",
+      "size": 200072956
+    },
+    {
+      "name": "data/stem-00063-of-00660.parquet",
+      "size": 202826293
+    },
+    {
+      "name": "data/stem-00064-of-00660.parquet",
+      "size": 210723379
+    },
+    {
+      "name": "data/stem-00065-of-00660.parquet",
+      "size": 208851198
+    },
+    {
+      "name": "data/stem-00066-of-00660.parquet",
+      "size": 208288283
+    },
+    {
+      "name": "data/stem-00067-of-00660.parquet",
+      "size": 197781113
+    },
+    {
+      "name": "data/stem-00068-of-00660.parquet",
+      "size": 187264275
+    },
+    {
+      "name": "data/stem-00069-of-00660.parquet",
+      "size": 216341898
+    },
+    {
+      "name": "data/stem-00070-of-00660.parquet",
+      "size": 231315755
+    },
+    {
+      "name": "data/stem-00071-of-00660.parquet",
+      "size": 194407155
+    },
+    {
+      "name": "data/stem-00072-of-00660.parquet",
+      "size": 191615894
+    },
+    {
+      "name": "data/stem-00073-of-00660.parquet",
+      "size": 203759862
+    },
+    {
+      "name": "data/stem-00074-of-00660.parquet",
+      "size": 200364924
+    },
+    {
+      "name": "data/stem-00075-of-00660.parquet",
+      "size": 202818599
+    },
+    {
+      "name": "data/stem-00076-of-00660.parquet",
+      "size": 218585708
+    },
+    {
+      "name": "data/stem-00077-of-00660.parquet",
+      "size": 423635447
+    },
+    {
+      "name": "data/stem-00078-of-00660.parquet",
+      "size": 357984773
+    },
+    {
+      "name": "data/stem-00079-of-00660.parquet",
+      "size": 375566874
+    },
+    {
+      "name": "data/stem-00080-of-00660.parquet",
+      "size": 399778905
+    },
+    {
+      "name": "data/stem-00081-of-00660.parquet",
+      "size": 303573841
+    },
+    {
+      "name": "data/stem-00082-of-00660.parquet",
+      "size": 175828215
+    },
+    {
+      "name": "data/stem-00083-of-00660.parquet",
+      "size": 145328299
+    },
+    {
+      "name": "data/stem-00084-of-00660.parquet",
+      "size": 171044321
+    },
+    {
+      "name": "data/stem-00085-of-00660.parquet",
+      "size": 280696835
+    },
+    {
+      "name": "data/stem-00086-of-00660.parquet",
+      "size": 188698174
+    },
+    {
+      "name": "data/stem-00087-of-00660.parquet",
+      "size": 138166040
+    },
+    {
+      "name": "data/stem-00088-of-00660.parquet",
+      "size": 171996065
+    },
+    {
+      "name": "data/stem-00089-of-00660.parquet",
+      "size": 152495735
+    },
+    {
+      "name": "data/stem-00090-of-00660.parquet",
+      "size": 205235870
+    },
+    {
+      "name": "data/stem-00091-of-00660.parquet",
+      "size": 273126816
+    },
+    {
+      "name": "data/stem-00092-of-00660.parquet",
+      "size": 151389497
+    },
+    {
+      "name": "data/stem-00093-of-00660.parquet",
+      "size": 181087569
+    },
+    {
+      "name": "data/stem-00094-of-00660.parquet",
+      "size": 140149011
+    },
+    {
+      "name": "data/stem-00095-of-00660.parquet",
+      "size": 159629353
+    },
+    {
+      "name": "data/stem-00096-of-00660.parquet",
+      "size": 271518379
+    },
+    {
+      "name": "data/stem-00097-of-00660.parquet",
+      "size": 201020531
+    },
+    {
+      "name": "data/stem-00098-of-00660.parquet",
+      "size": 142120587
+    },
+    {
+      "name": "data/stem-00099-of-00660.parquet",
+      "size": 171663789
+    },
+    {
+      "name": "data/stem-00100-of-00660.parquet",
+      "size": 149062120
+    },
+    {
+      "name": "data/stem-00101-of-00660.parquet",
+      "size": 187664993
+    },
+    {
+      "name": "data/stem-00102-of-00660.parquet",
+      "size": 286218504
+    },
+    {
+      "name": "data/stem-00103-of-00660.parquet",
+      "size": 162164348
+    },
+    {
+      "name": "data/stem-00104-of-00660.parquet",
+      "size": 160623099
+    },
+    {
+      "name": "data/stem-00105-of-00660.parquet",
+      "size": 151544487
+    },
+    {
+      "name": "data/stem-00106-of-00660.parquet",
+      "size": 151377593
+    },
+    {
+      "name": "data/stem-00107-of-00660.parquet",
+      "size": 228126835
+    },
+    {
+      "name": "data/stem-00108-of-00660.parquet",
+      "size": 250548933
+    },
+    {
+      "name": "data/stem-00109-of-00660.parquet",
+      "size": 146972139
+    },
+    {
+      "name": "data/stem-00110-of-00660.parquet",
+      "size": 173057174
+    },
+    {
+      "name": "data/stem-00111-of-00660.parquet",
+      "size": 145232773
+    },
+    {
+      "name": "data/stem-00112-of-00660.parquet",
+      "size": 167067006
+    },
+    {
+      "name": "data/stem-00113-of-00660.parquet",
+      "size": 274241569
+    },
+    {
+      "name": "data/stem-00114-of-00660.parquet",
+      "size": 191090488
+    },
+    {
+      "name": "data/stem-00115-of-00660.parquet",
+      "size": 138144977
+    },
+    {
+      "name": "data/stem-00116-of-00660.parquet",
+      "size": 172671131
+    },
+    {
+      "name": "data/stem-00117-of-00660.parquet",
+      "size": 149207157
+    },
+    {
+      "name": "data/stem-00118-of-00660.parquet",
+      "size": 202396871
+    },
+    {
+      "name": "data/stem-00119-of-00660.parquet",
+      "size": 275004076
+    },
+    {
+      "name": "data/stem-00120-of-00660.parquet",
+      "size": 156894887
+    },
+    {
+      "name": "data/stem-00121-of-00660.parquet",
+      "size": 175155081
+    },
+    {
+      "name": "data/stem-00122-of-00660.parquet",
+      "size": 136030979
+    },
+    {
+      "name": "data/stem-00123-of-00660.parquet",
+      "size": 153197630
+    },
+    {
+      "name": "data/stem-00124-of-00660.parquet",
+      "size": 255291638
+    },
+    {
+      "name": "data/stem-00125-of-00660.parquet",
+      "size": 221632011
+    },
+    {
+      "name": "data/stem-00126-of-00660.parquet",
+      "size": 140829287
+    },
+    {
+      "name": "data/stem-00127-of-00660.parquet",
+      "size": 172969035
+    },
+    {
+      "name": "data/stem-00128-of-00660.parquet",
+      "size": 146985233
+    },
+    {
+      "name": "data/stem-00129-of-00660.parquet",
+      "size": 176580280
+    },
+    {
+      "name": "data/stem-00130-of-00660.parquet",
+      "size": 283503417
+    },
+    {
+      "name": "data/stem-00131-of-00660.parquet",
+      "size": 179430848
+    },
+    {
+      "name": "data/stem-00132-of-00660.parquet",
+      "size": 141231146
+    },
+    {
+      "name": "data/stem-00133-of-00660.parquet",
+      "size": 167851600
+    },
+    {
+      "name": "data/stem-00134-of-00660.parquet",
+      "size": 150689161
+    },
+    {
+      "name": "data/stem-00135-of-00660.parquet",
+      "size": 208445545
+    },
+    {
+      "name": "data/stem-00136-of-00660.parquet",
+      "size": 266421992
+    },
+    {
+      "name": "data/stem-00137-of-00660.parquet",
+      "size": 151050367
+    },
+    {
+      "name": "data/stem-00138-of-00660.parquet",
+      "size": 180153189
+    },
+    {
+      "name": "data/stem-00139-of-00660.parquet",
+      "size": 143151076
+    },
+    {
+      "name": "data/stem-00140-of-00660.parquet",
+      "size": 163235999
+    },
+    {
+      "name": "data/stem-00141-of-00660.parquet",
+      "size": 272922236
+    },
+    {
+      "name": "data/stem-00142-of-00660.parquet",
+      "size": 195610473
+    },
+    {
+      "name": "data/stem-00143-of-00660.parquet",
+      "size": 138776059
+    },
+    {
+      "name": "data/stem-00144-of-00660.parquet",
+      "size": 170457582
+    },
+    {
+      "name": "data/stem-00145-of-00660.parquet",
+      "size": 151835727
+    },
+    {
+      "name": "data/stem-00146-of-00660.parquet",
+      "size": 199479616
+    },
+    {
+      "name": "data/stem-00147-of-00660.parquet",
+      "size": 276708539
+    },
+    {
+      "name": "data/stem-00148-of-00660.parquet",
+      "size": 156947369
+    },
+    {
+      "name": "data/stem-00149-of-00660.parquet",
+      "size": 174491305
+    },
+    {
+      "name": "data/stem-00150-of-00660.parquet",
+      "size": 138389085
+    },
+    {
+      "name": "data/stem-00151-of-00660.parquet",
+      "size": 152242329
+    },
+    {
+      "name": "data/stem-00152-of-00660.parquet",
+      "size": 253254936
+    },
+    {
+      "name": "data/stem-00153-of-00660.parquet",
+      "size": 229128645
+    },
+    {
+      "name": "data/stem-00154-of-00660.parquet",
+      "size": 144355162
+    },
+    {
+      "name": "data/stem-00155-of-00660.parquet",
+      "size": 174500211
+    },
+    {
+      "name": "data/stem-00156-of-00660.parquet",
+      "size": 144342993
+    },
+    {
+      "name": "data/stem-00157-of-00660.parquet",
+      "size": 174464807
+    },
+    {
+      "name": "data/stem-00158-of-00660.parquet",
+      "size": 284240063
+    },
+    {
+      "name": "data/stem-00159-of-00660.parquet",
+      "size": 179739459
+    },
+    {
+      "name": "data/stem-00160-of-00660.parquet",
+      "size": 140629405
+    },
+    {
+      "name": "data/stem-00161-of-00660.parquet",
+      "size": 168898797
+    },
+    {
+      "name": "data/stem-00162-of-00660.parquet",
+      "size": 150198099
+    },
+    {
+      "name": "data/stem-00163-of-00660.parquet",
+      "size": 202652699
+    },
+    {
+      "name": "data/stem-00164-of-00660.parquet",
+      "size": 280068336
+    },
+    {
+      "name": "data/stem-00165-of-00660.parquet",
+      "size": 154679648
+    },
+    {
+      "name": "data/stem-00166-of-00660.parquet",
+      "size": 172667622
+    },
+    {
+      "name": "data/stem-00167-of-00660.parquet",
+      "size": 140969624
+    },
+    {
+      "name": "data/stem-00168-of-00660.parquet",
+      "size": 152733613
+    },
+    {
+      "name": "data/stem-00169-of-00660.parquet",
+      "size": 247538893
+    },
+    {
+      "name": "data/stem-00170-of-00660.parquet",
+      "size": 227466820
+    },
+    {
+      "name": "data/stem-00171-of-00660.parquet",
+      "size": 143001290
+    },
+    {
+      "name": "data/stem-00172-of-00660.parquet",
+      "size": 177025951
+    },
+    {
+      "name": "data/stem-00173-of-00660.parquet",
+      "size": 146569402
+    },
+    {
+      "name": "data/stem-00174-of-00660.parquet",
+      "size": 179446348
+    },
+    {
+      "name": "data/stem-00175-of-00660.parquet",
+      "size": 287970460
+    },
+    {
+      "name": "data/stem-00176-of-00660.parquet",
+      "size": 176788101
+    },
+    {
+      "name": "data/stem-00177-of-00660.parquet",
+      "size": 142638328
+    },
+    {
+      "name": "data/stem-00178-of-00660.parquet",
+      "size": 170660087
+    },
+    {
+      "name": "data/stem-00179-of-00660.parquet",
+      "size": 150941812
+    },
+    {
+      "name": "data/stem-00180-of-00660.parquet",
+      "size": 201820044
+    },
+    {
+      "name": "data/stem-00181-of-00660.parquet",
+      "size": 275768159
+    },
+    {
+      "name": "data/stem-00182-of-00660.parquet",
+      "size": 152950275
+    },
+    {
+      "name": "data/stem-00183-of-00660.parquet",
+      "size": 178532779
+    },
+    {
+      "name": "data/stem-00184-of-00660.parquet",
+      "size": 139486964
+    },
+    {
+      "name": "data/stem-00185-of-00660.parquet",
+      "size": 159235156
+    },
+    {
+      "name": "data/stem-00186-of-00660.parquet",
+      "size": 259912772
+    },
+    {
+      "name": "data/stem-00187-of-00660.parquet",
+      "size": 225716143
+    },
+    {
+      "name": "data/stem-00188-of-00660.parquet",
+      "size": 144258325
+    },
+    {
+      "name": "data/stem-00189-of-00660.parquet",
+      "size": 176174474
+    },
+    {
+      "name": "data/stem-00190-of-00660.parquet",
+      "size": 145532127
+    },
+    {
+      "name": "data/stem-00191-of-00660.parquet",
+      "size": 178053871
+    },
+    {
+      "name": "data/stem-00192-of-00660.parquet",
+      "size": 285577347
+    },
+    {
+      "name": "data/stem-00193-of-00660.parquet",
+      "size": 168904134
+    },
+    {
+      "name": "data/stem-00194-of-00660.parquet",
+      "size": 149603329
+    },
+    {
+      "name": "data/stem-00195-of-00660.parquet",
+      "size": 161601603
+    },
+    {
+      "name": "data/stem-00196-of-00660.parquet",
+      "size": 149371415
+    },
+    {
+      "name": "data/stem-00197-of-00660.parquet",
+      "size": 217556450
+    },
+    {
+      "name": "data/stem-00198-of-00660.parquet",
+      "size": 267454918
+    },
+    {
+      "name": "data/stem-00199-of-00660.parquet",
+      "size": 148343442
+    },
+    {
+      "name": "data/stem-00200-of-00660.parquet",
+      "size": 178583436
+    },
+    {
+      "name": "data/stem-00201-of-00660.parquet",
+      "size": 138817824
+    },
+    {
+      "name": "data/stem-00202-of-00660.parquet",
+      "size": 162496145
+    },
+    {
+      "name": "data/stem-00203-of-00660.parquet",
+      "size": 282703638
+    },
+    {
+      "name": "data/stem-00204-of-00660.parquet",
+      "size": 200475364
+    },
+    {
+      "name": "data/stem-00205-of-00660.parquet",
+      "size": 139632052
+    },
+    {
+      "name": "data/stem-00206-of-00660.parquet",
+      "size": 171201687
+    },
+    {
+      "name": "data/stem-00207-of-00660.parquet",
+      "size": 150454990
+    },
+    {
+      "name": "data/stem-00208-of-00660.parquet",
+      "size": 188736026
+    },
+    {
+      "name": "data/stem-00209-of-00660.parquet",
+      "size": 291558253
+    },
+    {
+      "name": "data/stem-00210-of-00660.parquet",
+      "size": 162251105
+    },
+    {
+      "name": "data/stem-00211-of-00660.parquet",
+      "size": 153429599
+    },
+    {
+      "name": "data/stem-00212-of-00660.parquet",
+      "size": 160023591
+    },
+    {
+      "name": "data/stem-00213-of-00660.parquet",
+      "size": 152020773
+    },
+    {
+      "name": "data/stem-00214-of-00660.parquet",
+      "size": 214053018
+    },
+    {
+      "name": "data/stem-00215-of-00660.parquet",
+      "size": 258058707
+    },
+    {
+      "name": "data/stem-00216-of-00660.parquet",
+      "size": 148095148
+    },
+    {
+      "name": "data/stem-00217-of-00660.parquet",
+      "size": 175560553
+    },
+    {
+      "name": "data/stem-00218-of-00660.parquet",
+      "size": 140634903
+    },
+    {
+      "name": "data/stem-00219-of-00660.parquet",
+      "size": 170404154
+    },
+    {
+      "name": "data/stem-00220-of-00660.parquet",
+      "size": 279809495
+    },
+    {
+      "name": "data/stem-00221-of-00660.parquet",
+      "size": 193022611
+    },
+    {
+      "name": "data/stem-00222-of-00660.parquet",
+      "size": 136846641
+    },
+    {
+      "name": "data/stem-00223-of-00660.parquet",
+      "size": 172252802
+    },
+    {
+      "name": "data/stem-00224-of-00660.parquet",
+      "size": 151193244
+    },
+    {
+      "name": "data/stem-00225-of-00660.parquet",
+      "size": 192198180
+    },
+    {
+      "name": "data/stem-00226-of-00660.parquet",
+      "size": 279017312
+    },
+    {
+      "name": "data/stem-00227-of-00660.parquet",
+      "size": 157928478
+    },
+    {
+      "name": "data/stem-00228-of-00660.parquet",
+      "size": 167519094
+    },
+    {
+      "name": "data/stem-00229-of-00660.parquet",
+      "size": 145906487
+    },
+    {
+      "name": "data/stem-00230-of-00660.parquet",
+      "size": 150663640
+    },
+    {
+      "name": "data/stem-00231-of-00660.parquet",
+      "size": 255235586
+    },
+    {
+      "name": "data/stem-00232-of-00660.parquet",
+      "size": 223865421
+    },
+    {
+      "name": "data/stem-00233-of-00660.parquet",
+      "size": 144706455
+    },
+    {
+      "name": "data/stem-00234-of-00660.parquet",
+      "size": 179446652
+    },
+    {
+      "name": "data/stem-00235-of-00660.parquet",
+      "size": 145279744
+    },
+    {
+      "name": "data/stem-00236-of-00660.parquet",
+      "size": 177457875
+    },
+    {
+      "name": "data/stem-00237-of-00660.parquet",
+      "size": 287916510
+    },
+    {
+      "name": "data/stem-00238-of-00660.parquet",
+      "size": 178465127
+    },
+    {
+      "name": "data/stem-00239-of-00660.parquet",
+      "size": 142752718
+    },
+    {
+      "name": "data/stem-00240-of-00660.parquet",
+      "size": 164030187
+    },
+    {
+      "name": "data/stem-00241-of-00660.parquet",
+      "size": 150049516
+    },
+    {
+      "name": "data/stem-00242-of-00660.parquet",
+      "size": 207991071
+    },
+    {
+      "name": "data/stem-00243-of-00660.parquet",
+      "size": 274780170
+    },
+    {
+      "name": "data/stem-00244-of-00660.parquet",
+      "size": 153140193
+    },
+    {
+      "name": "data/stem-00245-of-00660.parquet",
+      "size": 181145465
+    },
+    {
+      "name": "data/stem-00246-of-00660.parquet",
+      "size": 139006196
+    },
+    {
+      "name": "data/stem-00247-of-00660.parquet",
+      "size": 159771610
+    },
+    {
+      "name": "data/stem-00248-of-00660.parquet",
+      "size": 275395193
+    },
+    {
+      "name": "data/stem-00249-of-00660.parquet",
+      "size": 204718803
+    },
+    {
+      "name": "data/stem-00250-of-00660.parquet",
+      "size": 140449951
+    },
+    {
+      "name": "data/stem-00251-of-00660.parquet",
+      "size": 173939009
+    },
+    {
+      "name": "data/stem-00252-of-00660.parquet",
+      "size": 149522774
+    },
+    {
+      "name": "data/stem-00253-of-00660.parquet",
+      "size": 189966527
+    },
+    {
+      "name": "data/stem-00254-of-00660.parquet",
+      "size": 289861722
+    },
+    {
+      "name": "data/stem-00255-of-00660.parquet",
+      "size": 158880059
+    },
+    {
+      "name": "data/stem-00256-of-00660.parquet",
+      "size": 162836903
+    },
+    {
+      "name": "data/stem-00257-of-00660.parquet",
+      "size": 149655013
+    },
+    {
+      "name": "data/stem-00258-of-00660.parquet",
+      "size": 150573743
+    },
+    {
+      "name": "data/stem-00259-of-00660.parquet",
+      "size": 241896655
+    },
+    {
+      "name": "data/stem-00260-of-00660.parquet",
+      "size": 246849667
+    },
+    {
+      "name": "data/stem-00261-of-00660.parquet",
+      "size": 145851986
+    },
+    {
+      "name": "data/stem-00262-of-00660.parquet",
+      "size": 177855169
+    },
+    {
+      "name": "data/stem-00263-of-00660.parquet",
+      "size": 143591547
+    },
+    {
+      "name": "data/stem-00264-of-00660.parquet",
+      "size": 169537611
+    },
+    {
+      "name": "data/stem-00265-of-00660.parquet",
+      "size": 282972947
+    },
+    {
+      "name": "data/stem-00266-of-00660.parquet",
+      "size": 190578109
+    },
+    {
+      "name": "data/stem-00267-of-00660.parquet",
+      "size": 134494844
+    },
+    {
+      "name": "data/stem-00268-of-00660.parquet",
+      "size": 173696248
+    },
+    {
+      "name": "data/stem-00269-of-00660.parquet",
+      "size": 147300427
+    },
+    {
+      "name": "data/stem-00270-of-00660.parquet",
+      "size": 196456868
+    },
+    {
+      "name": "data/stem-00271-of-00660.parquet",
+      "size": 276090978
+    },
+    {
+      "name": "data/stem-00272-of-00660.parquet",
+      "size": 155116890
+    },
+    {
+      "name": "data/stem-00273-of-00660.parquet",
+      "size": 174913679
+    },
+    {
+      "name": "data/stem-00274-of-00660.parquet",
+      "size": 139095837
+    },
+    {
+      "name": "data/stem-00275-of-00660.parquet",
+      "size": 154791869
+    },
+    {
+      "name": "data/stem-00276-of-00660.parquet",
+      "size": 258859038
+    },
+    {
+      "name": "data/stem-00277-of-00660.parquet",
+      "size": 223842700
+    },
+    {
+      "name": "data/stem-00278-of-00660.parquet",
+      "size": 142734282
+    },
+    {
+      "name": "data/stem-00279-of-00660.parquet",
+      "size": 174691415
+    },
+    {
+      "name": "data/stem-00280-of-00660.parquet",
+      "size": 148316587
+    },
+    {
+      "name": "data/stem-00281-of-00660.parquet",
+      "size": 180236944
+    },
+    {
+      "name": "data/stem-00282-of-00660.parquet",
+      "size": 291246358
+    },
+    {
+      "name": "data/stem-00283-of-00660.parquet",
+      "size": 164814442
+    },
+    {
+      "name": "data/stem-00284-of-00660.parquet",
+      "size": 148930715
+    },
+    {
+      "name": "data/stem-00285-of-00660.parquet",
+      "size": 159261516
+    },
+    {
+      "name": "data/stem-00286-of-00660.parquet",
+      "size": 151920119
+    },
+    {
+      "name": "data/stem-00287-of-00660.parquet",
+      "size": 211022290
+    },
+    {
+      "name": "data/stem-00288-of-00660.parquet",
+      "size": 268233224
+    },
+    {
+      "name": "data/stem-00289-of-00660.parquet",
+      "size": 147773926
+    },
+    {
+      "name": "data/stem-00290-of-00660.parquet",
+      "size": 178404707
+    },
+    {
+      "name": "data/stem-00291-of-00660.parquet",
+      "size": 140540801
+    },
+    {
+      "name": "data/stem-00292-of-00660.parquet",
+      "size": 163505723
+    },
+    {
+      "name": "data/stem-00293-of-00660.parquet",
+      "size": 279359235
+    },
+    {
+      "name": "data/stem-00294-of-00660.parquet",
+      "size": 197746088
+    },
+    {
+      "name": "data/stem-00295-of-00660.parquet",
+      "size": 137091794
+    },
+    {
+      "name": "data/stem-00296-of-00660.parquet",
+      "size": 174567653
+    },
+    {
+      "name": "data/stem-00297-of-00660.parquet",
+      "size": 150610181
+    },
+    {
+      "name": "data/stem-00298-of-00660.parquet",
+      "size": 187730944
+    },
+    {
+      "name": "data/stem-00299-of-00660.parquet",
+      "size": 295542197
+    },
+    {
+      "name": "data/stem-00300-of-00660.parquet",
+      "size": 158565254
+    },
+    {
+      "name": "data/stem-00301-of-00660.parquet",
+      "size": 157850145
+    },
+    {
+      "name": "data/stem-00302-of-00660.parquet",
+      "size": 152172510
+    },
+    {
+      "name": "data/stem-00303-of-00660.parquet",
+      "size": 149103330
+    },
+    {
+      "name": "data/stem-00304-of-00660.parquet",
+      "size": 222211930
+    },
+    {
+      "name": "data/stem-00305-of-00660.parquet",
+      "size": 264947792
+    },
+    {
+      "name": "data/stem-00306-of-00660.parquet",
+      "size": 149390167
+    },
+    {
+      "name": "data/stem-00307-of-00660.parquet",
+      "size": 179428476
+    },
+    {
+      "name": "data/stem-00308-of-00660.parquet",
+      "size": 143279155
+    },
+    {
+      "name": "data/stem-00309-of-00660.parquet",
+      "size": 165931410
+    },
+    {
+      "name": "data/stem-00310-of-00660.parquet",
+      "size": 275610275
+    },
+    {
+      "name": "data/stem-00311-of-00660.parquet",
+      "size": 192576154
+    },
+    {
+      "name": "data/stem-00312-of-00660.parquet",
+      "size": 136302117
+    },
+    {
+      "name": "data/stem-00313-of-00660.parquet",
+      "size": 177034671
+    },
+    {
+      "name": "data/stem-00314-of-00660.parquet",
+      "size": 148504761
+    },
+    {
+      "name": "data/stem-00315-of-00660.parquet",
+      "size": 197769551
+    },
+    {
+      "name": "data/stem-00316-of-00660.parquet",
+      "size": 286240554
+    },
+    {
+      "name": "data/stem-00317-of-00660.parquet",
+      "size": 158298475
+    },
+    {
+      "name": "data/stem-00318-of-00660.parquet",
+      "size": 169607857
+    },
+    {
+      "name": "data/stem-00319-of-00660.parquet",
+      "size": 148186458
+    },
+    {
+      "name": "data/stem-00320-of-00660.parquet",
+      "size": 151828841
+    },
+    {
+      "name": "data/stem-00321-of-00660.parquet",
+      "size": 240542619
+    },
+    {
+      "name": "data/stem-00322-of-00660.parquet",
+      "size": 241843000
+    },
+    {
+      "name": "data/stem-00323-of-00660.parquet",
+      "size": 144287313
+    },
+    {
+      "name": "data/stem-00324-of-00660.parquet",
+      "size": 174543181
+    },
+    {
+      "name": "data/stem-00325-of-00660.parquet",
+      "size": 144541793
+    },
+    {
+      "name": "data/stem-00326-of-00660.parquet",
+      "size": 173367254
+    },
+    {
+      "name": "data/stem-00327-of-00660.parquet",
+      "size": 281939242
+    },
+    {
+      "name": "data/stem-00328-of-00660.parquet",
+      "size": 186123829
+    },
+    {
+      "name": "data/stem-00329-of-00660.parquet",
+      "size": 138771875
+    },
+    {
+      "name": "data/stem-00330-of-00660.parquet",
+      "size": 171118802
+    },
+    {
+      "name": "data/stem-00331-of-00660.parquet",
+      "size": 151435377
+    },
+    {
+      "name": "data/stem-00332-of-00660.parquet",
+      "size": 202204526
+    },
+    {
+      "name": "data/stem-00333-of-00660.parquet",
+      "size": 270387994
+    },
+    {
+      "name": "data/stem-00334-of-00660.parquet",
+      "size": 153245365
+    },
+    {
+      "name": "data/stem-00335-of-00660.parquet",
+      "size": 178125270
+    },
+    {
+      "name": "data/stem-00336-of-00660.parquet",
+      "size": 135309859
+    },
+    {
+      "name": "data/stem-00337-of-00660.parquet",
+      "size": 153502677
+    },
+    {
+      "name": "data/stem-00338-of-00660.parquet",
+      "size": 255841932
+    },
+    {
+      "name": "data/stem-00339-of-00660.parquet",
+      "size": 231936653
+    },
+    {
+      "name": "data/stem-00340-of-00660.parquet",
+      "size": 144929156
+    },
+    {
+      "name": "data/stem-00341-of-00660.parquet",
+      "size": 174342706
+    },
+    {
+      "name": "data/stem-00342-of-00660.parquet",
+      "size": 147009103
+    },
+    {
+      "name": "data/stem-00343-of-00660.parquet",
+      "size": 177170433
+    },
+    {
+      "name": "data/stem-00344-of-00660.parquet",
+      "size": 286966471
+    },
+    {
+      "name": "data/stem-00345-of-00660.parquet",
+      "size": 176969189
+    },
+    {
+      "name": "data/stem-00346-of-00660.parquet",
+      "size": 144100400
+    },
+    {
+      "name": "data/stem-00347-of-00660.parquet",
+      "size": 168304914
+    },
+    {
+      "name": "data/stem-00348-of-00660.parquet",
+      "size": 153352707
+    },
+    {
+      "name": "data/stem-00349-of-00660.parquet",
+      "size": 212654973
+    },
+    {
+      "name": "data/stem-00350-of-00660.parquet",
+      "size": 268190837
+    },
+    {
+      "name": "data/stem-00351-of-00660.parquet",
+      "size": 148990320
+    },
+    {
+      "name": "data/stem-00352-of-00660.parquet",
+      "size": 177189241
+    },
+    {
+      "name": "data/stem-00353-of-00660.parquet",
+      "size": 141180116
+    },
+    {
+      "name": "data/stem-00354-of-00660.parquet",
+      "size": 164076910
+    },
+    {
+      "name": "data/stem-00355-of-00660.parquet",
+      "size": 273195758
+    },
+    {
+      "name": "data/stem-00356-of-00660.parquet",
+      "size": 200277991
+    },
+    {
+      "name": "data/stem-00357-of-00660.parquet",
+      "size": 137734249
+    },
+    {
+      "name": "data/stem-00358-of-00660.parquet",
+      "size": 173669187
+    },
+    {
+      "name": "data/stem-00359-of-00660.parquet",
+      "size": 150046784
+    },
+    {
+      "name": "data/stem-00360-of-00660.parquet",
+      "size": 190346220
+    },
+    {
+      "name": "data/stem-00361-of-00660.parquet",
+      "size": 285010241
+    },
+    {
+      "name": "data/stem-00362-of-00660.parquet",
+      "size": 156985163
+    },
+    {
+      "name": "data/stem-00363-of-00660.parquet",
+      "size": 170520271
+    },
+    {
+      "name": "data/stem-00364-of-00660.parquet",
+      "size": 144272746
+    },
+    {
+      "name": "data/stem-00365-of-00660.parquet",
+      "size": 152125527
+    },
+    {
+      "name": "data/stem-00366-of-00660.parquet",
+      "size": 252033244
+    },
+    {
+      "name": "data/stem-00367-of-00660.parquet",
+      "size": 236442459
+    },
+    {
+      "name": "data/stem-00368-of-00660.parquet",
+      "size": 144006022
+    },
+    {
+      "name": "data/stem-00369-of-00660.parquet",
+      "size": 173825859
+    },
+    {
+      "name": "data/stem-00370-of-00660.parquet",
+      "size": 144397028
+    },
+    {
+      "name": "data/stem-00371-of-00660.parquet",
+      "size": 170026316
+    },
+    {
+      "name": "data/stem-00372-of-00660.parquet",
+      "size": 277962140
+    },
+    {
+      "name": "data/stem-00373-of-00660.parquet",
+      "size": 185864853
+    },
+    {
+      "name": "data/stem-00374-of-00660.parquet",
+      "size": 136526406
+    },
+    {
+      "name": "data/stem-00375-of-00660.parquet",
+      "size": 168428350
+    },
+    {
+      "name": "data/stem-00376-of-00660.parquet",
+      "size": 152639971
+    },
+    {
+      "name": "data/stem-00377-of-00660.parquet",
+      "size": 200211281
+    },
+    {
+      "name": "data/stem-00378-of-00660.parquet",
+      "size": 270245689
+    },
+    {
+      "name": "data/stem-00379-of-00660.parquet",
+      "size": 152896811
+    },
+    {
+      "name": "data/stem-00380-of-00660.parquet",
+      "size": 177165703
+    },
+    {
+      "name": "data/stem-00381-of-00660.parquet",
+      "size": 139611245
+    },
+    {
+      "name": "data/stem-00382-of-00660.parquet",
+      "size": 155222974
+    },
+    {
+      "name": "data/stem-00383-of-00660.parquet",
+      "size": 260245757
+    },
+    {
+      "name": "data/stem-00384-of-00660.parquet",
+      "size": 219136265
+    },
+    {
+      "name": "data/stem-00385-of-00660.parquet",
+      "size": 142213206
+    },
+    {
+      "name": "data/stem-00386-of-00660.parquet",
+      "size": 175709191
+    },
+    {
+      "name": "data/stem-00387-of-00660.parquet",
+      "size": 146858022
+    },
+    {
+      "name": "data/stem-00388-of-00660.parquet",
+      "size": 181261275
+    },
+    {
+      "name": "data/stem-00389-of-00660.parquet",
+      "size": 286078454
+    },
+    {
+      "name": "data/stem-00390-of-00660.parquet",
+      "size": 167700013
+    },
+    {
+      "name": "data/stem-00391-of-00660.parquet",
+      "size": 148412016
+    },
+    {
+      "name": "data/stem-00392-of-00660.parquet",
+      "size": 163878903
+    },
+    {
+      "name": "data/stem-00393-of-00660.parquet",
+      "size": 151349801
+    },
+    {
+      "name": "data/stem-00394-of-00660.parquet",
+      "size": 205608937
+    },
+    {
+      "name": "data/stem-00395-of-00660.parquet",
+      "size": 266387384
+    },
+    {
+      "name": "data/stem-00396-of-00660.parquet",
+      "size": 151092787
+    },
+    {
+      "name": "data/stem-00397-of-00660.parquet",
+      "size": 180807267
+    },
+    {
+      "name": "data/stem-00398-of-00660.parquet",
+      "size": 138067753
+    },
+    {
+      "name": "data/stem-00399-of-00660.parquet",
+      "size": 160034308
+    },
+    {
+      "name": "data/stem-00400-of-00660.parquet",
+      "size": 274532155
+    },
+    {
+      "name": "data/stem-00401-of-00660.parquet",
+      "size": 204350296
+    },
+    {
+      "name": "data/stem-00402-of-00660.parquet",
+      "size": 139129388
+    },
+    {
+      "name": "data/stem-00403-of-00660.parquet",
+      "size": 171862605
+    },
+    {
+      "name": "data/stem-00404-of-00660.parquet",
+      "size": 149733003
+    },
+    {
+      "name": "data/stem-00405-of-00660.parquet",
+      "size": 178962814
+    },
+    {
+      "name": "data/stem-00406-of-00660.parquet",
+      "size": 290789825
+    },
+    {
+      "name": "data/stem-00407-of-00660.parquet",
+      "size": 160525491
+    },
+    {
+      "name": "data/stem-00408-of-00660.parquet",
+      "size": 150378751
+    },
+    {
+      "name": "data/stem-00409-of-00660.parquet",
+      "size": 158784941
+    },
+    {
+      "name": "data/stem-00410-of-00660.parquet",
+      "size": 148271198
+    },
+    {
+      "name": "data/stem-00411-of-00660.parquet",
+      "size": 210250176
+    },
+    {
+      "name": "data/stem-00412-of-00660.parquet",
+      "size": 267217613
+    },
+    {
+      "name": "data/stem-00413-of-00660.parquet",
+      "size": 150922327
+    },
+    {
+      "name": "data/stem-00414-of-00660.parquet",
+      "size": 175906713
+    },
+    {
+      "name": "data/stem-00415-of-00660.parquet",
+      "size": 139676516
+    },
+    {
+      "name": "data/stem-00416-of-00660.parquet",
+      "size": 160376912
+    },
+    {
+      "name": "data/stem-00417-of-00660.parquet",
+      "size": 273319502
+    },
+    {
+      "name": "data/stem-00418-of-00660.parquet",
+      "size": 202603535
+    },
+    {
+      "name": "data/stem-00419-of-00660.parquet",
+      "size": 139562958
+    },
+    {
+      "name": "data/stem-00420-of-00660.parquet",
+      "size": 170540688
+    },
+    {
+      "name": "data/stem-00421-of-00660.parquet",
+      "size": 148891506
+    },
+    {
+      "name": "data/stem-00422-of-00660.parquet",
+      "size": 187186254
+    },
+    {
+      "name": "data/stem-00423-of-00660.parquet",
+      "size": 288441208
+    },
+    {
+      "name": "data/stem-00424-of-00660.parquet",
+      "size": 160912365
+    },
+    {
+      "name": "data/stem-00425-of-00660.parquet",
+      "size": 152356031
+    },
+    {
+      "name": "data/stem-00426-of-00660.parquet",
+      "size": 157145504
+    },
+    {
+      "name": "data/stem-00427-of-00660.parquet",
+      "size": 151115754
+    },
+    {
+      "name": "data/stem-00428-of-00660.parquet",
+      "size": 216895279
+    },
+    {
+      "name": "data/stem-00429-of-00660.parquet",
+      "size": 268457655
+    },
+    {
+      "name": "data/stem-00430-of-00660.parquet",
+      "size": 149360270
+    },
+    {
+      "name": "data/stem-00431-of-00660.parquet",
+      "size": 178092981
+    },
+    {
+      "name": "data/stem-00432-of-00660.parquet",
+      "size": 141356701
+    },
+    {
+      "name": "data/stem-00433-of-00660.parquet",
+      "size": 163385663
+    },
+    {
+      "name": "data/stem-00434-of-00660.parquet",
+      "size": 273705741
+    },
+    {
+      "name": "data/stem-00435-of-00660.parquet",
+      "size": 198873139
+    },
+    {
+      "name": "data/stem-00436-of-00660.parquet",
+      "size": 139485358
+    },
+    {
+      "name": "data/stem-00437-of-00660.parquet",
+      "size": 171595935
+    },
+    {
+      "name": "data/stem-00438-of-00660.parquet",
+      "size": 148124649
+    },
+    {
+      "name": "data/stem-00439-of-00660.parquet",
+      "size": 187100796
+    },
+    {
+      "name": "data/stem-00440-of-00660.parquet",
+      "size": 288469406
+    },
+    {
+      "name": "data/stem-00441-of-00660.parquet",
+      "size": 157131984
+    },
+    {
+      "name": "data/stem-00442-of-00660.parquet",
+      "size": 163821319
+    },
+    {
+      "name": "data/stem-00443-of-00660.parquet",
+      "size": 152844177
+    },
+    {
+      "name": "data/stem-00444-of-00660.parquet",
+      "size": 150858214
+    },
+    {
+      "name": "data/stem-00445-of-00660.parquet",
+      "size": 222945686
+    },
+    {
+      "name": "data/stem-00446-of-00660.parquet",
+      "size": 252577637
+    },
+    {
+      "name": "data/stem-00447-of-00660.parquet",
+      "size": 149444146
+    },
+    {
+      "name": "data/stem-00448-of-00660.parquet",
+      "size": 177082582
+    },
+    {
+      "name": "data/stem-00449-of-00660.parquet",
+      "size": 142560670
+    },
+    {
+      "name": "data/stem-00450-of-00660.parquet",
+      "size": 167527448
+    },
+    {
+      "name": "data/stem-00451-of-00660.parquet",
+      "size": 276270612
+    },
+    {
+      "name": "data/stem-00452-of-00660.parquet",
+      "size": 195877295
+    },
+    {
+      "name": "data/stem-00453-of-00660.parquet",
+      "size": 135141344
+    },
+    {
+      "name": "data/stem-00454-of-00660.parquet",
+      "size": 172033984
+    },
+    {
+      "name": "data/stem-00455-of-00660.parquet",
+      "size": 149293880
+    },
+    {
+      "name": "data/stem-00456-of-00660.parquet",
+      "size": 199323742
+    },
+    {
+      "name": "data/stem-00457-of-00660.parquet",
+      "size": 278183267
+    },
+    {
+      "name": "data/stem-00458-of-00660.parquet",
+      "size": 156246600
+    },
+    {
+      "name": "data/stem-00459-of-00660.parquet",
+      "size": 178237152
+    },
+    {
+      "name": "data/stem-00460-of-00660.parquet",
+      "size": 139449799
+    },
+    {
+      "name": "data/stem-00461-of-00660.parquet",
+      "size": 151973351
+    },
+    {
+      "name": "data/stem-00462-of-00660.parquet",
+      "size": 257625805
+    },
+    {
+      "name": "data/stem-00463-of-00660.parquet",
+      "size": 223070829
+    },
+    {
+      "name": "data/stem-00464-of-00660.parquet",
+      "size": 143456552
+    },
+    {
+      "name": "data/stem-00465-of-00660.parquet",
+      "size": 175810038
+    },
+    {
+      "name": "data/stem-00466-of-00660.parquet",
+      "size": 147646246
+    },
+    {
+      "name": "data/stem-00467-of-00660.parquet",
+      "size": 181983270
+    },
+    {
+      "name": "data/stem-00468-of-00660.parquet",
+      "size": 293487434
+    },
+    {
+      "name": "data/stem-00469-of-00660.parquet",
+      "size": 168744253
+    },
+    {
+      "name": "data/stem-00470-of-00660.parquet",
+      "size": 150216810
+    },
+    {
+      "name": "data/stem-00471-of-00660.parquet",
+      "size": 162892731
+    },
+    {
+      "name": "data/stem-00472-of-00660.parquet",
+      "size": 151158680
+    },
+    {
+      "name": "data/stem-00473-of-00660.parquet",
+      "size": 205663952
+    },
+    {
+      "name": "data/stem-00474-of-00660.parquet",
+      "size": 270407259
+    },
+    {
+      "name": "data/stem-00475-of-00660.parquet",
+      "size": 152591539
+    },
+    {
+      "name": "data/stem-00476-of-00660.parquet",
+      "size": 180468038
+    },
+    {
+      "name": "data/stem-00477-of-00660.parquet",
+      "size": 138775025
+    },
+    {
+      "name": "data/stem-00478-of-00660.parquet",
+      "size": 156758208
+    },
+    {
+      "name": "data/stem-00479-of-00660.parquet",
+      "size": 258324877
+    },
+    {
+      "name": "data/stem-00480-of-00660.parquet",
+      "size": 227652517
+    },
+    {
+      "name": "data/stem-00481-of-00660.parquet",
+      "size": 144494097
+    },
+    {
+      "name": "data/stem-00482-of-00660.parquet",
+      "size": 175063188
+    },
+    {
+      "name": "data/stem-00483-of-00660.parquet",
+      "size": 147536813
+    },
+    {
+      "name": "data/stem-00484-of-00660.parquet",
+      "size": 178331430
+    },
+    {
+      "name": "data/stem-00485-of-00660.parquet",
+      "size": 287495715
+    },
+    {
+      "name": "data/stem-00486-of-00660.parquet",
+      "size": 172792517
+    },
+    {
+      "name": "data/stem-00487-of-00660.parquet",
+      "size": 147307227
+    },
+    {
+      "name": "data/stem-00488-of-00660.parquet",
+      "size": 165334903
+    },
+    {
+      "name": "data/stem-00489-of-00660.parquet",
+      "size": 151021821
+    },
+    {
+      "name": "data/stem-00490-of-00660.parquet",
+      "size": 210034122
+    },
+    {
+      "name": "data/stem-00491-of-00660.parquet",
+      "size": 270641061
+    },
+    {
+      "name": "data/stem-00492-of-00660.parquet",
+      "size": 150507895
+    },
+    {
+      "name": "data/stem-00493-of-00660.parquet",
+      "size": 178288288
+    },
+    {
+      "name": "data/stem-00494-of-00660.parquet",
+      "size": 142148116
+    },
+    {
+      "name": "data/stem-00495-of-00660.parquet",
+      "size": 161077064
+    },
+    {
+      "name": "data/stem-00496-of-00660.parquet",
+      "size": 270114968
+    },
+    {
+      "name": "data/stem-00497-of-00660.parquet",
+      "size": 209672626
+    },
+    {
+      "name": "data/stem-00498-of-00660.parquet",
+      "size": 139336713
+    },
+    {
+      "name": "data/stem-00499-of-00660.parquet",
+      "size": 172460514
+    },
+    {
+      "name": "data/stem-00500-of-00660.parquet",
+      "size": 147422646
+    },
+    {
+      "name": "data/stem-00501-of-00660.parquet",
+      "size": 179181112
+    },
+    {
+      "name": "data/stem-00502-of-00660.parquet",
+      "size": 291834852
+    },
+    {
+      "name": "data/stem-00503-of-00660.parquet",
+      "size": 171916442
+    },
+    {
+      "name": "data/stem-00504-of-00660.parquet",
+      "size": 146948165
+    },
+    {
+      "name": "data/stem-00505-of-00660.parquet",
+      "size": 158606190
+    },
+    {
+      "name": "data/stem-00506-of-00660.parquet",
+      "size": 148642114
+    },
+    {
+      "name": "data/stem-00507-of-00660.parquet",
+      "size": 211258725
+    },
+    {
+      "name": "data/stem-00508-of-00660.parquet",
+      "size": 262857205
+    },
+    {
+      "name": "data/stem-00509-of-00660.parquet",
+      "size": 150951148
+    },
+    {
+      "name": "data/stem-00510-of-00660.parquet",
+      "size": 174426396
+    },
+    {
+      "name": "data/stem-00511-of-00660.parquet",
+      "size": 141820253
+    },
+    {
+      "name": "data/stem-00512-of-00660.parquet",
+      "size": 165543313
+    },
+    {
+      "name": "data/stem-00513-of-00660.parquet",
+      "size": 279217464
+    },
+    {
+      "name": "data/stem-00514-of-00660.parquet",
+      "size": 194496370
+    },
+    {
+      "name": "data/stem-00515-of-00660.parquet",
+      "size": 135671266
+    },
+    {
+      "name": "data/stem-00516-of-00660.parquet",
+      "size": 174855693
+    },
+    {
+      "name": "data/stem-00517-of-00660.parquet",
+      "size": 150290285
+    },
+    {
+      "name": "data/stem-00518-of-00660.parquet",
+      "size": 197555450
+    },
+    {
+      "name": "data/stem-00519-of-00660.parquet",
+      "size": 280210594
+    },
+    {
+      "name": "data/stem-00520-of-00660.parquet",
+      "size": 154064566
+    },
+    {
+      "name": "data/stem-00521-of-00660.parquet",
+      "size": 176912666
+    },
+    {
+      "name": "data/stem-00522-of-00660.parquet",
+      "size": 141112981
+    },
+    {
+      "name": "data/stem-00523-of-00660.parquet",
+      "size": 152132365
+    },
+    {
+      "name": "data/stem-00524-of-00660.parquet",
+      "size": 252576233
+    },
+    {
+      "name": "data/stem-00525-of-00660.parquet",
+      "size": 222990645
+    },
+    {
+      "name": "data/stem-00526-of-00660.parquet",
+      "size": 145044692
+    },
+    {
+      "name": "data/stem-00527-of-00660.parquet",
+      "size": 174183031
+    },
+    {
+      "name": "data/stem-00528-of-00660.parquet",
+      "size": 143364159
+    },
+    {
+      "name": "data/stem-00529-of-00660.parquet",
+      "size": 179897642
+    },
+    {
+      "name": "data/stem-00530-of-00660.parquet",
+      "size": 287624659
+    },
+    {
+      "name": "data/stem-00531-of-00660.parquet",
+      "size": 171646752
+    },
+    {
+      "name": "data/stem-00532-of-00660.parquet",
+      "size": 144216231
+    },
+    {
+      "name": "data/stem-00533-of-00660.parquet",
+      "size": 166517905
+    },
+    {
+      "name": "data/stem-00534-of-00660.parquet",
+      "size": 151294474
+    },
+    {
+      "name": "data/stem-00535-of-00660.parquet",
+      "size": 210585597
+    },
+    {
+      "name": "data/stem-00536-of-00660.parquet",
+      "size": 273735871
+    },
+    {
+      "name": "data/stem-00537-of-00660.parquet",
+      "size": 152882945
+    },
+    {
+      "name": "data/stem-00538-of-00660.parquet",
+      "size": 178345091
+    },
+    {
+      "name": "data/stem-00539-of-00660.parquet",
+      "size": 139144670
+    },
+    {
+      "name": "data/stem-00540-of-00660.parquet",
+      "size": 157343598
+    },
+    {
+      "name": "data/stem-00541-of-00660.parquet",
+      "size": 260671958
+    },
+    {
+      "name": "data/stem-00542-of-00660.parquet",
+      "size": 210887798
+    },
+    {
+      "name": "data/stem-00543-of-00660.parquet",
+      "size": 141016801
+    },
+    {
+      "name": "data/stem-00544-of-00660.parquet",
+      "size": 174912940
+    },
+    {
+      "name": "data/stem-00545-of-00660.parquet",
+      "size": 148514168
+    },
+    {
+      "name": "data/stem-00546-of-00660.parquet",
+      "size": 180471106
+    },
+    {
+      "name": "data/stem-00547-of-00660.parquet",
+      "size": 287410818
+    },
+    {
+      "name": "data/stem-00548-of-00660.parquet",
+      "size": 164925674
+    },
+    {
+      "name": "data/stem-00549-of-00660.parquet",
+      "size": 150351142
+    },
+    {
+      "name": "data/stem-00550-of-00660.parquet",
+      "size": 156245855
+    },
+    {
+      "name": "data/stem-00551-of-00660.parquet",
+      "size": 149539474
+    },
+    {
+      "name": "data/stem-00552-of-00660.parquet",
+      "size": 215826080
+    },
+    {
+      "name": "data/stem-00553-of-00660.parquet",
+      "size": 261005268
+    },
+    {
+      "name": "data/stem-00554-of-00660.parquet",
+      "size": 147625151
+    },
+    {
+      "name": "data/stem-00555-of-00660.parquet",
+      "size": 179791275
+    },
+    {
+      "name": "data/stem-00556-of-00660.parquet",
+      "size": 141700101
+    },
+    {
+      "name": "data/stem-00557-of-00660.parquet",
+      "size": 164657951
+    },
+    {
+      "name": "data/stem-00558-of-00660.parquet",
+      "size": 278343851
+    },
+    {
+      "name": "data/stem-00559-of-00660.parquet",
+      "size": 196365387
+    },
+    {
+      "name": "data/stem-00560-of-00660.parquet",
+      "size": 138294845
+    },
+    {
+      "name": "data/stem-00561-of-00660.parquet",
+      "size": 171059849
+    },
+    {
+      "name": "data/stem-00562-of-00660.parquet",
+      "size": 148704105
+    },
+    {
+      "name": "data/stem-00563-of-00660.parquet",
+      "size": 190520472
+    },
+    {
+      "name": "data/stem-00564-of-00660.parquet",
+      "size": 279064885
+    },
+    {
+      "name": "data/stem-00565-of-00660.parquet",
+      "size": 157669686
+    },
+    {
+      "name": "data/stem-00566-of-00660.parquet",
+      "size": 171902515
+    },
+    {
+      "name": "data/stem-00567-of-00660.parquet",
+      "size": 140191772
+    },
+    {
+      "name": "data/stem-00568-of-00660.parquet",
+      "size": 154616581
+    },
+    {
+      "name": "data/stem-00569-of-00660.parquet",
+      "size": 246390280
+    },
+    {
+      "name": "data/stem-00570-of-00660.parquet",
+      "size": 233908740
+    },
+    {
+      "name": "data/stem-00571-of-00660.parquet",
+      "size": 142573958
+    },
+    {
+      "name": "data/stem-00572-of-00660.parquet",
+      "size": 174594862
+    },
+    {
+      "name": "data/stem-00573-of-00660.parquet",
+      "size": 145071069
+    },
+    {
+      "name": "data/stem-00574-of-00660.parquet",
+      "size": 171472490
+    },
+    {
+      "name": "data/stem-00575-of-00660.parquet",
+      "size": 278153936
+    },
+    {
+      "name": "data/stem-00576-of-00660.parquet",
+      "size": 185706247
+    },
+    {
+      "name": "data/stem-00577-of-00660.parquet",
+      "size": 135830710
+    },
+    {
+      "name": "data/stem-00578-of-00660.parquet",
+      "size": 175638334
+    },
+    {
+      "name": "data/stem-00579-of-00660.parquet",
+      "size": 150240970
+    },
+    {
+      "name": "data/stem-00580-of-00660.parquet",
+      "size": 196385558
+    },
+    {
+      "name": "data/stem-00581-of-00660.parquet",
+      "size": 281674184
+    },
+    {
+      "name": "data/stem-00582-of-00660.parquet",
+      "size": 154776877
+    },
+    {
+      "name": "data/stem-00583-of-00660.parquet",
+      "size": 173167834
+    },
+    {
+      "name": "data/stem-00584-of-00660.parquet",
+      "size": 141286758
+    },
+    {
+      "name": "data/stem-00585-of-00660.parquet",
+      "size": 155777752
+    },
+    {
+      "name": "data/stem-00586-of-00660.parquet",
+      "size": 253518402
+    },
+    {
+      "name": "data/stem-00587-of-00660.parquet",
+      "size": 227734219
+    },
+    {
+      "name": "data/stem-00588-of-00660.parquet",
+      "size": 144652732
+    },
+    {
+      "name": "data/stem-00589-of-00660.parquet",
+      "size": 179949504
+    },
+    {
+      "name": "data/stem-00590-of-00660.parquet",
+      "size": 147896855
+    },
+    {
+      "name": "data/stem-00591-of-00660.parquet",
+      "size": 179016802
+    },
+    {
+      "name": "data/stem-00592-of-00660.parquet",
+      "size": 284041979
+    },
+    {
+      "name": "data/stem-00593-of-00660.parquet",
+      "size": 171770771
+    },
+    {
+      "name": "data/stem-00594-of-00660.parquet",
+      "size": 144686217
+    },
+    {
+      "name": "data/stem-00595-of-00660.parquet",
+      "size": 161516085
+    },
+    {
+      "name": "data/stem-00596-of-00660.parquet",
+      "size": 148899175
+    },
+    {
+      "name": "data/stem-00597-of-00660.parquet",
+      "size": 212074074
+    },
+    {
+      "name": "data/stem-00598-of-00660.parquet",
+      "size": 267187296
+    },
+    {
+      "name": "data/stem-00599-of-00660.parquet",
+      "size": 150103339
+    },
+    {
+      "name": "data/stem-00600-of-00660.parquet",
+      "size": 179192201
+    },
+    {
+      "name": "data/stem-00601-of-00660.parquet",
+      "size": 139179338
+    },
+    {
+      "name": "data/stem-00602-of-00660.parquet",
+      "size": 161755374
+    },
+    {
+      "name": "data/stem-00603-of-00660.parquet",
+      "size": 274292325
+    },
+    {
+      "name": "data/stem-00604-of-00660.parquet",
+      "size": 205200320
+    },
+    {
+      "name": "data/stem-00605-of-00660.parquet",
+      "size": 138962158
+    },
+    {
+      "name": "data/stem-00606-of-00660.parquet",
+      "size": 172603018
+    },
+    {
+      "name": "data/stem-00607-of-00660.parquet",
+      "size": 146529259
+    },
+    {
+      "name": "data/stem-00608-of-00660.parquet",
+      "size": 182694679
+    },
+    {
+      "name": "data/stem-00609-of-00660.parquet",
+      "size": 294913415
+    },
+    {
+      "name": "data/stem-00610-of-00660.parquet",
+      "size": 162458362
+    },
+    {
+      "name": "data/stem-00611-of-00660.parquet",
+      "size": 157096009
+    },
+    {
+      "name": "data/stem-00612-of-00660.parquet",
+      "size": 155863980
+    },
+    {
+      "name": "data/stem-00613-of-00660.parquet",
+      "size": 150636326
+    },
+    {
+      "name": "data/stem-00614-of-00660.parquet",
+      "size": 220457447
+    },
+    {
+      "name": "data/stem-00615-of-00660.parquet",
+      "size": 261732352
+    },
+    {
+      "name": "data/stem-00616-of-00660.parquet",
+      "size": 147960887
+    },
+    {
+      "name": "data/stem-00617-of-00660.parquet",
+      "size": 175609454
+    },
+    {
+      "name": "data/stem-00618-of-00660.parquet",
+      "size": 144576655
+    },
+    {
+      "name": "data/stem-00619-of-00660.parquet",
+      "size": 164304175
+    },
+    {
+      "name": "data/stem-00620-of-00660.parquet",
+      "size": 280181933
+    },
+    {
+      "name": "data/stem-00621-of-00660.parquet",
+      "size": 193432344
+    },
+    {
+      "name": "data/stem-00622-of-00660.parquet",
+      "size": 134541845
+    },
+    {
+      "name": "data/stem-00623-of-00660.parquet",
+      "size": 173879469
+    },
+    {
+      "name": "data/stem-00624-of-00660.parquet",
+      "size": 151622321
+    },
+    {
+      "name": "data/stem-00625-of-00660.parquet",
+      "size": 191619979
+    },
+    {
+      "name": "data/stem-00626-of-00660.parquet",
+      "size": 277990113
+    },
+    {
+      "name": "data/stem-00627-of-00660.parquet",
+      "size": 154627974
+    },
+    {
+      "name": "data/stem-00628-of-00660.parquet",
+      "size": 172084588
+    },
+    {
+      "name": "data/stem-00629-of-00660.parquet",
+      "size": 142305980
+    },
+    {
+      "name": "data/stem-00630-of-00660.parquet",
+      "size": 153999338
+    },
+    {
+      "name": "data/stem-00631-of-00660.parquet",
+      "size": 253933960
+    },
+    {
+      "name": "data/stem-00632-of-00660.parquet",
+      "size": 226721275
+    },
+    {
+      "name": "data/stem-00633-of-00660.parquet",
+      "size": 143181919
+    },
+    {
+      "name": "data/stem-00634-of-00660.parquet",
+      "size": 176026897
+    },
+    {
+      "name": "data/stem-00635-of-00660.parquet",
+      "size": 147612967
+    },
+    {
+      "name": "data/stem-00636-of-00660.parquet",
+      "size": 175816601
+    },
+    {
+      "name": "data/stem-00637-of-00660.parquet",
+      "size": 286593787
+    },
+    {
+      "name": "data/stem-00638-of-00660.parquet",
+      "size": 180472471
+    },
+    {
+      "name": "data/stem-00639-of-00660.parquet",
+      "size": 142225391
+    },
+    {
+      "name": "data/stem-00640-of-00660.parquet",
+      "size": 166324181
+    },
+    {
+      "name": "data/stem-00641-of-00660.parquet",
+      "size": 150662876
+    },
+    {
+      "name": "data/stem-00642-of-00660.parquet",
+      "size": 213599587
+    },
+    {
+      "name": "data/stem-00643-of-00660.parquet",
+      "size": 267968080
+    },
+    {
+      "name": "data/stem-00644-of-00660.parquet",
+      "size": 147719321
+    },
+    {
+      "name": "data/stem-00645-of-00660.parquet",
+      "size": 247398729
+    },
+    {
+      "name": "data/stem-00646-of-00660.parquet",
+      "size": 238943284
+    },
+    {
+      "name": "data/stem-00647-of-00660.parquet",
+      "size": 241138648
+    },
+    {
+      "name": "data/stem-00648-of-00660.parquet",
+      "size": 229617580
+    },
+    {
+      "name": "data/stem-00649-of-00660.parquet",
+      "size": 240830995
+    },
+    {
+      "name": "data/stem-00650-of-00660.parquet",
+      "size": 250037095
+    },
+    {
+      "name": "data/stem-00651-of-00660.parquet",
+      "size": 219460261
+    },
+    {
+      "name": "data/stem-00652-of-00660.parquet",
+      "size": 133997568
+    },
+    {
+      "name": "data/stem-00653-of-00660.parquet",
+      "size": 136513549
+    },
+    {
+      "name": "data/stem-00654-of-00660.parquet",
+      "size": 136387998
+    },
+    {
+      "name": "data/stem-00655-of-00660.parquet",
+      "size": 149639601
+    },
+    {
+      "name": "data/stem-00656-of-00660.parquet",
+      "size": 137878226
+    },
+    {
+      "name": "data/stem-00657-of-00660.parquet",
+      "size": 133754058
+    },
+    {
+      "name": "data/stem-00658-of-00660.parquet",
+      "size": 137021908
+    },
+    {
+      "name": "data/stem-00659-of-00660.parquet",
+      "size": 133577914
+    },
+    {
+      "name": "data/tool-00000-of-00013.parquet",
+      "size": 212135247
+    },
+    {
+      "name": "data/tool-00001-of-00013.parquet",
+      "size": 209370068
+    },
+    {
+      "name": "data/tool-00002-of-00013.parquet",
+      "size": 212270950
+    },
+    {
+      "name": "data/tool-00003-of-00013.parquet",
+      "size": 209031598
+    },
+    {
+      "name": "data/tool-00004-of-00013.parquet",
+      "size": 212193974
+    },
+    {
+      "name": "data/tool-00005-of-00013.parquet",
+      "size": 211014592
+    },
+    {
+      "name": "data/tool-00006-of-00013.parquet",
+      "size": 210869205
+    },
+    {
+      "name": "data/tool-00007-of-00013.parquet",
+      "size": 211905617
+    },
+    {
+      "name": "data/tool-00008-of-00013.parquet",
+      "size": 209847513
+    },
+    {
+      "name": "data/tool-00009-of-00013.parquet",
+      "size": 211444926
+    },
+    {
+      "name": "data/tool-00010-of-00013.parquet",
+      "size": 211383857
+    },
+    {
+      "name": "data/tool-00011-of-00013.parquet",
+      "size": 211584689
+    },
+    {
+      "name": "data/tool-00012-of-00013.parquet",
+      "size": 211529235
+    }
+  ]
+}

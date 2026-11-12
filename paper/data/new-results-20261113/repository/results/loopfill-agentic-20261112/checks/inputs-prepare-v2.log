@@ -1,0 +1,7 @@
+{"downloaded": 500, "bytes": 92564662}
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/scripts/loop_agentic_inputs.py", line 178, in <module>
+    prepare(parser.parse_args())
+  File "/ossfs/workspace/loop_suffix/scripts/loop_agentic_inputs.py", line 139, in prepare
+    raise ValueError(f'{phase}: only {len(pool)} eligible calls, need {count}')
+ValueError: late: only 18 eligible calls, need 33

@@ -1,0 +1,29 @@
+{
+  "verified_unix": 1794422993.62991,
+  "controller_pid": 466878,
+  "stage": "waiting_for_gpu_release",
+  "pending": [
+    "huginn-3.5b-b4",
+    "ouro-2.6b-b4",
+    "huginn-3.5b-b8",
+    "ouro-2.6b-b8",
+    "huginn-3.5b-b16",
+    "ouro-2.6b-b16"
+  ],
+  "reserved_gpus": [
+    0,
+    1,
+    5,
+    7
+  ],
+  "reservation_lock_test": "held lock rejected; released lock accepted",
+  "original_worker_pids_preserved": [
+    417115,
+    440598,
+    451129,
+    451140
+  ],
+  "original_and_migrated_source_hashes_verified": true,
+  "failed_attempts": "Six empty attempts failed before CUDA initialization due to SQL reservation locks; preserved under prestart-lock-conflicts.",
+  "gpu_snapshot": "0, 49 %, 19025 MiB\n1, 49 %, 19287 MiB\n2, 52 %, 10055 MiB\n3, 45 %, 10059 MiB\n4, 45 %, 7545 MiB\n5, 44 %, 12459 MiB\n6, 46 %, 7185 MiB\n7, 45 %, 12359 MiB\n"
+}

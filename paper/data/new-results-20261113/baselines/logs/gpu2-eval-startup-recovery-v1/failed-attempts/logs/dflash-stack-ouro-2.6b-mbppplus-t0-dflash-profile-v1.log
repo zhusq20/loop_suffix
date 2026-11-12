@@ -1,0 +1,27 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 174, in <module>
+    main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 66, in main
+    run(args, uuid)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 111, in run
+    target = LoopTarget.load(path, spec.backend, capacity)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/dflash_impl/target.py", line 72, in load
+    model = AutoModelForCausalLM.from_pretrained(path, **kwargs).to(device)
+  File "/tmp/loopfill-dflash-venv/lib/python3.10/site-packages/transformers/modeling_utils.py", line 4343, in to
+    return super().to(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1343, in to
+    return self._apply(convert)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    param_applied = fn(param)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1329, in convert
+    return t.to(
+RuntimeError: CUDA error: CUDA-capable device(s) is/are busy or unavailable
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

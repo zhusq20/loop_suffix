@@ -1,0 +1,30 @@
+{
+  "name": "loopahead-ouro-2.6b-bbh-t1-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "bbh",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+    "--admission",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+  ],
+  "pid": 469171,
+  "started_unix": 1794380537.7985575,
+  "exit_code": 1,
+  "finished_unix": 1794380540.1065047
+}

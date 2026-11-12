@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "passed": 29,
+  "skipped": 10,
+  "skip_reason": "GPU tests not run while assigned devices are occupied",
+  "log_sha256": "fc502523369f220cc466d762bd96337c0bbba3c0155ec1d8e67504bbeb51799e",
+  "command": "CUDA_VISIBLE_DEVICES='' PYTHONPATH=.:src:/tmp/loopfill-assets/ArcticInference /tmp/loopfill-dflash-venv/bin/python -m pytest -q tests/test_loop_agentic.py tests/test_loop_dflash_target.py tests/baselines/test_loopahead_decode.py tests/baselines/test_loopahead_sampling.py tests/test_loop_sampling.py"
+}

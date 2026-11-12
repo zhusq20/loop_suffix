@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_appendix.py", line 191, in <module>
+    if __name__=='__main__':main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_appendix.py", line 129, in main
+    if status['failed']:raise RuntimeError(f'Main phase failures require investigation: {status["failed"]}')
+RuntimeError: Main phase failures require investigation: ['dflash-ouro-2.6b-mbppplus-t0']

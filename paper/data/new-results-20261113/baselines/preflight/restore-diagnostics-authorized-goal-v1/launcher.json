@@ -1,0 +1,30 @@
+{
+  "pid": 33751,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/orchestrate_baseline_diagnostics_resume.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json"
+  ],
+  "identity": {
+    "pid": 33751,
+    "state": "R",
+    "start_ticks": "47964278",
+    "argv": [
+      "taskset",
+      "--cpu-list",
+      "80-83",
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/orchestrate_baseline_diagnostics_resume.py",
+      "--plan",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json"
+    ]
+  },
+  "started_unix": 1794464606.4965324,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39"
+}

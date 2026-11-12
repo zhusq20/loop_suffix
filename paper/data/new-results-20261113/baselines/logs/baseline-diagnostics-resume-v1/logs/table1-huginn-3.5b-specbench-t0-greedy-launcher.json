@@ -1,0 +1,41 @@
+{
+  "group": "table1-huginn-3.5b-specbench-t0-greedy",
+  "step": "table1-huginn-3.5b-specbench-t0-greedy",
+  "gpu": 1,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "4-7",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/diagnose_packed_dflash.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+    "--job",
+    "table1-huginn-3.5b-specbench-t0",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t0-ar",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/packed-dflash-greedy-v1/table1-huginn-3.5b-specbench-t0",
+    "--lock-fd",
+    "6"
+  ],
+  "started_unix": 1794488360.0224257,
+  "pid": 329633,
+  "start_ticks": "50339631",
+  "supervisor_identity": {
+    "pid": 329626,
+    "state": "R",
+    "start_ticks": "50339625",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-specbench-t0-greedy-launcher.json.supervisor.json",
+      "--lock-fd",
+      "6"
+    ]
+  }
+}

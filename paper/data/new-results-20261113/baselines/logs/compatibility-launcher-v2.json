@@ -1,0 +1,49 @@
+[
+  {
+    "name": "loopahead-smoke-ouro-2.6b-v1",
+    "pid": 478004,
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/smoke_loopahead.py",
+      "--model",
+      "ouro-2.6b",
+      "--gpu",
+      "1",
+      "--cpus",
+      "4-7",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-smoke-ouro-2.6b-v1"
+    ],
+    "started_unix": 1794293828.4647973
+  },
+  {
+    "name": "dflash-pilot-ouro-2.6b-gsm8k-dflash-t1-n20-v1",
+    "pid": 478005,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "gsm8k",
+      "--temperature",
+      "1",
+      "--count",
+      "20",
+      "--gpu",
+      "5",
+      "--cpus",
+      "52-55",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-pilot-ouro-2.6b-gsm8k-dflash-t1-n20-v1",
+      "--pilot",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-pilot-v1/checkpoint-000061"
+    ],
+    "started_unix": 1794293828.4786525
+  }
+]

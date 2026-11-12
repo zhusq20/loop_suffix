@@ -4,13 +4,11 @@ from __future__ import annotations
 import argparse
 import csv
 import fcntl
-import hashlib
 import json
 import os
 from pathlib import Path
 import shutil
 import subprocess
-import sys
 import time
 
 from loop_agentic_worker import digest, save
@@ -89,6 +87,7 @@ def allowed(protocol):
 
 def summarize(suite):
     jobs = json.loads((suite/'jobs.json').read_text())
+    models = list(dict.fromkeys(job['model'] for job in jobs))
     table = []
     for job in jobs:
         directory = suite/'runs'/job['id']
@@ -114,11 +113,13 @@ def summarize(suite):
     fields = sorted({k for row in table for k in row})
     if fields:
         with (suite/'measurements.csv').open('w') as stream:
-            writer=csv.DictWriter(stream,fieldnames=fields);writer.writeheader();writer.writerows(table)
+            writer=csv.DictWriter(stream,fieldnames=fields)
+            writer.writeheader()
+            writer.writerows(table)
     manifest=json.loads((suite/'inputs/manifest.json').read_text())
     lines=['# Agent-request decoding experiment', '',manifest['dataset'],'',
         f"Frozen requests: {manifest['count']}; tasks: {manifest['instances']}; phase counts: {manifest['phase_counts']}.",
-        '', 'Table 1 supplement: B=1, Huginn-3.5B and Ouro-2.6B, BF16, max512, seed0, single timing repeat. Fixed historical prompts; '
+        '', f"Table 1 supplement: B=1, {', '.join(models)}, BF16, max512, seed0, single timing repeat. Fixed historical prompts; "
         'new target generation. This is not a live-agent success-rate evaluation.', '',
         f"Completed formal cells: {len(table)}/{len(jobs)}. Missing cells are pending or failed; consult status.json.",
         '', '| Cell | Requests | Decode tok/s | Mean decode s | p95 decode s | γ | Latency speedup |',
@@ -162,7 +163,7 @@ def summarize(suite):
             'loopahead':'LoopAhead','dflash':'DFlash','budget-online':'LoopFill-online'}
     tex=['% Generated from this suite only. Cell = latency speedup / loop-normalized gamma.',
          '% Pending cells are --. See protocol.json and report.md for the workload and timing boundaries.']
-    for model in ('huginn-3.5b','ouro-2.6b'):
+    for model in models:
         tex += ['% '+model,r'\begin{tabular}{lrr}',r'\hline',
                 r'Method & Agentic ($T=0$) & Agentic ($T=1$) \\',r'\hline']
         for arm in ARMS:
@@ -176,7 +177,9 @@ def summarize(suite):
     (suite/'table1-agentic.tex').write_text('\n'.join(tex)+'\n')
     if phase_rows:
         with (suite/'phase-measurements.csv').open('w') as stream:
-            writer=csv.DictWriter(stream,fieldnames=list(phase_rows[0]));writer.writeheader();writer.writerows(phase_rows)
+            writer=csv.DictWriter(stream,fieldnames=list(phase_rows[0]))
+            writer.writeheader()
+            writer.writerows(phase_rows)
     if retrieval:
         save(suite/'retrieval-diagnostics.json',dict(instrumented=True,formal_timing=False,cells=retrieval,
             definition='Actual queries; root path coverage scored against eventual generated continuation. '
@@ -184,17 +187,44 @@ def summarize(suite):
     return table
 
 
-def run_queue(suite, validation_only=False):
+def validate_scheduling(suite, scheduling):
+    """Check an explicit scheduling amendment without changing frozen measurements."""
+    if scheduling is None:
+        return
+    assert scheduling['placement'] == 'first_idle_per_cell'
+    assert digest(suite/'protocol.json') == scheduling['protocol_sha256']
+    assert digest(suite/'jobs.json') == scheduling['jobs_sha256']
+    assert scheduling['allowed_gpus'] == list(range(8))
+    for name, expected in scheduling['scheduler_sha256'].items():
+        assert digest(Path(scheduling['scheduler_root'])/name) == expected, name
+
+
+def run_queue(suite, validation_only=False, scheduling=None):
+    validate_scheduling(suite, scheduling)
     protocol=json.loads((suite/'protocol.json').read_text())
+    independent = scheduling is not None
+    if independent:
+        protocol['allowed_gpus'] = scheduling['allowed_gpus']
     jobs=json.loads((suite/'jobs.json').read_text())
     (suite/'logs').mkdir(exist_ok=True)
     with (suite/'controller.lock').open('a') as controller_lock:
         fcntl.flock(controller_lock, fcntl.LOCK_EX|fcntl.LOCK_NB)
-        # Keep each temperature on one device for direct same-device method comparisons.
+        # Legacy suites bind temperatures; amended suites place each cell independently.
         state_path=suite/'dispatch.json'
         dispatch=json.loads(state_path.read_text()) if state_path.exists() else dict(bindings=protocol['gpu_bindings'],attempts={})
+        if independent:
+            dispatch['placement'] = scheduling['placement']
+            dispatch.setdefault('cell_gpus', {})
+            dispatch.setdefault('cell_gpu_uuids', {})
         running={}
-        failed=set()
+        failed=set(dispatch.get('failed', []))
+        supervised = protocol.get('require_exit_receipts', False)
+        if supervised:
+            from loop_queue_recovery import ObservedWorker, spawn_supervised
+            for key, saved in dispatch.get('workers', {}).items():
+                running[key] = dict(process=ObservedWorker(saved['launch'], saved['exit_path']),
+                    log=None, lock=None, gpu=saved['gpu'], smoke=saved['smoke'],
+                    pid=saved['launch']['pid'])
         while True:
             if (suite/'STOP').exists():
                 save(suite/'status.json',dict(status='stop_requested',running=list(running)))
@@ -202,13 +232,21 @@ def run_queue(suite, validation_only=False):
             for key, record in list(running.items()):
                 code=record['process'].poll()
                 if code is not None:
-                    record['log'].close();record['lock'].close()
-                    save(suite/'logs'/(key+'-exit.json'),dict(exit_code=code,finished_unix=time.time()))
+                    for resource in ('log', 'lock'):
+                        if record[resource] is not None:
+                            record[resource].close()
+                    if supervised:
+                        dispatch['workers'].pop(key)
+                    else:
+                        save(suite/'logs'/(key+'-exit.json'),dict(exit_code=code,finished_unix=time.time()))
                     del running[key]
-                    if code:
+                    target = suite/('validation' if record['smoke'] else 'runs')/key
+                    if code != 0 or not (target/'summary.json').exists():
                         failed.add(key)
+                    dispatch['failed'] = sorted(failed)
+                    save(state_path, dispatch)
             complete={j['id'] for j in jobs if (suite/'runs'/j['id']/'summary.json').exists()}
-            if len(complete)==len(jobs):
+            if len(complete)==len(jobs) and not running and not failed:
                 summarize(suite)
                 save(suite/'status.json',dict(status='complete',completed=len(complete),total=len(jobs),
                                             finished_unix=time.time()))
@@ -243,23 +281,38 @@ def run_queue(suite, validation_only=False):
                 for job in pending:
                     lane=f"{job['model']}/t{job['temperature']}"
                     bound=dispatch['bindings'][lane]
-                    candidates=[bound]
+                    if independent:
+                        previous_gpu = dispatch['cell_gpus'].get(job['id'])
+                        candidates = [previous_gpu] if previous_gpu is not None else allowed(protocol)
+                    else:
+                        candidates=[bound]
                     for gpu in candidates:
-                        if gpu not in allowed(protocol) or gpu in busy:
+                        if gpu not in allowed(protocol) or gpu in busy or gpu not in devices:
                             continue
                         uuid,mode=devices[gpu]
                         if uuid in occupied or mode != 'Exclusive_Process':
                             continue
                         lock=open(f'/tmp/loopfill-{uuid}.lock','a+')
-                        try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+                        try:
+                            fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
                         except BlockingIOError:
-                            lock.close();continue
+                            lock.close()
+                            continue
+                        current_occupied = subprocess.check_output(
+                            ['nvidia-smi','--query-compute-apps=gpu_uuid','--format=csv,noheader'],
+                            text=True).splitlines()
+                        if uuid in {u.strip() for u in current_occupied}:
+                            lock.close()
+                            continue
                         smoke=suite/'validation'/job['id']
                         smoke_passed=(smoke/'summary.json').exists()
                         target=suite/'runs'/job['id'] if smoke_passed else smoke
                         target.mkdir(parents=True,exist_ok=True)
                         attempt=dispatch['attempts'].get(job['id'],0)+1
                         dispatch['attempts'][job['id']]=attempt
+                        if independent:
+                            dispatch['cell_gpus'][job['id']] = gpu
+                            dispatch['cell_gpu_uuids'][job['id']] = uuid
                         save(state_path,dispatch)
                         prefix=f"{job['id']}-attempt{attempt}"
                         command=[protocol['python'],str(suite/'source/runtime/native_cuda_env.py'),
@@ -268,15 +321,30 @@ def run_queue(suite, validation_only=False):
                                  '--suite',str(suite),'--out',str(target),'--model',job['model'],'--arm',job['arm'],
                                  '--temperature',str(job['temperature']),'--q',str(job['q']),
                                  '--n',str(job['n']),'--cache-mode',job['cache_mode']]
-                        if not smoke_passed:command.append('--smoke')
-                        elif job.get('diagnostic'):command.append('--diagnostic')
+                        if not smoke_passed:
+                            command.append('--smoke')
+                        elif job.get('diagnostic'):
+                            command.append('--diagnostic')
                         env=os.environ.copy()
                         env.update(CUDA_VISIBLE_DEVICES=uuid,OMP_NUM_THREADS='1',MKL_NUM_THREADS='1',
                                    OPENBLAS_NUM_THREADS='1',TOKENIZERS_PARALLELISM='false')
-                        cpus={0:'0-3',1:'4-7',5:'52-55',7:'60-63'}[gpu]
+                        cpus={0:'0-3',1:'4-7',2:'8-11',3:'12-15',
+                              4:'48-51',5:'52-55',6:'56-59',7:'60-63'}[gpu]
                         log=open(suite/'logs'/(prefix+'.log'),'w')
-                        process=subprocess.Popen(['taskset','-c',cpus,*command],env=env,
-                                                 stdout=log,stderr=subprocess.STDOUT,pass_fds=(lock.fileno(),))
+                        if supervised:
+                            receipt = suite/'logs'/(prefix+'-exit.json')
+                            process = spawn_supervised(['taskset','--cpu-list',cpus,*command],
+                                env=env, log=log, lock=lock,
+                                launcher_path=suite/'logs'/(prefix+'-launcher.json'), exit_path=receipt,
+                                extra_exit=suite/'logs'/(job['id']+'-exit.json'),
+                                metadata=dict(job_id=job['id'], smoke=not smoke_passed, gpu=gpu),
+                                cwd=suite/'source')
+                            dispatch.setdefault('workers', {})[job['id']] = dict(
+                                launch=process.launch, exit_path=str(receipt), gpu=gpu, smoke=not smoke_passed)
+                            save(state_path, dispatch)
+                        else:
+                            process=subprocess.Popen(['taskset','-c',cpus,*command],env=env,
+                                                     stdout=log,stderr=subprocess.STDOUT,pass_fds=(lock.fileno(),))
                         running[job['id']]=dict(process=process,log=log,lock=lock,gpu=gpu,
                                               smoke=not smoke_passed,pid=process.pid)
                         busy.add(gpu)
@@ -287,10 +355,12 @@ def run_queue(suite, validation_only=False):
                 main_completed=sum(j['id'] in complete for j in jobs if j['stage']=='main'),
                 prior_pids=prior,failed=sorted(failed),updated_unix=time.time(),
                 running={k:{f:v for f,v in r.items() if f in ('gpu','smoke','pid')} for k,r in running.items()},
-                bindings=dispatch['bindings']))
+                bindings={} if independent else dispatch['bindings'],
+                placement='first_idle_per_cell' if independent else 'same_device_per_temperature',
+                allowed_gpus=allowed(protocol), cell_gpus=dispatch.get('cell_gpus', {})))
             if not running and failed and not pending:
                 return
-            time.sleep(15)
+            time.sleep(3 if independent else 15)
 
 
 if __name__=='__main__':

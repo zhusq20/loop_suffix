@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 333, in <module>
+    if identity in running or identity in completed or identity in failed or not ready(job):continue
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 256, in main
+    help='Wait for this many free GPUs before starting Huginn training; preserve global batch32')
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 215, in worker
+    for method,profile in [('ar',False),('dflash',False),('dflash',True)]:
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 44, in run_command
+    child=subprocess.Popen(argv,stdout=f,stderr=subprocess.STDOUT,env=env)
+RuntimeError: dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1 exited 1; see /ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1.log

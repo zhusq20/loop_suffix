@@ -1,0 +1,11 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/results/loopfill-agentic-table1-20261112/source/scripts/loop_agentic_worker.py", line 300, in <module>
+    run(parser.parse_args())
+  File "/ossfs/workspace/loop_suffix/results/loopfill-agentic-table1-20261112/source/scripts/loop_agentic_worker.py", line 130, in run
+    generation = json.loads((Path(model_path)/'generation_config.json').read_text())
+  File "/opt/conda/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/opt/conda/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd/generation_config.json'

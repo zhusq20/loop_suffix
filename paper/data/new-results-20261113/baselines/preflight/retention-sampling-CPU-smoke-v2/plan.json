@@ -1,0 +1,320 @@
+{
+  "samples_per_configuration": 512,
+  "max_new_tokens": 12,
+  "prompt": [
+    0,
+    1
+  ],
+  "eos": 2,
+  "target": [
+    [
+      0.12,
+      0.73,
+      0.15
+    ],
+    [
+      0.64,
+      0.24,
+      0.12
+    ],
+    [
+      0.27,
+      0.48,
+      0.25
+    ]
+  ],
+  "q1": [
+    0.8,
+    0.15,
+    0.05
+  ],
+  "q2": [
+    0.08,
+    0.82,
+    0.1
+  ],
+  "configurations": {
+    "ouro-default": {
+      "total": 4,
+      "first": 1,
+      "second": 2,
+      "future": 3,
+      "retain": 32,
+      "execute": 16,
+      "guard": 2,
+      "stride": 1,
+      "family": "ouro",
+      "temperature": 1.0,
+      "top_p": 1.0
+    },
+    "ouro-retain8": {
+      "total": 4,
+      "first": 1,
+      "second": 2,
+      "future": 3,
+      "retain": 8,
+      "execute": 4,
+      "guard": 2,
+      "stride": 1,
+      "family": "ouro",
+      "temperature": 1.0,
+      "top_p": 1.0
+    },
+    "huginn-default": {
+      "total": 32,
+      "first": 4,
+      "second": 8,
+      "future": 2,
+      "retain": 32,
+      "execute": 16,
+      "guard": 1,
+      "stride": 2,
+      "family": "huginn",
+      "temperature": 1.0,
+      "top_p": 1.0
+    }
+  },
+  "admission_fixture": {
+    "split": "development_only",
+    "costs": {
+      "t_save_s": 1.0,
+      "t_head_s": 0.55,
+      "t_node_s": 0.1
+    },
+    "quality": {
+      "offset": {},
+      "distance_offset": {},
+      "distance_offset_confidence": {},
+      "native_distance": {}
+    }
+  },
+  "lad": "Alternating non-EOS 0/1 from anchor parity",
+  "seed_base": 932800,
+  "seed_configuration_stride": 1000000,
+  "familywise_alpha": 1e-06,
+  "events_per_configuration": 8295,
+  "test": "Simultaneous Bernstein bounds for complete sequences, prefixes up to 4, positions and lengths",
+  "require_each_configuration": [
+    "retention_evictions > 0",
+    "cascade_commits > 0"
+  ],
+  "measured_path_coverage": {
+    "results_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+    "cells": {
+      "huginn-3.5b/gsm8k": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/requests.jsonl",
+        "requests_sha256": "fe11041003eb66019dfd98d69ef6cbdf8de3c02aa3fd13d2bc1c636e12b36178",
+        "counters": {
+          "requests": 300,
+          "retention_evictions": 74210,
+          "retention_evictions_requests": 300,
+          "cascade_commits": 2233,
+          "cascade_commits_requests": 289
+        }
+      },
+      "huginn-3.5b/math500": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/requests.jsonl",
+        "requests_sha256": "2c4faeba000cb713c8a0967118d479ed5c7146b26e55a0c17221b92cd39f352d",
+        "counters": {
+          "requests": 500,
+          "retention_evictions": 197920,
+          "retention_evictions_requests": 499,
+          "cascade_commits": 16530,
+          "cascade_commits_requests": 496
+        }
+      },
+      "huginn-3.5b/bbh": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/requests.jsonl",
+        "requests_sha256": "b290fcabc8085c836b953171aa7b4033a0e08d266524270cc4ccb70cfdbd522d",
+        "counters": {
+          "requests": 270,
+          "retention_evictions": 102139,
+          "retention_evictions_requests": 270,
+          "cascade_commits": 5298,
+          "cascade_commits_requests": 268
+        }
+      },
+      "huginn-3.5b/humanevalplus": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/requests.jsonl",
+        "requests_sha256": "d463e59b142841e67a5694be4d3a23b65687f96910ade468caa1b79887474d81",
+        "counters": {
+          "requests": 164,
+          "retention_evictions": 41004,
+          "retention_evictions_requests": 161,
+          "cascade_commits": 3118,
+          "cascade_commits_requests": 150
+        }
+      },
+      "huginn-3.5b/mbppplus": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/requests.jsonl",
+        "requests_sha256": "60ffe166b94893641deb0381be68f2c4571a46b63138ad839e8d1556bca522db",
+        "counters": {
+          "requests": 378,
+          "retention_evictions": 89783,
+          "retention_evictions_requests": 323,
+          "cascade_commits": 7548,
+          "cascade_commits_requests": 306
+        }
+      },
+      "huginn-3.5b/specbench": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/requests.jsonl",
+        "requests_sha256": "64b9fa034b2fcf31cf6d87f0d0105494188d5e8999528cf1280eeb5c13864f3d",
+        "counters": {
+          "requests": 480,
+          "retention_evictions": 114953,
+          "retention_evictions_requests": 403,
+          "cascade_commits": 2846,
+          "cascade_commits_requests": 252
+        }
+      },
+      "ouro-2.6b/gsm8k": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/requests.jsonl",
+        "requests_sha256": "1c3538b06913cceab39c5b4d6cf0dd6609dbd5c9e877b30ecc9a7263e75437e7",
+        "counters": {
+          "requests": 300,
+          "retention_evictions": 4191,
+          "retention_evictions_requests": 270,
+          "cascade_commits": 16725,
+          "cascade_commits_requests": 298
+        }
+      },
+      "ouro-2.6b/math500": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/requests.jsonl",
+        "requests_sha256": "7b180120a6f1162328a250f53535e932d1843b45471f6b57af61d58709abc3e8",
+        "counters": {
+          "requests": 500,
+          "retention_evictions": 15849,
+          "retention_evictions_requests": 488,
+          "cascade_commits": 56594,
+          "cascade_commits_requests": 500
+        }
+      },
+      "ouro-2.6b/bbh": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/requests.jsonl",
+        "requests_sha256": "e0aaf3104f871e3009696db3be8f08ba078afbbc27de4d55958fda5b7945f1c9",
+        "counters": {
+          "requests": 270,
+          "retention_evictions": 8808,
+          "retention_evictions_requests": 259,
+          "cascade_commits": 13117,
+          "cascade_commits_requests": 262
+        }
+      },
+      "ouro-2.6b/humanevalplus": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/requests.jsonl",
+        "requests_sha256": "fe65e0f6b6633920ebe92cab74187677c447b0af08404496949338a5e4a7d13e",
+        "counters": {
+          "requests": 164,
+          "retention_evictions": 3804,
+          "retention_evictions_requests": 155,
+          "cascade_commits": 10188,
+          "cascade_commits_requests": 163
+        }
+      },
+      "ouro-2.6b/mbppplus": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/requests.jsonl",
+        "requests_sha256": "36f676f1e95c9139a10a13a2ddd0d40b8f8916cdb605d0b43308ddf0aca48cff",
+        "counters": {
+          "requests": 378,
+          "retention_evictions": 6065,
+          "retention_evictions_requests": 334,
+          "cascade_commits": 18721,
+          "cascade_commits_requests": 357
+        }
+      },
+      "ouro-2.6b/specbench": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/requests.jsonl",
+        "requests_sha256": "e0e492b9f8a9c9c37da14a978b8be9813aa931c167fc652c036a0106af4328a9",
+        "counters": {
+          "requests": 480,
+          "retention_evictions": 13865,
+          "retention_evictions_requests": 407,
+          "cascade_commits": 13541,
+          "cascade_commits_requests": 409
+        }
+      },
+      "ouro-1.4b/gsm8k": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/requests.jsonl",
+        "requests_sha256": "dec93486eef80c1fb533d6d6d7a6a328c08f192f19613c8232f83b54bd4c2c18",
+        "counters": {
+          "requests": 300,
+          "retention_evictions": 1519,
+          "retention_evictions_requests": 239,
+          "cascade_commits": 23773,
+          "cascade_commits_requests": 278
+        }
+      },
+      "ouro-1.4b/math500": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/requests.jsonl",
+        "requests_sha256": "564201186fb73251533a423f271d70fd16b09f7376fea1e540aca5166f3899d3",
+        "counters": {
+          "requests": 500,
+          "retention_evictions": 5351,
+          "retention_evictions_requests": 459,
+          "cascade_commits": 52498,
+          "cascade_commits_requests": 488
+        }
+      },
+      "ouro-1.4b/bbh": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/requests.jsonl",
+        "requests_sha256": "786d8add2679a358f33a433ebb980f535470799cfac2dd2cf30ce11cf00cc2eb",
+        "counters": {
+          "requests": 270,
+          "retention_evictions": 1406,
+          "retention_evictions_requests": 183,
+          "cascade_commits": 10422,
+          "cascade_commits_requests": 262
+        }
+      },
+      "ouro-1.4b/humanevalplus": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/requests.jsonl",
+        "requests_sha256": "9c4ceca96121be4a32d0e8d128548776b191a19e8f7173326bdc63764e3e5a86",
+        "counters": {
+          "requests": 164,
+          "retention_evictions": 1040,
+          "retention_evictions_requests": 141,
+          "cascade_commits": 9348,
+          "cascade_commits_requests": 164
+        }
+      },
+      "ouro-1.4b/mbppplus": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/requests.jsonl",
+        "requests_sha256": "c4757aa071d25d5eb86b0b93c51fda8b8e7e8a72e0709732c36c993ec4ee79c1",
+        "counters": {
+          "requests": 378,
+          "retention_evictions": 1807,
+          "retention_evictions_requests": 277,
+          "cascade_commits": 16584,
+          "cascade_commits_requests": 356
+        }
+      },
+      "ouro-1.4b/specbench": {
+        "requests_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/requests.jsonl",
+        "requests_sha256": "a832268e57bffd87bad0f64a5324ffd1820ebf6b26f170bdae04f5ca2bb407e8",
+        "counters": {
+          "requests": 480,
+          "retention_evictions": 1784,
+          "retention_evictions_requests": 269,
+          "cascade_commits": 13730,
+          "cascade_commits_requests": 399
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "check_loopahead_retention_sampling.py": "abca8f1cdaf0ce47c87f089b2991c66222686d63239ec4e6de9e6970687b9780",
+    "check_stochastic_decode.py": "055dc5c29b703d73da40ef22d91f1f27f07e2f5e3dff761f1180708eecd1edfb",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "engine_sha256": {
+    "loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a"
+  },
+  "scope": "CPU synthetic integration; no training, GPU inference or benchmark reruns"
+}

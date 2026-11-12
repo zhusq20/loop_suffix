@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "expected_groups": 6,
+  "waits_for_completed_measurements": 12,
+  "expected_parent_stages": 37,
+  "gpu_work_started": false,
+  "spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c",
+  "scheduler_adaptations_only": [
+    "supplements = read(Path(plan['supplement_plan']).parent/'status.json')",
+    "supplement_state = read(Path(plan['supplement_plan']).parent/'dispatch.json')",
+    "priority_pending = parent['pending'] or supplements['ready_supplements']",
+    "limitation='This queue covers already available main-model measurements, packed additions, B4 and development checks. Appendix model checks are added after its training/evaluation.'"
+  ],
+  "checked_unix": 1794466054.0681822
+}

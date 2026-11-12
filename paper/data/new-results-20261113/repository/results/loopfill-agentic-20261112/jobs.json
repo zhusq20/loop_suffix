@@ -1,0 +1,186 @@
+[
+  {
+    "id": "ar-t0-stream-q4-n16",
+    "arm": "ar",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "budget-suffix-t0-stream-q4-n16",
+    "arm": "budget-suffix",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "loopahead-t0-stream-q4-n16",
+    "arm": "loopahead",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "dflash-t0-stream-q4-n16",
+    "arm": "dflash",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "budget-online-t0-stream-q4-n16",
+    "arm": "budget-online",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "ar-t1-stream-q4-n16",
+    "arm": "ar",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "budget-suffix-t1-stream-q4-n16",
+    "arm": "budget-suffix",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "loopahead-t1-stream-q4-n16",
+    "arm": "loopahead",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "dflash-t1-stream-q4-n16",
+    "arm": "dflash",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "budget-online-t1-stream-q4-n16",
+    "arm": "budget-online",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "main"
+  },
+  {
+    "id": "budget-suffix-t1-request-q4-n16",
+    "arm": "budget-suffix",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "request",
+    "stage": "cache_ablation"
+  },
+  {
+    "id": "budget-suffix-t1-stream-q16-n64",
+    "arm": "budget-suffix",
+    "temperature": 1,
+    "q": 16,
+    "n": 64,
+    "cache_mode": "stream",
+    "stage": "budget_ablation"
+  },
+  {
+    "id": "budget-suffix-t1-stream-q64-n64",
+    "arm": "budget-suffix",
+    "temperature": 1,
+    "q": 64,
+    "n": 64,
+    "cache_mode": "stream",
+    "stage": "budget_ablation"
+  },
+  {
+    "id": "budget-suffix-t0-diagnostic",
+    "arm": "budget-suffix",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "diagnostic",
+    "diagnostic": true
+  },
+  {
+    "id": "budget-suffix-t1-diagnostic",
+    "arm": "budget-suffix",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "diagnostic",
+    "diagnostic": true
+  },
+  {
+    "id": "budget-online-t1-request-q4-n16",
+    "arm": "budget-online",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "request",
+    "stage": "cache_ablation"
+  },
+  {
+    "id": "budget-online-t1-stream-q16-n64",
+    "arm": "budget-online",
+    "temperature": 1,
+    "q": 16,
+    "n": 64,
+    "cache_mode": "stream",
+    "stage": "budget_ablation"
+  },
+  {
+    "id": "budget-online-t1-stream-q64-n64",
+    "arm": "budget-online",
+    "temperature": 1,
+    "q": 64,
+    "n": 64,
+    "cache_mode": "stream",
+    "stage": "budget_ablation"
+  },
+  {
+    "id": "budget-online-t0-diagnostic",
+    "arm": "budget-online",
+    "temperature": 0,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "diagnostic",
+    "diagnostic": true
+  },
+  {
+    "id": "budget-online-t1-diagnostic",
+    "arm": "budget-online",
+    "temperature": 1,
+    "q": 4,
+    "n": 16,
+    "cache_mode": "stream",
+    "stage": "diagnostic",
+    "diagnostic": true
+  }
+]

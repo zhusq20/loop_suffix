@@ -1,0 +1,36 @@
+{
+  "observed_unix": 1794437630.528308,
+  "controllers": {
+    "packed-dflash-supplement-v1": {
+      "pid": 153662,
+      "stage": "waiting_for_existing_measurements",
+      "updated_unix": 1794437622.6112375
+    },
+    "baseline-diagnostics-resume-v1": {
+      "pid": 205464,
+      "stage": "waiting_for_measurement_priority",
+      "updated_unix": 1794437622.7761562
+    },
+    "ouro14-packed-evaluation-v1": {
+      "pid": 232243,
+      "stage": "waiting_for_full_training",
+      "updated_unix": 1794437623.5359228
+    }
+  },
+  "balanced": {
+    "pid": 100836,
+    "running": 7,
+    "pending": 9,
+    "failures": {}
+  },
+  "lad": {
+    "stage": "waiting_for_current_gpu_job",
+    "controller_pid": 105015,
+    "updated_unix": 1794437621.4217498,
+    "gpu": 3,
+    "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3"
+  },
+  "training_stage": "teachers",
+  "formal_cells": 35,
+  "gpu": "0, NVIDIA L20X, 20771 MiB, 99 %\n1, NVIDIA L20X, 10151 MiB, 50 %\n2, NVIDIA L20X, 17395 MiB, 53 %\n3, NVIDIA L20X, 9505 MiB, 45 %\n4, NVIDIA L20X, 7609 MiB, 44 %\n5, NVIDIA L20X, 10387 MiB, 52 %\n6, NVIDIA L20X, 10175 MiB, 46 %\n7, NVIDIA L20X, 10175 MiB, 47 %\n"
+}

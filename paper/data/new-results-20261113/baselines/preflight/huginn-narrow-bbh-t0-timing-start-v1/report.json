@@ -1,0 +1,146 @@
+{
+  "status": "complete_AR_actual_final_narrow_GPU_decode_started_formal_cell_pending",
+  "checked_unix": 1794415688.5836172,
+  "ar_summary": {
+    "decode_tokens": 54528,
+    "decode_s": 9935.168190173805,
+    "loops": 1744896,
+    "tok_s": 5.488382174941932,
+    "gamma": 1.0
+  },
+  "ar_requests": 270,
+  "ar_journal_sha256": "48515a290a8c0e19993748b89eeeb9b8b61d7b1d70a44b2678d315c4be92a0f6",
+  "ar_execution_evidence": {
+    "kind": "actual_successful_process_exit",
+    "pid": 253000,
+    "launch_sha256": "4b2ad1f2ac65432d08a7fc4d1f2e8184a72adc4ac6c9cba7bcc0b2d419453229",
+    "exit_receipt_sha256": "1a6bf2db9eaec1b93737fb7c84590b595b812d6fa8edb034b88e6afde43b06a9",
+    "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+  },
+  "ar_actual_exit": {
+    "name": "dflash-stack-huginn-3.5b-bbh-t0-ar-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "ar",
+      "--dataset",
+      "bbh",
+      "--temperature",
+      "0",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-bbh-t0-ar-v1"
+    ],
+    "pid": 253000,
+    "started_unix": 1794405456.5451453,
+    "exit_code": 0,
+    "finished_unix": 1794415630.924959
+  },
+  "training_binding": {
+    "training_name": "dflash-huginn-narrow-formal-v1",
+    "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+    "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+    "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1/report.json",
+    "audit_report_sha256": "02bc2ffd720010a53686a14123797f43a7c12032eb713c8d307647ef451daaa6",
+    "queue_complete_sha256": "dcee2382eeb36f12083c16f17ff4a74593d833786ddbf696f803b90080a0c9aa",
+    "weights_sha256": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "completion_basis": "separate_projected_training_queue_exit0_export_and_full_CPU_audit",
+    "interrupted_wide_training": "dflash-huginn-3.5b-formal-v1 remains incomplete and separately costed"
+  },
+  "checkpoint_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "method_metadata_sha256": "988da939950441a06f8ad1330483cde0e0e905a260661e44f253f251c4d8b7c4",
+  "method_launcher": {
+    "name": "dflash-stack-huginn-3.5b-bbh-t0-dflash-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "bbh",
+      "--temperature",
+      "0",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-v1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886"
+    ],
+    "pid": 368685,
+    "started_unix": 1794415630.9732687
+  },
+  "actual_parent": 252990,
+  "actual_start_ticks": "43066726",
+  "actual_native_driver_map": "/usr/lib64/libcuda.so.570.148.08",
+  "observed_requests": 3,
+  "observed_prefix_sha256": "d04b17eb414c161dfbea3ceeb518f4a4c0207c1a3917cfd24dd7614230496af9",
+  "formal_outputs_unchanged": true,
+  "gpu_policy": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794398454.1069522,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": []
+  },
+  "verification_source_sha256": "91b09dea9603c2f52e762e60edc24b264fc775c4d95728af8f8e6d1c3403af7c",
+  "limitations": [
+    "Live BBH timing of the full 8886-step narrow model; not a completed benchmark cell.",
+    "Only the observed prefix IDs, prompts, counts and actual runtime were checked here.",
+    "Full 270-request timed run, separate profile and greedy diagnostics remain pending.",
+    "No final speedup or GPU-startup retry count is inferred from this startup check."
+  ]
+}

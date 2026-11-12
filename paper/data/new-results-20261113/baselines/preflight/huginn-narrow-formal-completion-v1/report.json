@@ -1,0 +1,190 @@
+{
+  "status": "complete_narrow_training_audit_and_actual_formal_AR_dispatch",
+  "checked_unix": 1794398581.9483137,
+  "binding": {
+    "training_name": "dflash-huginn-narrow-formal-v1",
+    "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+    "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+    "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1/report.json",
+    "audit_report_sha256": "02bc2ffd720010a53686a14123797f43a7c12032eb713c8d307647ef451daaa6",
+    "queue_complete_sha256": "dcee2382eeb36f12083c16f17ff4a74593d833786ddbf696f803b90080a0c9aa",
+    "weights_sha256": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "completion_basis": "separate_projected_training_queue_exit0_export_and_full_CPU_audit",
+    "interrupted_wide_training": "dflash-huginn-3.5b-formal-v1 remains incomplete and separately costed"
+  },
+  "actual_training_exit": {
+    "name": "dflash-huginn-narrow-formal-v1",
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/torchrun",
+      "--standalone",
+      "--nproc_per_node=2",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--teachers",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+      "--cpu-groups",
+      "12-15,56-59",
+      "--micro-batch",
+      "4",
+      "--accumulation",
+      "4",
+      "--checkpoint-layers",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+      "--epochs",
+      "6",
+      "--save-every",
+      "500"
+    ],
+    "pid": 65439,
+    "started_unix": 1794354339.0086472,
+    "exit_code": 0,
+    "finished_unix": 1794398428.0349596
+  },
+  "actual_audit_exit": {
+    "name": "audit-dflash-huginn-narrow-formal-v1",
+    "argv": [
+      "taskset",
+      "-c",
+      "80-83",
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_projected_dflash_training.py",
+      "--scope",
+      "formal",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1"
+    ],
+    "pid": 174116,
+    "started_unix": 1794398428.7375324,
+    "exit_code": 0,
+    "finished_unix": 1794398442.1743953
+  },
+  "training_reservations": [
+    {
+      "started_unix": 1794354342.9624135,
+      "finished_unix": 1794398423.9758136,
+      "reserved_gpu_seconds": 44081.01340007782,
+      "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+      "status": "complete"
+    },
+    {
+      "started_unix": 1794354342.881745,
+      "finished_unix": 1794398423.9387577,
+      "reserved_gpu_seconds": 44081.05701303482,
+      "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+      "status": "complete"
+    }
+  ],
+  "training_gpu_hours": 24.4894640036424,
+  "closed_project_gpu_hours": 121.85048539439838,
+  "other_cost_rows_unchanged": true,
+  "cost_summary_sha256": "62d159644a1e6e0fec3bd5da169953efcebedcfa3ece0751c81d8916bdbe21a7",
+  "final_metrics": {
+    "updates": 8886,
+    "updates_per_epoch": 1481,
+    "epoch_update_counts": {
+      "0": 1481,
+      "1": 1481,
+      "2": 1481,
+      "3": 1481,
+      "4": 1481,
+      "5": 1481
+    },
+    "all_logged_metrics_finite": true,
+    "first_loss": 11.145233154296875,
+    "final_loss": 1.0527195930480957,
+    "max_grad_norm": 16.047534942626953,
+    "rank0_peak_allocated_bytes": 28501811200,
+    "sum_optimizer_update_wall_s": 43484.3839764297,
+    "timing_scope": "Logged optimizer updates only; full GPU reservation cost is reported separately."
+  },
+  "live_AR": {
+    "dflash-huginn-3.5b-math500-t0": {
+      "worker_pid": 174369,
+      "child_pid": 174380,
+      "child_start_ticks": "41348834",
+      "gpu": 3,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "ar",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "0",
+        "--gpu",
+        "3",
+        "--cpus",
+        "12-15",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1"
+      ],
+      "metadata_sha256": "cdb19d0033cd51b2ad2f35bc56a5b769d5fb56b8b2625859c16935dec5f9243c",
+      "observed_requests": 3,
+      "prefix_sha256": "4b0ea425a6888660dc45680186194626d6e4b66aa821f2835ba2225594fda182",
+      "stage": "same_stack_AR_only"
+    },
+    "dflash-huginn-3.5b-math500-t1": {
+      "worker_pid": 174370,
+      "child_pid": 174381,
+      "child_start_ticks": "41348835",
+      "gpu": 6,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "ar",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "1",
+        "--gpu",
+        "6",
+        "--cpus",
+        "56-59",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1"
+      ],
+      "metadata_sha256": "270508693c9ebfdbbda6da85cc59b76f9d0d6496159e0e59d4e7a6af18c66302",
+      "observed_requests": 3,
+      "prefix_sha256": "9bacfc844f5b2f63cc08407423eafb16fb6caba33aef0dcf32ec412ba5848bc2",
+      "stage": "same_stack_AR_only"
+    }
+  },
+  "priority_observer_exit": {
+    "name": "huginn-math-priority-v1",
+    "argv": [
+      "taskset",
+      "-c",
+      "80-83",
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/prioritize_huginn_math.py",
+      "--execute"
+    ],
+    "pid": 150154,
+    "started_unix": 1794396345.3370297,
+    "exit_code": 0,
+    "finished_unix": 1794398454.2038708
+  },
+  "priority_complete_sha256": "03e60913e9d99e906277b5ed25cf2fc44b439cbff3f0fcb8753b7295f11bbe12",
+  "policy_sha256": "d2f7e52b71ac2ca8230e2e59d7ee73d0f03e1915533a15a84d4dbd80d28ded42",
+  "temporary_deferrals_and_reservations_cleared": true,
+  "formal_results_unchanged": true,
+  "verification_source_sha256": "6a22028c9f1ef67decfab99098c06c12d5379c0ba08f8dd84468f18a1e0ee7fb",
+  "limitations": [
+    "Training completion is not a speed or decoding-correctness result.",
+    "Two MATH cells are at same-stack AR; final DFlash timed/profile stages remain pending.",
+    "Optimizer/RNG artifacts preserved; no actual resumed optimization claimed.",
+    "Old interrupted wide training and failed costs remain separate.",
+    "26/72 benchmark cells and 4/6 formal trainings complete; remaining work continues."
+  ]
+}

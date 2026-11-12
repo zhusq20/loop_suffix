@@ -1,0 +1,23 @@
+{
+  "definition": "Fraction of teacher-output 4-gram occurrences present in current full prompt or earlier selected teacher completions. Ouro tokenizer. Descriptive replay data statistic; not measured suffix-tree hit rate or T1 acceptance.",
+  "phases": {
+    "early": {
+      "ngrams": 2362,
+      "in_prompt": 114,
+      "in_prior_outputs": 371,
+      "in_either": 460
+    },
+    "middle": {
+      "ngrams": 561,
+      "in_prompt": 561,
+      "in_prior_outputs": 425,
+      "in_either": 561
+    },
+    "late": {
+      "ngrams": 561,
+      "in_prompt": 561,
+      "in_prior_outputs": 561,
+      "in_either": 561
+    }
+  }
+}

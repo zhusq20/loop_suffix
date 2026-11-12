@@ -1,0 +1,21 @@
+{
+  "status": "complete",
+  "model": "huginn-3.5b",
+  "epochs": 3,
+  "updates": 13539,
+  "selected_step": 13500,
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "parameters": 17673376,
+  "all_saved_parameters_finite": true,
+  "all_logged_optimization_values_finite": true,
+  "selected_by_frozen_dev_rule": true,
+  "confirmation_evaluations": 1,
+  "dev_accepted_prefix": 1.9937919560185187,
+  "confirmation_accepted_prefix": 1.9742418981481482,
+  "training_gpu_hours": 0.1995019594166014,
+  "peak_allocated_bytes": 1875459584,
+  "audit_source_sha256": "a41eb1f140373b0bbbd68b4be98cee1f6596cd7c47889dcad01ba538811172a8",
+  "finished_unix": 1794320599.743922,
+  "limitation": "Accepted-prefix validation scores are checkpoint-selection diagnostics, not benchmark gamma or speedup; trained-generation checks are separate."
+}

@@ -1,0 +1,64 @@
+{
+  "model": "ouro-2.6b",
+  "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "method": "ar",
+  "dataset": "humanevalplus",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "count": 164,
+  "full_count": 164,
+  "max_new_tokens": 512,
+  "max_seq": 1024,
+  "input_sha256": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8",
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+  "cpu_affinity": [
+    56,
+    57,
+    58,
+    59
+  ],
+  "torch": "2.6.0+cu126",
+  "dtype": "bfloat16",
+  "transformers": "4.57.1",
+  "cuda": "12.6",
+  "graph": false,
+  "compile": false,
+  "checkpoint": null,
+  "checkpoint_sha256": {},
+  "stage": "formal",
+  "trace": false,
+  "profiling": false,
+  "reportable": true,
+  "denominator": "full-depth HF LoopTarget AR, same target version and precision",
+  "sampling": "frozen positional target uniforms for AR; DFlash softmax-q rejection with request-hashed seed",
+  "source_sha256": {
+    "evaluate_dflash.py": "b6e27deba90ac3b0a52d53f17556c2022b3419f206e399573829cd2c661edaac",
+    "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+  }
+}

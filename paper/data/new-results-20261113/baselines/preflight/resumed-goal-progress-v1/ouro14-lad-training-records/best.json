@@ -1,0 +1,50 @@
+{
+  "step": 13533,
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533",
+  "domains": {
+    "python": {
+      "accepted_prefix": 2.287109375,
+      "ce": 3.0928728505645773,
+      "prefix_sum": 2342.0,
+      "windows": 1024,
+      "ce_sum": 21974.86160326132,
+      "labels": 7105
+    },
+    "gsm8k": {
+      "accepted_prefix": 2.4892578125,
+      "ce": 2.5617895828917456,
+      "prefix_sum": 2549.0,
+      "windows": 1024,
+      "ce_sum": 18150.279194788018,
+      "labels": 7085
+    },
+    "math": {
+      "accepted_prefix": 2.2138671875,
+      "ce": 2.9278030598015015,
+      "prefix_sum": 2267.0,
+      "windows": 1024,
+      "ce_sum": 20772.762709291652,
+      "labels": 7095
+    },
+    "reasoning": {
+      "accepted_prefix": 1.8819444444444444,
+      "ce": 3.89078555196929,
+      "prefix_sum": 4065.0,
+      "windows": 2160,
+      "ce_sum": 57871.54429999122,
+      "labels": 14874
+    },
+    "ultrachat": {
+      "accepted_prefix": 1.255859375,
+      "ce": 5.614569014721867,
+      "prefix_sum": 1286.0,
+      "windows": 1024,
+      "ce_sum": 39824.1380214222,
+      "labels": 7093
+    }
+  },
+  "accepted_prefix": 2.025607638888889,
+  "ce": 3.6175640119897965,
+  "requests": 782,
+  "ineligible_requests": 0
+}

@@ -1,0 +1,45 @@
+{
+  "ultrachat:over_12000_chars": 34,
+  "ultrachat:empty": 1,
+  "nemotron_chat:empty": 186656,
+  "codealpaca:candidate_count": 20022,
+  "python:candidate_count": 7326,
+  "math:candidate_count": 7500,
+  "ultrachat:candidate_count": 207830,
+  "nemotron_math:candidate_count": 51432,
+  "nemotron_code:candidate_count": 41452,
+  "reasoning:candidate_count": 31307,
+  "gsm8k:candidate_count": 7473
+}
+loopahead/dev/gsm8k 128
+loopahead/dev/python 128
+loopahead/dev/math 128
+loopahead/dev/reasoning 270
+loopahead/dev/ultrachat 128
+loopahead/confirmation/gsm8k 128
+loopahead/confirmation/python 128
+loopahead/confirmation/math 128
+loopahead/confirmation/reasoning 270
+loopahead/confirmation/ultrachat 128
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/prepare_training_manifests.py", line 218, in <module>
+    main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/prepare_training_manifests.py", line 194, in main
+    save('dflash-dev', [r for pool, count in df_dev for r in select(pool, count, 'dflash', 'dev')])
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/prepare_training_manifests.py", line 194, in <listcomp>
+    save('dflash-dev', [r for pool, count in df_dev for r in select(pool, count, 'dflash', 'dev')])
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/prepare_training_manifests.py", line 158, in select
+    length_cache[length_key] = {m: len(tokenize_prompt(MODELS[m], t, prompt, fmt)) for m, t in tokenizers.items()}
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/prepare_training_manifests.py", line 158, in <dictcomp>
+    length_cache[length_key] = {m: len(tokenize_prompt(MODELS[m], t, prompt, fmt)) for m, t in tokenizers.items()}
+  File "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/source/src/llm_memory_editability/loop_model_registry.py", line 95, in tokenize_prompt
+    return tokenizer.apply_chat_template([{'role': 'user', 'content': text}],
+  File "/tmp/loopfill-dflash-venv/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1666, in apply_chat_template
+    rendered_chat, generation_indices = render_jinja_template(
+  File "/tmp/loopfill-dflash-venv/lib/python3.10/site-packages/transformers/utils/chat_template_utils.py", line 482, in render_jinja_template
+    compiled_template = _compile_jinja_template(chat_template)
+  File "/tmp/loopfill-dflash-venv/lib/python3.10/site-packages/transformers/utils/chat_template_utils.py", line 399, in _compile_jinja_template
+    class AssistantTracker(Extension):
+  File "/tmp/loopfill-dflash-venv/lib/python3.10/site-packages/transformers/utils/chat_template_utils.py", line 415, in AssistantTracker
+    @jinja2.pass_eval_context
+AttributeError: module 'jinja2' has no attribute 'pass_eval_context'

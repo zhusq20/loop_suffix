@@ -1,0 +1,34 @@
+{
+  "name": "audit-loopahead-ouro14-resume-v1",
+  "gpu": 3,
+  "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+    "--model",
+    "ouro-1.4b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v1"
+  ],
+  "started_unix": 1794451773.5949316,
+  "pid": 405354,
+  "start_ticks": "46680988",
+  "supervisor_identity": {
+    "pid": 405353,
+    "state": "R",
+    "start_ticks": "46680982",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/audit-loopahead-ouro14-resume-v1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794451778.4946558,
+  "exit_evidence": "supervisor_waitpid"
+}

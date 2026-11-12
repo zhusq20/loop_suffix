@@ -1,0 +1,44 @@
+{
+  "checked_unix": 1794381263.0690799,
+  "pid": 477516,
+  "actual_argv": [
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+    "--execute",
+    "--resume",
+    "--retry-failed",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "--retry-failed",
+    "dflash-ouro-2.6b-bbh-t1",
+    "--retry-failed",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "--retry-failed",
+    "dflash-ouro-2.6b-humanevalplus-t1"
+  ],
+  "ld_library_path": "/tmp/loopfill-native-driver-570.148.08::/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "failed": [],
+  "retried_jobs_pending": [
+    "loopahead-huginn-3.5b-bbh-t1",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "dflash-ouro-2.6b-bbh-t1",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "dflash-ouro-2.6b-humanevalplus-t1"
+  ],
+  "adopted_math_worker": 420683,
+  "training_ranks_unchanged": [
+    65472,
+    65473
+  ],
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ]
+}

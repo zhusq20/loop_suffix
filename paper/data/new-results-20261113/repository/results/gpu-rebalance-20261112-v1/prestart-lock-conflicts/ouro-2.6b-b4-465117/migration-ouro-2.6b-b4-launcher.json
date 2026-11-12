@@ -1,0 +1,23 @@
+{
+  "pid": 465117,
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source/evaluate_loopahead_throughput.py",
+    "--model",
+    "ouro-2.6b",
+    "--batch",
+    "4",
+    "--mode",
+    "formal",
+    "--gpu",
+    "0",
+    "--cpus",
+    "0-3",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b4"
+  ],
+  "gpu": 0,
+  "started_unix": 1794422789.03641,
+  "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/plan.json"
+}

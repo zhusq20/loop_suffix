@@ -1,0 +1,33 @@
+test_duplicate_full_case_rejected (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_exact_prefix_leaves_only_167_cases (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_missing_or_extra_records_rejected (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_no_inference_algorithm_change (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_reordered_records_rejected (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_wrong_bf16_trace_rejected (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_wrong_divergence_position_rejected (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_wrong_forced_prefix_rejected (test_loopahead_partial_resume.ResumeBoundaryTests) ... ok
+test_changed_new_result_rejected (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_changed_reused_result_rejected (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_exact_join (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_failed_report_rejected (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_false_original_success_rejected (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_incomplete_new_suffix_rejected (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_measurement_failure_requires_inspection (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_measurements_and_stop_block_launch (test_loopahead_resume_attempt.ContinuationTests) ... ok
+test_corrupt_prefix_or_fp32_claim_rejected (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_failed_stage_cannot_be_hidden_by_pending_fp32 (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_frozen_scope_mapping (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_full_scope_cannot_be_inferred_from_partial (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_omitted_divergence_rejected (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_real_saved_examples (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_receipt_identity_and_arguments (test_audit_numerical_matrix.NumericalEvidenceTests) ... ok
+test_annotations_do_not_change_any_measurement (test_render_final_results.FinalTableChecks) ... ok
+test_arithmetic_and_exit_scope_are_not_silently_fixed (test_render_final_results.FinalTableChecks) ... ok
+test_missing_additional_diagnostics_or_mismatched_agreement_rejected (test_render_final_results.FinalTableChecks) ... ok
+test_real_partial_collection_cannot_produce_final_files (test_render_final_results.FinalTableChecks) ... ok
+test_requires_exact_72_keys (test_render_final_results.FinalTableChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.759s
+
+OK

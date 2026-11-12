@@ -1,0 +1,54 @@
+{
+  "identity": {
+    "model": "ouro-1.4b",
+    "model_revision": "574fa66cb8bf5abdc979642d01cf2b79b16bfab1",
+    "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+    "batch_plan_sha256": "2a412defa86e5aa00fd476cf81120233699402421f78c72123996cd5e6b3b829",
+    "shards": 1,
+    "shard": 0,
+    "max_batch": 32,
+    "execution_batch_plan_sha256": "5248336986ed79d4770e2d7a640c20045525c728e84e375049012f7090c5c9b6",
+    "packed_regrouping": false,
+    "kv_budget_gib": 70,
+    "max_new_tokens": 512,
+    "precision": "bfloat16",
+    "full_depth": 4,
+    "seed": 0,
+    "noise_capacity": 3072,
+    "prompt_format": "chat",
+    "stop_audit": {
+      "sources": {
+        "tokenizer": [
+          0
+        ],
+        "generation_config": [],
+        "model_config": [
+          0
+        ]
+      },
+      "invalid_ids": {
+        "tokenizer": [],
+        "generation_config": [],
+        "model_config": []
+      },
+      "selected_source": "tokenizer",
+      "stop_ids": [
+        0,
+        2
+      ],
+      "conflict": true,
+      "reason": "Released tokenizer EOS plus chat end token."
+    },
+    "batching": "left_padded_real_positions",
+    "teacher_cache": "checkpoint_native",
+    "production_cache_proof_sha256": null,
+    "packed_graph_proof_sha256": null,
+    "torch": "2.6.0+cu126",
+    "transformers": "4.57.1"
+  },
+  "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+  "planned_requests": 50000,
+  "planned_batches": 1563,
+  "timing": "production generation, not benchmark",
+  "manifest": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/inputs/dflash-train.jsonl"
+}

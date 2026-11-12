@@ -1,4 +1,4 @@
-"""Audit the complete 28-cell agentic supplement and export its Table 1 column."""
+"""Audit a complete agentic supplement and export its Table 1 results."""
 from __future__ import annotations
 
 import argparse
@@ -25,10 +25,17 @@ def digest(path):
     return h.hexdigest()
 
 
-def finalize(suite, repository):
+def finalize(suite, repository, scheduling=None):
+    from loop_agentic_suite import validate_scheduling
+    validate_scheduling(suite, scheduling)
     protocol, jobs = read(suite/'protocol.json'), read(suite/'jobs.json')
-    if read(suite/'status.json')['status'] != 'complete' or len(jobs) != 28:
-        raise ValueError('All 28 formal cells must complete before paper export')
+    dispatch = read(suite/'dispatch.json') if scheduling else None
+    expected = {(model, temperature, arm) for model in protocol['models']
+                for temperature in protocol['temperatures'] for arm in protocol['main_arms']}
+    actual = {(job['model'], job['temperature'], job['arm']) for job in jobs}
+    if (read(suite/'status.json')['status'] != 'complete' or actual != expected
+            or len(jobs) != len(expected)):
+        raise ValueError('All planned model/temperature/method cells must complete before paper export')
     for name, expected in protocol['input_files_sha256'].items():
         assert digest(suite/'inputs'/name) == expected, name
     for name, expected in protocol['source_sha256'].items():
@@ -39,6 +46,10 @@ def finalize(suite, repository):
     audits, devices = [], {}
     for job in jobs:
         directory = suite/'runs'/job['id']
+        if protocol.get('require_exit_receipts'):
+            receipt = read(suite/'logs'/(job['id']+'-exit.json'))
+            assert receipt['exit_code'] == 0, job['id']
+            assert receipt['job_id'] == job['id'] and not receipt['smoke'], job['id']
         metadata, summary = read(directory/'metadata.json'), read(directory/'summary.json')
         assert summary['status'] == 'complete' and summary['reportable']
         assert not metadata['smoke'] and not metadata['diagnostic']
@@ -47,7 +58,14 @@ def finalize(suite, repository):
         assert metadata['input_sha256'] == protocol['models'][job['model']]['input_sha256']
         assert metadata['checkpoint_sha256'] == protocol['models'][job['model']]['checkpoint_sha256']
         lane = (job['model'], job['temperature'])
-        assert devices.setdefault(lane, metadata['gpu_uuid']) == metadata['gpu_uuid']
+        devices.setdefault(lane, set()).add(metadata['gpu_uuid'])
+        if scheduling:
+            assert protocol.get('require_exit_receipts')
+            assert receipt['gpu'] == dispatch['cell_gpus'][job['id']]
+            assert metadata['gpu_uuid'].removeprefix('GPU-') == (
+                dispatch['cell_gpu_uuids'][job['id']].removeprefix('GPU-'))
+        else:
+            assert len(devices[lane]) == 1
         journal = directory/'requests.jsonl'
         assert digest(journal) == summary['requests_sha256']
         rows = [json.loads(line) for line in journal.open()]
@@ -73,25 +91,30 @@ def finalize(suite, repository):
         if job['arm'] == 'ar':
             assert recomputed['gamma'] == 1.
         audits.append(dict(cell=job['id'], requests=100, requests_sha256=digest(journal), **recomputed))
-    assert len(set(devices.values())) == 4
+    if not scheduling:
+        assert len(set().union(*devices.values())) == len(set(protocol['gpu_bindings'].values()))
     # Regenerate only from the frozen implementation and its complete journals.
     subprocess.run([sys.executable, str(suite/'source/scripts/loop_agentic_suite.py'),
                     'summarize','--suite',str(suite)], check=True)
     measured = list(csv.DictReader((suite/'measurements.csv').open()))
     index = {row['id']:row for row in measured}
-    assert len(index) == 28
+    assert len(index) == len(jobs)
     for audit in audits:
         row = index[audit['cell']]
         for key in ('decode_tokens','decode_s','decode_token_s','gamma','mean_decode_s'):
             assert math.isclose(float(row[key]), audit[key], rel_tol=1e-12, abs_tol=1e-12)
     checks = suite/'checks'
     checks.mkdir(exist_ok=True)
-    result = dict(passed=True, cells=28, requests=2800, verified_unix=time.time(),
-        same_device_per_model_temperature=True, complete_input_and_source_hashes=True,
+    result = dict(passed=True, cells=len(jobs), requests=100*len(jobs), verified_unix=time.time(),
+        same_device_per_model_temperature=all(len(v) == 1 for v in devices.values()),
+        scheduling=scheduling, actual_gpu_uuids={f'{m}/t{t}':sorted(v) for (m,t),v in devices.items()},
+        complete_input_and_source_hashes=True,
         cells_audited=audits, note='Integrity and metric audit, not a task-quality evaluation.')
     (checks/'final-audit.json').write_text(json.dumps(result, indent=2)+'\n')
-    destinations = {'table1-agentic.tex':repository/'paper/tables/table1-agentic-sql.tex',
-                    'measurements.csv':repository/'paper/data/agentic-sql-measurements.csv'}
+    suffix = protocol.get('paper_export_suffix', '')
+    assert not suffix or all(c.isalnum() or c in '-.' for c in suffix)
+    destinations = {'table1-agentic.tex':repository/f'paper/tables/table1-agentic-sql{suffix}.tex',
+                    'measurements.csv':repository/f'paper/data/agentic-sql{suffix}-measurements.csv'}
     for filename, target in destinations.items():
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(suite/filename, target)
@@ -105,8 +128,13 @@ def finalize(suite, repository):
         timing='Decode-only; prefill, warmup, loading and journal I/O excluded. Includes suffix publication.',
         limitations='Fixed historical SQL requests, not closed-loop task performance. '
                     'B1 token/s is not concurrent serving throughput. Output lengths can differ.')
-    (repository/'paper/data/agentic-sql-provenance.json').write_text(json.dumps(provenance, indent=2)+'\n')
-    print(json.dumps(dict(status='audited_and_exported', cells=28, requests=2800,
+    if scheduling:
+        provenance['scheduling'] = scheduling
+        provenance['cell_gpus'] = dispatch['cell_gpus']
+        provenance['limitations'] += (
+            ' Methods may run on different GPUs; AR ratios are not controlled for device variation.')
+    (repository/f'paper/data/agentic-sql{suffix}-provenance.json').write_text(json.dumps(provenance, indent=2)+'\n')
+    print(json.dumps(dict(status='audited_and_exported', cells=len(jobs), requests=100*len(jobs),
                           outputs=[str(p) for p in destinations.values()])))
 
 

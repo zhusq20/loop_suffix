@@ -1,0 +1,181 @@
+"""Consolidate existing six-model training evidence; no training or GPU work."""
+from pathlib import Path
+import hashlib
+import json
+import math
+import time
+
+BASE = Path('/ossfs/workspace/sz/loopfill/experiments/baselines')
+OUT = Path(__file__).resolve().parent
+SPECS = [
+    ('dflash', 'huginn-3.5b', 'dflash-huginn-narrow-formal-audit-v1',
+     'audit-dflash-huginn-narrow-formal-v1', 'audit_projected_dflash_training.py',
+     332621056, 8886),
+    ('dflash', 'ouro-2.6b', 'dflash-ouro-2.6b-formal-audit-v2',
+     'audit-dflash-ouro-2.6b-formal-v2', 'audit_dflash_training.py',
+     277898496, 9030),
+    ('dflash', 'ouro-1.4b', 'dflash-ouro-1.4b-portable-formal-audit-v1',
+     'audit-portable-dflash-ouro14-final-v1', 'audit_portable_dflash_training.py',
+     163597568, 9108),
+    ('loopahead', 'huginn-3.5b', 'loopahead-huginn-3.5b-formal-audit-v2',
+     'audit-loopahead-huginn-3.5b-formal-v2', 'audit_loopahead_training.py',
+     17673376, 13539),
+    ('loopahead', 'ouro-2.6b', 'loopahead-ouro-2.6b-formal-audit-v2',
+     'audit-loopahead-ouro-2.6b-formal-v2', 'audit_loopahead_training.py',
+     11051008, 13539),
+    ('loopahead', 'ouro-1.4b', 'loopahead-ouro-1.4b-formal-audit-v2',
+     'audit-loopahead-ouro-1.4b-formal-v2', 'audit_loopahead_training.py',
+     11051008, 13533),
+]
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def sha(path):
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def main():
+    started = time.time()
+    assert not (OUT/'report.json').exists()
+    verified, models = {}, {}
+
+    def check(path, expected=None):
+        path = Path(path).resolve()
+        digest = sha(path)
+        if expected is not None:
+            assert digest == expected, str(path)
+        verified[str(path)] = digest
+        return digest
+
+    for method, model, folder, tag, audit_script, parameters, updates in SPECS:
+        root = BASE/'training'/folder
+        report_path = root/'report.json'
+        report = read(report_path)
+        check(report_path)
+        launch_path = BASE/'logs'/f'{tag}-launcher.json'
+        exit_path = BASE/'logs'/f'{tag}-finished.json'
+        launch, done = read(launch_path), read(exit_path)
+        check(launch_path); check(exit_path)
+        assert type(done['exit_code']) is int and done['exit_code'] == 0
+        assert all(done[k] == v for k, v in launch.items())
+        assert done['started_unix'] <= report['started_unix'] <= report['finished_unix'] <= done['finished_unix']
+        argv = done['argv']
+        assert str(BASE/audit_script) in argv
+        assert Path(argv[argv.index('--out') + 1]).resolve() == root
+        manifest = read(root/'source-manifest.json')
+        check(root/'source-manifest.json')
+        for name, digest in manifest.items():
+            check(root/'source'/name, digest)
+        if isinstance(done.get('source_sha256'), str):
+            assert done['source_sha256'] == manifest[audit_script]
+        assert report['model'] == model
+        training = Path(report['training_root'])
+
+        if method == 'dflash':
+            assert report['status'] == 'complete_training_audit_not_benchmark'
+            assert report['epochs'] == 6 and report['global_batch'] == 32
+            assert report['metrics']['updates'] == updates
+            assert report['weights']['parameters'] == parameters
+            assert report['weights']['all_weights_finite'] is True
+            assert report['weights']['cuda_initialized'] is False
+            assert report['metrics'].get('all_logged_metrics_finite',
+                       report['metrics'].get('all_logged_updates_present_and_finite')) is True
+            assert report['learning_rate_schedule']['all_logged_learning_rates_match'] is True
+            assert report['learning_rate_schedule']['max_absolute_error'] == 0
+            checkpoint = Path(report['checkpoint'])
+            weight = checkpoint/'model.safetensors'
+            check(weight, report['weights_sha256'])
+            check(checkpoint/'config.json', report['checkpoint_config_sha256'])
+            for name, key in [('metadata.json', 'metadata_sha256'),
+                              ('complete.json', 'complete_sha256'),
+                              ('metrics.jsonl', 'metrics_sha256')]:
+                check(training/name, report[key])
+            if model == 'ouro-1.4b':
+                training_exit = training.parent/'train-exit.json'
+            elif model == 'huginn-3.5b':
+                training_exit = BASE/'logs/dflash-huginn-narrow-formal-v1-finished.json'
+            else:
+                training_exit = BASE/'logs/dflash-ouro-2.6b-formal-v1-finished.json'
+            receipt = read(training_exit)
+            check(training_exit, report.get('exit_receipt_sha256'))
+        else:
+            assert report['status'] == 'complete_LAD_training_audit_not_benchmark'
+            assert report['epochs'] == 3 and report['updates'] == updates
+            assert report['parameters'] == parameters
+            for key in ['approved_LAD_config_verified', 'all_logged_values_finite',
+                        'all_saved_parameters_finite', 'selected_by_frozen_dev_rule',
+                        'frequent8192_exactly_recomputed_from_training_counts']:
+                assert report[key] is True, key
+            assert report['cuda_initialized'] is False
+            weight = Path(report['selected_checkpoint'])
+            check(weight, report['checkpoint_sha256'])
+            training_exit = Path(report['actual_training_exit']['path'])
+            check(training_exit, report['actual_training_exit']['sha256'])
+            receipt = report['actual_training_exit']['receipt']
+            if training_exit.suffix == '.jsonl':
+                matches = [json.loads(line) for line in training_exit.read_text().splitlines()
+                           if json.loads(line) == receipt]
+                assert len(matches) == 1
+            else:
+                assert read(training_exit) == receipt
+
+        assert type(receipt['exit_code']) is int and receipt['exit_code'] == 0
+        assert str(training) in receipt['argv']
+        assert receipt['started_unix'] < receipt['finished_unix'] <= report['started_unix']
+        models[f'{method}/{model}'] = dict(
+            audit_report=str(report_path), audit_exit=str(exit_path), training_exit=str(training_exit),
+            actual_audit_exit=0, actual_training_exit=0, parameters=parameters,
+            updates=updates, epochs=report['epochs'], selected_weights=str(weight),
+            weights_sha256=verified[str(weight.resolve())],
+            audit_scope='Reuse the recorded full training audit; current hashes and receipts verified.',
+            limitations=report['limitations'])
+
+    ledger_path = BASE/'training_cost-ledger.json'
+    ledger = read(ledger_path)
+    check(ledger_path, '7953447d4b397f0ed04ff4cdf642e8eaad3d3d5311b8cfa1c98cf89b1b5e96f4')
+    assert len(ledger['reservations']) == 129
+    assert all(r['finished_unix'] >= r['started_unix'] and r['reserved_gpu_seconds'] >= 0
+               for r in ledger['reservations'])
+    cost = sum(r['reserved_gpu_seconds'] for r in ledger['reservations']) / 3600
+    assert math.isclose(cost, ledger['total_recorded_gpu_hours'], rel_tol=0, abs_tol=1e-9)
+    assert math.isclose(sum(g['gpu_hours'] for g in ledger['groups'].values()), cost, rel_tol=0, abs_tol=1e-9)
+    cost_text = (BASE/'training_cost.md').read_text()
+    rows = [line for line in cost_text.splitlines()
+            if line.startswith('| dflash |') or line.startswith('| loopahead |')]
+    assert len(rows) == 6
+    for method, model, _, _, _, _, updates in SPECS:
+        row, = [r for r in rows if r.startswith(f'| {method} | {model} |')]
+        assert f'| {updates} | complete |' in row
+    check(BASE/'training_cost.md')
+    cost_exit = BASE/'logs/render-final-training-costs-v1-exit.json'
+    cost_done = read(cost_exit)
+    assert cost_done['exit_code'] == 0
+    assert cost_done['started_unix'] <= ledger['generated_unix'] <= cost_done['finished_unix']
+    check(cost_exit)
+    check(BASE/'render_training_costs.py', cost_done['source_sha256'])
+    result = dict(status='complete_six_training_evidence_not_benchmark_acceptance',
+                  started_unix=started, finished_unix=time.time(), models=models,
+                  verified_artifact_sha256=verified, source_sha256=sha(__file__),
+                  closed_cost_records=129, recorded_gpu_hours=cost,
+                  unresolved_historical_cost_markers=ledger['incomplete'],
+                  new_training_runs=0, new_gpu_runs=0,
+                  limitations=[
+                      'This binds six existing training audits and current selected weights; it does not rerun training or finite-weight checks.',
+                      'The audit-process receipt and training-process receipt remain separate evidence.',
+                      'Costs cover the closed recorded reservations only, including failed/extra training; benchmark and independent diagnostic compute are excluded.',
+                      'Historical incomplete cost markers are retained, not assigned invented durations.',
+                      'Benchmark coverage, sampling evidence, numerical diagnostics and final document publication are separate requirements.'])
+    (OUT/'report.json').write_text(json.dumps(result, indent=2, ensure_ascii=False)+'\n')
+    print(json.dumps(dict(status=result['status'], models=len(models),
+                         artifacts=len(verified), recorded_gpu_hours=cost, new_gpu_runs=0)))
+
+
+if __name__ == '__main__':
+    main()

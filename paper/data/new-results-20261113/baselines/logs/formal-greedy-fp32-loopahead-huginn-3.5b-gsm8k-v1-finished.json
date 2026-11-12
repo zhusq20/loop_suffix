@@ -1,0 +1,24 @@
+{
+  "pid": 293462,
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t0",
+    "--loopahead",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t0-v1",
+    "--observed-margin-report",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1/report.json",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1/fp32-common-prefix"
+  ],
+  "gpu": 3,
+  "started_unix": 1794328003.9545672,
+  "exit_code": 0,
+  "finished_unix": 1794328863.7311273
+}

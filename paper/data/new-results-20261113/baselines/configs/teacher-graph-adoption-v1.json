@@ -1,0 +1,15 @@
+{
+  "enabled_models": [
+    "huginn-3.5b",
+    "ouro-2.6b"
+  ],
+  "proof": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/teacher-packed-graph-v1",
+  "proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+  "adopted_unix": 1794302742.855589,
+  "scope": "Future production teacher shards only; already running producers unchanged; benchmark graphs remain OFF",
+  "limitations": [
+    "Non-test64-token probe only; no benchmark eta is changed",
+    "Production backend must be explicitly recorded if adopted",
+    "BF16 native-vs-packed arithmetic is not claimed bitwise equal"
+  ]
+}

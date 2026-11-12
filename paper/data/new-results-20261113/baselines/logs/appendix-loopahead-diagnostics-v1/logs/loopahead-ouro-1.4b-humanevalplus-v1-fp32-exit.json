@@ -1,0 +1,47 @@
+{
+  "group": "loopahead-ouro-1.4b-humanevalplus-v1",
+  "step": "loopahead-ouro-1.4b-humanevalplus-v1-fp32",
+  "gpu": 4,
+  "plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "48-51",
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/source/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t0",
+    "--loopahead",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t0-v1",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--observed-margin-report",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1/report.json",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1/fp32-common-prefix"
+  ],
+  "started_unix": 1794472370.558625,
+  "pid": 133713,
+  "start_ticks": "48740685",
+  "supervisor_identity": {
+    "pid": 133708,
+    "state": "R",
+    "start_ticks": "48740679",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-fp32-launcher.json.supervisor.json",
+      "--lock-fd",
+      "8"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794472799.613464,
+  "exit_evidence": "supervisor_waitpid"
+}

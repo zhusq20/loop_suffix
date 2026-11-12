@@ -1,0 +1,33 @@
+{
+  "model": "ouro-2.6b",
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "stage": "untrained_drafter_compatibility",
+  "started_unix": 1794289756.571012,
+  "torch": "2.6.0+cu126",
+  "transformers": "4.57.1",
+  "target_path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "draft_parameters": 277898496,
+  "mask_token_id": 0,
+  "mask_token": "<|endoftext|>",
+  "features": [
+    145,
+    156,
+    167,
+    178,
+    189
+  ],
+  "seed": 0,
+  "prompt": "Write a short Python function that adds two integers.\n",
+  "repeat_exact": true,
+  "greedy_ar_equal": true,
+  "first_divergence": null,
+  "peak_allocated_bytes": 6455933952,
+  "limitations": [
+    "random drafter; no training or quality claim",
+    "one short synthetic prompt only",
+    "wall times are diagnostic and must not enter paper tables",
+    "greedy differences, if any, require common-prefix numerical diagnosis"
+  ],
+  "status": "smoke_complete_not_trained_pilot",
+  "finished_unix": 1794289775.0009744
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed_cpu_controller_checks",
+  "script_sha256": "11a09301df1c7f9cda05a2c3f4aa389fb2fa6bb73d736b1e67f333edc3317eb3",
+  "verified_existing_ouro_audit": {
+    "model": "ouro-2.6b",
+    "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v1/report.json",
+    "audit_report_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+    "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+    "weights_sha256": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca"
+  },
+  "ouro_export_files": 11,
+  "unfinished_huginn_and_unstarted_ouro14_not_ready": true,
+  "negative_checks": {
+    "nonzero_training_exit": "rejected",
+    "incomplete_training_step": "rejected",
+    "changed_audited_weights_hash": "rejected"
+  },
+  "negative_check_method": "In-memory substituted parsed values; original artifacts were not modified.",
+  "torch_imported": false,
+  "checked_unix": 1794350889.4816663,
+  "limitation": "These checks validate readiness and existing-audit reuse only; Huginn and Ouro1.4 final training audits have not run."
+}

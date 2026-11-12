@@ -1,0 +1,330 @@
+{
+  "created_unix": 1794420560.3957303,
+  "all_jobs": [
+    {
+      "id": "loopahead-huginn-3.5b-gsm8k-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-gsm8k-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-math500-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-math500-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-bbh-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-bbh-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-humanevalplus-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-humanevalplus-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-mbppplus-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-mbppplus-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-specbench-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-specbench-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 1
+    }
+  ],
+  "jobs": [
+    {
+      "id": "loopahead-ouro-2.6b-humanevalplus-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-mbppplus-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-mbppplus-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-specbench-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-specbench-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 1
+    }
+  ],
+  "already_completed": {
+    "loopahead-huginn-3.5b-gsm8k-t1": {
+      "requests": 300,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 359300,
+        "launch_sha256": "61a7abdcaae1aebc3d25478e624525be25d52a5e09e532d4b3317b4ab086aa85",
+        "exit_receipt_sha256": "e43a19418ab3964ad8c8b2b03a20bab028bd7645a1155789a0941ba6678f6e7e",
+        "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/metadata.json": "8937ee1ac7832c629c504d35eebb9b2bdc0a2fbf062557025b16c4a0aaf64e32",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/complete.json": "817695e317058007edab881ebb2928b5ff512f8ccceae28b045b8734e6f64b1c",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/requests.jsonl": "fe11041003eb66019dfd98d69ef6cbdf8de3c02aa3fd13d2bc1c636e12b36178",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      }
+    },
+    "loopahead-ouro-2.6b-gsm8k-t1": {
+      "requests": 300,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 378284,
+        "launch_sha256": "f653d00d1bf5ff2ad193059368062ab1bf79e94d71ae18c60560261c4cac6acf",
+        "exit_receipt_sha256": "f02d4318a4ba5b00e2044059a2068a8668aec6d2700366098f55343f7c0fe33f",
+        "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/metadata.json": "ca2e9c1165d4ed30e8113b55262cd0d3c2ffddefffbc86459c74985acb5b389a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/complete.json": "aac864f4a66e5f11549bcadd02e9646cb1f3c787d16cbc028146c57178835345",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/requests.jsonl": "1c3538b06913cceab39c5b4d6cf0dd6609dbd5c9e877b30ecc9a7263e75437e7",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      }
+    },
+    "loopahead-huginn-3.5b-math500-t1": {
+      "requests": 500,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 380835,
+        "launch_sha256": "8d006cb421dcca3bce5ff0c0b887331c183247f26a9039b0b6ea326c3100858f",
+        "exit_receipt_sha256": "ac25cd4154b254ba42e90b9ae257639f6306ec21a34bfbed69dd548ec2c6182c",
+        "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/metadata.json": "9e81d732a92b51b41415c17e0e2f06fc52600619f3129c926e781327d166de21",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/complete.json": "dd6bb89890b624af6b184961900f5474e7c78ed1464686b3e863a132fd7f6cdd",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/requests.jsonl": "2c4faeba000cb713c8a0967118d479ed5c7146b26e55a0c17221b92cd39f352d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      }
+    },
+    "loopahead-ouro-2.6b-math500-t1": {
+      "requests": 500,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 403223,
+        "launch_sha256": "1e76f595b583d5cea1b0f0b14d634d242698b7b066ef653e827e11910549b84a",
+        "exit_receipt_sha256": "25efff354dadc4b148c8a420e358355084eb5fd029c071b51c588c7709ea4055",
+        "source_manifest_sha256": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/metadata.json": "cdd44ba5caed7e7399a4154ee682d36398610b1a462e8af8cfce49b45ff03bb1",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/complete.json": "4dd21173033fa6f62e408bce22909048802fcfebb3076df3a3f976b220248c6e",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/requests.jsonl": "7b180120a6f1162328a250f53535e932d1843b45471f6b57af61d58709abc3e8",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471"
+      }
+    },
+    "loopahead-huginn-3.5b-bbh-t1": {
+      "requests": 270,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 478437,
+        "launch_sha256": "e28489c682ba348dcfb003799027c0301f987926d28660ec7da8cb6bc376c85f",
+        "exit_receipt_sha256": "cc4f35e343fe19a5bc0379e9611a5b684bb9dc8a0e10f1d7ac55744a86ad1fd7",
+        "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/metadata.json": "162af8e0123ee939e57f29cd1ec5cacdd7cc0b51461bfa97c80e080d2ca8f2e3",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/complete.json": "386a93cc1b97eb617b1fd9d13c8917b8923cbeedeb7244af8b1ffeac3873fa68",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/requests.jsonl": "b290fcabc8085c836b953171aa7b4033a0e08d266524270cc4ccb70cfdbd522d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/source-manifest.json": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+      }
+    },
+    "loopahead-ouro-2.6b-bbh-t1": {
+      "requests": 270,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 516319,
+        "launch_sha256": "0060bc3d8c3f7b8342d3d2aaaf01a6ef211689946379b69ef076dcd0af88b294",
+        "exit_receipt_sha256": "2ae0667e029bdf923b80d1fdee60857146fa13e7fcf42a5ee114658bfb9ed9cf",
+        "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/metadata.json": "acdd796f5bc7a64b0761378e3897d37427850af8ae761c651aecce5a06450907",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/complete.json": "68425445cf148c7c3f62f60ee0a420b044efb08da62ab73141ecc02c0f1a7a5a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/requests.jsonl": "e0aaf3104f871e3009696db3be8f08ba078afbbc27de4d55958fda5b7945f1c9",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/source-manifest.json": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+      }
+    },
+    "loopahead-huginn-3.5b-humanevalplus-t1": {
+      "requests": 164,
+      "evidence": {
+        "kind": "actual_successful_process_exit",
+        "pid": 167881,
+        "launch_sha256": "89148bacbea16bd4e279d95f95e6fefa14724e55e7667de4bc8fa515177c4849",
+        "exit_receipt_sha256": "159e78473dab2b5f73dec87b2039f1956aea49cd9003f9d7544462321df03006",
+        "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+      },
+      "artifacts": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/metadata.json": "b00cda00fee1819c8b67830feed2004ec488755a9441947c4d0e055634529fea",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/complete.json": "af473ddab69ee53a405e6b52a34e39bb4c6007f05d0b6530627e481b758f5492",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/requests.jsonl": "d463e59b142841e67a5694be4d3a23b65687f96910ade468caa1b79887474d81",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/source-manifest.json": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5"
+      }
+    }
+  },
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "throughput": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2",
+  "throughput_status_at_prepare": {
+    "updated_unix": 1794420551.3459837,
+    "stage": "formal",
+    "completed": [
+      "huginn-3.5b-fp32-b2",
+      "ouro-2.6b-fp32-b2",
+      "ouro-2.6b-bf16-b16",
+      "huginn-3.5b-bf16-b16"
+    ],
+    "failed": [],
+    "formal_completed": 0,
+    "formal_oom": 0,
+    "planned_cells": 10,
+    "running": {
+      "huginn-3.5b-b1": {
+        "pid": 417113,
+        "gpu": 2,
+        "started_unix": 1794419625.2251465
+      },
+      "ouro-2.6b-b1": {
+        "pid": 417115,
+        "gpu": 3,
+        "started_unix": 1794419625.2834544
+      },
+      "huginn-3.5b-b2": {
+        "pid": 417118,
+        "gpu": 4,
+        "started_unix": 1794419625.3250954
+      },
+      "ouro-2.6b-b2": {
+        "pid": 417121,
+        "gpu": 6,
+        "started_unix": 1794419625.3762562
+      }
+    },
+    "pending": [
+      "huginn-3.5b-b4",
+      "ouro-2.6b-b4",
+      "huginn-3.5b-b8",
+      "ouro-2.6b-b8",
+      "huginn-3.5b-b16",
+      "ouro-2.6b-b16"
+    ]
+  },
+  "checkpoints": {
+    "huginn-3.5b": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+    "ouro-2.6b": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt"
+  },
+  "source_sha256": {
+    "orchestrate_loopahead_t1_resume.py": "f74775ae99339f47b6d4b22dc9ea0fc26414b5cd78a06f0c4a8af9b93ca6f8a9",
+    "orchestrate_formal.py": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "evaluate_loopahead.py": "bb90a31ed60c950213a03b6962c8ac806e7bb0c6c3b727558359226c6baa69e7",
+    "native_cuda_env.py": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+    "gpu_startup.py": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "collect_results.py": "a41bb742e543a7f828ce2bafa87262bda4ba4657f05d972c0e5df1e17e43a60d",
+    "result_evidence.py": "d3b438b9ca068a48f6f68f00cad358e6b52d95ad7a713609846faba9161d0d2a",
+    "loopahead_diagnostic_inputs.py": "a743af5a1c12f4f42705db9a3526a44ee1e1abdcdb0f8d606a20e6c2511cda5d",
+    "dflash_training_registry.py": "d6823857c065301f03e0e6111b0be3a762a62629dcd991fabbf3e6eef066a8a0",
+    "configs/loopahead-ouro-2.6b-admission-v1.json": "c57d108b3ae86468803ac676b1a9c2dda7c0c12bd6daf47b3790e7cda82ee7ef",
+    "configs/loopahead-lad.json": "9fff663ca67f1756f5e2931d1dd514aead9f90811f7b48d27ebeadeeff898cd2",
+    "configs/loopahead-sampling-dev16.json": "b0cdc22eadf756d08e7919342180893c09893aeae78e9a8f7a55a9a278f6cff0",
+    "loopahead/__init__.py": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "loopahead/batch.py": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/engine.py": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/test_admission.py": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+    "loopahead/test_batch.py": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+    "loopahead/test_decode.py": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+    "loopahead/test_lad.py": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+    "loopahead/test_sampling.py": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+    "loopahead/test_training_data.py": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+    "loopahead/training_data.py": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8"
+  },
+  "protocol_sha256": "b9317d2b7f44b795368a61bdb00dfa862b9a2d501a486bcb46526c0b6d2ee781",
+  "temperature": 1,
+  "batch_size": 1,
+  "max_new_tokens": 512,
+  "handoff": "Existing throughput workers finish normally; missing T1 cells get free GPUs first; throughput dispatch resumes after every missing cell has acquired CUDA."
+}

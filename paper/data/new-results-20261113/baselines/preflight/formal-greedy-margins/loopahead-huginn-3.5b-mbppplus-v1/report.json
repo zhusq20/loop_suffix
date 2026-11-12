@@ -1,0 +1,3451 @@
+{
+  "status": "complete",
+  "model": "huginn-3.5b",
+  "dataset": "mbppplus",
+  "cases": 74,
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "results": [
+    {
+      "source_id": 119,
+      "position": 52,
+      "ar": {
+        "top_ids": [
+          65508,
+          46,
+          91
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          15.625
+        ],
+        "top_probs": [
+          0.4613562524318695,
+          0.4071454405784607,
+          0.042912814766168594
+        ],
+        "top2_probability_margin": 0.054210811853408813,
+        "top1_logit_margin": 0.125,
+        "argmax": 65508
+      },
+      "loopahead": {
+        "top_ids": [
+          65508,
+          46,
+          91
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          15.75
+        ],
+        "top_probs": [
+          0.4267841875553131,
+          0.4267841875553131,
+          0.0509721040725708
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 72,
+      "position": 46,
+      "ar": {
+        "top_ids": [
+          459,
+          426,
+          3529
+        ],
+        "top_logits": [
+          15.9375,
+          15.875,
+          14.8125
+        ],
+        "top_probs": [
+          0.2860835790634155,
+          0.2687506675720215,
+          0.09287773817777634
+        ],
+        "top2_probability_margin": 0.017332911491394043,
+        "top1_logit_margin": 0.0625,
+        "argmax": 459
+      },
+      "loopahead": {
+        "top_ids": [
+          459,
+          426,
+          3529
+        ],
+        "top_logits": [
+          15.9375,
+          15.9375,
+          14.8125
+        ],
+        "top_probs": [
+          0.28132835030555725,
+          0.28132835030555725,
+          0.09133394062519073
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 426
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 594,
+      "position": 84,
+      "ar": {
+        "top_ids": [
+          7645,
+          7294,
+          4386
+        ],
+        "top_logits": [
+          22.5,
+          22.375,
+          15.75
+        ],
+        "top_probs": [
+          0.5291551947593689,
+          0.4669778048992157,
+          0.0006195769528858364
+        ],
+        "top2_probability_margin": 0.0621773898601532,
+        "top1_logit_margin": 0.125,
+        "argmax": 7645
+      },
+      "loopahead": {
+        "top_ids": [
+          7645,
+          7294,
+          4386
+        ],
+        "top_logits": [
+          22.375,
+          22.375,
+          15.75
+        ],
+        "top_probs": [
+          0.49795183539390564,
+          0.49795183539390564,
+          0.0006606727256439626
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7294
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 786,
+      "position": 299,
+      "ar": {
+        "top_ids": [
+          16367,
+          1082,
+          1555
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          18.875
+        ],
+        "top_probs": [
+          0.28293898701667786,
+          0.28293898701667786,
+          0.24969278275966644
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1082
+      },
+      "loopahead": {
+        "top_ids": [
+          16367,
+          1082,
+          1555
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          18.875
+        ],
+        "top_probs": [
+          0.3089417517185211,
+          0.2726401388645172,
+          0.24060407280921936
+        ],
+        "top2_probability_margin": 0.036301612854003906,
+        "top1_logit_margin": 0.125,
+        "argmax": 16367
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 736,
+      "position": 343,
+      "ar": {
+        "top_ids": [
+          8514,
+          6866,
+          15372
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          15.625
+        ],
+        "top_probs": [
+          0.259909987449646,
+          0.22936974465847015,
+          0.07446545362472534
+        ],
+        "top2_probability_margin": 0.030540242791175842,
+        "top1_logit_margin": 0.125,
+        "argmax": 8514
+      },
+      "loopahead": {
+        "top_ids": [
+          8514,
+          6866,
+          15372
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          15.5625
+        ],
+        "top_probs": [
+          0.2559952735900879,
+          0.2559952735900879,
+          0.0689001977443695
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 6866
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 100,
+      "position": 88,
+      "ar": {
+        "top_ids": [
+          4675,
+          459,
+          110
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.375
+        ],
+        "top_probs": [
+          0.27244454622268677,
+          0.24043147265911102,
+          0.16524598002433777
+        ],
+        "top2_probability_margin": 0.032013073563575745,
+        "top1_logit_margin": 0.125,
+        "argmax": 4675
+      },
+      "loopahead": {
+        "top_ids": [
+          4675,
+          459,
+          110
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.375
+        ],
+        "top_probs": [
+          0.24675291776657104,
+          0.24675291776657104,
+          0.16959063708782196
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 459
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 268,
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          349,
+          345,
+          402
+        ],
+        "top_logits": [
+          21.75,
+          21.75,
+          16.125
+        ],
+        "top_probs": [
+          0.4974777400493622,
+          0.4974777400493622,
+          0.0017941849073395133
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "loopahead": {
+        "top_ids": [
+          349,
+          345,
+          402
+        ],
+        "top_logits": [
+          21.875,
+          21.75,
+          16.0
+        ],
+        "top_probs": [
+          0.5288090705871582,
+          0.4666723608970642,
+          0.0014853158500045538
+        ],
+        "top2_probability_margin": 0.062136709690093994,
+        "top1_logit_margin": 0.125,
+        "argmax": 349
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 18,
+      "position": 5,
+      "ar": {
+        "top_ids": [
+          3210,
+          2833,
+          4872
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.5
+        ],
+        "top_probs": [
+          0.3082963824272156,
+          0.27207058668136597,
+          0.21188879013061523
+        ],
+        "top2_probability_margin": 0.03622579574584961,
+        "top1_logit_margin": 0.125,
+        "argmax": 3210
+      },
+      "loopahead": {
+        "top_ids": [
+          3210,
+          2833,
+          4872
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          18.5
+        ],
+        "top_probs": [
+          0.2976417541503906,
+          0.2976417541503906,
+          0.20456600189208984
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2833
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 226,
+      "position": 125,
+      "ar": {
+        "top_ids": [
+          3293,
+          44,
+          598
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          17.625
+        ],
+        "top_probs": [
+          0.3992323577404022,
+          0.3992323577404022,
+          0.08908078074455261
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "loopahead": {
+        "top_ids": [
+          3293,
+          44,
+          1528
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          17.625
+        ],
+        "top_probs": [
+          0.4337410032749176,
+          0.38277506828308105,
+          0.08540865778923035
+        ],
+        "top2_probability_margin": 0.05096593499183655,
+        "top1_logit_margin": 0.125,
+        "argmax": 3293
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 290,
+      "position": 7,
+      "ar": {
+        "top_ids": [
+          9975,
+          2524,
+          19822
+        ],
+        "top_logits": [
+          17.75,
+          17.625,
+          17.125
+        ],
+        "top_probs": [
+          0.2994593381881714,
+          0.26427191495895386,
+          0.16028903424739838
+        ],
+        "top2_probability_margin": 0.03518742322921753,
+        "top1_logit_margin": 0.125,
+        "argmax": 9975
+      },
+      "loopahead": {
+        "top_ids": [
+          9975,
+          2524,
+          19822
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          17.125
+        ],
+        "top_probs": [
+          0.27650779485702515,
+          0.27650779485702515,
+          0.16771046817302704
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2524
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 224,
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          318,
+          311,
+          41487
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          15.0625
+        ],
+        "top_probs": [
+          0.5263440608978271,
+          0.4644969701766968,
+          0.004277869593352079
+        ],
+        "top2_probability_margin": 0.06184709072113037,
+        "top1_logit_margin": 0.125,
+        "argmax": 318
+      },
+      "loopahead": {
+        "top_ids": [
+          318,
+          311,
+          41487
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          15.0
+        ],
+        "top_probs": [
+          0.49529772996902466,
+          0.49529772996902466,
+          0.00428516510874033
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 311
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 766,
+      "position": 65,
+      "ar": {
+        "top_ids": [
+          301,
+          10,
+          65508
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          16.625
+        ],
+        "top_probs": [
+          0.4874753952026367,
+          0.43019551038742065,
+          0.07475677132606506
+        ],
+        "top2_probability_margin": 0.057279884815216064,
+        "top1_logit_margin": 0.125,
+        "argmax": 301
+      },
+      "loopahead": {
+        "top_ids": [
+          301,
+          10,
+          65508
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          16.625
+        ],
+        "top_probs": [
+          0.46093541383743286,
+          0.46093541383743286,
+          0.07068674266338348
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 286,
+      "position": 263,
+      "ar": {
+        "top_ids": [
+          13335,
+          295,
+          4739
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          16.25
+        ],
+        "top_probs": [
+          0.23512591421604156,
+          0.23512591421604156,
+          0.20749789476394653
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 295
+      },
+      "loopahead": {
+        "top_ids": [
+          13335,
+          295,
+          4739
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          16.25
+        ],
+        "top_probs": [
+          0.2571296989917755,
+          0.22691617906093597,
+          0.20025281608104706
+        ],
+        "top2_probability_margin": 0.03021351993083954,
+        "top1_logit_margin": 0.125,
+        "argmax": 13335
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 247,
+      "position": 79,
+      "ar": {
+        "top_ids": [
+          402,
+          345,
+          15428
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          14.0625
+        ],
+        "top_probs": [
+          0.52942955493927,
+          0.4672199487686157,
+          0.0009601172059774399
+        ],
+        "top2_probability_margin": 0.0622096061706543,
+        "top1_logit_margin": 0.125,
+        "argmax": 402
+      },
+      "loopahead": {
+        "top_ids": [
+          402,
+          345,
+          15428
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          14.0
+        ],
+        "top_probs": [
+          0.49843254685401917,
+          0.49843254685401917,
+          0.0008491396438330412
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 165,
+      "position": 73,
+      "ar": {
+        "top_ids": [
+          4744,
+          727,
+          58764
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          16.375
+        ],
+        "top_probs": [
+          0.4505367577075958,
+          0.4505367577075958,
+          0.04748622328042984
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 727
+      },
+      "loopahead": {
+        "top_ids": [
+          4744,
+          727,
+          58764
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          16.375
+        ],
+        "top_probs": [
+          0.47537505626678467,
+          0.41951701045036316,
+          0.050104159861803055
+        ],
+        "top2_probability_margin": 0.05585804581642151,
+        "top1_logit_margin": 0.125,
+        "argmax": 4744
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 440,
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          413,
+          35,
+          1990
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          16.25
+        ],
+        "top_probs": [
+          0.28765615820884705,
+          0.28765615820884705,
+          0.09338828176259995
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 35
+      },
+      "loopahead": {
+        "top_ids": [
+          413,
+          35,
+          1990
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          16.25
+        ],
+        "top_probs": [
+          0.3127826154232025,
+          0.27602967619895935,
+          0.08961372077465057
+        ],
+        "top2_probability_margin": 0.036752939224243164,
+        "top1_logit_margin": 0.125,
+        "argmax": 413
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 99,
+      "position": 138,
+      "ar": {
+        "top_ids": [
+          65508,
+          301,
+          428
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          16.875
+        ],
+        "top_probs": [
+          0.3436501622200012,
+          0.30327022075653076,
+          0.16232885420322418
+        ],
+        "top2_probability_margin": 0.04037994146347046,
+        "top1_logit_margin": 0.125,
+        "argmax": 65508
+      },
+      "loopahead": {
+        "top_ids": [
+          65508,
+          301,
+          428
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          16.875
+        ],
+        "top_probs": [
+          0.31568294763565063,
+          0.31568294763565063,
+          0.1689729243516922
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 301
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 430,
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          425,
+          41,
+          410
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          18.5
+        ],
+        "top_probs": [
+          0.3912632465362549,
+          0.34528860449790955,
+          0.20942813158035278
+        ],
+        "top2_probability_margin": 0.04597464203834534,
+        "top1_logit_margin": 0.125,
+        "argmax": 425
+      },
+      "loopahead": {
+        "top_ids": [
+          425,
+          41,
+          410
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          18.5
+        ],
+        "top_probs": [
+          0.37339407205581665,
+          0.37339407205581665,
+          0.199863463640213
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 41
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 742,
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          3902,
+          268,
+          2834
+        ],
+        "top_logits": [
+          21.5,
+          21.5,
+          19.0
+        ],
+        "top_probs": [
+          0.4626394510269165,
+          0.4626394510269165,
+          0.03797575831413269
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 268
+      },
+      "loopahead": {
+        "top_ids": [
+          3902,
+          268,
+          2834
+        ],
+        "top_logits": [
+          21.625,
+          21.5,
+          19.125
+        ],
+        "top_probs": [
+          0.49138343334198,
+          0.4336443543434143,
+          0.04033520817756653
+        ],
+        "top2_probability_margin": 0.057739078998565674,
+        "top1_logit_margin": 0.125,
+        "argmax": 3902
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 630,
+      "position": 72,
+      "ar": {
+        "top_ids": [
+          19489,
+          426,
+          120
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          17.625
+        ],
+        "top_probs": [
+          0.35533663630485535,
+          0.31358346343040466,
+          0.1307210475206375
+        ],
+        "top2_probability_margin": 0.041753172874450684,
+        "top1_logit_margin": 0.125,
+        "argmax": 19489
+      },
+      "loopahead": {
+        "top_ids": [
+          19489,
+          426,
+          120
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          17.625
+        ],
+        "top_probs": [
+          0.32870376110076904,
+          0.32870376110076904,
+          0.13702410459518433
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 426
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 260,
+      "position": 224,
+      "ar": {
+        "top_ids": [
+          2973,
+          1251,
+          786
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          14.5
+        ],
+        "top_probs": [
+          0.5248422622680664,
+          0.4631716310977936,
+          0.0035363591741770506
+        ],
+        "top2_probability_margin": 0.06167063117027283,
+        "top1_logit_margin": 0.125,
+        "argmax": 2973
+      },
+      "loopahead": {
+        "top_ids": [
+          2973,
+          1251,
+          786
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          14.4375
+        ],
+        "top_probs": [
+          0.4945158064365387,
+          0.4945158064365387,
+          0.0031301442068070173
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1251
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 123,
+      "position": 280,
+      "ar": {
+        "top_ids": [
+          49,
+          48,
+          51
+        ],
+        "top_logits": [
+          21.25,
+          21.125,
+          21.0
+        ],
+        "top_probs": [
+          0.35582053661346436,
+          0.31401053071022034,
+          0.27711331844329834
+        ],
+        "top2_probability_margin": 0.04181000590324402,
+        "top1_logit_margin": 0.125,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          49,
+          48,
+          51
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          21.0
+        ],
+        "top_probs": [
+          0.3410087823867798,
+          0.3410087823867798,
+          0.26557791233062744
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 48
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 745,
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          95,
+          40,
+          50
+        ],
+        "top_logits": [
+          22.0,
+          21.875,
+          12.8125
+        ],
+        "top_probs": [
+          0.5310551524162292,
+          0.4686545431613922,
+          5.4332424042513594e-05
+        ],
+        "top2_probability_margin": 0.062400609254837036,
+        "top1_logit_margin": 0.125,
+        "argmax": 95
+      },
+      "loopahead": {
+        "top_ids": [
+          95,
+          40,
+          50
+        ],
+        "top_logits": [
+          21.875,
+          21.875,
+          12.8125
+        ],
+        "top_probs": [
+          0.49984198808670044,
+          0.49984198808670044,
+          5.794807293568738e-05
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 261,
+      "position": 26,
+      "ar": {
+        "top_ids": [
+          9691,
+          116,
+          49115
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          18.125
+        ],
+        "top_probs": [
+          0.32102087140083313,
+          0.32102087140083313,
+          0.25001129508018494
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 116
+      },
+      "loopahead": {
+        "top_ids": [
+          9691,
+          116,
+          49115
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          18.125
+        ],
+        "top_probs": [
+          0.3471156656742096,
+          0.3063284754753113,
+          0.23856887221336365
+        ],
+        "top2_probability_margin": 0.040787190198898315,
+        "top1_logit_margin": 0.125,
+        "argmax": 9691
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 603,
+      "position": 246,
+      "ar": {
+        "top_ids": [
+          6268,
+          1116,
+          1286
+        ],
+        "top_logits": [
+          15.75,
+          15.6875,
+          15.375
+        ],
+        "top_probs": [
+          0.22562997043132782,
+          0.21195973455905914,
+          0.15507306158542633
+        ],
+        "top2_probability_margin": 0.013670235872268677,
+        "top1_logit_margin": 0.0625,
+        "argmax": 6268
+      },
+      "loopahead": {
+        "top_ids": [
+          6268,
+          1116,
+          1286
+        ],
+        "top_logits": [
+          15.75,
+          15.75,
+          15.375
+        ],
+        "top_probs": [
+          0.22105930745601654,
+          0.22105930745601654,
+          0.15193168818950653
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1116
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 472,
+      "position": 32,
+      "ar": {
+        "top_ids": [
+          425,
+          43,
+          1904
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          18.125
+        ],
+        "top_probs": [
+          0.4251207709312439,
+          0.4251207709312439,
+          0.08371123671531677
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 43
+      },
+      "loopahead": {
+        "top_ids": [
+          425,
+          43,
+          1904
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          18.125
+        ],
+        "top_probs": [
+          0.4456905424594879,
+          0.3933205008506775,
+          0.08776166290044785
+        ],
+        "top2_probability_margin": 0.052370041608810425,
+        "top1_logit_margin": 0.125,
+        "argmax": 425
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 124,
+      "position": 67,
+      "ar": {
+        "top_ids": [
+          44,
+          328,
+          95
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          16.875
+        ],
+        "top_probs": [
+          0.5234940052032471,
+          0.4619818329811096,
+          0.013950642198324203
+        ],
+        "top2_probability_margin": 0.06151217222213745,
+        "top1_logit_margin": 0.125,
+        "argmax": 44
+      },
+      "loopahead": {
+        "top_ids": [
+          328,
+          44,
+          95
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          16.875
+        ],
+        "top_probs": [
+          0.5235022306442261,
+          0.46198907494544983,
+          0.013950861059129238
+        ],
+        "top2_probability_margin": 0.061513155698776245,
+        "top1_logit_margin": 0.125,
+        "argmax": 328
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": 641,
+      "position": 50,
+      "ar": {
+        "top_ids": [
+          1926,
+          35,
+          110
+        ],
+        "top_logits": [
+          14.5,
+          14.5,
+          14.0
+        ],
+        "top_probs": [
+          0.23174604773521423,
+          0.23174604773521423,
+          0.1405610889196396
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 35
+      },
+      "loopahead": {
+        "top_ids": [
+          1926,
+          35,
+          110
+        ],
+        "top_logits": [
+          14.5,
+          14.4375,
+          13.9375
+        ],
+        "top_probs": [
+          0.23706026375293732,
+          0.22269751131534576,
+          0.13507285714149475
+        ],
+        "top2_probability_margin": 0.014362752437591553,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1926
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 252,
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          1990,
+          114,
+          35
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          15.1875
+        ],
+        "top_probs": [
+          0.3761145770549774,
+          0.33191993832588196,
+          0.07883789390325546
+        ],
+        "top2_probability_margin": 0.04419463872909546,
+        "top1_logit_margin": 0.125,
+        "argmax": 1990
+      },
+      "loopahead": {
+        "top_ids": [
+          1990,
+          114,
+          35
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          15.25
+        ],
+        "top_probs": [
+          0.34543541073799133,
+          0.34543541073799133,
+          0.08733975142240524
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 114
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 724,
+      "position": 73,
+      "ar": {
+        "top_ids": [
+          286,
+          10,
+          330
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          16.625
+        ],
+        "top_probs": [
+          0.41109657287597656,
+          0.41109657287597656,
+          0.07143786549568176
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          286,
+          10,
+          330
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          16.625
+        ],
+        "top_probs": [
+          0.4322187006473541,
+          0.3814316689968109,
+          0.07510834187269211
+        ],
+        "top2_probability_margin": 0.05078703165054321,
+        "top1_logit_margin": 0.125,
+        "argmax": 286
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 579,
+      "position": 18,
+      "ar": {
+        "top_ids": [
+          302,
+          286,
+          502
+        ],
+        "top_logits": [
+          16.875,
+          16.625,
+          16.375
+        ],
+        "top_probs": [
+          0.3817256689071655,
+          0.29728826880455017,
+          0.23152832686901093
+        ],
+        "top2_probability_margin": 0.08443740010261536,
+        "top1_logit_margin": 0.25,
+        "argmax": 302
+      },
+      "loopahead": {
+        "top_ids": [
+          302,
+          286,
+          502
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.375
+        ],
+        "top_probs": [
+          0.33898523449897766,
+          0.33898523449897766,
+          0.23298092186450958
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 286
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 292,
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          1258,
+          4713,
+          318
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          17.625
+        ],
+        "top_probs": [
+          0.28256723284721375,
+          0.2493647038936615,
+          0.22006358206272125
+        ],
+        "top2_probability_margin": 0.033202528953552246,
+        "top1_logit_margin": 0.125,
+        "argmax": 1258
+      },
+      "loopahead": {
+        "top_ids": [
+          4713,
+          1258,
+          318
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          17.625
+        ],
+        "top_probs": [
+          0.28894996643066406,
+          0.2549974322319031,
+          0.2250344604253769
+        ],
+        "top2_probability_margin": 0.033952534198760986,
+        "top1_logit_margin": 0.125,
+        "argmax": 4713
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": 730,
+      "position": 24,
+      "ar": {
+        "top_ids": [
+          9975,
+          11017,
+          613
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          20.625
+        ],
+        "top_probs": [
+          0.33856603503227234,
+          0.29878348112106323,
+          0.29878348112106323
+        ],
+        "top2_probability_margin": 0.039782553911209106,
+        "top1_logit_margin": 0.125,
+        "argmax": 9975
+      },
+      "loopahead": {
+        "top_ids": [
+          11017,
+          9975,
+          613
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          20.625
+        ],
+        "top_probs": [
+          0.31119298934936523,
+          0.31119298934936523,
+          0.31119298934936523
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 613
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 583,
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          318,
+          311,
+          5909
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          16.625
+        ],
+        "top_probs": [
+          0.3374235928058624,
+          0.2977752983570099,
+          0.23190763592720032
+        ],
+        "top2_probability_margin": 0.03964829444885254,
+        "top1_logit_margin": 0.125,
+        "argmax": 318
+      },
+      "loopahead": {
+        "top_ids": [
+          318,
+          311,
+          5909
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          16.625
+        ],
+        "top_probs": [
+          0.3241274952888489,
+          0.3241274952888489,
+          0.2227693498134613
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 311
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 803,
+      "position": 198,
+      "ar": {
+        "top_ids": [
+          6275,
+          1221,
+          15088
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          14.5
+        ],
+        "top_probs": [
+          0.46385622024536133,
+          0.4093516767024994,
+          0.023094041272997856
+        ],
+        "top2_probability_margin": 0.05450454354286194,
+        "top1_logit_margin": 0.125,
+        "argmax": 6275
+      },
+      "loopahead": {
+        "top_ids": [
+          6275,
+          1221,
+          15088
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          14.5
+        ],
+        "top_probs": [
+          0.440117746591568,
+          0.440117746591568,
+          0.021912170574069023
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1221
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 632,
+      "position": 51,
+      "ar": {
+        "top_ids": [
+          1930,
+          105,
+          5606
+        ],
+        "top_logits": [
+          22.125,
+          22.125,
+          17.375
+        ],
+        "top_probs": [
+          0.49703583121299744,
+          0.49703583121299744,
+          0.0043002027086913586
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 105
+      },
+      "loopahead": {
+        "top_ids": [
+          1930,
+          105,
+          5606
+        ],
+        "top_logits": [
+          22.125,
+          22.0,
+          17.375
+        ],
+        "top_probs": [
+          0.5278847813606262,
+          0.4658567011356354,
+          0.0045670983381569386
+        ],
+        "top2_probability_margin": 0.062028080224990845,
+        "top1_logit_margin": 0.125,
+        "argmax": 1930
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 468,
+      "position": 229,
+      "ar": {
+        "top_ids": [
+          961,
+          264,
+          9896
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          18.125
+        ],
+        "top_probs": [
+          0.3987511992454529,
+          0.3518967032432556,
+          0.08897342532873154
+        ],
+        "top2_probability_margin": 0.046854496002197266,
+        "top1_logit_margin": 0.125,
+        "argmax": 961
+      },
+      "loopahead": {
+        "top_ids": [
+          961,
+          264,
+          9896
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          18.125
+        ],
+        "top_probs": [
+          0.36934369802474976,
+          0.36934369802474976,
+          0.09338471293449402
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 86,
+      "position": 34,
+      "ar": {
+        "top_ids": [
+          402,
+          345,
+          742
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.375
+        ],
+        "top_probs": [
+          0.4178202748298645,
+          0.36872509121894836,
+          0.0932283103466034
+        ],
+        "top2_probability_margin": 0.04909518361091614,
+        "top1_logit_margin": 0.125,
+        "argmax": 402
+      },
+      "loopahead": {
+        "top_ids": [
+          402,
+          345,
+          742
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          17.375
+        ],
+        "top_probs": [
+          0.38904568552970886,
+          0.38904568552970886,
+          0.0983661562204361
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 389,
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          5606,
+          426,
+          1930
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          18.125
+        ],
+        "top_probs": [
+          0.45523831248283386,
+          0.45523831248283386,
+          0.07910855114459991
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 426
+      },
+      "loopahead": {
+        "top_ids": [
+          5606,
+          426,
+          1930
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          18.125
+        ],
+        "top_probs": [
+          0.486367791891098,
+          0.429218053817749,
+          0.07458692044019699
+        ],
+        "top2_probability_margin": 0.057149738073349,
+        "top1_logit_margin": 0.125,
+        "argmax": 5606
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 622,
+      "position": 78,
+      "ar": {
+        "top_ids": [
+          1525,
+          5513,
+          47
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          19.625
+        ],
+        "top_probs": [
+          0.2879408299922943,
+          0.25410687923431396,
+          0.25410687923431396
+        ],
+        "top2_probability_margin": 0.03383395075798035,
+        "top1_logit_margin": 0.125,
+        "argmax": 1525
+      },
+      "loopahead": {
+        "top_ids": [
+          1525,
+          47,
+          5513
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          19.625
+        ],
+        "top_probs": [
+          0.2715354263782501,
+          0.2715354263782501,
+          0.23962916433811188
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 47
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 790,
+      "position": 111,
+      "ar": {
+        "top_ids": [
+          3293,
+          1528,
+          6487
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          17.5
+        ],
+        "top_probs": [
+          0.34113171696662903,
+          0.3010476529598236,
+          0.14220485091209412
+        ],
+        "top2_probability_margin": 0.04008406400680542,
+        "top1_logit_margin": 0.125,
+        "argmax": 3293
+      },
+      "loopahead": {
+        "top_ids": [
+          3293,
+          1528,
+          6487
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.625
+        ],
+        "top_probs": [
+          0.32161885499954224,
+          0.32161885499954224,
+          0.15192198753356934
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1528
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 799,
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          15203,
+          7540,
+          1149
+        ],
+        "top_logits": [
+          12.5625,
+          12.5625,
+          12.125
+        ],
+        "top_probs": [
+          0.07437913119792938,
+          0.07437913119792938,
+          0.04802277684211731
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7540
+      },
+      "loopahead": {
+        "top_ids": [
+          15203,
+          7540,
+          1149
+        ],
+        "top_logits": [
+          12.5625,
+          12.5,
+          12.125
+        ],
+        "top_probs": [
+          0.07485020160675049,
+          0.07031526416540146,
+          0.048326924443244934
+        ],
+        "top2_probability_margin": 0.0045349374413490295,
+        "top1_logit_margin": 0.0625,
+        "argmax": 15203
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 607,
+      "position": 350,
+      "ar": {
+        "top_ids": [
+          49,
+          48,
+          10
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.125
+        ],
+        "top_probs": [
+          0.30150648951530457,
+          0.26607856154441833,
+          0.14242158830165863
+        ],
+        "top2_probability_margin": 0.03542792797088623,
+        "top1_logit_margin": 0.125,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          49,
+          48,
+          10
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          16.25
+        ],
+        "top_probs": [
+          0.28109610080718994,
+          0.28109610080718994,
+          0.1504599004983902
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 48
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 753,
+      "position": 287,
+      "ar": {
+        "top_ids": [
+          19469,
+          2849,
+          922
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.75
+        ],
+        "top_probs": [
+          0.25072354078292847,
+          0.25072354078292847,
+          0.1520715057849884
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2849
+      },
+      "loopahead": {
+        "top_ids": [
+          19469,
+          2849,
+          922
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          16.75
+        ],
+        "top_probs": [
+          0.2599962651729584,
+          0.2294459044933319,
+          0.1576957106590271
+        ],
+        "top2_probability_margin": 0.030550360679626465,
+        "top1_logit_margin": 0.125,
+        "argmax": 19469
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 721,
+      "position": 61,
+      "ar": {
+        "top_ids": [
+          379,
+          286,
+          302
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.25
+        ],
+        "top_probs": [
+          0.2594090700149536,
+          0.2594090700149536,
+          0.20202799141407013
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 286
+      },
+      "loopahead": {
+        "top_ids": [
+          379,
+          286,
+          302
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          17.25
+        ],
+        "top_probs": [
+          0.283893883228302,
+          0.2505354881286621,
+          0.19511723518371582
+        ],
+        "top2_probability_margin": 0.03335839509963989,
+        "top1_logit_margin": 0.125,
+        "argmax": 379
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 311,
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          1990,
+          1404,
+          110
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          16.5
+        ],
+        "top_probs": [
+          0.16932809352874756,
+          0.16932809352874756,
+          0.16932809352874756
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 110
+      },
+      "loopahead": {
+        "top_ids": [
+          1990,
+          1404,
+          110
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          16.375
+        ],
+        "top_probs": [
+          0.1727134734392166,
+          0.1727134734392166,
+          0.1524191051721573
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1404
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 138,
+      "position": 64,
+      "ar": {
+        "top_ids": [
+          459,
+          426,
+          7669
+        ],
+        "top_logits": [
+          14.625,
+          14.625,
+          14.0
+        ],
+        "top_probs": [
+          0.14606782793998718,
+          0.14606782793998718,
+          0.07818447798490524
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 426
+      },
+      "loopahead": {
+        "top_ids": [
+          459,
+          426,
+          7669
+        ],
+        "top_logits": [
+          14.6875,
+          14.625,
+          14.0
+        ],
+        "top_probs": [
+          0.1556973159313202,
+          0.14626409113407135,
+          0.07828952372074127
+        ],
+        "top2_probability_margin": 0.00943322479724884,
+        "top1_logit_margin": 0.0625,
+        "argmax": 459
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 782,
+      "position": 103,
+      "ar": {
+        "top_ids": [
+          1365,
+          885,
+          502
+        ],
+        "top_logits": [
+          23.0,
+          22.875,
+          16.25
+        ],
+        "top_probs": [
+          0.5307390689849854,
+          0.468375563621521,
+          0.0006214315071702003
+        ],
+        "top2_probability_margin": 0.062363505363464355,
+        "top1_logit_margin": 0.125,
+        "argmax": 1365
+      },
+      "loopahead": {
+        "top_ids": [
+          1365,
+          885,
+          502
+        ],
+        "top_logits": [
+          23.0,
+          23.0,
+          16.25
+        ],
+        "top_probs": [
+          0.4995778799057007,
+          0.4995778799057007,
+          0.000584945548325777
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 885
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 62,
+      "position": 28,
+      "ar": {
+        "top_ids": [
+          1404,
+          716,
+          27049
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.25
+        ],
+        "top_probs": [
+          0.3422551155090332,
+          0.30203908681869507,
+          0.16166988015174866
+        ],
+        "top2_probability_margin": 0.040216028690338135,
+        "top1_logit_margin": 0.125,
+        "argmax": 1404
+      },
+      "loopahead": {
+        "top_ids": [
+          1404,
+          716,
+          27049
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          17.25
+        ],
+        "top_probs": [
+          0.3146388828754425,
+          0.3146388828754425,
+          0.16841407120227814
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 716
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 280,
+      "position": 30,
+      "ar": {
+        "top_ids": [
+          295,
+          10,
+          44
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          19.0
+        ],
+        "top_probs": [
+          0.44880884885787964,
+          0.44880884885787964,
+          0.08837569504976273
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          295,
+          10,
+          44
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          19.0
+        ],
+        "top_probs": [
+          0.4798882007598877,
+          0.42349985241889954,
+          0.08339206129312515
+        ],
+        "top2_probability_margin": 0.05638834834098816,
+        "top1_logit_margin": 0.125,
+        "argmax": 295
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 734,
+      "position": 202,
+      "ar": {
+        "top_ids": [
+          19936,
+          11636,
+          8709
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          16.0
+        ],
+        "top_probs": [
+          0.2155393809080124,
+          0.2155393809080124,
+          0.1307312399148941
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 11636
+      },
+      "loopahead": {
+        "top_ids": [
+          19936,
+          11636,
+          8709
+        ],
+        "top_logits": [
+          16.625,
+          16.375,
+          16.125
+        ],
+        "top_probs": [
+          0.24039046466350555,
+          0.18721628189086914,
+          0.14580419659614563
+        ],
+        "top2_probability_margin": 0.053174182772636414,
+        "top1_logit_margin": 0.25,
+        "argmax": 19936
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 306,
+      "position": 11,
+      "ar": {
+        "top_ids": [
+          3252,
+          374,
+          259
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          16.25
+        ],
+        "top_probs": [
+          0.5032855868339539,
+          0.4441479444503784,
+          0.022112825885415077
+        ],
+        "top2_probability_margin": 0.05913764238357544,
+        "top1_logit_margin": 0.125,
+        "argmax": 3252
+      },
+      "loopahead": {
+        "top_ids": [
+          3252,
+          374,
+          259
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          16.25
+        ],
+        "top_probs": [
+          0.47215214371681213,
+          0.47215214371681213,
+          0.023507069796323776
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 374
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 405,
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          2161,
+          1478,
+          2310
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          17.125
+        ],
+        "top_probs": [
+          0.29771724343299866,
+          0.29771724343299866,
+          0.18057464063167572
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1478
+      },
+      "loopahead": {
+        "top_ids": [
+          2161,
+          1478,
+          2310
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          17.125
+        ],
+        "top_probs": [
+          0.30919405817985535,
+          0.2728627920150757,
+          0.18753567337989807
+        ],
+        "top2_probability_margin": 0.03633126616477966,
+        "top1_logit_margin": 0.125,
+        "argmax": 2161
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 145,
+      "position": 51,
+      "ar": {
+        "top_ids": [
+          4911,
+          1278,
+          426
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          18.75
+        ],
+        "top_probs": [
+          0.37137600779533386,
+          0.37137600779533386,
+          0.12056814134120941
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1278
+      },
+      "loopahead": {
+        "top_ids": [
+          4911,
+          1278,
+          426
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          18.75
+        ],
+        "top_probs": [
+          0.40201491117477417,
+          0.35477691888809204,
+          0.11517920345067978
+        ],
+        "top2_probability_margin": 0.04723799228668213,
+        "top1_logit_margin": 0.125,
+        "argmax": 4911
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 166,
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          1766,
+          596,
+          305
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          13.1875
+        ],
+        "top_probs": [
+          0.5131421089172363,
+          0.45284634828567505,
+          0.010004679672420025
+        ],
+        "top2_probability_margin": 0.06029576063156128,
+        "top1_logit_margin": 0.125,
+        "argmax": 1766
+      },
+      "loopahead": {
+        "top_ids": [
+          1766,
+          596,
+          305
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          13.1875
+        ],
+        "top_probs": [
+          0.48174864053726196,
+          0.48174864053726196,
+          0.01064321305602789
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 596
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 237,
+      "position": 68,
+      "ar": {
+        "top_ids": [
+          13049,
+          2111,
+          611
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          19.0
+        ],
+        "top_probs": [
+          0.4752217233181,
+          0.41938167810440063,
+          0.08258114755153656
+        ],
+        "top2_probability_margin": 0.05584004521369934,
+        "top1_logit_margin": 0.125,
+        "argmax": 13049
+      },
+      "loopahead": {
+        "top_ids": [
+          13049,
+          2111,
+          611
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          19.0
+        ],
+        "top_probs": [
+          0.4441394805908203,
+          0.4441394805908203,
+          0.08745624125003815
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2111
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 20,
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          532,
+          402,
+          345
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          18.5
+        ],
+        "top_probs": [
+          0.2977267801761627,
+          0.2627429664134979,
+          0.15936167538166046
+        ],
+        "top2_probability_margin": 0.034983813762664795,
+        "top1_logit_margin": 0.125,
+        "argmax": 532
+      },
+      "loopahead": {
+        "top_ids": [
+          532,
+          402,
+          345
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          18.625
+        ],
+        "top_probs": [
+          0.2818526327610016,
+          0.2818526327610016,
+          0.17095226049423218
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 402
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 589,
+      "position": 73,
+      "ar": {
+        "top_ids": [
+          301,
+          10,
+          65508
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          15.8125
+        ],
+        "top_probs": [
+          0.48289191722869873,
+          0.48289191722869873,
+          0.02559233456850052
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          301,
+          10,
+          65508
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          15.8125
+        ],
+        "top_probs": [
+          0.5141628384590149,
+          0.45374709367752075,
+          0.024047715589404106
+        ],
+        "top2_probability_margin": 0.06041574478149414,
+        "top1_logit_margin": 0.125,
+        "argmax": 301
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 142,
+      "position": 80,
+      "ar": {
+        "top_ids": [
+          1904,
+          295,
+          58
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          18.375
+        ],
+        "top_probs": [
+          0.4699938893318176,
+          0.4699938893318176,
+          0.05613276734948158
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 295
+      },
+      "loopahead": {
+        "top_ids": [
+          1904,
+          295,
+          58
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          18.375
+        ],
+        "top_probs": [
+          0.5012434720993042,
+          0.44234582781791687,
+          0.05283067375421524
+        ],
+        "top2_probability_margin": 0.05889764428138733,
+        "top1_logit_margin": 0.125,
+        "argmax": 1904
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 775,
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          95,
+          40,
+          115
+        ],
+        "top_logits": [
+          20.875,
+          20.875,
+          14.9375
+        ],
+        "top_probs": [
+          0.498969703912735,
+          0.498969703912735,
+          0.001316590467467904
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "loopahead": {
+        "top_ids": [
+          95,
+          40,
+          115
+        ],
+        "top_logits": [
+          21.0,
+          20.875,
+          15.0
+        ],
+        "top_probs": [
+          0.5301380753517151,
+          0.46784520149230957,
+          0.0013140810187906027
+        ],
+        "top2_probability_margin": 0.06229287385940552,
+        "top1_logit_margin": 0.125,
+        "argmax": 95
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 97,
+      "position": 70,
+      "ar": {
+        "top_ids": [
+          9964,
+          1404,
+          11599
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          17.5
+        ],
+        "top_probs": [
+          0.3707357347011566,
+          0.3707357347011566,
+          0.0937366783618927
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1404
+      },
+      "loopahead": {
+        "top_ids": [
+          9964,
+          1404,
+          11599
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.5
+        ],
+        "top_probs": [
+          0.38786134123802185,
+          0.34228643774986267,
+          0.09806670993566513
+        ],
+        "top2_probability_margin": 0.04557490348815918,
+        "top1_logit_margin": 0.125,
+        "argmax": 9964
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 749,
+      "position": 106,
+      "ar": {
+        "top_ids": [
+          12298,
+          2221,
+          3137
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          15.6875
+        ],
+        "top_probs": [
+          0.23013003170490265,
+          0.23013003170490265,
+          0.13112413883209229
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2221
+      },
+      "loopahead": {
+        "top_ids": [
+          12298,
+          2221,
+          3314
+        ],
+        "top_logits": [
+          16.25,
+          16.125,
+          15.6875
+        ],
+        "top_probs": [
+          0.2367277294397354,
+          0.2089114785194397,
+          0.13488338887691498
+        ],
+        "top2_probability_margin": 0.027816250920295715,
+        "top1_logit_margin": 0.125,
+        "argmax": 12298
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 57,
+      "position": 11,
+      "ar": {
+        "top_ids": [
+          16418,
+          7540,
+          14069
+        ],
+        "top_logits": [
+          13.1875,
+          13.1875,
+          12.8125
+        ],
+        "top_probs": [
+          0.08882393687963486,
+          0.08882393687963486,
+          0.061047740280628204
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7540
+      },
+      "loopahead": {
+        "top_ids": [
+          16418,
+          7540,
+          14069
+        ],
+        "top_logits": [
+          13.1875,
+          13.125,
+          12.8125
+        ],
+        "top_probs": [
+          0.09051395207643509,
+          0.08502998948097229,
+          0.062209270894527435
+        ],
+        "top2_probability_margin": 0.005483962595462799,
+        "top1_logit_margin": 0.0625,
+        "argmax": 16418
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 239,
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          337,
+          44,
+          379
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          16.25
+        ],
+        "top_probs": [
+          0.2589099109172821,
+          0.2589099109172821,
+          0.10792970657348633
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "loopahead": {
+        "top_ids": [
+          337,
+          44,
+          379
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.25
+        ],
+        "top_probs": [
+          0.2719174325466156,
+          0.2399662882089615,
+          0.11335204541683197
+        ],
+        "top2_probability_margin": 0.031951144337654114,
+        "top1_logit_margin": 0.125,
+        "argmax": 337
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 102,
+      "position": 78,
+      "ar": {
+        "top_ids": [
+          93,
+          43,
+          425
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          17.0
+        ],
+        "top_probs": [
+          0.3504795730113983,
+          0.3092971444129944,
+          0.113784059882164
+        ],
+        "top2_probability_margin": 0.04118242859840393,
+        "top1_logit_margin": 0.125,
+        "argmax": 93
+      },
+      "loopahead": {
+        "top_ids": [
+          93,
+          43,
+          425
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.0
+        ],
+        "top_probs": [
+          0.3365693688392639,
+          0.3365693688392639,
+          0.10926807671785355
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 43
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 619,
+      "position": 49,
+      "ar": {
+        "top_ids": [
+          1365,
+          885,
+          264
+        ],
+        "top_logits": [
+          21.875,
+          21.875,
+          15.5625
+        ],
+        "top_probs": [
+          0.49908870458602905,
+          0.49908870458602905,
+          0.000905094260815531
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 885
+      },
+      "loopahead": {
+        "top_ids": [
+          1365,
+          885,
+          264
+        ],
+        "top_logits": [
+          21.875,
+          21.75,
+          15.5625
+        ],
+        "top_probs": [
+          0.5301594734191895,
+          0.46786409616470337,
+          0.000961440906394273
+        ],
+        "top2_probability_margin": 0.062295377254486084,
+        "top1_logit_margin": 0.125,
+        "argmax": 1365
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 87,
+      "position": 208,
+      "ar": {
+        "top_ids": [
+          91,
+          46,
+          328
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          16.875
+        ],
+        "top_probs": [
+          0.516533374786377,
+          0.4558390974998474,
+          0.025716682896018028
+        ],
+        "top2_probability_margin": 0.06069427728652954,
+        "top1_logit_margin": 0.125,
+        "argmax": 91
+      },
+      "loopahead": {
+        "top_ids": [
+          91,
+          46,
+          328
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          16.875
+        ],
+        "top_probs": [
+          0.48526784777641296,
+          0.48526784777641296,
+          0.027376940473914146
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 161,
+      "position": 25,
+      "ar": {
+        "top_ids": [
+          37384,
+          11017,
+          11397
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          17.125
+        ],
+        "top_probs": [
+          0.42441636323928833,
+          0.42441636323928833,
+          0.05068930611014366
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 11017
+      },
+      "loopahead": {
+        "top_ids": [
+          37384,
+          11017,
+          11397
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          17.125
+        ],
+        "top_probs": [
+          0.44562333822250366,
+          0.39326122403144836,
+          0.05322211980819702
+        ],
+        "top2_probability_margin": 0.0523621141910553,
+        "top1_logit_margin": 0.125,
+        "argmax": 37384
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 390,
+      "position": 9,
+      "ar": {
+        "top_ids": [
+          95,
+          44,
+          41
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          16.5
+        ],
+        "top_probs": [
+          0.5075544714927673,
+          0.447915256023407,
+          0.028634265065193176
+        ],
+        "top2_probability_margin": 0.05963921546936035,
+        "top1_logit_margin": 0.125,
+        "argmax": 95
+      },
+      "loopahead": {
+        "top_ids": [
+          95,
+          44,
+          41
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          16.5
+        ],
+        "top_probs": [
+          0.47916996479034424,
+          0.47916996479034424,
+          0.027032921090722084
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 758,
+      "position": 189,
+      "ar": {
+        "top_ids": [
+          52,
+          49,
+          50
+        ],
+        "top_logits": [
+          22.75,
+          22.625,
+          21.375
+        ],
+        "top_probs": [
+          0.44862696528434753,
+          0.39591190218925476,
+          0.11343065649271011
+        ],
+        "top2_probability_margin": 0.05271506309509277,
+        "top1_logit_margin": 0.125,
+        "argmax": 52
+      },
+      "loopahead": {
+        "top_ids": [
+          52,
+          49,
+          50
+        ],
+        "top_logits": [
+          22.625,
+          22.625,
+          21.5
+        ],
+        "top_probs": [
+          0.4112527668476105,
+          0.4112527668476105,
+          0.13351422548294067
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 754,
+      "position": 94,
+      "ar": {
+        "top_ids": [
+          295,
+          46,
+          44
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          18.625
+        ],
+        "top_probs": [
+          0.4267353415489197,
+          0.4267353415489197,
+          0.13854068517684937
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "loopahead": {
+        "top_ids": [
+          295,
+          46,
+          44
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          18.625
+        ],
+        "top_probs": [
+          0.44929859042167664,
+          0.39650461077690125,
+          0.14586590230464935
+        ],
+        "top2_probability_margin": 0.05279397964477539,
+        "top1_logit_margin": 0.125,
+        "argmax": 295
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 474,
+      "position": 103,
+      "ar": {
+        "top_ids": [
+          291,
+          46,
+          10
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.5
+        ],
+        "top_probs": [
+          0.37359103560447693,
+          0.32969292998313904,
+          0.25676512718200684
+        ],
+        "top2_probability_margin": 0.04389810562133789,
+        "top1_logit_margin": 0.125,
+        "argmax": 291
+      },
+      "loopahead": {
+        "top_ids": [
+          291,
+          46,
+          10
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          18.375
+        ],
+        "top_probs": [
+          0.3681908845901489,
+          0.3681908845901489,
+          0.22331906855106354
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 598,
+      "position": 23,
+      "ar": {
+        "top_ids": [
+          10172,
+          817,
+          114
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          16.125
+        ],
+        "top_probs": [
+          0.19574373960494995,
+          0.19574373960494995,
+          0.17274324595928192
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 817
+      },
+      "loopahead": {
+        "top_ids": [
+          10172,
+          817,
+          114
+        ],
+        "top_logits": [
+          16.25,
+          16.125,
+          16.125
+        ],
+        "top_probs": [
+          0.19980445504188538,
+          0.17632681131362915,
+          0.17632681131362915
+        ],
+        "top2_probability_margin": 0.023477643728256226,
+        "top1_logit_margin": 0.125,
+        "argmax": 10172
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": 162,
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          318,
+          58,
+          502
+        ],
+        "top_logits": [
+          15.0625,
+          15.0625,
+          15.0
+        ],
+        "top_probs": [
+          0.14885129034519196,
+          0.14885129034519196,
+          0.13983285427093506
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 58
+      },
+      "loopahead": {
+        "top_ids": [
+          318,
+          502,
+          58
+        ],
+        "top_logits": [
+          15.0625,
+          15.0,
+          15.0
+        ],
+        "top_probs": [
+          0.14908744394779205,
+          0.14005468785762787,
+          0.14005468785762787
+        ],
+        "top2_probability_margin": 0.009032756090164185,
+        "top1_logit_margin": 0.0625,
+        "argmax": 318
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "started_unix": 1794474531.047437,
+  "input_provenance": {
+    "scope": "frozen-benchmark-input",
+    "path": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/inputs/mbppplus.jsonl",
+    "sha256": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+    "prompt_format": "chat",
+    "max_new_tokens": 512,
+    "stop_ids": [
+      65505,
+      65508
+    ]
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t0",
+      "sha256": "967dafc9dd226731dfae3b779e3212649ce05c1ded3036775d3682da60a1cbde"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t0-v1",
+      "sha256": "023c7e7a795272c60bfa616eb115c57ced05f0b63fb800fd2c18ae324af48715"
+    }
+  },
+  "limitations": [
+    "Instrumented BF16 replay only; timings are excluded from the benchmark.",
+    "Probability ties/margins describe actual reproduced divergences, not proof that all discrepancies disappear in FP32."
+  ],
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 162247,
+    "started_unix": 1794474532.2874117,
+    "acquired_unix": 1794474533.1722362,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "finished_unix": 1794475685.8959384
+}

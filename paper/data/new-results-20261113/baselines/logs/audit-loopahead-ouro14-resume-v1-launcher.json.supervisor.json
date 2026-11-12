@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+    "--model",
+    "ouro-1.4b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v1"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/audit-loopahead-ouro14-resume-v1-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/audit-loopahead-ouro14-resume-v1-finished.json",
+  "metadata": {
+    "name": "audit-loopahead-ouro14-resume-v1",
+    "gpu": 3,
+    "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill",
+  "extra_launcher": null,
+  "extra_exit": null
+}

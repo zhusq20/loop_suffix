@@ -1,0 +1,40 @@
+{
+  "gpu": 6,
+  "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/plan.json",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "56-59",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2",
+    "--job",
+    "table2-ouro-2.6b-b16",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1",
+    "--lock-fd",
+    "15"
+  ],
+  "started_unix": 1794442489.7073367,
+  "pid": 296972,
+  "start_ticks": "45752600",
+  "supervisor_identity": {
+    "pid": 296971,
+    "state": "R",
+    "start_ticks": "45752593",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/table2-ouro-2.6b-b16-attempt1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "15"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794443184.9248323,
+  "exit_evidence": "supervisor_waitpid"
+}

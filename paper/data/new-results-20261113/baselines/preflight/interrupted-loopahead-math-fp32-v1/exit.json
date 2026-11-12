@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/recover.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1"
+  ],
+  "pid": 20280,
+  "started_unix": 1794506900.474517,
+  "source_sha256": "aed094a07bc84e46978cd317b19f043bef5b313e0024d1856e888c5c11e4db8f",
+  "exit_code": 0,
+  "finished_unix": 1794506901.9593582,
+  "exit_evidence": "subprocess_wait"
+}

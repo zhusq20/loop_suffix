@@ -1,0 +1,119 @@
+{
+  "observed_unix": 1794465578.517649,
+  "controllers": [
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1",
+      "controller": {
+        "pid": 153662,
+        "state": "S",
+        "start_ticks": "45175843",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/orchestrate_packed_dflash_supplements.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json"
+        ]
+      },
+      "stage": "running",
+      "status_updated_unix": 1794465569.905029,
+      "running_workers": 6,
+      "completed_cells": 4
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1",
+      "controller": {
+        "pid": 105015,
+        "state": "S",
+        "start_ticks": "45050655",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/resume_ouro14_loopahead.py"
+        ]
+      },
+      "stage": "running",
+      "status_updated_unix": 1794464760.4015074,
+      "task": "loopahead-ouro-1.4b-gsm8k-t1-v1"
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1",
+      "controller": {
+        "pid": 33751,
+        "state": "S",
+        "start_ticks": "47964278",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/orchestrate_baseline_diagnostics_resume.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json"
+        ]
+      },
+      "stage": "waiting_for_measurement_priority",
+      "status_updated_unix": 1794465576.6247876,
+      "running_workers": 0
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1",
+      "controller": {
+        "pid": 45833,
+        "state": "S",
+        "start_ticks": "48050473",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json"
+        ]
+      },
+      "stage": "waiting_for_measurement_priority",
+      "status_updated_unix": 1794465570.1461282,
+      "running_workers": 0
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1",
+      "controller": {
+        "pid": 510179,
+        "state": "S",
+        "start_ticks": "47623899",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/amendments/output-diagnostics-cancelled/resume_ouro14_dflash_evaluation.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/plan-no-output-diagnostics.json"
+        ]
+      },
+      "stage": "waiting_for_full_training",
+      "status_updated_unix": 1794465566.8472261
+    },
+    {
+      "root": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3",
+      "controller": {
+        "pid": 497107,
+        "state": "S",
+        "start_ticks": "44019573",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/controller.py"
+        ]
+      },
+      "stage": "teachers",
+      "status_updated_unix": 1794465575.8661966,
+      "worker_pid": 10995,
+      "progress": {
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/progress.json": {
+          "completed_requests": 45856,
+          "planned_requests": 50000,
+          "last_batch": 1432,
+          "last_batch_wall_s": 38.13639234751463,
+          "last_batch_size": 32,
+          "updated_unix": 1794465563.7177622
+        }
+      }
+    }
+  ]
+}

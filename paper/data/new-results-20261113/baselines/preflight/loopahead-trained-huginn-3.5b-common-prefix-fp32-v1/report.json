@@ -1,0 +1,628 @@
+{
+  "status": "complete",
+  "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+  "started_unix": 1794323841.4959502,
+  "results": [
+    {
+      "source_id": "gsm8k/test/1194",
+      "position": 28,
+      "common_prefix": [
+        3501,
+        1134,
+        264,
+        786,
+        286,
+        16156,
+        286,
+        8388,
+        291,
+        259,
+        52434,
+        58,
+        643,
+        48,
+        16156,
+        1255,
+        52434,
+        328,
+        643,
+        48,
+        16156,
+        46,
+        1189,
+        7045,
+        264,
+        786,
+        286,
+        16156
+      ],
+      "observed_bf16": {
+        "ar": {
+          "position": 28,
+          "top_ids": [
+            291,
+            286,
+            725
+          ],
+          "top_logits": [
+            19.0,
+            18.875,
+            17.875
+          ],
+          "top_probs": [
+            0.4434596598148346,
+            0.39135175943374634,
+            0.14397026598453522
+          ],
+          "top2_probability_margin": 0.05210790038108826,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 28,
+          "token": 286,
+          "top_ids": [
+            291,
+            286,
+            725
+          ],
+          "top_logits": [
+            18.875,
+            18.875,
+            17.75
+          ],
+          "top_probs": [
+            0.4204639792442322,
+            0.4204639792442322,
+            0.136504665017128
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      },
+      "ar_token": 291,
+      "loopahead_token": 286,
+      "same_top1": true,
+      "max_abs_logit_difference": 2.09808349609375e-05,
+      "serial": {
+        "top_ids": [
+          291,
+          286,
+          725
+        ],
+        "top_logits": [
+          18.87957763671875,
+          18.780765533447266,
+          17.87004852294922
+        ],
+        "top_probs": [
+          0.4307730793952942,
+          0.39024290442466736,
+          0.15696962177753448
+        ],
+        "top2_probability_margin": 0.04053017497062683
+      },
+      "loopahead": {
+        "top_ids": [
+          291,
+          286,
+          725
+        ],
+        "top_logits": [
+          18.87957000732422,
+          18.780752182006836,
+          17.870046615600586
+        ],
+        "top_probs": [
+          0.43077370524406433,
+          0.39024123549461365,
+          0.15697075426578522
+        ],
+        "top2_probability_margin": 0.040532469749450684
+      }
+    },
+    {
+      "source_id": "gsm8k/test/901",
+      "position": 19,
+      "common_prefix": [
+        7031,
+        7387,
+        674,
+        2825,
+        26040,
+        330,
+        643,
+        18014,
+        49799,
+        442,
+        1056,
+        3848,
+        49799,
+        46,
+        2315,
+        305,
+        16038,
+        379,
+        1438
+      ],
+      "observed_bf16": {
+        "ar": {
+          "position": 19,
+          "top_ids": [
+            18014,
+            16251,
+            2649
+          ],
+          "top_logits": [
+            18.75,
+            18.625,
+            16.0
+          ],
+          "top_probs": [
+            0.47484979033470154,
+            0.41905346512794495,
+            0.03035612963140011
+          ],
+          "top2_probability_margin": 0.05579632520675659,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 19,
+          "token": 16251,
+          "top_ids": [
+            18014,
+            16251,
+            2649
+          ],
+          "top_logits": [
+            18.75,
+            18.75,
+            16.0
+          ],
+          "top_probs": [
+            0.44978365302085876,
+            0.44978365302085876,
+            0.028753705322742462
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      },
+      "ar_token": 18014,
+      "loopahead_token": 16251,
+      "same_top1": true,
+      "max_abs_logit_difference": 1.1444091796875e-05,
+      "serial": {
+        "top_ids": [
+          16251,
+          18014,
+          2649
+        ],
+        "top_logits": [
+          18.70462989807129,
+          18.65875244140625,
+          16.00547981262207
+        ],
+        "top_probs": [
+          0.4571648836135864,
+          0.4366651475429535,
+          0.030750125646591187
+        ],
+        "top2_probability_margin": 0.020499736070632935
+      },
+      "loopahead": {
+        "top_ids": [
+          16251,
+          18014,
+          2649
+        ],
+        "top_logits": [
+          18.704631805419922,
+          18.658750534057617,
+          16.005481719970703
+        ],
+        "top_probs": [
+          0.4571656882762909,
+          0.43666425347328186,
+          0.030750179663300514
+        ],
+        "top2_probability_margin": 0.020501434803009033
+      }
+    },
+    {
+      "source_id": "gsm8k/test/745",
+      "position": 102,
+      "common_prefix": [
+        3558,
+        9596,
+        532,
+        22200,
+        330,
+        269,
+        49,
+        56,
+        48,
+        48,
+        727,
+        731,
+        757,
+        7216,
+        532,
+        848,
+        345,
+        56,
+        48,
+        48,
+        328,
+        269,
+        53,
+        52,
+        48,
+        48,
+        361,
+        22200,
+        46,
+        16587,
+        5956,
+        345,
+        4665,
+        6227,
+        269,
+        52,
+        48,
+        48,
+        48,
+        295,
+        2420,
+        4665,
+        6227,
+        269,
+        49,
+        48,
+        48,
+        48,
+        731,
+        757,
+        5956,
+        643,
+        48,
+        48,
+        48,
+        425,
+        345,
+        48,
+        48,
+        48,
+        328,
+        269,
+        53,
+        48,
+        48,
+        48,
+        6227,
+        286,
+        8988,
+        46,
+        12033,
+        407,
+        532,
+        48,
+        908,
+        8988,
+        6227,
+        374,
+        2602,
+        286,
+        269,
+        53,
+        48,
+        727,
+        731,
+        757,
+        5956,
+        532,
+        48,
+        848,
+        742,
+        48,
+        328,
+        269,
+        49,
+        53,
+        48,
+        48,
+        6227,
+        286,
+        8988,
+        46
+      ],
+      "observed_bf16": {
+        "ar": {
+          "position": 102,
+          "top_ids": [
+            16587,
+            3334,
+            13039
+          ],
+          "top_logits": [
+            16.875,
+            16.875,
+            15.8125
+          ],
+          "top_probs": [
+            0.2905927002429962,
+            0.2905927002429962,
+            0.10042615234851837
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        },
+        "loopahead": {
+          "position": 102,
+          "token": 16587,
+          "top_ids": [
+            16587,
+            3334,
+            13039
+          ],
+          "top_logits": [
+            17.0,
+            16.875,
+            15.8125
+          ],
+          "top_probs": [
+            0.31457749009132385,
+            0.27761366963386536,
+            0.09594070911407471
+          ],
+          "top2_probability_margin": 0.036963820457458496,
+          "top1_logit_margin": 0.125
+        }
+      },
+      "ar_token": 3334,
+      "loopahead_token": 16587,
+      "same_top1": true,
+      "max_abs_logit_difference": 1.811981201171875e-05,
+      "serial": {
+        "top_ids": [
+          3334,
+          16587,
+          13039
+        ],
+        "top_logits": [
+          16.92334747314453,
+          16.900833129882812,
+          15.828021049499512
+        ],
+        "top_probs": [
+          0.2951461970806122,
+          0.2885754108428955,
+          0.09870586544275284
+        ],
+        "top2_probability_margin": 0.006570786237716675
+      },
+      "loopahead": {
+        "top_ids": [
+          3334,
+          16587,
+          13039
+        ],
+        "top_logits": [
+          16.923349380493164,
+          16.900827407836914,
+          15.828019142150879
+        ],
+        "top_probs": [
+          0.2951474189758301,
+          0.2885743975639343,
+          0.09870589524507523
+        ],
+        "top2_probability_margin": 0.006573021411895752
+      }
+    },
+    {
+      "source_id": "gsm8k/test/804",
+      "position": 4,
+      "common_prefix": [
+        475,
+        922,
+        2135,
+        17354
+      ],
+      "observed_bf16": {
+        "ar": {
+          "position": 4,
+          "top_ids": [
+            893,
+            494,
+            330
+          ],
+          "top_logits": [
+            17.875,
+            17.75,
+            16.625
+          ],
+          "top_probs": [
+            0.3728903830051422,
+            0.3290746212005615,
+            0.10683488845825195
+          ],
+          "top2_probability_margin": 0.04381576180458069,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 4,
+          "token": 494,
+          "top_ids": [
+            893,
+            494,
+            330
+          ],
+          "top_logits": [
+            17.75,
+            17.75,
+            16.625
+          ],
+          "top_probs": [
+            0.3437053859233856,
+            0.3437053859233856,
+            0.11158480495214462
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      },
+      "ar_token": 893,
+      "loopahead_token": 494,
+      "same_top1": true,
+      "max_abs_logit_difference": 7.62939453125e-06,
+      "serial": {
+        "top_ids": [
+          893,
+          494,
+          330
+        ],
+        "top_logits": [
+          17.775146484375,
+          17.679113388061523,
+          16.62548828125
+        ],
+        "top_probs": [
+          0.3597170114517212,
+          0.32677915692329407,
+          0.11393857002258301
+        ],
+        "top2_probability_margin": 0.032937854528427124
+      },
+      "loopahead": {
+        "top_ids": [
+          893,
+          494,
+          330
+        ],
+        "top_logits": [
+          17.775148391723633,
+          17.67911148071289,
+          16.62548828125
+        ],
+        "top_probs": [
+          0.35971757769584656,
+          0.3267784118652344,
+          0.11393853276968002
+        ],
+        "top2_probability_margin": 0.03293916583061218
+      }
+    },
+    {
+      "source_id": "gsm8k/test/1185",
+      "position": 3,
+      "common_prefix": [
+        75,
+        449,
+        582
+      ],
+      "observed_bf16": {
+        "ar": {
+          "position": 3,
+          "top_ids": [
+            5147,
+            893,
+            5752
+          ],
+          "top_logits": [
+            18.75,
+            18.75,
+            15.6875
+          ],
+          "top_probs": [
+            0.47341397404670715,
+            0.47341397404670715,
+            0.022141868248581886
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        },
+        "loopahead": {
+          "position": 3,
+          "token": 5147,
+          "top_ids": [
+            5147,
+            893,
+            5752
+          ],
+          "top_logits": [
+            18.875,
+            18.75,
+            15.6875
+          ],
+          "top_probs": [
+            0.5045032501220703,
+            0.4452225863933563,
+            0.020823337137699127
+          ],
+          "top2_probability_margin": 0.05928066372871399,
+          "top1_logit_margin": 0.125
+        }
+      },
+      "ar_token": 893,
+      "loopahead_token": 5147,
+      "same_top1": true,
+      "max_abs_logit_difference": 1.4901161193847656e-05,
+      "serial": {
+        "top_ids": [
+          5147,
+          893,
+          5752
+        ],
+        "top_logits": [
+          18.775527954101562,
+          18.724613189697266,
+          15.722672462463379
+        ],
+        "top_probs": [
+          0.48528677225112915,
+          0.46119698882102966,
+          0.0229171272367239
+        ],
+        "top2_probability_margin": 0.024089783430099487
+      },
+      "loopahead": {
+        "top_ids": [
+          5147,
+          893,
+          5752
+        ],
+        "top_logits": [
+          18.775537490844727,
+          18.7246150970459,
+          15.722677230834961
+        ],
+        "top_probs": [
+          0.48528867959976196,
+          0.46119529008865356,
+          0.02291710674762726
+        ],
+        "top2_probability_margin": 0.0240933895111084
+      }
+    }
+  ],
+  "model": "huginn-3.5b",
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "cases": 5,
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-ar-bfloat16-n20-v1",
+      "sha256": "2af58e329df65e12ffa6752fa7480294e88c4fea1a604ca87a168744728b663b"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-loopahead-bfloat16-n20-v1",
+      "sha256": "64d47fdfe60a1ee04a633a1d35570c3f1ebfdab6ef7e8250d6912cbcb0f45d8e"
+    }
+  },
+  "all_fp32_same_top1": true,
+  "limitations": [
+    "Forced tokens preserve the observed BF16 common prefix only and are not reported as generated output.",
+    "FP32 proposals may change tree shape relative to BF16. This diagnostic complements the separate full20 FP32 sequence check.",
+    "Serial has one physical/live node; LoopAhead retains32 with the actual trained LAD, full target depth, original max512 budget and Graph OFF."
+  ],
+  "finished_unix": 1794323892.0033472
+}

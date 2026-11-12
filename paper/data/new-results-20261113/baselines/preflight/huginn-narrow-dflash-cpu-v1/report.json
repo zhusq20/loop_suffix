@@ -1,0 +1,66 @@
+{
+  "status": "passed_cpu_interface_checks",
+  "configurations": [
+    {
+      "hidden_size": 2048,
+      "intermediate_size": 5632,
+      "attention_heads": 16,
+      "head_dim": 128,
+      "trainable_parameters": 332621056,
+      "input_projection": [
+        2048,
+        5280
+      ],
+      "feature_fusion": [
+        2048,
+        26400
+      ],
+      "output_projection": [
+        5280,
+        2048
+      ]
+    },
+    {
+      "hidden_size": 1024,
+      "intermediate_size": 3072,
+      "attention_heads": 8,
+      "head_dim": 128,
+      "trainable_parameters": 106018048,
+      "input_projection": [
+        1024,
+        5280
+      ],
+      "feature_fusion": [
+        1024,
+        26400
+      ],
+      "output_projection": [
+        5280,
+        1024
+      ]
+    }
+  ],
+  "full_huginn_width_parameters": 2116288320,
+  "reduction_fraction": 0.8428281000955484,
+  "tiny_official_training_loss": 4.199446201324463,
+  "tiny_accuracy": 0.03333333507180214,
+  "projection_and_block_gradients": {
+    "fc.weight": 0.015688743442296982,
+    "input_projection.weight": 0.40957650542259216,
+    "output_projection.weight": 0.3450615406036377,
+    "layers.0.self_attn.q_proj.weight": 0.012490538880228996,
+    "layers.4.mlp.down_proj.weight": 0.0016016341978684068
+  },
+  "target_embedding_and_head_frozen": true,
+  "train_inference_max_abs": 0.0,
+  "cache_crop_recompute_max_abs": 2.9802322387695312e-08,
+  "checkpoint_roundtrip_exact": true,
+  "cuda_initialized": false,
+  "torch": "2.9.1+cu128",
+  "limitations": [
+    "Parameter counts are exact for these proposed architectures, not speed or quality measurements.",
+    "Forward/backward/cache checks use a small random model on CPU, not the full Huginn target.",
+    "SpecForge files were loaded directly to avoid unrelated optional package CUDA initialization.",
+    "GPU memory, real-target correctness, training and held-out speed/acceptance tests remain pending."
+  ]
+}

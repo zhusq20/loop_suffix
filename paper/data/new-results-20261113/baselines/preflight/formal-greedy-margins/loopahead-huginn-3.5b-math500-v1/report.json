@@ -1,0 +1,7269 @@
+{
+  "status": "complete",
+  "model": "huginn-3.5b",
+  "dataset": "math500",
+  "cases": 157,
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "results": [
+    {
+      "source_id": "test/number_theory/13.json",
+      "position": 30,
+      "ar": {
+        "top_ids": [
+          50,
+          49,
+          52
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.75
+        ],
+        "top_probs": [
+          0.28397250175476074,
+          0.28397250175476074,
+          0.1951712667942047
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          50,
+          49,
+          52
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.75
+        ],
+        "top_probs": [
+          0.30992481112480164,
+          0.273507684469223,
+          0.18797890841960907
+        ],
+        "top2_probability_margin": 0.03641712665557861,
+        "top1_logit_margin": 0.125,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2626.json",
+      "position": 28,
+      "ar": {
+        "top_ids": [
+          481,
+          50,
+          49
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          16.875
+        ],
+        "top_probs": [
+          0.24101954698562622,
+          0.24101954698562622,
+          0.1461857408285141
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          50,
+          49
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          17.0
+        ],
+        "top_probs": [
+          0.24177779257297516,
+          0.21336814761161804,
+          0.16617128252983093
+        ],
+        "top2_probability_margin": 0.028409644961357117,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/1009.json",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          1610,
+          922,
+          15102
+        ],
+        "top_logits": [
+          16.125,
+          16.125,
+          14.4375
+        ],
+        "top_probs": [
+          0.3296321928501129,
+          0.3296321928501129,
+          0.060975827276706696
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 922
+      },
+      "loopahead": {
+        "top_ids": [
+          1610,
+          922,
+          15102
+        ],
+        "top_logits": [
+          16.125,
+          16.0,
+          14.4375
+        ],
+        "top_probs": [
+          0.34286126494407654,
+          0.3025739789009094,
+          0.06342295557260513
+        ],
+        "top2_probability_margin": 0.040287286043167114,
+        "top1_logit_margin": 0.125,
+        "argmax": 1610
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/795.json",
+      "position": 44,
+      "ar": {
+        "top_ids": [
+          703,
+          50,
+          2290
+        ],
+        "top_logits": [
+          16.25,
+          16.125,
+          15.875
+        ],
+        "top_probs": [
+          0.1626206636428833,
+          0.14351223409175873,
+          0.11176744103431702
+        ],
+        "top2_probability_margin": 0.019108429551124573,
+        "top1_logit_margin": 0.125,
+        "argmax": 703
+      },
+      "loopahead": {
+        "top_ids": [
+          703,
+          50,
+          2290
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          15.8125
+        ],
+        "top_probs": [
+          0.16143254935741425,
+          0.16143254935741425,
+          0.10422869026660919
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/742.json",
+      "position": 164,
+      "ar": {
+        "top_ids": [
+          48,
+          55,
+          49
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.875
+        ],
+        "top_probs": [
+          0.30412888526916504,
+          0.26839280128479004,
+          0.26839280128479004
+        ],
+        "top2_probability_margin": 0.035736083984375,
+        "top1_logit_margin": 0.125,
+        "argmax": 48
+      },
+      "loopahead": {
+        "top_ids": [
+          55,
+          49,
+          48
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.875
+        ],
+        "top_probs": [
+          0.30117180943489075,
+          0.2657831907272339,
+          0.2657831907272339
+        ],
+        "top2_probability_margin": 0.03538861870765686,
+        "top1_logit_margin": 0.125,
+        "argmax": 55
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/counting_and_probability/525.json",
+      "position": 50,
+      "ar": {
+        "top_ids": [
+          36222,
+          264,
+          907
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          15.75
+        ],
+        "top_probs": [
+          0.40324246883392334,
+          0.40324246883392334,
+          0.10195566713809967
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          36222,
+          264,
+          907
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          15.6875
+        ],
+        "top_probs": [
+          0.42687857151031494,
+          0.37671902775764465,
+          0.10139255225658417
+        ],
+        "top2_probability_margin": 0.05015954375267029,
+        "top1_logit_margin": 0.125,
+        "argmax": 36222
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/681.json",
+      "position": 25,
+      "ar": {
+        "top_ids": [
+          1079,
+          444,
+          2482
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          16.625
+        ],
+        "top_probs": [
+          0.3272967040538788,
+          0.28883832693099976,
+          0.09377207607030869
+        ],
+        "top2_probability_margin": 0.03845837712287903,
+        "top1_logit_margin": 0.125,
+        "argmax": 1079
+      },
+      "loopahead": {
+        "top_ids": [
+          444,
+          1079,
+          2482
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          16.625
+        ],
+        "top_probs": [
+          0.3288578391075134,
+          0.29021599888801575,
+          0.09421934932470322
+        ],
+        "top2_probability_margin": 0.03864184021949768,
+        "top1_logit_margin": 0.125,
+        "argmax": 444
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/intermediate_algebra/1000.json",
+      "position": 154,
+      "ar": {
+        "top_ids": [
+          481,
+          49,
+          51
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          18.5
+        ],
+        "top_probs": [
+          0.41594448685646057,
+          0.41594448685646057,
+          0.0928097665309906
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          49,
+          51
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.5
+        ],
+        "top_probs": [
+          0.4463580250740051,
+          0.3939095735549927,
+          0.08789309859275818
+        ],
+        "top2_probability_margin": 0.05244845151901245,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/1457.json",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          337,
+          264,
+          269
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          16.125
+        ],
+        "top_probs": [
+          0.32884469628334045,
+          0.32884469628334045,
+          0.15533524751663208
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          337,
+          264,
+          269
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.125
+        ],
+        "top_probs": [
+          0.34240615367889404,
+          0.30217239260673523,
+          0.1617412269115448
+        ],
+        "top2_probability_margin": 0.040233761072158813,
+        "top1_logit_margin": 0.125,
+        "argmax": 337
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/149.json",
+      "position": 63,
+      "ar": {
+        "top_ids": [
+          53,
+          40,
+          1080
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          19.5
+        ],
+        "top_probs": [
+          0.4239944815635681,
+          0.3741738200187683,
+          0.1767471879720688
+        ],
+        "top2_probability_margin": 0.049820661544799805,
+        "top1_logit_margin": 0.125,
+        "argmax": 53
+      },
+      "loopahead": {
+        "top_ids": [
+          53,
+          40,
+          1080
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          19.5
+        ],
+        "top_probs": [
+          0.403898686170578,
+          0.403898686170578,
+          0.16837000846862793
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/666.json",
+      "position": 26,
+      "ar": {
+        "top_ids": [
+          1205,
+          897,
+          1950
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          16.625
+        ],
+        "top_probs": [
+          0.4024660885334015,
+          0.4024660885334015,
+          0.0898023247718811
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 897
+      },
+      "loopahead": {
+        "top_ids": [
+          1205,
+          897,
+          1950
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          16.5
+        ],
+        "top_probs": [
+          0.4268474578857422,
+          0.3766915798187256,
+          0.08405124396085739
+        ],
+        "top2_probability_margin": 0.0501558780670166,
+        "top1_logit_margin": 0.125,
+        "argmax": 1205
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/695.json",
+      "position": 93,
+      "ar": {
+        "top_ids": [
+          330,
+          44,
+          46
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          19.125
+        ],
+        "top_probs": [
+          0.3836096227169037,
+          0.3836096227169037,
+          0.2053314447402954
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "loopahead": {
+        "top_ids": [
+          330,
+          44,
+          46
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          19.125
+        ],
+        "top_probs": [
+          0.4017552137374878,
+          0.35454773902893066,
+          0.2150440812110901
+        ],
+        "top2_probability_margin": 0.04720747470855713,
+        "top1_logit_margin": 0.125,
+        "argmax": 330
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/132.json",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          2227,
+          1134,
+          888
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          17.0
+        ],
+        "top_probs": [
+          0.24490392208099365,
+          0.216126948595047,
+          0.16831985116004944
+        ],
+        "top2_probability_margin": 0.028776973485946655,
+        "top1_logit_margin": 0.125,
+        "argmax": 2227
+      },
+      "loopahead": {
+        "top_ids": [
+          2227,
+          1134,
+          888
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          17.0
+        ],
+        "top_probs": [
+          0.23695796728134155,
+          0.23695796728134155,
+          0.16285867989063263
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1134
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2193.json",
+      "position": 38,
+      "ar": {
+        "top_ids": [
+          1056,
+          643,
+          402
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.375
+        ],
+        "top_probs": [
+          0.3201047480106354,
+          0.3201047480106354,
+          0.28249144554138184
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 643
+      },
+      "loopahead": {
+        "top_ids": [
+          1056,
+          643,
+          402
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          17.25
+        ],
+        "top_probs": [
+          0.35796263813972473,
+          0.31590092182159424,
+          0.24602387845516205
+        ],
+        "top2_probability_margin": 0.04206171631813049,
+        "top1_logit_margin": 0.125,
+        "argmax": 1056
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1730.json",
+      "position": 23,
+      "ar": {
+        "top_ids": [
+          1189,
+          743,
+          10
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.0
+        ],
+        "top_probs": [
+          0.1939680278301239,
+          0.1939680278301239,
+          0.11764755100011826
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 743
+      },
+      "loopahead": {
+        "top_ids": [
+          1189,
+          743,
+          10
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          17.0
+        ],
+        "top_probs": [
+          0.19939817488193512,
+          0.17596827447414398,
+          0.12094110995531082
+        ],
+        "top2_probability_margin": 0.023429900407791138,
+        "top1_logit_margin": 0.125,
+        "argmax": 1189
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1422.json",
+      "position": 90,
+      "ar": {
+        "top_ids": [
+          461,
+          264,
+          269
+        ],
+        "top_logits": [
+          22.875,
+          22.75,
+          13.625
+        ],
+        "top_probs": [
+          0.5311112403869629,
+          0.4687040448188782,
+          5.1045979489572346e-05
+        ],
+        "top2_probability_margin": 0.06240719556808472,
+        "top1_logit_margin": 0.125,
+        "argmax": 461
+      },
+      "loopahead": {
+        "top_ids": [
+          461,
+          264,
+          269
+        ],
+        "top_logits": [
+          22.875,
+          22.875,
+          13.625
+        ],
+        "top_probs": [
+          0.49991336464881897,
+          0.49991336464881897,
+          4.804749914910644e-05
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/345.json",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          295,
+          269,
+          44
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          17.75
+        ],
+        "top_probs": [
+          0.27997255325317383,
+          0.27997255325317383,
+          0.21804283559322357
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          295,
+          269,
+          44
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          17.75
+        ],
+        "top_probs": [
+          0.2993246018886566,
+          0.26415303349494934,
+          0.2057226002216339
+        ],
+        "top2_probability_margin": 0.035171568393707275,
+        "top1_logit_margin": 0.125,
+        "argmax": 295
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/488.json",
+      "position": 31,
+      "ar": {
+        "top_ids": [
+          46,
+          44,
+          295
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          16.0
+        ],
+        "top_probs": [
+          0.5204810500144958,
+          0.45932289958000183,
+          0.01387035008519888
+        ],
+        "top2_probability_margin": 0.06115815043449402,
+        "top1_logit_margin": 0.125,
+        "argmax": 46
+      },
+      "loopahead": {
+        "top_ids": [
+          46,
+          44,
+          295
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          16.0
+        ],
+        "top_probs": [
+          0.4904390573501587,
+          0.4904390573501587,
+          0.01306975819170475
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1014.json",
+      "position": 235,
+      "ar": {
+        "top_ids": [
+          557,
+          53,
+          50
+        ],
+        "top_logits": [
+          21.125,
+          21.125,
+          18.375
+        ],
+        "top_probs": [
+          0.44942694902420044,
+          0.44942694902420044,
+          0.028730902820825577
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 53
+      },
+      "loopahead": {
+        "top_ids": [
+          557,
+          53,
+          50
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          18.375
+        ],
+        "top_probs": [
+          0.47522813081741333,
+          0.4193873405456543,
+          0.030380316078662872
+        ],
+        "top2_probability_margin": 0.05584079027175903,
+        "top1_logit_margin": 0.125,
+        "argmax": 557
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/561.json",
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          286,
+          269,
+          502
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          16.25
+        ],
+        "top_probs": [
+          0.2674402892589569,
+          0.2674402892589569,
+          0.2360152155160904
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          286,
+          502,
+          269
+        ],
+        "top_logits": [
+          16.375,
+          16.25,
+          16.25
+        ],
+        "top_probs": [
+          0.27502554655075073,
+          0.2427091896533966,
+          0.2427091896533966
+        ],
+        "top2_probability_margin": 0.032316356897354126,
+        "top1_logit_margin": 0.125,
+        "argmax": 286
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1233.json",
+      "position": 67,
+      "ar": {
+        "top_ids": [
+          2076,
+          428,
+          2041
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          17.25
+        ],
+        "top_probs": [
+          0.4066491723060608,
+          0.3588666319847107,
+          0.07066502422094345
+        ],
+        "top2_probability_margin": 0.0477825403213501,
+        "top1_logit_margin": 0.125,
+        "argmax": 2076
+      },
+      "loopahead": {
+        "top_ids": [
+          2076,
+          428,
+          2041
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          17.25
+        ],
+        "top_probs": [
+          0.3881387412548065,
+          0.3881387412548065,
+          0.06744839251041412
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 428
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/473.json",
+      "position": 3,
+      "ar": {
+        "top_ids": [
+          264,
+          259,
+          269
+        ],
+        "top_logits": [
+          20.875,
+          20.875,
+          15.6875
+        ],
+        "top_probs": [
+          0.49606266617774963,
+          0.49606266617774963,
+          0.0027709833811968565
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 259
+      },
+      "loopahead": {
+        "top_ids": [
+          264,
+          259,
+          269
+        ],
+        "top_logits": [
+          20.875,
+          20.75,
+          15.6875
+        ],
+        "top_probs": [
+          0.526881217956543,
+          0.46497106552124023,
+          0.0029431346338242292
+        ],
+        "top2_probability_margin": 0.061910152435302734,
+        "top1_logit_margin": 0.125,
+        "argmax": 264
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/199.json",
+      "position": 39,
+      "ar": {
+        "top_ids": [
+          337,
+          305,
+          47453
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          15.375
+        ],
+        "top_probs": [
+          0.4932512640953064,
+          0.4932512640953064,
+          0.004835665691643953
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 305
+      },
+      "loopahead": {
+        "top_ids": [
+          337,
+          305,
+          47453
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          15.4375
+        ],
+        "top_probs": [
+          0.5233978629112244,
+          0.46189698576927185,
+          0.005462147295475006
+        ],
+        "top2_probability_margin": 0.061500877141952515,
+        "top1_logit_margin": 0.125,
+        "argmax": 337
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/954.json",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          2093,
+          1692,
+          10770
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          16.875
+        ],
+        "top_probs": [
+          0.21428468823432922,
+          0.21428468823432922,
+          0.1891055703163147
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1692
+      },
+      "loopahead": {
+        "top_ids": [
+          2093,
+          10770,
+          1692
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          17.0
+        ],
+        "top_probs": [
+          0.22953715920448303,
+          0.20256583392620087,
+          0.20256583392620087
+        ],
+        "top2_probability_margin": 0.026971325278282166,
+        "top1_logit_margin": 0.125,
+        "argmax": 2093
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1197.json",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          56,
+          50,
+          110
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          19.75
+        ],
+        "top_probs": [
+          0.32892006635665894,
+          0.29027092456817627,
+          0.19950009882450104
+        ],
+        "top2_probability_margin": 0.038649141788482666,
+        "top1_logit_margin": 0.125,
+        "argmax": 56
+      },
+      "loopahead": {
+        "top_ids": [
+          56,
+          50,
+          110
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          19.75
+        ],
+        "top_probs": [
+          0.3019682466983795,
+          0.3019682466983795,
+          0.20753954350948334
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/1065.json",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          349,
+          285,
+          48
+        ],
+        "top_logits": [
+          15.6875,
+          15.625,
+          15.0
+        ],
+        "top_probs": [
+          0.2649621069431305,
+          0.2489088624715805,
+          0.13323131203651428
+        ],
+        "top2_probability_margin": 0.016053244471549988,
+        "top1_logit_margin": 0.0625,
+        "argmax": 349
+      },
+      "loopahead": {
+        "top_ids": [
+          349,
+          285,
+          48
+        ],
+        "top_logits": [
+          15.6875,
+          15.6875,
+          15.0
+        ],
+        "top_probs": [
+          0.2596818804740906,
+          0.2596818804740906,
+          0.1305762529373169
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 285
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1232.json",
+      "position": 211,
+      "ar": {
+        "top_ids": [
+          52,
+          49,
+          51
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          16.0
+        ],
+        "top_probs": [
+          0.23711636662483215,
+          0.2092544585466385,
+          0.14381834864616394
+        ],
+        "top2_probability_margin": 0.027861908078193665,
+        "top1_logit_margin": 0.125,
+        "argmax": 52
+      },
+      "loopahead": {
+        "top_ids": [
+          52,
+          49,
+          51
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          16.0
+        ],
+        "top_probs": [
+          0.21480704843997955,
+          0.21480704843997955,
+          0.1476345807313919
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/428.json",
+      "position": 297,
+      "ar": {
+        "top_ids": [
+          269,
+          10,
+          301
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          17.125
+        ],
+        "top_probs": [
+          0.494992196559906,
+          0.4368290901184082,
+          0.046041443943977356
+        ],
+        "top2_probability_margin": 0.0581631064414978,
+        "top1_logit_margin": 0.125,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          269,
+          10,
+          301
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          17.125
+        ],
+        "top_probs": [
+          0.4676428437232971,
+          0.4676428437232971,
+          0.04349755868315697
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/538.json",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          358,
+          301,
+          10
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          16.25
+        ],
+        "top_probs": [
+          0.3997204005718231,
+          0.3997204005718231,
+          0.1297702044248581
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 301
+      },
+      "loopahead": {
+        "top_ids": [
+          358,
+          301,
+          10
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          16.25
+        ],
+        "top_probs": [
+          0.42993637919425964,
+          0.3794175088405609,
+          0.12317883223295212
+        ],
+        "top2_probability_margin": 0.05051887035369873,
+        "top1_logit_margin": 0.125,
+        "argmax": 358
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/733.json",
+      "position": 245,
+      "ar": {
+        "top_ids": [
+          864,
+          3083,
+          1198
+        ],
+        "top_logits": [
+          15.25,
+          15.1875,
+          14.8125
+        ],
+        "top_probs": [
+          0.20928221940994263,
+          0.1966024488210678,
+          0.13512276113033295
+        ],
+        "top2_probability_margin": 0.012679770588874817,
+        "top1_logit_margin": 0.0625,
+        "argmax": 864
+      },
+      "loopahead": {
+        "top_ids": [
+          3083,
+          864,
+          1198
+        ],
+        "top_logits": [
+          15.25,
+          15.1875,
+          14.8125
+        ],
+        "top_probs": [
+          0.21090491116046906,
+          0.19812683761119843,
+          0.13617044687271118
+        ],
+        "top2_probability_margin": 0.01277807354927063,
+        "top1_logit_margin": 0.0625,
+        "argmax": 3083
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/intermediate_algebra/1411.json",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          120,
+          114,
+          97
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          16.75
+        ],
+        "top_probs": [
+          0.3220408260822296,
+          0.2842000126838684,
+          0.08142466843128204
+        ],
+        "top2_probability_margin": 0.037840813398361206,
+        "top1_logit_margin": 0.125,
+        "argmax": 120
+      },
+      "loopahead": {
+        "top_ids": [
+          120,
+          114,
+          97
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          16.75
+        ],
+        "top_probs": [
+          0.2964518964290619,
+          0.2964518964290619,
+          0.08493489027023315
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 114
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/499.json",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          437,
+          94,
+          514
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          16.75
+        ],
+        "top_probs": [
+          0.48876357078552246,
+          0.48876357078552246,
+          0.011494617909193039
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 94
+      },
+      "loopahead": {
+        "top_ids": [
+          437,
+          94,
+          514
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          16.75
+        ],
+        "top_probs": [
+          0.51999431848526,
+          0.458893358707428,
+          0.010792137123644352
+        ],
+        "top2_probability_margin": 0.06110095977783203,
+        "top1_logit_margin": 0.125,
+        "argmax": 437
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/1787.json",
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          56,
+          50,
+          43
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          15.75
+        ],
+        "top_probs": [
+          0.4860280454158783,
+          0.4860280454158783,
+          0.0069328173995018005
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "loopahead": {
+        "top_ids": [
+          56,
+          50,
+          43
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          15.75
+        ],
+        "top_probs": [
+          0.5171495079994202,
+          0.4563828408718109,
+          0.0065099517814815044
+        ],
+        "top2_probability_margin": 0.06076666712760925,
+        "top1_logit_margin": 0.125,
+        "argmax": 56
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/102.json",
+      "position": 441,
+      "ar": {
+        "top_ids": [
+          445,
+          125,
+          70
+        ],
+        "top_logits": [
+          21.0,
+          20.875,
+          15.75
+        ],
+        "top_probs": [
+          0.5257211923599243,
+          0.4639472961425781,
+          0.0027587315998971462
+        ],
+        "top2_probability_margin": 0.06177389621734619,
+        "top1_logit_margin": 0.125,
+        "argmax": 445
+      },
+      "loopahead": {
+        "top_ids": [
+          445,
+          125,
+          70
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          15.6875
+        ],
+        "top_probs": [
+          0.49512407183647156,
+          0.49512407183647156,
+          0.0024407573509961367
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 125
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2023.json",
+      "position": 158,
+      "ar": {
+        "top_ids": [
+          18761,
+          1966,
+          1488
+        ],
+        "top_logits": [
+          16.25,
+          16.125,
+          15.1875
+        ],
+        "top_probs": [
+          0.2866203486919403,
+          0.2529415488243103,
+          0.09905334562063217
+        ],
+        "top2_probability_margin": 0.033678799867630005,
+        "top1_logit_margin": 0.125,
+        "argmax": 18761
+      },
+      "loopahead": {
+        "top_ids": [
+          18761,
+          1966,
+          1488
+        ],
+        "top_logits": [
+          16.125,
+          16.125,
+          15.1875
+        ],
+        "top_probs": [
+          0.2603475749492645,
+          0.2603475749492645,
+          0.10195357352495193
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1966
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/558.json",
+      "position": 75,
+      "ar": {
+        "top_ids": [
+          543,
+          46,
+          10
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          15.6875
+        ],
+        "top_probs": [
+          0.46257367730140686,
+          0.46257367730140686,
+          0.027779707685112953
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "loopahead": {
+        "top_ids": [
+          543,
+          46,
+          10
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          15.6875
+        ],
+        "top_probs": [
+          0.48904457688331604,
+          0.4315803050994873,
+          0.029369410127401352
+        ],
+        "top2_probability_margin": 0.057464271783828735,
+        "top1_logit_margin": 0.125,
+        "argmax": 543
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/2152.json",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          407,
+          305,
+          727
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          14.4375
+        ],
+        "top_probs": [
+          0.478689581155777,
+          0.478689581155777,
+          0.009332961402833462
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 305
+      },
+      "loopahead": {
+        "top_ids": [
+          407,
+          305,
+          727
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          14.4375
+        ],
+        "top_probs": [
+          0.5069003105163574,
+          0.44733795523643494,
+          0.009882982820272446
+        ],
+        "top2_probability_margin": 0.059562355279922485,
+        "top1_logit_margin": 0.125,
+        "argmax": 407
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/465.json",
+      "position": 56,
+      "ar": {
+        "top_ids": [
+          607,
+          402,
+          2139
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          17.25
+        ],
+        "top_probs": [
+          0.21206028759479523,
+          0.21206028759479523,
+          0.18714255094528198
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 402
+      },
+      "loopahead": {
+        "top_ids": [
+          607,
+          2139,
+          402
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          17.25
+        ],
+        "top_probs": [
+          0.22393347322940826,
+          0.19762060046195984,
+          0.19762060046195984
+        ],
+        "top2_probability_margin": 0.026312872767448425,
+        "top1_logit_margin": 0.125,
+        "argmax": 607
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/279.json",
+      "position": 188,
+      "ar": {
+        "top_ids": [
+          742,
+          345,
+          1048
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          17.875
+        ],
+        "top_probs": [
+          0.4094061255455017,
+          0.36129963397979736,
+          0.055407095700502396
+        ],
+        "top2_probability_margin": 0.048106491565704346,
+        "top1_logit_margin": 0.125,
+        "argmax": 742
+      },
+      "loopahead": {
+        "top_ids": [
+          742,
+          345,
+          1048
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          18.0
+        ],
+        "top_probs": [
+          0.38577336072921753,
+          0.38577336072921753,
+          0.059160266071558
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/452.json",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          481,
+          114,
+          40
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          16.625
+        ],
+        "top_probs": [
+          0.38550645112991333,
+          0.3402082324028015,
+          0.11044944822788239
+        ],
+        "top2_probability_margin": 0.045298218727111816,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          114,
+          40
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          16.625
+        ],
+        "top_probs": [
+          0.3672838807106018,
+          0.3672838807106018,
+          0.10522859543561935
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 114
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/986.json",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          121,
+          120,
+          45
+        ],
+        "top_logits": [
+          22.0,
+          22.0,
+          17.0
+        ],
+        "top_probs": [
+          0.49306589365005493,
+          0.49306589365005493,
+          0.0033222518395632505
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 120
+      },
+      "loopahead": {
+        "top_ids": [
+          121,
+          120,
+          45
+        ],
+        "top_logits": [
+          22.0,
+          21.875,
+          17.0
+        ],
+        "top_probs": [
+          0.523561418056488,
+          0.46204131841659546,
+          0.0035277288407087326
+        ],
+        "top2_probability_margin": 0.06152009963989258,
+        "top1_logit_margin": 0.125,
+        "argmax": 121
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/1060.json",
+      "position": 95,
+      "ar": {
+        "top_ids": [
+          481,
+          55,
+          3935
+        ],
+        "top_logits": [
+          20.75,
+          20.75,
+          17.625
+        ],
+        "top_probs": [
+          0.4774898290634155,
+          0.4774898290634155,
+          0.020979437977075577
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 55
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          55,
+          3935
+        ],
+        "top_logits": [
+          20.875,
+          20.625,
+          17.625
+        ],
+        "top_probs": [
+          0.5370050668716431,
+          0.41821998357772827,
+          0.02082194574177265
+        ],
+        "top2_probability_margin": 0.1187850832939148,
+        "top1_logit_margin": 0.25,
+        "argmax": 481
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/927.json",
+      "position": 51,
+      "ar": {
+        "top_ids": [
+          3162,
+          2709,
+          3078
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          19.875
+        ],
+        "top_probs": [
+          0.35902491211891174,
+          0.3168383836746216,
+          0.246753990650177
+        ],
+        "top2_probability_margin": 0.04218652844429016,
+        "top1_logit_margin": 0.125,
+        "argmax": 3162
+      },
+      "loopahead": {
+        "top_ids": [
+          3162,
+          2709,
+          3078
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          19.875
+        ],
+        "top_probs": [
+          0.3444916605949402,
+          0.3444916605949402,
+          0.23676542937755585
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2709
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/356.json",
+      "position": 202,
+      "ar": {
+        "top_ids": [
+          330,
+          46,
+          44
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.75
+        ],
+        "top_probs": [
+          0.3671156167984009,
+          0.32397839426994324,
+          0.2859099209308624
+        ],
+        "top2_probability_margin": 0.04313722252845764,
+        "top1_logit_margin": 0.125,
+        "argmax": 330
+      },
+      "loopahead": {
+        "top_ids": [
+          330,
+          46,
+          44
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          17.75
+        ],
+        "top_probs": [
+          0.33909907937049866,
+          0.33909907937049866,
+          0.2992538809776306
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1555.json",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          2227,
+          888,
+          6307
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.625
+        ],
+        "top_probs": [
+          0.23411624133586884,
+          0.20660686492919922,
+          0.14199867844581604
+        ],
+        "top2_probability_margin": 0.027509376406669617,
+        "top1_logit_margin": 0.125,
+        "argmax": 2227
+      },
+      "loopahead": {
+        "top_ids": [
+          2227,
+          888,
+          6307
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          16.625
+        ],
+        "top_probs": [
+          0.22642534971237183,
+          0.22642534971237183,
+          0.1373339146375656
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 888
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/106.json",
+      "position": 84,
+      "ar": {
+        "top_ids": [
+          65508,
+          10,
+          301
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          15.875
+        ],
+        "top_probs": [
+          0.4282892346382141,
+          0.4282892346382141,
+          0.09556424617767334
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          65508,
+          10,
+          301
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          15.875
+        ],
+        "top_probs": [
+          0.45888906717300415,
+          0.40496817231178284,
+          0.0903606116771698
+        ],
+        "top2_probability_margin": 0.053920894861221313,
+        "top1_logit_margin": 0.125,
+        "argmax": 65508
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/679.json",
+      "position": 111,
+      "ar": {
+        "top_ids": [
+          51,
+          50,
+          49
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          17.125
+        ],
+        "top_probs": [
+          0.1703597456216812,
+          0.1703597456216812,
+          0.1503419429063797
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "loopahead": {
+        "top_ids": [
+          51,
+          50,
+          49
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          17.375
+        ],
+        "top_probs": [
+          0.16802871227264404,
+          0.16802871227264404,
+          0.16802871227264404
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/843.json",
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          481,
+          49,
+          51
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          19.0
+        ],
+        "top_probs": [
+          0.4833810329437256,
+          0.4265822470188141,
+          0.05773163214325905
+        ],
+        "top2_probability_margin": 0.0567987859249115,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          49,
+          51
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          19.0
+        ],
+        "top_probs": [
+          0.45186567306518555,
+          0.45186567306518555,
+          0.06115336716175079
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/117.json",
+      "position": 448,
+      "ar": {
+        "top_ids": [
+          452,
+          349,
+          318
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          17.625
+        ],
+        "top_probs": [
+          0.18728028237819672,
+          0.18728028237819672,
+          0.18728028237819672
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 318
+      },
+      "loopahead": {
+        "top_ids": [
+          452,
+          349,
+          318
+        ],
+        "top_logits": [
+          17.75,
+          17.625,
+          17.5
+        ],
+        "top_probs": [
+          0.21981973946094513,
+          0.19399024546146393,
+          0.17119579017162323
+        ],
+        "top2_probability_margin": 0.0258294939994812,
+        "top1_logit_margin": 0.125,
+        "argmax": 452
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/2046.json",
+      "position": 44,
+      "ar": {
+        "top_ids": [
+          1141,
+          1054,
+          11147
+        ],
+        "top_logits": [
+          20.875,
+          20.875,
+          16.125
+        ],
+        "top_probs": [
+          0.4948889911174774,
+          0.4948889911174774,
+          0.004281628876924515
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1054
+      },
+      "loopahead": {
+        "top_ids": [
+          1141,
+          1054,
+          11147
+        ],
+        "top_logits": [
+          20.875,
+          20.75,
+          16.125
+        ],
+        "top_probs": [
+          0.5254933834075928,
+          0.4637462794780731,
+          0.004546408541500568
+        ],
+        "top2_probability_margin": 0.06174710392951965,
+        "top1_logit_margin": 0.125,
+        "argmax": 1141
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/51.json",
+      "position": 36,
+      "ar": {
+        "top_ids": [
+          442,
+          46,
+          44
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.5
+        ],
+        "top_probs": [
+          0.44541776180267334,
+          0.3930797874927521,
+          0.11261925101280212
+        ],
+        "top2_probability_margin": 0.052337974309921265,
+        "top1_logit_margin": 0.125,
+        "argmax": 442
+      },
+      "loopahead": {
+        "top_ids": [
+          442,
+          46,
+          44
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          17.5
+        ],
+        "top_probs": [
+          0.42305898666381836,
+          0.42305898666381836,
+          0.1069660633802414
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1930.json",
+      "position": 223,
+      "ar": {
+        "top_ids": [
+          1055,
+          405,
+          597
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          15.3125
+        ],
+        "top_probs": [
+          0.5211673974990845,
+          0.45992860198020935,
+          0.016752898693084717
+        ],
+        "top2_probability_margin": 0.06123879551887512,
+        "top1_logit_margin": 0.125,
+        "argmax": 1055
+      },
+      "loopahead": {
+        "top_ids": [
+          1055,
+          405,
+          597
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          15.3125
+        ],
+        "top_probs": [
+          0.48993968963623047,
+          0.48993968963623047,
+          0.01784605160355568
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 405
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/1934.json",
+      "position": 10,
+      "ar": {
+        "top_ids": [
+          269,
+          264,
+          1169
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          13.25
+        ],
+        "top_probs": [
+          0.5302726626396179,
+          0.4679639935493469,
+          0.00033233602880500257
+        ],
+        "top2_probability_margin": 0.062308669090270996,
+        "top1_logit_margin": 0.125,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          264,
+          269,
+          1169
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          13.1875
+        ],
+        "top_probs": [
+          0.530297040939331,
+          0.46798548102378845,
+          0.00031221515382640064
+        ],
+        "top2_probability_margin": 0.0623115599155426,
+        "top1_logit_margin": 0.125,
+        "argmax": 264
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/precalculus/659.json",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          1134,
+          888,
+          2227
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          15.75
+        ],
+        "top_probs": [
+          0.2937420904636383,
+          0.2592264711856842,
+          0.1387539505958557
+        ],
+        "top2_probability_margin": 0.0345156192779541,
+        "top1_logit_margin": 0.125,
+        "argmax": 1134
+      },
+      "loopahead": {
+        "top_ids": [
+          1134,
+          888,
+          2227
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          15.75
+        ],
+        "top_probs": [
+          0.28244003653526306,
+          0.28244003653526306,
+          0.13341523706912994
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 888
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/446.json",
+      "position": 125,
+      "ar": {
+        "top_ids": [
+          1966,
+          1401,
+          790
+        ],
+        "top_logits": [
+          15.1875,
+          15.125,
+          15.0625
+        ],
+        "top_probs": [
+          0.11034128814935684,
+          0.10365604609251022,
+          0.09737583994865417
+        ],
+        "top2_probability_margin": 0.006685242056846619,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1966
+      },
+      "loopahead": {
+        "top_ids": [
+          1966,
+          1401,
+          790
+        ],
+        "top_logits": [
+          15.1875,
+          15.1875,
+          15.125
+        ],
+        "top_probs": [
+          0.10704957693815231,
+          0.10704957693815231,
+          0.10056377202272415
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1401
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/232.json",
+      "position": 49,
+      "ar": {
+        "top_ids": [
+          1735,
+          803,
+          743
+        ],
+        "top_logits": [
+          15.875,
+          15.8125,
+          15.8125
+        ],
+        "top_probs": [
+          0.14902497828006744,
+          0.1399960070848465,
+          0.1399960070848465
+        ],
+        "top2_probability_margin": 0.009028971195220947,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1735
+      },
+      "loopahead": {
+        "top_ids": [
+          1735,
+          803,
+          743
+        ],
+        "top_logits": [
+          15.875,
+          15.875,
+          15.8125
+        ],
+        "top_probs": [
+          0.14751394093036652,
+          0.14751394093036652,
+          0.13857652246952057
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 803
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2157.json",
+      "position": 146,
+      "ar": {
+        "top_ids": [
+          65508,
+          10,
+          301
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          16.0
+        ],
+        "top_probs": [
+          0.4961729645729065,
+          0.4378710985183716,
+          0.05229624733328819
+        ],
+        "top2_probability_margin": 0.05830186605453491,
+        "top1_logit_margin": 0.125,
+        "argmax": 65508
+      },
+      "loopahead": {
+        "top_ids": [
+          65508,
+          10,
+          301
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          16.0
+        ],
+        "top_probs": [
+          0.4688996970653534,
+          0.4688996970653534,
+          0.04942166060209274
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1102.json",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          55,
+          54,
+          49
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          19.375
+        ],
+        "top_probs": [
+          0.24456876516342163,
+          0.21583117544651031,
+          0.21583117544651031
+        ],
+        "top2_probability_margin": 0.028737589716911316,
+        "top1_logit_margin": 0.125,
+        "argmax": 55
+      },
+      "loopahead": {
+        "top_ids": [
+          55,
+          54,
+          49
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          19.375
+        ],
+        "top_probs": [
+          0.23659291863441467,
+          0.23659291863441467,
+          0.20879250764846802
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 54
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1408.json",
+      "position": 24,
+      "ar": {
+        "top_ids": [
+          481,
+          122,
+          559
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          16.25
+        ],
+        "top_probs": [
+          0.4778195023536682,
+          0.4216742515563965,
+          0.04444413632154465
+        ],
+        "top2_probability_margin": 0.05614525079727173,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          122,
+          559
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          16.25
+        ],
+        "top_probs": [
+          0.4513951241970062,
+          0.4513951241970062,
+          0.041986286640167236
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 122
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/893.json",
+      "position": 58,
+      "ar": {
+        "top_ids": [
+          597,
+          405,
+          36
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          15.4375
+        ],
+        "top_probs": [
+          0.5258554220199585,
+          0.4640657901763916,
+          0.006218485068529844
+        ],
+        "top2_probability_margin": 0.061789631843566895,
+        "top1_logit_margin": 0.125,
+        "argmax": 597
+      },
+      "loopahead": {
+        "top_ids": [
+          597,
+          405,
+          36
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          15.4375
+        ],
+        "top_probs": [
+          0.49463289976119995,
+          0.49463289976119995,
+          0.0066280849277973175
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 405
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/847.json",
+      "position": 55,
+      "ar": {
+        "top_ids": [
+          1006,
+          94,
+          40
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          17.75
+        ],
+        "top_probs": [
+          0.4469035863876343,
+          0.4469035863876343,
+          0.06853488832712173
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 94
+      },
+      "loopahead": {
+        "top_ids": [
+          1006,
+          94,
+          40
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          17.75
+        ],
+        "top_probs": [
+          0.47165241837501526,
+          0.41623178124427795,
+          0.07233024388551712
+        ],
+        "top2_probability_margin": 0.055420637130737305,
+        "top1_logit_margin": 0.125,
+        "argmax": 1006
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/702.json",
+      "position": 253,
+      "ar": {
+        "top_ids": [
+          45,
+          43,
+          410
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          13.375
+        ],
+        "top_probs": [
+          0.4977438151836395,
+          0.4977438151836395,
+          0.0010888101533055305
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 43
+      },
+      "loopahead": {
+        "top_ids": [
+          45,
+          43,
+          410
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          13.4375
+        ],
+        "top_probs": [
+          0.5289590954780579,
+          0.46680477261543274,
+          0.0010869886027649045
+        ],
+        "top2_probability_margin": 0.06215432286262512,
+        "top1_logit_margin": 0.125,
+        "argmax": 45
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1281.json",
+      "position": 9,
+      "ar": {
+        "top_ids": [
+          4448,
+          1222,
+          4702
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          17.875
+        ],
+        "top_probs": [
+          0.2506919503211975,
+          0.22123487293720245,
+          0.10450395196676254
+        ],
+        "top2_probability_margin": 0.029457077383995056,
+        "top1_logit_margin": 0.125,
+        "argmax": 4448
+      },
+      "loopahead": {
+        "top_ids": [
+          4448,
+          1222,
+          4702
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          17.875
+        ],
+        "top_probs": [
+          0.24430258572101593,
+          0.24430258572101593,
+          0.10184046626091003
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1222
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2593.json",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          524,
+          444,
+          922
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          16.0
+        ],
+        "top_probs": [
+          0.4214601516723633,
+          0.37193727493286133,
+          0.039201900362968445
+        ],
+        "top2_probability_margin": 0.04952287673950195,
+        "top1_logit_margin": 0.125,
+        "argmax": 524
+      },
+      "loopahead": {
+        "top_ids": [
+          524,
+          444,
+          922
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          16.0
+        ],
+        "top_probs": [
+          0.4002654552459717,
+          0.4002654552459717,
+          0.037230484187603
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 444
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/190.json",
+      "position": 31,
+      "ar": {
+        "top_ids": [
+          35797,
+          31067,
+          437
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          17.625
+        ],
+        "top_probs": [
+          0.400694340467453,
+          0.3536114990711212,
+          0.08940699696540833
+        ],
+        "top2_probability_margin": 0.04708284139633179,
+        "top1_logit_margin": 0.125,
+        "argmax": 35797
+      },
+      "loopahead": {
+        "top_ids": [
+          35797,
+          31067,
+          437
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          17.75
+        ],
+        "top_probs": [
+          0.3810573220252991,
+          0.3810573220252991,
+          0.09634637832641602
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 31067
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2517.json",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          6463,
+          2894,
+          10
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          16.25
+        ],
+        "top_probs": [
+          0.12428757548332214,
+          0.12428757548332214,
+          0.10968340188264847
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2894
+      },
+      "loopahead": {
+        "top_ids": [
+          6463,
+          2894,
+          10
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          16.375
+        ],
+        "top_probs": [
+          0.1213441714644432,
+          0.1213441714644432,
+          0.1213441714644432
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/858.json",
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          481,
+          120,
+          49
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          18.125
+        ],
+        "top_probs": [
+          0.4033223092556,
+          0.3559306859970093,
+          0.13093958795070648
+        ],
+        "top2_probability_margin": 0.0473916232585907,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          120,
+          49
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          18.125
+        ],
+        "top_probs": [
+          0.3849126398563385,
+          0.3849126398563385,
+          0.12496283650398254
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 120
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/625.json",
+      "position": 164,
+      "ar": {
+        "top_ids": [
+          643,
+          532,
+          345
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          16.5
+        ],
+        "top_probs": [
+          0.33702170848846436,
+          0.2974206209182739,
+          0.10941492766141891
+        ],
+        "top2_probability_margin": 0.03960108757019043,
+        "top1_logit_margin": 0.125,
+        "argmax": 643
+      },
+      "loopahead": {
+        "top_ids": [
+          643,
+          532,
+          345
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          16.625
+        ],
+        "top_probs": [
+          0.3112502992153168,
+          0.3112502992153168,
+          0.11450260132551193
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 532
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1407.json",
+      "position": 184,
+      "ar": {
+        "top_ids": [
+          54,
+          50,
+          51
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          20.125
+        ],
+        "top_probs": [
+          0.2387840300798416,
+          0.21072615683078766,
+          0.18596519529819489
+        ],
+        "top2_probability_margin": 0.028057873249053955,
+        "top1_logit_margin": 0.125,
+        "argmax": 54
+      },
+      "loopahead": {
+        "top_ids": [
+          54,
+          50,
+          51
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          20.125
+        ],
+        "top_probs": [
+          0.21681790053844452,
+          0.21681790053844452,
+          0.1913411170244217
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1313.json",
+      "position": 192,
+      "ar": {
+        "top_ids": [
+          402,
+          285,
+          10469
+        ],
+        "top_logits": [
+          20.25,
+          20.0,
+          19.875
+        ],
+        "top_probs": [
+          0.3856717646121979,
+          0.3003614842891693,
+          0.26506808400154114
+        ],
+        "top2_probability_margin": 0.08531028032302856,
+        "top1_logit_margin": 0.25,
+        "argmax": 402
+      },
+      "loopahead": {
+        "top_ids": [
+          402,
+          285,
+          10469
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          20.0
+        ],
+        "top_probs": [
+          0.32925304770469666,
+          0.32925304770469666,
+          0.29056480526924133
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 285
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/791.json",
+      "position": 120,
+      "ar": {
+        "top_ids": [
+          3521,
+          1481,
+          2325
+        ],
+        "top_logits": [
+          14.75,
+          14.6875,
+          14.25
+        ],
+        "top_probs": [
+          0.12947018444538116,
+          0.12162598222494125,
+          0.07852763682603836
+        ],
+        "top2_probability_margin": 0.007844202220439911,
+        "top1_logit_margin": 0.0625,
+        "argmax": 3521
+      },
+      "loopahead": {
+        "top_ids": [
+          3521,
+          1481,
+          2325
+        ],
+        "top_logits": [
+          14.6875,
+          14.6875,
+          14.1875
+        ],
+        "top_probs": [
+          0.12323568761348724,
+          0.12323568761348724,
+          0.07474622130393982
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1481
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1247.json",
+      "position": 111,
+      "ar": {
+        "top_ids": [
+          45,
+          43,
+          61
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          13.875
+        ],
+        "top_probs": [
+          0.49826765060424805,
+          0.49826765060424805,
+          0.0013995313784107566
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 43
+      },
+      "loopahead": {
+        "top_ids": [
+          45,
+          43,
+          61
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          13.8125
+        ],
+        "top_probs": [
+          0.5295281410217285,
+          0.4673069417476654,
+          0.0012330444296821952
+        ],
+        "top2_probability_margin": 0.06222119927406311,
+        "top1_logit_margin": 0.125,
+        "argmax": 45
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1201.json",
+      "position": 147,
+      "ar": {
+        "top_ids": [
+          52,
+          51,
+          50
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          18.375
+        ],
+        "top_probs": [
+          0.34394538402557373,
+          0.34394538402557373,
+          0.1265304535627365
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 51
+      },
+      "loopahead": {
+        "top_ids": [
+          52,
+          51,
+          50
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          18.375
+        ],
+        "top_probs": [
+          0.37271758913993835,
+          0.3289221227169037,
+          0.12100368738174438
+        ],
+        "top2_probability_margin": 0.04379546642303467,
+        "top1_logit_margin": 0.125,
+        "argmax": 52
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1217.json",
+      "position": 36,
+      "ar": {
+        "top_ids": [
+          21470,
+          2028,
+          1072
+        ],
+        "top_logits": [
+          14.5625,
+          14.5,
+          12.75
+        ],
+        "top_probs": [
+          0.3503648340702057,
+          0.32913729548454285,
+          0.05719548836350441
+        ],
+        "top2_probability_margin": 0.021227538585662842,
+        "top1_logit_margin": 0.0625,
+        "argmax": 21470
+      },
+      "loopahead": {
+        "top_ids": [
+          21470,
+          2028,
+          1072
+        ],
+        "top_logits": [
+          14.5625,
+          14.5625,
+          12.8125
+        ],
+        "top_probs": [
+          0.34292730689048767,
+          0.34292730689048767,
+          0.05959182232618332
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2028
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1300.json",
+      "position": 3,
+      "ar": {
+        "top_ids": [
+          10618,
+          7762,
+          21661
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          14.125
+        ],
+        "top_probs": [
+          0.4949406683444977,
+          0.4949406683444977,
+          0.0037789184134453535
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7762
+      },
+      "loopahead": {
+        "top_ids": [
+          10618,
+          7762,
+          21661
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          14.0625
+        ],
+        "top_probs": [
+          0.5261717438697815,
+          0.46434494853019714,
+          0.003330517327412963
+        ],
+        "top2_probability_margin": 0.06182679533958435,
+        "top1_logit_margin": 0.125,
+        "argmax": 10618
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/990.json",
+      "position": 257,
+      "ar": {
+        "top_ids": [
+          643,
+          402,
+          893
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          18.375
+        ],
+        "top_probs": [
+          0.2753496766090393,
+          0.2753496766090393,
+          0.11478281766176224
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 402
+      },
+      "loopahead": {
+        "top_ids": [
+          643,
+          402,
+          1056
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          18.5
+        ],
+        "top_probs": [
+          0.29489845037460327,
+          0.26024696230888367,
+          0.12293195724487305
+        ],
+        "top2_probability_margin": 0.034651488065719604,
+        "top1_logit_margin": 0.125,
+        "argmax": 643
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/1214.json",
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          1593,
+          54,
+          107
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          17.125
+        ],
+        "top_probs": [
+          0.30672717094421387,
+          0.30672717094421387,
+          0.18603943288326263
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 54
+      },
+      "loopahead": {
+        "top_ids": [
+          1593,
+          54,
+          107
+        ],
+        "top_logits": [
+          17.75,
+          17.625,
+          17.125
+        ],
+        "top_probs": [
+          0.3336082398891449,
+          0.29440823197364807,
+          0.17856763303279877
+        ],
+        "top2_probability_margin": 0.039200007915496826,
+        "top1_logit_margin": 0.125,
+        "argmax": 1593
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/931.json",
+      "position": 10,
+      "ar": {
+        "top_ids": [
+          358,
+          269,
+          44
+        ],
+        "top_logits": [
+          15.9375,
+          15.9375,
+          15.875
+        ],
+        "top_probs": [
+          0.20558759570121765,
+          0.20558759570121765,
+          0.19313167035579681
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          358,
+          269,
+          44
+        ],
+        "top_logits": [
+          15.875,
+          15.875,
+          15.875
+        ],
+        "top_probs": [
+          0.19828838109970093,
+          0.19828838109970093,
+          0.19828838109970093
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1247.json",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          269,
+          264,
+          2131
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          14.5
+        ],
+        "top_probs": [
+          0.5186479687690735,
+          0.45770522952079773,
+          0.006528814323246479
+        ],
+        "top2_probability_margin": 0.06094273924827576,
+        "top1_logit_margin": 0.125,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          269,
+          264,
+          2131
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          14.5
+        ],
+        "top_probs": [
+          0.487552672624588,
+          0.487552672624588,
+          0.006954565178602934
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/260.json",
+      "position": 134,
+      "ar": {
+        "top_ids": [
+          684,
+          374,
+          264
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          17.125
+        ],
+        "top_probs": [
+          0.2824246883392334,
+          0.24923890829086304,
+          0.2199525684118271
+        ],
+        "top2_probability_margin": 0.03318578004837036,
+        "top1_logit_margin": 0.125,
+        "argmax": 684
+      },
+      "loopahead": {
+        "top_ids": [
+          374,
+          684,
+          264
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          17.125
+        ],
+        "top_probs": [
+          0.28210902214050293,
+          0.24896034598350525,
+          0.219706729054451
+        ],
+        "top2_probability_margin": 0.03314867615699768,
+        "top1_logit_margin": 0.125,
+        "argmax": 374
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/intermediate_algebra/582.json",
+      "position": 329,
+      "ar": {
+        "top_ids": [
+          114,
+          43,
+          61
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          16.875
+        ],
+        "top_probs": [
+          0.47703438997268677,
+          0.47703438997268677,
+          0.026912441477179527
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 43
+      },
+      "loopahead": {
+        "top_ids": [
+          114,
+          43,
+          61
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          16.875
+        ],
+        "top_probs": [
+          0.5079998970031738,
+          0.4483083188533783,
+          0.025291822850704193
+        ],
+        "top2_probability_margin": 0.05969157814979553,
+        "top1_logit_margin": 0.125,
+        "argmax": 114
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2780.json",
+      "position": 35,
+      "ar": {
+        "top_ids": [
+          99,
+          51,
+          54
+        ],
+        "top_logits": [
+          16.0,
+          16.0,
+          15.8125
+        ],
+        "top_probs": [
+          0.19781586527824402,
+          0.19781586527824402,
+          0.16399511694908142
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 51
+      },
+      "loopahead": {
+        "top_ids": [
+          99,
+          51,
+          54
+        ],
+        "top_logits": [
+          16.125,
+          16.0,
+          15.8125
+        ],
+        "top_probs": [
+          0.21793992817401886,
+          0.19233131408691406,
+          0.15944825112819672
+        ],
+        "top2_probability_margin": 0.025608614087104797,
+        "top1_logit_margin": 0.125,
+        "argmax": 99
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/1003.json",
+      "position": 232,
+      "ar": {
+        "top_ids": [
+          295,
+          44,
+          318
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          16.0
+        ],
+        "top_probs": [
+          0.4483141601085663,
+          0.4483141601085663,
+          0.06067272275686264
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "loopahead": {
+        "top_ids": [
+          295,
+          44,
+          318
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          16.0
+        ],
+        "top_probs": [
+          0.4797365367412567,
+          0.4233660101890564,
+          0.05729636177420616
+        ],
+        "top2_probability_margin": 0.05637052655220032,
+        "top1_logit_margin": 0.125,
+        "argmax": 295
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1733.json",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          893,
+          318,
+          643
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          18.5
+        ],
+        "top_probs": [
+          0.2943428158760071,
+          0.2943428158760071,
+          0.22923442721366882
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 318
+      },
+      "loopahead": {
+        "top_ids": [
+          893,
+          318,
+          643
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.625
+        ],
+        "top_probs": [
+          0.30823269486427307,
+          0.2720143795013428,
+          0.24005185067653656
+        ],
+        "top2_probability_margin": 0.0362183153629303,
+        "top1_logit_margin": 0.125,
+        "argmax": 893
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/960.json",
+      "position": 240,
+      "ar": {
+        "top_ids": [
+          607,
+          345,
+          742
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          17.0
+        ],
+        "top_probs": [
+          0.4670250713825226,
+          0.4670250713825226,
+          0.04922407865524292
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "loopahead": {
+        "top_ids": [
+          607,
+          345,
+          742
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          17.125
+        ],
+        "top_probs": [
+          0.4910542964935303,
+          0.43335390090942383,
+          0.05864807590842247
+        ],
+        "top2_probability_margin": 0.057700395584106445,
+        "top1_logit_margin": 0.125,
+        "argmax": 607
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1994.json",
+      "position": 363,
+      "ar": {
+        "top_ids": [
+          106,
+          49,
+          40
+        ],
+        "top_logits": [
+          21.0,
+          20.875,
+          17.25
+        ],
+        "top_probs": [
+          0.5186596512794495,
+          0.4577155113220215,
+          0.012197705917060375
+        ],
+        "top2_probability_margin": 0.06094413995742798,
+        "top1_logit_margin": 0.125,
+        "argmax": 106
+      },
+      "loopahead": {
+        "top_ids": [
+          106,
+          49,
+          40
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          17.25
+        ],
+        "top_probs": [
+          0.48888257145881653,
+          0.48888257145881653,
+          0.011497416533529758
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/297.json",
+      "position": 116,
+      "ar": {
+        "top_ids": [
+          291,
+          44,
+          46
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.25
+        ],
+        "top_probs": [
+          0.4538101851940155,
+          0.4004860818386078,
+          0.08936052024364471
+        ],
+        "top2_probability_margin": 0.053324103355407715,
+        "top1_logit_margin": 0.125,
+        "argmax": 291
+      },
+      "loopahead": {
+        "top_ids": [
+          291,
+          44,
+          46
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          17.25
+        ],
+        "top_probs": [
+          0.4230404496192932,
+          0.4230404496192932,
+          0.09439308941364288
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1436.json",
+      "position": 79,
+      "ar": {
+        "top_ids": [
+          481,
+          49,
+          52
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          15.3125
+        ],
+        "top_probs": [
+          0.3923490047454834,
+          0.34624677896499634,
+          0.06404921412467957
+        ],
+        "top2_probability_margin": 0.04610222578048706,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          49,
+          52
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          15.25
+        ],
+        "top_probs": [
+          0.3755320608615875,
+          0.3755320608615875,
+          0.057589709758758545
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/965.json",
+      "position": 184,
+      "ar": {
+        "top_ids": [
+          1006,
+          40,
+          52
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          17.125
+        ],
+        "top_probs": [
+          0.44984766840934753,
+          0.3969891667366028,
+          0.041842348873615265
+        ],
+        "top2_probability_margin": 0.05285850167274475,
+        "top1_logit_margin": 0.125,
+        "argmax": 1006
+      },
+      "loopahead": {
+        "top_ids": [
+          1006,
+          40,
+          52
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          17.125
+        ],
+        "top_probs": [
+          0.4189241826534271,
+          0.4189241826534271,
+          0.04415428265929222
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/820.json",
+      "position": 258,
+      "ar": {
+        "top_ids": [
+          2076,
+          1735,
+          803
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          15.875
+        ],
+        "top_probs": [
+          0.45674440264701843,
+          0.40307551622390747,
+          0.02576775848865509
+        ],
+        "top2_probability_margin": 0.05366888642311096,
+        "top1_logit_margin": 0.125,
+        "argmax": 2076
+      },
+      "loopahead": {
+        "top_ids": [
+          2076,
+          1735,
+          803
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          15.875
+        ],
+        "top_probs": [
+          0.425347238779068,
+          0.425347238779068,
+          0.027191538363695145
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1735
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/128.json",
+      "position": 70,
+      "ar": {
+        "top_ids": [
+          597,
+          405,
+          36
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          14.5
+        ],
+        "top_probs": [
+          0.5278512835502625,
+          0.4658271074295044,
+          0.003138718195259571
+        ],
+        "top2_probability_margin": 0.06202417612075806,
+        "top1_logit_margin": 0.125,
+        "argmax": 597
+      },
+      "loopahead": {
+        "top_ids": [
+          597,
+          405,
+          36
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          14.5625
+        ],
+        "top_probs": [
+          0.4969099462032318,
+          0.4969099462032318,
+          0.0031452984549105167
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 405
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1199.json",
+      "position": 47,
+      "ar": {
+        "top_ids": [
+          4686,
+          1239,
+          3213
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          15.875
+        ],
+        "top_probs": [
+          0.3595360815525055,
+          0.31728947162628174,
+          0.09090495854616165
+        ],
+        "top2_probability_margin": 0.042246609926223755,
+        "top1_logit_margin": 0.125,
+        "argmax": 4686
+      },
+      "loopahead": {
+        "top_ids": [
+          4686,
+          1239,
+          3213
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          15.875
+        ],
+        "top_probs": [
+          0.34561097621917725,
+          0.34561097621917725,
+          0.08738414198160172
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1239
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/956.json",
+      "position": 94,
+      "ar": {
+        "top_ids": [
+          2225,
+          45,
+          1484
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          17.25
+        ],
+        "top_probs": [
+          0.5218963027000427,
+          0.46057188510894775,
+          0.0157599039375782
+        ],
+        "top2_probability_margin": 0.06132441759109497,
+        "top1_logit_margin": 0.125,
+        "argmax": 2225
+      },
+      "loopahead": {
+        "top_ids": [
+          2225,
+          45,
+          1484
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          17.25
+        ],
+        "top_probs": [
+          0.49062374234199524,
+          0.49062374234199524,
+          0.016788220033049583
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 45
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2264.json",
+      "position": 163,
+      "ar": {
+        "top_ids": [
+          20623,
+          264,
+          757
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          15.0
+        ],
+        "top_probs": [
+          0.47000816464424133,
+          0.47000816464424133,
+          0.023400327190756798
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          20623,
+          264,
+          757
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          15.0
+        ],
+        "top_probs": [
+          0.5006906390190125,
+          0.4418579339981079,
+          0.0219988115131855
+        ],
+        "top2_probability_margin": 0.05883270502090454,
+        "top1_logit_margin": 0.125,
+        "argmax": 20623
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/2037.json",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          481,
+          56,
+          51
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          19.0
+        ],
+        "top_probs": [
+          0.3484918475151062,
+          0.30754297971725464,
+          0.23951472342014313
+        ],
+        "top2_probability_margin": 0.04094886779785156,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          56,
+          51
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          19.0
+        ],
+        "top_probs": [
+          0.3348155617713928,
+          0.3348155617713928,
+          0.2301151603460312
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 56
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/459.json",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          120,
+          49,
+          53
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          16.5
+        ],
+        "top_probs": [
+          0.48349180817604065,
+          0.48349180817604065,
+          0.00885546114295721
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          120,
+          49,
+          53
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          16.5
+        ],
+        "top_probs": [
+          0.5118666887283325,
+          0.4517207443714142,
+          0.009375165216624737
+        ],
+        "top2_probability_margin": 0.060145944356918335,
+        "top1_logit_margin": 0.125,
+        "argmax": 120
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1298.json",
+      "position": 10,
+      "ar": {
+        "top_ids": [
+          301,
+          10,
+          1020
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          18.375
+        ],
+        "top_probs": [
+          0.44667935371398926,
+          0.3941931426525116,
+          0.08795637637376785
+        ],
+        "top2_probability_margin": 0.05248621106147766,
+        "top1_logit_margin": 0.125,
+        "argmax": 301
+      },
+      "loopahead": {
+        "top_ids": [
+          301,
+          10,
+          1020
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          18.375
+        ],
+        "top_probs": [
+          0.42536982893943787,
+          0.42536982893943787,
+          0.08376028388738632
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/172.json",
+      "position": 54,
+      "ar": {
+        "top_ids": [
+          1390,
+          40,
+          1006
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.875
+        ],
+        "top_probs": [
+          0.3692360818386078,
+          0.3258496820926666,
+          0.19763784110546112
+        ],
+        "top2_probability_margin": 0.04338639974594116,
+        "top1_logit_margin": 0.125,
+        "argmax": 1390
+      },
+      "loopahead": {
+        "top_ids": [
+          1390,
+          40,
+          1006
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          18.0
+        ],
+        "top_probs": [
+          0.3434436619281769,
+          0.3434436619281769,
+          0.2083091139793396
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/221.json",
+      "position": 148,
+      "ar": {
+        "top_ids": [
+          56,
+          50,
+          53
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.5
+        ],
+        "top_probs": [
+          0.4134446382522583,
+          0.3648636043071747,
+          0.10453516989946365
+        ],
+        "top2_probability_margin": 0.04858103394508362,
+        "top1_logit_margin": 0.125,
+        "argmax": 56
+      },
+      "loopahead": {
+        "top_ids": [
+          50,
+          56,
+          53
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.5
+        ],
+        "top_probs": [
+          0.41242921352386475,
+          0.36396750807762146,
+          0.10427843034267426
+        ],
+        "top2_probability_margin": 0.048461705446243286,
+        "top1_logit_margin": 0.125,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/geometry/477.json",
+      "position": 58,
+      "ar": {
+        "top_ids": [
+          5721,
+          481,
+          51
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          17.0
+        ],
+        "top_probs": [
+          0.24558238685131073,
+          0.216725692152977,
+          0.216725692152977
+        ],
+        "top2_probability_margin": 0.02885669469833374,
+        "top1_logit_margin": 0.125,
+        "argmax": 5721
+      },
+      "loopahead": {
+        "top_ids": [
+          481,
+          5721,
+          51
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          17.0
+        ],
+        "top_probs": [
+          0.24530182778835297,
+          0.21647809445858002,
+          0.21647809445858002
+        ],
+        "top2_probability_margin": 0.02882373332977295,
+        "top1_logit_margin": 0.125,
+        "argmax": 481
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/algebra/1578.json",
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          37018,
+          264,
+          877
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          14.8125
+        ],
+        "top_probs": [
+          0.4601755440235138,
+          0.4601755440235138,
+          0.035484928637742996
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          37018,
+          264,
+          877
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          14.8125
+        ],
+        "top_probs": [
+          0.4864753782749176,
+          0.4293130040168762,
+          0.03751295432448387
+        ],
+        "top2_probability_margin": 0.05716237425804138,
+        "top1_logit_margin": 0.125,
+        "argmax": 37018
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/190.json",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          524,
+          444,
+          1119
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          17.0
+        ],
+        "top_probs": [
+          0.31360164284706116,
+          0.2767524719238281,
+          0.16785886883735657
+        ],
+        "top2_probability_margin": 0.03684917092323303,
+        "top1_logit_margin": 0.125,
+        "argmax": 524
+      },
+      "loopahead": {
+        "top_ids": [
+          524,
+          444,
+          1119
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.0
+        ],
+        "top_probs": [
+          0.287606418132782,
+          0.287606418132782,
+          0.1744421124458313
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 444
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1995.json",
+      "position": 117,
+      "ar": {
+        "top_ids": [
+          65508,
+          10,
+          301
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          16.75
+        ],
+        "top_probs": [
+          0.45792677998542786,
+          0.40411898493766785,
+          0.09017112851142883
+        ],
+        "top2_probability_margin": 0.05380779504776001,
+        "top1_logit_margin": 0.125,
+        "argmax": 65508
+      },
+      "loopahead": {
+        "top_ids": [
+          65508,
+          10,
+          301
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          16.75
+        ],
+        "top_probs": [
+          0.43440163135528564,
+          0.43440163135528564,
+          0.08553874492645264
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/276.json",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          2227,
+          2078,
+          5122
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.375
+        ],
+        "top_probs": [
+          0.2392268180847168,
+          0.2392268180847168,
+          0.09972457587718964
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2078
+      },
+      "loopahead": {
+        "top_ids": [
+          2227,
+          2078,
+          888
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          16.375
+        ],
+        "top_probs": [
+          0.25925326347351074,
+          0.22879019379615784,
+          0.0953739583492279
+        ],
+        "top2_probability_margin": 0.030463069677352905,
+        "top1_logit_margin": 0.125,
+        "argmax": 2227
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2064.json",
+      "position": 143,
+      "ar": {
+        "top_ids": [
+          269,
+          10,
+          301
+        ],
+        "top_logits": [
+          20.75,
+          20.75,
+          18.625
+        ],
+        "top_probs": [
+          0.46957021951675415,
+          0.46957021951675415,
+          0.056082166731357574
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          269,
+          10,
+          301
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          18.625
+        ],
+        "top_probs": [
+          0.4971056282520294,
+          0.43869417905807495,
+          0.05937080457806587
+        ],
+        "top2_probability_margin": 0.05841144919395447,
+        "top1_logit_margin": 0.125,
+        "argmax": 269
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1126.json",
+      "position": 150,
+      "ar": {
+        "top_ids": [
+          893,
+          742,
+          402
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          17.375
+        ],
+        "top_probs": [
+          0.33949780464172363,
+          0.29960575699806213,
+          0.20591583847999573
+        ],
+        "top2_probability_margin": 0.0398920476436615,
+        "top1_logit_margin": 0.125,
+        "argmax": 893
+      },
+      "loopahead": {
+        "top_ids": [
+          893,
+          742,
+          402
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          17.5
+        ],
+        "top_probs": [
+          0.31679826974868774,
+          0.31679826974868774,
+          0.21773207187652588
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 742
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/1002.json",
+      "position": 6,
+      "ar": {
+        "top_ids": [
+          4669,
+          3755,
+          786
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.875
+        ],
+        "top_probs": [
+          0.2748578190803528,
+          0.24256117641925812,
+          0.24256117641925812
+        ],
+        "top2_probability_margin": 0.032296642661094666,
+        "top1_logit_margin": 0.125,
+        "argmax": 4669
+      },
+      "loopahead": {
+        "top_ids": [
+          4669,
+          3755,
+          786
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          17.875
+        ],
+        "top_probs": [
+          0.27103686332702637,
+          0.27103686332702637,
+          0.23918917775154114
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3755
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/1519.json",
+      "position": 60,
+      "ar": {
+        "top_ids": [
+          1080,
+          49,
+          481
+        ],
+        "top_logits": [
+          20.75,
+          20.75,
+          15.0
+        ],
+        "top_probs": [
+          0.49691376090049744,
+          0.49691376090049744,
+          0.001581567688845098
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          1080,
+          49,
+          481
+        ],
+        "top_logits": [
+          20.875,
+          20.625,
+          15.0
+        ],
+        "top_probs": [
+          0.5588598251342773,
+          0.4352404475212097,
+          0.0015697223134338856
+        ],
+        "top2_probability_margin": 0.12361937761306763,
+        "top1_logit_margin": 0.25,
+        "argmax": 1080
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/607.json",
+      "position": 293,
+      "ar": {
+        "top_ids": [
+          532,
+          345,
+          11070
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          19.0
+        ],
+        "top_probs": [
+          0.27991169691085815,
+          0.27991169691085815,
+          0.19238030910491943
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "loopahead": {
+        "top_ids": [
+          532,
+          345,
+          11070
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          19.0
+        ],
+        "top_probs": [
+          0.2898203134536743,
+          0.25576552748680115,
+          0.1991903930902481
+        ],
+        "top2_probability_margin": 0.03405478596687317,
+        "top1_logit_margin": 0.125,
+        "argmax": 532
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/686.json",
+      "position": 85,
+      "ar": {
+        "top_ids": [
+          107,
+          109,
+          49
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          16.625
+        ],
+        "top_probs": [
+          0.16774697601795197,
+          0.1480361819267273,
+          0.1480361819267273
+        ],
+        "top2_probability_margin": 0.01971079409122467,
+        "top1_logit_margin": 0.125,
+        "argmax": 107
+      },
+      "loopahead": {
+        "top_ids": [
+          49,
+          109,
+          107
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          16.625
+        ],
+        "top_probs": [
+          0.16819646954536438,
+          0.1484328657388687,
+          0.1484328657388687
+        ],
+        "top2_probability_margin": 0.019763603806495667,
+        "top1_logit_margin": 0.125,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/number_theory/234.json",
+      "position": 55,
+      "ar": {
+        "top_ids": [
+          65,
+          50,
+          49
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          17.0
+        ],
+        "top_probs": [
+          0.26774466037750244,
+          0.2362838238477707,
+          0.20851974189281464
+        ],
+        "top2_probability_margin": 0.03146083652973175,
+        "top1_logit_margin": 0.125,
+        "argmax": 65
+      },
+      "loopahead": {
+        "top_ids": [
+          50,
+          65,
+          49
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          17.0
+        ],
+        "top_probs": [
+          0.271607905626297,
+          0.23969313502311707,
+          0.2115284502506256
+        ],
+        "top2_probability_margin": 0.03191477060317993,
+        "top1_logit_margin": 0.125,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/number_theory/410.json",
+      "position": 88,
+      "ar": {
+        "top_ids": [
+          52,
+          49,
+          50
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          18.25
+        ],
+        "top_probs": [
+          0.15173093974590302,
+          0.13390208780765533,
+          0.1181681826710701
+        ],
+        "top2_probability_margin": 0.01782885193824768,
+        "top1_logit_margin": 0.125,
+        "argmax": 52
+      },
+      "loopahead": {
+        "top_ids": [
+          52,
+          49,
+          50
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          18.25
+        ],
+        "top_probs": [
+          0.14070893824100494,
+          0.14070893824100494,
+          0.12417519837617874
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/477.json",
+      "position": 37,
+      "ar": {
+        "top_ids": [
+          269,
+          264,
+          879
+        ],
+        "top_logits": [
+          16.125,
+          16.125,
+          15.625
+        ],
+        "top_probs": [
+          0.23995107412338257,
+          0.23995107412338257,
+          0.14553768932819366
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          269,
+          264,
+          879
+        ],
+        "top_logits": [
+          16.125,
+          16.0,
+          15.625
+        ],
+        "top_probs": [
+          0.2495298832654953,
+          0.22020934522151947,
+          0.15134753286838531
+        ],
+        "top2_probability_margin": 0.02932053804397583,
+        "top1_logit_margin": 0.125,
+        "argmax": 269
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1252.json",
+      "position": 166,
+      "ar": {
+        "top_ids": [
+          125,
+          40,
+          425
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          17.875
+        ],
+        "top_probs": [
+          0.4622352421283722,
+          0.40792116522789,
+          0.09101951122283936
+        ],
+        "top2_probability_margin": 0.05431407690048218,
+        "top1_logit_margin": 0.125,
+        "argmax": 125
+      },
+      "loopahead": {
+        "top_ids": [
+          125,
+          40,
+          425
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          17.875
+        ],
+        "top_probs": [
+          0.43806007504463196,
+          0.43806007504463196,
+          0.0862591415643692
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/870.json",
+      "position": 38,
+      "ar": {
+        "top_ids": [
+          8006,
+          1393,
+          3521
+        ],
+        "top_logits": [
+          18.0,
+          17.75,
+          16.625
+        ],
+        "top_probs": [
+          0.3899144232273102,
+          0.3036656677722931,
+          0.09858580678701401
+        ],
+        "top2_probability_margin": 0.08624875545501709,
+        "top1_logit_margin": 0.25,
+        "argmax": 8006
+      },
+      "loopahead": {
+        "top_ids": [
+          8006,
+          1393,
+          3521
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          16.625
+        ],
+        "top_probs": [
+          0.3462190628051758,
+          0.3462190628051758,
+          0.09919342398643494
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1393
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/346.json",
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          9034,
+          8772,
+          9408
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          15.8125
+        ],
+        "top_probs": [
+          0.29144906997680664,
+          0.29144906997680664,
+          0.08888693898916245
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 8772
+      },
+      "loopahead": {
+        "top_ids": [
+          9034,
+          8772,
+          9408
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          15.8125
+        ],
+        "top_probs": [
+          0.29972752928733826,
+          0.26450860500335693,
+          0.09141172468662262
+        ],
+        "top2_probability_margin": 0.03521892428398132,
+        "top1_logit_margin": 0.125,
+        "argmax": 9034
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1082.json",
+      "position": 188,
+      "ar": {
+        "top_ids": [
+          328,
+          46,
+          36
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          16.5
+        ],
+        "top_probs": [
+          0.36962705850601196,
+          0.36962705850601196,
+          0.09345635771751404
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 46
+      },
+      "loopahead": {
+        "top_ids": [
+          328,
+          46,
+          36
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          16.5
+        ],
+        "top_probs": [
+          0.39628657698631287,
+          0.34972167015075684,
+          0.08842349052429199
+        ],
+        "top2_probability_margin": 0.04656490683555603,
+        "top1_logit_margin": 0.125,
+        "argmax": 328
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/711.json",
+      "position": 66,
+      "ar": {
+        "top_ids": [
+          3090,
+          2541,
+          2225
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.125
+        ],
+        "top_probs": [
+          0.3701353967189789,
+          0.32664334774017334,
+          0.09358488768339157
+        ],
+        "top2_probability_margin": 0.04349204897880554,
+        "top1_logit_margin": 0.125,
+        "argmax": 3090
+      },
+      "loopahead": {
+        "top_ids": [
+          3090,
+          2541,
+          2225
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          17.125
+        ],
+        "top_probs": [
+          0.35621723532676697,
+          0.35621723532676697,
+          0.09006582200527191
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2541
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1508.json",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          410,
+          125,
+          45
+        ],
+        "top_logits": [
+          20.375,
+          20.125,
+          14.9375
+        ],
+        "top_probs": [
+          0.5578476190567017,
+          0.4344521760940552,
+          0.0024268298875540495
+        ],
+        "top2_probability_margin": 0.12339544296264648,
+        "top1_logit_margin": 0.25,
+        "argmax": 410
+      },
+      "loopahead": {
+        "top_ids": [
+          410,
+          125,
+          45
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          14.9375
+        ],
+        "top_probs": [
+          0.4962492287158966,
+          0.4962492287158966,
+          0.002446303842589259
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 125
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/2086.json",
+      "position": 149,
+      "ar": {
+        "top_ids": [
+          1006,
+          559,
+          121
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          18.875
+        ],
+        "top_probs": [
+          0.40923142433166504,
+          0.3611454367637634,
+          0.1505478322505951
+        ],
+        "top2_probability_margin": 0.04808598756790161,
+        "top1_logit_margin": 0.125,
+        "argmax": 1006
+      },
+      "loopahead": {
+        "top_ids": [
+          1006,
+          559,
+          121
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          19.0
+        ],
+        "top_probs": [
+          0.3682281970977783,
+          0.3682281970977783,
+          0.17393869161605835
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 559
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1388.json",
+      "position": 80,
+      "ar": {
+        "top_ids": [
+          402,
+          345,
+          318
+        ],
+        "top_logits": [
+          21.625,
+          21.5,
+          16.75
+        ],
+        "top_probs": [
+          0.5252401828765869,
+          0.46352285146713257,
+          0.004010258242487907
+        ],
+        "top2_probability_margin": 0.061717331409454346,
+        "top1_logit_margin": 0.125,
+        "argmax": 402
+      },
+      "loopahead": {
+        "top_ids": [
+          402,
+          345,
+          318
+        ],
+        "top_logits": [
+          21.625,
+          21.625,
+          16.75
+        ],
+        "top_probs": [
+          0.49477410316467285,
+          0.49477410316467285,
+          0.003777646692469716
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 345
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/1014.json",
+      "position": 23,
+      "ar": {
+        "top_ids": [
+          6730,
+          269,
+          2064
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          15.375
+        ],
+        "top_probs": [
+          0.3089975416660309,
+          0.3089975416660309,
+          0.08852928131818771
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 269
+      },
+      "loopahead": {
+        "top_ids": [
+          6730,
+          269,
+          2064
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          15.4375
+        ],
+        "top_probs": [
+          0.3333781361579895,
+          0.2942051589488983,
+          0.0897275060415268
+        ],
+        "top2_probability_margin": 0.039172977209091187,
+        "top1_logit_margin": 0.125,
+        "argmax": 6730
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/1056.json",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          425,
+          328,
+          410
+        ],
+        "top_logits": [
+          21.625,
+          21.5,
+          15.75
+        ],
+        "top_probs": [
+          0.5300922393798828,
+          0.46780475974082947,
+          0.0014889200683683157
+        ],
+        "top2_probability_margin": 0.062287479639053345,
+        "top1_logit_margin": 0.125,
+        "argmax": 425
+      },
+      "loopahead": {
+        "top_ids": [
+          425,
+          328,
+          410
+        ],
+        "top_logits": [
+          21.625,
+          21.625,
+          15.6875
+        ],
+        "top_probs": [
+          0.4990583062171936,
+          0.4990583062171936,
+          0.0013168242294341326
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 328
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1297.json",
+      "position": 35,
+      "ar": {
+        "top_ids": [
+          2182,
+          532,
+          1369
+        ],
+        "top_logits": [
+          16.125,
+          16.125,
+          14.375
+        ],
+        "top_probs": [
+          0.35232093930244446,
+          0.35232093930244446,
+          0.06122419610619545
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 532
+      },
+      "loopahead": {
+        "top_ids": [
+          2182,
+          532,
+          1369
+        ],
+        "top_logits": [
+          16.125,
+          16.0,
+          14.4375
+        ],
+        "top_probs": [
+          0.3623219132423401,
+          0.3197479546070099,
+          0.06702281534671783
+        ],
+        "top2_probability_margin": 0.0425739586353302,
+        "top1_logit_margin": 0.125,
+        "argmax": 2182
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/362.json",
+      "position": 475,
+      "ar": {
+        "top_ids": [
+          54,
+          50,
+          48
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          16.125
+        ],
+        "top_probs": [
+          0.4852943420410156,
+          0.42827075719833374,
+          0.04513940587639809
+        ],
+        "top2_probability_margin": 0.057023584842681885,
+        "top1_logit_margin": 0.125,
+        "argmax": 54
+      },
+      "loopahead": {
+        "top_ids": [
+          54,
+          50,
+          48
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          16.0
+        ],
+        "top_probs": [
+          0.4567541480064392,
+          0.4567541480064392,
+          0.04248475283384323
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/2058.json",
+      "position": 195,
+      "ar": {
+        "top_ids": [
+          51,
+          50,
+          54
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          19.5
+        ],
+        "top_probs": [
+          0.36119967699050903,
+          0.36119967699050903,
+          0.2190786749124527
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "loopahead": {
+        "top_ids": [
+          51,
+          50,
+          54
+        ],
+        "top_logits": [
+          20.125,
+          19.875,
+          19.625
+        ],
+        "top_probs": [
+          0.39383402466773987,
+          0.30671826004981995,
+          0.23887240886688232
+        ],
+        "top2_probability_margin": 0.08711576461791992,
+        "top1_logit_margin": 0.25,
+        "argmax": 51
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/224.json",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          461,
+          264,
+          269
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          15.5
+        ],
+        "top_probs": [
+          0.4886287450790405,
+          0.4886287450790405,
+          0.00894954800605774
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          461,
+          264,
+          269
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          15.5
+        ],
+        "top_probs": [
+          0.5196323990821838,
+          0.45857399702072144,
+          0.008399075828492641
+        ],
+        "top2_probability_margin": 0.0610584020614624,
+        "top1_logit_margin": 0.125,
+        "argmax": 461
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/483.json",
+      "position": 48,
+      "ar": {
+        "top_ids": [
+          743,
+          10,
+          428
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          16.625
+        ],
+        "top_probs": [
+          0.30573534965515137,
+          0.2698104977607727,
+          0.0773020014166832
+        ],
+        "top2_probability_margin": 0.03592485189437866,
+        "top1_logit_margin": 0.125,
+        "argmax": 743
+      },
+      "loopahead": {
+        "top_ids": [
+          743,
+          10,
+          428
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          16.625
+        ],
+        "top_probs": [
+          0.2807096540927887,
+          0.2807096540927887,
+          0.08042465895414352
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/145.json",
+      "position": 124,
+      "ar": {
+        "top_ids": [
+          654,
+          425,
+          43
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          17.125
+        ],
+        "top_probs": [
+          0.43881726264953613,
+          0.38725486397743225,
+          0.12572325766086578
+        ],
+        "top2_probability_margin": 0.05156239867210388,
+        "top1_logit_margin": 0.125,
+        "argmax": 654
+      },
+      "loopahead": {
+        "top_ids": [
+          654,
+          425,
+          43
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.125
+        ],
+        "top_probs": [
+          0.41783326864242554,
+          0.41783326864242554,
+          0.1197112426161766
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 425
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1410.json",
+      "position": 224,
+      "ar": {
+        "top_ids": [
+          425,
+          410,
+          45
+        ],
+        "top_logits": [
+          22.125,
+          22.0,
+          19.875
+        ],
+        "top_probs": [
+          0.48704296350479126,
+          0.4298139214515686,
+          0.051333948969841
+        ],
+        "top2_probability_margin": 0.057229042053222656,
+        "top1_logit_margin": 0.125,
+        "argmax": 425
+      },
+      "loopahead": {
+        "top_ids": [
+          425,
+          410,
+          45
+        ],
+        "top_logits": [
+          22.0,
+          22.0,
+          19.875
+        ],
+        "top_probs": [
+          0.4559073746204376,
+          0.4559073746204376,
+          0.054450370371341705
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 410
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/978.json",
+      "position": 24,
+      "ar": {
+        "top_ids": [
+          46,
+          44,
+          305
+        ],
+        "top_logits": [
+          18.5,
+          18.25,
+          15.3125
+        ],
+        "top_probs": [
+          0.5400229096412659,
+          0.4205702543258667,
+          0.02228940650820732
+        ],
+        "top2_probability_margin": 0.11945265531539917,
+        "top1_logit_margin": 0.25,
+        "argmax": 46
+      },
+      "loopahead": {
+        "top_ids": [
+          46,
+          44,
+          305
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          15.3125
+        ],
+        "top_probs": [
+          0.48009511828422546,
+          0.48009511828422546,
+          0.02245434932410717
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 44
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/580.json",
+      "position": 18,
+      "ar": {
+        "top_ids": [
+          328,
+          36,
+          46
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          18.0
+        ],
+        "top_probs": [
+          0.3569336235523224,
+          0.3149928152561188,
+          0.24531665444374084
+        ],
+        "top2_probability_margin": 0.04194080829620361,
+        "top1_logit_margin": 0.125,
+        "argmax": 328
+      },
+      "loopahead": {
+        "top_ids": [
+          328,
+          36,
+          46
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          18.0
+        ],
+        "top_probs": [
+          0.33997589349746704,
+          0.33997589349746704,
+          0.23366178572177887
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 36
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/101.json",
+      "position": 190,
+      "ar": {
+        "top_ids": [
+          514,
+          120,
+          425
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          18.25
+        ],
+        "top_probs": [
+          0.48398327827453613,
+          0.48398327827453613,
+          0.030940014868974686
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 120
+      },
+      "loopahead": {
+        "top_ids": [
+          514,
+          120,
+          425
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          18.25
+        ],
+        "top_probs": [
+          0.5152327418327332,
+          0.4546912610530853,
+          0.029067441821098328
+        ],
+        "top2_probability_margin": 0.06054148077964783,
+        "top1_logit_margin": 0.125,
+        "argmax": 514
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/1960.json",
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          295,
+          291,
+          44
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.5
+        ],
+        "top_probs": [
+          0.3588198125362396,
+          0.3588198125362396,
+          0.1920624077320099
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 291
+      },
+      "loopahead": {
+        "top_ids": [
+          295,
+          291,
+          44
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          17.5
+        ],
+        "top_probs": [
+          0.37552952766418457,
+          0.3314036428928375,
+          0.20100648701190948
+        ],
+        "top2_probability_margin": 0.044125884771347046,
+        "top1_logit_margin": 0.125,
+        "argmax": 295
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1566.json",
+      "position": 280,
+      "ar": {
+        "top_ids": [
+          1540,
+          40,
+          97
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          18.75
+        ],
+        "top_probs": [
+          0.29887741804122925,
+          0.29887741804122925,
+          0.2637583911418915
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "loopahead": {
+        "top_ids": [
+          1540,
+          40,
+          97
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          18.75
+        ],
+        "top_probs": [
+          0.32275837659835815,
+          0.28483328223228455,
+          0.25136449933052063
+        ],
+        "top2_probability_margin": 0.03792509436607361,
+        "top1_logit_margin": 0.125,
+        "argmax": 1540
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/339.json",
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          11223,
+          3662,
+          1064
+        ],
+        "top_logits": [
+          14.625,
+          14.625,
+          14.25
+        ],
+        "top_probs": [
+          0.18669044971466064,
+          0.18669044971466064,
+          0.12831033766269684
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3662
+      },
+      "loopahead": {
+        "top_ids": [
+          11223,
+          3662,
+          1064
+        ],
+        "top_logits": [
+          14.6875,
+          14.5625,
+          14.25
+        ],
+        "top_probs": [
+          0.19836600124835968,
+          0.17505738139152527,
+          0.12807472050189972
+        ],
+        "top2_probability_margin": 0.02330861985683441,
+        "top1_logit_margin": 0.125,
+        "argmax": 11223
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/1140.json",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          2673,
+          1853,
+          3029
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          17.5
+        ],
+        "top_probs": [
+          0.4304797351360321,
+          0.4304797351360321,
+          0.12333451211452484
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1853
+      },
+      "loopahead": {
+        "top_ids": [
+          2673,
+          1853,
+          3029
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.5
+        ],
+        "top_probs": [
+          0.46141302585601807,
+          0.4071955680847168,
+          0.11666348576545715
+        ],
+        "top2_probability_margin": 0.05421745777130127,
+        "top1_logit_margin": 0.125,
+        "argmax": 2673
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/955.json",
+      "position": 4,
+      "ar": {
+        "top_ids": [
+          1055,
+          405,
+          597
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          16.875
+        ],
+        "top_probs": [
+          0.49053341150283813,
+          0.49053341150283813,
+          0.01678512990474701
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 405
+      },
+      "loopahead": {
+        "top_ids": [
+          1055,
+          405,
+          597
+        ],
+        "top_logits": [
+          20.375,
+          20.125,
+          16.875
+        ],
+        "top_probs": [
+          0.551613986492157,
+          0.429597407579422,
+          0.016657300293445587
+        ],
+        "top2_probability_margin": 0.12201657891273499,
+        "top1_logit_margin": 0.25,
+        "argmax": 1055
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/975.json",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          597,
+          405,
+          36
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          16.125
+        ],
+        "top_probs": [
+          0.47234323620796204,
+          0.47234323620796204,
+          0.043934762477874756
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 405
+      },
+      "loopahead": {
+        "top_ids": [
+          597,
+          405,
+          36
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          16.25
+        ],
+        "top_probs": [
+          0.49713823199272156,
+          0.4387229382991791,
+          0.05239798128604889
+        ],
+        "top2_probability_margin": 0.05841529369354248,
+        "top1_logit_margin": 0.125,
+        "argmax": 597
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/geometry/947.json",
+      "position": 364,
+      "ar": {
+        "top_ids": [
+          2078,
+          1468,
+          888
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          16.5
+        ],
+        "top_probs": [
+          0.25556066632270813,
+          0.22553148865699768,
+          0.12071831524372101
+        ],
+        "top2_probability_margin": 0.03002917766571045,
+        "top1_logit_margin": 0.125,
+        "argmax": 2078
+      },
+      "loopahead": {
+        "top_ids": [
+          2078,
+          1468,
+          888
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.5
+        ],
+        "top_probs": [
+          0.24858558177947998,
+          0.24858558177947998,
+          0.11742351949214935
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1468
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/824.json",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          49,
+          36,
+          50
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          15.5625
+        ],
+        "top_probs": [
+          0.29362013936042786,
+          0.2591188848018646,
+          0.07902679592370987
+        ],
+        "top2_probability_margin": 0.03450125455856323,
+        "top1_logit_margin": 0.125,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          49,
+          36,
+          50
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          15.5
+        ],
+        "top_probs": [
+          0.2900174856185913,
+          0.2900174856185913,
+          0.07332790642976761
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 36
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/1203.json",
+      "position": 96,
+      "ar": {
+        "top_ids": [
+          125,
+          48,
+          46
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          17.125
+        ],
+        "top_probs": [
+          0.412210077047348,
+          0.412210077047348,
+          0.17183472216129303
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 48
+      },
+      "loopahead": {
+        "top_ids": [
+          125,
+          48,
+          46
+        ],
+        "top_logits": [
+          18.125,
+          17.875,
+          17.25
+        ],
+        "top_probs": [
+          0.45383501052856445,
+          0.3534470498561859,
+          0.18918657302856445
+        ],
+        "top2_probability_margin": 0.10038796067237854,
+        "top1_logit_margin": 0.25,
+        "argmax": 125
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/694.json",
+      "position": 37,
+      "ar": {
+        "top_ids": [
+          743,
+          10,
+          1189
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          15.625
+        ],
+        "top_probs": [
+          0.19230356812477112,
+          0.19230356812477112,
+          0.09083777666091919
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          743,
+          10,
+          301
+        ],
+        "top_logits": [
+          16.375,
+          16.25,
+          15.625
+        ],
+        "top_probs": [
+          0.19537855684757233,
+          0.17242096364498138,
+          0.09229029715061188
+        ],
+        "top2_probability_margin": 0.022957593202590942,
+        "top1_logit_margin": 0.125,
+        "argmax": 743
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/853.json",
+      "position": 39,
+      "ar": {
+        "top_ids": [
+          597,
+          405,
+          1055
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          18.0
+        ],
+        "top_probs": [
+          0.3905866742134094,
+          0.3905866742134094,
+          0.1845000833272934
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 405
+      },
+      "loopahead": {
+        "top_ids": [
+          597,
+          405,
+          1055
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.0
+        ],
+        "top_probs": [
+          0.42069318890571594,
+          0.3712604343891144,
+          0.17537100613117218
+        ],
+        "top2_probability_margin": 0.04943275451660156,
+        "top1_logit_margin": 0.125,
+        "argmax": 597
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1405.json",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          15058,
+          2233,
+          1198
+        ],
+        "top_logits": [
+          16.5,
+          16.5,
+          16.0
+        ],
+        "top_probs": [
+          0.2566577196121216,
+          0.2566577196121216,
+          0.15567079186439514
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2233
+      },
+      "loopahead": {
+        "top_ids": [
+          15058,
+          2233,
+          1198
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          15.9375
+        ],
+        "top_probs": [
+          0.26930561661720276,
+          0.23766136169433594,
+          0.15344570577144623
+        ],
+        "top2_probability_margin": 0.03164425492286682,
+        "top1_logit_margin": 0.125,
+        "argmax": 15058
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/number_theory/1172.json",
+      "position": 193,
+      "ar": {
+        "top_ids": [
+          57,
+          52,
+          51
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          17.125
+        ],
+        "top_probs": [
+          0.1296491026878357,
+          0.1296491026878357,
+          0.11441493034362793
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 52
+      },
+      "loopahead": {
+        "top_ids": [
+          55,
+          52,
+          51
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          17.125
+        ],
+        "top_probs": [
+          0.1227879747748375,
+          0.1227879747748375,
+          0.1227879747748375
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 51
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/2196.json",
+      "position": 83,
+      "ar": {
+        "top_ids": [
+          425,
+          40,
+          94
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          16.625
+        ],
+        "top_probs": [
+          0.45679256319999695,
+          0.4031180143356323,
+          0.08994778245687485
+        ],
+        "top2_probability_margin": 0.053674548864364624,
+        "top1_logit_margin": 0.125,
+        "argmax": 425
+      },
+      "loopahead": {
+        "top_ids": [
+          425,
+          40,
+          94
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          16.625
+        ],
+        "top_probs": [
+          0.42649590969085693,
+          0.42649590969085693,
+          0.09516410529613495
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 40
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1981.json",
+      "position": 119,
+      "ar": {
+        "top_ids": [
+          52,
+          50,
+          49
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          19.375
+        ],
+        "top_probs": [
+          0.2960388660430908,
+          0.2960388660430908,
+          0.2034643590450287
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "loopahead": {
+        "top_ids": [
+          52,
+          50,
+          49
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          19.375
+        ],
+        "top_probs": [
+          0.3229934573173523,
+          0.2850407361984253,
+          0.19590544700622559
+        ],
+        "top2_probability_margin": 0.037952721118927,
+        "top1_logit_margin": 0.125,
+        "argmax": 52
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/algebra/246.json",
+      "position": 118,
+      "ar": {
+        "top_ids": [
+          5507,
+          256,
+          6463
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          17.25
+        ],
+        "top_probs": [
+          0.2544742524623871,
+          0.2544742524623871,
+          0.13621024787425995
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 256
+      },
+      "loopahead": {
+        "top_ids": [
+          5507,
+          256,
+          6463
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.25
+        ],
+        "top_probs": [
+          0.280440092086792,
+          0.24748750030994415,
+          0.1324705183506012
+        ],
+        "top2_probability_margin": 0.03295259177684784,
+        "top1_logit_margin": 0.125,
+        "argmax": 5507
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1797.json",
+      "position": 210,
+      "ar": {
+        "top_ids": [
+          269,
+          264,
+          301
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          14.3125
+        ],
+        "top_probs": [
+          0.49757304787635803,
+          0.49757304787635803,
+          0.0014877165667712688
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 264
+      },
+      "loopahead": {
+        "top_ids": [
+          269,
+          264,
+          301
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          14.25
+        ],
+        "top_probs": [
+          0.5289145708084106,
+          0.46676546335220337,
+          0.0013110482832416892
+        ],
+        "top2_probability_margin": 0.062149107456207275,
+        "top1_logit_margin": 0.125,
+        "argmax": 269
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/prealgebra/805.json",
+      "position": 148,
+      "ar": {
+        "top_ids": [
+          864,
+          1694,
+          786
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          17.375
+        ],
+        "top_probs": [
+          0.2954050302505493,
+          0.2606940269470215,
+          0.2606940269470215
+        ],
+        "top2_probability_margin": 0.03471100330352783,
+        "top1_logit_margin": 0.125,
+        "argmax": 864
+      },
+      "loopahead": {
+        "top_ids": [
+          864,
+          786,
+          1694
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.375
+        ],
+        "top_probs": [
+          0.28540894389152527,
+          0.28540894389152527,
+          0.2518725097179413
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 786
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/902.json",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          40932,
+          2093,
+          2230
+        ],
+        "top_logits": [
+          15.875,
+          15.875,
+          15.5
+        ],
+        "top_probs": [
+          0.23303364217281342,
+          0.23303364217281342,
+          0.16016152501106262
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2093
+      },
+      "loopahead": {
+        "top_ids": [
+          40932,
+          2093,
+          2230
+        ],
+        "top_logits": [
+          15.875,
+          15.8125,
+          15.5
+        ],
+        "top_probs": [
+          0.2377980798482895,
+          0.2233906239271164,
+          0.16343608498573303
+        ],
+        "top2_probability_margin": 0.014407455921173096,
+        "top1_logit_margin": 0.0625,
+        "argmax": 40932
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/96.json",
+      "position": 39,
+      "ar": {
+        "top_ids": [
+          410,
+          654,
+          45
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.875
+        ],
+        "top_probs": [
+          0.40194106101989746,
+          0.35471174120903015,
+          0.21514356136322021
+        ],
+        "top2_probability_margin": 0.04722931981086731,
+        "top1_logit_margin": 0.125,
+        "argmax": 410
+      },
+      "loopahead": {
+        "top_ids": [
+          654,
+          410,
+          45
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.875
+        ],
+        "top_probs": [
+          0.4019583463668823,
+          0.35472699999809265,
+          0.2151528149843216
+        ],
+        "top2_probability_margin": 0.04723134636878967,
+        "top1_logit_margin": 0.125,
+        "argmax": 654
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "test/prealgebra/1930.json",
+      "position": 62,
+      "ar": {
+        "top_ids": [
+          51,
+          50,
+          110
+        ],
+        "top_logits": [
+          22.75,
+          22.75,
+          19.625
+        ],
+        "top_probs": [
+          0.4824385643005371,
+          0.4824385643005371,
+          0.021196871995925903
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 50
+      },
+      "loopahead": {
+        "top_ids": [
+          51,
+          50,
+          110
+        ],
+        "top_logits": [
+          22.75,
+          22.625,
+          19.75
+        ],
+        "top_probs": [
+          0.5098698139190674,
+          0.44995853304862976,
+          0.025384923443198204
+        ],
+        "top2_probability_margin": 0.05991128087043762,
+        "top1_logit_margin": 0.125,
+        "argmax": 51
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/precalculus/34.json",
+      "position": 120,
+      "ar": {
+        "top_ids": [
+          337,
+          10,
+          301
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          15.625
+        ],
+        "top_probs": [
+          0.4579550325870514,
+          0.4579550325870514,
+          0.04259645193815231
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10
+      },
+      "loopahead": {
+        "top_ids": [
+          337,
+          10,
+          301
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          15.625
+        ],
+        "top_probs": [
+          0.4841426610946655,
+          0.4272543787956238,
+          0.045032281428575516
+        ],
+        "top2_probability_margin": 0.05688828229904175,
+        "top1_logit_margin": 0.125,
+        "argmax": 337
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/counting_and_probability/181.json",
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          61,
+          43,
+          328
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          18.375
+        ],
+        "top_probs": [
+          0.4877305328845978,
+          0.4304206669330597,
+          0.07479590177536011
+        ],
+        "top2_probability_margin": 0.057309865951538086,
+        "top1_logit_margin": 0.125,
+        "argmax": 61
+      },
+      "loopahead": {
+        "top_ids": [
+          61,
+          43,
+          328
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          18.375
+        ],
+        "top_probs": [
+          0.4566091001033783,
+          0.4566091001033783,
+          0.07934676110744476
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 43
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "test/intermediate_algebra/1462.json",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          110,
+          49,
+          50
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          20.25
+        ],
+        "top_probs": [
+          0.38582706451416016,
+          0.3404911756515503,
+          0.23401594161987305
+        ],
+        "top2_probability_margin": 0.04533588886260986,
+        "top1_logit_margin": 0.125,
+        "argmax": 110
+      },
+      "loopahead": {
+        "top_ids": [
+          110,
+          49,
+          50
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          20.25
+        ],
+        "top_probs": [
+          0.3577839136123657,
+          0.3577839136123657,
+          0.24590104818344116
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+  "started_unix": 1794472361.2166455,
+  "input_provenance": {
+    "scope": "frozen-benchmark-input",
+    "path": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/inputs/math500.jsonl",
+    "sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+    "prompt_format": "chat",
+    "max_new_tokens": 512,
+    "stop_ids": [
+      65505,
+      65508
+    ]
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t0",
+      "sha256": "5e931648819e34ea820db7321fd851ddaf2f6139be7e333d659a9c2aea912664"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t0-v1",
+      "sha256": "43d6300453b5b36f3f4854a22b4b5829264ffbdd4c11c64f39f47b1b653fb8d7"
+    }
+  },
+  "limitations": [
+    "Instrumented BF16 replay only; timings are excluded from the benchmark.",
+    "Probability ties/margins describe actual reproduced divergences, not proof that all discrepancies disappear in FP32."
+  ],
+  "cuda_acquisition": {
+    "gpu": 1,
+    "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+    "pid": 133585,
+    "started_unix": 1794472362.4866405,
+    "acquired_unix": 1794472363.3317206,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "finished_unix": 1794475209.8671622
+}

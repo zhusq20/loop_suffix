@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "five_completed_rows_unchanged": true,
+  "complete_trainings": 5,
+  "previous_closed_gpu_hours": 124.53746790316369,
+  "current_closed_gpu_hours": 136.61136521842744,
+  "external_closed_gpu_hours": 12.073984357118606,
+  "running_training_cost_not_estimated": true,
+  "updated_row": {
+    "method": "dflash",
+    "model": "ouro-1.4b",
+    "counts": {
+      "dflash-train": {
+        "completed": 50000,
+        "expected": 50000
+      }
+    },
+    "generation_gpu_hours": {
+      "complete": 12.060123348765902
+    },
+    "feature_gpu_hours": {},
+    "training_gpu_hours": {},
+    "details": {},
+    "status": "pending",
+    "reservation_paths": [
+      "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-exit.json"
+    ],
+    "cost_source": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3",
+    "cost_scope": "Closed parent child-stage intervals plus observed gaps while the same GPU lease is held. Teacher nested reservations are not added again. CPU audit and one-update smoke are separate extras. Running-stage durations are not estimated. Final bound is the completion-marker timestamp; the unrecorded final marker-to-lock-release interval is excluded."
+  },
+  "checked_unix": 1794472242.0350187
+}

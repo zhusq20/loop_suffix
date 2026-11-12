@@ -1,0 +1,13 @@
+{
+  "recovered_unix": 1794479057.5386047,
+  "status": "pinned_source_restored_before_restart",
+  "cause": "Assistant added optional archive-input flags to a collector pinned by the CPU waiter; its source guard terminated the waiter.",
+  "old_pid": 55011,
+  "old_process_absent": true,
+  "old_exit_code": null,
+  "old_exit_evidence": "unknown_exit; saved traceback is not a waitpid receipt",
+  "spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c",
+  "restored_collector_sha256": "568f2c1c6fbd88db82447679ee17346f96992ccde9b91c08f94b3e8b2c5ec55a",
+  "archival_collector_sha256": "6f370c26d706408c9bcd44ea2aa13b58a52581da790d01603379f8fa7582b392",
+  "scope": "CPU waiter recovery only; no restarted training or measurements; all original source pins retained"
+}

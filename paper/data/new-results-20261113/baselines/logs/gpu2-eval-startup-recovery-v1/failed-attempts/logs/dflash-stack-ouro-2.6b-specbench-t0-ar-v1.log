@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 174, in <module>
+    main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 60, in main
+    raise RuntimeError('GPU occupied; timing cannot be shared')
+RuntimeError: GPU occupied; timing cannot be shared

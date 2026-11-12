@@ -1,0 +1,26 @@
+{
+  "pid": 509470,
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/loopahead-train/huginn-3.5b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-training-smoke-v1",
+    "--epochs",
+    "1",
+    "--micro-batch",
+    "1",
+    "--accumulation",
+    "1",
+    "--cpu-groups",
+    "8-11",
+    "--checkpoint-layers",
+    "--smoke"
+  ],
+  "started_unix": 1794297761.7111175,
+  "note": "Uses incomplete LoopAhead teachers only for one-update compatibility smoke; never formal DFlash data or result"
+}

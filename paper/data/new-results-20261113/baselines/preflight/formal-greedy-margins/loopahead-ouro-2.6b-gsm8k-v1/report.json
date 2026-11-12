@@ -1,0 +1,4555 @@
+{
+  "status": "complete",
+  "model": "ouro-2.6b",
+  "dataset": "gsm8k",
+  "cases": 98,
+  "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+  "results": [
+    {
+      "source_id": "gsm8k/test/1160",
+      "position": 98,
+      "ar": {
+        "top_ids": [
+          6219,
+          966,
+          4422
+        ],
+        "top_logits": [
+          21.625,
+          21.625,
+          19.0
+        ],
+        "top_probs": [
+          0.4694826602935791,
+          0.4694826602935791,
+          0.034009210765361786
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 966
+      },
+      "loopahead": {
+        "top_ids": [
+          6219,
+          966,
+          4422
+        ],
+        "top_logits": [
+          21.625,
+          21.5,
+          19.0
+        ],
+        "top_probs": [
+          0.49690598249435425,
+          0.4385179877281189,
+          0.03599575161933899
+        ],
+        "top2_probability_margin": 0.05838799476623535,
+        "top1_logit_margin": 0.125,
+        "argmax": 6219
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/745",
+      "position": 150,
+      "ar": {
+        "top_ids": [
+          731,
+          446,
+          1232
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          14.0625
+        ],
+        "top_probs": [
+          0.49944624304771423,
+          0.49944624304771423,
+          0.0007993151084519923
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 446
+      },
+      "loopahead": {
+        "top_ids": [
+          731,
+          446,
+          1232
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          14.0625
+        ],
+        "top_probs": [
+          0.5306544899940491,
+          0.4683009088039398,
+          0.0007494700839743018
+        ],
+        "top2_probability_margin": 0.06235358119010925,
+        "top1_logit_margin": 0.125,
+        "argmax": 731
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/804",
+      "position": 39,
+      "ar": {
+        "top_ids": [
+          378,
+          198,
+          504
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          16.0
+        ],
+        "top_probs": [
+          0.48572778701782227,
+          0.48572778701782227,
+          0.011423222720623016
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          378,
+          198,
+          504
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          16.125
+        ],
+        "top_probs": [
+          0.5162506103515625,
+          0.45558953285217285,
+          0.012141050770878792
+        ],
+        "top2_probability_margin": 0.06066107749938965,
+        "top1_logit_margin": 0.125,
+        "argmax": 378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/54",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          37,
+          36,
+          35
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          16.875
+        ],
+        "top_probs": [
+          0.3507261574268341,
+          0.30951476097106934,
+          0.1290249526500702
+        ],
+        "top2_probability_margin": 0.04121139645576477,
+        "top1_logit_margin": 0.125,
+        "argmax": 37
+      },
+      "loopahead": {
+        "top_ids": [
+          37,
+          36,
+          35
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          16.75
+        ],
+        "top_probs": [
+          0.3345697820186615,
+          0.3345697820186615,
+          0.12308135628700256
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 36
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/261",
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          5713,
+          1626,
+          1094
+        ],
+        "top_logits": [
+          17.75,
+          17.625,
+          17.125
+        ],
+        "top_probs": [
+          0.25663360953330994,
+          0.22647836804389954,
+          0.13736608624458313
+        ],
+        "top2_probability_margin": 0.0301552414894104,
+        "top1_logit_margin": 0.125,
+        "argmax": 5713
+      },
+      "loopahead": {
+        "top_ids": [
+          5713,
+          1626,
+          1094
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          17.125
+        ],
+        "top_probs": [
+          0.249662384390831,
+          0.249662384390831,
+          0.13363464176654816
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1626
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/191",
+      "position": 83,
+      "ar": {
+        "top_ids": [
+          198,
+          31,
+          282
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          16.75
+        ],
+        "top_probs": [
+          0.43568193912506104,
+          0.43568193912506104,
+          0.06681399047374725
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 31
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          31,
+          282
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          16.875
+        ],
+        "top_probs": [
+          0.4593571126461029,
+          0.4053812325000763,
+          0.07044469565153122
+        ],
+        "top2_probability_margin": 0.05397588014602661,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/586",
+      "position": 18,
+      "ar": {
+        "top_ids": [
+          37,
+          33,
+          34
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          19.0
+        ],
+        "top_probs": [
+          0.432052344083786,
+          0.38128483295440674,
+          0.18010620772838593
+        ],
+        "top2_probability_margin": 0.05076751112937927,
+        "top1_logit_margin": 0.125,
+        "argmax": 37
+      },
+      "loopahead": {
+        "top_ids": [
+          37,
+          33,
+          34
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          19.125
+        ],
+        "top_probs": [
+          0.4019034206867218,
+          0.4019034206867218,
+          0.1898457407951355
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/680",
+      "position": 45,
+      "ar": {
+        "top_ids": [
+          523,
+          314,
+          736
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.375
+        ],
+        "top_probs": [
+          0.2928581237792969,
+          0.2584463953971863,
+          0.17762744426727295
+        ],
+        "top2_probability_margin": 0.034411728382110596,
+        "top1_logit_margin": 0.125,
+        "argmax": 523
+      },
+      "loopahead": {
+        "top_ids": [
+          523,
+          314,
+          736
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          18.375
+        ],
+        "top_probs": [
+          0.27185025811195374,
+          0.27185025811195374,
+          0.1868397742509842
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/151",
+      "position": 282,
+      "ar": {
+        "top_ids": [
+          17308,
+          7230,
+          2068
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          20.625
+        ],
+        "top_probs": [
+          0.32384517788887024,
+          0.32384517788887024,
+          0.2225753366947174
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7230
+      },
+      "loopahead": {
+        "top_ids": [
+          17308,
+          7230,
+          2068
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          20.625
+        ],
+        "top_probs": [
+          0.35030096769332886,
+          0.30913951992988586,
+          0.21246826648712158
+        ],
+        "top2_probability_margin": 0.04116144776344299,
+        "top1_logit_margin": 0.125,
+        "argmax": 17308
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/107",
+      "position": 240,
+      "ar": {
+        "top_ids": [
+          335,
+          282,
+          30
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          19.25
+        ],
+        "top_probs": [
+          0.4674818813800812,
+          0.41255131363868713,
+          0.11819793283939362
+        ],
+        "top2_probability_margin": 0.05493056774139404,
+        "top1_logit_margin": 0.125,
+        "argmax": 335
+      },
+      "loopahead": {
+        "top_ids": [
+          335,
+          282,
+          30
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          19.25
+        ],
+        "top_probs": [
+          0.4365212619304657,
+          0.4365212619304657,
+          0.12506543099880219
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1077",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          1116,
+          198,
+          2959
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          14.625
+        ],
+        "top_probs": [
+          0.5076919794082642,
+          0.4480366110801697,
+          0.01053681131452322
+        ],
+        "top2_probability_margin": 0.05965536832809448,
+        "top1_logit_margin": 0.125,
+        "argmax": 1116
+      },
+      "loopahead": {
+        "top_ids": [
+          1116,
+          198,
+          2959
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          14.5625
+        ],
+        "top_probs": [
+          0.4772304594516754,
+          0.4772304594516754,
+          0.010543393902480602
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/800",
+      "position": 71,
+      "ar": {
+        "top_ids": [
+          803,
+          737,
+          416
+        ],
+        "top_logits": [
+          22.0,
+          22.0,
+          19.75
+        ],
+        "top_probs": [
+          0.47106876969337463,
+          0.47106876969337463,
+          0.04965028166770935
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 737
+      },
+      "loopahead": {
+        "top_ids": [
+          803,
+          737,
+          416
+        ],
+        "top_logits": [
+          22.0,
+          21.875,
+          19.75
+        ],
+        "top_probs": [
+          0.49860888719558716,
+          0.4400207996368408,
+          0.05255299061536789
+        ],
+        "top2_probability_margin": 0.05858808755874634,
+        "top1_logit_margin": 0.125,
+        "argmax": 803
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/209",
+      "position": 21,
+      "ar": {
+        "top_ids": [
+          1046,
+          198,
+          4311
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.0
+        ],
+        "top_probs": [
+          0.3821347951889038,
+          0.337232768535614,
+          0.08526580035686493
+        ],
+        "top2_probability_margin": 0.044902026653289795,
+        "top1_logit_margin": 0.125,
+        "argmax": 1046
+      },
+      "loopahead": {
+        "top_ids": [
+          1046,
+          198,
+          4311
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.0
+        ],
+        "top_probs": [
+          0.3540385365486145,
+          0.3540385365486145,
+          0.08951495587825775
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/485",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          347,
+          260,
+          874
+        ],
+        "top_logits": [
+          21.125,
+          21.125,
+          16.875
+        ],
+        "top_probs": [
+          0.4958168864250183,
+          0.4958168864250183,
+          0.007072447799146175
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          347,
+          260,
+          874
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          16.875
+        ],
+        "top_probs": [
+          0.52649986743927,
+          0.4646344780921936,
+          0.0075101167894899845
+        ],
+        "top2_probability_margin": 0.061865389347076416,
+        "top1_logit_margin": 0.125,
+        "argmax": 347
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/430",
+      "position": 103,
+      "ar": {
+        "top_ids": [
+          3403,
+          2719,
+          37096
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          17.75
+        ],
+        "top_probs": [
+          0.4672307074069977,
+          0.41232964396476746,
+          0.03835263103246689
+        ],
+        "top2_probability_margin": 0.054901063442230225,
+        "top1_logit_margin": 0.125,
+        "argmax": 3403
+      },
+      "loopahead": {
+        "top_ids": [
+          3403,
+          2719,
+          37096
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          17.75
+        ],
+        "top_probs": [
+          0.4387112259864807,
+          0.4387112259864807,
+          0.040806498378515244
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2719
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/106",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          48126,
+          1792,
+          1672
+        ],
+        "top_logits": [
+          16.0,
+          16.0,
+          15.9375
+        ],
+        "top_probs": [
+          0.2144974172115326,
+          0.2144974172115326,
+          0.20150168240070343
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1792
+      },
+      "loopahead": {
+        "top_ids": [
+          48126,
+          1792,
+          1672
+        ],
+        "top_logits": [
+          16.0,
+          15.9375,
+          15.875
+        ],
+        "top_probs": [
+          0.22071042656898499,
+          0.20733825862407684,
+          0.194776251912117
+        ],
+        "top2_probability_margin": 0.013372167944908142,
+        "top1_logit_margin": 0.0625,
+        "argmax": 48126
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/873",
+      "position": 51,
+      "ar": {
+        "top_ids": [
+          17557,
+          7529,
+          808
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          20.25
+        ],
+        "top_probs": [
+          0.37866801023483276,
+          0.334173321723938,
+          0.15785230696201324
+        ],
+        "top2_probability_margin": 0.044494688510894775,
+        "top1_logit_margin": 0.125,
+        "argmax": 17557
+      },
+      "loopahead": {
+        "top_ids": [
+          17557,
+          7529,
+          808
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          20.25
+        ],
+        "top_probs": [
+          0.3541388213634491,
+          0.3541388213634491,
+          0.1672833412885666
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7529
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/186",
+      "position": 137,
+      "ar": {
+        "top_ids": [
+          48126,
+          1792,
+          1672
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          17.5
+        ],
+        "top_probs": [
+          0.3523339629173279,
+          0.3523339629173279,
+          0.1664307862520218
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1792
+      },
+      "loopahead": {
+        "top_ids": [
+          48126,
+          1792,
+          1672
+        ],
+        "top_logits": [
+          18.375,
+          18.125,
+          17.5
+        ],
+        "top_probs": [
+          0.3972614109516144,
+          0.3093875050544739,
+          0.16560319066047668
+        ],
+        "top2_probability_margin": 0.0878739058971405,
+        "top1_logit_margin": 0.25,
+        "argmax": 48126
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/293",
+      "position": 64,
+      "ar": {
+        "top_ids": [
+          354,
+          216,
+          1232
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          15.9375
+        ],
+        "top_probs": [
+          0.5172997117042542,
+          0.4565154016017914,
+          0.012950345873832703
+        ],
+        "top2_probability_margin": 0.06078431010246277,
+        "top1_logit_margin": 0.125,
+        "argmax": 354
+      },
+      "loopahead": {
+        "top_ids": [
+          354,
+          216,
+          1232
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          15.9375
+        ],
+        "top_probs": [
+          0.4861142337322235,
+          0.4861142337322235,
+          0.013790000230073929
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/102",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          13645,
+          1792,
+          48126
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          15.75
+        ],
+        "top_probs": [
+          0.33002591133117676,
+          0.33002591133117676,
+          0.13757526874542236
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1792
+      },
+      "loopahead": {
+        "top_ids": [
+          13645,
+          1792,
+          48126
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          15.6875
+        ],
+        "top_probs": [
+          0.36311253905296326,
+          0.3204456865787506,
+          0.12548834085464478
+        ],
+        "top2_probability_margin": 0.042666852474212646,
+        "top1_logit_margin": 0.125,
+        "argmax": 13645
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1100",
+      "position": 4,
+      "ar": {
+        "top_ids": [
+          1230,
+          655,
+          1902
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          18.625
+        ],
+        "top_probs": [
+          0.3818674087524414,
+          0.33699679374694824,
+          0.20439890027046204
+        ],
+        "top2_probability_margin": 0.044870615005493164,
+        "top1_logit_margin": 0.125,
+        "argmax": 1230
+      },
+      "loopahead": {
+        "top_ids": [
+          1230,
+          655,
+          1902
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          18.5
+        ],
+        "top_probs": [
+          0.36495134234428406,
+          0.36495134234428406,
+          0.19534438848495483
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 655
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1013",
+      "position": 35,
+      "ar": {
+        "top_ids": [
+          567,
+          354,
+          31
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          17.375
+        ],
+        "top_probs": [
+          0.447153240442276,
+          0.447153240442276,
+          0.06051560863852501
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 354
+      },
+      "loopahead": {
+        "top_ids": [
+          567,
+          354,
+          31
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          17.375
+        ],
+        "top_probs": [
+          0.4774525463581085,
+          0.4213503897190094,
+          0.05702357366681099
+        ],
+        "top2_probability_margin": 0.05610215663909912,
+        "top1_logit_margin": 0.125,
+        "argmax": 567
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1286",
+      "position": 55,
+      "ar": {
+        "top_ids": [
+          378,
+          198,
+          4882
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          13.625
+        ],
+        "top_probs": [
+          0.493255615234375,
+          0.493255615234375,
+          0.004267497453838587
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          378,
+          198,
+          4882
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          13.75
+        ],
+        "top_probs": [
+          0.5241587162017822,
+          0.462568461894989,
+          0.004534861538559198
+        ],
+        "top2_probability_margin": 0.06159025430679321,
+        "top1_logit_margin": 0.125,
+        "argmax": 378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/168",
+      "position": 39,
+      "ar": {
+        "top_ids": [
+          48126,
+          24,
+          1672
+        ],
+        "top_logits": [
+          16.375,
+          16.25,
+          16.125
+        ],
+        "top_probs": [
+          0.20827598869800568,
+          0.18380291759967804,
+          0.1622055023908615
+        ],
+        "top2_probability_margin": 0.024473071098327637,
+        "top1_logit_margin": 0.125,
+        "argmax": 48126
+      },
+      "loopahead": {
+        "top_ids": [
+          48126,
+          24,
+          1672
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          16.125
+        ],
+        "top_probs": [
+          0.1884600669145584,
+          0.1884600669145584,
+          0.16631542146205902
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 24
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/276",
+      "position": 228,
+      "ar": {
+        "top_ids": [
+          2696,
+          7009,
+          8693
+        ],
+        "top_logits": [
+          23.0,
+          22.875,
+          22.0
+        ],
+        "top_probs": [
+          0.3819795250892639,
+          0.3370957374572754,
+          0.14052243530750275
+        ],
+        "top2_probability_margin": 0.044883787631988525,
+        "top1_logit_margin": 0.125,
+        "argmax": 2696
+      },
+      "loopahead": {
+        "top_ids": [
+          7009,
+          2696,
+          8693
+        ],
+        "top_logits": [
+          23.0,
+          22.875,
+          22.125
+        ],
+        "top_probs": [
+          0.37496891617774963,
+          0.3309088945388794,
+          0.1563102900981903
+        ],
+        "top2_probability_margin": 0.04406002163887024,
+        "top1_logit_margin": 0.125,
+        "argmax": 7009
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "gsm8k/test/965",
+      "position": 150,
+      "ar": {
+        "top_ids": [
+          5615,
+          4052,
+          2988
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          16.75
+        ],
+        "top_probs": [
+          0.45697420835494995,
+          0.45697420835494995,
+          0.061844732612371445
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 4052
+      },
+      "loopahead": {
+        "top_ids": [
+          5615,
+          4052,
+          2988
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          16.75
+        ],
+        "top_probs": [
+          0.4824782907962799,
+          0.4257856011390686,
+          0.06529633700847626
+        ],
+        "top2_probability_margin": 0.056692689657211304,
+        "top1_logit_margin": 0.125,
+        "argmax": 5615
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1257",
+      "position": 118,
+      "ar": {
+        "top_ids": [
+          9528,
+          198,
+          4311
+        ],
+        "top_logits": [
+          21.625,
+          21.5,
+          21.125
+        ],
+        "top_probs": [
+          0.344704270362854,
+          0.3042004406452179,
+          0.20907370746135712
+        ],
+        "top2_probability_margin": 0.04050382971763611,
+        "top1_logit_margin": 0.125,
+        "argmax": 9528
+      },
+      "loopahead": {
+        "top_ids": [
+          9528,
+          198,
+          4311
+        ],
+        "top_logits": [
+          21.5,
+          21.5,
+          21.0
+        ],
+        "top_probs": [
+          0.3257087469100952,
+          0.3257087469100952,
+          0.19755233824253082
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/231",
+      "position": 25,
+      "ar": {
+        "top_ids": [
+          37,
+          34,
+          35
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          18.125
+        ],
+        "top_probs": [
+          0.44551536440849304,
+          0.44551536440849304,
+          0.06832199543714523
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          37,
+          34,
+          35
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.125
+        ],
+        "top_probs": [
+          0.4765561819076538,
+          0.4205593466758728,
+          0.06449486315250397
+        ],
+        "top2_probability_margin": 0.055996835231781006,
+        "top1_logit_margin": 0.125,
+        "argmax": 37
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/475",
+      "position": 83,
+      "ar": {
+        "top_ids": [
+          17647,
+          5345,
+          2931
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          19.0
+        ],
+        "top_probs": [
+          0.2816767692565918,
+          0.24857887625694275,
+          0.24857887625694275
+        ],
+        "top2_probability_margin": 0.03309789299964905,
+        "top1_logit_margin": 0.125,
+        "argmax": 17647
+      },
+      "loopahead": {
+        "top_ids": [
+          17647,
+          5345,
+          2931
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          19.125
+        ],
+        "top_probs": [
+          0.26392751932144165,
+          0.26392751932144165,
+          0.26392751932144165
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2931
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/894",
+      "position": 78,
+      "ar": {
+        "top_ids": [
+          1094,
+          1046,
+          198
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          18.125
+        ],
+        "top_probs": [
+          0.21057045459747314,
+          0.21057045459747314,
+          0.21057045459747314
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          1094,
+          1046,
+          198
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          18.125
+        ],
+        "top_probs": [
+          0.2320432811975479,
+          0.20477747917175293,
+          0.20477747917175293
+        ],
+        "top2_probability_margin": 0.027265802025794983,
+        "top1_logit_margin": 0.125,
+        "argmax": 1094
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/583",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          13860,
+          3473,
+          32257
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          19.625
+        ],
+        "top_probs": [
+          0.3476659059524536,
+          0.3476659059524536,
+          0.1642257422208786
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3473
+      },
+      "loopahead": {
+        "top_ids": [
+          13860,
+          3473,
+          32257
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          19.625
+        ],
+        "top_probs": [
+          0.362493097782135,
+          0.3198990225791931,
+          0.17122963070869446
+        ],
+        "top2_probability_margin": 0.042594075202941895,
+        "top1_logit_margin": 0.125,
+        "argmax": 13860
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/152",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          3772,
+          216,
+          253
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          13.875
+        ],
+        "top_probs": [
+          0.4927608072757721,
+          0.4927608072757721,
+          0.006202943157404661
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          3772,
+          216,
+          253
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          13.8125
+        ],
+        "top_probs": [
+          0.5234765410423279,
+          0.4619664251804352,
+          0.006190353538841009
+        ],
+        "top2_probability_margin": 0.0615101158618927,
+        "top1_logit_margin": 0.125,
+        "argmax": 3772
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/487",
+      "position": 144,
+      "ar": {
+        "top_ids": [
+          288,
+          216,
+          253
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          18.625
+        ],
+        "top_probs": [
+          0.44152531027793884,
+          0.44152531027793884,
+          0.11163507401943207
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          288,
+          216,
+          253
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.625
+        ],
+        "top_probs": [
+          0.4724983870983124,
+          0.4169783592224121,
+          0.10542864352464676
+        ],
+        "top2_probability_margin": 0.05552002787590027,
+        "top1_logit_margin": 0.125,
+        "argmax": 288
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1012",
+      "position": 92,
+      "ar": {
+        "top_ids": [
+          48126,
+          1792,
+          1672
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          18.375
+        ],
+        "top_probs": [
+          0.4388110935688019,
+          0.4388110935688019,
+          0.1109488233923912
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1792
+      },
+      "loopahead": {
+        "top_ids": [
+          48126,
+          1792,
+          1672
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          18.375
+        ],
+        "top_probs": [
+          0.46282076835632324,
+          0.40843790769577026,
+          0.1170194149017334
+        ],
+        "top2_probability_margin": 0.05438286066055298,
+        "top1_logit_margin": 0.125,
+        "argmax": 48126
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1208",
+      "position": 48,
+      "ar": {
+        "top_ids": [
+          1885,
+          260,
+          3472
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          18.0
+        ],
+        "top_probs": [
+          0.41548630595207214,
+          0.41548630595207214,
+          0.08181410282850266
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          1885,
+          260,
+          3472
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          17.875
+        ],
+        "top_probs": [
+          0.4447799324989319,
+          0.3925169110298157,
+          0.07729115337133408
+        ],
+        "top2_probability_margin": 0.05226302146911621,
+        "top1_logit_margin": 0.125,
+        "argmax": 1885
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/903",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          3346,
+          919,
+          1042
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          19.25
+        ],
+        "top_probs": [
+          0.25755786895751953,
+          0.25755786895751953,
+          0.2005862593650818
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 919
+      },
+      "loopahead": {
+        "top_ids": [
+          3346,
+          919,
+          1042
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          19.25
+        ],
+        "top_probs": [
+          0.2820587754249573,
+          0.24891600012779236,
+          0.19385598599910736
+        ],
+        "top2_probability_margin": 0.03314277529716492,
+        "top1_logit_margin": 0.125,
+        "argmax": 3346
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/975",
+      "position": 6,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          284
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.125
+        ],
+        "top_probs": [
+          0.3979150652885437,
+          0.3979150652885437,
+          0.14638477563858032
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          28,
+          284
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          17.125
+        ],
+        "top_probs": [
+          0.41766583919525146,
+          0.36858880519866943,
+          0.15365070104599
+        ],
+        "top2_probability_margin": 0.04907703399658203,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/479",
+      "position": 133,
+      "ar": {
+        "top_ids": [
+          327,
+          282,
+          288
+        ],
+        "top_logits": [
+          22.25,
+          22.25,
+          11.125
+        ],
+        "top_probs": [
+          0.49998170137405396,
+          0.49998170137405396,
+          7.369329523498891e-06
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "loopahead": {
+        "top_ids": [
+          327,
+          282,
+          288
+        ],
+        "top_logits": [
+          22.25,
+          22.125,
+          11.125
+        ],
+        "top_probs": [
+          0.5311890840530396,
+          0.4687727391719818,
+          7.82930146669969e-06
+        ],
+        "top2_probability_margin": 0.06241634488105774,
+        "top1_logit_margin": 0.125,
+        "argmax": 327
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/97",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          5482,
+          3346,
+          1042
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          19.125
+        ],
+        "top_probs": [
+          0.29248639941215515,
+          0.29248639941215515,
+          0.25811833143234253
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3346
+      },
+      "loopahead": {
+        "top_ids": [
+          5482,
+          3346,
+          1042
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          19.25
+        ],
+        "top_probs": [
+          0.28084784746170044,
+          0.28084784746170044,
+          0.28084784746170044
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1042
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/488",
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          530,
+          28,
+          260
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.375
+        ],
+        "top_probs": [
+          0.3122727870941162,
+          0.2755797803401947,
+          0.14750723540782928
+        ],
+        "top2_probability_margin": 0.03669300675392151,
+        "top1_logit_margin": 0.125,
+        "argmax": 530
+      },
+      "loopahead": {
+        "top_ids": [
+          530,
+          28,
+          260
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          16.375
+        ],
+        "top_probs": [
+          0.29955098032951355,
+          0.29955098032951355,
+          0.1414978802204132
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/714",
+      "position": 23,
+      "ar": {
+        "top_ids": [
+          288,
+          284,
+          351
+        ],
+        "top_logits": [
+          22.5,
+          22.375,
+          17.5
+        ],
+        "top_probs": [
+          0.5272529125213623,
+          0.4652990698814392,
+          0.003552602371200919
+        ],
+        "top2_probability_margin": 0.061953842639923096,
+        "top1_logit_margin": 0.125,
+        "argmax": 288
+      },
+      "loopahead": {
+        "top_ids": [
+          288,
+          284,
+          351
+        ],
+        "top_logits": [
+          22.375,
+          22.375,
+          17.625
+        ],
+        "top_probs": [
+          0.49578529596328735,
+          0.49578529596328735,
+          0.0042893835343420506
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 284
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/855",
+      "position": 137,
+      "ar": {
+        "top_ids": [
+          8208,
+          808,
+          9773
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          19.5
+        ],
+        "top_probs": [
+          0.36084356904029846,
+          0.31844332814216614,
+          0.13274694979190826
+        ],
+        "top2_probability_margin": 0.042400240898132324,
+        "top1_logit_margin": 0.125,
+        "argmax": 8208
+      },
+      "loopahead": {
+        "top_ids": [
+          8208,
+          808,
+          9773
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          19.5
+        ],
+        "top_probs": [
+          0.3330923616886139,
+          0.3330923616886139,
+          0.1388535499572754
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 808
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/395",
+      "position": 51,
+      "ar": {
+        "top_ids": [
+          37,
+          34,
+          36
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          19.75
+        ],
+        "top_probs": [
+          0.31162455677986145,
+          0.2750077247619629,
+          0.2426934540271759
+        ],
+        "top2_probability_margin": 0.03661683201789856,
+        "top1_logit_margin": 0.125,
+        "argmax": 37
+      },
+      "loopahead": {
+        "top_ids": [
+          37,
+          34,
+          36
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          19.75
+        ],
+        "top_probs": [
+          0.2889805734157562,
+          0.2889805734157562,
+          0.2550244629383087
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/945",
+      "position": 46,
+      "ar": {
+        "top_ids": [
+          4052,
+          216,
+          2719
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          19.0
+        ],
+        "top_probs": [
+          0.41937747597694397,
+          0.3700993061065674,
+          0.17482253909111023
+        ],
+        "top2_probability_margin": 0.04927816987037659,
+        "top1_logit_margin": 0.125,
+        "argmax": 4052
+      },
+      "loopahead": {
+        "top_ids": [
+          4052,
+          216,
+          2719
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          19.0
+        ],
+        "top_probs": [
+          0.38941261172294617,
+          0.38941261172294617,
+          0.18394549190998077
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/664",
+      "position": 21,
+      "ar": {
+        "top_ids": [
+          384,
+          28,
+          2322
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          15.125
+        ],
+        "top_probs": [
+          0.5191208124160767,
+          0.45812249183654785,
+          0.00839080661535263
+        ],
+        "top2_probability_margin": 0.06099832057952881,
+        "top1_logit_margin": 0.125,
+        "argmax": 384
+      },
+      "loopahead": {
+        "top_ids": [
+          384,
+          28,
+          2322
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          15.125
+        ],
+        "top_probs": [
+          0.4891999065876007,
+          0.4891999065876007,
+          0.007907180115580559
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/417",
+      "position": 62,
+      "ar": {
+        "top_ids": [
+          36,
+          34,
+          33
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          13.6875
+        ],
+        "top_probs": [
+          0.5294479727745056,
+          0.4672362208366394,
+          0.0013970109866932034
+        ],
+        "top2_probability_margin": 0.06221175193786621,
+        "top1_logit_margin": 0.125,
+        "argmax": 36
+      },
+      "loopahead": {
+        "top_ids": [
+          36,
+          34,
+          33
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          13.75
+        ],
+        "top_probs": [
+          0.4983859956264496,
+          0.4983859956264496,
+          0.0013998638605698943
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/330",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          11420,
+          4035,
+          804
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          18.625
+        ],
+        "top_probs": [
+          0.2330751121044159,
+          0.2330751121044159,
+          0.18151907622814178
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 4035
+      },
+      "loopahead": {
+        "top_ids": [
+          11420,
+          4035,
+          804
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.625
+        ],
+        "top_probs": [
+          0.24224966764450073,
+          0.2137845754623413,
+          0.18866422772407532
+        ],
+        "top2_probability_margin": 0.028465092182159424,
+        "top1_logit_margin": 0.125,
+        "argmax": 11420
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1264",
+      "position": 193,
+      "ar": {
+        "top_ids": [
+          2931,
+          2068,
+          17308
+        ],
+        "top_logits": [
+          21.75,
+          21.625,
+          21.125
+        ],
+        "top_probs": [
+          0.2776450216770172,
+          0.24502085149288177,
+          0.14861266314983368
+        ],
+        "top2_probability_margin": 0.03262417018413544,
+        "top1_logit_margin": 0.125,
+        "argmax": 2931
+      },
+      "loopahead": {
+        "top_ids": [
+          2931,
+          2068,
+          17308
+        ],
+        "top_logits": [
+          21.625,
+          21.625,
+          21.125
+        ],
+        "top_probs": [
+          0.25328466296195984,
+          0.25328466296195984,
+          0.15362490713596344
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2068
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1223",
+      "position": 21,
+      "ar": {
+        "top_ids": [
+          1232,
+          446,
+          3487
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.625
+        ],
+        "top_probs": [
+          0.3930715322494507,
+          0.3930715322494507,
+          0.18567384779453278
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 446
+      },
+      "loopahead": {
+        "top_ids": [
+          1232,
+          446,
+          3487
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          17.625
+        ],
+        "top_probs": [
+          0.4121254086494446,
+          0.36369937658309937,
+          0.19467425346374512
+        ],
+        "top2_probability_margin": 0.048426032066345215,
+        "top1_logit_margin": 0.125,
+        "argmax": 1232
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/815",
+      "position": 153,
+      "ar": {
+        "top_ids": [
+          392,
+          28,
+          1303
+        ],
+        "top_logits": [
+          22.75,
+          22.625,
+          21.75
+        ],
+        "top_probs": [
+          0.432077556848526,
+          0.38130712509155273,
+          0.1589524745941162
+        ],
+        "top2_probability_margin": 0.05077043175697327,
+        "top1_logit_margin": 0.125,
+        "argmax": 392
+      },
+      "loopahead": {
+        "top_ids": [
+          392,
+          28,
+          1303
+        ],
+        "top_logits": [
+          22.625,
+          22.625,
+          21.625
+        ],
+        "top_probs": [
+          0.40976443886756897,
+          0.40976443886756897,
+          0.15074391663074493
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/215",
+      "position": 63,
+      "ar": {
+        "top_ids": [
+          2068,
+          49,
+          60
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          16.75
+        ],
+        "top_probs": [
+          0.29046449065208435,
+          0.25633400678634644,
+          0.08321946859359741
+        ],
+        "top2_probability_margin": 0.034130483865737915,
+        "top1_logit_margin": 0.125,
+        "argmax": 2068
+      },
+      "loopahead": {
+        "top_ids": [
+          2068,
+          49,
+          504
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          16.875
+        ],
+        "top_probs": [
+          0.27591821551322937,
+          0.27591821551322937,
+          0.08957752585411072
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/591",
+      "position": 92,
+      "ar": {
+        "top_ids": [
+          198,
+          2,
+          504
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          13.4375
+        ],
+        "top_probs": [
+          0.5197345018386841,
+          0.45866405963897705,
+          0.007891750894486904
+        ],
+        "top2_probability_margin": 0.06107044219970703,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          2,
+          504
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          13.4375
+        ],
+        "top_probs": [
+          0.48838743567466736,
+          0.48838743567466736,
+          0.008403169922530651
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/718",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          5482,
+          1042,
+          7529
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          18.625
+        ],
+        "top_probs": [
+          0.3638441562652588,
+          0.32109132409095764,
+          0.15167279541492462
+        ],
+        "top2_probability_margin": 0.04275283217430115,
+        "top1_logit_margin": 0.125,
+        "argmax": 5482
+      },
+      "loopahead": {
+        "top_ids": [
+          5482,
+          1042,
+          7529
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          18.625
+        ],
+        "top_probs": [
+          0.33554908633232117,
+          0.33554908633232117,
+          0.15850217640399933
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1042
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/995",
+      "position": 46,
+      "ar": {
+        "top_ids": [
+          4882,
+          198,
+          533
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          16.5
+        ],
+        "top_probs": [
+          0.21144498884677887,
+          0.18659955263137817,
+          0.16467352211475372
+        ],
+        "top2_probability_margin": 0.024845436215400696,
+        "top1_logit_margin": 0.125,
+        "argmax": 4882
+      },
+      "loopahead": {
+        "top_ids": [
+          4882,
+          198,
+          533
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.5
+        ],
+        "top_probs": [
+          0.20664384961128235,
+          0.20664384961128235,
+          0.16093438863754272
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/27",
+      "position": 57,
+      "ar": {
+        "top_ids": [
+          3768,
+          1814,
+          378
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          18.0
+        ],
+        "top_probs": [
+          0.2360697090625763,
+          0.2360697090625763,
+          0.20833079516887665
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1814
+      },
+      "loopahead": {
+        "top_ids": [
+          3768,
+          1814,
+          378
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          18.0
+        ],
+        "top_probs": [
+          0.25898611545562744,
+          0.22855444252490997,
+          0.20169858634471893
+        ],
+        "top2_probability_margin": 0.030431672930717468,
+        "top1_logit_margin": 0.125,
+        "argmax": 3768
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/103",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          4311,
+          1644,
+          378
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          17.625
+        ],
+        "top_probs": [
+          0.21153084933757782,
+          0.21153084933757782,
+          0.21153084933757782
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 378
+      },
+      "loopahead": {
+        "top_ids": [
+          4311,
+          1644,
+          378
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          17.5
+        ],
+        "top_probs": [
+          0.2225419133901596,
+          0.19639255106449127,
+          0.19639255106449127
+        ],
+        "top2_probability_margin": 0.026149362325668335,
+        "top1_logit_margin": 0.125,
+        "argmax": 4311
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1110",
+      "position": 82,
+      "ar": {
+        "top_ids": [
+          737,
+          416,
+          17557
+        ],
+        "top_logits": [
+          23.0,
+          23.0,
+          20.125
+        ],
+        "top_probs": [
+          0.47976046800613403,
+          0.47976046800613403,
+          0.02706623449921608
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 416
+      },
+      "loopahead": {
+        "top_ids": [
+          737,
+          416,
+          17557
+        ],
+        "top_logits": [
+          23.125,
+          23.0,
+          20.25
+        ],
+        "top_probs": [
+          0.5098048448562622,
+          0.44990116357803345,
+          0.02876122109591961
+        ],
+        "top2_probability_margin": 0.05990368127822876,
+        "top1_logit_margin": 0.125,
+        "argmax": 737
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1123",
+      "position": 9,
+      "ar": {
+        "top_ids": [
+          8473,
+          31,
+          2272
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          15.875
+        ],
+        "top_probs": [
+          0.38334935903549194,
+          0.33830463886260986,
+          0.10983143746852875
+        ],
+        "top2_probability_margin": 0.04504472017288208,
+        "top1_logit_margin": 0.125,
+        "argmax": 8473
+      },
+      "loopahead": {
+        "top_ids": [
+          8473,
+          31,
+          2272
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          15.875
+        ],
+        "top_probs": [
+          0.3549448847770691,
+          0.3549448847770691,
+          0.11523373425006866
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 31
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/789",
+      "position": 18,
+      "ar": {
+        "top_ids": [
+          411,
+          288,
+          429
+        ],
+        "top_logits": [
+          21.0,
+          20.875,
+          18.5
+        ],
+        "top_probs": [
+          0.4973536729812622,
+          0.4389130771160126,
+          0.04082527756690979
+        ],
+        "top2_probability_margin": 0.058440595865249634,
+        "top1_logit_margin": 0.125,
+        "argmax": 411
+      },
+      "loopahead": {
+        "top_ids": [
+          411,
+          288,
+          429
+        ],
+        "top_logits": [
+          20.875,
+          20.875,
+          18.5
+        ],
+        "top_probs": [
+          0.4661877155303955,
+          0.4661877155303955,
+          0.04336221143603325
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 288
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/812",
+      "position": 37,
+      "ar": {
+        "top_ids": [
+          1303,
+          392,
+          15090
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          15.625
+        ],
+        "top_probs": [
+          0.4924044907093048,
+          0.4924044907093048,
+          0.007023772690445185
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 392
+      },
+      "loopahead": {
+        "top_ids": [
+          1303,
+          392,
+          15090
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          15.625
+        ],
+        "top_probs": [
+          0.5228332877159119,
+          0.46139875054359436,
+          0.007457816042006016
+        ],
+        "top2_probability_margin": 0.061434537172317505,
+        "top1_logit_margin": 0.125,
+        "argmax": 1303
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/284",
+      "position": 18,
+      "ar": {
+        "top_ids": [
+          48126,
+          1792,
+          1232
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          16.5
+        ],
+        "top_probs": [
+          0.3261556327342987,
+          0.2878313362598419,
+          0.1978233903646469
+        ],
+        "top2_probability_margin": 0.03832429647445679,
+        "top1_logit_margin": 0.125,
+        "argmax": 48126
+      },
+      "loopahead": {
+        "top_ids": [
+          48126,
+          1792,
+          1232
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          16.5
+        ],
+        "top_probs": [
+          0.3015795946121216,
+          0.3015795946121216,
+          0.20727244019508362
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1792
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/771",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          338,
+          288,
+          28
+        ],
+        "top_logits": [
+          21.0,
+          20.875,
+          20.25
+        ],
+        "top_probs": [
+          0.3713890314102173,
+          0.32774966955184937,
+          0.1754317730665207
+        ],
+        "top2_probability_margin": 0.04363936185836792,
+        "top1_logit_margin": 0.125,
+        "argmax": 338
+      },
+      "loopahead": {
+        "top_ids": [
+          338,
+          288,
+          28
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          20.375
+        ],
+        "top_probs": [
+          0.34776270389556885,
+          0.34776270389556885,
+          0.18614396452903748
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 288
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/486",
+      "position": 45,
+      "ar": {
+        "top_ids": [
+          965,
+          384,
+          357
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          19.5
+        ],
+        "top_probs": [
+          0.43692928552627563,
+          0.43692928552627563,
+          0.09749210625886917
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 384
+      },
+      "loopahead": {
+        "top_ids": [
+          965,
+          384,
+          357
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          19.5
+        ],
+        "top_probs": [
+          0.46774280071258545,
+          0.41278156638145447,
+          0.09210401028394699
+        ],
+        "top2_probability_margin": 0.05496123433113098,
+        "top1_logit_margin": 0.125,
+        "argmax": 965
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/409",
+      "position": 219,
+      "ar": {
+        "top_ids": [
+          19573,
+          3814,
+          1885
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          16.625
+        ],
+        "top_probs": [
+          0.2786448299884796,
+          0.2786448299884796,
+          0.2786448299884796
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1885
+      },
+      "loopahead": {
+        "top_ids": [
+          19573,
+          3814,
+          1885
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          16.5
+        ],
+        "top_probs": [
+          0.2886447310447693,
+          0.2886447310447693,
+          0.2547280788421631
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3814
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1191",
+      "position": 49,
+      "ar": {
+        "top_ids": [
+          365,
+          216,
+          16553
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          12.8125
+        ],
+        "top_probs": [
+          0.499114066362381,
+          0.499114066362381,
+          0.00048448663437739015
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          365,
+          216,
+          16553
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          12.8125
+        ],
+        "top_probs": [
+          0.5302257537841797,
+          0.467922568321228,
+          0.0005146865150891244
+        ],
+        "top2_probability_margin": 0.06230318546295166,
+        "top1_logit_margin": 0.125,
+        "argmax": 365
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/825",
+      "position": 45,
+      "ar": {
+        "top_ids": [
+          1934,
+          1385,
+          389
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          18.5
+        ],
+        "top_probs": [
+          0.2692723274230957,
+          0.2692723274230957,
+          0.20970949530601501
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1385
+      },
+      "loopahead": {
+        "top_ids": [
+          1934,
+          1385,
+          389
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.5
+        ],
+        "top_probs": [
+          0.3010457754135132,
+          0.265671968460083,
+          0.2069055438041687
+        ],
+        "top2_probability_margin": 0.035373806953430176,
+        "top1_logit_margin": 0.125,
+        "argmax": 1934
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1170",
+      "position": 46,
+      "ar": {
+        "top_ids": [
+          7670,
+          30,
+          28
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          17.75
+        ],
+        "top_probs": [
+          0.4584299623966217,
+          0.4045630097389221,
+          0.13134238123893738
+        ],
+        "top2_probability_margin": 0.053866952657699585,
+        "top1_logit_margin": 0.125,
+        "argmax": 7670
+      },
+      "loopahead": {
+        "top_ids": [
+          7670,
+          30,
+          28
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          17.75
+        ],
+        "top_probs": [
+          0.42771193385124207,
+          0.42771193385124207,
+          0.13885773718357086
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/34",
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          24694,
+          2745,
+          14352
+        ],
+        "top_logits": [
+          14.9375,
+          14.8125,
+          13.5
+        ],
+        "top_probs": [
+          0.3804868757724762,
+          0.33577850461006165,
+          0.09037356078624725
+        ],
+        "top2_probability_margin": 0.04470837116241455,
+        "top1_logit_margin": 0.125,
+        "argmax": 24694
+      },
+      "loopahead": {
+        "top_ids": [
+          24694,
+          2745,
+          14352
+        ],
+        "top_logits": [
+          14.875,
+          14.875,
+          13.4375
+        ],
+        "top_probs": [
+          0.3617718517780304,
+          0.3617718517780304,
+          0.08592835068702698
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2745
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/76",
+      "position": 499,
+      "ar": {
+        "top_ids": [
+          198,
+          29,
+          7230
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          19.25
+        ],
+        "top_probs": [
+          0.46469664573669434,
+          0.46469664573669434,
+          0.06288985162973404
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 29
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          29,
+          7230
+        ],
+        "top_logits": [
+          21.375,
+          21.25,
+          19.25
+        ],
+        "top_probs": [
+          0.4958847165107727,
+          0.4376167058944702,
+          0.05922498553991318
+        ],
+        "top2_probability_margin": 0.05826801061630249,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1182",
+      "position": 47,
+      "ar": {
+        "top_ids": [
+          21768,
+          553,
+          4957
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          18.875
+        ],
+        "top_probs": [
+          0.41812196373939514,
+          0.36899134516716003,
+          0.15381848812103271
+        ],
+        "top2_probability_margin": 0.04913061857223511,
+        "top1_logit_margin": 0.125,
+        "argmax": 21768
+      },
+      "loopahead": {
+        "top_ids": [
+          21768,
+          553,
+          4957
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          18.875
+        ],
+        "top_probs": [
+          0.3981284201145172,
+          0.3981284201145172,
+          0.1464632749557495
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 553
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/175",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          5482,
+          1042,
+          3346
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          18.75
+        ],
+        "top_probs": [
+          0.28712818026542664,
+          0.25338974595069885,
+          0.19734013080596924
+        ],
+        "top2_probability_margin": 0.03373843431472778,
+        "top1_logit_margin": 0.125,
+        "argmax": 5482
+      },
+      "loopahead": {
+        "top_ids": [
+          5482,
+          1042,
+          3346
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          18.75
+        ],
+        "top_probs": [
+          0.27053362131118774,
+          0.27053362131118774,
+          0.21069179475307465
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1042
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/602",
+      "position": 62,
+      "ar": {
+        "top_ids": [
+          378,
+          4882,
+          198
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          17.75
+        ],
+        "top_probs": [
+          0.27295762300491333,
+          0.24088425934314728,
+          0.24088425934314728
+        ],
+        "top2_probability_margin": 0.03207336366176605,
+        "top1_logit_margin": 0.125,
+        "argmax": 378
+      },
+      "loopahead": {
+        "top_ids": [
+          378,
+          198,
+          4882
+        ],
+        "top_logits": [
+          17.875,
+          17.875,
+          17.75
+        ],
+        "top_probs": [
+          0.2641061842441559,
+          0.2641061842441559,
+          0.233072891831398
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/743",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          42
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          14.75
+        ],
+        "top_probs": [
+          0.5294876098632812,
+          0.46727117896080017,
+          0.0019096306059509516
+        ],
+        "top2_probability_margin": 0.06221643090248108,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          28,
+          42
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          14.75
+        ],
+        "top_probs": [
+          0.4982810318470001,
+          0.4982810318470001,
+          0.00203636079095304
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/528",
+      "position": 50,
+      "ar": {
+        "top_ids": [
+          4882,
+          1644,
+          669
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          19.875
+        ],
+        "top_probs": [
+          0.3546224534511566,
+          0.3129532039165497,
+          0.1898157149553299
+        ],
+        "top2_probability_margin": 0.041669249534606934,
+        "top1_logit_margin": 0.125,
+        "argmax": 4882
+      },
+      "loopahead": {
+        "top_ids": [
+          4882,
+          1644,
+          669
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          19.875
+        ],
+        "top_probs": [
+          0.32697567343711853,
+          0.32697567343711853,
+          0.19832077622413635
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1644
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/499",
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          327,
+          282,
+          418
+        ],
+        "top_logits": [
+          21.375,
+          21.25,
+          18.5
+        ],
+        "top_probs": [
+          0.513754665851593,
+          0.45338690280914307,
+          0.028984056785702705
+        ],
+        "top2_probability_margin": 0.06036776304244995,
+        "top1_logit_margin": 0.125,
+        "argmax": 327
+      },
+      "loopahead": {
+        "top_ids": [
+          327,
+          282,
+          418
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          18.5
+        ],
+        "top_probs": [
+          0.48255255818367004,
+          0.48255255818367004,
+          0.030848553404211998
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/635",
+      "position": 67,
+      "ar": {
+        "top_ids": [
+          5482,
+          1042,
+          2988
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          18.875
+        ],
+        "top_probs": [
+          0.29679033160209656,
+          0.26191654801368713,
+          0.18001244962215424
+        ],
+        "top2_probability_margin": 0.034873783588409424,
+        "top1_logit_margin": 0.125,
+        "argmax": 5482
+      },
+      "loopahead": {
+        "top_ids": [
+          5482,
+          1042,
+          2988
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          18.875
+        ],
+        "top_probs": [
+          0.27137067914009094,
+          0.27137067914009094,
+          0.18651016056537628
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1042
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/710",
+      "position": 128,
+      "ar": {
+        "top_ids": [
+          2696,
+          504,
+          32080
+        ],
+        "top_logits": [
+          21.125,
+          21.125,
+          21.0
+        ],
+        "top_probs": [
+          0.29629576206207275,
+          0.29629576206207275,
+          0.26148009300231934
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 504
+      },
+      "loopahead": {
+        "top_ids": [
+          2696,
+          504,
+          32080
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          20.875
+        ],
+        "top_probs": [
+          0.31571832299232483,
+          0.2786204516887665,
+          0.24588167667388916
+        ],
+        "top2_probability_margin": 0.03709787130355835,
+        "top1_logit_margin": 0.125,
+        "argmax": 2696
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/455",
+      "position": 61,
+      "ar": {
+        "top_ids": [
+          446,
+          282,
+          365
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          15.3125
+        ],
+        "top_probs": [
+          0.49159231781959534,
+          0.49159231781959534,
+          0.009584524668753147
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "loopahead": {
+        "top_ids": [
+          446,
+          282,
+          365
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          15.25
+        ],
+        "top_probs": [
+          0.522154688835144,
+          0.4607998728752136,
+          0.009563596919178963
+        ],
+        "top2_probability_margin": 0.06135481595993042,
+        "top1_logit_margin": 0.125,
+        "argmax": 446
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/886",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          384,
+          216,
+          5988
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          17.875
+        ],
+        "top_probs": [
+          0.3224996030330658,
+          0.3224996030330658,
+          0.28460490703582764
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          384,
+          5988,
+          216
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.875
+        ],
+        "top_probs": [
+          0.33583125472068787,
+          0.2963700294494629,
+          0.2963700294494629
+        ],
+        "top2_probability_margin": 0.039461225271224976,
+        "top1_logit_margin": 0.125,
+        "argmax": 384
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/154",
+      "position": 92,
+      "ar": {
+        "top_ids": [
+          284,
+          253,
+          28
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          18.75
+        ],
+        "top_probs": [
+          0.21615417301654816,
+          0.21615417301654816,
+          0.21615417301654816
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          253,
+          284,
+          28
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.75
+        ],
+        "top_probs": [
+          0.24061712622642517,
+          0.21234387159347534,
+          0.21234387159347534
+        ],
+        "top2_probability_margin": 0.02827325463294983,
+        "top1_logit_margin": 0.125,
+        "argmax": 253
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1088",
+      "position": 30,
+      "ar": {
+        "top_ids": [
+          7728,
+          803,
+          10335
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          18.5
+        ],
+        "top_probs": [
+          0.3550075590610504,
+          0.3550075590610504,
+          0.10171137750148773
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 803
+      },
+      "loopahead": {
+        "top_ids": [
+          7728,
+          803,
+          10335
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          18.625
+        ],
+        "top_probs": [
+          0.37832650542259216,
+          0.3338719606399536,
+          0.10839236527681351
+        ],
+        "top2_probability_margin": 0.04445454478263855,
+        "top1_logit_margin": 0.125,
+        "argmax": 7728
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1047",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          946,
+          722,
+          25832
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          17.875
+        ],
+        "top_probs": [
+          0.30577749013900757,
+          0.26984769105911255,
+          0.16367089748382568
+        ],
+        "top2_probability_margin": 0.03592979907989502,
+        "top1_logit_margin": 0.125,
+        "argmax": 946
+      },
+      "loopahead": {
+        "top_ids": [
+          946,
+          722,
+          25832
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.875
+        ],
+        "top_probs": [
+          0.2817372679710388,
+          0.2817372679710388,
+          0.17088229954242706
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 722
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/385",
+      "position": 32,
+      "ar": {
+        "top_ids": [
+          37,
+          34,
+          35
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          16.875
+        ],
+        "top_probs": [
+          0.5132846832275391,
+          0.4529721438884735,
+          0.01549985446035862
+        ],
+        "top2_probability_margin": 0.06031253933906555,
+        "top1_logit_margin": 0.125,
+        "argmax": 37
+      },
+      "loopahead": {
+        "top_ids": [
+          37,
+          34,
+          35
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          16.75
+        ],
+        "top_probs": [
+          0.48494085669517517,
+          0.48494085669517517,
+          0.01292323600500822
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/218",
+      "position": 193,
+      "ar": {
+        "top_ids": [
+          40396,
+          32455,
+          533
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          14.5
+        ],
+        "top_probs": [
+          0.4583926200866699,
+          0.4583926200866699,
+          0.029304059222340584
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 32455
+      },
+      "loopahead": {
+        "top_ids": [
+          40396,
+          32455,
+          533
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          14.5625
+        ],
+        "top_probs": [
+          0.48350846767425537,
+          0.42669472098350525,
+          0.03290316462516785
+        ],
+        "top2_probability_margin": 0.05681374669075012,
+        "top1_logit_margin": 0.125,
+        "argmax": 40396
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/204",
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          327
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          17.5
+        ],
+        "top_probs": [
+          0.5231990218162537,
+          0.4617215096950531,
+          0.013942781835794449
+        ],
+        "top2_probability_margin": 0.06147751212120056,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          28,
+          327
+        ],
+        "top_logits": [
+          21.125,
+          21.125,
+          17.5
+        ],
+        "top_probs": [
+          0.49289408326148987,
+          0.49289408326148987,
+          0.013135182671248913
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1159",
+      "position": 187,
+      "ar": {
+        "top_ids": [
+          2931,
+          2696,
+          17308
+        ],
+        "top_logits": [
+          22.625,
+          22.625,
+          22.25
+        ],
+        "top_probs": [
+          0.2650790214538574,
+          0.2650790214538574,
+          0.18218597769737244
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2696
+      },
+      "loopahead": {
+        "top_ids": [
+          2931,
+          2696,
+          17308
+        ],
+        "top_logits": [
+          22.625,
+          22.5,
+          22.125
+        ],
+        "top_probs": [
+          0.2797795534133911,
+          0.24690458178520203,
+          0.16969488561153412
+        ],
+        "top2_probability_margin": 0.03287497162818909,
+        "top1_logit_margin": 0.125,
+        "argmax": 2931
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/507",
+      "position": 43,
+      "ar": {
+        "top_ids": [
+          1041,
+          260,
+          874
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          19.375
+        ],
+        "top_probs": [
+          0.3136173188686371,
+          0.3136173188686371,
+          0.2767663300037384
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          1041,
+          260,
+          874
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          19.25
+        ],
+        "top_probs": [
+          0.3404194414615631,
+          0.3004191219806671,
+          0.26511892676353455
+        ],
+        "top2_probability_margin": 0.040000319480895996,
+        "top1_logit_margin": 0.125,
+        "argmax": 1041
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1176",
+      "position": 285,
+      "ar": {
+        "top_ids": [
+          392,
+          384,
+          260
+        ],
+        "top_logits": [
+          21.875,
+          21.75,
+          17.75
+        ],
+        "top_probs": [
+          0.5263298153877258,
+          0.46448445320129395,
+          0.008507329039275646
+        ],
+        "top2_probability_margin": 0.061845362186431885,
+        "top1_logit_margin": 0.125,
+        "argmax": 392
+      },
+      "loopahead": {
+        "top_ids": [
+          392,
+          384,
+          260
+        ],
+        "top_logits": [
+          21.875,
+          21.875,
+          17.75
+        ],
+        "top_probs": [
+          0.4956633746623993,
+          0.4956633746623993,
+          0.008011652156710625
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 384
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/856",
+      "position": 66,
+      "ar": {
+        "top_ids": [
+          567,
+          31,
+          446
+        ],
+        "top_logits": [
+          21.25,
+          21.125,
+          16.75
+        ],
+        "top_probs": [
+          0.5274252891540527,
+          0.465451180934906,
+          0.005859165918081999
+        ],
+        "top2_probability_margin": 0.06197410821914673,
+        "top1_logit_margin": 0.125,
+        "argmax": 567
+      },
+      "loopahead": {
+        "top_ids": [
+          567,
+          31,
+          446
+        ],
+        "top_logits": [
+          21.125,
+          21.125,
+          16.75
+        ],
+        "top_probs": [
+          0.4962168335914612,
+          0.4962168335914612,
+          0.006246448028832674
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 31
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/921",
+      "position": 52,
+      "ar": {
+        "top_ids": [
+          588,
+          284,
+          979
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.5
+        ],
+        "top_probs": [
+          0.363705039024353,
+          0.363705039024353,
+          0.19467729330062866
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 284
+      },
+      "loopahead": {
+        "top_ids": [
+          588,
+          284,
+          979
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.5
+        ],
+        "top_probs": [
+          0.39321568608283997,
+          0.34701162576675415,
+          0.18574194610118866
+        ],
+        "top2_probability_margin": 0.046204060316085815,
+        "top1_logit_margin": 0.125,
+        "argmax": 588
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/960",
+      "position": 145,
+      "ar": {
+        "top_ids": [
+          446,
+          42,
+          314
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          14.6875
+        ],
+        "top_probs": [
+          0.5297724604606628,
+          0.467522531747818,
+          0.0015839909901842475
+        ],
+        "top2_probability_margin": 0.06224992871284485,
+        "top1_logit_margin": 0.125,
+        "argmax": 446
+      },
+      "loopahead": {
+        "top_ids": [
+          446,
+          42,
+          314
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          14.5625
+        ],
+        "top_probs": [
+          0.4986647367477417,
+          0.4986647367477417,
+          0.0014909806195646524
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 42
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/173",
+      "position": 208,
+      "ar": {
+        "top_ids": [
+          2931,
+          788,
+          17308
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          20.875
+        ],
+        "top_probs": [
+          0.2363547384738922,
+          0.2363547384738922,
+          0.1624440848827362
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 788
+      },
+      "loopahead": {
+        "top_ids": [
+          2931,
+          788,
+          17308
+        ],
+        "top_logits": [
+          21.375,
+          21.25,
+          20.875
+        ],
+        "top_probs": [
+          0.26077136397361755,
+          0.2301299124956131,
+          0.1581658273935318
+        ],
+        "top2_probability_margin": 0.030641451478004456,
+        "top1_logit_margin": 0.125,
+        "argmax": 2931
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/712",
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          21910,
+          523,
+          736
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          18.375
+        ],
+        "top_probs": [
+          0.43929505348205566,
+          0.43929505348205566,
+          0.0594521202147007
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 523
+      },
+      "loopahead": {
+        "top_ids": [
+          21910,
+          523,
+          736
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          18.5
+        ],
+        "top_probs": [
+          0.46360141038894653,
+          0.40912681818008423,
+          0.06274162977933884
+        ],
+        "top2_probability_margin": 0.054474592208862305,
+        "top1_logit_margin": 0.125,
+        "argmax": 21910
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/686",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          19743,
+          1041,
+          502
+        ],
+        "top_logits": [
+          15.375,
+          15.375,
+          14.0
+        ],
+        "top_probs": [
+          0.37417739629745483,
+          0.37417739629745483,
+          0.09460686147212982
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1041
+      },
+      "loopahead": {
+        "top_ids": [
+          19743,
+          1041,
+          502
+        ],
+        "top_logits": [
+          15.375,
+          15.3125,
+          13.9375
+        ],
+        "top_probs": [
+          0.38547101616859436,
+          0.3621165156364441,
+          0.09155739843845367
+        ],
+        "top2_probability_margin": 0.02335450053215027,
+        "top1_logit_margin": 0.0625,
+        "argmax": 19743
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1236",
+      "position": 32,
+      "ar": {
+        "top_ids": [
+          874,
+          284,
+          588
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          17.5
+        ],
+        "top_probs": [
+          0.4997408092021942,
+          0.4410196840763092,
+          0.04648313298821449
+        ],
+        "top2_probability_margin": 0.05872112512588501,
+        "top1_logit_margin": 0.125,
+        "argmax": 874
+      },
+      "loopahead": {
+        "top_ids": [
+          874,
+          284,
+          588
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          17.5
+        ],
+        "top_probs": [
+          0.46889087557792664,
+          0.46889087557792664,
+          0.049420733004808426
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 284
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/846",
+      "position": 47,
+      "ar": {
+        "top_ids": [
+          1644,
+          669,
+          1094
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          18.5
+        ],
+        "top_probs": [
+          0.41470959782600403,
+          0.365979939699173,
+          0.07206571847200394
+        ],
+        "top2_probability_margin": 0.048729658126831055,
+        "top1_logit_margin": 0.125,
+        "argmax": 1644
+      },
+      "loopahead": {
+        "top_ids": [
+          1644,
+          669,
+          1094
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          18.5
+        ],
+        "top_probs": [
+          0.3852106034755707,
+          0.3852106034755707,
+          0.07585246115922928
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 669
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/933",
+      "position": 10,
+      "ar": {
+        "top_ids": [
+          971,
+          282,
+          28
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          16.25
+        ],
+        "top_probs": [
+          0.4893646836280823,
+          0.4893646836280823,
+          0.014777532778680325
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "loopahead": {
+        "top_ids": [
+          971,
+          282,
+          28
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          16.25
+        ],
+        "top_probs": [
+          0.5206222534179688,
+          0.4594475030899048,
+          0.013874112628400326
+        ],
+        "top2_probability_margin": 0.061174750328063965,
+        "top1_logit_margin": 0.125,
+        "argmax": 971
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1211",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          17308,
+          504,
+          2696
+        ],
+        "top_logits": [
+          22.5,
+          22.375,
+          20.125
+        ],
+        "top_probs": [
+          0.46515756845474243,
+          0.41050010919570923,
+          0.04326639324426651
+        ],
+        "top2_probability_margin": 0.0546574592590332,
+        "top1_logit_margin": 0.125,
+        "argmax": 17308
+      },
+      "loopahead": {
+        "top_ids": [
+          17308,
+          504,
+          2696
+        ],
+        "top_logits": [
+          22.375,
+          22.375,
+          20.125
+        ],
+        "top_probs": [
+          0.4337879717350006,
+          0.4337879717350006,
+          0.045720912516117096
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 504
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+  "started_unix": 1794480502.5734265,
+  "input_provenance": {
+    "scope": "frozen-benchmark-input",
+    "path": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/inputs/gsm8k.jsonl",
+    "sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+    "prompt_format": "chat",
+    "max_new_tokens": 512,
+    "stop_ids": [
+      0,
+      2
+    ]
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t0",
+      "sha256": "de5254cfa5759dd28b695a1478923779624169b6983e6681373438ac053bde0d"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t0-v1",
+      "sha256": "6c3ca32e800f6f4f2049ea0cf94c174f3e2fcdae58d2845e5181a4c59fbdae37"
+    }
+  },
+  "limitations": [
+    "Instrumented BF16 replay only; timings are excluded from the benchmark.",
+    "Probability ties/margins describe actual reproduced divergences, not proof that all discrepancies disappear in FP32."
+  ],
+  "cuda_acquisition": {
+    "gpu": 6,
+    "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+    "pid": 235831,
+    "started_unix": 1794480503.7667284,
+    "acquired_unix": 1794480504.6870646,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "finished_unix": 1794481946.7571204
+}

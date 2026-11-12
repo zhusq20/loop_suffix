@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_dflash_training.py",
+    "--model",
+    "ouro-2.6b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v2"
+  ],
+  "pid": 144114,
+  "started_unix": 1794517158.4171433,
+  "source_sha256": "e29285e8ca356bf8c985fc6ae5ee6fa1c3749dd3afc7c667d86bd333fe91339f"
+}

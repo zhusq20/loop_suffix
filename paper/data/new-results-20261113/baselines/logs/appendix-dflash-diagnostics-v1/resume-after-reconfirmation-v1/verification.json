@@ -1,0 +1,51 @@
+{
+  "status": "live_cpu_queue_measurements_unchanged",
+  "controller_pid": 48618,
+  "controller_start_ticks": "52427020",
+  "gpu_diagnostic_workers": 0,
+  "measurement_jobs": [
+    {
+      "job": "table1-ouro-1.4b-gsm8k-t0-ar",
+      "pid": 458156,
+      "gpu": 0
+    },
+    {
+      "job": "table1-ouro-1.4b-math500-t0-ar",
+      "pid": 488905,
+      "gpu": 3
+    },
+    {
+      "job": "table1-ouro-1.4b-math500-t1-ar",
+      "pid": 499364,
+      "gpu": 4
+    },
+    {
+      "job": "table1-ouro-1.4b-mbppplus-t0-ar",
+      "pid": 4427,
+      "gpu": 6
+    },
+    {
+      "job": "table1-ouro-1.4b-mbppplus-t1-ar",
+      "pid": 17639,
+      "gpu": 2
+    },
+    {
+      "job": "table1-ouro-1.4b-specbench-t0-ar",
+      "pid": 24247,
+      "gpu": 7
+    },
+    {
+      "job": "table1-ouro-1.4b-specbench-t1-ar",
+      "pid": 32578,
+      "gpu": 5
+    },
+    {
+      "job": "table1-ouro-1.4b-gsm8k-t0-profile",
+      "pid": 39991,
+      "gpu": 1
+    }
+  ],
+  "activation_sha256": "4382f33d25a3ff0e164b6e63918b5ac83b87b053961ae9b8f8ca7f68f1946733",
+  "actual_activation_exit_sha256": "91d9d98852faa0814f039581a3989b3468f29128c8a9e4a1528bd617856ca6dc",
+  "checked_unix": 1794509309.223989
+}

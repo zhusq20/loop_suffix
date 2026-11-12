@@ -1,0 +1,10 @@
+{
+  "cases": 15,
+  "passed": true,
+  "allowed_scripts": [
+    "/ossfs/workspace/weather/Weather_Global/artifacts/checkpoints/v24_Ilya/res1_m1_s22_raw3k_continuation_local/train_worker.py",
+    "/ossfs/workspace/weather/Weather_Global/artifacts/evaluations/res1_m1_s22_raw2k_extremes_2023_local/resume_campaign.py",
+    "/ossfs/workspace/weather/Weather_Global/artifacts/evaluations/res1_m1_s22_raw2k_extremes_2023_local/resume_forecast_shard.py"
+  ],
+  "policy": "Exact interpreter, optional -u, exact script position and argument arity; excludes shell/-c/unrelated invocations."
+}

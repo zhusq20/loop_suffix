@@ -1,0 +1,36 @@
+{
+  "verified_unix": 1794420594.1996315,
+  "queue_pid": 430447,
+  "queue_stage": "waiting_for_gpu",
+  "completed": 7,
+  "pending": [
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "loopahead-huginn-3.5b-mbppplus-t1",
+    "loopahead-ouro-2.6b-mbppplus-t1",
+    "loopahead-huginn-3.5b-specbench-t1",
+    "loopahead-ouro-2.6b-specbench-t1"
+  ],
+  "throughput_running": {
+    "huginn-3.5b-b1": {
+      "pid": 417113,
+      "gpu": 2,
+      "started_unix": 1794419625.2251465
+    },
+    "ouro-2.6b-b1": {
+      "pid": 417115,
+      "gpu": 3,
+      "started_unix": 1794419625.2834544
+    },
+    "huginn-3.5b-b2": {
+      "pid": 417118,
+      "gpu": 4,
+      "started_unix": 1794419625.3250954
+    },
+    "ouro-2.6b-b2": {
+      "pid": 417121,
+      "gpu": 6,
+      "started_unix": 1794419625.3762562
+    }
+  },
+  "throughput_paused_for_new_dispatch_only": true
+}

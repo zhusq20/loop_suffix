@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112/source/orchestrate_loopahead_throughput.py", line 180, in <module>
+    if __name__=='__main__':main()
+  File "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112/source/orchestrate_loopahead_throughput.py", line 175, in main
+    if failed:raise RuntimeError(f'Failed jobs: {failed}')
+RuntimeError: Failed jobs: ['huginn-3.5b-fp32-b2', 'ouro-2.6b-fp32-b2', 'huginn-3.5b-bf16-b16', 'ouro-2.6b-bf16-b16']

@@ -1,0 +1,66 @@
+{
+  "status": "next_formal_process_live_and_native_driver_verified",
+  "checked_unix": 1794384178.524758,
+  "pid": 516319,
+  "start_ticks": "39904114",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "bbh",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+    "--admission",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+  ],
+  "loaded_driver_libraries": [
+    "/usr/lib64/libcuda.so.570.148.08"
+  ],
+  "ld_library_path": "/tmp/loopfill-native-driver-570.148.08::/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 516319,
+    "started_unix": 1794384006.7305467,
+    "acquired_unix": 1794384007.8113048,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "metadata_sha256": "acdd796f5bc7a64b0761378e3897d37427850af8ae761c651aecce5a06450907",
+  "source_manifest_sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+  "admission_sha256": "c57d108b3ae86468803ac676b1a9c2dda7c0c12bd6daf47b3790e7cda82ee7ef",
+  "prefix_requests_checked": 9,
+  "prefix_journal_sha256": "dabad3cfef9f35d488fe809a76b4f4961a293eb23b3eae092e983fdffa75da12",
+  "narrow_checkpoint_6000": {
+    "complete": {
+      "step": 6000,
+      "finished_unix": 1794384085.3128843
+    },
+    "files_bytes": {
+      "model.safetensors": 665248472,
+      "config.json": 1083,
+      "training-state.pt": 4656926673,
+      "rng-rank0.pt": 6901,
+      "rng-rank1.pt": 6901
+    },
+    "config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "limitations": [
+    "The next benchmark cell is running, not complete.",
+    "Checkpoint6000 presence/config and subsequent training progress do not constitute a full tensor audit or a tested optimizer resume."
+  ]
+}

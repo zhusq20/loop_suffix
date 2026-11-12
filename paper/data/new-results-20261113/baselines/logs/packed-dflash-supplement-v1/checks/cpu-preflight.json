@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "checks": [
+    "full_500_request_existing_measurement_and_summaries",
+    "unknown_original_exit_retained_explicitly",
+    "existing_12_canonical_cells_excluded",
+    "all_jobs_max_500_and_max512",
+    "corrupted_verification_count_rejected",
+    "profiling_token_change_rejected",
+    "profiling_seed_change_rejected",
+    "identical_journal_agreement",
+    "frozen_plan_and_dependencies"
+  ],
+  "existing_timed_evidence": {
+    "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t0/attempt1",
+    "hashes": {
+      "metadata.json": "88b25c2560656fe3e05ab2094a217d0312c4ec5eaec072182dfed9356f3e3f19",
+      "complete.json": "0298fcf3a703c950397f9e27ef3467a46dfdeb8f5950672e9417517fcd112b8e",
+      "requests.jsonl": "17f5b5ef542daddc0771529ad1f4e9eea2bab75ba8bab364ba5e7cac47c99e0f",
+      "summary.json": "e95aac57d92b2894045cfc2aabdf7e26a5e8c8fad95d8db2d828c1234fd06342"
+    },
+    "exit_evidence": {
+      "actual_exit_code": null,
+      "limitation": "Original parent exit receipt unavailable; artifacts verified independently. No synthetic exit status and no timed rerun."
+    }
+  },
+  "job_ids": [
+    "table1-huginn-3.5b-bbh-t0",
+    "table1-huginn-3.5b-math500-t0",
+    "table1-huginn-3.5b-specbench-t0",
+    "table1-huginn-3.5b-bbh-t1",
+    "table1-huginn-3.5b-gsm8k-t1",
+    "table1-huginn-3.5b-humanevalplus-t1",
+    "table1-ouro-2.6b-humanevalplus-t1",
+    "table1-huginn-3.5b-math500-t1",
+    "table1-huginn-3.5b-mbppplus-t1",
+    "table1-ouro-2.6b-mbppplus-t1",
+    "table1-huginn-3.5b-specbench-t1",
+    "table1-ouro-2.6b-specbench-t1"
+  ],
+  "measured_requests": 500,
+  "checked_unix": 1794436689.9988103,
+  "source_sha256": {
+    "loop_queue_recovery.py": "441ba7c64f8753e0a8fe6e4a7473fd102a8a8c2f120cece038bf9d8213cb5d5e",
+    "native_cuda_env.py": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+    "orchestrate_packed_dflash_supplements.py": "07a24066f8885916c6c184d50bcc4939e68651b7495f313518ec84aeb3059235",
+    "packed_dflash_evidence.py": "3e48368562cb5617724a6db46986b5018019a9f85a46afdc0e5d05c231d6059f",
+    "supplement_packed_dflash.py": "b185b7376f8cdbe56d0ba2e2b62ce7abd6efa9b96938462e40ccc18f47c342a2"
+  }
+}

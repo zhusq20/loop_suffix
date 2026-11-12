@@ -1,0 +1,99 @@
+{
+  "status": "all_observed_formal_first_divergences_checked",
+  "method": "loopahead",
+  "model": "huginn-3.5b",
+  "benchmark": "humanevalplus",
+  "temperature": 0,
+  "formal_requests": 164,
+  "whole_sequence_matches_bf16": 138,
+  "whole_sequence_match_rate_bf16": 0.8414634146341463,
+  "first_divergences": 26,
+  "bf16_divergences_reproduced": 26,
+  "at_least_one_bf16_top2_tie": 22,
+  "no_bf16_top2_tie": 4,
+  "fp32_argmax_equal": 26,
+  "max_fp32_logit_difference": 2.3126602172851562e-05,
+  "actual_exits": {
+    "loopahead-huginn-3.5b-humanevalplus-v1-observed": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-observed-exit.json",
+      "sha256": "73c66856b7faeac2e051fe5f33b2fed3957345ff0bc0310645cb794f41e02e24",
+      "exit_code": 0
+    },
+    "loopahead-huginn-3.5b-humanevalplus-v1-fp32": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-fp32-exit.json",
+      "sha256": "05f9e00e52746b155dcf4fc15e937c5e54741443ec3f310c931a2a61b620f922",
+      "exit_code": 0
+    }
+  },
+  "artifact_sha256": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/report.json": "8b01b3ab6f9c87548775b5f9682e3d3b4df9e6d2f900bd148a956a053d42f099",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-observed-launcher.json": "9bd38d506de59a9760eacfa25488dee7e417a18f1a0b40d6f6368385a5c9f047",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-observed-exit.json": "73c66856b7faeac2e051fe5f33b2fed3957345ff0bc0310645cb794f41e02e24",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/fp32-common-prefix/report.json": "e7ecb21fb6689533727640bb39d24cdf6de96ad80bd832f254d8bfa35a97018d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-fp32-launcher.json": "e6b4a797c2bd0eca02aa6745e1d8ee22e053db68204659bfdf716e2c9469e0a1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-fp32-exit.json": "05f9e00e52746b155dcf4fc15e937c5e54741443ec3f310c931a2a61b620f922",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t0-v1/metadata.json": "b5444e26cd0244d80a4296cc960e00c44e116d66526ab85a5a956ebca79ef8bd"
+  },
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t0",
+      "sha256": "5513819d7428d7c7c5c75efdef7d66dc0e0ebf4bbfd1e92f4a165abd78c1e4f7"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t0-v1",
+      "sha256": "c95416674ffde3702580f8f1a60c7710f9b1caab9f754e4a7d8801621bbd2382"
+    }
+  },
+  "existing_validation": {
+    "method": "loopahead",
+    "model": "huginn-3.5b",
+    "benchmark": "humanevalplus",
+    "cases": 26,
+    "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1",
+    "result_sha256": "8b01b3ab6f9c87548775b5f9682e3d3b4df9e6d2f900bd148a956a053d42f099",
+    "loopahead_fp32_report_sha256": "e7ecb21fb6689533727640bb39d24cdf6de96ad80bd832f254d8bfa35a97018d"
+  },
+  "original_timed_row_unchanged": {
+    "method": "loopahead",
+    "model": "huginn-3.5b",
+    "benchmark": "humanevalplus",
+    "temperature": "0",
+    "eta": "5.247730776257089",
+    "gamma": "7.95351672016578",
+    "method_tok_s": "36.9329704691177",
+    "ar_tok_s": "7.0378935284214235",
+    "drafter_time_frac": "NA",
+    "match_rate": "0.8414634146341463",
+    "engine": "ours",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected; Huginn migration, not a model evaluated in the LoopAhead paper",
+    "eta_latency": "5.262100482077312",
+    "eta_throughput": "5.247730776257089",
+    "aligned_token_match_rate": "0.8883654076499241",
+    "method_decode_tokens": "24468",
+    "ar_decode_tokens": "24535",
+    "method_decode_s": "662.4974836632609",
+    "ar_decode_s": "3486.1283281594515",
+    "ar_provenance": "archived_same_host_AR",
+    "ar_first_completed_unix": "1794006118.278024",
+    "ar_last_completed_unix": "1794009549.3043628",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t0-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t0",
+    "target_backend": "packed_LoopAhead",
+    "method_exit_evidence": "actual_exit0",
+    "profile_run": "",
+    "numerical_diagnostics": "not_all_completed"
+  },
+  "checked_unix": 1794474542.9606807,
+  "new_gpu_measurements": 0,
+  "limitations": [
+    "All observed first divergences of this formal cell only; full BF16 output agreement is unchanged.",
+    "Forced FP32 common-prefix replay may change the proposed tree; it is not complete FP32 benchmark generation.",
+    "Logged top-three values and margins are checked arithmetically; full logits are not regenerated by this CPU audit."
+  ]
+}

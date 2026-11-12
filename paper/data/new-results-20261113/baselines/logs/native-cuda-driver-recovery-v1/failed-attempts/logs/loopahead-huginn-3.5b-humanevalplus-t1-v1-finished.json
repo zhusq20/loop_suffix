@@ -1,0 +1,28 @@
+{
+  "name": "loopahead-huginn-3.5b-humanevalplus-t1-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "humanevalplus",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1"
+  ],
+  "pid": 469575,
+  "started_unix": 1794380568.4782367,
+  "exit_code": 1,
+  "finished_unix": 1794380570.5761774
+}

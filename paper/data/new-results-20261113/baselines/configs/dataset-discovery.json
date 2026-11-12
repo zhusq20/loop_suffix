@@ -1,0 +1,962 @@
+[
+  {
+    "repo": "nvidia/Nemotron-Post-Training-Dataset-v2",
+    "revision": "5c89e01dd720ae0f4058445ed49c5fb68a03c76e",
+    "gated": "auto",
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 2461
+      },
+      {
+        "name": "README.md",
+        "size": 8851
+      },
+      {
+        "name": "data/chat-00000-of-00012.parquet",
+        "size": 141322814
+      },
+      {
+        "name": "data/chat-00001-of-00012.parquet",
+        "size": 200351874
+      },
+      {
+        "name": "data/chat-00002-of-00012.parquet",
+        "size": 258973528
+      },
+      {
+        "name": "data/chat-00003-of-00012.parquet",
+        "size": 252647149
+      },
+      {
+        "name": "data/chat-00004-of-00012.parquet",
+        "size": 231499612
+      },
+      {
+        "name": "data/chat-00005-of-00012.parquet",
+        "size": 220754012
+      },
+      {
+        "name": "data/chat-00006-of-00012.parquet",
+        "size": 207132363
+      },
+      {
+        "name": "data/chat-00007-of-00012.parquet",
+        "size": 272316628
+      },
+      {
+        "name": "data/chat-00008-of-00012.parquet",
+        "size": 251929210
+      },
+      {
+        "name": "data/chat-00009-of-00012.parquet",
+        "size": 258213393
+      },
+      {
+        "name": "data/chat-00010-of-00012.parquet",
+        "size": 260569515
+      },
+      {
+        "name": "data/chat-00011-of-00012.parquet",
+        "size": 259768788
+      },
+      {
+        "name": "data/code-00000-of-00002.parquet",
+        "size": 222127279
+      },
+      {
+        "name": "data/code-00001-of-00002.parquet",
+        "size": 221813371
+      },
+      {
+        "name": "data/math-00000-of-00002.parquet",
+        "size": 110330404
+      },
+      {
+        "name": "data/math-00001-of-00002.parquet",
+        "size": 110235963
+      },
+      {
+        "name": "data/multilingual-00000-of-00001.parquet",
+        "size": 783053
+      },
+      {
+        "name": "data/multilingual_de-00000-of-00038.parquet",
+        "size": 222678090
+      },
+      {
+        "name": "data/multilingual_de-00001-of-00038.parquet",
+        "size": 225033175
+      },
+      {
+        "name": "data/multilingual_de-00002-of-00038.parquet",
+        "size": 222663656
+      },
+      {
+        "name": "data/multilingual_de-00003-of-00038.parquet",
+        "size": 222587322
+      },
+      {
+        "name": "data/multilingual_de-00004-of-00038.parquet",
+        "size": 224164798
+      },
+      {
+        "name": "data/multilingual_de-00005-of-00038.parquet",
+        "size": 223486328
+      },
+      {
+        "name": "data/multilingual_de-00006-of-00038.parquet",
+        "size": 224958156
+      },
+      {
+        "name": "data/multilingual_de-00007-of-00038.parquet",
+        "size": 224063129
+      },
+      {
+        "name": "data/multilingual_de-00008-of-00038.parquet",
+        "size": 223147207
+      },
+      {
+        "name": "data/multilingual_de-00009-of-00038.parquet",
+        "size": 221656024
+      },
+      {
+        "name": "data/multilingual_de-00010-of-00038.parquet",
+        "size": 223278774
+      },
+      {
+        "name": "data/multilingual_de-00011-of-00038.parquet",
+        "size": 221734701
+      },
+      {
+        "name": "data/multilingual_de-00012-of-00038.parquet",
+        "size": 222017288
+      },
+      {
+        "name": "data/multilingual_de-00013-of-00038.parquet",
+        "size": 224226092
+      },
+      {
+        "name": "data/multilingual_de-00014-of-00038.parquet",
+        "size": 223023027
+      },
+      {
+        "name": "data/multilingual_de-00015-of-00038.parquet",
+        "size": 222939856
+      },
+      {
+        "name": "data/multilingual_de-00016-of-00038.parquet",
+        "size": 224882178
+      },
+      {
+        "name": "data/multilingual_de-00017-of-00038.parquet",
+        "size": 224142538
+      },
+      {
+        "name": "data/multilingual_de-00018-of-00038.parquet",
+        "size": 225146089
+      },
+      {
+        "name": "data/multilingual_de-00019-of-00038.parquet",
+        "size": 223740747
+      },
+      {
+        "name": "data/multilingual_de-00020-of-00038.parquet",
+        "size": 222077196
+      },
+      {
+        "name": "data/multilingual_de-00021-of-00038.parquet",
+        "size": 225272720
+      },
+      {
+        "name": "data/multilingual_de-00022-of-00038.parquet",
+        "size": 223743615
+      },
+      {
+        "name": "data/multilingual_de-00023-of-00038.parquet",
+        "size": 221842563
+      },
+      {
+        "name": "data/multilingual_de-00024-of-00038.parquet",
+        "size": 224743717
+      },
+      {
+        "name": "data/multilingual_de-00025-of-00038.parquet",
+        "size": 221028430
+      },
+      {
+        "name": "data/multilingual_de-00026-of-00038.parquet",
+        "size": 223786271
+      },
+      {
+        "name": "data/multilingual_de-00027-of-00038.parquet",
+        "size": 221711257
+      },
+      {
+        "name": "data/multilingual_de-00028-of-00038.parquet",
+        "size": 225681777
+      },
+      {
+        "name": "data/multilingual_de-00029-of-00038.parquet",
+        "size": 223140881
+      },
+      {
+        "name": "data/multilingual_de-00030-of-00038.parquet",
+        "size": 224156905
+      },
+      {
+        "name": "data/multilingual_de-00031-of-00038.parquet",
+        "size": 222220264
+      },
+      {
+        "name": "data/multilingual_de-00032-of-00038.parquet",
+        "size": 222555170
+      },
+      {
+        "name": "data/multilingual_de-00033-of-00038.parquet",
+        "size": 222502544
+      },
+      {
+        "name": "data/multilingual_de-00034-of-00038.parquet",
+        "size": 221593432
+      },
+      {
+        "name": "data/multilingual_de-00035-of-00038.parquet",
+        "size": 224486757
+      },
+      {
+        "name": "data/multilingual_de-00036-of-00038.parquet",
+        "size": 225777659
+      },
+      {
+        "name": "data/multilingual_de-00037-of-00038.parquet",
+        "size": 222606033
+      },
+      {
+        "name": "data/multilingual_es-00000-of-00033.parquet",
+        "size": 223229107
+      },
+      {
+        "name": "data/multilingual_es-00001-of-00033.parquet",
+        "size": 224897743
+      },
+      {
+        "name": "data/multilingual_es-00002-of-00033.parquet",
+        "size": 222519857
+      },
+      {
+        "name": "data/multilingual_es-00003-of-00033.parquet",
+        "size": 222669703
+      },
+      {
+        "name": "data/multilingual_es-00004-of-00033.parquet",
+        "size": 222729527
+      },
+      {
+        "name": "data/multilingual_es-00005-of-00033.parquet",
+        "size": 223258990
+      },
+      {
+        "name": "data/multilingual_es-00006-of-00033.parquet",
+        "size": 222623759
+      },
+      {
+        "name": "data/multilingual_es-00007-of-00033.parquet",
+        "size": 221332985
+      },
+      {
+        "name": "data/multilingual_es-00008-of-00033.parquet",
+        "size": 222551315
+      },
+      {
+        "name": "data/multilingual_es-00009-of-00033.parquet",
+        "size": 222388485
+      },
+      {
+        "name": "data/multilingual_es-00010-of-00033.parquet",
+        "size": 223258152
+      },
+      {
+        "name": "data/multilingual_es-00011-of-00033.parquet",
+        "size": 223374298
+      },
+      {
+        "name": "data/multilingual_es-00012-of-00033.parquet",
+        "size": 222035520
+      },
+      {
+        "name": "data/multilingual_es-00013-of-00033.parquet",
+        "size": 222657714
+      },
+      {
+        "name": "data/multilingual_es-00014-of-00033.parquet",
+        "size": 222525812
+      },
+      {
+        "name": "data/multilingual_es-00015-of-00033.parquet",
+        "size": 222184026
+      },
+      {
+        "name": "data/multilingual_es-00016-of-00033.parquet",
+        "size": 223786556
+      },
+      {
+        "name": "data/multilingual_es-00017-of-00033.parquet",
+        "size": 222663512
+      },
+      {
+        "name": "data/multilingual_es-00018-of-00033.parquet",
+        "size": 223096605
+      },
+      {
+        "name": "data/multilingual_es-00019-of-00033.parquet",
+        "size": 222867347
+      },
+      {
+        "name": "data/multilingual_es-00020-of-00033.parquet",
+        "size": 222741684
+      },
+      {
+        "name": "data/multilingual_es-00021-of-00033.parquet",
+        "size": 222203356
+      },
+      {
+        "name": "data/multilingual_es-00022-of-00033.parquet",
+        "size": 221634255
+      },
+      {
+        "name": "data/multilingual_es-00023-of-00033.parquet",
+        "size": 221208203
+      },
+      {
+        "name": "data/multilingual_es-00024-of-00033.parquet",
+        "size": 220995667
+      },
+      {
+        "name": "data/multilingual_es-00025-of-00033.parquet",
+        "size": 223098307
+      },
+      {
+        "name": "data/multilingual_es-00026-of-00033.parquet",
+        "size": 222249480
+      },
+      {
+        "name": "data/multilingual_es-00027-of-00033.parquet",
+        "size": 222515875
+      },
+      {
+        "name": "data/multilingual_es-00028-of-00033.parquet",
+        "size": 221228834
+      },
+      {
+        "name": "data/multilingual_es-00029-of-00033.parquet",
+        "size": 222421978
+      },
+      {
+        "name": "data/multilingual_es-00030-of-00033.parquet",
+        "size": 223429404
+      },
+      {
+        "name": "data/multilingual_es-00031-of-00033.parquet",
+        "size": 223747292
+      },
+      {
+        "name": "data/multilingual_es-00032-of-00033.parquet",
+        "size": 223228439
+      },
+      {
+        "name": "data/multilingual_fr-00000-of-00037.parquet",
+        "size": 220646383
+      },
+      {
+        "name": "data/multilingual_fr-00001-of-00037.parquet",
+        "size": 222223715
+      },
+      {
+        "name": "data/multilingual_fr-00002-of-00037.parquet",
+        "size": 221759816
+      },
+      {
+        "name": "data/multilingual_fr-00003-of-00037.parquet",
+        "size": 221303532
+      },
+      {
+        "name": "data/multilingual_fr-00004-of-00037.parquet",
+        "size": 222592318
+      },
+      {
+        "name": "data/multilingual_fr-00005-of-00037.parquet",
+        "size": 219438696
+      },
+      {
+        "name": "data/multilingual_fr-00006-of-00037.parquet",
+        "size": 221301314
+      },
+      {
+        "name": "data/multilingual_fr-00007-of-00037.parquet",
+        "size": 221491780
+      },
+      {
+        "name": "data/multilingual_fr-00008-of-00037.parquet",
+        "size": 221946571
+      },
+      {
+        "name": "data/multilingual_fr-00009-of-00037.parquet",
+        "size": 221887280
+      },
+      {
+        "name": "data/multilingual_fr-00010-of-00037.parquet",
+        "size": 222708928
+      },
+      {
+        "name": "data/multilingual_fr-00011-of-00037.parquet",
+        "size": 222795323
+      },
+      {
+        "name": "data/multilingual_fr-00012-of-00037.parquet",
+        "size": 222284846
+      },
+      {
+        "name": "data/multilingual_fr-00013-of-00037.parquet",
+        "size": 221272452
+      },
+      {
+        "name": "data/multilingual_fr-00014-of-00037.parquet",
+        "size": 221886260
+      },
+      {
+        "name": "data/multilingual_fr-00015-of-00037.parquet",
+        "size": 221836176
+      },
+      {
+        "name": "data/multilingual_fr-00016-of-00037.parquet",
+        "size": 219905956
+      },
+      {
+        "name": "data/multilingual_fr-00017-of-00037.parquet",
+        "size": 221888052
+      },
+      {
+        "name": "data/multilingual_fr-00018-of-00037.parquet",
+        "size": 219826518
+      },
+      {
+        "name": "data/multilingual_fr-00019-of-00037.parquet",
+        "size": 220719865
+      },
+      {
+        "name": "data/multilingual_fr-00020-of-00037.parquet",
+        "size": 221915358
+      },
+      {
+        "name": "data/multilingual_fr-00021-of-00037.parquet",
+        "size": 221012313
+      },
+      {
+        "name": "data/multilingual_fr-00022-of-00037.parquet",
+        "size": 220668196
+      },
+      {
+        "name": "data/multilingual_fr-00023-of-00037.parquet",
+        "size": 223548539
+      },
+      {
+        "name": "data/multilingual_fr-00024-of-00037.parquet",
+        "size": 223421392
+      },
+      {
+        "name": "data/multilingual_fr-00025-of-00037.parquet",
+        "size": 221248825
+      },
+      {
+        "name": "data/multilingual_fr-00026-of-00037.parquet",
+        "size": 221484007
+      },
+      {
+        "name": "data/multilingual_fr-00027-of-00037.parquet",
+        "size": 220924374
+      },
+      {
+        "name": "data/multilingual_fr-00028-of-00037.parquet",
+        "size": 221971330
+      },
+      {
+        "name": "data/multilingual_fr-00029-of-00037.parquet",
+        "size": 221236799
+      },
+      {
+        "name": "data/multilingual_fr-00030-of-00037.parquet",
+        "size": 220501892
+      },
+      {
+        "name": "data/multilingual_fr-00031-of-00037.parquet",
+        "size": 222624940
+      },
+      {
+        "name": "data/multilingual_fr-00032-of-00037.parquet",
+        "size": 221775934
+      },
+      {
+        "name": "data/multilingual_fr-00033-of-00037.parquet",
+        "size": 223440416
+      },
+      {
+        "name": "data/multilingual_fr-00034-of-00037.parquet",
+        "size": 221526952
+      },
+      {
+        "name": "data/multilingual_fr-00035-of-00037.parquet",
+        "size": 222645256
+      },
+      {
+        "name": "data/multilingual_fr-00036-of-00037.parquet",
+        "size": 221110790
+      },
+      {
+        "name": "data/multilingual_it-00000-of-00038.parquet",
+        "size": 220872312
+      },
+      {
+        "name": "data/multilingual_it-00001-of-00038.parquet",
+        "size": 221416906
+      },
+      {
+        "name": "data/multilingual_it-00002-of-00038.parquet",
+        "size": 220553498
+      },
+      {
+        "name": "data/multilingual_it-00003-of-00038.parquet",
+        "size": 222410634
+      },
+      {
+        "name": "data/multilingual_it-00004-of-00038.parquet",
+        "size": 220475681
+      },
+      {
+        "name": "data/multilingual_it-00005-of-00038.parquet",
+        "size": 220848935
+      },
+      {
+        "name": "data/multilingual_it-00006-of-00038.parquet",
+        "size": 221157407
+      },
+      {
+        "name": "data/multilingual_it-00007-of-00038.parquet",
+        "size": 222180730
+      },
+      {
+        "name": "data/multilingual_it-00008-of-00038.parquet",
+        "size": 222429572
+      },
+      {
+        "name": "data/multilingual_it-00009-of-00038.parquet",
+        "size": 220473537
+      },
+      {
+        "name": "data/multilingual_it-00010-of-00038.parquet",
+        "size": 222701995
+      },
+      {
+        "name": "data/multilingual_it-00011-of-00038.parquet",
+        "size": 222611702
+      },
+      {
+        "name": "data/multilingual_it-00012-of-00038.parquet",
+        "size": 221653136
+      },
+      {
+        "name": "data/multilingual_it-00013-of-00038.parquet",
+        "size": 222236757
+      },
+      {
+        "name": "data/multilingual_it-00014-of-00038.parquet",
+        "size": 222171805
+      },
+      {
+        "name": "data/multilingual_it-00015-of-00038.parquet",
+        "size": 220616710
+      },
+      {
+        "name": "data/multilingual_it-00016-of-00038.parquet",
+        "size": 220209587
+      },
+      {
+        "name": "data/multilingual_it-00017-of-00038.parquet",
+        "size": 220927407
+      },
+      {
+        "name": "data/multilingual_it-00018-of-00038.parquet",
+        "size": 221447135
+      },
+      {
+        "name": "data/multilingual_it-00019-of-00038.parquet",
+        "size": 220351121
+      },
+      {
+        "name": "data/multilingual_it-00020-of-00038.parquet",
+        "size": 221076085
+      },
+      {
+        "name": "data/multilingual_it-00021-of-00038.parquet",
+        "size": 221716171
+      },
+      {
+        "name": "data/multilingual_it-00022-of-00038.parquet",
+        "size": 220938960
+      },
+      {
+        "name": "data/multilingual_it-00023-of-00038.parquet",
+        "size": 222142417
+      },
+      {
+        "name": "data/multilingual_it-00024-of-00038.parquet",
+        "size": 221922481
+      },
+      {
+        "name": "data/multilingual_it-00025-of-00038.parquet",
+        "size": 221876763
+      },
+      {
+        "name": "data/multilingual_it-00026-of-00038.parquet",
+        "size": 221714778
+      },
+      {
+        "name": "data/multilingual_it-00027-of-00038.parquet",
+        "size": 221329860
+      },
+      {
+        "name": "data/multilingual_it-00028-of-00038.parquet",
+        "size": 223211168
+      },
+      {
+        "name": "data/multilingual_it-00029-of-00038.parquet",
+        "size": 220833196
+      },
+      {
+        "name": "data/multilingual_it-00030-of-00038.parquet",
+        "size": 222363103
+      },
+      {
+        "name": "data/multilingual_it-00031-of-00038.parquet",
+        "size": 220585858
+      },
+      {
+        "name": "data/multilingual_it-00032-of-00038.parquet",
+        "size": 220334971
+      },
+      {
+        "name": "data/multilingual_it-00033-of-00038.parquet",
+        "size": 220585651
+      },
+      {
+        "name": "data/multilingual_it-00034-of-00038.parquet",
+        "size": 221998713
+      },
+      {
+        "name": "data/multilingual_it-00035-of-00038.parquet",
+        "size": 220053359
+      },
+      {
+        "name": "data/multilingual_it-00036-of-00038.parquet",
+        "size": 220381879
+      },
+      {
+        "name": "data/multilingual_it-00037-of-00038.parquet",
+        "size": 220760561
+      },
+      {
+        "name": "data/multilingual_ja-00000-of-00037.parquet",
+        "size": 219896560
+      },
+      {
+        "name": "data/multilingual_ja-00001-of-00037.parquet",
+        "size": 219723829
+      },
+      {
+        "name": "data/multilingual_ja-00002-of-00037.parquet",
+        "size": 216688965
+      },
+      {
+        "name": "data/multilingual_ja-00003-of-00037.parquet",
+        "size": 218512984
+      },
+      {
+        "name": "data/multilingual_ja-00004-of-00037.parquet",
+        "size": 219765901
+      },
+      {
+        "name": "data/multilingual_ja-00005-of-00037.parquet",
+        "size": 219631100
+      },
+      {
+        "name": "data/multilingual_ja-00006-of-00037.parquet",
+        "size": 218498432
+      },
+      {
+        "name": "data/multilingual_ja-00007-of-00037.parquet",
+        "size": 217501157
+      },
+      {
+        "name": "data/multilingual_ja-00008-of-00037.parquet",
+        "size": 219971929
+      },
+      {
+        "name": "data/multilingual_ja-00009-of-00037.parquet",
+        "size": 218944555
+      },
+      {
+        "name": "data/multilingual_ja-00010-of-00037.parquet",
+        "size": 220301943
+      },
+      {
+        "name": "data/multilingual_ja-00011-of-00037.parquet",
+        "size": 218884882
+      },
+      {
+        "name": "data/multilingual_ja-00012-of-00037.parquet",
+        "size": 220638512
+      },
+      {
+        "name": "data/multilingual_ja-00013-of-00037.parquet",
+        "size": 217650718
+      },
+      {
+        "name": "data/multilingual_ja-00014-of-00037.parquet",
+        "size": 218044152
+      },
+      {
+        "name": "data/multilingual_ja-00015-of-00037.parquet",
+        "size": 219332382
+      },
+      {
+        "name": "data/multilingual_ja-00016-of-00037.parquet",
+        "size": 219825329
+      },
+      {
+        "name": "data/multilingual_ja-00017-of-00037.parquet",
+        "size": 218220955
+      },
+      {
+        "name": "data/multilingual_ja-00018-of-00037.parquet",
+        "size": 220405910
+      },
+      {
+        "name": "data/multilingual_ja-00019-of-00037.parquet",
+        "size": 219358498
+      },
+      {
+        "name": "data/multilingual_ja-00020-of-00037.parquet",
+        "size": 218096881
+      },
+      {
+        "name": "data/multilingual_ja-00021-of-00037.parquet",
+        "size": 219731862
+      },
+      {
+        "name": "data/multilingual_ja-00022-of-00037.parquet",
+        "size": 217536401
+      },
+      {
+        "name": "data/multilingual_ja-00023-of-00037.parquet",
+        "size": 220662184
+      },
+      {
+        "name": "data/multilingual_ja-00024-of-00037.parquet",
+        "size": 217881472
+      },
+      {
+        "name": "data/multilingual_ja-00025-of-00037.parquet",
+        "size": 221057360
+      },
+      {
+        "name": "data/multilingual_ja-00026-of-00037.parquet",
+        "size": 219949358
+      },
+      {
+        "name": "data/multilingual_ja-00027-of-00037.parquet",
+        "size": 220001396
+      },
+      {
+        "name": "data/multilingual_ja-00028-of-00037.parquet",
+        "size": 220104879
+      },
+      {
+        "name": "data/multilingual_ja-00029-of-00037.parquet",
+        "size": 219380283
+      },
+      {
+        "name": "data/multilingual_ja-00030-of-00037.parquet",
+        "size": 218413755
+      },
+      {
+        "name": "data/multilingual_ja-00031-of-00037.parquet",
+        "size": 218814375
+      },
+      {
+        "name": "data/multilingual_ja-00032-of-00037.parquet",
+        "size": 219686360
+      },
+      {
+        "name": "data/multilingual_ja-00033-of-00037.parquet",
+        "size": 220562884
+      },
+      {
+        "name": "data/multilingual_ja-00034-of-00037.parquet",
+        "size": 217588203
+      },
+      {
+        "name": "data/multilingual_ja-00035-of-00037.parquet",
+        "size": 217676543
+      },
+      {
+        "name": "data/multilingual_ja-00036-of-00037.parquet",
+        "size": 218702724
+      },
+      {
+        "name": "data/stem-00000-of-00002.parquet",
+        "size": 218258427
+      },
+      {
+        "name": "data/stem-00001-of-00002.parquet",
+        "size": 169800930
+      }
+    ]
+  },
+  {
+    "repo": "sahil2801/CodeAlpaca-20k",
+    "revision": "152bb5e9a29651266b018106053980070a0521a1",
+    "gated": false,
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 2265
+      },
+      {
+        "name": "README.md",
+        "size": 147
+      },
+      {
+        "name": "code_alpaca_20k.json",
+        "size": 8057896
+      }
+    ]
+  },
+  {
+    "repo": "EleutherAI/hendrycks_math",
+    "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+    "gated": false,
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 2307
+      },
+      {
+        "name": "README.md",
+        "size": 3926
+      },
+      {
+        "name": "algebra/test-00000-of-00001.parquet",
+        "size": 353114
+      },
+      {
+        "name": "algebra/train-00000-of-00001.parquet",
+        "size": 505186
+      },
+      {
+        "name": "counting_and_probability/test-00000-of-00001.parquet",
+        "size": 175032
+      },
+      {
+        "name": "counting_and_probability/train-00000-of-00001.parquet",
+        "size": 329354
+      },
+      {
+        "name": "geometry/test-00000-of-00001.parquet",
+        "size": 263835
+      },
+      {
+        "name": "geometry/train-00000-of-00001.parquet",
+        "size": 549388
+      },
+      {
+        "name": "intermediate_algebra/test-00000-of-00001.parquet",
+        "size": 394797
+      },
+      {
+        "name": "intermediate_algebra/train-00000-of-00001.parquet",
+        "size": 575154
+      },
+      {
+        "name": "number_theory/test-00000-of-00001.parquet",
+        "size": 182003
+      },
+      {
+        "name": "number_theory/train-00000-of-00001.parquet",
+        "size": 308653
+      },
+      {
+        "name": "prealgebra/test-00000-of-00001.parquet",
+        "size": 267729
+      },
+      {
+        "name": "prealgebra/train-00000-of-00001.parquet",
+        "size": 383626
+      },
+      {
+        "name": "precalculus/test-00000-of-00001.parquet",
+        "size": 242241
+      },
+      {
+        "name": "precalculus/train-00000-of-00001.parquet",
+        "size": 353745
+      }
+    ]
+  },
+  {
+    "repo": "HuggingFaceH4/ultrachat_200k",
+    "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+    "gated": false,
+    "files": [
+      {
+        "name": ".gitattributes",
+        "size": 2307
+      },
+      {
+        "name": "README.md",
+        "size": 3899
+      },
+      {
+        "name": "data/test_gen-00000-of-00001-3d4cd8309148a71f.parquet",
+        "size": 80359907
+      },
+      {
+        "name": "data/test_sft-00000-of-00001-f7dfac4afe5b93f4.parquet",
+        "size": 81176553
+      },
+      {
+        "name": "data/train_gen-00000-of-00003-a6c9fb894be3e50b.parquet",
+        "size": 243687391
+      },
+      {
+        "name": "data/train_gen-00001-of-00003-d6a0402e417f35ca.parquet",
+        "size": 243300397
+      },
+      {
+        "name": "data/train_gen-00002-of-00003-c0db75b92a2f48fd.parquet",
+        "size": 243497356
+      },
+      {
+        "name": "data/train_sft-00000-of-00003-a3ecf92756993583.parquet",
+        "size": 243999189
+      },
+      {
+        "name": "data/train_sft-00001-of-00003-0a1804bcb6ae68c6.parquet",
+        "size": 243897199
+      },
+      {
+        "name": "data/train_sft-00002-of-00003-ee46ed25cfae92c6.parquet",
+        "size": 244131731
+      }
+    ]
+  }
+]

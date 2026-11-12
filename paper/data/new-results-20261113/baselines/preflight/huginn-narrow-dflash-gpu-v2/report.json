@@ -1,0 +1,42 @@
+{
+  "status": "passed_gpu_compatibility_not_trained_pilot",
+  "model": "huginn-3.5b",
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "started_unix": 1794352230.2553308,
+  "draft_parameters": 332621056,
+  "training_source_id": "ultrachat/ab3bf99140773bb7d199c3ff02ab0d92c807db18d6fc96c3b20ff880d93ab102",
+  "training_prompt_tokens": 14,
+  "training_answer_tokens": 32,
+  "training_loss": 11.017903327941895,
+  "accuracy": 0.0,
+  "grad_norm": 53.5372314453125,
+  "projection_gradients": {
+    "fc.weight": 13.896332740783691,
+    "input_projection.weight": 20.607423782348633,
+    "output_projection.weight": 10.080175399780273
+  },
+  "update_wall_s": 5.657559759914875,
+  "training_peak_allocated_bytes": 15236449280,
+  "target_frozen": true,
+  "target_loop_depth": 32,
+  "target_features": [
+    1,
+    126,
+    128,
+    130,
+    131
+  ],
+  "optimizer": "Pinned official BF16Optimizer; one diagnostic update, microbatch1,512 anchors",
+  "repeat_exact": true,
+  "greedy_ar_equal": true,
+  "first_divergence": null,
+  "torch": "2.9.1+cu128",
+  "checkpoint_loading_clean": true,
+  "limitations": [
+    "One real-target optimizer update and one synthetic decode prompt only; not trained-pilot quality or speed.",
+    "Microbatch1 on one short training example does not establish the longest-batch memory bound.",
+    "AR/drafter finite-precision discrepancies, if any, require separate numerical diagnosis.",
+    "Target/head remain full width; no claim of proportional end-to-end speed improvement."
+  ],
+  "finished_unix": 1794352271.784523
+}

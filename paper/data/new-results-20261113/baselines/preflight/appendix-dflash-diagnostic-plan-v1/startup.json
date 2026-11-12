@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "controller": {
+    "pid": 55011,
+    "state": "S",
+    "start_ticks": "48112626",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/resume_appendix_dflash_diagnostics.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/spec.json"
+    ]
+  },
+  "waiter_status": {
+    "stage": "waiting_for_existing_training_and_measurements",
+    "controller_pid": 55011,
+    "updated_unix": 1794466151.606441,
+    "evaluator": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1",
+    "expected_groups": 6,
+    "gpu_workers": 0
+  },
+  "spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c",
+  "checked_unix": 1794466159.286249
+}

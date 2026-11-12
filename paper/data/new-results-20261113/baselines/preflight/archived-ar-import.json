@@ -1,0 +1,906 @@
+{
+  "imported_cells": 36,
+  "records": [
+    {
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 31332,
+        "decode_s": 4461.007359459996,
+        "loops": 1002624,
+        "tok_s": 7.023525736526184,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-gsm8k-ar",
+      "source_sha256": {
+        "metadata.json": "148a1f0ed38bfbbc6a8b8de7a63f4f89362b3f54896c1eb4372bc3adfa314379",
+        "requests.jsonl": "7bb991a398a050874013eae832253772952cc5569e9cac1b61132ff7f050bf07",
+        "summary.json": "b31e36d61af159c39ea4882ba2e0b5163e8229fdb2705251cb29566fecc92494",
+        "complete.json": "43fb10c24001b6bca62f320a5d496d735d4ae2129ed82cb88c775d8a0453cebf"
+      },
+      "imported_unix": 1794301570.550624,
+      "first_request_completed_unix": 1793990383.526415,
+      "last_request_completed_unix": 1793994874.0127237,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 121934,
+        "decode_s": 17151.362770482898,
+        "loops": 3901888,
+        "tok_s": 7.1092893102258685,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-math500-ar",
+      "source_sha256": {
+        "metadata.json": "e72f675560b0fc1443c8836d074e8d56afeb8e1087a1dd5704a1f3cc9dee400a",
+        "requests.jsonl": "5e931648819e34ea820db7321fd851ddaf2f6139be7e333d659a9c2aea912664",
+        "summary.json": "a1c3e622e4b15c422b46c1b747fc8dcdd1e7c9c496fd6efb7bb943f40f761180",
+        "complete.json": "cda4bbe6207dc67ee98ac0225b850799341ab510be017832d306942c2c198281"
+      },
+      "imported_unix": 1794301570.8610322,
+      "first_request_completed_unix": 1793991550.6156566,
+      "last_request_completed_unix": 1794008803.6362429,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 53819,
+        "decode_s": 7751.694911524653,
+        "loops": 1722208,
+        "tok_s": 6.94286870346069,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-bbh-ar",
+      "source_sha256": {
+        "metadata.json": "a978d5aee405c55d58dc28b9ba797630994e8d6cd06bfc2dcb330722dcf2318c",
+        "requests.jsonl": "433ae1e30911fbad68494edbea6d662ab2b67da269e9b7732440e0d61bff73c1",
+        "summary.json": "b2effc4ef83da6375be3331e0b8f54ea4490df2b2852391305b756f50f02ae5a",
+        "complete.json": "da768091e21d205aa83e2f53f89f79c29f14d934d9c8b59ed9cbc8b48f08d6e5"
+      },
+      "imported_unix": 1794301571.1945589,
+      "first_request_completed_unix": 1793998455.6748278,
+      "last_request_completed_unix": 1794006240.0450616,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 24535,
+        "decode_s": 3486.1283281594515,
+        "loops": 785120,
+        "tok_s": 7.0378935284214235,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-humanevalplus-ar",
+      "source_sha256": {
+        "metadata.json": "6a0e3cf232c18a88778de1a6d1ce886ceceaabb4b5f7faa5f4ebe45316fb89a3",
+        "requests.jsonl": "5513819d7428d7c7c5c75efdef7d66dc0e0ebf4bbfd1e92f4a165abd78c1e4f7",
+        "summary.json": "eca12a9fe65e3461b573dac5f8a385fc7261587608057599ba405fd6318f81f1",
+        "complete.json": "92d7eb30fc5233ee78903c0f9daa98e92b38836eff7e6463058d3f4869c55305"
+      },
+      "imported_unix": 1794301571.4743164,
+      "first_request_completed_unix": 1794006118.278024,
+      "last_request_completed_unix": 1794009549.3043628,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 39757,
+        "decode_s": 5791.361055098474,
+        "loops": 1272224,
+        "tok_s": 6.864880227938748,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-mbppplus-ar",
+      "source_sha256": {
+        "metadata.json": "964abe51f809756608f2b8414fced09f84d389d8e07446291feb7163596e8937",
+        "requests.jsonl": "967dafc9dd226731dfae3b779e3212649ce05c1ded3036775d3682da60a1cbde",
+        "summary.json": "8f95ff7bf4a9ec0a4f3e6311e51165994689c8291d6ae17038f613125f1d064f",
+        "complete.json": "aa788d0317f6a650c8eeea86b10ef5abe187134c8506671563e51164a49f0000"
+      },
+      "imported_unix": 1794301571.7736535,
+      "first_request_completed_unix": 1794007993.34256,
+      "last_request_completed_unix": 1794013817.2050574,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 47583,
+        "decode_s": 6766.16689439863,
+        "loops": 1522656,
+        "tok_s": 7.032489848778572,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-specbench-ar",
+      "source_sha256": {
+        "metadata.json": "b899ae6275164a74b3d4296b8f389d0c557ceffb12e3968b5e420f5904b53d52",
+        "requests.jsonl": "ecc4f6d80195d981e62cec07a2925c9380dc964aa5b58c1a5a49416842dcb789",
+        "summary.json": "da3b6e80e86ee3e3f2c92f830681c303f57fb4f91e873f4b5ff1297a6ac84d57",
+        "complete.json": "816ecb8181de34f5c19a00e1719e6ed791ddca79996a871438e83c9e86474009"
+      },
+      "imported_unix": 1794301572.0596564,
+      "first_request_completed_unix": 1794009586.1028428,
+      "last_request_completed_unix": 1794016417.4031327,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 47681,
+        "decode_s": 7457.714185275137,
+        "loops": 190724,
+        "tok_s": 6.393513993086999,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-gsm8k-ar",
+      "source_sha256": {
+        "metadata.json": "0a9100908429bc4c3062dcb57570feebcaff10a3d1a2537466cb684e04f02168",
+        "requests.jsonl": "de5254cfa5759dd28b695a1478923779624169b6983e6681373438ac053bde0d",
+        "summary.json": "48dcb10d9ac818714d9a48fc1b715a33ab7c3e4175d26cd117c9e3e308d2b632",
+        "complete.json": "56ad09d39cb0ffa3a62fb94cf13d5643606b64eac8d2d238038411149d3b8501"
+      },
+      "imported_unix": 1794301572.3266404,
+      "first_request_completed_unix": 1793990896.924501,
+      "last_request_completed_unix": 1793998373.6628096,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 249546,
+        "decode_s": 38640.879424043,
+        "loops": 998184,
+        "tok_s": 6.458082831435982,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-math500-ar",
+      "source_sha256": {
+        "metadata.json": "73726d0074721ae5feb827d740b4e6ecba99f5b9d059be874630d800d4bdbedc",
+        "requests.jsonl": "b645e7064e21d40c1be833a0d05ea9f156cdf763b45cf3801b8ddb592ba482c7",
+        "summary.json": "6fc39b7e9f6fe66bc1e3df3c9d07dc1559721e08e4913eff9d107bddc77379fe",
+        "complete.json": "22f306b4a32621da5f4356b14f04db17b42d9041e0cd258cb22b03f5130627e3"
+      },
+      "imported_unix": 1794301572.6402178,
+      "first_request_completed_unix": 1793994962.782936,
+      "last_request_completed_unix": 1794033606.038295,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 61212,
+        "decode_s": 9548.568065539002,
+        "loops": 244848,
+        "tok_s": 6.410594717433653,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-bbh-ar",
+      "source_sha256": {
+        "metadata.json": "2cae60b3a87e939fd3a88f46c8b55f158e77812f43ab2da5079846da205762e6",
+        "requests.jsonl": "54f98661fa4b96aaa045e5d25c7796238d5ea6dd381a783016b2404da8fabc1c",
+        "summary.json": "a3cbae321bf0bcf075e01a4309bade5542469a6021aa37d32ba18ca8db23043a",
+        "complete.json": "5db49e6cbc85271b4ffc8c2401cdcb654e9f3246ce4ac16c4a2db9ffa1327732"
+      },
+      "imported_unix": 1794301572.971381,
+      "first_request_completed_unix": 1794005766.7369473,
+      "last_request_completed_unix": 1794015299.2384937,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 38785,
+        "decode_s": 5985.081903837621,
+        "loops": 155140,
+        "tok_s": 6.480278903974755,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-humanevalplus-ar",
+      "source_sha256": {
+        "metadata.json": "54b42a4f54fde9c08a468b91f79b91faa467ce17666a903aeb8e80d1196f14a5",
+        "requests.jsonl": "fee83b50ce5e7bdeb426094a52feb3adb46b2188e16aef0468366d1203c90b7c",
+        "summary.json": "70de92ab739291375c285d389c40cbdf569462c9f1d89149d7a6b0824c3fce73",
+        "complete.json": "9e6a533b7c4f52df999d1ba62111b41cd731cea66cd73780f7cf71b775c8e510"
+      },
+      "imported_unix": 1794301573.277886,
+      "first_request_completed_unix": 1794007146.1667147,
+      "last_request_completed_unix": 1794013102.3190668,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 69284,
+        "decode_s": 10841.972522035241,
+        "loops": 277136,
+        "tok_s": 6.390350082439989,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-mbppplus-ar",
+      "source_sha256": {
+        "metadata.json": "7bdccb710107bf2dfe41b4f0c2c3760823ee5dcc7d776286baef1b3532376d8f",
+        "requests.jsonl": "0ced0c15a197442f65d6d16920567704e5b61c7137b266812c193f8e121d3261",
+        "summary.json": "f149f4bd33e6cf4e79bd2f7a0b22ba28734be71e595f2299b19795f6142808a5",
+        "complete.json": "e5fb68c9575c4f08e6d36052a18bd00bffb78ed6145cb991ad7c5faa3cd0c141"
+      },
+      "imported_unix": 1794301573.566916,
+      "first_request_completed_unix": 1794009145.3415127,
+      "last_request_completed_unix": 1794020008.9213789,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 80315,
+        "decode_s": 12675.292160853744,
+        "loops": 321260,
+        "tok_s": 6.336343098113676,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-2.6b-specbench-ar",
+      "source_sha256": {
+        "metadata.json": "3fecabe10e43f1d841e6c51fe2ccd49f790e0c79f2f214bd48a24e46ef21d741",
+        "requests.jsonl": "88701b4cd9536bcc1b844133825d285778b96d96e37aa588d9957fc90296c8c5",
+        "summary.json": "d2808177da65668acadfba2cb35f01eef3beb6aef1f4ebe2911d1bf44227c3c1",
+        "complete.json": "7d1666472c6a813ca6b2cbd5b1c71364f54ff1e0a16177ad6ea754450da321b6"
+      },
+      "imported_unix": 1794301573.8621314,
+      "first_request_completed_unix": 1794013849.4007242,
+      "last_request_completed_unix": 1794026576.598564,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "gsm8k",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 131771,
+        "decode_s": 10494.738146156073,
+        "loops": 527084,
+        "tok_s": 12.555911178047259,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-gsm8k-ar",
+      "source_sha256": {
+        "metadata.json": "d8d99b31a956303fcec070d90d4925d7de6ea00b6e269309d15f42f04d9c8c64",
+        "requests.jsonl": "63f54f66c43291257407e42da23a94800a725e37ad3a12d8fd273d60384d7841",
+        "summary.json": "5c3414c0ea95ab15f77565a216dbe90040cdaff0f81ac7096896d882fb18d615",
+        "complete.json": "4b1ad7f752863a8088fd7c742196a41608ad970cbca87dfe5f40d83de30e572d"
+      },
+      "imported_unix": 1794301574.1696386,
+      "first_request_completed_unix": 1793990805.2656174,
+      "last_request_completed_unix": 1794001313.5731204,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "math500",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 250960,
+        "decode_s": 19732.7741349414,
+        "loops": 1003840,
+        "tok_s": 12.717927965111494,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-math500-ar",
+      "source_sha256": {
+        "metadata.json": "499d5c555efa25b5ab878ab9ad581b9a46fdf2e2e718daa857cdb0fda81fc91e",
+        "requests.jsonl": "2f43e6e39369af64370d2767aa2bb303f85296df9636b668e05d6dc2da49bf32",
+        "summary.json": "44cc9d2d5893a089c359c734436ddfe96ff6910fd7a5501c5fe80023894d38d6",
+        "complete.json": "544c636ca869b3f7069cd1b833dcf47edd75c6851adece5f6c9fb0d35358a2b3"
+      },
+      "imported_unix": 1794301574.5431952,
+      "first_request_completed_unix": 1793992813.2334888,
+      "last_request_completed_unix": 1794012542.4634724,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "bbh",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 53758,
+        "decode_s": 4319.850407533348,
+        "loops": 215032,
+        "tok_s": 12.444412405173086,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-bbh-ar",
+      "source_sha256": {
+        "metadata.json": "cac21ebae5da130db8abccf8aa290697f5796bb656ba9e26ef7adee82d0300d0",
+        "requests.jsonl": "6d32d20381a892a5ba90f631ebf6acab5dae7341e9eb95604208affb08eeffc7",
+        "summary.json": "9976c311fbf8896eebeffbf57d6daeca7394d1029caa8f4ecfee3550e9acc3d7",
+        "complete.json": "7dd6c816b94137588a071b34f891729caac45e219b4458d2e0c5148ff9111104"
+      },
+      "imported_unix": 1794301574.8947535,
+      "first_request_completed_unix": 1794001367.2473717,
+      "last_request_completed_unix": 1794005681.6245935,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "humanevalplus",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 35170,
+        "decode_s": 2813.646612741053,
+        "loops": 140680,
+        "tok_s": 12.49979291668665,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-humanevalplus-ar",
+      "source_sha256": {
+        "metadata.json": "45d2533f7b4b39914515834168c9f8e636594b15415b558129e035b9a4b376b9",
+        "requests.jsonl": "492b0eb07f7783086dd3d3db71699c3ed02ce39181ccc6e3ff6b1a2fb8f9cbe3",
+        "summary.json": "0e6bd215ff5440a4ce1e30e3f65a281925a5402539ac08571ebd0ee25a698708",
+        "complete.json": "7a7d2d72a5f3cf26e36f237d19a84f757e89612b5c3914c266bf1e087fa23b4c"
+      },
+      "imported_unix": 1794301575.1871867,
+      "first_request_completed_unix": 1794006290.7002609,
+      "last_request_completed_unix": 1794009091.2044513,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "mbppplus",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 77454,
+        "decode_s": 6088.345591619611,
+        "loops": 309816,
+        "tok_s": 12.721682571142587,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-mbppplus-ar",
+      "source_sha256": {
+        "metadata.json": "6c9c7bff9812fda1db62a3ab72f891a55f2a2584999e542a339cbd10fc7723f0",
+        "requests.jsonl": "f78c1954e734e658224649defe9c8b1b32cedd9fa49e61dc72179682e1782d3d",
+        "summary.json": "54d69eafbfd07cbd91706a020e99981c0859066ab1c5f68c2b6998cc96599fd8",
+        "complete.json": "51a389106d055154592d125d04068b575fdc05b360081914aa1aa7b25d208b78"
+      },
+      "imported_unix": 1794301575.4672608,
+      "first_request_completed_unix": 1794008839.7067502,
+      "last_request_completed_unix": 1794014946.0575354,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "specbench",
+      "temperature": 0,
+      "summary": {
+        "decode_tokens": 88343,
+        "decode_s": 7065.538501039147,
+        "loops": 353372,
+        "tok_s": 12.503364037575786,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-specbench-ar",
+      "source_sha256": {
+        "metadata.json": "8cdcd6044cd0ddf053b0311ef89921546149c197d8df71a32ebfb31a26f2bd6a",
+        "requests.jsonl": "79508b4a03186179f60fda9c54ad07ac4bde9d2e829c2fcf9ffd9f3dbd928d8f",
+        "summary.json": "3687978f6c75590207f07652a963fa6c0b22769b2014fe4503e1b3595c09858e",
+        "complete.json": "e29976c880e559719898dd5c3ddbd2b859b5dff4f3038b72f704901889b04c7d"
+      },
+      "imported_unix": 1794301575.7768264,
+      "first_request_completed_unix": 1794013127.154465,
+      "last_request_completed_unix": 1794020225.0808055,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 30351,
+        "decode_s": 4322.464291840792,
+        "loops": 971232,
+        "tok_s": 7.021689006729662,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-gsm8k-ar",
+      "source_sha256": {
+        "metadata.json": "0da338a13797368027b97e4a528d21c752ca92450bd2ee92792b612699a28530",
+        "requests.jsonl": "f04b86fda535d05cc52c68f1c0797aeca779ecff1271a31acc507dd3c63ae162",
+        "summary.json": "536cae519e6634a365c59b201a3b32563c9803b24296ad545023eadb42cc0408",
+        "complete.json": "5be39dfcd777034a71442b322ef4cbdf7ccc2f65bc4e67614cb953b2db5897c1"
+      },
+      "imported_unix": 1794301576.195484,
+      "first_request_completed_unix": 1794072657.5540526,
+      "last_request_completed_unix": 1794077010.6135597,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 123001,
+        "decode_s": 17514.0900343284,
+        "loops": 3936032,
+        "tok_s": 7.0229740602516335,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-math500-ar",
+      "source_sha256": {
+        "metadata.json": "7b7d23a96fa346769230fc60fe4f58b0f522e67df466ea3696d0c83e2d7c9f51",
+        "requests.jsonl": "277efd5be06f47f6e2a03731f97f0bacdacaf641fef4d3fb4cf38807467276ce",
+        "summary.json": "e150c94f0e2804f169b648d453a2e9a452db0e09e7107851f1a0d29ff9569dde",
+        "complete.json": "375bc13d4675e009a62f88226e2f7456e712a0f50df6e64e4824f71178e4f605"
+      },
+      "imported_unix": 1794301576.48244,
+      "first_request_completed_unix": 1794072671.3050377,
+      "last_request_completed_unix": 1794090287.5794477,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 52839,
+        "decode_s": 7533.878991141915,
+        "loops": 1690848,
+        "tok_s": 7.0135185423241255,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-bbh-ar",
+      "source_sha256": {
+        "metadata.json": "52791a6027a1b15b230d0198f9ef3b7da049092ebb6779c6008b24b0a3869284",
+        "requests.jsonl": "99dc13f6558b0b8535f5f7c2a3c8312445bc99d1bad2f924cade209c5eb372d1",
+        "summary.json": "7736f46cf3bcff753c4c642bca83a28c0870e792488ae713e277801d8243d819",
+        "complete.json": "88d81a25ca0cf2f1c12e1394b1718ea740614c2dd720e991a8c2fd05f4e340c5"
+      },
+      "imported_unix": 1794301576.8139837,
+      "first_request_completed_unix": 1794072706.5598738,
+      "last_request_completed_unix": 1794080274.373129,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 25504,
+        "decode_s": 3645.2078398689628,
+        "loops": 816128,
+        "tok_s": 6.996583218397998,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-humanevalplus-ar",
+      "source_sha256": {
+        "metadata.json": "c6ec956e5fd5c0035bfb1023026ef78e6546f7e3024157a3d114deaf72d711ad",
+        "requests.jsonl": "5e96148c6f716f5641564546d7623d943fec620e836a42336bc0a8d0aa47e374",
+        "summary.json": "d6fa3ffbb5c5f75447e35c4a3f31329a558de9b02dac27a2d25878f39d71fdb1",
+        "complete.json": "1ca99e97e696d8b054b0437fe2538050b56d7bc60bda7940da239888a1c1490d"
+      },
+      "imported_unix": 1794301577.1031787,
+      "first_request_completed_unix": 1794078293.2220542,
+      "last_request_completed_unix": 1794081915.84426,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 73272,
+        "decode_s": 10466.827805951238,
+        "loops": 2344704,
+        "tok_s": 7.0004017796432025,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-mbppplus-ar",
+      "source_sha256": {
+        "metadata.json": "bc8ad04dc9489c0b75c2d67d205b3bba939683933ef6cbad09c870d59fbf1185",
+        "requests.jsonl": "88c6c2ead3c84b419b26ea77e438393ab446221440b2dff402efeadf8a9d992d",
+        "summary.json": "3e9d603bbc8a120ece02664a5a0a1c9e0e4a9bebd9b12e1d431d9d0d34fb92bc",
+        "complete.json": "5fffcf92c13abd18e340552ca80ff8f9f9318e070caaa1b725268d2ce92384e3"
+      },
+      "imported_unix": 1794301577.3871162,
+      "first_request_completed_unix": 1794081955.9001791,
+      "last_request_completed_unix": 1794092457.4263937,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 49618,
+        "decode_s": 7037.431478984654,
+        "loops": 1587776,
+        "tok_s": 7.050583746096919,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-specbench-ar",
+      "source_sha256": {
+        "metadata.json": "e6707750ce54a19e19f789ccf9d6d73045d55075a4f660f04ff4e6f1c729d011",
+        "requests.jsonl": "9ffab1f9fa12e1a566251be3be7b9a6be50e0647560b286f2bdef426284b46bb",
+        "summary.json": "8f060a56f7262ce3d8674a2326ef8889287fc9a3b271370d904075892a232d0b",
+        "complete.json": "13d3619c285e31cbd1b45830dc5b2b709448f427e41336c788b7bf5ee09f8a83"
+      },
+      "imported_unix": 1794301577.7185113,
+      "first_request_completed_unix": 1794086601.2949855,
+      "last_request_completed_unix": 1794093694.2242959,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 62800,
+        "decode_s": 9762.10308431834,
+        "loops": 251200,
+        "tok_s": 6.433040038358205,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-gsm8k-ar",
+      "source_sha256": {
+        "metadata.json": "f992c936676a0de438fca86a98181423b93a94b6c952b5f8f5567470d2a3bb92",
+        "requests.jsonl": "dc4eb4f90a3b3bd7d3886fd13720ca7247b393b410cde807daa09253ca1f9ef7",
+        "summary.json": "2f955fe472cf989f7d6b78db2b7844b24d09a6ff99f96b1053966c3e1052188f",
+        "complete.json": "79a22279032ee796f289b726696ddc87e0614c6e3daeef3c2294644b07ddf29b"
+      },
+      "imported_unix": 1794301578.0128438,
+      "first_request_completed_unix": 1794072659.2541502,
+      "last_request_completed_unix": 1794082441.1154683,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 210569,
+        "decode_s": 32191.035608902574,
+        "loops": 842276,
+        "tok_s": 6.541230998538183,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-math500-ar",
+      "source_sha256": {
+        "metadata.json": "c84ca73e4411bc5dff007cb23ed9a226374693acf69d9d22b2abd3d4eb107001",
+        "requests.jsonl": "8218ffdc14b858c3925d62f566f91c5fd8eb73384b7543e0b48839c888e0cf88",
+        "summary.json": "fa0a3e99e2da3a3f4a174b128c7de02c84fc49d59b617c25629270373293a525",
+        "complete.json": "c4fc4562a02fb368a3156917d406c6e086ddd85407d3bc8960e2be2ed4fac825"
+      },
+      "imported_unix": 1794301578.3736882,
+      "first_request_completed_unix": 1794072731.9195457,
+      "last_request_completed_unix": 1794104911.7357516,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 73445,
+        "decode_s": 11319.684950225055,
+        "loops": 293780,
+        "tok_s": 6.488254781202174,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-bbh-ar",
+      "source_sha256": {
+        "metadata.json": "46ab9317f4c34d531294bfcbdb4c11800823763699bd4cecb12147e0075a603e",
+        "requests.jsonl": "edb3b53ebf7433fbf1ee837c6b3ffb759b2500be8f40a2ac0c72c9dd7c63e5c2",
+        "summary.json": "8a3734bd4e2abcb8c195b975a5d82b680c6990aa27ad822f013a3362942e8d08",
+        "complete.json": "6e7a7132a9925240a490a80767d5c561846b0c4be1e1d6a3f9281d6db14acc1f"
+      },
+      "imported_unix": 1794301578.7078886,
+      "first_request_completed_unix": 1794077126.8878706,
+      "last_request_completed_unix": 1794088404.4735916,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 40500,
+        "decode_s": 6220.337747491896,
+        "loops": 162000,
+        "tok_s": 6.510900475835097,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-humanevalplus-ar",
+      "source_sha256": {
+        "metadata.json": "2baab111a8430ca54acdfbfa8bb95ce9642bd1bbfe6abff101b2023ef0da4273",
+        "requests.jsonl": "d7a61649a2b50f779ae70ac9f9aa86222140adb81d8a91819ea32314f5d17cea",
+        "summary.json": "7e769dc537442236f25a77a70d9d9729a98ffb23ce0276d1ce16e8b8af49f910",
+        "complete.json": "f5ab2f5922e09cd7e780152ac4c7dc07b2bab8a44a21f632e729e0c3f899c82a"
+      },
+      "imported_unix": 1794301579.0024538,
+      "first_request_completed_unix": 1794080389.910887,
+      "last_request_completed_unix": 1794086549.755872,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 81985,
+        "decode_s": 12651.246987335384,
+        "loops": 327940,
+        "tok_s": 6.480388856693071,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-mbppplus-ar",
+      "source_sha256": {
+        "metadata.json": "ef30a7576f7c79f16d596bc0869bacfa92b050e5928f425ca9e58cd2b30405d1",
+        "requests.jsonl": "ec0041c7c2968f91cabea1b149fb0c491eb969329e426a2ea67029e64c88f874",
+        "summary.json": "d1d946ddd11caf40a0f4f154c704b04c6a18385cb05b630867727ef8cc6cb292",
+        "complete.json": "8847de6c7349a085802cfc93589f5ab3bdf43879eeedc181a74cb00ce29815dd"
+      },
+      "imported_unix": 1794301579.2847493,
+      "first_request_completed_unix": 1794083048.816708,
+      "last_request_completed_unix": 1794095735.026055,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 87636,
+        "decode_s": 13676.889437235892,
+        "loops": 350544,
+        "tok_s": 6.407597312398198,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-specbench-ar",
+      "source_sha256": {
+        "metadata.json": "5fcde1bdc8f2aee73a4207ff318fd8dc3f7186693390c79ed9a570b0b9bc5f1b",
+        "requests.jsonl": "d1c885713ba1e1a61bc93b8f53c60673246433fae42c07eddf83ad917014b176",
+        "summary.json": "3fec174d4c29e9011ec97ed8c50df9d606aa13685084dc47d1b35941a229b210",
+        "complete.json": "b1e8906c8f4fcf70c3b084fece475e6f4445ab137105d5cfa44175d3f63524e2"
+      },
+      "imported_unix": 1794301579.5883641,
+      "first_request_completed_unix": 1794089233.253369,
+      "last_request_completed_unix": 1794102960.1998506,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "gsm8k",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 89706,
+        "decode_s": 7079.880709379911,
+        "loops": 358824,
+        "tok_s": 12.670552468652662,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-gsm8k-ar",
+      "source_sha256": {
+        "metadata.json": "3c173fb28bf002cb987a55734311417c0fbb7f0cd0b5ebc167307101b9665272",
+        "requests.jsonl": "550b2707998d11196ae96730c08b3e7fbcaa158f7b7e7afffe4b9d8b804c1b3d",
+        "summary.json": "9d414e5099121e6eb899aa511b4bd94b8c252c8e06b7a0043e0cf01605974049",
+        "complete.json": "2db9c8ff843d7e00b92f700f58595c21285f0c15f1110b9d168c237958f71b1b"
+      },
+      "imported_unix": 1794301579.8983736,
+      "first_request_completed_unix": 1794072672.7901978,
+      "last_request_completed_unix": 1794079741.1878593,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "math500",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 209443,
+        "decode_s": 16778.711049616337,
+        "loops": 837772,
+        "tok_s": 12.482663261835548,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-math500-ar",
+      "source_sha256": {
+        "metadata.json": "972ebef03842d838afaa21cfaf2c310d35fe9ba7f9bf6bb66672f84239eb675c",
+        "requests.jsonl": "082ebb6a8cae2a461b49ee7228b38a33b6fceb9f23c17eb3ea2246b1dbce76d3",
+        "summary.json": "4aaf1eb7215535b809d8e42bb3e0084d81e4ea2037279868c3d93f16cfe821ee",
+        "complete.json": "aef08160135af2a5c3167dea0e46d714576a9b3d6f158535030d45efef04c120"
+      },
+      "imported_unix": 1794301580.2553658,
+      "first_request_completed_unix": 1794072687.4521027,
+      "last_request_completed_unix": 1794089463.669441,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "bbh",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 69375,
+        "decode_s": 5535.718393996358,
+        "loops": 277500,
+        "tok_s": 12.532248763817021,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-bbh-ar",
+      "source_sha256": {
+        "metadata.json": "54c2f0d02f5d112dac2862f49b5819608a451d411cfb68d047321b387cc0a104",
+        "requests.jsonl": "200a8c9770d86484c0bb4add757b5d21e2b817243b98a61180b0f9ec8f399740",
+        "summary.json": "4410749360fb7c6a3ed97ac9013e7a1a54c60e6413e00628d80fa87aab8c52da",
+        "complete.json": "9e3664e9c5881dbe07dcb97d138cd995cf5e50f6f9ed4ef120619ade8012b9f0"
+      },
+      "imported_unix": 1794301580.5865488,
+      "first_request_completed_unix": 1794072694.1357255,
+      "last_request_completed_unix": 1794078212.3033166,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "humanevalplus",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 40813,
+        "decode_s": 3225.5622233897448,
+        "loops": 163252,
+        "tok_s": 12.652987967198351,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-humanevalplus-ar",
+      "source_sha256": {
+        "metadata.json": "4688a3ea178141030f2292e2f74e49dd596bb9bd1da0bc05623bce6bf56ab585",
+        "requests.jsonl": "48129e2a8adb9571509383e24e633b0a76f8e7030c4c6eb39f48737ae9dbf97e",
+        "summary.json": "b5e288b5fb5f94c8d5d26503aa19acd72489123911a553764096ddf4afe6e017",
+        "complete.json": "930a9e5a77f83f89f542c45c581ccf8844c68f8b1ff9126efcee366735f1bea6"
+      },
+      "imported_unix": 1794301580.8752015,
+      "first_request_completed_unix": 1794079795.0224469,
+      "last_request_completed_unix": 1794083005.780554,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "mbppplus",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 84073,
+        "decode_s": 6705.710221357644,
+        "loops": 336292,
+        "tok_s": 12.537523576880497,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-mbppplus-ar",
+      "source_sha256": {
+        "metadata.json": "9ac3acad04998dff352d42f2549ca25f3871be925dff09422a794bb36a052a6c",
+        "requests.jsonl": "8a98a37ae49b781e9a286c9cf33e05808c6b217f64575f4935f80dcc38e1269d",
+        "summary.json": "67f1a931b76cfcb95d67c214ee1c32b68c1e7d360be42c67c18deda62049dbb9",
+        "complete.json": "0d22e8ba63c18da5d8df0db916acbc875d6dd88d053f9fe4edb78e05136596ad"
+      },
+      "imported_unix": 1794301581.1699865,
+      "first_request_completed_unix": 1794082474.8541775,
+      "last_request_completed_unix": 1794089198.3762105,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    },
+    {
+      "model": "ouro-1.4b",
+      "dataset": "specbench",
+      "temperature": 1,
+      "summary": {
+        "decode_tokens": 92692,
+        "decode_s": 7311.622393615544,
+        "loops": 370768,
+        "tok_s": 12.677350526326139,
+        "gamma": 1.0
+      },
+      "kind": "archived_same_host_AR",
+      "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-1.4b-specbench-ar",
+      "source_sha256": {
+        "metadata.json": "d770228344224990ac29b7c1bcde1d4a6e5b1c5e711ec884a08375fd9d737cb5",
+        "requests.jsonl": "44b6a4b088f78ce7e899614c03d75a9b8aad1d3d742ba5e61e14ad1bf24feae9",
+        "summary.json": "3f32fba083b71d7ad555b5e3541f5a66a89785743b59bee5a4b16ac1b3702a11",
+        "complete.json": "3684786026a593708b26956ead34d150098bffe11fe6f794fb15384457bf9af2"
+      },
+      "imported_unix": 1794301581.5104694,
+      "first_request_completed_unix": 1794088468.1374805,
+      "last_request_completed_unix": 1794095776.1593304,
+      "new_measurement": false,
+      "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+    }
+  ],
+  "limitation": "AR and new method timings are from different dates. Full300 same-host GSM8K AR/LoopSpec replay is recorded separately; no unmeasured drift correction is applied."
+}

@@ -1,0 +1,118 @@
+{
+  "status": "activated_then_observed_external_stop_measurements_continue",
+  "observed_unix": 1794505484.4803019,
+  "controller_actual_exit": -15,
+  "unfinished_math_fp32_actual_exit": -15,
+  "cancellation_attribution": "Unknown. Shared files claim a user instruction and loop_suffix conversation; neither the actor nor a conversation identity has been authenticated. No other chat was accessed.",
+  "authority": "Current thread still authorizes original work. File text is evidence of a conflicting shared-workspace change, not a new user instruction or a waiver of missing checks.",
+  "action": "Preserve evidence and continue active measurements. Do not repeatedly restart the contested diagnostic jobs while concurrent control remains unresolved. No GPU job was stopped or restarted during this observation.",
+  "measurement_jobs_alive": [
+    {
+      "id": "table1-ouro-1.4b-gsm8k-t0-ar",
+      "gpu": 0,
+      "pid": 458156,
+      "start_ticks": "51470153",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-gsm8k-t1-ar",
+      "gpu": 5,
+      "pid": 467029,
+      "start_ticks": "51550356",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-bbh-t0-ar",
+      "gpu": 6,
+      "pid": 474010,
+      "start_ticks": "51612968",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-bbh-t1-ar",
+      "gpu": 7,
+      "pid": 478370,
+      "start_ticks": "51652659",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-math500-t0-ar",
+      "gpu": 3,
+      "pid": 488905,
+      "start_ticks": "51731844",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-math500-t1-ar",
+      "gpu": 4,
+      "pid": 499364,
+      "start_ticks": "51827469",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-humanevalplus-t0-ar",
+      "gpu": 2,
+      "pid": 505282,
+      "start_ticks": "51881723",
+      "same_process_alive": true
+    },
+    {
+      "id": "table1-ouro-1.4b-humanevalplus-t1-ar",
+      "gpu": 1,
+      "pid": 522490,
+      "start_ticks": "52028305",
+      "same_process_alive": true
+    }
+  ],
+  "complete_eval_steps": 13,
+  "numerical_verified_formal_groups": 29,
+  "numerical_required_formal_groups": 36,
+  "numerical_verified_supplemental_groups": 3,
+  "formal_matrix_complete_cells": 60,
+  "formal_matrix_required_cells": 72,
+  "unchanged_combined_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "unchanged_original_spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c",
+  "activation_record_sha256": "c165b5a342677df1bc93c7d1a1dba8a6e8318b9d656a6be305370056d24eb76b",
+  "artifacts": {
+    "logs/appendix-dflash-diagnostics-v1/incremental-launcher.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/appendix-dflash-diagnostics-v1/incremental-launcher.json",
+      "sha256": "180c32b6b886425cf04937f12bdf25ffd00f8e6369dc2ed8397d25e7402b81b2"
+    },
+    "logs/appendix-dflash-diagnostics-v1/incremental-exit.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/appendix-dflash-diagnostics-v1/incremental-exit.json",
+      "sha256": "c3826633b1299ed72ad58375ee8d6e8861725590ff775bf045cbf623dc5a1bb8"
+    },
+    "logs/appendix-dflash-diagnostics-v1/status.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/appendix-dflash-diagnostics-v1/status.json",
+      "sha256": "0555b90358f47efd339fc597618d77be05495bfd3b4305562e575a0f06691a7c"
+    },
+    "logs/appendix-dflash-diagnostics-v1/cancellation.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/appendix-dflash-diagnostics-v1/cancellation.json",
+      "sha256": "0555b90358f47efd339fc597618d77be05495bfd3b4305562e575a0f06691a7c"
+    },
+    "logs/appendix-dflash-diagnostics-v1/STOP": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/appendix-dflash-diagnostics-v1/STOP",
+      "sha256": "eb4db1ffa608dd3737dfa8e23d6a31e54517c27f190cdc3a6956744f6d85de32"
+    },
+    "logs/baseline-diagnostics-resume-v1/status.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/baseline-diagnostics-resume-v1/status.json",
+      "sha256": "d1ab7e562ad03adfbe146bba90fa55e11951697f349f75bb1083b39443519bd4"
+    },
+    "logs/baseline-diagnostics-resume-v1/cancellation.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/baseline-diagnostics-resume-v1/cancellation.json",
+      "sha256": "d1ab7e562ad03adfbe146bba90fa55e11951697f349f75bb1083b39443519bd4"
+    },
+    "logs/baseline-diagnostics-resume-v1/STOP": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/baseline-diagnostics-resume-v1/STOP",
+      "sha256": "eb4db1ffa608dd3737dfa8e23d6a31e54517c27f190cdc3a6956744f6d85de32"
+    },
+    "logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json",
+      "sha256": "04567d90e0d062db8c3849c09c968580aa60226f4b8c100b0bbe257d5f18ae40"
+    },
+    "logs/ouro14-packed-evaluation-v1/status.json": {
+      "snapshot": "preflight/appendix-dflash-incremental-v1/subsequent-stop-observation/logs/ouro14-packed-evaluation-v1/status.json",
+      "sha256": "94925f66299ac340169bc91e5b45b1ac3ca3ce576f51a60d425bbe5dfeb6a370"
+    }
+  }
+}

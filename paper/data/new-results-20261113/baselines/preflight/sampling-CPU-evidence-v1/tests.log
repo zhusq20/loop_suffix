@@ -1,0 +1,22 @@
+test_disjoint_support_uses_residual (dflash_impl.test_decode.SamplingChecks) ... ok
+test_equal_distributions_always_accept_and_sample_bonus (dflash_impl.test_decode.SamplingChecks) ... ok
+test_rejection_recovers_target_distribution (dflash_impl.test_decode.SamplingChecks) ... ok
+test_eos_inside_accepted_block_counts_only_emitted_tokens (dflash_impl.test_decode.StopAndBudgetChecks) ... ok
+test_partial_last_block_and_prefill_only (dflash_impl.test_decode.StopAndBudgetChecks) ... ok
+test_rejected_eos_does_not_stop (dflash_impl.test_decode.StopAndBudgetChecks) ... ok
+test_exact_conditional_enumeration (loopahead.test_sampling.SamplingTest) ... ok
+test_monte_carlo_and_duplicate_candidates (loopahead.test_sampling.SamplingTest) ... ok
+test_top_p_and_zero_residual (loopahead.test_sampling.SamplingTest) ... ok
+test_adversarial_drafts_and_tight_budgets (loopahead.test_decode.SchedulerTest) ... ok
+test_cascade_and_cap (loopahead.test_decode.SchedulerTest) ... ok
+test_native_only_development_reference (loopahead.test_decode.SchedulerTest) ... ok
+test_sampling_with_near_deterministic_target (loopahead.test_decode.SchedulerTest) ... ok
+test_verified_eos_and_huginn_migration (loopahead.test_decode.SchedulerTest) ... ok
+test_compact_suffix_matches_full_path_counts (loopahead.test_admission.AdmissionChecks) ... ok
+test_path_matches_require_entire_prefix (loopahead.test_admission.AdmissionChecks) ... ok
+test_utility_and_empty_bin_backoff (loopahead.test_admission.AdmissionChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 3.093s
+
+OK

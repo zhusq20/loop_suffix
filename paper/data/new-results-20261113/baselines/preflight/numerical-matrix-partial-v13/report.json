@@ -1,0 +1,1076 @@
+{
+  "status": "partial_numerical_scope",
+  "complete": false,
+  "partial_requested": true,
+  "expected_formal": 36,
+  "expected_additional": 3,
+  "completed_formal": 20,
+  "completed_additional": 0,
+  "results": {
+    "formal/dflash/huginn-3.5b/gsm8k": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/huginn-3.5b/gsm8k",
+      "group": "dflash-huginn-3.5b-gsm8k-v1",
+      "requests": 300,
+      "whole_sequence_matches_bf16": 224,
+      "whole_sequence_match_rate_bf16": 0.7466666666666667,
+      "first_divergences": 76,
+      "bf16_divergences_reproduced": 76,
+      "at_least_one_bf16_top2_tie": 67,
+      "no_bf16_top2_tie": 9,
+      "fp32_argmax_equal": 76,
+      "max_fp32_logit_difference": 9.1552734375e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-gsm8k-v1-observed-exit.json",
+          "sha256": "5360b0c61acdd1e97b64c29713b47aa9b77a2979cd5b87d9043e7930211d3e8a",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-gsm8k-v1-observed-launcher.json": "38a5c744b8ab1eb6b7e139c2a28675f6208300ff8bc0e41cc2cd06bec2db7556",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-gsm8k-v1-observed-exit.json": "5360b0c61acdd1e97b64c29713b47aa9b77a2979cd5b87d9043e7930211d3e8a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1/complete.json": "3f3d4a34d468272e46ebe76db09071a0a15cf9fbff399582a118d047d88d1930",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1/metadata.json": "b9f2379a984413689cb94c4596b3aa2233abfd716308b9c905126f88478e60a1",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1/diagnosis.json": "a9a910095dbc614861770f268f0c7bedcfb511625dd37a001e4878720a14a334",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1/requests.jsonl": "2121f4d6b969a2e36f5043b763c71d63abaaa1836657b2b7a768d8791a820f8a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-v1/requests.jsonl": "baab6a5cdea21209b714fcbde194bbff5c19636e6c738915ef7ec333f55600c0"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "huginn-3.5b",
+        "benchmark": "gsm8k",
+        "cases": 76,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1",
+        "result_sha256": "a9a910095dbc614861770f268f0c7bedcfb511625dd37a001e4878720a14a334",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/dflash/huginn-3.5b/humanevalplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/huginn-3.5b/humanevalplus",
+      "group": "dflash-huginn-3.5b-humanevalplus-v1",
+      "requests": 164,
+      "whole_sequence_matches_bf16": 138,
+      "whole_sequence_match_rate_bf16": 0.8414634146341463,
+      "first_divergences": 26,
+      "bf16_divergences_reproduced": 26,
+      "at_least_one_bf16_top2_tie": 24,
+      "no_bf16_top2_tie": 2,
+      "fp32_argmax_equal": 26,
+      "max_fp32_logit_difference": 5.53131103515625e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-humanevalplus-v1-observed-exit.json",
+          "sha256": "e34c617973fdf1d0e70e66623bdeed11f4dea0a707aa6f8f62958c8d805efe4b",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-humanevalplus-v1-observed-launcher.json": "875c71278a5432122ed885634dbadc505cb5be1569a4464a597bca82d3bd6251",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-humanevalplus-v1-observed-exit.json": "e34c617973fdf1d0e70e66623bdeed11f4dea0a707aa6f8f62958c8d805efe4b",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1/complete.json": "13a1824e88f7c165b7915ebd9d9c0d956194f5ea97d4e9efd74207ec3a752db0",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1/metadata.json": "c222f91848e9f485e52df40ccf321021cc2ed506c5ec81391d0ef4d874442e5c",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1/diagnosis.json": "05934899a50425afdf9a4c802b78e7f12776fdc9e116beedd710da62b387ced0",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1/requests.jsonl": "47e93db5857a40365b5e171317070254f5a3d7b3db3adf0627ccbbf297c42ccb",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1/requests.jsonl": "1f042df0f220118a949f867ba55f83d24873021db947d9e8169f333bfa0fe66c"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "huginn-3.5b",
+        "benchmark": "humanevalplus",
+        "cases": 26,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1",
+        "result_sha256": "05934899a50425afdf9a4c802b78e7f12776fdc9e116beedd710da62b387ced0",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/dflash/huginn-3.5b/mbppplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/huginn-3.5b/mbppplus",
+      "group": "dflash-huginn-3.5b-mbppplus-v1",
+      "requests": 378,
+      "whole_sequence_matches_bf16": 308,
+      "whole_sequence_match_rate_bf16": 0.8148148148148148,
+      "first_divergences": 70,
+      "bf16_divergences_reproduced": 70,
+      "at_least_one_bf16_top2_tie": 67,
+      "no_bf16_top2_tie": 3,
+      "fp32_argmax_equal": 70,
+      "max_fp32_logit_difference": 6.103515625e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-mbppplus-v1-observed-exit.json",
+          "sha256": "79c028dc80db93c2e850bf17a717c5d73bbc0930ea34e89a1f4363b3391e8f91",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-mbppplus-v1-observed-launcher.json": "2289a0dc16cf0d711cd884b4560b40364c4216fd04048210f9a600fe3832d9a4",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-mbppplus-v1-observed-exit.json": "79c028dc80db93c2e850bf17a717c5d73bbc0930ea34e89a1f4363b3391e8f91",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/complete.json": "0691b00661acc731569128d6c2bcd4592e73a955f791f211a2be22a751bde9c4",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/metadata.json": "4fedf1ce023d1286ea4e49f1168e5424d3df3d163ade6b81ad9c613d8bac2f9d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/diagnosis.json": "c27e065c77f38f50ecde5f661e141fefeeaa65bfce745c1c12ef21cecb489114",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1/requests.jsonl": "6e9a3d483d4cd89dc02eb6d1e25822eb0fff7c10ca149a7cffd511a6d11b2f5f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1/requests.jsonl": "c86d72fa5fce9b73604907c9c63c4772d14f8a8d470d1aa9224ea85a73403aab"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "huginn-3.5b",
+        "benchmark": "mbppplus",
+        "cases": 70,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1",
+        "result_sha256": "c27e065c77f38f50ecde5f661e141fefeeaa65bfce745c1c12ef21cecb489114",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/loopahead/huginn-3.5b/gsm8k": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/huginn-3.5b/gsm8k",
+      "group": "loopahead-huginn-3.5b-gsm8k-v1",
+      "requests": 300,
+      "whole_sequence_matches_bf16": 217,
+      "whole_sequence_match_rate_bf16": 0.7233333333333334,
+      "first_divergences": 83,
+      "bf16_divergences_reproduced": 83,
+      "at_least_one_bf16_top2_tie": 81,
+      "no_bf16_top2_tie": 2,
+      "fp32_argmax_equal": 83,
+      "max_fp32_logit_difference": 4.00543212890625e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-margins-loopahead-huginn-3.5b-gsm8k-v1-finished.json",
+          "sha256": "ac6f0b64b710ccbe7f809a4e1aa476e23d334fabf60e67ee84425acda29d668d",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-fp32-loopahead-huginn-3.5b-gsm8k-v1-finished.json",
+          "sha256": "e900e4dddafef061eabf1b24271e44688da8f13ad614988dcc925b494850b567",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-margins-loopahead-huginn-3.5b-gsm8k-v1-launcher.json": "1924535845756bf3c2eba719042a0eed275c1580126c375e463fc7fd2d812a65",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-margins-loopahead-huginn-3.5b-gsm8k-v1-finished.json": "ac6f0b64b710ccbe7f809a4e1aa476e23d334fabf60e67ee84425acda29d668d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1/report.json": "73e779b71c1ae16326cceab121f22f90c8f375efe3ea10000b74b06a59aa4f43",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1/source-manifest.json": "d9801897b8ffe1c2f2d47463c91e786273953ea4758a3d31562f60de9930dc1b",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-fp32-loopahead-huginn-3.5b-gsm8k-v1-launcher.json": "11d0839130d6157a74047b2f5cef7198afa87111a925468f269d5b444af52a61",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-greedy-fp32-loopahead-huginn-3.5b-gsm8k-v1-finished.json": "e900e4dddafef061eabf1b24271e44688da8f13ad614988dcc925b494850b567",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1/fp32-common-prefix/report.json": "48e623a086920c8505443bd895994f9b9ed02fa63fb6f065c255ee0b146e32ba",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1/fp32-common-prefix/source-manifest.json": "b414635a2f416615bb822a80aa5bf55b501d00a38867b9acca2c320dd035f504",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t0/requests.jsonl": "7bb991a398a050874013eae832253772952cc5569e9cac1b61132ff7f050bf07",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t0-v1/requests.jsonl": "9367235f52213180c5ceafe449c52a02c076476e73c6e339b93ec0393e8ef4bb"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "gsm8k",
+        "cases": 83,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1",
+        "result_sha256": "73e779b71c1ae16326cceab121f22f90c8f375efe3ea10000b74b06a59aa4f43",
+        "loopahead_fp32_report_sha256": "48e623a086920c8505443bd895994f9b9ed02fa63fb6f065c255ee0b146e32ba"
+      }
+    },
+    "formal/loopahead/huginn-3.5b/math500": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/huginn-3.5b/math500",
+      "group": "loopahead-huginn-3.5b-math500-v1",
+      "requests": 500,
+      "whole_sequence_matches_bf16": 343,
+      "whole_sequence_match_rate_bf16": 0.686,
+      "first_divergences": 157,
+      "bf16_divergences_reproduced": 157,
+      "at_least_one_bf16_top2_tie": 147,
+      "no_bf16_top2_tie": 10,
+      "fp32_argmax_equal": 157,
+      "max_fp32_logit_difference": 4.57763671875e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-observed-exit.json",
+          "sha256": "cd5c78b74ff99206c886a66325d53057ae75fca567b05382d0e6e98c93c565ec",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-fp32-exit.json",
+          "sha256": "e3bc47857833e29549f907f1bd8454f2f3e2b39b1ac0cbf001eebb62bc986082",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-observed-launcher.json": "ae3e9261d97b8a4aae89b8d2b83836744899c9969d365a53da5e4a73f5923c97",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-observed-exit.json": "cd5c78b74ff99206c886a66325d53057ae75fca567b05382d0e6e98c93c565ec",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1/report.json": "9d54a80037fb5a0d9398db96965bfa66425d418c905065e1351e5c72b4f324f9",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-fp32-launcher.json": "065333df9d67354af725a153d14469e3d5843cdf93f1789f264845ba0d9687f3",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-math500-v1-fp32-exit.json": "e3bc47857833e29549f907f1bd8454f2f3e2b39b1ac0cbf001eebb62bc986082",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1/fp32-common-prefix/report.json": "fdedfe4834c5913818a7ec3b5f1f111db653904dce18fee3a8cc95e50df24b73",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t0/requests.jsonl": "5e931648819e34ea820db7321fd851ddaf2f6139be7e333d659a9c2aea912664",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t0-v1/requests.jsonl": "43d6300453b5b36f3f4854a22b4b5829264ffbdd4c11c64f39f47b1b653fb8d7"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "math500",
+        "cases": 157,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1",
+        "result_sha256": "9d54a80037fb5a0d9398db96965bfa66425d418c905065e1351e5c72b4f324f9",
+        "loopahead_fp32_report_sha256": "fdedfe4834c5913818a7ec3b5f1f111db653904dce18fee3a8cc95e50df24b73"
+      }
+    },
+    "formal/loopahead/huginn-3.5b/bbh": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/huginn-3.5b/bbh",
+      "group": "loopahead-huginn-3.5b-bbh-v1",
+      "requests": 270,
+      "whole_sequence_matches_bf16": 215,
+      "whole_sequence_match_rate_bf16": 0.7962962962962963,
+      "first_divergences": 55,
+      "bf16_divergences_reproduced": 55,
+      "at_least_one_bf16_top2_tie": 53,
+      "no_bf16_top2_tie": 2,
+      "fp32_argmax_equal": 55,
+      "max_fp32_logit_difference": 4.38690185546875e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-bbh-v1-observed-exit.json",
+          "sha256": "5ae9651f0818072b7d0029b3bd076b2fa0042d4984b02d3b02e83fc45c871df6",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-bbh-v1-fp32-exit.json",
+          "sha256": "6824f501be81e772a427845b81c8743fe8cfc8646fca7cf312712d8fb1ff73e8",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-bbh-v1-observed-launcher.json": "19d7c3fda384536a1e45ecbddce81b36c7fd065846652e1a671612bc6d63fc3d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-bbh-v1-observed-exit.json": "5ae9651f0818072b7d0029b3bd076b2fa0042d4984b02d3b02e83fc45c871df6",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-bbh-v1/report.json": "cd7d6dff8a6693f9a5e0ee3b6c901a59b3e86e5dcf710c53d906a9cf15d01a2a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-bbh-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-bbh-v1-fp32-launcher.json": "18be9706df04672ed5f5a4d7c6d424f2b45646c52901d95f90cc66ce549da91d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-bbh-v1-fp32-exit.json": "6824f501be81e772a427845b81c8743fe8cfc8646fca7cf312712d8fb1ff73e8",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-bbh-v1/fp32-common-prefix/report.json": "dfc4547b7d882bb1a3e770d4389c90d07ec335a361e93451e61cc46c6afbea45",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-bbh-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t0/requests.jsonl": "433ae1e30911fbad68494edbea6d662ab2b67da269e9b7732440e0d61bff73c1",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t0-v1/requests.jsonl": "cd94b402353d41485f34a2f7a67b43f2d59a0f4ed1faaf1e64848c1642f7174e"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "bbh",
+        "cases": 55,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-bbh-v1",
+        "result_sha256": "cd7d6dff8a6693f9a5e0ee3b6c901a59b3e86e5dcf710c53d906a9cf15d01a2a",
+        "loopahead_fp32_report_sha256": "dfc4547b7d882bb1a3e770d4389c90d07ec335a361e93451e61cc46c6afbea45"
+      }
+    },
+    "formal/loopahead/huginn-3.5b/humanevalplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/huginn-3.5b/humanevalplus",
+      "group": "loopahead-huginn-3.5b-humanevalplus-v1",
+      "requests": 164,
+      "whole_sequence_matches_bf16": 138,
+      "whole_sequence_match_rate_bf16": 0.8414634146341463,
+      "first_divergences": 26,
+      "bf16_divergences_reproduced": 26,
+      "at_least_one_bf16_top2_tie": 22,
+      "no_bf16_top2_tie": 4,
+      "fp32_argmax_equal": 26,
+      "max_fp32_logit_difference": 2.3126602172851562e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-observed-exit.json",
+          "sha256": "73c66856b7faeac2e051fe5f33b2fed3957345ff0bc0310645cb794f41e02e24",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-fp32-exit.json",
+          "sha256": "05f9e00e52746b155dcf4fc15e937c5e54741443ec3f310c931a2a61b620f922",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-observed-launcher.json": "9bd38d506de59a9760eacfa25488dee7e417a18f1a0b40d6f6368385a5c9f047",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-observed-exit.json": "73c66856b7faeac2e051fe5f33b2fed3957345ff0bc0310645cb794f41e02e24",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/report.json": "8b01b3ab6f9c87548775b5f9682e3d3b4df9e6d2f900bd148a956a053d42f099",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-fp32-launcher.json": "e6b4a797c2bd0eca02aa6745e1d8ee22e053db68204659bfdf716e2c9469e0a1",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-humanevalplus-v1-fp32-exit.json": "05f9e00e52746b155dcf4fc15e937c5e54741443ec3f310c931a2a61b620f922",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/fp32-common-prefix/report.json": "e7ecb21fb6689533727640bb39d24cdf6de96ad80bd832f254d8bfa35a97018d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t0/requests.jsonl": "5513819d7428d7c7c5c75efdef7d66dc0e0ebf4bbfd1e92f4a165abd78c1e4f7",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t0-v1/requests.jsonl": "c95416674ffde3702580f8f1a60c7710f9b1caab9f754e4a7d8801621bbd2382"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "humanevalplus",
+        "cases": 26,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1",
+        "result_sha256": "8b01b3ab6f9c87548775b5f9682e3d3b4df9e6d2f900bd148a956a053d42f099",
+        "loopahead_fp32_report_sha256": "e7ecb21fb6689533727640bb39d24cdf6de96ad80bd832f254d8bfa35a97018d"
+      }
+    },
+    "formal/loopahead/huginn-3.5b/mbppplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/huginn-3.5b/mbppplus",
+      "group": "loopahead-huginn-3.5b-mbppplus-v1",
+      "requests": 378,
+      "whole_sequence_matches_bf16": 304,
+      "whole_sequence_match_rate_bf16": 0.8042328042328042,
+      "first_divergences": 74,
+      "bf16_divergences_reproduced": 74,
+      "at_least_one_bf16_top2_tie": 72,
+      "no_bf16_top2_tie": 2,
+      "fp32_argmax_equal": 74,
+      "max_fp32_logit_difference": 2.5272369384765625e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-mbppplus-v1-observed-exit.json",
+          "sha256": "ff5c76bddea39395fea0dc6a993bd9263cae90e8d4c6e1bf0d57d700837e2781",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-mbppplus-v1-fp32-exit.json",
+          "sha256": "25804d64250109db68ab45f65ec8fea4b46703f3dc88cf468158957200d41373",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-mbppplus-v1-observed-launcher.json": "a5fb8d0d6ee2648bfe9e40bafa29299a698f4ce9e161c48d4a07062ed610dc57",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-mbppplus-v1-observed-exit.json": "ff5c76bddea39395fea0dc6a993bd9263cae90e8d4c6e1bf0d57d700837e2781",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-mbppplus-v1/report.json": "56abfe0856088622c3d9d07e62d2ed876e95cfa8a5577bd1c6dadddd02447d3e",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-mbppplus-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-mbppplus-v1-fp32-launcher.json": "21d6be53b63d8f02462aa75ab22d80acaf8ccdb9de5be8d080d55604f3d7ecbc",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-mbppplus-v1-fp32-exit.json": "25804d64250109db68ab45f65ec8fea4b46703f3dc88cf468158957200d41373",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-mbppplus-v1/fp32-common-prefix/report.json": "73ca3595d2671c0a80c4854a63a47d4d9ed701a6f5c4e781a9e9b635de9d9050",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-mbppplus-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t0/requests.jsonl": "967dafc9dd226731dfae3b779e3212649ce05c1ded3036775d3682da60a1cbde",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t0-v1/requests.jsonl": "023c7e7a795272c60bfa616eb115c57ced05f0b63fb800fd2c18ae324af48715"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "mbppplus",
+        "cases": 74,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-mbppplus-v1",
+        "result_sha256": "56abfe0856088622c3d9d07e62d2ed876e95cfa8a5577bd1c6dadddd02447d3e",
+        "loopahead_fp32_report_sha256": "73ca3595d2671c0a80c4854a63a47d4d9ed701a6f5c4e781a9e9b635de9d9050"
+      }
+    },
+    "formal/loopahead/huginn-3.5b/specbench": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/huginn-3.5b/specbench",
+      "group": "loopahead-huginn-3.5b-specbench-v1",
+      "requests": 480,
+      "whole_sequence_matches_bf16": 359,
+      "whole_sequence_match_rate_bf16": 0.7479166666666667,
+      "first_divergences": 121,
+      "bf16_divergences_reproduced": 121,
+      "at_least_one_bf16_top2_tie": 113,
+      "no_bf16_top2_tie": 8,
+      "fp32_argmax_equal": 121,
+      "max_fp32_logit_difference": 3.24249267578125e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-specbench-v1-observed-exit.json",
+          "sha256": "5ca762c12f8db1e871796ce5b2a1f1a96ab0b1a6ea1b04285378c2cd61d3522a",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-specbench-v1-fp32-exit.json",
+          "sha256": "2cfe3fe7cf85764ef22d23370146198475bf38d96b00f88939474597a7014819",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-specbench-v1-observed-launcher.json": "f6acd8e1191560c18bf1b27194c798f6dd9d09cfe1e44835b32785ca8f03118a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-specbench-v1-observed-exit.json": "5ca762c12f8db1e871796ce5b2a1f1a96ab0b1a6ea1b04285378c2cd61d3522a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-specbench-v1/report.json": "4eb4bb20d804fd370484600fb1c70ef78e2e2dc6c7881be9838d1999046ccd8f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-specbench-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-specbench-v1-fp32-launcher.json": "13f9a9922a5c0581160df37c893fe1646a83a4a10e08a51401480054e8a1e17b",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-huginn-3.5b-specbench-v1-fp32-exit.json": "2cfe3fe7cf85764ef22d23370146198475bf38d96b00f88939474597a7014819",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-specbench-v1/fp32-common-prefix/report.json": "1fa1a2e69e4f37f2c8c4e246558959196b52c21580c3d1177af6767831743372",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-specbench-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t0/requests.jsonl": "ecc4f6d80195d981e62cec07a2925c9380dc964aa5b58c1a5a49416842dcb789",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t0-v1/requests.jsonl": "40a29ac3fc0183960299501b540685871c63963f23497a84fda94e811ada0b19"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "specbench",
+        "cases": 121,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-specbench-v1",
+        "result_sha256": "4eb4bb20d804fd370484600fb1c70ef78e2e2dc6c7881be9838d1999046ccd8f",
+        "loopahead_fp32_report_sha256": "1fa1a2e69e4f37f2c8c4e246558959196b52c21580c3d1177af6767831743372"
+      }
+    },
+    "formal/dflash/ouro-2.6b/gsm8k": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/ouro-2.6b/gsm8k",
+      "group": "dflash-ouro-2.6b-gsm8k-v1",
+      "requests": 300,
+      "whole_sequence_matches_bf16": 200,
+      "whole_sequence_match_rate_bf16": 0.6666666666666666,
+      "first_divergences": 100,
+      "bf16_divergences_reproduced": 100,
+      "at_least_one_bf16_top2_tie": 97,
+      "no_bf16_top2_tie": 3,
+      "fp32_argmax_equal": 100,
+      "max_fp32_logit_difference": 0.0002875328063964844,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-gsm8k-v1-observed-exit.json",
+          "sha256": "a9c4b1174f86f6b2a983dd905b01f02218b999a51b68f93f952add6c055d21d8",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-gsm8k-v1-observed-launcher.json": "faf76f22122485e535a78672ee9aabb0a25d34358582cabba311cbb286fe848f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-gsm8k-v1-observed-exit.json": "a9c4b1174f86f6b2a983dd905b01f02218b999a51b68f93f952add6c055d21d8",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-gsm8k-v1/complete.json": "601d37f73d065c4ef4007d95b9c8aabb02ccb50711dfb1c9491c9ca2b75e90e2",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-gsm8k-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-gsm8k-v1/metadata.json": "feba708ea3d4cd3fcc022af8c4d0482cf11d53c370c21eac1c4e23e0cdb79246",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-gsm8k-v1/diagnosis.json": "8e048be1e27d1667bf21c05afc261d50a55071e207577efaa8f12d5465ddaa80",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1/requests.jsonl": "1516db662e0b4bfb114fe6e17cac90c63dcec1989104673b4bb0bf8bac2547e4",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-dflash-v1/requests.jsonl": "921f01b76a3a192547fcf0186784a84bec7db7414fe2d704ab5b1144e4ffd115"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "gsm8k",
+        "cases": 100,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-gsm8k-v1",
+        "result_sha256": "8e048be1e27d1667bf21c05afc261d50a55071e207577efaa8f12d5465ddaa80",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/dflash/ouro-2.6b/bbh": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/ouro-2.6b/bbh",
+      "group": "dflash-ouro-2.6b-bbh-v1",
+      "requests": 270,
+      "whole_sequence_matches_bf16": 221,
+      "whole_sequence_match_rate_bf16": 0.8185185185185185,
+      "first_divergences": 49,
+      "bf16_divergences_reproduced": 49,
+      "at_least_one_bf16_top2_tie": 46,
+      "no_bf16_top2_tie": 3,
+      "fp32_argmax_equal": 49,
+      "max_fp32_logit_difference": 7.2479248046875e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-bbh-v1-observed-exit.json",
+          "sha256": "c6b94f7d65b76a4dcc7102662dff6d5c3d1826badc80cb494f0e109aec6777a7",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-bbh-v1-observed-launcher.json": "b53edc4835e5898d273d278d924ed2d622aeb687394e7e716b97cdce48a41e5d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-bbh-v1-observed-exit.json": "c6b94f7d65b76a4dcc7102662dff6d5c3d1826badc80cb494f0e109aec6777a7",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-bbh-v1/complete.json": "e485a9dd5a786de4be6b1d5e7240970c89b07f45cbcad2ecab08eb0d71fcb3bb",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-bbh-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-bbh-v1/metadata.json": "bc5c3ca2c40e68d5cb880a61f91b8abd85a521324dce119f58c69f8f45b913bc",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-bbh-v1/diagnosis.json": "ff0e15aefed2c2360330c7dc5aa26aafa295dcccec73efc9c9385f558900aef3",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-ar-v1/requests.jsonl": "9cbd5ec4b2033dbd6224a92feda2f86ee033db3a2e4b590e8b411110a8ffef21",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-dflash-v1/requests.jsonl": "8971745e14a9b8626500f27d9e36248b526b74daa0d8b3dfcba2ced32ab98c84"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "bbh",
+        "cases": 49,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-bbh-v1",
+        "result_sha256": "ff0e15aefed2c2360330c7dc5aa26aafa295dcccec73efc9c9385f558900aef3",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/dflash/ouro-2.6b/humanevalplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/ouro-2.6b/humanevalplus",
+      "group": "dflash-ouro-2.6b-humanevalplus-v1",
+      "requests": 164,
+      "whole_sequence_matches_bf16": 114,
+      "whole_sequence_match_rate_bf16": 0.6951219512195121,
+      "first_divergences": 50,
+      "bf16_divergences_reproduced": 50,
+      "at_least_one_bf16_top2_tie": 48,
+      "no_bf16_top2_tie": 2,
+      "fp32_argmax_equal": 50,
+      "max_fp32_logit_difference": 5.53131103515625e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-humanevalplus-v1-observed-exit.json",
+          "sha256": "ebfcb73e05738ae896481c25281ea19986eb869047465b14bab6688f63afd395",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-humanevalplus-v1-observed-launcher.json": "3a4af0c926078d8dfe0bc7058e724b56d937c9f4b0acebf91c6ac3e53ba5a921",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-humanevalplus-v1-observed-exit.json": "ebfcb73e05738ae896481c25281ea19986eb869047465b14bab6688f63afd395",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-humanevalplus-v1/complete.json": "e31cfa8708663a9c0524128ae7a03e4713481c94c70972ec0a21b08acf401e2f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-humanevalplus-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-humanevalplus-v1/metadata.json": "b5738958a79958a8e587c43c5210b56bd92836318c326cdeae191335ee2ebb89",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-humanevalplus-v1/diagnosis.json": "66473113baf593487e58f1b05c8f22cfdc07b7a2beef97b6115c3e59d9240a66",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1/requests.jsonl": "8f385e5c70dab5ceb9908342f466e25725ec230e0b3d7794226abca27a9024e4",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1/requests.jsonl": "ddd33101574fcbbc5b51a54188fb646feb537477e7c6de010bb78c9a291a09f3"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "humanevalplus",
+        "cases": 50,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-humanevalplus-v1",
+        "result_sha256": "66473113baf593487e58f1b05c8f22cfdc07b7a2beef97b6115c3e59d9240a66",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/dflash/ouro-2.6b/mbppplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/dflash/ouro-2.6b/mbppplus",
+      "group": "dflash-ouro-2.6b-mbppplus-v1",
+      "requests": 378,
+      "whole_sequence_matches_bf16": 202,
+      "whole_sequence_match_rate_bf16": 0.5343915343915344,
+      "first_divergences": 176,
+      "bf16_divergences_reproduced": 176,
+      "at_least_one_bf16_top2_tie": 175,
+      "no_bf16_top2_tie": 1,
+      "fp32_argmax_equal": 176,
+      "max_fp32_logit_difference": 6.866455078125e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-mbppplus-v1-observed-exit.json",
+          "sha256": "9fbf6325294b500ed119788b3b62a996ac350c6cfcaab2923630f6cfa987ccd6",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-mbppplus-v1-observed-launcher.json": "18e394789729c6f5e8071175680777c4d85ac6534bc8c9034ee054fe988d13e6",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-mbppplus-v1-observed-exit.json": "9fbf6325294b500ed119788b3b62a996ac350c6cfcaab2923630f6cfa987ccd6",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1/complete.json": "996bf921d4b094965ef87feb5f52b1119105395de0dedcf8c58eeedcf4dbadf9",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1/source-manifest.json": "a0f8a7c6699759f464a35503d9fd8ac960b3160f4fd9845ae478f3e795d42418",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1/metadata.json": "493cdfcc77660deb5c1238ecd5cb070d6f79bdc5c39730e15661ffdf29b078c8",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1/diagnosis.json": "04cb9e1a1960bd59f43b36be7c9d3b354bafb2eeb7a479e15168f93ad46a185f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1/requests.jsonl": "e046de04323928dda5028242192d7bd64fd9baea5e1481a02b0413770611ec60",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1/requests.jsonl": "2440351e5519929e25a5ea94319d08352d79750f05daad165e61e2c79a76ec9c"
+      },
+      "existing_validation": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "mbppplus",
+        "cases": 176,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1",
+        "result_sha256": "04cb9e1a1960bd59f43b36be7c9d3b354bafb2eeb7a479e15168f93ad46a185f",
+        "loopahead_fp32_report_sha256": null
+      }
+    },
+    "formal/loopahead/ouro-2.6b/gsm8k": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-2.6b/gsm8k",
+      "group": "loopahead-ouro-2.6b-gsm8k-v1",
+      "requests": 300,
+      "whole_sequence_matches_bf16": 202,
+      "whole_sequence_match_rate_bf16": 0.6733333333333333,
+      "first_divergences": 98,
+      "bf16_divergences_reproduced": 98,
+      "at_least_one_bf16_top2_tie": 97,
+      "no_bf16_top2_tie": 1,
+      "fp32_argmax_equal": 98,
+      "max_fp32_logit_difference": 5.9604644775390625e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-observed-exit.json",
+          "sha256": "785116e2fc96be554e11cff5af73aef2aea5f4cd000b347b27329db3362da3f0",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-fp32-exit.json",
+          "sha256": "d25b6fa352601d662d276faf49ca551f62cf7673d3cc031bc8624ce9fe36e472",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-observed-launcher.json": "b516532937b9f25017adba8012e62f56f26789a92c9d43f73fc1eccb3f97f9e0",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-observed-exit.json": "785116e2fc96be554e11cff5af73aef2aea5f4cd000b347b27329db3362da3f0",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1/report.json": "bf5934b63a9272cf1902a47db2436b15eb811815e838f27b09750a37109ca20a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-fp32-launcher.json": "72f7f6d596b38e5f8d1c2066476da6534d60a28f0126c1aaaf3e9e40b8b34c16",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-gsm8k-v1-fp32-exit.json": "d25b6fa352601d662d276faf49ca551f62cf7673d3cc031bc8624ce9fe36e472",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1/fp32-common-prefix/report.json": "960ed17a74ca03add989fa920f85b534cf24e0da7f329b68673f5bb4fdd2f03d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t0/requests.jsonl": "de5254cfa5759dd28b695a1478923779624169b6983e6681373438ac053bde0d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t0-v1/requests.jsonl": "6c3ca32e800f6f4f2049ea0cf94c174f3e2fcdae58d2845e5181a4c59fbdae37"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-2.6b",
+        "benchmark": "gsm8k",
+        "cases": 98,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1",
+        "result_sha256": "bf5934b63a9272cf1902a47db2436b15eb811815e838f27b09750a37109ca20a",
+        "loopahead_fp32_report_sha256": "960ed17a74ca03add989fa920f85b534cf24e0da7f329b68673f5bb4fdd2f03d"
+      }
+    },
+    "formal/loopahead/ouro-2.6b/bbh": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-2.6b/bbh",
+      "group": "loopahead-ouro-2.6b-bbh-v1",
+      "requests": 270,
+      "whole_sequence_matches_bf16": 220,
+      "whole_sequence_match_rate_bf16": 0.8148148148148148,
+      "first_divergences": 50,
+      "bf16_divergences_reproduced": 50,
+      "at_least_one_bf16_top2_tie": 47,
+      "no_bf16_top2_tie": 3,
+      "fp32_argmax_equal": 50,
+      "max_fp32_logit_difference": 4.9591064453125e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+      "queue_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-bbh-v1-observed-exit.json",
+          "sha256": "882784281bbeea5aab13a8c8962fdb1b274e9745ec2eadda2924b727959b381e",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-bbh-v1-fp32-exit.json",
+          "sha256": "e32f09c5f30ab64c218ccce7d7df6665a5366fc571e1e78c1b4cc42be7239974",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-bbh-v1-observed-launcher.json": "e9e551329e0c9afebbe1052eb402b476d612aef33bce9b5330b80484cd64a18f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-bbh-v1-observed-exit.json": "882784281bbeea5aab13a8c8962fdb1b274e9745ec2eadda2924b727959b381e",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-bbh-v1/report.json": "65a50234534f6ef29c8482625f5f110c96070ac296f44c1ef2eedd1e06c61a31",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-bbh-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-bbh-v1-fp32-launcher.json": "4b798bd78ba4fecdec20b4e6dfb6ed67182dc0667035678b6c390c990062400a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-bbh-v1-fp32-exit.json": "e32f09c5f30ab64c218ccce7d7df6665a5366fc571e1e78c1b4cc42be7239974",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-bbh-v1/fp32-common-prefix/report.json": "9c1ff080f87776b38257e0ad1baaea68ba61113f806f7a60264251f59bb290d3",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-bbh-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t0/requests.jsonl": "54f98661fa4b96aaa045e5d25c7796238d5ea6dd381a783016b2404da8fabc1c",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t0-v1/requests.jsonl": "29925cab87c9586817bcf97dbab8dc669f1bd06c8f3410fb15868bd195902e4e"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-2.6b",
+        "benchmark": "bbh",
+        "cases": 50,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-bbh-v1",
+        "result_sha256": "65a50234534f6ef29c8482625f5f110c96070ac296f44c1ef2eedd1e06c61a31",
+        "loopahead_fp32_report_sha256": "9c1ff080f87776b38257e0ad1baaea68ba61113f806f7a60264251f59bb290d3"
+      }
+    },
+    "formal/loopahead/ouro-1.4b/gsm8k": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-1.4b/gsm8k",
+      "group": "loopahead-ouro-1.4b-gsm8k-v1",
+      "requests": 300,
+      "whole_sequence_matches_bf16": 68,
+      "whole_sequence_match_rate_bf16": 0.22666666666666666,
+      "first_divergences": 232,
+      "bf16_divergences_reproduced": 232,
+      "at_least_one_bf16_top2_tie": 211,
+      "no_bf16_top2_tie": 21,
+      "fp32_argmax_equal": 232,
+      "max_fp32_logit_difference": 0.0002803802490234375,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json",
+      "queue_plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-gsm8k-v1-observed-exit.json",
+          "sha256": "ad7db14d47ee6ef25a4f1a0ddca698f36bb9501826f2bfa9422c1f215d856c9f",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-gsm8k-v1-fp32-exit.json",
+          "sha256": "3e6fb97f7c60da23c045b9dc367f830b8834afe5151f5ccbe89fe0beca74b352",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-gsm8k-v1-observed-launcher.json": "296b8c16e3b8a183892c3bdb083b576723c3744ea7c6903f1d5861a25a12b838",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-gsm8k-v1-observed-exit.json": "ad7db14d47ee6ef25a4f1a0ddca698f36bb9501826f2bfa9422c1f215d856c9f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-gsm8k-v1/report.json": "07de68d3eb1179558133ecc95cc7d0630f190f24b91464ce6b55fca1635dfe1a",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-gsm8k-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-gsm8k-v1-fp32-launcher.json": "b7446968e541f9859e01383a1fe551366e6dfe183216c27a791e962f99793e73",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-gsm8k-v1-fp32-exit.json": "3e6fb97f7c60da23c045b9dc367f830b8834afe5151f5ccbe89fe0beca74b352",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-gsm8k-v1/fp32-common-prefix/report.json": "892dd0adbc6a70e4f9e618a183ce63094198da13789f15115c320ea4cf3502f3",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-gsm8k-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t0/requests.jsonl": "63f54f66c43291257407e42da23a94800a725e37ad3a12d8fd273d60384d7841",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t0-v1/requests.jsonl": "70e016bc371926114e608d3c6da980fa4f22ba1ba2ec2433e602fde3648c542b"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "gsm8k",
+        "cases": 232,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-gsm8k-v1",
+        "result_sha256": "07de68d3eb1179558133ecc95cc7d0630f190f24b91464ce6b55fca1635dfe1a",
+        "loopahead_fp32_report_sha256": "892dd0adbc6a70e4f9e618a183ce63094198da13789f15115c320ea4cf3502f3"
+      }
+    },
+    "formal/loopahead/ouro-1.4b/bbh": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-1.4b/bbh",
+      "group": "loopahead-ouro-1.4b-bbh-v1",
+      "requests": 270,
+      "whole_sequence_matches_bf16": 222,
+      "whole_sequence_match_rate_bf16": 0.8222222222222222,
+      "first_divergences": 48,
+      "bf16_divergences_reproduced": 48,
+      "at_least_one_bf16_top2_tie": 42,
+      "no_bf16_top2_tie": 6,
+      "fp32_argmax_equal": 48,
+      "max_fp32_logit_difference": 0.00016236305236816406,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json",
+      "queue_plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-observed-exit.json",
+          "sha256": "127da7bb3efaecdcb92af6e0eb30f8eed66ad53baf0fcccdbdb329a35581cc74",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-fp32-exit.json",
+          "sha256": "197d17f839c3f1a5f71de002c85ab5b22c67265457177f0ebb35e99dee69b90f",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-observed-launcher.json": "da8675651918cbe6945cf16afd84750fcb52e46855ec012e6aad9597eab3abef",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-observed-exit.json": "127da7bb3efaecdcb92af6e0eb30f8eed66ad53baf0fcccdbdb329a35581cc74",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/report.json": "e11de8a366c232b5ef6404a11b900200b3ec8b5d9d72fdc5bea4cf8b7d3eb780",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-fp32-launcher.json": "42b6c604717f8bf99d594fde2d1aa47b725919ef266b24d43fd7743f023a798b",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-fp32-exit.json": "197d17f839c3f1a5f71de002c85ab5b22c67265457177f0ebb35e99dee69b90f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/fp32-common-prefix/report.json": "9d16e5372a0327f5b016b1a66841a11fe15ef9c70fe53f9c6eb89aac5a747b21",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t0/requests.jsonl": "6d32d20381a892a5ba90f631ebf6acab5dae7341e9eb95604208affb08eeffc7",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t0-v1/requests.jsonl": "91262e20d2ba27a2c46239a222d00a34d74eec7f51c301ddc3acc6abbf559e19"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "bbh",
+        "cases": 48,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1",
+        "result_sha256": "e11de8a366c232b5ef6404a11b900200b3ec8b5d9d72fdc5bea4cf8b7d3eb780",
+        "loopahead_fp32_report_sha256": "9d16e5372a0327f5b016b1a66841a11fe15ef9c70fe53f9c6eb89aac5a747b21"
+      }
+    },
+    "formal/loopahead/ouro-1.4b/humanevalplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-1.4b/humanevalplus",
+      "group": "loopahead-ouro-1.4b-humanevalplus-v1",
+      "requests": 164,
+      "whole_sequence_matches_bf16": 130,
+      "whole_sequence_match_rate_bf16": 0.7926829268292683,
+      "first_divergences": 34,
+      "bf16_divergences_reproduced": 34,
+      "at_least_one_bf16_top2_tie": 33,
+      "no_bf16_top2_tie": 1,
+      "fp32_argmax_equal": 34,
+      "max_fp32_logit_difference": 4.57763671875e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json",
+      "queue_plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-observed-exit.json",
+          "sha256": "fbe1132c5507015e5b88c1e16f56596749d5d391ea5add1c20ac3913e0094a86",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-fp32-exit.json",
+          "sha256": "436d6514615c91fc5dec0cc06c31c0ff94a34e5a5c9d00b7b438c7d3ae594edf",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-observed-launcher.json": "eead8d9cc16956d1888eef82de9ee45f0e93315393ef416bc60b1ecbab11576b",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-observed-exit.json": "fbe1132c5507015e5b88c1e16f56596749d5d391ea5add1c20ac3913e0094a86",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1/report.json": "849e7bd860a289b11aaedfc9f17dd706471c9ec731829767eac0050a1d744352",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-fp32-launcher.json": "ca076a71b4b6d452efe449f993b3edb2bc1ef4068caaf03f4acbe36a92624bad",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-humanevalplus-v1-fp32-exit.json": "436d6514615c91fc5dec0cc06c31c0ff94a34e5a5c9d00b7b438c7d3ae594edf",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1/fp32-common-prefix/report.json": "b740e0e07c2571040874c63027ba36132bc04b7643aac6494806001693131ed0",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t0/requests.jsonl": "492b0eb07f7783086dd3d3db71699c3ed02ce39181ccc6e3ff6b1a2fb8f9cbe3",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t0-v1/requests.jsonl": "bad8d5ac9490647ee3bedbc85da32fb143138bfd259aa8d17172f29a4b17853d"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "humanevalplus",
+        "cases": 34,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-humanevalplus-v1",
+        "result_sha256": "849e7bd860a289b11aaedfc9f17dd706471c9ec731829767eac0050a1d744352",
+        "loopahead_fp32_report_sha256": "b740e0e07c2571040874c63027ba36132bc04b7643aac6494806001693131ed0"
+      }
+    },
+    "formal/loopahead/ouro-1.4b/mbppplus": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-1.4b/mbppplus",
+      "group": "loopahead-ouro-1.4b-mbppplus-v1",
+      "requests": 378,
+      "whole_sequence_matches_bf16": 192,
+      "whole_sequence_match_rate_bf16": 0.5079365079365079,
+      "first_divergences": 186,
+      "bf16_divergences_reproduced": 186,
+      "at_least_one_bf16_top2_tie": 183,
+      "no_bf16_top2_tie": 3,
+      "fp32_argmax_equal": 186,
+      "max_fp32_logit_difference": 5.7220458984375e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json",
+      "queue_plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-mbppplus-v1-observed-exit.json",
+          "sha256": "cb6379665b24a595c914eac9d6803f0a40970e225e59f7e5713206693b31234c",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-mbppplus-v1-fp32-exit.json",
+          "sha256": "6d1c6d3dd816536e16cd92b6d158ef25b87ac243bc1212edbe0a9e153476ba45",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-mbppplus-v1-observed-launcher.json": "88c63d69e0e7e2d9519118f0ed3fd7e89bb9d0640efbf4baefbc8d2a8d3c7950",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-mbppplus-v1-observed-exit.json": "cb6379665b24a595c914eac9d6803f0a40970e225e59f7e5713206693b31234c",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-mbppplus-v1/report.json": "d3e6b7c66a0c4294ac79ecd8b46c341d616dd196cdcd7f48f2c414f26922ce08",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-mbppplus-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-mbppplus-v1-fp32-launcher.json": "88c144edc93f5397cf8214ff504b37342271b2b7588dd654cf9fec19f3c689db",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-mbppplus-v1-fp32-exit.json": "6d1c6d3dd816536e16cd92b6d158ef25b87ac243bc1212edbe0a9e153476ba45",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-mbppplus-v1/fp32-common-prefix/report.json": "b3551aae9c4a7f3098bf3356b126c1af7b72c6f696859688dee4011316e9bc64",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-mbppplus-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t0/requests.jsonl": "f78c1954e734e658224649defe9c8b1b32cedd9fa49e61dc72179682e1782d3d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t0-v1/requests.jsonl": "4e70bf062a87a006c0e2acafe291b39236b2149a4e436de7b6b9871304f2d8fa"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "mbppplus",
+        "cases": 186,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-mbppplus-v1",
+        "result_sha256": "d3e6b7c66a0c4294ac79ecd8b46c341d616dd196cdcd7f48f2c414f26922ce08",
+        "loopahead_fp32_report_sha256": "b3551aae9c4a7f3098bf3356b126c1af7b72c6f696859688dee4011316e9bc64"
+      }
+    },
+    "formal/loopahead/ouro-1.4b/specbench": {
+      "status": "validated_actual_diagnostic",
+      "scope": "formal/loopahead/ouro-1.4b/specbench",
+      "group": "loopahead-ouro-1.4b-specbench-v1",
+      "requests": 480,
+      "whole_sequence_matches_bf16": 288,
+      "whole_sequence_match_rate_bf16": 0.6,
+      "first_divergences": 192,
+      "bf16_divergences_reproduced": 192,
+      "at_least_one_bf16_top2_tie": 180,
+      "no_bf16_top2_tie": 12,
+      "fp32_argmax_equal": 192,
+      "max_fp32_logit_difference": 5.7220458984375e-05,
+      "queue_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json",
+      "queue_plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+      "actual_exits": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-specbench-v1-observed-exit.json",
+          "sha256": "f9fbab2d3ba6f38d018f96794d613fa728d93f50c9e2fae00bcbdf60c37a7ea0",
+          "exit_code": 0
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-specbench-v1-fp32-exit.json",
+          "sha256": "f4b5996ef0a7d5fad5f66176427bc856d790671524cf0aa6c9ca048428cdebb5",
+          "exit_code": 0
+        }
+      ],
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-specbench-v1-observed-launcher.json": "6aa1fa64bfc059b68abed251577b9ecfe3871e8fac64c3633dbd15a0865ad5ff",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-specbench-v1-observed-exit.json": "f9fbab2d3ba6f38d018f96794d613fa728d93f50c9e2fae00bcbdf60c37a7ea0",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-specbench-v1/report.json": "2e97a59cf2275002afc657108ec5cc99cf831a863839404a3c0b922dfd737855",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-specbench-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-specbench-v1-fp32-launcher.json": "45f2c469b63d4cd766fda5ed509576bd63071d0c449cb3318db3df7e4f0cee4f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-specbench-v1-fp32-exit.json": "f4b5996ef0a7d5fad5f66176427bc856d790671524cf0aa6c9ca048428cdebb5",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-specbench-v1/fp32-common-prefix/report.json": "5074ebc9da6d9b1590c948fec1abbf689123a151d63642ef231debd484130ff6",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-specbench-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-specbench-t0/requests.jsonl": "79508b4a03186179f60fda9c54ad07ac4bde9d2e829c2fcf9ffd9f3dbd928d8f",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t0-v1/requests.jsonl": "5b525129785b49490d5e09ad830d378db979409f8f1bc0ac70e78aea2ba174bb"
+      },
+      "existing_validation": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "specbench",
+        "cases": 192,
+        "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-specbench-v1",
+        "result_sha256": "2e97a59cf2275002afc657108ec5cc99cf831a863839404a3c0b922dfd737855",
+        "loopahead_fp32_report_sha256": "5074ebc9da6d9b1590c948fec1abbf689123a151d63642ef231debd484130ff6"
+      }
+    }
+  },
+  "pending": {
+    "formal/dflash/ouro-2.6b/math500": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-math500-v1-observed-exit.json"
+      ]
+    },
+    "formal/dflash/ouro-2.6b/specbench": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-specbench-v1-observed-exit.json"
+      ]
+    },
+    "formal/loopahead/ouro-2.6b/math500": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-exit.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json"
+      ]
+    },
+    "formal/loopahead/ouro-2.6b/humanevalplus": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-humanevalplus-v1-fp32-exit.json"
+      ]
+    },
+    "formal/loopahead/ouro-2.6b/mbppplus": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-mbppplus-v1-observed-exit.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-mbppplus-v1-fp32-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-mbppplus-v1-fp32-exit.json"
+      ]
+    },
+    "formal/loopahead/ouro-2.6b/specbench": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-specbench-v1-observed-exit.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-specbench-v1-fp32-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-specbench-v1-fp32-exit.json"
+      ]
+    },
+    "paper/loopahead/ouro-2.6b/humaneval164": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-paper-humaneval164-v1-observed-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-paper-humaneval164-v1-observed-exit.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-paper-humaneval164-v1-fp32-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-paper-humaneval164-v1-fp32-exit.json"
+      ]
+    },
+    "development/narrow": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-narrow-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-narrow-exit.json"
+      ]
+    },
+    "development/wide": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-wide-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/development-wide-exit.json"
+      ]
+    },
+    "formal/dflash/huginn-3.5b/bbh": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-bbh-t0-greedy-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-bbh-t0-greedy-exit.json"
+      ]
+    },
+    "formal/dflash/huginn-3.5b/math500": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-math500-t0-greedy-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-math500-t0-greedy-exit.json"
+      ]
+    },
+    "formal/dflash/huginn-3.5b/specbench": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-specbench-t0-greedy-launcher.json",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/table1-huginn-3.5b-specbench-t0-greedy-exit.json"
+      ]
+    },
+    "formal/loopahead/ouro-1.4b/math500": {
+      "status": "pending_actual_exit",
+      "missing": [
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-math500-v1-fp32-exit.json"
+      ]
+    },
+    "formal/dflash/ouro-1.4b/humanevalplus": {
+      "status": "waiting_for_frozen_plan"
+    },
+    "formal/dflash/ouro-1.4b/gsm8k": {
+      "status": "waiting_for_frozen_plan"
+    },
+    "formal/dflash/ouro-1.4b/specbench": {
+      "status": "waiting_for_frozen_plan"
+    },
+    "formal/dflash/ouro-1.4b/mbppplus": {
+      "status": "waiting_for_frozen_plan"
+    },
+    "formal/dflash/ouro-1.4b/math500": {
+      "status": "waiting_for_frozen_plan"
+    },
+    "formal/dflash/ouro-1.4b/bbh": {
+      "status": "waiting_for_frozen_plan"
+    }
+  },
+  "errors": {},
+  "plan_sha256": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083"
+  },
+  "source_sha256": {
+    "audit_numerical_matrix.py": "565428d384019a2216f8eda79818729290e56260ce1fb64987e85a86af5d640b",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "orchestrate_baseline_diagnostics_resume.py": "8345dcb78efdf3bd591368d05d1f9ec7abb2df18941ce750f32beeecdb258f34",
+    "orchestrate_greedy_diagnostics.py": "93229513436a652cefe7334d8881a054de86b2783ad53912799ef4629b066c36",
+    "diagnose_huginn_dflash_dev.py": "db9433443425f21d4fac0377c0b4cb11908a7c48098c12e2fe7d5a28393506bc"
+  },
+  "unchanged_results_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "checked_unix": 1794484384.4562166,
+  "new_gpu_runs": 0,
+  "limitations": [
+    "Only completed actual first-divergence diagnostics are counted; pending BF16/FP32 stages are not successes.",
+    "Original BF16 whole-output match rates remain unchanged; FP32 common-prefix checks are not full FP32 benchmark outputs.",
+    "This is greedy numerical evidence, not proof of T1 sampling distributions or task accuracy.",
+    "Paper-setting and unequal-budget development checks are separate from the 36 formal cells."
+  ]
+}

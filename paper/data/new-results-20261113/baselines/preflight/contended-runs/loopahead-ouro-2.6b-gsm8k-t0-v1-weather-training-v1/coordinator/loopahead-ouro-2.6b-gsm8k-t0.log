@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 222, in <module>
+    if kind=='huginn_check':
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 177, in main
+    run_command(name,argv,env)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 143, in worker
+    smoke=str(smoke),update_wall_s=metrics['update_wall_s']))
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 43, in run_command
+    save(BASE/f'logs/{name}-finished.json',dict(event,exit_code=code,finished_unix=time.time()))
+RuntimeError: loopahead-ouro-2.6b-gsm8k-t0-v1 exited -15; see /ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-gsm8k-t0-v1.log

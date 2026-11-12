@@ -1,0 +1,42 @@
+{
+  "source_input_checks": 151,
+  "all_pass": true,
+  "historical": [
+    {
+      "model": "huginn-3.5b",
+      "benchmark": "gsm8k",
+      "temperature": 0,
+      "requests": 300,
+      "evidence_kind": "recomputed_historical_logs_NOT_new_inference",
+      "ar_tok_s": 7.023525736526184,
+      "loopspec_tok_s": 24.676601847482218,
+      "eta_latency": 3.465637276416141,
+      "eta_throughput": 3.513420861996755,
+      "gamma": 4.879450055685703,
+      "paper_eta": 3.47,
+      "paper_gamma": 4.88,
+      "ar_decode_s": 4461.007359459996,
+      "loopspec_decode_s": 1287.2112698629498,
+      "exact_sequence_matches": 211,
+      "exact_sequence_match_rate": 0.7033333333333334
+    },
+    {
+      "model": "ouro-2.6b",
+      "benchmark": "gsm8k",
+      "temperature": 0,
+      "requests": 300,
+      "evidence_kind": "recomputed_historical_logs_NOT_new_inference",
+      "ar_tok_s": 6.393513993086999,
+      "loopspec_tok_s": 21.04056651171561,
+      "eta_latency": 3.2334844077779126,
+      "eta_throughput": 3.290923666463508,
+      "gamma": 3.592205340785018,
+      "paper_eta": 3.23,
+      "paper_gamma": 3.59,
+      "ar_decode_s": 7457.714185275137,
+      "loopspec_decode_s": 2306.401777394116,
+      "exact_sequence_matches": 205,
+      "exact_sequence_match_rate": 0.6833333333333333
+    }
+  ]
+}

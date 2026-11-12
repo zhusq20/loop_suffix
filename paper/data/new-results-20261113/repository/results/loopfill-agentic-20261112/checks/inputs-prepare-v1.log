@@ -1,0 +1,8 @@
+{"downloaded": 500, "bytes": 92564662}
+Token indices sequence length is longer than the specified maximum sequence length for this model (131913 > 131072). Running this sequence through the model will result in indexing errors
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/scripts/loop_agentic_inputs.py", line 164, in <module>
+    prepare(parser.parse_args())
+  File "/ossfs/workspace/loop_suffix/scripts/loop_agentic_inputs.py", line 127, in prepare
+    raise ValueError(f'{phase}: only {len(pool)} eligible calls, need {count}')
+ValueError: middle: only 18 eligible calls, need 33

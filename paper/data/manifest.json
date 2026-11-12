@@ -799,22 +799,76 @@
       "group": "new-paper-results-20261112",
       "bytes": 79603,
       "sha256": "b73d4a4e34addcd483f761f78d83cd73bc0519ae5d76e913a9f4b9d04bff6d5a"
+    },
+    {
+      "path": "paper/data/agentic-sql-ouro-1.4b-measurements.csv",
+      "group": "agentic-sql-ouro14",
+      "bytes": 4129,
+      "sha256": "f5e60c0729468a64bbc7b58ab18a44c15e7b3007ce520fdc1778e90191b2a94a"
+    },
+    {
+      "path": "paper/data/agentic-sql-ouro-1.4b-provenance.json",
+      "group": "agentic-sql-ouro14",
+      "bytes": 3880,
+      "sha256": "3877e1ea2243d8e80c8b15477eabc285aca3e366d52e19b25a3b9e79f3535336"
+    },
+    {
+      "path": "paper/tables/table1-agentic-sql-ouro-1.4b.tex",
+      "group": "agentic-sql-ouro14",
+      "bytes": 570,
+      "sha256": "392667d1204b4e99f2dfa155ed771161dc5772f8b2988058d51905b3ef8cf668"
+    },
+    {
+      "path": "paper/data/published-drafter-weights.json",
+      "group": "public-drafter-weights",
+      "bytes": 12696,
+      "sha256": "8f665cfe22f95f55e8baacaf38d21e2b623432ec8188cc17d73fd1f6ad971aea"
+    },
+    {
+      "path": "paper/data/new-results-20261113/README.md",
+      "group": "final-new-results",
+      "bytes": 5376,
+      "sha256": "6cbae1d0469cf264461ea8dfbf3f677043051b33c50043d960031b071ed2d1c3"
+    },
+    {
+      "path": "paper/data/new-results-20261113/manifest.json",
+      "group": "final-new-results",
+      "bytes": 8610117,
+      "sha256": "6c0dbf3db5d470f0cf1d1cbf2f19998746ecee544c94762d6635d8e914cca27a"
+    },
+    {
+      "path": "paper/data/new-results-20261113/run-audits.json",
+      "group": "final-new-results",
+      "bytes": 107227,
+      "sha256": "a5a21dec00d2eeced5b28f4666e1514ff4862ebf98f691bea201635c3ff7d81b"
+    },
+    {
+      "path": "paper/data/new-results-20261113/validation.json",
+      "group": "final-new-results",
+      "bytes": 516,
+      "sha256": "26601cb3d8236eece734a32c80351be7c805039a375477001d72e6895bdbd7c5"
     }
   ],
-  "file_count": 129,
-  "total_bytes": 28347681,
+  "file_count": 141,
+  "total_bytes": 38604526,
   "notes": [
     "Existing full Table1/Table2/Preliminary journals already tracked; this index lists their primary plotting inputs.",
     "Timing is a partial immutable snapshot; planned and completed counts are recorded separately.",
     "Compressed numerical records retain all statistics and output hashes.",
-    "The child-Q=2 ablation archive contains all 40 cells, including 36 reused cells from the original archive; only four cells are new measurements."
+    "The child-Q=2 ablation archive contains all 40 cells, including 36 reused cells from the original archive; only four cells are new measurements.",
+    "The 2026-11-13 final archive supersedes ongoing statuses for the new experiments; cancelled diagnostics and historical partial/failed evidence retain their original status. Six selected inference drafter checkpoints are published publicly on Hugging Face; pinned revisions and SHA256 hashes are in published-drafter-weights.json."
   ],
-  "updated_utc": "2026-11-12T02:32:28.665948+00:00",
+  "updated_utc": "2026-11-12T23:22:27.533137+00:00",
   "submanifests": [
     {
       "path": "paper/data/new-results-20261112/manifest.json",
       "base": "paper/data/new-results-20261112",
       "description": "Complete per-file hashes for the 2026-11-12 baseline, SQL, timing, training and ongoing-status snapshot."
+    },
+    {
+      "path": "paper/data/new-results-20261113/manifest.json",
+      "base": "paper/data/new-results-20261113",
+      "description": "Final 72 baseline latency cells, 20 throughput cells, 42 SQL cells, six completed training runs, and retained historical evidence with original-byte hashes."
     }
   ]
 }

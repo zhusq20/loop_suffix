@@ -1,0 +1,294 @@
+{
+  "status": "interruption_preserved_scope_clarification_pending",
+  "checked_unix": 1794419788.9108028,
+  "head": "dec9a5b70a671729a198d7826d0405523df03ae4",
+  "completed_formal_cells": 31,
+  "formal_outputs_unchanged": true,
+  "interrupted_stages": [
+    {
+      "run": "dflash-stack-huginn-3.5b-math500-t0-ar-v1",
+      "completed_prefix": 495,
+      "expected": 500,
+      "actual_exit_code": 1,
+      "summary": {
+        "requests": 495,
+        "output_tokens": 120630,
+        "decode_tokens": 120135,
+        "decode_s": 20208.113467656076,
+        "tok_s": 5.944889422373892,
+        "target_verifications": 120135,
+        "loop_steps": 3844320,
+        "gamma": 1.0
+      },
+      "admitted_as_complete": false
+    },
+    {
+      "run": "dflash-stack-huginn-3.5b-math500-t1-ar-v1",
+      "completed_prefix": 491,
+      "expected": 500,
+      "actual_exit_code": 1,
+      "summary": {
+        "requests": 491,
+        "output_tokens": 123565,
+        "decode_tokens": 123074,
+        "decode_s": 20204.365816496313,
+        "tok_s": 6.09145573376589,
+        "target_verifications": 123074,
+        "loop_steps": 3938368,
+        "gamma": 1.0
+      },
+      "admitted_as_complete": false
+    },
+    {
+      "run": "dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1",
+      "completed_prefix": 36,
+      "expected": 270,
+      "actual_exit_code": 1,
+      "summary": {
+        "requests": 36,
+        "output_tokens": 8311,
+        "decode_tokens": 8275,
+        "decode_s": 398.9182078912854,
+        "tok_s": 20.7436006587474,
+        "target_verifications": 1934,
+        "loop_steps": 61888,
+        "gamma": 4.278697001034126
+      },
+      "admitted_as_complete": false
+    },
+    {
+      "run": "dflash-stack-huginn-3.5b-specbench-t0-ar-v1",
+      "completed_prefix": 40,
+      "expected": 480,
+      "actual_exit_code": 1,
+      "summary": {
+        "requests": 40,
+        "output_tokens": 4296,
+        "decode_tokens": 4256,
+        "decode_s": 403.51366282999516,
+        "tok_s": 10.547350417210286,
+        "target_verifications": 4256,
+        "loop_steps": 136192,
+        "gamma": 1.0
+      },
+      "admitted_as_complete": false
+    }
+  ],
+  "scope_note": "An external shared-file record claims a user-requested scope change. This is not treated as an instruction in this thread; clarification is pending.",
+  "actions": "Copied evidence only. No process signals, queue edits, result admission, or new GPU jobs.",
+  "snapshot_files": {
+    "results.csv": {
+      "sha256": "b56f5d8f5809651970f26978eb73e4e5734d2c576a229762135de7a820e170c7",
+      "bytes": 28575
+    },
+    "table2_rows.md": {
+      "sha256": "3bc5c34cb76560aa461cb89450d8109e6de12d1d95994dd029538f593f3c3587",
+      "bytes": 2267
+    },
+    "formal-agreement.json": {
+      "sha256": "bbbf08ea2bff78dfb3c84250eee04a6557d52606bb22a1789e7107ab6dd811fc",
+      "bytes": 852152
+    },
+    "formal-matrix-status.json": {
+      "sha256": "4b79e30abe8ecc171abacbed0a7339e95b09580b5ee8fbd50eeecfbabe5d94bd",
+      "bytes": 3852
+    },
+    "logs/user-stop-dflash-1794419035/appendix-controller-v1-status.json": {
+      "sha256": "120c27b80d9fae1864e2c02cbcf8fd7869fa84add4315957a1dc71ee4a77ba63",
+      "bytes": 74
+    },
+    "logs/user-stop-dflash-1794419035/before.json": {
+      "sha256": "bba8ffe7396ecdf4d48fa1f2babfaafaa98bdb5c689711c59fd1983cb1c87563",
+      "bytes": 5493
+    },
+    "logs/user-stop-dflash-1794419035/configs-gpu-allocation.json": {
+      "sha256": "360457c454d4c64feaaaba0d55f72ffeadb811a2c5c33bc49ea5e8ad16914267",
+      "bytes": 347
+    },
+    "logs/user-stop-dflash-1794419035/formal-controller-v1-status.json": {
+      "sha256": "28ea0127e213bf8a90e0084d50af31a1d456f88ad842abdb1d52849fbeb42e5b",
+      "bytes": 3044
+    },
+    "logs/user-stop-dflash-1794419035/signals.json": {
+      "sha256": "6f8b05d48ffc465b94d35b8cb846fca2022a78f0c3677c2a93b6c810322831da",
+      "bytes": 181
+    },
+    "logs/user-stop-dflash-1794419035/verified-stopped.json": {
+      "sha256": "6ae7c88657bbcccf27bbeae97dc1d0f93ace9a39226f38bae38e6c9d7df776d9",
+      "bytes": 72
+    },
+    "configs/gpu-allocation.json": {
+      "sha256": "c8a91644f336b671539b7e74f9df863fcc1be50603f5ba72481637db5a40deb7",
+      "bytes": 1499
+    },
+    "logs/formal-controller-v1/pause-new-jobs": {
+      "sha256": "0dc8176488d3416b80752ff194e97719b93495924d30945b303bb098ea937686",
+      "bytes": 123
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1/metadata.json": {
+      "sha256": "cdb19d0033cd51b2ad2f35bc56a5b769d5fb56b8b2625859c16935dec5f9243c",
+      "bytes": 1982
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1/progress.json": {
+      "sha256": "2f9246600150d1d5cba235467786a410a30b74064c1da9f43a1b09ed7d9e5758",
+      "bytes": 215
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1/requests.jsonl": {
+      "sha256": "d79b44e006efcf132bce0c21f9b551479e9ae0c0fa05c7e9626453c94538c5d8",
+      "bytes": 1687136
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1/reservation-cost.json": {
+      "sha256": "56bb366bd4734c84f908e63696e85254edec571bd587fd8f816a6abadf5f67b5",
+      "bytes": 204
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1/source-manifest.json": {
+      "sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+      "bytes": 678
+    },
+    "logs/dflash-stack-huginn-3.5b-math500-t0-ar-v1-launcher.json": {
+      "sha256": "3c0bdea11e9fce76b9d8798fcb4493c3a2e72e4b2c58e98be5651bc829ec66f7",
+      "bytes": 558
+    },
+    "logs/dflash-stack-huginn-3.5b-math500-t0-ar-v1-finished.json": {
+      "sha256": "bd0b7faabf3edfce121ba29987ee379fb81ac9b0cdc71047329b2df24ba2b2ec",
+      "bytes": 615
+    },
+    "logs/dflash-stack-huginn-3.5b-math500-t0-ar-v1.log": {
+      "sha256": "afcfbd90da4457c90d7e0b74f5443c63ff20dd6539ffed2c2c9f81fa8f798dcd",
+      "bytes": 42108
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-math500-t0.json": {
+      "sha256": "0a18fc1d6ebc704adff6e2ef93ddc50399ba7debebdfd11a7bdf9e5a24784433",
+      "bytes": 220
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-math500-t0-worker-exit.json": {
+      "sha256": "8fa819b81ea0a17780180eefa820e913e288f99a037b0c8173156f14e4c1a1af",
+      "bytes": 292
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1/metadata.json": {
+      "sha256": "270508693c9ebfdbbda6da85cc59b76f9d0d6496159e0e59d4e7a6af18c66302",
+      "bytes": 1982
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1/progress.json": {
+      "sha256": "0db709090f68c53e5ef337815e7ae21ab2e448d8fb8f5217af76f1f61018c970",
+      "bytes": 214
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1/requests.jsonl": {
+      "sha256": "42af6a2a87de23936b3041af74e27098230872f682c41f074f76cec437fe9baa",
+      "bytes": 1726755
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1/reservation-cost.json": {
+      "sha256": "c21d6b3b6877153ab2a18b450a8ad35a4a7e04e1b7ed34a735d6fab7672cfd8e",
+      "bytes": 206
+    },
+    "runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1/source-manifest.json": {
+      "sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+      "bytes": 678
+    },
+    "logs/dflash-stack-huginn-3.5b-math500-t1-ar-v1-launcher.json": {
+      "sha256": "1e9bf08f50f48a63a180054d4acd1a321bdf39337fad4b0490a0a5d72ea044e7",
+      "bytes": 558
+    },
+    "logs/dflash-stack-huginn-3.5b-math500-t1-ar-v1-finished.json": {
+      "sha256": "5858034f4386b1c441849184c0e56c2146dead566bd44bff963265e756f8b361",
+      "bytes": 615
+    },
+    "logs/dflash-stack-huginn-3.5b-math500-t1-ar-v1.log": {
+      "sha256": "7bd65f90545fcbe6dfc189eb8850b80466790a11a25416e724b4ab1f926f02bf",
+      "bytes": 41949
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-math500-t1.json": {
+      "sha256": "def821ee75ea5d56421cbff7bd9e5ff6df857a68003f3ea86003c16018836bc1",
+      "bytes": 220
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-math500-t1-worker-exit.json": {
+      "sha256": "e8b5685a71542ba8f747d231eb8dad848680f3a7b0a84593fbed7c3aef563f6d",
+      "bytes": 292
+    },
+    "runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1/checkpoint-loading.json": {
+      "sha256": "ea8462ce1fb5161e28a2547070c1a7915315f32097d1aec2ca40a21e18831d85",
+      "bytes": 95
+    },
+    "runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1/metadata.json": {
+      "sha256": "b2df28e358cf459c2ee10e424e639ac1f3cb6644959f4fda73dd3100fe27559e",
+      "bytes": 3190
+    },
+    "runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1/progress.json": {
+      "sha256": "bda9704a69d4043083ef0db692bdc363c1bcfea2d7aae9c0a77bf4abef34772d",
+      "bytes": 218
+    },
+    "runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1/requests.jsonl": {
+      "sha256": "a19dca585678c68b93ac241b73f61f8a37aba8f5bae302ef9bbfb092a33c9ca7",
+      "bytes": 83260
+    },
+    "runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1/reservation-cost.json": {
+      "sha256": "7e4aee86e6827da5ae156ebd0be19084265a73113ac333c4b7140549090bcc39",
+      "bytes": 205
+    },
+    "runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1/source-manifest.json": {
+      "sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+      "bytes": 678
+    },
+    "logs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1-launcher.json": {
+      "sha256": "827520f41fd9814ebb6997aaa4dcbd8f89c21315cf6318409eb048e595673cd6",
+      "bytes": 729
+    },
+    "logs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1-finished.json": {
+      "sha256": "ea9ebc185f43818f36cd148b2100b908d3ff7dcb1b88359ad44ab37e00dc3801",
+      "bytes": 785
+    },
+    "logs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1.log": {
+      "sha256": "15bfb574c7f4b19b3ddd8b6021c4f70298f4a7e8e3a886c8878a5095a03c589f",
+      "bytes": 7505
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-bbh-t0.json": {
+      "sha256": "c4ba9fdfa8514e51d90d10e47d99f90cab5c87065db1ee9c0dd6281bbc5583d4",
+      "bytes": 212
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-bbh-t0-worker-exit.json": {
+      "sha256": "21e7489f9dec0ec3954beff219b9fb2fce1a16c107ac93f09f1a51f22e6078d3",
+      "bytes": 293
+    },
+    "runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1/metadata.json": {
+      "sha256": "bdc8e92ddb5cd14679c5c78b42a59d87e7212391914ef852bd11c71064e39577",
+      "bytes": 1984
+    },
+    "runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1/progress.json": {
+      "sha256": "438cd54d3ce6a3f43456f52f9814ecc1146ab3085d249c874ea26e194a799b0e",
+      "bytes": 208
+    },
+    "runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1/requests.jsonl": {
+      "sha256": "a2df11a006c8e3031c84fac6ffcfbdc2f5446bf3f8b9c2d97f5bdc9399f7741e",
+      "bytes": 79470
+    },
+    "runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1/reservation-cost.json": {
+      "sha256": "2c544d311e08b736d138c2681556a52000a0edfbd2cdc587067687af6c736811",
+      "bytes": 205
+    },
+    "runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1/source-manifest.json": {
+      "sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+      "bytes": 678
+    },
+    "logs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1-launcher.json": {
+      "sha256": "42003a2e8005c78e6ddd5f8f2d01804797804f03ab5ab4b508f40aef1078cf5a",
+      "bytes": 564
+    },
+    "logs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1-finished.json": {
+      "sha256": "2e6ce1bdf486067d4497df25c668d92dce211b2c3f0cfb0428b5a2592a19cd41",
+      "bytes": 621
+    },
+    "logs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1.log": {
+      "sha256": "6820088e8ca6462a985e99f0d3626b146bf14664a7f8de1f4cb369569272b7f8",
+      "bytes": 7231
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-specbench-t0.json": {
+      "sha256": "35c453c5232f626fbb5946ddc1cb2b32e008d0968935f50383a5f2ddf437065e",
+      "bytes": 224
+    },
+    "logs/formal-controller-v1/dflash-huginn-3.5b-specbench-t0-worker-exit.json": {
+      "sha256": "c5c8301da12f5d287de2b081cd8275ec2930c05dfca0f8eb3fd66a01484efb33",
+      "bytes": 293
+    }
+  },
+  "capture_source_sha256": "3f37485bb61d629280578a85c121db330db34ebd22fa307461eca31aa1b18e1e"
+}

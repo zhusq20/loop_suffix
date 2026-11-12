@@ -1,0 +1,30 @@
+{
+  "checked_unix": 1794398728.429037,
+  "previous_ledger_sha256": "3964c58bb6ae8acf61d546027a28ef95daf4254944e68795f6880661a2f83d93",
+  "current_ledger_sha256": "a80cee40bd2e75bab2f614cd82a1b594508c39be5ecf2347c2d5e7105b770818",
+  "previous_records": 111,
+  "current_records": 113,
+  "all_previous_records_unchanged": true,
+  "added_records": [
+    {
+      "category": "training",
+      "path": "checkpoints/dflash-huginn-narrow-formal-v1/reservation-cost-rank0.jsonl",
+      "line": 1,
+      "started_unix": 1794354342.9624135,
+      "finished_unix": 1794398423.9758136,
+      "reserved_gpu_seconds": 44081.01340007782,
+      "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+      "status": "complete"
+    },
+    {
+      "category": "training",
+      "path": "checkpoints/dflash-huginn-narrow-formal-v1/reservation-cost-rank1.jsonl",
+      "line": 1,
+      "started_unix": 1794354342.881745,
+      "finished_unix": 1794398423.9387577,
+      "reserved_gpu_seconds": 44081.05701303482,
+      "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+      "status": "complete"
+    }
+  ]
+}

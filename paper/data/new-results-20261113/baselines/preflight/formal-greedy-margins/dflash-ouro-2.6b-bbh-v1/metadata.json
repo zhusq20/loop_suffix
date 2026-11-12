@@ -1,0 +1,20 @@
+{
+  "model": "ouro-2.6b",
+  "dataset": "bbh",
+  "shard": 0,
+  "shards": 1,
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-ar-v1",
+      "sha256": "9cbd5ec4b2033dbd6224a92feda2f86ee033db3a2e4b590e8b411110a8ffef21"
+    },
+    "dflash": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-dflash-v1",
+      "sha256": "8971745e14a9b8626500f27d9e36248b526b74daa0d8b3dfcba2ced32ab98c84"
+    }
+  }
+}

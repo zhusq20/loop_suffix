@@ -1,0 +1,204 @@
+{
+  "stage": "B2 BF16",
+  "requests": 20,
+  "exact_sequences": 16,
+  "first_divergences": [
+    {
+      "source_id": "gsm8k/test/1055",
+      "position": 42,
+      "ar_token": 416,
+      "loopahead_token": 737,
+      "trace": {
+        "ar": {
+          "position": 42,
+          "top_ids": [
+            737,
+            416,
+            17109
+          ],
+          "top_logits": [
+            22.625,
+            22.625,
+            20.25
+          ],
+          "top_probs": [
+            0.4614691734313965,
+            0.4614691734313965,
+            0.04292332008481026
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        },
+        "loopahead": {
+          "position": 42,
+          "token": 737,
+          "top_ids": [
+            737,
+            416,
+            17109
+          ],
+          "top_logits": [
+            22.75,
+            22.625,
+            20.25
+          ],
+          "top_probs": [
+            0.49264809489250183,
+            0.4347604215145111,
+            0.040439020842313766
+          ],
+          "top2_probability_margin": 0.05788767337799072,
+          "top1_logit_margin": 0.125
+        }
+      }
+    },
+    {
+      "source_id": "gsm8k/test/745",
+      "position": 5,
+      "ar_token": 327,
+      "loopahead_token": 282,
+      "trace": {
+        "ar": {
+          "position": 5,
+          "top_ids": [
+            327,
+            282,
+            28
+          ],
+          "top_logits": [
+            20.875,
+            20.75,
+            17.75
+          ],
+          "top_probs": [
+            0.5156612396240234,
+            0.4550694525241852,
+            0.022656574845314026
+          ],
+          "top2_probability_margin": 0.06059178709983826,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 5,
+          "token": 282,
+          "top_ids": [
+            327,
+            282,
+            28
+          ],
+          "top_logits": [
+            20.75,
+            20.75,
+            17.75
+          ],
+          "top_probs": [
+            0.4843492805957794,
+            0.4843492805957794,
+            0.024114329367876053
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      }
+    },
+    {
+      "source_id": "gsm8k/test/1293",
+      "position": 9,
+      "ar_token": 282,
+      "loopahead_token": 567,
+      "trace": {
+        "ar": {
+          "position": 9,
+          "top_ids": [
+            282,
+            567,
+            281
+          ],
+          "top_logits": [
+            19.375,
+            19.25,
+            18.375
+          ],
+          "top_probs": [
+            0.4270566403865814,
+            0.37687617540359497,
+            0.15710537135601044
+          ],
+          "top2_probability_margin": 0.05018046498298645,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 9,
+          "token": 567,
+          "top_ids": [
+            567,
+            282,
+            281
+          ],
+          "top_logits": [
+            19.375,
+            19.25,
+            18.375
+          ],
+          "top_probs": [
+            0.4267895817756653,
+            0.3766404688358307,
+            0.1570071280002594
+          ],
+          "top2_probability_margin": 0.050149112939834595,
+          "top1_logit_margin": 0.125
+        }
+      }
+    },
+    {
+      "source_id": "gsm8k/test/54",
+      "position": 19,
+      "ar_token": 37,
+      "loopahead_token": 36,
+      "trace": {
+        "ar": {
+          "position": 19,
+          "top_ids": [
+            37,
+            36,
+            35
+          ],
+          "top_logits": [
+            17.875,
+            17.75,
+            16.875
+          ],
+          "top_probs": [
+            0.3507261574268341,
+            0.30951476097106934,
+            0.1290249526500702
+          ],
+          "top2_probability_margin": 0.04121139645576477,
+          "top1_logit_margin": 0.125
+        },
+        "loopahead": {
+          "position": 19,
+          "token": 36,
+          "top_ids": [
+            37,
+            36,
+            35
+          ],
+          "top_logits": [
+            17.75,
+            17.75,
+            16.75
+          ],
+          "top_probs": [
+            0.33410894870758057,
+            0.33410894870758057,
+            0.12291183322668076
+          ],
+          "top2_probability_margin": 0.0,
+          "top1_logit_margin": 0.0
+        }
+      }
+    }
+  ],
+  "limitation": "Pending FP32 comparison; traces are before any output divergence"
+}

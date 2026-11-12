@@ -1,0 +1,5378 @@
+{
+  "base": "/ossfs/workspace/sz/loopfill/experiments/baselines",
+  "group": {
+    "id": "loopahead-ouro-2.6b-math500-v1",
+    "kind": "legacy",
+    "row": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "math500",
+      "temperature": "0",
+      "eta": "4.144737724630048",
+      "gamma": "5.075278206482008",
+      "method_tok_s": "26.76705954023835",
+      "ar_tok_s": "6.458082831435982",
+      "drafter_time_frac": "NA",
+      "match_rate": "0.142",
+      "engine": "ours",
+      "status": "complete_with_declared_limitations",
+      "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+      "eta_latency": "4.138419299357532",
+      "eta_throughput": "4.144737724630048",
+      "aligned_token_match_rate": "0.45704555163836574",
+      "method_decode_tokens": "249927",
+      "ar_decode_tokens": "249546",
+      "method_decode_s": "9337.110773198307",
+      "ar_decode_s": "38640.879424043",
+      "ar_provenance": "archived_same_host_AR",
+      "ar_first_completed_unix": "1793994962.782936",
+      "ar_last_completed_unix": "1794033606.038295",
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0"
+    },
+    "agreement": {
+      "match_rate": 0.142,
+      "aligned_token_match_rate": 0.45704555163836574,
+      "exact_sequences": 71,
+      "requests": 500,
+      "first_divergences": [
+        {
+          "source_id": "test/counting_and_probability/508.json",
+          "position": 92,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/13.json",
+          "position": 63,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/627.json",
+          "position": 235,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1814.json",
+          "position": 96,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/337.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1113.json",
+          "position": 33,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2626.json",
+          "position": 59,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1009.json",
+          "position": 418,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/819.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/894.json",
+          "position": 258,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/769.json",
+          "position": 115,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1168.json",
+          "position": 269,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/795.json",
+          "position": 343,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1454.json",
+          "position": 272,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1339.json",
+          "position": 83,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1035.json",
+          "position": 226,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1000.json",
+          "position": 117,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1303.json",
+          "position": 162,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/846.json",
+          "position": 230,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/101.json",
+          "position": 234,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/529.json",
+          "position": 128,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/525.json",
+          "position": 66,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2146.json",
+          "position": 31,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/834.json",
+          "position": 408,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/681.json",
+          "position": 129,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1000.json",
+          "position": 160,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/283.json",
+          "position": 36,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1457.json",
+          "position": 284,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/149.json",
+          "position": 112,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/505.json",
+          "position": 38,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1558.json",
+          "position": 110,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1992.json",
+          "position": 11,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/666.json",
+          "position": 238,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1512.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/695.json",
+          "position": 46,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/779.json",
+          "position": 72,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/456.json",
+          "position": 257,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/894.json",
+          "position": 206,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1365.json",
+          "position": 318,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2700.json",
+          "position": 30,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2193.json",
+          "position": 64,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/23957.json",
+          "position": 162,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1105.json",
+          "position": 125,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1338.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1807.json",
+          "position": 323,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/158.json",
+          "position": 104,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1730.json",
+          "position": 246,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1279.json",
+          "position": 388,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1422.json",
+          "position": 161,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2570.json",
+          "position": 32,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/515.json",
+          "position": 64,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1747.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/631.json",
+          "position": 146,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/345.json",
+          "position": 439,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/89.json",
+          "position": 350,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1806.json",
+          "position": 325,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1275.json",
+          "position": 281,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/282.json",
+          "position": 85,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/488.json",
+          "position": 233,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/561.json",
+          "position": 447,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1233.json",
+          "position": 247,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/473.json",
+          "position": 80,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/892.json",
+          "position": 346,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/199.json",
+          "position": 68,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/964.json",
+          "position": 50,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/954.json",
+          "position": 15,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1197.json",
+          "position": 135,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/483.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1065.json",
+          "position": 15,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/928.json",
+          "position": 460,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/425.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1332.json",
+          "position": 16,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1898.json",
+          "position": 238,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2486.json",
+          "position": 385,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/547.json",
+          "position": 32,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/428.json",
+          "position": 66,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/153.json",
+          "position": 50,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/417.json",
+          "position": 122,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/703.json",
+          "position": 207,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1388.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/509.json",
+          "position": 19,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/873.json",
+          "position": 112,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1238.json",
+          "position": 246,
+          "method_length": 392,
+          "ar_length": 351
+        },
+        {
+          "source_id": "test/intermediate_algebra/860.json",
+          "position": 409,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1572.json",
+          "position": 178,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/733.json",
+          "position": 372,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/920.json",
+          "position": 431,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/499.json",
+          "position": 44,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1787.json",
+          "position": 116,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/761.json",
+          "position": 248,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/102.json",
+          "position": 54,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/114.json",
+          "position": 8,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1291.json",
+          "position": 52,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/598.json",
+          "position": 158,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1529.json",
+          "position": 316,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2257.json",
+          "position": 334,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1547.json",
+          "position": 87,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1032.json",
+          "position": 68,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1133.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/377.json",
+          "position": 62,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1784.json",
+          "position": 63,
+          "method_length": 353,
+          "ar_length": 277
+        },
+        {
+          "source_id": "test/intermediate_algebra/752.json",
+          "position": 195,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1265.json",
+          "position": 396,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2023.json",
+          "position": 500,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/178.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/634.json",
+          "position": 452,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/864.json",
+          "position": 155,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2735.json",
+          "position": 17,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/572.json",
+          "position": 55,
+          "method_length": 200,
+          "ar_length": 218
+        },
+        {
+          "source_id": "test/number_theory/737.json",
+          "position": 391,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2152.json",
+          "position": 184,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1227.json",
+          "position": 267,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/465.json",
+          "position": 484,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/285.json",
+          "position": 84,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1114.json",
+          "position": 286,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/279.json",
+          "position": 28,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/452.json",
+          "position": 127,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1201.json",
+          "position": 232,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1317.json",
+          "position": 133,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1555.json",
+          "position": 353,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/22.json",
+          "position": 192,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/986.json",
+          "position": 23,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1060.json",
+          "position": 161,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/972.json",
+          "position": 96,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1123.json",
+          "position": 252,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/927.json",
+          "position": 25,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2176.json",
+          "position": 142,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/465.json",
+          "position": 334,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1544.json",
+          "position": 163,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/356.json",
+          "position": 215,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/389.json",
+          "position": 109,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/368.json",
+          "position": 405,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/807.json",
+          "position": 67,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/881.json",
+          "position": 81,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/119.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1555.json",
+          "position": 451,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/106.json",
+          "position": 237,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/398.json",
+          "position": 101,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/109.json",
+          "position": 74,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/679.json",
+          "position": 13,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/1108.json",
+          "position": 117,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1300.json",
+          "position": 78,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/1097.json",
+          "position": 136,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1202.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/631.json",
+          "position": 90,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/843.json",
+          "position": 89,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/117.json",
+          "position": 220,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/621.json",
+          "position": 91,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2470.json",
+          "position": 59,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2046.json",
+          "position": 201,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2159.json",
+          "position": 274,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/591.json",
+          "position": 78,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/342.json",
+          "position": 198,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/51.json",
+          "position": 77,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/754.json",
+          "position": 90,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1930.json",
+          "position": 142,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1804.json",
+          "position": 13,
+          "method_length": 288,
+          "ar_length": 278
+        },
+        {
+          "source_id": "test/geometry/686.json",
+          "position": 342,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2476.json",
+          "position": 263,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/121.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/731.json",
+          "position": 108,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/441.json",
+          "position": 448,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/230.json",
+          "position": 217,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1934.json",
+          "position": 278,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/967.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1303.json",
+          "position": 112,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/914.json",
+          "position": 80,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/46.json",
+          "position": 169,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/183.json",
+          "position": 43,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/659.json",
+          "position": 227,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/446.json",
+          "position": 209,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1055.json",
+          "position": 12,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/232.json",
+          "position": 45,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/776.json",
+          "position": 30,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1102.json",
+          "position": 213,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/24313.json",
+          "position": 411,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/996.json",
+          "position": 81,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/847.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/24.json",
+          "position": 57,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/134.json",
+          "position": 349,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/702.json",
+          "position": 135,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1350.json",
+          "position": 487,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/572.json",
+          "position": 375,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/116.json",
+          "position": 35,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1281.json",
+          "position": 50,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/880.json",
+          "position": 421,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2593.json",
+          "position": 205,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1834.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1111.json",
+          "position": 34,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/190.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1907.json",
+          "position": 139,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2517.json",
+          "position": 361,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/858.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1865.json",
+          "position": 109,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/478.json",
+          "position": 361,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/625.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/430.json",
+          "position": 156,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2066.json",
+          "position": 17,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1255.json",
+          "position": 303,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/263.json",
+          "position": 372,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1655.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/977.json",
+          "position": 363,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/838.json",
+          "position": 67,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/43.json",
+          "position": 59,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1098.json",
+          "position": 162,
+          "method_length": 209,
+          "ar_length": 221
+        },
+        {
+          "source_id": "test/precalculus/1313.json",
+          "position": 63,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/72.json",
+          "position": 37,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1353.json",
+          "position": 81,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/791.json",
+          "position": 96,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1247.json",
+          "position": 141,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1139.json",
+          "position": 36,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1201.json",
+          "position": 183,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2043.json",
+          "position": 234,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/913.json",
+          "position": 13,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1787.json",
+          "position": 312,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/466.json",
+          "position": 104,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1991.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1114.json",
+          "position": 139,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/991.json",
+          "position": 485,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1849.json",
+          "position": 500,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/229.json",
+          "position": 172,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/216.json",
+          "position": 194,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/990.json",
+          "position": 36,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/347.json",
+          "position": 179,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1214.json",
+          "position": 269,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/156.json",
+          "position": 430,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/966.json",
+          "position": 281,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2253.json",
+          "position": 197,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/533.json",
+          "position": 443,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/207.json",
+          "position": 194,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1779.json",
+          "position": 242,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1796.json",
+          "position": 381,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/353.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1247.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2022.json",
+          "position": 268,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/10.json",
+          "position": 24,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/541.json",
+          "position": 144,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/238.json",
+          "position": 122,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/260.json",
+          "position": 331,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/323.json",
+          "position": 114,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/582.json",
+          "position": 164,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1185.json",
+          "position": 16,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/255.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2057.json",
+          "position": 391,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/307.json",
+          "position": 256,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1973.json",
+          "position": 56,
+          "method_length": 283,
+          "ar_length": 205
+        },
+        {
+          "source_id": "test/counting_and_probability/1003.json",
+          "position": 178,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/25149.json",
+          "position": 185,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1733.json",
+          "position": 250,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2584.json",
+          "position": 95,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/960.json",
+          "position": 43,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1994.json",
+          "position": 180,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1425.json",
+          "position": 206,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/297.json",
+          "position": 200,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1356.json",
+          "position": 67,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/801.json",
+          "position": 199,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1436.json",
+          "position": 65,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/965.json",
+          "position": 155,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/914.json",
+          "position": 132,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/128.json",
+          "position": 186,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/105.json",
+          "position": 294,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1199.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/956.json",
+          "position": 437,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/864.json",
+          "position": 188,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2264.json",
+          "position": 106,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2037.json",
+          "position": 82,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2102.json",
+          "position": 11,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/930.json",
+          "position": 302,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/73.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/459.json",
+          "position": 243,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1128.json",
+          "position": 38,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2277.json",
+          "position": 440,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/199.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1298.json",
+          "position": 134,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/172.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/248.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/221.json",
+          "position": 192,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/477.json",
+          "position": 84,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/769.json",
+          "position": 326,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1578.json",
+          "position": 455,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2427.json",
+          "position": 91,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2551.json",
+          "position": 32,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/190.json",
+          "position": 421,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1510.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1995.json",
+          "position": 395,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/776.json",
+          "position": 222,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1423.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1572.json",
+          "position": 58,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2064.json",
+          "position": 277,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/765.json",
+          "position": 8,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1126.json",
+          "position": 286,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2214.json",
+          "position": 105,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1002.json",
+          "position": 268,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/691.json",
+          "position": 129,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/254.json",
+          "position": 326,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1519.json",
+          "position": 49,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1302.json",
+          "position": 312,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2430.json",
+          "position": 188,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/607.json",
+          "position": 123,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/634.json",
+          "position": 51,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/187.json",
+          "position": 240,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/686.json",
+          "position": 109,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/234.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/410.json",
+          "position": 39,
+          "method_length": 512,
+          "ar_length": 390
+        },
+        {
+          "source_id": "test/counting_and_probability/71.json",
+          "position": 60,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1640.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/159.json",
+          "position": 463,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1252.json",
+          "position": 340,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/870.json",
+          "position": 44,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/378.json",
+          "position": 45,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/109.json",
+          "position": 152,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/768.json",
+          "position": 13,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1287.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1646.json",
+          "position": 23,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/346.json",
+          "position": 103,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1199.json",
+          "position": 128,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/14.json",
+          "position": 188,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1082.json",
+          "position": 60,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/627.json",
+          "position": 10,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/711.json",
+          "position": 92,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1508.json",
+          "position": 322,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/686.json",
+          "position": 365,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2086.json",
+          "position": 284,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1251.json",
+          "position": 245,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1388.json",
+          "position": 136,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1014.json",
+          "position": 90,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1003.json",
+          "position": 103,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1031.json",
+          "position": 28,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/291.json",
+          "position": 91,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/351.json",
+          "position": 111,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2680.json",
+          "position": 101,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1056.json",
+          "position": 182,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/134.json",
+          "position": 125,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/518.json",
+          "position": 92,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/65.json",
+          "position": 421,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1004.json",
+          "position": 322,
+          "method_length": 487,
+          "ar_length": 493
+        },
+        {
+          "source_id": "test/prealgebra/1297.json",
+          "position": 159,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/362.json",
+          "position": 505,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/239.json",
+          "position": 73,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1289.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/661.json",
+          "position": 54,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/192.json",
+          "position": 60,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2058.json",
+          "position": 341,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1143.json",
+          "position": 115,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/524.json",
+          "position": 47,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1354.json",
+          "position": 72,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/224.json",
+          "position": 331,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1252.json",
+          "position": 135,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1840.json",
+          "position": 434,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/65.json",
+          "position": 11,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/145.json",
+          "position": 128,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1553.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/615.json",
+          "position": 9,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1842.json",
+          "position": 139,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1410.json",
+          "position": 46,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/753.json",
+          "position": 181,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1272.json",
+          "position": 111,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/612.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1761.json",
+          "position": 29,
+          "method_length": 512,
+          "ar_length": 509
+        },
+        {
+          "source_id": "test/precalculus/580.json",
+          "position": 33,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/101.json",
+          "position": 280,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1960.json",
+          "position": 65,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2391.json",
+          "position": 142,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/170.json",
+          "position": 94,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/203.json",
+          "position": 168,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/305.json",
+          "position": 298,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/183.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/567.json",
+          "position": 49,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/47.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/988.json",
+          "position": 346,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1566.json",
+          "position": 62,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/339.json",
+          "position": 102,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1349.json",
+          "position": 131,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1072.json",
+          "position": 83,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/1140.json",
+          "position": 134,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/993.json",
+          "position": 153,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/226.json",
+          "position": 287,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1187.json",
+          "position": 145,
+          "method_length": 363,
+          "ar_length": 281
+        },
+        {
+          "source_id": "test/intermediate_algebra/623.json",
+          "position": 74,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/955.json",
+          "position": 211,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1791.json",
+          "position": 108,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1257.json",
+          "position": 45,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/975.json",
+          "position": 324,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/947.json",
+          "position": 151,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/824.json",
+          "position": 185,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1742.json",
+          "position": 101,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/668.json",
+          "position": 241,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1622.json",
+          "position": 53,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1184.json",
+          "position": 223,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/911.json",
+          "position": 116,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1908.json",
+          "position": 501,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/817.json",
+          "position": 31,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1961.json",
+          "position": 508,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/803.json",
+          "position": 62,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1203.json",
+          "position": 382,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/694.json",
+          "position": 181,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/853.json",
+          "position": 37,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1686.json",
+          "position": 425,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1405.json",
+          "position": 149,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1172.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2196.json",
+          "position": 114,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2015.json",
+          "position": 120,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/675.json",
+          "position": 22,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1981.json",
+          "position": 273,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/435.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/246.json",
+          "position": 78,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/149.json",
+          "position": 108,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/188.json",
+          "position": 24,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1714.json",
+          "position": 229,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1797.json",
+          "position": 453,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/805.json",
+          "position": 77,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/902.json",
+          "position": 227,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/96.json",
+          "position": 399,
+          "method_length": 475,
+          "ar_length": 470
+        },
+        {
+          "source_id": "test/prealgebra/1930.json",
+          "position": 115,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1172.json",
+          "position": 273,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/846.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/427.json",
+          "position": 268,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1743.json",
+          "position": 79,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/34.json",
+          "position": 226,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1128.json",
+          "position": 191,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/117.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/181.json",
+          "position": 80,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/697.json",
+          "position": 191,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/841.json",
+          "position": 414,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/986.json",
+          "position": 147,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/989.json",
+          "position": 184,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1462.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/802.json",
+          "position": 461,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1837.json",
+          "position": 151,
+          "method_length": 512,
+          "ar_length": 512
+        }
+      ]
+    },
+    "out": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-resume-v1",
+    "steps": [
+      {
+        "id": "loopahead-ouro-2.6b-math500-v1-fp32-continuation",
+        "out": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-resume-v1/fp32-common-prefix",
+        "marker": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-resume-v1/fp32-common-prefix/report.json",
+        "legacy_lock": true,
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead_resume.py",
+          "--ar",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0",
+          "--loopahead",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1",
+          "--observed-margin-report",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/report.json",
+          "--gpu",
+          "{GPU}",
+          "--cpus",
+          "{CPUS}",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-resume-v1/fp32-common-prefix",
+          "--resume-evidence",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/report.json"
+        ]
+      }
+    ]
+  },
+  "original_group": {
+    "id": "loopahead-ouro-2.6b-math500-v1",
+    "kind": "legacy",
+    "row": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "math500",
+      "temperature": "0",
+      "eta": "4.144737724630048",
+      "gamma": "5.075278206482008",
+      "method_tok_s": "26.76705954023835",
+      "ar_tok_s": "6.458082831435982",
+      "drafter_time_frac": "NA",
+      "match_rate": "0.142",
+      "engine": "ours",
+      "status": "complete_with_declared_limitations",
+      "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+      "eta_latency": "4.138419299357532",
+      "eta_throughput": "4.144737724630048",
+      "aligned_token_match_rate": "0.45704555163836574",
+      "method_decode_tokens": "249927",
+      "ar_decode_tokens": "249546",
+      "method_decode_s": "9337.110773198307",
+      "ar_decode_s": "38640.879424043",
+      "ar_provenance": "archived_same_host_AR",
+      "ar_first_completed_unix": "1793994962.782936",
+      "ar_last_completed_unix": "1794033606.038295",
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0"
+    },
+    "agreement": {
+      "match_rate": 0.142,
+      "aligned_token_match_rate": 0.45704555163836574,
+      "exact_sequences": 71,
+      "requests": 500,
+      "first_divergences": [
+        {
+          "source_id": "test/counting_and_probability/508.json",
+          "position": 92,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/13.json",
+          "position": 63,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/627.json",
+          "position": 235,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1814.json",
+          "position": 96,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/337.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1113.json",
+          "position": 33,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2626.json",
+          "position": 59,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1009.json",
+          "position": 418,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/819.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/894.json",
+          "position": 258,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/769.json",
+          "position": 115,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1168.json",
+          "position": 269,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/795.json",
+          "position": 343,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1454.json",
+          "position": 272,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1339.json",
+          "position": 83,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1035.json",
+          "position": 226,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1000.json",
+          "position": 117,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1303.json",
+          "position": 162,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/846.json",
+          "position": 230,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/101.json",
+          "position": 234,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/529.json",
+          "position": 128,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/525.json",
+          "position": 66,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2146.json",
+          "position": 31,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/834.json",
+          "position": 408,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/681.json",
+          "position": 129,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1000.json",
+          "position": 160,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/283.json",
+          "position": 36,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1457.json",
+          "position": 284,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/149.json",
+          "position": 112,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/505.json",
+          "position": 38,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1558.json",
+          "position": 110,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1992.json",
+          "position": 11,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/666.json",
+          "position": 238,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1512.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/695.json",
+          "position": 46,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/779.json",
+          "position": 72,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/456.json",
+          "position": 257,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/894.json",
+          "position": 206,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1365.json",
+          "position": 318,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2700.json",
+          "position": 30,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2193.json",
+          "position": 64,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/23957.json",
+          "position": 162,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1105.json",
+          "position": 125,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1338.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1807.json",
+          "position": 323,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/158.json",
+          "position": 104,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1730.json",
+          "position": 246,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1279.json",
+          "position": 388,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1422.json",
+          "position": 161,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2570.json",
+          "position": 32,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/515.json",
+          "position": 64,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1747.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/631.json",
+          "position": 146,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/345.json",
+          "position": 439,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/89.json",
+          "position": 350,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1806.json",
+          "position": 325,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1275.json",
+          "position": 281,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/282.json",
+          "position": 85,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/488.json",
+          "position": 233,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/561.json",
+          "position": 447,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1233.json",
+          "position": 247,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/473.json",
+          "position": 80,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/892.json",
+          "position": 346,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/199.json",
+          "position": 68,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/964.json",
+          "position": 50,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/954.json",
+          "position": 15,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1197.json",
+          "position": 135,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/483.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1065.json",
+          "position": 15,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/928.json",
+          "position": 460,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/425.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1332.json",
+          "position": 16,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1898.json",
+          "position": 238,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2486.json",
+          "position": 385,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/547.json",
+          "position": 32,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/428.json",
+          "position": 66,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/153.json",
+          "position": 50,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/417.json",
+          "position": 122,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/703.json",
+          "position": 207,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1388.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/509.json",
+          "position": 19,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/873.json",
+          "position": 112,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1238.json",
+          "position": 246,
+          "method_length": 392,
+          "ar_length": 351
+        },
+        {
+          "source_id": "test/intermediate_algebra/860.json",
+          "position": 409,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1572.json",
+          "position": 178,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/733.json",
+          "position": 372,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/920.json",
+          "position": 431,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/499.json",
+          "position": 44,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1787.json",
+          "position": 116,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/761.json",
+          "position": 248,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/102.json",
+          "position": 54,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/114.json",
+          "position": 8,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1291.json",
+          "position": 52,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/598.json",
+          "position": 158,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1529.json",
+          "position": 316,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2257.json",
+          "position": 334,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1547.json",
+          "position": 87,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1032.json",
+          "position": 68,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1133.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/377.json",
+          "position": 62,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1784.json",
+          "position": 63,
+          "method_length": 353,
+          "ar_length": 277
+        },
+        {
+          "source_id": "test/intermediate_algebra/752.json",
+          "position": 195,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1265.json",
+          "position": 396,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2023.json",
+          "position": 500,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/178.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/634.json",
+          "position": 452,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/864.json",
+          "position": 155,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2735.json",
+          "position": 17,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/572.json",
+          "position": 55,
+          "method_length": 200,
+          "ar_length": 218
+        },
+        {
+          "source_id": "test/number_theory/737.json",
+          "position": 391,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2152.json",
+          "position": 184,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1227.json",
+          "position": 267,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/465.json",
+          "position": 484,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/285.json",
+          "position": 84,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1114.json",
+          "position": 286,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/279.json",
+          "position": 28,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/452.json",
+          "position": 127,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1201.json",
+          "position": 232,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1317.json",
+          "position": 133,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1555.json",
+          "position": 353,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/22.json",
+          "position": 192,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/986.json",
+          "position": 23,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1060.json",
+          "position": 161,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/972.json",
+          "position": 96,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1123.json",
+          "position": 252,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/927.json",
+          "position": 25,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2176.json",
+          "position": 142,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/465.json",
+          "position": 334,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1544.json",
+          "position": 163,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/356.json",
+          "position": 215,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/389.json",
+          "position": 109,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/368.json",
+          "position": 405,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/807.json",
+          "position": 67,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/881.json",
+          "position": 81,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/119.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1555.json",
+          "position": 451,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/106.json",
+          "position": 237,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/398.json",
+          "position": 101,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/109.json",
+          "position": 74,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/679.json",
+          "position": 13,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/1108.json",
+          "position": 117,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1300.json",
+          "position": 78,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/1097.json",
+          "position": 136,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1202.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/631.json",
+          "position": 90,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/843.json",
+          "position": 89,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/117.json",
+          "position": 220,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/621.json",
+          "position": 91,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2470.json",
+          "position": 59,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2046.json",
+          "position": 201,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2159.json",
+          "position": 274,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/591.json",
+          "position": 78,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/342.json",
+          "position": 198,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/51.json",
+          "position": 77,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/754.json",
+          "position": 90,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1930.json",
+          "position": 142,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1804.json",
+          "position": 13,
+          "method_length": 288,
+          "ar_length": 278
+        },
+        {
+          "source_id": "test/geometry/686.json",
+          "position": 342,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2476.json",
+          "position": 263,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/121.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/731.json",
+          "position": 108,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/441.json",
+          "position": 448,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/230.json",
+          "position": 217,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1934.json",
+          "position": 278,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/967.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1303.json",
+          "position": 112,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/914.json",
+          "position": 80,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/46.json",
+          "position": 169,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/183.json",
+          "position": 43,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/659.json",
+          "position": 227,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/446.json",
+          "position": 209,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1055.json",
+          "position": 12,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/232.json",
+          "position": 45,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/776.json",
+          "position": 30,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1102.json",
+          "position": 213,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/24313.json",
+          "position": 411,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/996.json",
+          "position": 81,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/847.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/24.json",
+          "position": 57,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/134.json",
+          "position": 349,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/702.json",
+          "position": 135,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1350.json",
+          "position": 487,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/572.json",
+          "position": 375,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/116.json",
+          "position": 35,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1281.json",
+          "position": 50,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/880.json",
+          "position": 421,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2593.json",
+          "position": 205,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1834.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1111.json",
+          "position": 34,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/190.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1907.json",
+          "position": 139,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2517.json",
+          "position": 361,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/858.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1865.json",
+          "position": 109,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/478.json",
+          "position": 361,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/625.json",
+          "position": 255,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/430.json",
+          "position": 156,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2066.json",
+          "position": 17,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1255.json",
+          "position": 303,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/263.json",
+          "position": 372,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1655.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/977.json",
+          "position": 363,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/838.json",
+          "position": 67,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/43.json",
+          "position": 59,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1098.json",
+          "position": 162,
+          "method_length": 209,
+          "ar_length": 221
+        },
+        {
+          "source_id": "test/precalculus/1313.json",
+          "position": 63,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/72.json",
+          "position": 37,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1353.json",
+          "position": 81,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/791.json",
+          "position": 96,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1247.json",
+          "position": 141,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1139.json",
+          "position": 36,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1201.json",
+          "position": 183,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2043.json",
+          "position": 234,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/913.json",
+          "position": 13,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1787.json",
+          "position": 312,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/466.json",
+          "position": 104,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1991.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1114.json",
+          "position": 139,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/991.json",
+          "position": 485,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1849.json",
+          "position": 500,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/229.json",
+          "position": 172,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/216.json",
+          "position": 194,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/990.json",
+          "position": 36,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/347.json",
+          "position": 179,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1214.json",
+          "position": 269,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/156.json",
+          "position": 430,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/966.json",
+          "position": 281,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2253.json",
+          "position": 197,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/533.json",
+          "position": 443,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/207.json",
+          "position": 194,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1779.json",
+          "position": 242,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1796.json",
+          "position": 381,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/353.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1247.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2022.json",
+          "position": 268,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/10.json",
+          "position": 24,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/541.json",
+          "position": 144,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/238.json",
+          "position": 122,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/260.json",
+          "position": 331,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/323.json",
+          "position": 114,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/582.json",
+          "position": 164,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1185.json",
+          "position": 16,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/255.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2057.json",
+          "position": 391,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/307.json",
+          "position": 256,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1973.json",
+          "position": 56,
+          "method_length": 283,
+          "ar_length": 205
+        },
+        {
+          "source_id": "test/counting_and_probability/1003.json",
+          "position": 178,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/25149.json",
+          "position": 185,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1733.json",
+          "position": 250,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2584.json",
+          "position": 95,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/960.json",
+          "position": 43,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1994.json",
+          "position": 180,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1425.json",
+          "position": 206,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/297.json",
+          "position": 200,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1356.json",
+          "position": 67,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/801.json",
+          "position": 199,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1436.json",
+          "position": 65,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/965.json",
+          "position": 155,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/914.json",
+          "position": 132,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/128.json",
+          "position": 186,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/105.json",
+          "position": 294,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1199.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/956.json",
+          "position": 437,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/864.json",
+          "position": 188,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2264.json",
+          "position": 106,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2037.json",
+          "position": 82,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2102.json",
+          "position": 11,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/930.json",
+          "position": 302,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/73.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/459.json",
+          "position": 243,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1128.json",
+          "position": 38,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2277.json",
+          "position": 440,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/199.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1298.json",
+          "position": 134,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/172.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/248.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/221.json",
+          "position": 192,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/477.json",
+          "position": 84,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/769.json",
+          "position": 326,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1578.json",
+          "position": 455,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2427.json",
+          "position": 91,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2551.json",
+          "position": 32,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/190.json",
+          "position": 421,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1510.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1995.json",
+          "position": 395,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/776.json",
+          "position": 222,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1423.json",
+          "position": 70,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1572.json",
+          "position": 58,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2064.json",
+          "position": 277,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/765.json",
+          "position": 8,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1126.json",
+          "position": 286,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2214.json",
+          "position": 105,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1002.json",
+          "position": 268,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/691.json",
+          "position": 129,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/254.json",
+          "position": 326,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1519.json",
+          "position": 49,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1302.json",
+          "position": 312,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2430.json",
+          "position": 188,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/607.json",
+          "position": 123,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/634.json",
+          "position": 51,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/187.json",
+          "position": 240,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/686.json",
+          "position": 109,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/234.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/410.json",
+          "position": 39,
+          "method_length": 512,
+          "ar_length": 390
+        },
+        {
+          "source_id": "test/counting_and_probability/71.json",
+          "position": 60,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1640.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/159.json",
+          "position": 463,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1252.json",
+          "position": 340,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/870.json",
+          "position": 44,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/378.json",
+          "position": 45,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/109.json",
+          "position": 152,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/768.json",
+          "position": 13,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1287.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1646.json",
+          "position": 23,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/346.json",
+          "position": 103,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1199.json",
+          "position": 128,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/14.json",
+          "position": 188,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1082.json",
+          "position": 60,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/627.json",
+          "position": 10,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/711.json",
+          "position": 92,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1508.json",
+          "position": 322,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/686.json",
+          "position": 365,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/2086.json",
+          "position": 284,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1251.json",
+          "position": 245,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1388.json",
+          "position": 136,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/1014.json",
+          "position": 90,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1003.json",
+          "position": 103,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1031.json",
+          "position": 28,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/291.json",
+          "position": 91,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/351.json",
+          "position": 111,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2680.json",
+          "position": 101,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1056.json",
+          "position": 182,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/134.json",
+          "position": 125,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/518.json",
+          "position": 92,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/65.json",
+          "position": 421,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1004.json",
+          "position": 322,
+          "method_length": 487,
+          "ar_length": 493
+        },
+        {
+          "source_id": "test/prealgebra/1297.json",
+          "position": 159,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/362.json",
+          "position": 505,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/239.json",
+          "position": 73,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1289.json",
+          "position": 42,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/661.json",
+          "position": 54,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/192.json",
+          "position": 60,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2058.json",
+          "position": 341,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1143.json",
+          "position": 115,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/524.json",
+          "position": 47,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1354.json",
+          "position": 72,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/224.json",
+          "position": 331,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1252.json",
+          "position": 135,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1840.json",
+          "position": 434,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/65.json",
+          "position": 11,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/145.json",
+          "position": 128,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1553.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/615.json",
+          "position": 9,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1842.json",
+          "position": 139,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1410.json",
+          "position": 46,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/753.json",
+          "position": 181,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1272.json",
+          "position": 111,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/612.json",
+          "position": 121,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1761.json",
+          "position": 29,
+          "method_length": 512,
+          "ar_length": 509
+        },
+        {
+          "source_id": "test/precalculus/580.json",
+          "position": 33,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/101.json",
+          "position": 280,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1960.json",
+          "position": 65,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/2391.json",
+          "position": 142,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/170.json",
+          "position": 94,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/203.json",
+          "position": 168,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/305.json",
+          "position": 298,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/183.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/567.json",
+          "position": 49,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/47.json",
+          "position": 69,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/988.json",
+          "position": 346,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1566.json",
+          "position": 62,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/339.json",
+          "position": 102,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1349.json",
+          "position": 131,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1072.json",
+          "position": 83,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/1140.json",
+          "position": 134,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/993.json",
+          "position": 153,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/226.json",
+          "position": 287,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1187.json",
+          "position": 145,
+          "method_length": 363,
+          "ar_length": 281
+        },
+        {
+          "source_id": "test/intermediate_algebra/623.json",
+          "position": 74,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/955.json",
+          "position": 211,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1791.json",
+          "position": 108,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1257.json",
+          "position": 45,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/975.json",
+          "position": 324,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/947.json",
+          "position": 151,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/824.json",
+          "position": 185,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1742.json",
+          "position": 101,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/668.json",
+          "position": 241,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1622.json",
+          "position": 53,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1184.json",
+          "position": 223,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/911.json",
+          "position": 116,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1908.json",
+          "position": 501,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/817.json",
+          "position": 31,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1961.json",
+          "position": 508,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/803.json",
+          "position": 62,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1203.json",
+          "position": 382,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/694.json",
+          "position": 181,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/853.json",
+          "position": 37,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1686.json",
+          "position": 425,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1405.json",
+          "position": 149,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1172.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2196.json",
+          "position": 114,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/2015.json",
+          "position": 120,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/675.json",
+          "position": 22,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1981.json",
+          "position": 273,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/435.json",
+          "position": 93,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/246.json",
+          "position": 78,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/149.json",
+          "position": 108,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/188.json",
+          "position": 24,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1714.json",
+          "position": 229,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1797.json",
+          "position": 453,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/805.json",
+          "position": 77,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/902.json",
+          "position": 227,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/96.json",
+          "position": 399,
+          "method_length": 475,
+          "ar_length": 470
+        },
+        {
+          "source_id": "test/prealgebra/1930.json",
+          "position": 115,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/1172.json",
+          "position": 273,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/846.json",
+          "position": 61,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/427.json",
+          "position": 268,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/prealgebra/1743.json",
+          "position": 79,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/34.json",
+          "position": 226,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/number_theory/1128.json",
+          "position": 191,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/117.json",
+          "position": 4,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/counting_and_probability/181.json",
+          "position": 80,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/697.json",
+          "position": 191,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/841.json",
+          "position": 414,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/986.json",
+          "position": 147,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/precalculus/989.json",
+          "position": 184,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/intermediate_algebra/1462.json",
+          "position": 6,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/geometry/802.json",
+          "position": 461,
+          "method_length": 512,
+          "ar_length": 512
+        },
+        {
+          "source_id": "test/algebra/1837.json",
+          "position": 151,
+          "method_length": 512,
+          "ar_length": 512
+        }
+      ]
+    },
+    "out": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1",
+    "steps": [
+      {
+        "id": "loopahead-ouro-2.6b-math500-v1-observed",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_formal_loopahead.py",
+          "--ar",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0",
+          "--loopahead",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1",
+          "--gpu",
+          "{GPU}",
+          "--cpus",
+          "{CPUS}",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1"
+        ],
+        "out": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1",
+        "marker": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/report.json",
+        "legacy_lock": true
+      },
+      {
+        "id": "loopahead-ouro-2.6b-math500-v1-fp32",
+        "requires": [
+          "loopahead-ouro-2.6b-math500-v1-observed"
+        ],
+        "out": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix",
+        "marker": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/report.json",
+        "legacy_lock": true,
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead.py",
+          "--ar",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0",
+          "--loopahead",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1",
+          "--observed-margin-report",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/report.json",
+          "--gpu",
+          "{GPU}",
+          "--cpus",
+          "{CPUS}",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix"
+        ]
+      }
+    ]
+  },
+  "original_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json",
+  "original_plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "balanced_queue": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1",
+  "measurement_queue": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1",
+  "gpu_policy": "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/gpu-allocation.json",
+  "source_sha256": {
+    "loopahead_resume_attempt.py": "d46ba315c720900931c9aad67dbe59522bf64e6d910275ad6b700d6b173c17a4",
+    "queue_loopahead_math_continuation.py": "a8c9f455e8e4c48b356d8f995c42e9c1ce00a1adf1964b84644f63e523d123b1",
+    "diagnose_trained_loopahead_resume.py": "ad413afbdd2e8c038bea5707d318c445ccf672cca30a9c075b9790a854ace615",
+    "loopahead_partial_resume.py": "ede86c154b1d44ac935e952b0c4d607220e4c7e583f47b9b34357d97cfea2523",
+    "diagnose_trained_loopahead.py": "8e4c18ebc54ef0c0b1475ead9573ec80ca4da24c8af18c670231d28526addc7f",
+    "loopahead_diagnostic_inputs.py": "a743af5a1c12f4f42705db9a3526a44ee1e1abdcdb0f8d606a20e6c2511cda5d",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "gpu_startup.py": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "orchestrate_greedy_diagnostics.py": "93229513436a652cefe7334d8881a054de86b2783ad53912799ef4629b066c36",
+    "test_loopahead_resume_attempt.py": "10768cc81bb0273dd715532be3306acb91b517b0ce6bdce6e00d02aada1b99c3",
+    "loopahead/__init__.py": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "loopahead/batch.py": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/engine.py": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/test_admission.py": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+    "loopahead/test_batch.py": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+    "loopahead/test_decode.py": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+    "loopahead/test_lad.py": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+    "loopahead/test_sampling.py": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+    "loopahead/test_training_data.py": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+    "loopahead/training_data.py": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+    "logs/ouro14-packed-evaluation-v1/source/loop_queue_recovery.py": "441ba7c64f8753e0a8fe6e4a7473fd102a8a8c2f120cece038bf9d8213cb5d5e",
+    "logs/ouro14-packed-evaluation-v1/source/native_cuda_env.py": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+    "logs/ouro14-packed-evaluation-v1/source/orchestrate_packed_dflash_supplements.py": "07a24066f8885916c6c184d50bcc4939e68651b7495f313518ec84aeb3059235",
+    "logs/baseline-diagnostics-resume-v1/source/lock_handoff.py": "fbd162d7f739886dbabe2788a713236f4ff9fc60954aff227bd4353b165d96b4"
+  },
+  "artifact_sha256": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/report.json": "d90495eba76fa3bb34bb780db99adcc872626a29c853f7930ea2eca38a36f7f9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-resume-v1/report.json": "d90495eba76fa3bb34bb780db99adcc872626a29c853f7930ea2eca38a36f7f9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-launcher.json": "60ba33882334084c3ddd7b2185a31d9cdb9223f42cb10cd2b752663516c3bd29",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-exit.json": "29e04768dcc451a4df4febe342a1060c7fc7485fe5520b31f9c7d44fb4f1bca0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-launcher.json": "18a2765c1251dcddea00badc729369e2fc445a60e9e3a61080a66b66e55ddc53",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json": "04567d90e0d062db8c3849c09c968580aa60226f4b8c100b0bbe257d5f18ae40",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32.log": "204086fa1f6c74041ac0b25e6726da9dd820ff51d43292794180c19641a834cd",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/STOP": "eb4db1ffa608dd3737dfa8e23d6a31e54517c27f190cdc3a6956744f6d85de32",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/cancellation.json": "d1ab7e562ad03adfbe146bba90fa55e11951697f349f75bb1083b39443519bd4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/report.json": "5853743677d22273d43d495e4c1ffab2eabff4af9c1ccd97a0cb658f4aef5bc7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/recover.py": "aed094a07bc84e46978cd317b19f043bef5b313e0024d1856e888c5c11e4db8f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/exit.json": "d85e82388809b794fe32ba470e25b2bbe842bb524ea6ae106a0c01768ed0884d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/launcher.json": "07669e3b2f6aa7858d0fe7155e39b039027fdeb964be27417c3ebf2526959703",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/recovered-records.partial.jsonl": "a68257dd54ab8a97fb81f5e554553c9faef4f415bdb49d5aceb76bc437881abf",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/binding-check.json": "52ca458a71fe1ef56eaca9c429679a4e0b30113b261b96c798b9c0ee33223705",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/inputs-report.json": "3f765f311dd09a31927ee9d0b01e2eca9b71d7e05cd5c30d8978d9d27706f539",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/verification.json": "b4868c37690171450a62f10ab7de1155ef7af53fed232ec246c9024fe8f4449a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/tests-launcher.json": "0c5285b4dd987d2126fc23265dafe69cb1284881607e47e0316f75200cde2dab",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/tests-exit.json": "24ccebeb891aaec8cdbbe4d7ca7a611679dc7b2e00b57d08fef955f1d64e2330",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/tests.log": "0ab1600765f00b3e0d071c365f5d2d9a3e8c960e31b05844f1acda803644baff",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/inputs-launcher.json": "5088c0fa35dc73d64240495655adb8afcc68ebb82807cf33637a8390c5060e52",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/inputs-exit.json": "828f056eaf9106bb804351eabd58ca2c0b47c94ca06a3c5480ef91aabc81bb67",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/inputs.log": "d47c051dd22d76ed02d66d6bea6eb150b1b2d53391dfa92e4c1c9cf0b3ffc311",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/source-manifest.json": "e4e68c3fe6de46553d90a74a2a55b0e2d2d0875769a923fd1bda327fa0837b80",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-continuation-integration-v1/prepare.py": "a70634ff61934f9873ffd1679ba3f6573c0b394e7d54ad77a434eb83423ab804",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-continuation-integration-v1/tests-launcher.json": "8d5ecc0e8b41761f36cb7f744556bde895055f3910c6d400fcb8a78c07a3714f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-continuation-integration-v1/tests-exit.json": "806ec3280d99c309acdc76f13541c4752c52316136168d5eb858f34d57c89066",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-continuation-integration-v1/tests.log": "77ae9a0a7ed8e9f3eff3083767900a74d2f452bed0e47bff8e00e2f5ad1900a2"
+  },
+  "created_unix": 1794510475.5431373,
+  "authority": "Current thread: user reconfirmed the original task document and then said \u597d\u7684 \u4f60\u7ee7\u7eed\u8bd5\u9a8c\u5427.",
+  "limitation": "Continuation only: preserve original exit -15, reuse 262 cases, execute only 167 remaining cases. No new GPU work is launched by preparation."
+}

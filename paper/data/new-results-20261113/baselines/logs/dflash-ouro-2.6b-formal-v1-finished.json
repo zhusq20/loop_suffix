@@ -1,0 +1,29 @@
+{
+  "name": "dflash-ouro-2.6b-formal-v1",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/torchrun",
+    "--standalone",
+    "--nproc_per_node=2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/ouro-2.6b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1",
+    "--cpu-groups",
+    "8-11,48-51",
+    "--epochs",
+    "6",
+    "--micro-batch",
+    "4",
+    "--accumulation",
+    "4",
+    "--save-every",
+    "500"
+  ],
+  "pid": 210027,
+  "started_unix": 1794320971.5641465,
+  "exit_code": 0,
+  "finished_unix": 1794342600.8256054
+}

@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "observed_unix": 1794437118.767008,
+  "controller": {
+    "pid": 205464,
+    "state": "S",
+    "start_ticks": "45211298",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/orchestrate_baseline_diagnostics_resume.py",
+      "--plan",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json"
+    ]
+  },
+  "queue_status": {
+    "stage": "waiting_for_measurement_priority",
+    "controller_pid": 205464,
+    "updated_unix": 1794437117.8923042,
+    "expected_groups": 27,
+    "validated_groups": [
+      "loopahead-huginn-3.5b-gsm8k-v1"
+    ],
+    "running": {},
+    "ready": [
+      "dflash-huginn-3.5b-gsm8k-v1-observed",
+      "dflash-huginn-3.5b-humanevalplus-v1-observed",
+      "dflash-huginn-3.5b-mbppplus-v1-observed",
+      "loopahead-huginn-3.5b-math500-v1-observed",
+      "loopahead-huginn-3.5b-bbh-v1-observed",
+      "loopahead-huginn-3.5b-humanevalplus-v1-observed",
+      "loopahead-huginn-3.5b-mbppplus-v1-observed",
+      "loopahead-huginn-3.5b-specbench-v1-observed",
+      "dflash-ouro-2.6b-gsm8k-v1-observed",
+      "dflash-ouro-2.6b-math500-v1-observed",
+      "dflash-ouro-2.6b-bbh-v1-observed",
+      "dflash-ouro-2.6b-humanevalplus-v1-observed",
+      "dflash-ouro-2.6b-mbppplus-v1-observed",
+      "dflash-ouro-2.6b-specbench-v1-observed",
+      "loopahead-ouro-2.6b-gsm8k-v1-observed",
+      "loopahead-ouro-2.6b-math500-v1-observed",
+      "loopahead-ouro-2.6b-bbh-v1-observed",
+      "loopahead-ouro-2.6b-humanevalplus-v1-observed",
+      "loopahead-ouro-2.6b-mbppplus-v1-observed",
+      "loopahead-ouro-2.6b-specbench-v1-observed",
+      "loopahead-ouro-2.6b-paper-humaneval164-v1-observed",
+      "development-narrow",
+      "development-wide"
+    ],
+    "priority_pending": [
+      "table1-huginn-3.5b-bbh-t1",
+      "table1-huginn-3.5b-specbench-t1",
+      "table1-huginn-3.5b-specbench-t0",
+      "table1-ouro-2.6b-humanevalplus-t1",
+      "table1-huginn-3.5b-gsm8k-t1",
+      "table1-huginn-3.5b-humanevalplus-t1",
+      "table2-ouro-2.6b-b8",
+      "table2-ouro-2.6b-b16",
+      "table2-huginn-3.5b-b16"
+    ],
+    "failures": {}
+  },
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "limitation": "CPU startup only; GPU work waits behind existing measurement priority."
+}

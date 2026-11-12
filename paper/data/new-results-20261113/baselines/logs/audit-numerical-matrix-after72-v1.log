@@ -1,0 +1,7 @@
+{'status': 'needs_inspection', 'completed_formal': 29, 'completed_additional': 3, 'new_gpu_runs': 0}
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_numerical_matrix.py", line 297, in <module>
+    audit(args.out.resolve(),args.partial)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_numerical_matrix.py", line 286, in audit
+    assert not errors, 'Inspect preserved per-group errors before using this report.'
+AssertionError: Inspect preserved per-group errors before using this report.

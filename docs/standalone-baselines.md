@@ -5,6 +5,29 @@
 模型权重、模型自带的 Hugging Face Python 实现、tokenizer、训练数据和已有 drafter
 检查点仍是输入文件，通过参数传入。可以将这些产物放到任意目录。
 
+## 已发布的正式草稿器
+
+以下六份为本轮正式实验实际选用的权重，公开下载。完整文件SHA256、选点和固定revision见[发布清单](../paper/data/published-drafter-weights.json)。目标模型与tokenizer仍从原发布方下载。
+
+| 目标模型 | DFlash | LoopAhead |
+| --- | --- | --- |
+| Huginn-3.5B | [332.6M drafter](https://huggingface.co/zsqzz/loopfill-dflash-huginn-3.5b) | [17.7M LAD](https://huggingface.co/zsqzz/loopfill-loopahead-huginn-3.5b) |
+| Ouro-2.6B | [277.9M drafter](https://huggingface.co/zsqzz/loopfill-dflash-ouro-2.6b) | [11.1M LAD](https://huggingface.co/zsqzz/loopfill-loopahead-ouro-2.6b) |
+| Ouro-1.4B | [163.6M drafter](https://huggingface.co/zsqzz/loopfill-dflash-ouro-1.4b) | [11.1M LAD](https://huggingface.co/zsqzz/loopfill-loopahead-ouro-1.4b) |
+
+按固定revision下载示例：
+
+```python
+import json
+from huggingface_hub import snapshot_download
+published = json.load(open('paper/data/published-drafter-weights.json'))
+model = next(m for m in published['models']
+             if m['method'] == 'dflash' and m['target_model'] == 'ouro-1.4b')
+checkpoint = snapshot_download(model['repo_id'], revision=model['revision'])
+```
+
+将下载目录传给推理入口的 `--checkpoint`。DFlash保留原始 `config.json` 和 `model.safetensors`；LoopAhead保留包含配置、词频ID与参数的 `lad.pt`，使用本仓库的 `load_loopahead` 加载。模型卡提供训练与选点记录；这些是依赖目标模型的草稿器，不是独立聊天模型。发布不包含优化器状态或训练中间检查点。
+
 根目录结构：
 
 ```text

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "free_gpu_counts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "checks": [
+    "Huginn waits for4 GPUs regardless of currently free count",
+    "Other training retains default4-or2 policy",
+    "Inference remains single-GPU",
+    "Microbatch1/2/4 with4 ranks and adjusted accumulation preserve global32"
+  ],
+  "source_sha256": "f4e24e76eb4e11cff1aa38479d12282af71891435a4688155bd0cb76d71f3290",
+  "tested_unix": 1794326483.1216376
+}

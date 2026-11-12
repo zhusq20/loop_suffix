@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-m",
+    "unittest",
+    "-v",
+    "test_loopahead_partial_resume",
+    "test_loopahead_resume_attempt",
+    "test_audit_numerical_matrix",
+    "test_render_final_results"
+  ],
+  "pid": 62209,
+  "started_unix": 1794510427.6621625,
+  "source_sha256": {
+    "loopahead_resume_attempt.py": "d46ba315c720900931c9aad67dbe59522bf64e6d910275ad6b700d6b173c17a4",
+    "queue_loopahead_math_continuation.py": "a8c9f455e8e4c48b356d8f995c42e9c1ce00a1adf1964b84644f63e523d123b1",
+    "test_loopahead_resume_attempt.py": "10768cc81bb0273dd715532be3306acb91b517b0ce6bdce6e00d02aada1b99c3",
+    "audit_numerical_matrix.py": "d1fd94843ba67717bfc9a52457029630bfd3cde10ace9ae1b2bea009376d42a6",
+    "test_audit_numerical_matrix.py": "126b15613659b7c8b3a1a7ffbb2526e9574011d928cb17a3c2ed401b3694111e",
+    "test_render_final_results.py": "2644990984643ea4a3cd59f0263ab4e026a5634830851e93792c0d55eaadaabc"
+  }
+}

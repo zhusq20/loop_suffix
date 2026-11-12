@@ -1,0 +1,317 @@
+{
+  "loopahead-huginn-3.5b-gsm8k-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "benchmark": "gsm8k",
+      "cases": 83,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-gsm8k-v1",
+      "result_sha256": "73e779b71c1ae16326cceab121f22f90c8f375efe3ea10000b74b06a59aa4f43",
+      "loopahead_fp32_report_sha256": "48e623a086920c8505443bd895994f9b9ed02fa63fb6f065c255ee0b146e32ba"
+    },
+    "origin": "Existing completed original diagnostics; no GPU rerun"
+  },
+  "dflash-huginn-3.5b-gsm8k-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "gsm8k",
+      "cases": 76,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1",
+      "result_sha256": "a9a910095dbc614861770f268f0c7bedcfb511625dd37a001e4878720a14a334",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "dflash-huginn-3.5b-humanevalplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "humanevalplus",
+      "cases": 26,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1",
+      "result_sha256": "05934899a50425afdf9a4c802b78e7f12776fdc9e116beedd710da62b387ced0",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "dflash-huginn-3.5b-mbppplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "mbppplus",
+      "cases": 70,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1",
+      "result_sha256": "c27e065c77f38f50ecde5f661e141fefeeaa65bfce745c1c12ef21cecb489114",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "loopahead-huginn-3.5b-humanevalplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "benchmark": "humanevalplus",
+      "cases": 26,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-humanevalplus-v1",
+      "result_sha256": "8b01b3ab6f9c87548775b5f9682e3d3b4df9e6d2f900bd148a956a053d42f099",
+      "loopahead_fp32_report_sha256": "e7ecb21fb6689533727640bb39d24cdf6de96ad80bd832f254d8bfa35a97018d"
+    }
+  },
+  "loopahead-huginn-3.5b-bbh-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "benchmark": "bbh",
+      "cases": 55,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-bbh-v1",
+      "result_sha256": "cd7d6dff8a6693f9a5e0ee3b6c901a59b3e86e5dcf710c53d906a9cf15d01a2a",
+      "loopahead_fp32_report_sha256": "dfc4547b7d882bb1a3e770d4389c90d07ec335a361e93451e61cc46c6afbea45"
+    }
+  },
+  "loopahead-huginn-3.5b-mbppplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "benchmark": "mbppplus",
+      "cases": 74,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-mbppplus-v1",
+      "result_sha256": "56abfe0856088622c3d9d07e62d2ed876e95cfa8a5577bd1c6dadddd02447d3e",
+      "loopahead_fp32_report_sha256": "73ca3595d2671c0a80c4854a63a47d4d9ed701a6f5c4e781a9e9b635de9d9050"
+    }
+  },
+  "dflash-ouro-2.6b-gsm8k-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "benchmark": "gsm8k",
+      "cases": 100,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-gsm8k-v1",
+      "result_sha256": "8e048be1e27d1667bf21c05afc261d50a55071e207577efaa8f12d5465ddaa80",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "loopahead-huginn-3.5b-math500-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "benchmark": "math500",
+      "cases": 157,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-math500-v1",
+      "result_sha256": "9d54a80037fb5a0d9398db96965bfa66425d418c905065e1351e5c72b4f324f9",
+      "loopahead_fp32_report_sha256": "fdedfe4834c5913818a7ec3b5f1f111db653904dce18fee3a8cc95e50df24b73"
+    }
+  },
+  "dflash-ouro-2.6b-bbh-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "benchmark": "bbh",
+      "cases": 49,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-bbh-v1",
+      "result_sha256": "ff0e15aefed2c2360330c7dc5aa26aafa295dcccec73efc9c9385f558900aef3",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "loopahead-huginn-3.5b-specbench-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "benchmark": "specbench",
+      "cases": 121,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-huginn-3.5b-specbench-v1",
+      "result_sha256": "4eb4bb20d804fd370484600fb1c70ef78e2e2dc6c7881be9838d1999046ccd8f",
+      "loopahead_fp32_report_sha256": "1fa1a2e69e4f37f2c8c4e246558959196b52c21580c3d1177af6767831743372"
+    }
+  },
+  "dflash-ouro-2.6b-humanevalplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "benchmark": "humanevalplus",
+      "cases": 50,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-humanevalplus-v1",
+      "result_sha256": "66473113baf593487e58f1b05c8f22cfdc07b7a2beef97b6115c3e59d9240a66",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "dflash-ouro-2.6b-mbppplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "benchmark": "mbppplus",
+      "cases": 176,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1",
+      "result_sha256": "04cb9e1a1960bd59f43b36be7c9d3b354bafb2eeb7a479e15168f93ad46a185f",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "loopahead-ouro-2.6b-gsm8k-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "gsm8k",
+      "cases": 98,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-gsm8k-v1",
+      "result_sha256": "bf5934b63a9272cf1902a47db2436b15eb811815e838f27b09750a37109ca20a",
+      "loopahead_fp32_report_sha256": "960ed17a74ca03add989fa920f85b534cf24e0da7f329b68673f5bb4fdd2f03d"
+    }
+  },
+  "loopahead-ouro-2.6b-bbh-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "bbh",
+      "cases": 50,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-bbh-v1",
+      "result_sha256": "65a50234534f6ef29c8482625f5f110c96070ac296f44c1ef2eedd1e06c61a31",
+      "loopahead_fp32_report_sha256": "9c1ff080f87776b38257e0ad1baaea68ba61113f806f7a60264251f59bb290d3"
+    }
+  },
+  "dflash-ouro-2.6b-specbench-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "benchmark": "specbench",
+      "cases": 172,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-specbench-v1",
+      "result_sha256": "937ca7d4deb8147b7eb6e5827106ec998a19b8ff538b1f5e891dbecde3098749",
+      "loopahead_fp32_report_sha256": null
+    }
+  },
+  "loopahead-ouro-2.6b-humanevalplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "humanevalplus",
+      "cases": 41,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-humanevalplus-v1",
+      "result_sha256": "8d06226f77802c73dff46a90923107843efa72694983a0e241d75215bddb7e42",
+      "loopahead_fp32_report_sha256": "6336d431f46a1d9614db03f81c0b7979206551fb24cf09d7d5e189d739cd3d9a"
+    }
+  },
+  "development-narrow": {
+    "outcome": "validated",
+    "report": {
+      "model": "huginn-3.5b",
+      "benchmark": "heldout-huginn-dflash-dev20",
+      "method": "dflash",
+      "label": "narrow",
+      "development_only": true,
+      "cases": 8,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-greedy-narrow-v1",
+      "result_sha256": "104b2af7f0af5d2766655ff000839e11299fdb8c60fdc1db57bf1b7af20707ae"
+    }
+  },
+  "development-wide": {
+    "outcome": "validated",
+    "report": {
+      "model": "huginn-3.5b",
+      "benchmark": "heldout-huginn-dflash-dev20",
+      "method": "dflash",
+      "label": "wide",
+      "development_only": true,
+      "cases": 7,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-greedy-wide-v1",
+      "result_sha256": "7d919da74113136bdb990f0fbf4f48cd545aa673229b780d0c138fd1efab7cc1"
+    }
+  },
+  "table1-huginn-3.5b-bbh-t0-greedy": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "bbh",
+      "backend": "packed",
+      "cases": 48,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/packed-dflash-greedy-v1/table1-huginn-3.5b-bbh-t0",
+      "result_sha256": "1f03e951b367deb27434573eea17b20bdbf49d821a595a706448e31a496d45bd"
+    }
+  },
+  "loopahead-ouro-2.6b-paper-humaneval164-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "paper-humaneval164",
+      "cases": 67,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-B4-greedy-margins-v1",
+      "result_sha256": "5f339d6f4b3ab266f482daacfc8c393642ec6fb17962c2b571a260891a4f58c4",
+      "loopahead_fp32_report_sha256": "1e2e83e0f1c4c1f115c299e01bff714fecb8e72eb21b970cdd558315b17d858b"
+    }
+  },
+  "loopahead-ouro-2.6b-mbppplus-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "mbppplus",
+      "cases": 186,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-mbppplus-v1",
+      "result_sha256": "4d8cf8d0640f1fef848cc23f338f60d04635cdc3cf2fc60852d5450e00ff07d6",
+      "loopahead_fp32_report_sha256": "4c1eb610d73ce4801799a48e44f02414290fd198eaa4dcfc95729344f44f26dd"
+    }
+  },
+  "loopahead-ouro-2.6b-specbench-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "benchmark": "specbench",
+      "cases": 165,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-specbench-v1",
+      "result_sha256": "e83a2ea64f3ba84b211f02c9cd67b2402b300f1b38e83206bb5745fc78bbecc0",
+      "loopahead_fp32_report_sha256": "b9407328aae9f2c7c5fca8cb8eee80562c42c5bedfe2cc512433c14b167a3355"
+    }
+  },
+  "table1-huginn-3.5b-math500-t0-greedy": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "math500",
+      "backend": "packed",
+      "cases": 164,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/packed-dflash-greedy-v1/table1-huginn-3.5b-math500-t0",
+      "result_sha256": "8fe1e2979deba900f2f26149db91f93b179e0676bd3dd3598fd8570a82398a48"
+    }
+  },
+  "table1-huginn-3.5b-specbench-t0-greedy": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "specbench",
+      "backend": "packed",
+      "cases": 127,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/packed-dflash-greedy-v1/table1-huginn-3.5b-specbench-t0",
+      "result_sha256": "0af06493630ac37cf1e0650249080ff753ddf062df55f7a79829a76df91abd67"
+    }
+  },
+  "dflash-ouro-2.6b-math500-v1": {
+    "outcome": "validated",
+    "report": {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "benchmark": "math500",
+      "cases": 434,
+      "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-math500-v1",
+      "result_sha256": "ae26b7e29ff0608b3efad1e64cfc7517819a00518020c8103b4b2223e67cad6f",
+      "loopahead_fp32_report_sha256": null
+    }
+  }
+}

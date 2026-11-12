@@ -1,0 +1,46 @@
+{
+  "group": "dflash-huginn-3.5b-gsm8k-v1",
+  "step": "dflash-huginn-3.5b-gsm8k-v1-observed",
+  "gpu": 5,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "52-55",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_dflash.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1",
+    "--dflash",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-v1",
+    "--gpu",
+    "5",
+    "--cpus",
+    "52-55",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1",
+    "--shard",
+    "0",
+    "--shards",
+    "1"
+  ],
+  "started_unix": 1794468002.8188512,
+  "pid": 78201,
+  "start_ticks": "48303911",
+  "supervisor_identity": {
+    "pid": 78199,
+    "state": "R",
+    "start_ticks": "48303904",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-gsm8k-v1-observed-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  }
+}

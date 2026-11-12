@@ -1,0 +1,75 @@
+{
+  "model": "huginn-3.5b",
+  "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1/report.json",
+  "audit_report_sha256": "02bc2ffd720010a53686a14123797f43a7c12032eb713c8d307647ef451daaa6",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+  "weights_sha256": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+  "reused_existing_audit": true,
+  "training_gpu_hours": 24.4894640036424,
+  "training_name": "dflash-huginn-narrow-formal-v1",
+  "actual_torchrun_exit": {
+    "name": "dflash-huginn-narrow-formal-v1",
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/torchrun",
+      "--standalone",
+      "--nproc_per_node=2",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--teachers",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+      "--cpu-groups",
+      "12-15,56-59",
+      "--micro-batch",
+      "4",
+      "--accumulation",
+      "4",
+      "--checkpoint-layers",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+      "--epochs",
+      "6",
+      "--save-every",
+      "500"
+    ],
+    "pid": 65439,
+    "started_unix": 1794354339.0086472,
+    "exit_code": 0,
+    "finished_unix": 1794398428.0349596
+  },
+  "launcher_sha256": "c86d5f3ab489fd3782c3c5daab2b500097fcd39d1595915a6d4da86e0f726e0a",
+  "finished_receipt_sha256": "5b93a8fd3f00398cce62e3ef2352101d9668e33bd2bbcdf1a07949057b0b3f02",
+  "export_files_verified_against_checkpoints": {
+    "metadata.json": "36112bb83e1e893045af3b090bedd8364643d48f878289b8f76baa095039cb9b",
+    "complete.json": "f5e3ab33c20efd9b277e7103e981835337b924a08f564a26c3529749c16b8d65",
+    "latest.json": "468011d5b76f4fa90d2a31f000443f60bd842a3a6036e4467cd8ed374d4bb90e",
+    "metrics.jsonl": "b4a40769a5643b16520774bbe8a347e19fa732125fdf74d1cbf336deb395dbf9",
+    "progress.json": "ee724bbc98ababd54ebeb47191ab40b0e961afae8dd3ad3c6c498aebeb82c94e",
+    "source-manifest.json": "49bf3370b878d671ae3fc39237a6872e93604c3888bca9ece6a94270cab95408",
+    "reservation-cost-rank0.jsonl": "7fcc3e7b79ebfeb99342bc006c1155272ed96251378bc23fce9285db6ceca02b",
+    "reservation-cost-rank1.jsonl": "303c62104d76e6dd12537a65cc086914ccdfdff0386bd8875775ae07066f5213",
+    "source/train_projected_dflash.py": "74eb5919f4228083e85dfc9982f78ab5b0c569d14e43510e7d598cbc19ae245c",
+    "source/dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "source/dflash_impl/projected_draft.py": "c2ad128db2ef2cc8d56c245e2fc90848c0c6f6c17c201236b70dbf2a99af6d88",
+    "source/gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "source/provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "source/configs/dflash-huginn-narrow-2048-v1.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "reservations": [
+    {
+      "started_unix": 1794354342.9624135,
+      "finished_unix": 1794398423.9758136,
+      "reserved_gpu_seconds": 44081.01340007782,
+      "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+      "status": "complete"
+    },
+    {
+      "started_unix": 1794354342.881745,
+      "finished_unix": 1794398423.9387577,
+      "reserved_gpu_seconds": 44081.05701303482,
+      "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+      "status": "complete"
+    }
+  ],
+  "checked_unix": 1794398456.3656905
+}

@@ -1,0 +1,128 @@
+{
+  "created_unix": 1794422638.4585223,
+  "authorization": "Move queued experiments to GPUs 0,1,5,7 per current user request.",
+  "throughput": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2",
+  "t1": "/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1",
+  "gpus": [
+    0,
+    1,
+    5,
+    7
+  ],
+  "cpu_groups": {
+    "0": "0-3",
+    "1": "4-7",
+    "5": "52-55",
+    "7": "60-63"
+  },
+  "jobs": [
+    {
+      "id": "huginn-3.5b-b4",
+      "model": "huginn-3.5b",
+      "batch": 4,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b4",
+      "model": "ouro-2.6b",
+      "batch": 4,
+      "mode": "formal"
+    },
+    {
+      "id": "huginn-3.5b-b8",
+      "model": "huginn-3.5b",
+      "batch": 8,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b8",
+      "model": "ouro-2.6b",
+      "batch": 8,
+      "mode": "formal"
+    },
+    {
+      "id": "huginn-3.5b-b16",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b16",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "mode": "formal"
+    }
+  ],
+  "original_running": {
+    "ouro-2.6b-b1": {
+      "pid": 417115,
+      "gpu": 3,
+      "started_unix": 1794419625.2834544
+    }
+  },
+  "original_controller": {
+    "pid": 416139,
+    "start_ticks": "43459951",
+    "state": "S",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source/orchestrate_loopahead_throughput.py",
+      "--out",
+      "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2",
+      "--resume",
+      "--execute"
+    ]
+  },
+  "t1_controller": {
+    "pid": 430447,
+    "start_ticks": "43561741",
+    "state": "S",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1/source/orchestrate_loopahead_t1_resume.py",
+      "--out",
+      "/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1",
+      "--execute"
+    ]
+  },
+  "guard_controller": {
+    "pid": 37221,
+    "start_ticks": "36715795",
+    "state": "S",
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/guard_assigned_gpus.py"
+    ]
+  },
+  "pause_content": "{\"owner\": \"/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1\", \"reason\": \"Dispatch remaining five LoopAhead T=1 cells\"}\n",
+  "frozen_source_changes": [
+    "configs/gpu-allocation.json"
+  ],
+  "source_sha256": {
+    "evaluate_loopahead_throughput.py": "f6c040e259ba9fcce68aa1b3f5d06e33a7ecd0d642d4ec19ea23c71e2c0091c1",
+    "orchestrate_loopahead_throughput.py": "139930b6633ba2142f1ad986560375515ae3bb4050fe28ccc6d3035bcee2c759",
+    "gpu_startup.py": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "configs/gpu-allocation.json": "c2f0b89befdb7da48aa0bd93144a876ca00e0e994e5552ed4b26a76908eacc36",
+    "native_cuda_env.py": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+    "loopahead/__init__.py": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "loopahead/batch.py": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/engine.py": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/test_admission.py": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+    "loopahead/test_batch.py": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+    "loopahead/test_decode.py": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+    "loopahead/test_lad.py": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+    "loopahead/test_sampling.py": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+    "loopahead/test_training_data.py": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+    "loopahead/training_data.py": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8"
+  },
+  "policy": "Keep all active benchmark workers, actual child exit receipts, parameters, and output directories. Migrate only the six pending throughput cells. Keep the existing guard limited to GPUs 2,3,4,6.",
+  "reconciliation": "Retire original throughput coordinator only after its child has finished and its exit receipt exists, and all six migrated jobs have finished; run the unchanged controller to aggregate all ten cells."
+}

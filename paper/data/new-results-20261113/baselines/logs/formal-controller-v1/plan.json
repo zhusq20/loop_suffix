@@ -1,0 +1,368 @@
+{
+  "jobs": [
+    {
+      "id": "train-ouro-2.6b",
+      "kind": "train",
+      "model": "ouro-2.6b"
+    },
+    {
+      "id": "train-huginn-3.5b",
+      "kind": "train",
+      "model": "huginn-3.5b"
+    },
+    {
+      "id": "check-huginn-lad",
+      "kind": "huginn_check",
+      "model": "huginn-3.5b"
+    },
+    {
+      "id": "loopahead-huginn-3.5b-gsm8k-t0",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-huginn-3.5b-gsm8k-t0",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-ouro-2.6b-gsm8k-t0",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-ouro-2.6b-gsm8k-t0",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-huginn-3.5b-math500-t0",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-huginn-3.5b-math500-t0",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-ouro-2.6b-math500-t0",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-ouro-2.6b-math500-t0",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-huginn-3.5b-bbh-t0",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-huginn-3.5b-bbh-t0",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-ouro-2.6b-bbh-t0",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-ouro-2.6b-bbh-t0",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-huginn-3.5b-humanevalplus-t0",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-huginn-3.5b-humanevalplus-t0",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-ouro-2.6b-humanevalplus-t0",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-ouro-2.6b-humanevalplus-t0",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-huginn-3.5b-mbppplus-t0",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-huginn-3.5b-mbppplus-t0",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-ouro-2.6b-mbppplus-t0",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-ouro-2.6b-mbppplus-t0",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-huginn-3.5b-specbench-t0",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-huginn-3.5b-specbench-t0",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-ouro-2.6b-specbench-t0",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 0
+    },
+    {
+      "id": "dflash-ouro-2.6b-specbench-t0",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 0
+    },
+    {
+      "id": "loopahead-huginn-3.5b-gsm8k-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-huginn-3.5b-gsm8k-t1",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "gsm8k",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-gsm8k-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-ouro-2.6b-gsm8k-t1",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "gsm8k",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-math500-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-huginn-3.5b-math500-t1",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "math500",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-math500-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-ouro-2.6b-math500-t1",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "math500",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-bbh-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-huginn-3.5b-bbh-t1",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "bbh",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-bbh-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-ouro-2.6b-bbh-t1",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "bbh",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-humanevalplus-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-huginn-3.5b-humanevalplus-t1",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-humanevalplus-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-ouro-2.6b-humanevalplus-t1",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "humanevalplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-mbppplus-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-huginn-3.5b-mbppplus-t1",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-mbppplus-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-ouro-2.6b-mbppplus-t1",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "mbppplus",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-huginn-3.5b-specbench-t1",
+      "kind": "loopahead",
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-huginn-3.5b-specbench-t1",
+      "kind": "dflash",
+      "model": "huginn-3.5b",
+      "dataset": "specbench",
+      "temperature": 1
+    },
+    {
+      "id": "loopahead-ouro-2.6b-specbench-t1",
+      "kind": "loopahead",
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 1
+    },
+    {
+      "id": "dflash-ouro-2.6b-specbench-t1",
+      "kind": "dflash",
+      "model": "ouro-2.6b",
+      "dataset": "specbench",
+      "temperature": 1
+    }
+  ],
+  "release": {
+    "0": "data/teachers/dflash-train/huginn-3.5b/shard6/complete.json",
+    "1": "data/teachers/dflash-train/huginn-3.5b/shard1/complete.json",
+    "2": "preflight/loopahead-trained-huginn-3.5b-gsm8k-ar-bfloat16-n20-v1/complete.json",
+    "3": "data/teachers/dflash-train/huginn-3.5b/shard3/complete.json",
+    "4": "data/teachers/dflash-train/huginn-3.5b/shard5/complete.json",
+    "5": "data/teachers/dflash-train/huginn-3.5b/shard2/complete.json",
+    "6": "data/teachers/dflash-train/huginn-3.5b/shard4/complete.json",
+    "7": "data/teachers/dflash-train/huginn-3.5b/shard7/complete.json"
+  },
+  "training_global_batch": 32,
+  "training_gpu_policy": "4 free GPUs when available, otherwise2; never preempt",
+  "phase": "main48 only; appendix production follows main results"
+}

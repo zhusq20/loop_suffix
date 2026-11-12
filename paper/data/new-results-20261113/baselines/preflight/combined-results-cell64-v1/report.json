@@ -1,0 +1,327 @@
+{
+  "status": "passed",
+  "completed": 64,
+  "expected": 72,
+  "previous_rows": 63,
+  "all_previous_rows_unchanged": true,
+  "added": [
+    {
+      "method": "dflash",
+      "model": "ouro-1.4b",
+      "benchmark": "humanevalplus",
+      "temperature": "0",
+      "eta": "4.433723480556557",
+      "gamma": "5.167230475069863",
+      "method_tok_s": "54.60763148520801",
+      "ar_tok_s": "12.316426977163045",
+      "drafter_time_frac": "0.03592448016929517",
+      "match_rate": "0.7926829268292683",
+      "engine": "official_dflash_with_packed_loop_target",
+      "status": "complete_with_declared_limitations",
+      "notes": "Official frozen DFlash drafter/decoder with our packed full-loop target adapter; fresh own-stack AR; separate full-task profile matches every token and verification; numerical diagnostics not all completed. ",
+      "eta_latency": "4.438519150949963",
+      "eta_throughput": "4.433723480556557",
+      "aligned_token_match_rate": "0.8460769615192404",
+      "method_decode_tokens": "35132",
+      "ar_decode_tokens": "35170",
+      "method_decode_s": "643.3533014431596",
+      "ar_decode_s": "2855.535949282348",
+      "ar_provenance": "new_same_packed_stack_AR",
+      "ar_first_completed_unix": "1794503819.9214342",
+      "ar_last_completed_unix": "1794506664.696506",
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-humanevalplus-t0-ar",
+      "target_backend": "packed_full_loop",
+      "method_exit_evidence": "actual_exit0",
+      "profile_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-humanevalplus-t0-profile",
+      "numerical_diagnostics": "not_all_completed"
+    }
+  ],
+  "new_cell_evidence": {
+    "dflash/ouro-1.4b/humanevalplus/0": {
+      "origin": "verified_packed_supplement",
+      "agreement": {
+        "match_rate": 0.7926829268292683,
+        "aligned_token_match_rate": 0.8460769615192404,
+        "exact_sequences": 130,
+        "requests": 164,
+        "first_divergences": [
+          {
+            "source_id": "HumanEval/123",
+            "position": 341,
+            "method_length": 428,
+            "ar_length": 418
+          },
+          {
+            "source_id": "HumanEval/92",
+            "position": 174,
+            "method_length": 245,
+            "ar_length": 253
+          },
+          {
+            "source_id": "HumanEval/116",
+            "position": 10,
+            "method_length": 506,
+            "ar_length": 391
+          },
+          {
+            "source_id": "HumanEval/5",
+            "position": 51,
+            "method_length": 248,
+            "ar_length": 252
+          },
+          {
+            "source_id": "HumanEval/130",
+            "position": 8,
+            "method_length": 343,
+            "ar_length": 349
+          },
+          {
+            "source_id": "HumanEval/135",
+            "position": 97,
+            "method_length": 147,
+            "ar_length": 133
+          },
+          {
+            "source_id": "HumanEval/55",
+            "position": 202,
+            "method_length": 244,
+            "ar_length": 245
+          },
+          {
+            "source_id": "HumanEval/51",
+            "position": 144,
+            "method_length": 161,
+            "ar_length": 169
+          },
+          {
+            "source_id": "HumanEval/86",
+            "position": 139,
+            "method_length": 185,
+            "ar_length": 185
+          },
+          {
+            "source_id": "HumanEval/41",
+            "position": 162,
+            "method_length": 242,
+            "ar_length": 246
+          },
+          {
+            "source_id": "HumanEval/1",
+            "position": 399,
+            "method_length": 429,
+            "ar_length": 413
+          },
+          {
+            "source_id": "HumanEval/80",
+            "position": 9,
+            "method_length": 194,
+            "ar_length": 191
+          },
+          {
+            "source_id": "HumanEval/113",
+            "position": 282,
+            "method_length": 453,
+            "ar_length": 348
+          },
+          {
+            "source_id": "HumanEval/108",
+            "position": 81,
+            "method_length": 255,
+            "ar_length": 292
+          },
+          {
+            "source_id": "HumanEval/46",
+            "position": 127,
+            "method_length": 262,
+            "ar_length": 210
+          },
+          {
+            "source_id": "HumanEval/3",
+            "position": 56,
+            "method_length": 153,
+            "ar_length": 153
+          },
+          {
+            "source_id": "HumanEval/82",
+            "position": 76,
+            "method_length": 129,
+            "ar_length": 120
+          },
+          {
+            "source_id": "HumanEval/70",
+            "position": 170,
+            "method_length": 178,
+            "ar_length": 178
+          },
+          {
+            "source_id": "HumanEval/100",
+            "position": 156,
+            "method_length": 367,
+            "ar_length": 473
+          },
+          {
+            "source_id": "HumanEval/95",
+            "position": 25,
+            "method_length": 233,
+            "ar_length": 264
+          },
+          {
+            "source_id": "HumanEval/0",
+            "position": 3,
+            "method_length": 248,
+            "ar_length": 323
+          },
+          {
+            "source_id": "HumanEval/129",
+            "position": 16,
+            "method_length": 301,
+            "ar_length": 207
+          },
+          {
+            "source_id": "HumanEval/25",
+            "position": 94,
+            "method_length": 329,
+            "ar_length": 315
+          },
+          {
+            "source_id": "HumanEval/26",
+            "position": 3,
+            "method_length": 313,
+            "ar_length": 264
+          },
+          {
+            "source_id": "HumanEval/64",
+            "position": 9,
+            "method_length": 105,
+            "ar_length": 170
+          },
+          {
+            "source_id": "HumanEval/14",
+            "position": 196,
+            "method_length": 242,
+            "ar_length": 233
+          },
+          {
+            "source_id": "HumanEval/127",
+            "position": 349,
+            "method_length": 381,
+            "ar_length": 434
+          },
+          {
+            "source_id": "HumanEval/145",
+            "position": 7,
+            "method_length": 377,
+            "ar_length": 367
+          },
+          {
+            "source_id": "HumanEval/39",
+            "position": 115,
+            "method_length": 354,
+            "ar_length": 395
+          },
+          {
+            "source_id": "HumanEval/59",
+            "position": 271,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "HumanEval/9",
+            "position": 95,
+            "method_length": 246,
+            "ar_length": 169
+          },
+          {
+            "source_id": "HumanEval/33",
+            "position": 193,
+            "method_length": 229,
+            "ar_length": 512
+          },
+          {
+            "source_id": "HumanEval/8",
+            "position": 3,
+            "method_length": 245,
+            "ar_length": 176
+          },
+          {
+            "source_id": "HumanEval/17",
+            "position": 255,
+            "method_length": 341,
+            "ar_length": 303
+          }
+        ]
+      },
+      "sources": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1",
+          "sha256": {
+            "metadata.json": "de77fe085b0cfeb2619365f981c06cc2ead7cd66acbf62e0315252256734b357",
+            "complete.json": "fd1099050cc1a3818677fb1c7df062c7bd5c60215ebc49cd2c7fba76f66c987c",
+            "requests.jsonl": "8461ef6b2384f2a43f64b8f2e0546a2ae092906d9c55f8a551355815b96e1e96",
+            "summary.json": "a18ce5405acf30672252a3b26b28aee8fd9bb937314173fa528c09aca8373517"
+          }
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-humanevalplus-t0-ar",
+          "sha256": {
+            "metadata.json": "6907c96cfeb9bcd0f9b95f7b9fde6f90b71b3b57a7b9927e81e2c3ac22b2ef7d",
+            "complete.json": "3a8452e9fea0a3911fb4c8f413ca27c233c25260f4d50a4342d3b68e661799a6",
+            "requests.jsonl": "077437ee0332d63372e64b2a68aa4877c268197f57014ebca1b48d745c7fd10b",
+            "summary.json": "f4c3e0913830adba0c0a0b8b0896a3d3a064072c49cc8ab6be186700528b744d"
+          }
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-humanevalplus-t0-profile",
+          "sha256": {
+            "metadata.json": "7eedca7c3519d0a1b1387a65e00f1f0f6c83452f4c5089140fc01df112265f1b",
+            "complete.json": "8c88de32d98712bd8a05684eea2ff0c6d1949e15865323c1b2d202d9cd58fb58",
+            "requests.jsonl": "cae41f3c0383aa2dd8151ff204ef20a26d57a4578f01cb48b30c2852c22b4afe",
+            "summary.json": "710945fdabb564aca3324c5a0441810e26f0c2ea7fcf63edf3ee9477360a61e9"
+          }
+        }
+      },
+      "supplement_exits": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t0-ar-exit.json",
+          "sha256": "e55be4b1b53813df58eecccd36237d417fc132bc39597fc3b4e7c83a8275f19c",
+          "exit_code": 0
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-humanevalplus-t0-profile-exit.json",
+          "sha256": "c0bb3a26db3ee628119b0ec066a27fd05a3c7388da66381f3c1e9ad2da876e7e",
+          "exit_code": 0
+        }
+      },
+      "original_timed_exit": {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-humanevalplus-t0-attempt1-exit.json",
+        "sha256": "dcc9eb2c8156a4cf3754a01fe7fd04b68b2a04415b1bb5920f25e2744833caa9",
+        "actual_exit_code": 0
+      },
+      "training_audit": {
+        "path": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/checks/training-audit.json",
+        "sha256": "2f7f44b57f54e702bcd803f0e7417718590efa194bc428796bd24f33bb17e438",
+        "checkpoint": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/checkpoint-009108"
+      }
+    }
+  },
+  "collector_exits": {
+    "combined": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/combined-results-cell64-v1/combined-exit.json",
+      "sha256": "8f1f92bc8909dcce6a4c6b26277b9fffaa164ebc21d2ae9aeb080b885cdb2d8f",
+      "exit_code": 0
+    }
+  },
+  "prior_csv_sha256": "ea01b18cf03a91516a3b2df66a1bebe52ea87055844456ce727a65f85419e8d7",
+  "results_sha256": "7493757d11a6ce0539edf5ffc0bd0fbb5f640a51cfee10716cf8e8695dc61b63",
+  "evidence_sha256": "0559c1782624a7ccc77211298a9b5c45e9c7ba210a67115f94f6214973fa684e",
+  "source_sha256": {
+    "refresh_combined_results.py": "acc574447a7462a69112df3a06ac75c6f0a831182d9cfa0af97563b833186d92",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "collect_combined_results.py": "568f2c1c6fbd88db82447679ee17346f96992ccde9b91c08f94b3e8b2c5ec55a"
+  },
+  "new_gpu_measurements": 0,
+  "checked_unix": 1794515398.3538616,
+  "limitation": "Measurement collection only. Numerical checks and unresolved original exit statuses retain their declared scope."
+}

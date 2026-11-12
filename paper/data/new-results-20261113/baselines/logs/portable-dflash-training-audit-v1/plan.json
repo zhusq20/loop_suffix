@@ -1,0 +1,30 @@
+{
+  "created_unix": 1794468972.8731627,
+  "base": "/ossfs/workspace/sz/loopfill/experiments/baselines",
+  "evaluation_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/plan.json",
+  "evaluation_plan_sha256": "ebf2e61ad4346c6a6d639a0cdff8bc97b30e08ad3ef6b0fb65ea250b7a23c7f0",
+  "training_root": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3",
+  "training_plan_sha256": "d7af5950bc356bb78edb67cc243a1a75f2b5e9914ff417907056e5789c920c87",
+  "source_sha256": {
+    "observe_portable_training_audit.py": "40e5a6d60d96c5e5ece72dc3df1f10d18bd9ca4e9161b2af03c5815ee18350e6",
+    "audit_portable_dflash_training.py": "b15aaaeee89773aa4eed4b791d2def8a97b52b08d6f42cc8f2a99c08b21d582d",
+    "audit_dflash_training.py": "e29285e8ca356bf8c985fc6ae5ee6fa1c3749dd3afc7c667d86bd333fe91339f",
+    "external_dflash_costs.py": "bc0d340798915e94b631f6036d511c0a42e8231efc9c1bd100623c207c74e5a7",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "orchestrate_formal.py": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "third_party/SpecForge/specforge/lr_scheduler.py": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "third_party/SpecForge/specforge/optimizer.py": "f0aedfad5fe11100470e7f49518b20d439cf47ec9afc195af089dfeca3affc54"
+  },
+  "python": "/tmp/loopfill-specforge-venv/bin/python",
+  "cpu_affinity": [
+    80,
+    81,
+    82,
+    83
+  ],
+  "audit_name": "audit-portable-dflash-ouro14-final-v1",
+  "audit_out": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-1.4b-portable-formal-audit-v1",
+  "scope": "Independent CPU training audit after existing parent completes; no training or measurement reruns."
+}

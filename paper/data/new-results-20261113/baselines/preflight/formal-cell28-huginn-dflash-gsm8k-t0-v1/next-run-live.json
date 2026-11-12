@@ -1,0 +1,45 @@
+{
+  "status": "live_next_BBH_AR_observed_not_complete",
+  "checked_unix": 1794405584.1570632,
+  "pid": 253000,
+  "worker_pid": 252990,
+  "start_ticks": "42049283",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "ar",
+    "--dataset",
+    "bbh",
+    "--temperature",
+    "0",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-bbh-t0-ar-v1"
+  ],
+  "launcher_sha256": "4b2ad1f2ac65432d08a7fc4d1f2e8184a72adc4ac6c9cba7bcc0b2d419453229",
+  "job_sha256": "c4ba9fdfa8514e51d90d10e47d99f90cab5c87065db1ee9c0dd6281bbc5583d4",
+  "metadata_sha256": "3c5ebe79ce5aaa2564086e49092bf059b5bed393baeb3f2841e0a02aff256752",
+  "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+  "native_driver": "/usr/lib64/libcuda.so.570.148.08",
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "cpu_affinity": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "observed_requests": 2,
+  "observed_prefix_sha256": "ef5341aea86a91b73e03d672c95dec4a1704c8d465cc9726446dbbdf15c9f929",
+  "limitations": [
+    "Only the observed prefix and actual runtime/source identity are checked here.",
+    "BBH AR, DFlash timing and profiling remain incomplete.",
+    "No CUDA-acquisition attempt or retry count is inferred."
+  ]
+}

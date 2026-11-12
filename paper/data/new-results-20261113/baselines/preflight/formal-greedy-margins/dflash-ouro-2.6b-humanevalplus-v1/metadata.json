@@ -1,0 +1,20 @@
+{
+  "model": "ouro-2.6b",
+  "dataset": "humanevalplus",
+  "shard": 0,
+  "shards": 1,
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1",
+      "sha256": "8f385e5c70dab5ceb9908342f466e25725ec230e0b3d7794226abca27a9024e4"
+    },
+    "dflash": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1",
+      "sha256": "ddd33101574fcbbc5b51a54188fb646feb537477e7c6de010bb78c9a291a09f3"
+    }
+  }
+}

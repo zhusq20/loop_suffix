@@ -1,0 +1,26 @@
+{
+  "name": "loopahead-huginn-3.5b-gsm8k-t1-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "gsm8k",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+    "--gpu",
+    "6",
+    "--cpus",
+    "56-59",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1"
+  ],
+  "pid": 359300,
+  "started_unix": 1794334845.0856469
+}

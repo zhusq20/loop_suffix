@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/collect_combined_results_archived.py",
+    "--legacy-results",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/legacy-input-replay-v1/before-results.csv",
+    "--legacy-agreement",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/legacy-input-replay-v1/before-formal-agreement.json",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/legacy-input-replay-v2/replayed"
+  ],
+  "pid": 217090,
+  "started_unix": 1794479107.817304,
+  "source_sha256": "6f370c26d706408c9bcd44ea2aa13b58a52581da790d01603379f8fa7582b392"
+}

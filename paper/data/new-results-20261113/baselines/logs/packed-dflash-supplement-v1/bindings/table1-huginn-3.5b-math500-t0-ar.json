@@ -1,0 +1,32 @@
+{
+  "job": {
+    "id": "table1-huginn-3.5b-math500-t0",
+    "kind": "latency",
+    "model": "huginn-3.5b",
+    "dataset": "math500",
+    "temperature": 0,
+    "batch": 1,
+    "max_seq": 2304,
+    "max_new_tokens": 512,
+    "count": 500,
+    "inputs": "inputs/huginn-3.5b-math500.jsonl",
+    "inputs_sha256": "155484abd958e508c699d7654ab97d7896245867bb76cd5ecca10f00347bb53d",
+    "original_inputs_sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413"
+  },
+  "stage": "ar",
+  "timed": {
+    "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t0/attempt1",
+    "hashes": {
+      "metadata.json": "88b25c2560656fe3e05ab2094a217d0312c4ec5eaec072182dfed9356f3e3f19",
+      "complete.json": "0298fcf3a703c950397f9e27ef3467a46dfdeb8f5950672e9417517fcd112b8e",
+      "requests.jsonl": "17f5b5ef542daddc0771529ad1f4e9eea2bab75ba8bab364ba5e7cac47c99e0f",
+      "summary.json": "e95aac57d92b2894045cfc2aabdf7e26a5e8c8fad95d8db2d828c1234fd06342"
+    },
+    "exit_evidence": {
+      "actual_exit_code": null,
+      "limitation": "Original parent exit receipt unavailable; artifacts verified independently. No synthetic exit status and no timed rerun."
+    }
+  },
+  "plan_sha256": "0e398011930f446630667e45cdcac5ab15b7ef6f5af2d813d9defbe46927340d",
+  "created_unix": 1794443021.3184795
+}

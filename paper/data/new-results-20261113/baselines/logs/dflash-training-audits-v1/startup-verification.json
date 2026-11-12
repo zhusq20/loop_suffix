@@ -1,0 +1,36 @@
+{
+  "pid": 11094,
+  "proc_start_ticks": "36596917",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_training_audits.py",
+    "--execute"
+  ],
+  "cpu_affinity": [
+    80,
+    81,
+    82,
+    83
+  ],
+  "cuda_visible_devices": "",
+  "gpu_context": false,
+  "source_bundle_matches_live": true,
+  "status_at_verification": {
+    "stage": "waiting_for_training_exit_and_export",
+    "model": "huginn-3.5b",
+    "completed": [
+      {
+        "model": "ouro-2.6b",
+        "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v1/report.json",
+        "audit_report_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+        "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+        "weights_sha256": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "reused_existing_audit": true,
+        "training_gpu_hours": 12.010792617665397
+      }
+    ],
+    "updated_unix": 1794350994.0384858
+  },
+  "verified_unix": 1794350999.1584046
+}

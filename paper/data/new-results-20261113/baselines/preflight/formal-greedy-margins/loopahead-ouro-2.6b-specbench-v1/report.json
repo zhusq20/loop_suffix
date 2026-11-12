@@ -1,0 +1,7637 @@
+{
+  "status": "complete",
+  "model": "ouro-2.6b",
+  "dataset": "specbench",
+  "cases": 165,
+  "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+  "results": [
+    {
+      "source_id": "specbench/522",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          11057,
+          30,
+          282
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          16.375
+        ],
+        "top_probs": [
+          0.252641499042511,
+          0.252641499042511,
+          0.13522924482822418
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          11057,
+          30,
+          282
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.375
+        ],
+        "top_probs": [
+          0.27185341715812683,
+          0.2399097979068756,
+          0.12841446697711945
+        ],
+        "top2_probability_margin": 0.03194361925125122,
+        "top1_logit_margin": 0.125,
+        "argmax": 11057
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/153",
+      "position": 28,
+      "ar": {
+        "top_ids": [
+          26892,
+          260,
+          623
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          14.3125
+        ],
+        "top_probs": [
+          0.5238438248634338,
+          0.46229052543640137,
+          0.006194696296006441
+        ],
+        "top2_probability_margin": 0.06155329942703247,
+        "top1_logit_margin": 0.125,
+        "argmax": 26892
+      },
+      "loopahead": {
+        "top_ids": [
+          26892,
+          260,
+          623
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          14.375
+        ],
+        "top_probs": [
+          0.49311134219169617,
+          0.49311134219169617,
+          0.006207355763763189
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/116",
+      "position": 130,
+      "ar": {
+        "top_ids": [
+          347,
+          281,
+          2267
+        ],
+        "top_logits": [
+          22.25,
+          22.25,
+          13.125
+        ],
+        "top_probs": [
+          0.49988141655921936,
+          0.49988141655921936,
+          5.444147245725617e-05
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 281
+      },
+      "loopahead": {
+        "top_ids": [
+          347,
+          281,
+          2267
+        ],
+        "top_logits": [
+          22.375,
+          22.25,
+          13.1875
+        ],
+        "top_probs": [
+          0.5310884714126587,
+          0.4686838984489441,
+          5.433582919067703e-05
+        ],
+        "top2_probability_margin": 0.0624045729637146,
+        "top1_logit_margin": 0.125,
+        "argmax": 347
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/122",
+      "position": 148,
+      "ar": {
+        "top_ids": [
+          11754,
+          2925,
+          2933
+        ],
+        "top_logits": [
+          21.375,
+          21.25,
+          19.5
+        ],
+        "top_probs": [
+          0.44683754444122314,
+          0.39433273673057556,
+          0.06852475553750992
+        ],
+        "top2_probability_margin": 0.05250480771064758,
+        "top1_logit_margin": 0.125,
+        "argmax": 11754
+      },
+      "loopahead": {
+        "top_ids": [
+          11754,
+          2925,
+          2933
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          19.5
+        ],
+        "top_probs": [
+          0.413637638092041,
+          0.413637638092041,
+          0.07187943905591965
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2925
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/374",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          981,
+          418,
+          355
+        ],
+        "top_logits": [
+          19.0,
+          18.75,
+          16.625
+        ],
+        "top_probs": [
+          0.5147603750228882,
+          0.40089577436447144,
+          0.04788016900420189
+        ],
+        "top2_probability_margin": 0.11386460065841675,
+        "top1_logit_margin": 0.25,
+        "argmax": 981
+      },
+      "loopahead": {
+        "top_ids": [
+          981,
+          418,
+          355
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          16.625
+        ],
+        "top_probs": [
+          0.4562070667743683,
+          0.4562070667743683,
+          0.048083871603012085
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 418
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/329",
+      "position": 58,
+      "ar": {
+        "top_ids": [
+          335,
+          260,
+          357
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          19.625
+        ],
+        "top_probs": [
+          0.39879316091537476,
+          0.3519337475299835,
+          0.24188028275966644
+        ],
+        "top2_probability_margin": 0.046859413385391235,
+        "top1_logit_margin": 0.125,
+        "argmax": 335
+      },
+      "loopahead": {
+        "top_ids": [
+          335,
+          260,
+          357
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          19.625
+        ],
+        "top_probs": [
+          0.38092538714408875,
+          0.38092538714408875,
+          0.23104293644428253
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/280",
+      "position": 64,
+      "ar": {
+        "top_ids": [
+          585,
+          282,
+          563
+        ],
+        "top_logits": [
+          22.25,
+          22.25,
+          16.375
+        ],
+        "top_probs": [
+          0.49850553274154663,
+          0.49850553274154663,
+          0.0014001996023580432
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "loopahead": {
+        "top_ids": [
+          585,
+          282,
+          563
+        ],
+        "top_logits": [
+          22.375,
+          22.25,
+          16.5
+        ],
+        "top_probs": [
+          0.529575526714325,
+          0.46734875440597534,
+          0.0014874687185510993
+        ],
+        "top2_probability_margin": 0.06222677230834961,
+        "top1_logit_margin": 0.125,
+        "argmax": 585
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/334",
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          657,
+          339,
+          1978
+        ],
+        "top_logits": [
+          16.125,
+          16.125,
+          15.625
+        ],
+        "top_probs": [
+          0.21425533294677734,
+          0.21425533294677734,
+          0.12995243072509766
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 339
+      },
+      "loopahead": {
+        "top_ids": [
+          657,
+          339,
+          1978
+        ],
+        "top_logits": [
+          16.25,
+          16.0,
+          15.5625
+        ],
+        "top_probs": [
+          0.24434658885002136,
+          0.19029732048511505,
+          0.12286517769098282
+        ],
+        "top2_probability_margin": 0.05404926836490631,
+        "top1_logit_margin": 0.25,
+        "argmax": 657
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/419",
+      "position": 261,
+      "ar": {
+        "top_ids": [
+          338,
+          216,
+          1885
+        ],
+        "top_logits": [
+          23.375,
+          23.375,
+          19.625
+        ],
+        "top_probs": [
+          0.4941621422767639,
+          0.4941621422767639,
+          0.011621580459177494
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          338,
+          216,
+          1885
+        ],
+        "top_logits": [
+          23.375,
+          23.25,
+          19.5
+        ],
+        "top_probs": [
+          0.5253880023956299,
+          0.4636532962322235,
+          0.010904080234467983
+        ],
+        "top2_probability_margin": 0.06173470616340637,
+        "top1_logit_margin": 0.125,
+        "argmax": 338
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/473",
+      "position": 384,
+      "ar": {
+        "top_ids": [
+          5143,
+          919,
+          12198
+        ],
+        "top_logits": [
+          23.125,
+          23.0,
+          21.5
+        ],
+        "top_probs": [
+          0.47702398896217346,
+          0.42097219824790955,
+          0.09393158555030823
+        ],
+        "top2_probability_margin": 0.056051790714263916,
+        "top1_logit_margin": 0.125,
+        "argmax": 5143
+      },
+      "loopahead": {
+        "top_ids": [
+          5143,
+          919,
+          12198
+        ],
+        "top_logits": [
+          23.125,
+          23.125,
+          21.5
+        ],
+        "top_probs": [
+          0.4516861140727997,
+          0.4516861140727997,
+          0.0889422670006752
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 919
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/88",
+      "position": 3,
+      "ar": {
+        "top_ids": [
+          8739,
+          2585,
+          33671
+        ],
+        "top_logits": [
+          16.375,
+          16.125,
+          14.1875
+        ],
+        "top_probs": [
+          0.42772984504699707,
+          0.333116352558136,
+          0.04798995703458786
+        ],
+        "top2_probability_margin": 0.09461349248886108,
+        "top1_logit_margin": 0.25,
+        "argmax": 8739
+      },
+      "loopahead": {
+        "top_ids": [
+          8739,
+          2585,
+          33671
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          14.1875
+        ],
+        "top_probs": [
+          0.3798874020576477,
+          0.3798874020576477,
+          0.04829725995659828
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2585
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/144",
+      "position": 115,
+      "ar": {
+        "top_ids": [
+          1096,
+          4217,
+          4384
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          18.0
+        ],
+        "top_probs": [
+          0.5001012086868286,
+          0.4413377642631531,
+          0.03197040036320686
+        ],
+        "top2_probability_margin": 0.05876344442367554,
+        "top1_logit_margin": 0.125,
+        "argmax": 1096
+      },
+      "loopahead": {
+        "top_ids": [
+          4217,
+          1096,
+          4384
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          18.0
+        ],
+        "top_probs": [
+          0.5000592470169067,
+          0.44130074977874756,
+          0.03196771815419197
+        ],
+        "top2_probability_margin": 0.05875849723815918,
+        "top1_logit_margin": 0.125,
+        "argmax": 4217
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/332",
+      "position": 75,
+      "ar": {
+        "top_ids": [
+          7704,
+          4771,
+          1843
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          17.375
+        ],
+        "top_probs": [
+          0.4042608439922333,
+          0.4042608439922333,
+          0.07960367202758789
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 4771
+      },
+      "loopahead": {
+        "top_ids": [
+          7704,
+          4771,
+          1843
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          17.5
+        ],
+        "top_probs": [
+          0.42524248361587524,
+          0.3752751648426056,
+          0.08373520523309708
+        ],
+        "top2_probability_margin": 0.04996731877326965,
+        "top1_logit_margin": 0.125,
+        "argmax": 7704
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/463",
+      "position": 50,
+      "ar": {
+        "top_ids": [
+          699,
+          359,
+          416
+        ],
+        "top_logits": [
+          23.875,
+          23.875,
+          19.375
+        ],
+        "top_probs": [
+          0.49619388580322266,
+          0.49619388580322266,
+          0.005512216594070196
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 359
+      },
+      "loopahead": {
+        "top_ids": [
+          699,
+          359,
+          416
+        ],
+        "top_logits": [
+          24.0,
+          23.875,
+          19.5
+        ],
+        "top_probs": [
+          0.5271703600883484,
+          0.4652262032032013,
+          0.0058563342317938805
+        ],
+        "top2_probability_margin": 0.061944156885147095,
+        "top1_logit_margin": 0.125,
+        "argmax": 699
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/328",
+      "position": 58,
+      "ar": {
+        "top_ids": [
+          1069,
+          198,
+          378
+        ],
+        "top_logits": [
+          16.625,
+          16.5,
+          15.125
+        ],
+        "top_probs": [
+          0.46803462505340576,
+          0.41303911805152893,
+          0.10443264245986938
+        ],
+        "top2_probability_margin": 0.05499550700187683,
+        "top1_logit_margin": 0.125,
+        "argmax": 1069
+      },
+      "loopahead": {
+        "top_ids": [
+          1069,
+          198,
+          378
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          15.125
+        ],
+        "top_probs": [
+          0.4433371424674988,
+          0.4433371424674988,
+          0.09892188757658005
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/272",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          1621,
+          29,
+          12909
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          12.25
+        ],
+        "top_probs": [
+          0.53101646900177,
+          0.4686203598976135,
+          0.00013873257557861507
+        ],
+        "top2_probability_margin": 0.062396109104156494,
+        "top1_logit_margin": 0.125,
+        "argmax": 1621
+      },
+      "loopahead": {
+        "top_ids": [
+          1621,
+          29,
+          12909
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          12.25
+        ],
+        "top_probs": [
+          0.49980711936950684,
+          0.49980711936950684,
+          0.00014796527102589607
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 29
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/336",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          284,
+          30,
+          28
+        ],
+        "top_logits": [
+          14.8125,
+          14.8125,
+          13.875
+        ],
+        "top_probs": [
+          0.3687046468257904,
+          0.3687046468257904,
+          0.14438681304454803
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          284,
+          30,
+          28
+        ],
+        "top_logits": [
+          14.875,
+          14.8125,
+          13.9375
+        ],
+        "top_probs": [
+          0.3796031177043915,
+          0.35660412907600403,
+          0.14865471422672272
+        ],
+        "top2_probability_margin": 0.02299898862838745,
+        "top1_logit_margin": 0.0625,
+        "argmax": 284
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/423",
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          11973,
+          4891,
+          761
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          14.9375
+        ],
+        "top_probs": [
+          0.4966881573200226,
+          0.4966881573200226,
+          0.0024484675377607346
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 4891
+      },
+      "loopahead": {
+        "top_ids": [
+          11973,
+          4891,
+          761
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          15.0
+        ],
+        "top_probs": [
+          0.5274237990379333,
+          0.46544986963272095,
+          0.002767666010186076
+        ],
+        "top2_probability_margin": 0.0619739294052124,
+        "top1_logit_margin": 0.125,
+        "argmax": 11973
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/215",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          282,
+          28,
+          288
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          15.0
+        ],
+        "top_probs": [
+          0.4294750392436981,
+          0.4294750392436981,
+          0.10858830064535141
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          282,
+          28,
+          288
+        ],
+        "top_logits": [
+          16.5,
+          16.375,
+          15.0
+        ],
+        "top_probs": [
+          0.45960840582847595,
+          0.40560299158096313,
+          0.10255249589681625
+        ],
+        "top2_probability_margin": 0.05400541424751282,
+        "top1_logit_margin": 0.125,
+        "argmax": 282
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/552",
+      "position": 21,
+      "ar": {
+        "top_ids": [
+          7068,
+          1552,
+          4355
+        ],
+        "top_logits": [
+          15.6875,
+          15.6875,
+          14.3125
+        ],
+        "top_probs": [
+          0.2661161422729492,
+          0.2661161422729492,
+          0.06728469580411911
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1552
+      },
+      "loopahead": {
+        "top_ids": [
+          7068,
+          1552,
+          4355
+        ],
+        "top_logits": [
+          15.75,
+          15.6875,
+          14.5
+        ],
+        "top_probs": [
+          0.2717152237892151,
+          0.2552528381347656,
+          0.07784771919250488
+        ],
+        "top2_probability_margin": 0.016462385654449463,
+        "top1_logit_margin": 0.0625,
+        "argmax": 7068
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/91",
+      "position": 68,
+      "ar": {
+        "top_ids": [
+          653,
+          260,
+          7164
+        ],
+        "top_logits": [
+          22.75,
+          22.625,
+          21.25
+        ],
+        "top_probs": [
+          0.4735735356807709,
+          0.41792717576026917,
+          0.10566854476928711
+        ],
+        "top2_probability_margin": 0.05564635992050171,
+        "top1_logit_margin": 0.125,
+        "argmax": 653
+      },
+      "loopahead": {
+        "top_ids": [
+          653,
+          260,
+          7164
+        ],
+        "top_logits": [
+          22.625,
+          22.625,
+          21.25
+        ],
+        "top_probs": [
+          0.4425508379936218,
+          0.4425508379936218,
+          0.11189437657594681
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/143",
+      "position": 46,
+      "ar": {
+        "top_ids": [
+          19173,
+          339,
+          665
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          19.125
+        ],
+        "top_probs": [
+          0.48419803380966187,
+          0.4273032546043396,
+          0.06552907824516296
+        ],
+        "top2_probability_margin": 0.056894779205322266,
+        "top1_logit_margin": 0.125,
+        "argmax": 19173
+      },
+      "loopahead": {
+        "top_ids": [
+          19173,
+          339,
+          665
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          19.125
+        ],
+        "top_probs": [
+          0.4530933201313019,
+          0.4530933201313019,
+          0.06948411464691162
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 339
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/306",
+      "position": 73,
+      "ar": {
+        "top_ids": [
+          365,
+          28,
+          6002
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          17.125
+        ],
+        "top_probs": [
+          0.4871801435947418,
+          0.4871801435947418,
+          0.018890025094151497
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          365,
+          28,
+          6002
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          17.25
+        ],
+        "top_probs": [
+          0.5170851349830627,
+          0.45632603764533997,
+          0.02004956640303135
+        ],
+        "top2_probability_margin": 0.06075909733772278,
+        "top1_logit_margin": 0.125,
+        "argmax": 365
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/429",
+      "position": 67,
+      "ar": {
+        "top_ids": [
+          567,
+          282,
+          736
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          19.375
+        ],
+        "top_probs": [
+          0.30404946208000183,
+          0.30404946208000183,
+          0.14362280070781708
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "loopahead": {
+        "top_ids": [
+          567,
+          282,
+          736
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          19.375
+        ],
+        "top_probs": [
+          0.318715363740921,
+          0.2812653183937073,
+          0.1505504846572876
+        ],
+        "top2_probability_margin": 0.037450045347213745,
+        "top1_logit_margin": 0.125,
+        "argmax": 567
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/173",
+      "position": 5,
+      "ar": {
+        "top_ids": [
+          12643,
+          6633,
+          5823
+        ],
+        "top_logits": [
+          16.0,
+          16.0,
+          15.4375
+        ],
+        "top_probs": [
+          0.19622601568698883,
+          0.19622601568698883,
+          0.11180620640516281
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 6633
+      },
+      "loopahead": {
+        "top_ids": [
+          12643,
+          6633,
+          5823
+        ],
+        "top_logits": [
+          16.125,
+          16.0,
+          15.5
+        ],
+        "top_probs": [
+          0.21326185762882233,
+          0.18820291757583618,
+          0.11415084451436996
+        ],
+        "top2_probability_margin": 0.025058940052986145,
+        "top1_logit_margin": 0.125,
+        "argmax": 12643
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/226",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          1671,
+          980,
+          7939
+        ],
+        "top_logits": [
+          14.875,
+          14.8125,
+          13.9375
+        ],
+        "top_probs": [
+          0.2733054459095001,
+          0.25674670934677124,
+          0.10702794790267944
+        ],
+        "top2_probability_margin": 0.016558736562728882,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1671
+      },
+      "loopahead": {
+        "top_ids": [
+          980,
+          1671,
+          7939
+        ],
+        "top_logits": [
+          14.875,
+          14.8125,
+          13.9375
+        ],
+        "top_probs": [
+          0.2725435197353363,
+          0.25603094696998596,
+          0.10672956705093384
+        ],
+        "top2_probability_margin": 0.016512572765350342,
+        "top1_logit_margin": 0.0625,
+        "argmax": 980
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/400",
+      "position": 68,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          284
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          16.375
+        ],
+        "top_probs": [
+          0.5077572464942932,
+          0.4480941891670227,
+          0.03245983272790909
+        ],
+        "top2_probability_margin": 0.05966305732727051,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          28,
+          284
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          16.375
+        ],
+        "top_probs": [
+          0.47938382625579834,
+          0.47938382625579834,
+          0.030645981431007385
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/365",
+      "position": 117,
+      "ar": {
+        "top_ids": [
+          8424,
+          6314,
+          6636
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          16.875
+        ],
+        "top_probs": [
+          0.36232107877731323,
+          0.3197472095489502,
+          0.06296195834875107
+        ],
+        "top2_probability_margin": 0.04257386922836304,
+        "top1_logit_margin": 0.125,
+        "argmax": 8424
+      },
+      "loopahead": {
+        "top_ids": [
+          8424,
+          6314,
+          6636
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          16.875
+        ],
+        "top_probs": [
+          0.34436821937561035,
+          0.34436821937561035,
+          0.05984221771359444
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 6314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/149",
+      "position": 249,
+      "ar": {
+        "top_ids": [
+          7531,
+          354,
+          253
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          16.25
+        ],
+        "top_probs": [
+          0.28438422083854675,
+          0.25096818804740906,
+          0.1724877655506134
+        ],
+        "top2_probability_margin": 0.033416032791137695,
+        "top1_logit_margin": 0.125,
+        "argmax": 7531
+      },
+      "loopahead": {
+        "top_ids": [
+          7531,
+          354,
+          253
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          16.25
+        ],
+        "top_probs": [
+          0.26021069288253784,
+          0.26021069288253784,
+          0.1788400262594223
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 354
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/113",
+      "position": 60,
+      "ar": {
+        "top_ids": [
+          827,
+          20168,
+          2701
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          16.875
+        ],
+        "top_probs": [
+          0.2845516502857208,
+          0.25111594796180725,
+          0.15230952203273773
+        ],
+        "top2_probability_margin": 0.033435702323913574,
+        "top1_logit_margin": 0.125,
+        "argmax": 827
+      },
+      "loopahead": {
+        "top_ids": [
+          20168,
+          827,
+          2701
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          16.875
+        ],
+        "top_probs": [
+          0.2814934253692627,
+          0.24841707944869995,
+          0.15067258477210999
+        ],
+        "top2_probability_margin": 0.033076345920562744,
+        "top1_logit_margin": 0.125,
+        "argmax": 20168
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/346",
+      "position": 47,
+      "ar": {
+        "top_ids": [
+          35,
+          33,
+          34
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          17.125
+        ],
+        "top_probs": [
+          0.5073795318603516,
+          0.44776085019111633,
+          0.03243568539619446
+        ],
+        "top2_probability_margin": 0.05961868166923523,
+        "top1_logit_margin": 0.125,
+        "argmax": 35
+      },
+      "loopahead": {
+        "top_ids": [
+          35,
+          33,
+          34
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          17.25
+        ],
+        "top_probs": [
+          0.47662100195884705,
+          0.47662100195884705,
+          0.03452631086111069
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/330",
+      "position": 77,
+      "ar": {
+        "top_ids": [
+          1122,
+          550,
+          6393
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          19.125
+        ],
+        "top_probs": [
+          0.39299657940864563,
+          0.3468182682991028,
+          0.14457537233829498
+        ],
+        "top2_probability_margin": 0.04617831110954285,
+        "top1_logit_margin": 0.125,
+        "argmax": 1122
+      },
+      "loopahead": {
+        "top_ids": [
+          550,
+          1122,
+          6393
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          19.0
+        ],
+        "top_probs": [
+          0.40044525265693665,
+          0.3533916771411896,
+          0.13000553846359253
+        ],
+        "top2_probability_margin": 0.04705357551574707,
+        "top1_logit_margin": 0.125,
+        "argmax": 550
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/539",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          13657,
+          198,
+          3897
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          15.9375
+        ],
+        "top_probs": [
+          0.3598270118236542,
+          0.3598270118236542,
+          0.12435288727283478
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          13657,
+          198,
+          3897
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.0
+        ],
+        "top_probs": [
+          0.38314205408096313,
+          0.3381216824054718,
+          0.12438800930976868
+        ],
+        "top2_probability_margin": 0.04502037167549133,
+        "top1_logit_margin": 0.125,
+        "argmax": 13657
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/385",
+      "position": 194,
+      "ar": {
+        "top_ids": [
+          9675,
+          3018,
+          3948
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          15.875
+        ],
+        "top_probs": [
+          0.22891083359718323,
+          0.22891083359718323,
+          0.09542423486709595
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3018
+      },
+      "loopahead": {
+        "top_ids": [
+          9675,
+          3018,
+          3948
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          15.875
+        ],
+        "top_probs": [
+          0.2513256371021271,
+          0.22179408371448517,
+          0.09245754033327103
+        ],
+        "top2_probability_margin": 0.029531553387641907,
+        "top1_logit_margin": 0.125,
+        "argmax": 9675
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/92",
+      "position": 158,
+      "ar": {
+        "top_ids": [
+          22825,
+          20234,
+          13546
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          15.5
+        ],
+        "top_probs": [
+          0.518713116645813,
+          0.4577626883983612,
+          0.005085284356027842
+        ],
+        "top2_probability_margin": 0.06095042824745178,
+        "top1_logit_margin": 0.125,
+        "argmax": 22825
+      },
+      "loopahead": {
+        "top_ids": [
+          22825,
+          20234,
+          30851
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          15.625
+        ],
+        "top_probs": [
+          0.48819074034690857,
+          0.48819074034690857,
+          0.005423309747129679
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 20234
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/452",
+      "position": 21,
+      "ar": {
+        "top_ids": [
+          21768,
+          4957,
+          4147
+        ],
+        "top_logits": [
+          20.875,
+          20.875,
+          20.625
+        ],
+        "top_probs": [
+          0.32432833313941956,
+          0.32432833313941956,
+          0.25258713960647583
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 4957
+      },
+      "loopahead": {
+        "top_ids": [
+          21768,
+          4957,
+          4147
+        ],
+        "top_logits": [
+          20.875,
+          20.75,
+          20.625
+        ],
+        "top_probs": [
+          0.3334409296512604,
+          0.29426059126853943,
+          0.2596840560436249
+        ],
+        "top2_probability_margin": 0.03918033838272095,
+        "top1_logit_margin": 0.125,
+        "argmax": 21768
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/414",
+      "position": 281,
+      "ar": {
+        "top_ids": [
+          4319,
+          3193,
+          14629
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          19.375
+        ],
+        "top_probs": [
+          0.3623371422290802,
+          0.3197614252567291,
+          0.2490304410457611
+        ],
+        "top2_probability_margin": 0.042575716972351074,
+        "top1_logit_margin": 0.125,
+        "argmax": 4319
+      },
+      "loopahead": {
+        "top_ids": [
+          4319,
+          3193,
+          14629
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          19.375
+        ],
+        "top_probs": [
+          0.3309994637966156,
+          0.3309994637966156,
+          0.25778263807296753
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3193
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/253",
+      "position": 134,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          1265
+        ],
+        "top_logits": [
+          22.0,
+          21.875,
+          19.0
+        ],
+        "top_probs": [
+          0.502289354801178,
+          0.4432687759399414,
+          0.02500751242041588
+        ],
+        "top2_probability_margin": 0.05902057886123657,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          28,
+          1265
+        ],
+        "top_logits": [
+          21.875,
+          21.875,
+          19.0
+        ],
+        "top_probs": [
+          0.4712626338005066,
+          0.4712626338005066,
+          0.02658682130277157
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/125",
+      "position": 264,
+      "ar": {
+        "top_ids": [
+          9240,
+          1122,
+          811
+        ],
+        "top_logits": [
+          21.5,
+          21.375,
+          19.625
+        ],
+        "top_probs": [
+          0.48412850499153137,
+          0.4272419214248657,
+          0.07424351572990417
+        ],
+        "top2_probability_margin": 0.05688658356666565,
+        "top1_logit_margin": 0.125,
+        "argmax": 9240
+      },
+      "loopahead": {
+        "top_ids": [
+          9240,
+          1122,
+          811
+        ],
+        "top_logits": [
+          21.375,
+          21.375,
+          19.625
+        ],
+        "top_probs": [
+          0.4536654055118561,
+          0.4536654055118561,
+          0.07883521914482117
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1122
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/462",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          40,
+          33,
+          34
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          17.25
+        ],
+        "top_probs": [
+          0.483207106590271,
+          0.42642879486083984,
+          0.05092965438961983
+        ],
+        "top2_probability_margin": 0.05677831172943115,
+        "top1_logit_margin": 0.125,
+        "argmax": 40
+      },
+      "loopahead": {
+        "top_ids": [
+          40,
+          33,
+          34
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          17.25
+        ],
+        "top_probs": [
+          0.45662522315979004,
+          0.45662522315979004,
+          0.04812794178724289
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/483",
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          6864,
+          5146,
+          6007
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.25
+        ],
+        "top_probs": [
+          0.20012913644313812,
+          0.20012913644313812,
+          0.12138445675373077
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 5146
+      },
+      "loopahead": {
+        "top_ids": [
+          6864,
+          5146,
+          6007
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          16.25
+        ],
+        "top_probs": [
+          0.20994052290916443,
+          0.18527185916900635,
+          0.12733536958694458
+        ],
+        "top2_probability_margin": 0.02466866374015808,
+        "top1_logit_margin": 0.125,
+        "argmax": 6864
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/115",
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          588,
+          527,
+          284
+        ],
+        "top_logits": [
+          22.875,
+          22.75,
+          16.125
+        ],
+        "top_probs": [
+          0.5303743481636047,
+          0.4680537283420563,
+          0.0006210045539774001
+        ],
+        "top2_probability_margin": 0.06232061982154846,
+        "top1_logit_margin": 0.125,
+        "argmax": 588
+      },
+      "loopahead": {
+        "top_ids": [
+          588,
+          527,
+          284
+        ],
+        "top_logits": [
+          22.875,
+          22.875,
+          16.0
+        ],
+        "top_probs": [
+          0.4993201792240143,
+          0.4993201792240143,
+          0.0005159463617019355
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 527
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/449",
+      "position": 65,
+      "ar": {
+        "top_ids": [
+          3569,
+          1848,
+          1644
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          19.0
+        ],
+        "top_probs": [
+          0.3627564609050751,
+          0.3627564609050751,
+          0.10393146425485611
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1848
+      },
+      "loopahead": {
+        "top_ids": [
+          3569,
+          1848,
+          1644
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          19.0
+        ],
+        "top_probs": [
+          0.3834685981273651,
+          0.3384098410606384,
+          0.0969560444355011
+        ],
+        "top2_probability_margin": 0.045058757066726685,
+        "top1_logit_margin": 0.125,
+        "argmax": 3569
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/254",
+      "position": 117,
+      "ar": {
+        "top_ids": [
+          506,
+          417,
+          637
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          12.625
+        ],
+        "top_probs": [
+          0.49902403354644775,
+          0.49902403354644775,
+          0.0005156403640285134
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 417
+      },
+      "loopahead": {
+        "top_ids": [
+          506,
+          417,
+          637
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          12.75
+        ],
+        "top_probs": [
+          0.5301540493965149,
+          0.46785926818847656,
+          0.000547806906979531
+        ],
+        "top2_probability_margin": 0.06229478120803833,
+        "top1_logit_margin": 0.125,
+        "argmax": 506
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/94",
+      "position": 95,
+      "ar": {
+        "top_ids": [
+          3875,
+          7948,
+          18820
+        ],
+        "top_logits": [
+          15.4375,
+          15.375,
+          15.25
+        ],
+        "top_probs": [
+          0.10004207491874695,
+          0.0939808338880539,
+          0.08293779194355011
+        ],
+        "top2_probability_margin": 0.006061241030693054,
+        "top1_logit_margin": 0.0625,
+        "argmax": 3875
+      },
+      "loopahead": {
+        "top_ids": [
+          7948,
+          3875,
+          18820
+        ],
+        "top_logits": [
+          15.4375,
+          15.375,
+          15.1875
+        ],
+        "top_probs": [
+          0.10138951241970062,
+          0.09524663537740707,
+          0.07896222919225693
+        ],
+        "top2_probability_margin": 0.006142877042293549,
+        "top1_logit_margin": 0.0625,
+        "argmax": 7948
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/353",
+      "position": 45,
+      "ar": {
+        "top_ids": [
+          927,
+          290,
+          735
+        ],
+        "top_logits": [
+          19.375,
+          19.125,
+          18.25
+        ],
+        "top_probs": [
+          0.47090840339660645,
+          0.3667438328266144,
+          0.15288157761096954
+        ],
+        "top2_probability_margin": 0.10416457056999207,
+        "top1_logit_margin": 0.25,
+        "argmax": 927
+      },
+      "loopahead": {
+        "top_ids": [
+          290,
+          927,
+          735
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          18.25
+        ],
+        "top_probs": [
+          0.4486704170703888,
+          0.3959502577781677,
+          0.14566196501255035
+        ],
+        "top2_probability_margin": 0.05272015929222107,
+        "top1_logit_margin": 0.125,
+        "argmax": 290
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/373",
+      "position": 26,
+      "ar": {
+        "top_ids": [
+          7068,
+          3431,
+          597
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          18.875
+        ],
+        "top_probs": [
+          0.3939928412437439,
+          0.3939928412437439,
+          0.09961698949337006
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3431
+      },
+      "loopahead": {
+        "top_ids": [
+          7068,
+          3431,
+          597
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          19.0
+        ],
+        "top_probs": [
+          0.41899585723876953,
+          0.3697625398635864,
+          0.10593874007463455
+        ],
+        "top2_probability_margin": 0.049233317375183105,
+        "top1_logit_margin": 0.125,
+        "argmax": 7068
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/475",
+      "position": 252,
+      "ar": {
+        "top_ids": [
+          3814,
+          216,
+          19573
+        ],
+        "top_logits": [
+          16.25,
+          16.125,
+          14.6875
+        ],
+        "top_probs": [
+          0.4091291129589081,
+          0.3610551655292511,
+          0.08575811982154846
+        ],
+        "top2_probability_margin": 0.04807394742965698,
+        "top1_logit_margin": 0.125,
+        "argmax": 3814
+      },
+      "loopahead": {
+        "top_ids": [
+          3814,
+          216,
+          19573
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          14.75
+        ],
+        "top_probs": [
+          0.3857640027999878,
+          0.3857640027999878,
+          0.08607558906078339
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/258",
+      "position": 71,
+      "ar": {
+        "top_ids": [
+          3984,
+          983,
+          10832
+        ],
+        "top_logits": [
+          21.5,
+          21.5,
+          17.125
+        ],
+        "top_probs": [
+          0.49521300196647644,
+          0.49521300196647644,
+          0.006233811844140291
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 983
+      },
+      "loopahead": {
+        "top_ids": [
+          3984,
+          983,
+          10832
+        ],
+        "top_logits": [
+          21.5,
+          21.375,
+          17.125
+        ],
+        "top_probs": [
+          0.5257947444915771,
+          0.4640122056007385,
+          0.00661877915263176
+        ],
+        "top2_probability_margin": 0.06178253889083862,
+        "top1_logit_margin": 0.125,
+        "argmax": 3984
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/246",
+      "position": 371,
+      "ar": {
+        "top_ids": [
+          436,
+          314,
+          198
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          12.1875
+        ],
+        "top_probs": [
+          0.4999316930770874,
+          0.4999316930770874,
+          5.795847755507566e-05
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "loopahead": {
+        "top_ids": [
+          436,
+          314,
+          198
+        ],
+        "top_logits": [
+          21.25,
+          21.125,
+          12.0625
+        ],
+        "top_probs": [
+          0.531135082244873,
+          0.4687250554561615,
+          5.434059858089313e-05
+        ],
+        "top2_probability_margin": 0.06241002678871155,
+        "top1_logit_margin": 0.125,
+        "argmax": 436
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/405",
+      "position": 442,
+      "ar": {
+        "top_ids": [
+          4319,
+          767,
+          28
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          18.875
+        ],
+        "top_probs": [
+          0.39672353863716125,
+          0.3501072824001312,
+          0.1459464430809021
+        ],
+        "top2_probability_margin": 0.04661625623703003,
+        "top1_logit_margin": 0.125,
+        "argmax": 4319
+      },
+      "loopahead": {
+        "top_ids": [
+          4319,
+          767,
+          28
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          18.875
+        ],
+        "top_probs": [
+          0.3666609823703766,
+          0.3666609823703766,
+          0.1528470367193222
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 767
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/481",
+      "position": 113,
+      "ar": {
+        "top_ids": [
+          2343,
+          1952,
+          3577
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          17.375
+        ],
+        "top_probs": [
+          0.18663223087787628,
+          0.16470235586166382,
+          0.14534932374954224
+        ],
+        "top2_probability_margin": 0.021929875016212463,
+        "top1_logit_margin": 0.125,
+        "argmax": 2343
+      },
+      "loopahead": {
+        "top_ids": [
+          2343,
+          1952,
+          3577
+        ],
+        "top_logits": [
+          17.625,
+          17.625,
+          17.375
+        ],
+        "top_probs": [
+          0.18277449905872345,
+          0.18277449905872345,
+          0.14234492182731628
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1952
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/538",
+      "position": 79,
+      "ar": {
+        "top_ids": [
+          260,
+          216,
+          2765
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          17.375
+        ],
+        "top_probs": [
+          0.2984353303909302,
+          0.2984353303909302,
+          0.26336824893951416
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          260,
+          2765,
+          216
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          17.375
+        ],
+        "top_probs": [
+          0.30994516611099243,
+          0.2735256254673004,
+          0.2735256254673004
+        ],
+        "top2_probability_margin": 0.03641954064369202,
+        "top1_logit_margin": 0.125,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/154",
+      "position": 181,
+      "ar": {
+        "top_ids": [
+          357,
+          260,
+          601
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          18.5
+        ],
+        "top_probs": [
+          0.44457942247390747,
+          0.44457942247390747,
+          0.0681784600019455
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          357,
+          260,
+          601
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          18.5
+        ],
+        "top_probs": [
+          0.46918681263923645,
+          0.4140559136867523,
+          0.07195213437080383
+        ],
+        "top2_probability_margin": 0.05513089895248413,
+        "top1_logit_margin": 0.125,
+        "argmax": 357
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/269",
+      "position": 54,
+      "ar": {
+        "top_ids": [
+          2490,
+          1122,
+          5951
+        ],
+        "top_logits": [
+          21.875,
+          21.75,
+          15.8125
+        ],
+        "top_probs": [
+          0.5298464894294739,
+          0.4675878882408142,
+          0.001233785762451589
+        ],
+        "top2_probability_margin": 0.06225860118865967,
+        "top1_logit_margin": 0.125,
+        "argmax": 2490
+      },
+      "loopahead": {
+        "top_ids": [
+          2490,
+          1122,
+          5951
+        ],
+        "top_logits": [
+          21.875,
+          21.875,
+          15.75
+        ],
+        "top_probs": [
+          0.49881383776664734,
+          0.49881383776664734,
+          0.001091150799766183
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1122
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/435",
+      "position": 32,
+      "ar": {
+        "top_ids": [
+          327,
+          284,
+          13624
+        ],
+        "top_logits": [
+          22.25,
+          22.0,
+          20.0
+        ],
+        "top_probs": [
+          0.5097976922988892,
+          0.39703086018562317,
+          0.05373227968811989
+        ],
+        "top2_probability_margin": 0.11276683211326599,
+        "top1_logit_margin": 0.25,
+        "argmax": 327
+      },
+      "loopahead": {
+        "top_ids": [
+          327,
+          284,
+          13624
+        ],
+        "top_logits": [
+          22.125,
+          22.125,
+          20.0
+        ],
+        "top_probs": [
+          0.45078760385513306,
+          0.45078760385513306,
+          0.05383890122175217
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 284
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/351",
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          39,
+          38,
+          40
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          18.75
+        ],
+        "top_probs": [
+          0.4270038604736328,
+          0.4270038604736328,
+          0.10796348750591278
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 38
+      },
+      "loopahead": {
+        "top_ids": [
+          39,
+          38,
+          40
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.75
+        ],
+        "top_probs": [
+          0.44963401556015015,
+          0.3968006372451782,
+          0.11368528753519058
+        ],
+        "top2_probability_margin": 0.052833378314971924,
+        "top1_logit_margin": 0.125,
+        "argmax": 39
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/380",
+      "position": 64,
+      "ar": {
+        "top_ids": [
+          9850,
+          1685,
+          4359
+        ],
+        "top_logits": [
+          20.75,
+          20.75,
+          19.0
+        ],
+        "top_probs": [
+          0.4435006380081177,
+          0.4435006380081177,
+          0.07706885039806366
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1685
+      },
+      "loopahead": {
+        "top_ids": [
+          9850,
+          1685,
+          4359
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          18.875
+        ],
+        "top_probs": [
+          0.4723919630050659,
+          0.4168844521045685,
+          0.0724436566233635
+        ],
+        "top2_probability_margin": 0.055507510900497437,
+        "top1_logit_margin": 0.125,
+        "argmax": 9850
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/160",
+      "position": 18,
+      "ar": {
+        "top_ids": [
+          11304,
+          5558,
+          28
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.75
+        ],
+        "top_probs": [
+          0.1715155392885208,
+          0.1715155392885208,
+          0.1715155392885208
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          11304,
+          5558,
+          28
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.625
+        ],
+        "top_probs": [
+          0.19484108686447144,
+          0.1719466596841812,
+          0.15174239873886108
+        ],
+        "top2_probability_margin": 0.022894427180290222,
+        "top1_logit_margin": 0.125,
+        "argmax": 11304
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/257",
+      "position": 78,
+      "ar": {
+        "top_ids": [
+          1464,
+          919,
+          26266
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          17.875
+        ],
+        "top_probs": [
+          0.47774800658226013,
+          0.42161113023757935,
+          0.05705886334180832
+        ],
+        "top2_probability_margin": 0.056136876344680786,
+        "top1_logit_margin": 0.125,
+        "argmax": 1464
+      },
+      "loopahead": {
+        "top_ids": [
+          1464,
+          919,
+          26266
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          17.875
+        ],
+        "top_probs": [
+          0.4449651837348938,
+          0.4449651837348938,
+          0.06021948531270027
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 919
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/378",
+      "position": 52,
+      "ar": {
+        "top_ids": [
+          14905,
+          5071,
+          26714
+        ],
+        "top_logits": [
+          14.5625,
+          14.5,
+          13.875
+        ],
+        "top_probs": [
+          0.24392834305763245,
+          0.2291494756937027,
+          0.12265487760305405
+        ],
+        "top2_probability_margin": 0.014778867363929749,
+        "top1_logit_margin": 0.0625,
+        "argmax": 14905
+      },
+      "loopahead": {
+        "top_ids": [
+          14905,
+          5071,
+          26714
+        ],
+        "top_logits": [
+          14.5,
+          14.5,
+          13.8125
+        ],
+        "top_probs": [
+          0.2351113110780716,
+          0.2351113110780716,
+          0.11822139471769333
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 5071
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/249",
+      "position": 199,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          347
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          16.125
+        ],
+        "top_probs": [
+          0.3371778428554535,
+          0.3371778428554535,
+          0.12404081225395203
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          28,
+          347
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          16.125
+        ],
+        "top_probs": [
+          0.3662029206752777,
+          0.323172926902771,
+          0.11888867616653442
+        ],
+        "top2_probability_margin": 0.043029993772506714,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/366",
+      "position": 38,
+      "ar": {
+        "top_ids": [
+          20886,
+          986,
+          15852
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          15.5
+        ],
+        "top_probs": [
+          0.45893532037734985,
+          0.45893532037734985,
+          0.02933875285089016
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 986
+      },
+      "loopahead": {
+        "top_ids": [
+          20886,
+          986,
+          15852
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          15.5
+        ],
+        "top_probs": [
+          0.4853146970272064,
+          0.42828869819641113,
+          0.031025128439068794
+        ],
+        "top2_probability_margin": 0.05702599883079529,
+        "top1_logit_margin": 0.125,
+        "argmax": 20886
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/119",
+      "position": 221,
+      "ar": {
+        "top_ids": [
+          314,
+          30,
+          2026
+        ],
+        "top_logits": [
+          23.375,
+          23.25,
+          20.5
+        ],
+        "top_probs": [
+          0.5155179500579834,
+          0.4549429714679718,
+          0.029083533212542534
+        ],
+        "top2_probability_margin": 0.0605749785900116,
+        "top1_logit_margin": 0.125,
+        "argmax": 314
+      },
+      "loopahead": {
+        "top_ids": [
+          314,
+          30,
+          2026
+        ],
+        "top_logits": [
+          23.25,
+          23.25,
+          20.5
+        ],
+        "top_probs": [
+          0.48429152369499207,
+          0.48429152369499207,
+          0.0309597197920084
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/467",
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          14186,
+          384,
+          260
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          11.0625
+        ],
+        "top_probs": [
+          0.49818047881126404,
+          0.49818047881126404,
+          0.0003766128502320498
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 384
+      },
+      "loopahead": {
+        "top_ids": [
+          14186,
+          384,
+          260
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          11.0625
+        ],
+        "top_probs": [
+          0.5291815400123596,
+          0.4670010507106781,
+          0.00040004891343414783
+        ],
+        "top2_probability_margin": 0.06218048930168152,
+        "top1_logit_margin": 0.125,
+        "argmax": 14186
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/124",
+      "position": 92,
+      "ar": {
+        "top_ids": [
+          2022,
+          314,
+          3419
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          19.0
+        ],
+        "top_probs": [
+          0.46128445863723755,
+          0.46128445863723755,
+          0.048619020730257034
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "loopahead": {
+        "top_ids": [
+          2022,
+          314,
+          3419
+        ],
+        "top_logits": [
+          21.375,
+          21.25,
+          19.0
+        ],
+        "top_probs": [
+          0.4924694895744324,
+          0.4346027970314026,
+          0.04580679535865784
+        ],
+        "top2_probability_margin": 0.057866692543029785,
+        "top1_logit_margin": 0.125,
+        "argmax": 2022
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/111",
+      "position": 126,
+      "ar": {
+        "top_ids": [
+          12957,
+          1836,
+          2396
+        ],
+        "top_logits": [
+          20.75,
+          20.5,
+          19.75
+        ],
+        "top_probs": [
+          0.45957842469215393,
+          0.3579200506210327,
+          0.16906948387622833
+        ],
+        "top2_probability_margin": 0.10165837407112122,
+        "top1_logit_margin": 0.25,
+        "argmax": 12957
+      },
+      "loopahead": {
+        "top_ids": [
+          12957,
+          1836,
+          2396
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          19.75
+        ],
+        "top_probs": [
+          0.40791448950767517,
+          0.40791448950767517,
+          0.17004404962062836
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1836
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/398",
+      "position": 22,
+      "ar": {
+        "top_ids": [
+          11712,
+          389,
+          22392
+        ],
+        "top_logits": [
+          12.8125,
+          12.75,
+          12.5625
+        ],
+        "top_probs": [
+          0.19135858118534088,
+          0.1797647476196289,
+          0.14903020858764648
+        ],
+        "top2_probability_margin": 0.011593833565711975,
+        "top1_logit_margin": 0.0625,
+        "argmax": 11712
+      },
+      "loopahead": {
+        "top_ids": [
+          389,
+          11712,
+          22392
+        ],
+        "top_logits": [
+          12.875,
+          12.75,
+          12.5625
+        ],
+        "top_probs": [
+          0.19909434020519257,
+          0.1757001280784607,
+          0.14566051959991455
+        ],
+        "top2_probability_margin": 0.023394212126731873,
+        "top1_logit_margin": 0.125,
+        "argmax": 389
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/390",
+      "position": 298,
+      "ar": {
+        "top_ids": [
+          198,
+          33,
+          2
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.0
+        ],
+        "top_probs": [
+          0.42893680930137634,
+          0.42893680930137634,
+          0.13925538957118988
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 33
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          33,
+          2
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.0
+        ],
+        "top_probs": [
+          0.45983004570007324,
+          0.4057985842227936,
+          0.13174352049827576
+        ],
+        "top2_probability_margin": 0.05403146147727966,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/408",
+      "position": 28,
+      "ar": {
+        "top_ids": [
+          10335,
+          17109,
+          7529
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          20.5
+        ],
+        "top_probs": [
+          0.2960730791091919,
+          0.2612835764884949,
+          0.2612835764884949
+        ],
+        "top2_probability_margin": 0.03478950262069702,
+        "top1_logit_margin": 0.125,
+        "argmax": 10335
+      },
+      "loopahead": {
+        "top_ids": [
+          17109,
+          10335,
+          7529
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          20.5
+        ],
+        "top_probs": [
+          0.2698051929473877,
+          0.2698051929473877,
+          0.2698051929473877
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7529
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/448",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          378,
+          339,
+          1644
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          20.75
+        ],
+        "top_probs": [
+          0.30219271779060364,
+          0.2666841447353363,
+          0.20769381523132324
+        ],
+        "top2_probability_margin": 0.035508573055267334,
+        "top1_logit_margin": 0.125,
+        "argmax": 378
+      },
+      "loopahead": {
+        "top_ids": [
+          378,
+          339,
+          1644
+        ],
+        "top_logits": [
+          21.0,
+          21.0,
+          20.75
+        ],
+        "top_probs": [
+          0.27675989270210266,
+          0.27675989270210266,
+          0.2155408263206482
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 339
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/453",
+      "position": 119,
+      "ar": {
+        "top_ids": [
+          3814,
+          216,
+          12752
+        ],
+        "top_logits": [
+          21.625,
+          21.625,
+          15.25
+        ],
+        "top_probs": [
+          0.4993409812450409,
+          0.4993409812450409,
+          0.0008506872691214085
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "loopahead": {
+        "top_ids": [
+          3814,
+          216,
+          12752
+        ],
+        "top_logits": [
+          21.75,
+          21.625,
+          15.0625
+        ],
+        "top_probs": [
+          0.5306232571601868,
+          0.4682733714580536,
+          0.0006613661535084248
+        ],
+        "top2_probability_margin": 0.06234988570213318,
+        "top1_logit_margin": 0.125,
+        "argmax": 3814
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/388",
+      "position": 20,
+      "ar": {
+        "top_ids": [
+          1216,
+          198,
+          378
+        ],
+        "top_logits": [
+          15.75,
+          15.75,
+          15.1875
+        ],
+        "top_probs": [
+          0.34514397382736206,
+          0.34514397382736206,
+          0.19665709137916565
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          1216,
+          198,
+          378
+        ],
+        "top_logits": [
+          15.75,
+          15.6875,
+          15.1875
+        ],
+        "top_probs": [
+          0.3525521457195282,
+          0.3311920762062073,
+          0.20087814331054688
+        ],
+        "top2_probability_margin": 0.021360069513320923,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/98",
+      "position": 88,
+      "ar": {
+        "top_ids": [
+          5067,
+          1643,
+          2815
+        ],
+        "top_logits": [
+          15.375,
+          15.1875,
+          14.9375
+        ],
+        "top_probs": [
+          0.1927402913570404,
+          0.15978731215000153,
+          0.12444248795509338
+        ],
+        "top2_probability_margin": 0.03295297920703888,
+        "top1_logit_margin": 0.1875,
+        "argmax": 5067
+      },
+      "loopahead": {
+        "top_ids": [
+          5067,
+          1643,
+          2815
+        ],
+        "top_logits": [
+          15.3125,
+          15.3125,
+          14.875
+        ],
+        "top_probs": [
+          0.17728888988494873,
+          0.17728888988494873,
+          0.11446630954742432
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1643
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/132",
+      "position": 97,
+      "ar": {
+        "top_ids": [
+          13942,
+          10681,
+          5895
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          18.0
+        ],
+        "top_probs": [
+          0.14291971921920776,
+          0.1261262148618698,
+          0.1261262148618698
+        ],
+        "top2_probability_margin": 0.01679350435733795,
+        "top1_logit_margin": 0.125,
+        "argmax": 13942
+      },
+      "loopahead": {
+        "top_ids": [
+          10681,
+          13942,
+          919
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          17.875
+        ],
+        "top_probs": [
+          0.14596349000930786,
+          0.12881232798099518,
+          0.11367648094892502
+        ],
+        "top2_probability_margin": 0.017151162028312683,
+        "top1_logit_margin": 0.125,
+        "argmax": 10681
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/174",
+      "position": 6,
+      "ar": {
+        "top_ids": [
+          1523,
+          650,
+          260
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          15.625
+        ],
+        "top_probs": [
+          0.334384948015213,
+          0.334384948015213,
+          0.17898337543010712
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 650
+      },
+      "loopahead": {
+        "top_ids": [
+          1523,
+          650,
+          260
+        ],
+        "top_logits": [
+          16.25,
+          16.125,
+          15.5
+        ],
+        "top_probs": [
+          0.3583046793937683,
+          0.3162027895450592,
+          0.16925115883350372
+        ],
+        "top2_probability_margin": 0.042101889848709106,
+        "top1_logit_margin": 0.125,
+        "argmax": 1523
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/309",
+      "position": 93,
+      "ar": {
+        "top_ids": [
+          1092,
+          30,
+          284
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          13.6875
+        ],
+        "top_probs": [
+          0.5294286012649536,
+          0.46721911430358887,
+          0.0010879534529522061
+        ],
+        "top2_probability_margin": 0.062209486961364746,
+        "top1_logit_margin": 0.125,
+        "argmax": 1092
+      },
+      "loopahead": {
+        "top_ids": [
+          1092,
+          30,
+          284
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          13.75
+        ],
+        "top_probs": [
+          0.4981814920902252,
+          0.4981814920902252,
+          0.0012348685413599014
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/139",
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          28,
+          24,
+          1002
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          17.25
+        ],
+        "top_probs": [
+          0.39903029799461365,
+          0.35214298963546753,
+          0.21358554065227509
+        ],
+        "top2_probability_margin": 0.04688730835914612,
+        "top1_logit_margin": 0.125,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          28,
+          24,
+          1002
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          17.25
+        ],
+        "top_probs": [
+          0.36948293447494507,
+          0.36948293447494507,
+          0.22410272061824799
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 24
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/147",
+      "position": 7,
+      "ar": {
+        "top_ids": [
+          736,
+          281,
+          314
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          16.75
+        ],
+        "top_probs": [
+          0.4698157012462616,
+          0.4698157012462616,
+          0.04951820895075798
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 281
+      },
+      "loopahead": {
+        "top_ids": [
+          736,
+          281,
+          314
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          16.625
+        ],
+        "top_probs": [
+          0.5003387331962585,
+          0.4415473937988281,
+          0.04653875157237053
+        ],
+        "top2_probability_margin": 0.05879133939743042,
+        "top1_logit_margin": 0.125,
+        "argmax": 736
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/543",
+      "position": 84,
+      "ar": {
+        "top_ids": [
+          1216,
+          378,
+          13657
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          18.625
+        ],
+        "top_probs": [
+          0.36117690801620483,
+          0.36117690801620483,
+          0.219064861536026
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 378
+      },
+      "loopahead": {
+        "top_ids": [
+          1216,
+          378,
+          13657
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          18.5
+        ],
+        "top_probs": [
+          0.38892605900764465,
+          0.34322604537010193,
+          0.2081771343946457
+        ],
+        "top2_probability_margin": 0.045700013637542725,
+        "top1_logit_margin": 0.125,
+        "argmax": 1216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/225",
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          19426,
+          11807,
+          7313
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          17.0
+        ],
+        "top_probs": [
+          0.46469783782958984,
+          0.46469783782958984,
+          0.029707137495279312
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 11807
+      },
+      "loopahead": {
+        "top_ids": [
+          19426,
+          11807,
+          7313
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          17.125
+        ],
+        "top_probs": [
+          0.4934482276439667,
+          0.4354665279388428,
+          0.031545087695121765
+        ],
+        "top2_probability_margin": 0.0579816997051239,
+        "top1_logit_margin": 0.125,
+        "argmax": 19426
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/121",
+      "position": 69,
+      "ar": {
+        "top_ids": [
+          41048,
+          26497,
+          24
+        ],
+        "top_logits": [
+          23.5,
+          23.5,
+          18.875
+        ],
+        "top_probs": [
+          0.49564236402511597,
+          0.49564236402511597,
+          0.004859107080847025
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 26497
+      },
+      "loopahead": {
+        "top_ids": [
+          41048,
+          26497,
+          24
+        ],
+        "top_logits": [
+          23.625,
+          23.375,
+          19.0
+        ],
+        "top_probs": [
+          0.556956946849823,
+          0.4337584972381592,
+          0.005460213869810104
+        ],
+        "top2_probability_margin": 0.12319844961166382,
+        "top1_logit_margin": 0.25,
+        "argmax": 41048
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/148",
+      "position": 359,
+      "ar": {
+        "top_ids": [
+          656,
+          288,
+          327
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          20.0
+        ],
+        "top_probs": [
+          0.3009861409664154,
+          0.3009861409664154,
+          0.18255732953548431
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 288
+      },
+      "loopahead": {
+        "top_ids": [
+          656,
+          288,
+          327
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          20.125
+        ],
+        "top_probs": [
+          0.31494003534317017,
+          0.27793359756469727,
+          0.19102078676223755
+        ],
+        "top2_probability_margin": 0.0370064377784729,
+        "top1_logit_margin": 0.125,
+        "argmax": 656
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/261",
+      "position": 7,
+      "ar": {
+        "top_ids": [
+          314,
+          28,
+          553
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          18.25
+        ],
+        "top_probs": [
+          0.3788697123527527,
+          0.3788697123527527,
+          0.20279434323310852
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          314,
+          28,
+          553
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.25
+        ],
+        "top_probs": [
+          0.39649325609207153,
+          0.34990406036376953,
+          0.21222756803035736
+        ],
+        "top2_probability_margin": 0.046589195728302,
+        "top1_logit_margin": 0.125,
+        "argmax": 314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/241",
+      "position": 59,
+      "ar": {
+        "top_ids": [
+          418,
+          28,
+          281
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.625
+        ],
+        "top_probs": [
+          0.2917133569717407,
+          0.2574361264705658,
+          0.156142920255661
+        ],
+        "top2_probability_margin": 0.03427723050117493,
+        "top1_logit_margin": 0.125,
+        "argmax": 418
+      },
+      "loopahead": {
+        "top_ids": [
+          418,
+          28,
+          281
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.625
+        ],
+        "top_probs": [
+          0.26785701513290405,
+          0.26785701513290405,
+          0.1624635010957718
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/97",
+      "position": 53,
+      "ar": {
+        "top_ids": [
+          2967,
+          357,
+          11318
+        ],
+        "top_logits": [
+          23.375,
+          23.25,
+          20.0
+        ],
+        "top_probs": [
+          0.5156416296958923,
+          0.45505213737487793,
+          0.017644286155700684
+        ],
+        "top2_probability_margin": 0.060589492321014404,
+        "top1_logit_margin": 0.125,
+        "argmax": 2967
+      },
+      "loopahead": {
+        "top_ids": [
+          2967,
+          357,
+          11318
+        ],
+        "top_logits": [
+          23.375,
+          23.375,
+          20.0
+        ],
+        "top_probs": [
+          0.48620545864105225,
+          0.48620545864105225,
+          0.016637036576867104
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 357
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/394",
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          365,
+          30,
+          28
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          15.8125
+        ],
+        "top_probs": [
+          0.5151643753051758,
+          0.454630970954895,
+          0.027302712202072144
+        ],
+        "top2_probability_margin": 0.06053340435028076,
+        "top1_logit_margin": 0.125,
+        "argmax": 365
+      },
+      "loopahead": {
+        "top_ids": [
+          365,
+          30,
+          28
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          15.8125
+        ],
+        "top_probs": [
+          0.485750675201416,
+          0.485750675201416,
+          0.025743842124938965
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/242",
+      "position": 32,
+      "ar": {
+        "top_ids": [
+          1478,
+          1379,
+          7193
+        ],
+        "top_logits": [
+          21.5,
+          21.5,
+          18.25
+        ],
+        "top_probs": [
+          0.48638662695884705,
+          0.48638662695884705,
+          0.01885925605893135
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1379
+      },
+      "loopahead": {
+        "top_ids": [
+          1478,
+          1379,
+          7193
+        ],
+        "top_logits": [
+          21.625,
+          21.5,
+          18.375
+        ],
+        "top_probs": [
+          0.5163848400115967,
+          0.45570799708366394,
+          0.02002241276204586
+        ],
+        "top2_probability_margin": 0.06067684292793274,
+        "top1_logit_margin": 0.125,
+        "argmax": 1478
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/126",
+      "position": 161,
+      "ar": {
+        "top_ids": [
+          411,
+          351,
+          418
+        ],
+        "top_logits": [
+          21.125,
+          21.0,
+          18.875
+        ],
+        "top_probs": [
+          0.4972553253173828,
+          0.4388262927532196,
+          0.05241032689809799
+        ],
+        "top2_probability_margin": 0.05842903256416321,
+        "top1_logit_margin": 0.125,
+        "argmax": 411
+      },
+      "loopahead": {
+        "top_ids": [
+          411,
+          351,
+          418
+        ],
+        "top_logits": [
+          21.125,
+          21.125,
+          18.875
+        ],
+        "top_probs": [
+          0.4698604345321655,
+          0.4698604345321655,
+          0.049522921442985535
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 351
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/197",
+      "position": 44,
+      "ar": {
+        "top_ids": [
+          1971,
+          1828,
+          8527
+        ],
+        "top_logits": [
+          14.375,
+          14.3125,
+          13.8125
+        ],
+        "top_probs": [
+          0.11460357904434204,
+          0.10766009986400604,
+          0.0652991458773613
+        ],
+        "top2_probability_margin": 0.0069434791803359985,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1971
+      },
+      "loopahead": {
+        "top_ids": [
+          1971,
+          1828,
+          8527
+        ],
+        "top_logits": [
+          14.375,
+          14.375,
+          13.8125
+        ],
+        "top_probs": [
+          0.11360199749469757,
+          0.11360199749469757,
+          0.06472846865653992
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1828
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/397",
+      "position": 47,
+      "ar": {
+        "top_ids": [
+          1953,
+          1891,
+          2498
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          17.5
+        ],
+        "top_probs": [
+          0.4201110601425171,
+          0.3707467019557953,
+          0.073004350066185
+        ],
+        "top2_probability_margin": 0.0493643581867218,
+        "top1_logit_margin": 0.125,
+        "argmax": 1953
+      },
+      "loopahead": {
+        "top_ids": [
+          1953,
+          1891,
+          2498
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          17.5
+        ],
+        "top_probs": [
+          0.40027111768722534,
+          0.40027111768722534,
+          0.06955668330192566
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1891
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/294",
+      "position": 130,
+      "ar": {
+        "top_ids": [
+          637,
+          378,
+          198
+        ],
+        "top_logits": [
+          15.75,
+          15.6875,
+          15.625
+        ],
+        "top_probs": [
+          0.2515729069709778,
+          0.23633089661598206,
+          0.22201232612133026
+        ],
+        "top2_probability_margin": 0.015242010354995728,
+        "top1_logit_margin": 0.0625,
+        "argmax": 637
+      },
+      "loopahead": {
+        "top_ids": [
+          637,
+          198,
+          378
+        ],
+        "top_logits": [
+          15.75,
+          15.75,
+          15.6875
+        ],
+        "top_probs": [
+          0.24414490163326263,
+          0.24414490163326263,
+          0.2293529212474823
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/127",
+      "position": 111,
+      "ar": {
+        "top_ids": [
+          260,
+          253,
+          827
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          18.375
+        ],
+        "top_probs": [
+          0.5027642250061035,
+          0.4436878561973572,
+          0.04676435515284538
+        ],
+        "top2_probability_margin": 0.05907636880874634,
+        "top1_logit_margin": 0.125,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          260,
+          253,
+          827
+        ],
+        "top_logits": [
+          20.75,
+          20.75,
+          18.5
+        ],
+        "top_probs": [
+          0.4716419577598572,
+          0.4716419577598572,
+          0.04971069470047951
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/455",
+      "position": 35,
+      "ar": {
+        "top_ids": [
+          1672,
+          282,
+          48126
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          15.6875
+        ],
+        "top_probs": [
+          0.39887523651123047,
+          0.39887523651123047,
+          0.0651145949959755
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 282
+      },
+      "loopahead": {
+        "top_ids": [
+          1672,
+          282,
+          48126
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          15.8125
+        ],
+        "top_probs": [
+          0.41895052790641785,
+          0.36972254514694214,
+          0.07749805599451065
+        ],
+        "top2_probability_margin": 0.04922798275947571,
+        "top1_logit_margin": 0.125,
+        "argmax": 1672
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/395",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          15693,
+          9979,
+          8992
+        ],
+        "top_logits": [
+          11.75,
+          11.75,
+          11.0
+        ],
+        "top_probs": [
+          0.12671791017055511,
+          0.12671791017055511,
+          0.059857308864593506
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 9979
+      },
+      "loopahead": {
+        "top_ids": [
+          15693,
+          9979,
+          8992
+        ],
+        "top_logits": [
+          11.8125,
+          11.6875,
+          11.0
+        ],
+        "top_probs": [
+          0.13555607199668884,
+          0.11962781846523285,
+          0.06015264615416527
+        ],
+        "top2_probability_margin": 0.015928253531455994,
+        "top1_logit_margin": 0.125,
+        "argmax": 15693
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/285",
+      "position": 14,
+      "ar": {
+        "top_ids": [
+          1675,
+          327,
+          28
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          19.125
+        ],
+        "top_probs": [
+          0.3057762384414673,
+          0.2698465883731842,
+          0.23813877999782562
+        ],
+        "top2_probability_margin": 0.03592965006828308,
+        "top1_logit_margin": 0.125,
+        "argmax": 1675
+      },
+      "loopahead": {
+        "top_ids": [
+          327,
+          1675,
+          28
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          19.25
+        ],
+        "top_probs": [
+          0.2964169383049011,
+          0.2615870237350464,
+          0.2615870237350464
+        ],
+        "top2_probability_margin": 0.034829914569854736,
+        "top1_logit_margin": 0.125,
+        "argmax": 327
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/320",
+      "position": 46,
+      "ar": {
+        "top_ids": [
+          624,
+          47117,
+          260
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          16.875
+        ],
+        "top_probs": [
+          0.2667447328567505,
+          0.23540140688419342,
+          0.23540140688419342
+        ],
+        "top2_probability_margin": 0.03134332597255707,
+        "top1_logit_margin": 0.125,
+        "argmax": 624
+      },
+      "loopahead": {
+        "top_ids": [
+          47117,
+          624,
+          260
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          16.875
+        ],
+        "top_probs": [
+          0.24328704178333282,
+          0.24328704178333282,
+          0.24328704178333282
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/313",
+      "position": 141,
+      "ar": {
+        "top_ids": [
+          1423,
+          1249,
+          378
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          15.5
+        ],
+        "top_probs": [
+          0.43145105242729187,
+          0.43145105242729187,
+          0.04547460377216339
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1249
+      },
+      "loopahead": {
+        "top_ids": [
+          1423,
+          1249,
+          378
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          15.5625
+        ],
+        "top_probs": [
+          0.4594709575176239,
+          0.4054816961288452,
+          0.04549378529191017
+        ],
+        "top2_probability_margin": 0.053989261388778687,
+        "top1_logit_margin": 0.125,
+        "argmax": 1423
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/300",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          637,
+          476,
+          760
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          11.875
+        ],
+        "top_probs": [
+          0.4992178976535797,
+          0.4992178976535797,
+          0.00018976719002239406
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 476
+      },
+      "loopahead": {
+        "top_ids": [
+          637,
+          476,
+          760
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          11.875
+        ],
+        "top_probs": [
+          0.530338704586029,
+          0.46802225708961487,
+          0.00020159711129963398
+        ],
+        "top2_probability_margin": 0.062316447496414185,
+        "top1_logit_margin": 0.125,
+        "argmax": 637
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/512",
+      "position": 20,
+      "ar": {
+        "top_ids": [
+          260,
+          253,
+          3807
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          16.625
+        ],
+        "top_probs": [
+          0.47712892293930054,
+          0.47712892293930054,
+          0.018500296398997307
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "loopahead": {
+        "top_ids": [
+          260,
+          253,
+          3807
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          16.625
+        ],
+        "top_probs": [
+          0.5085961818695068,
+          0.44883453845977783,
+          0.01740320213139057
+        ],
+        "top2_probability_margin": 0.059761643409729004,
+        "top1_logit_margin": 0.125,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/319",
+      "position": 9,
+      "ar": {
+        "top_ids": [
+          12353,
+          283,
+          48544
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          18.125
+        ],
+        "top_probs": [
+          0.37300100922584534,
+          0.37300100922584534,
+          0.1554899513721466
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 283
+      },
+      "loopahead": {
+        "top_ids": [
+          12353,
+          283,
+          48544
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          18.25
+        ],
+        "top_probs": [
+          0.3801274299621582,
+          0.335461288690567,
+          0.17955948412418365
+        ],
+        "top2_probability_margin": 0.044666141271591187,
+        "top1_logit_margin": 0.125,
+        "argmax": 12353
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/422",
+      "position": 96,
+      "ar": {
+        "top_ids": [
+          6219,
+          1867,
+          3403
+        ],
+        "top_logits": [
+          19.5,
+          19.5,
+          19.375
+        ],
+        "top_probs": [
+          0.24452097713947296,
+          0.24452097713947296,
+          0.21578900516033173
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1867
+      },
+      "loopahead": {
+        "top_ids": [
+          3403,
+          1867,
+          1596
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          19.375
+        ],
+        "top_probs": [
+          0.22344917058944702,
+          0.22344917058944702,
+          0.22344917058944702
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1596
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/152",
+      "position": 162,
+      "ar": {
+        "top_ids": [
+          17710,
+          3435,
+          38033
+        ],
+        "top_logits": [
+          22.0,
+          21.875,
+          18.0
+        ],
+        "top_probs": [
+          0.5204682946205139,
+          0.45931166410446167,
+          0.00953270960599184
+        ],
+        "top2_probability_margin": 0.061156630516052246,
+        "top1_logit_margin": 0.125,
+        "argmax": 17710
+      },
+      "loopahead": {
+        "top_ids": [
+          17710,
+          3435,
+          38033
+        ],
+        "top_logits": [
+          22.0,
+          22.0,
+          18.0
+        ],
+        "top_probs": [
+          0.4904974400997162,
+          0.4904974400997162,
+          0.008983774110674858
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3435
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/297",
+      "position": 110,
+      "ar": {
+        "top_ids": [
+          12453,
+          1438,
+          9807
+        ],
+        "top_logits": [
+          16.25,
+          16.25,
+          16.125
+        ],
+        "top_probs": [
+          0.1609642654657364,
+          0.1609642654657364,
+          0.14205047488212585
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1438
+      },
+      "loopahead": {
+        "top_ids": [
+          12453,
+          1438,
+          9807
+        ],
+        "top_logits": [
+          16.375,
+          16.25,
+          16.125
+        ],
+        "top_probs": [
+          0.17743296921253204,
+          0.15658405423164368,
+          0.13818493485450745
+        ],
+        "top2_probability_margin": 0.020848914980888367,
+        "top1_logit_margin": 0.125,
+        "argmax": 12453
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/442",
+      "position": 225,
+      "ar": {
+        "top_ids": [
+          29288,
+          21350,
+          2931
+        ],
+        "top_logits": [
+          23.625,
+          23.5,
+          18.0
+        ],
+        "top_probs": [
+          0.5295563340187073,
+          0.46733182668685913,
+          0.0019098784541711211
+        ],
+        "top2_probability_margin": 0.062224507331848145,
+        "top1_logit_margin": 0.125,
+        "argmax": 29288
+      },
+      "loopahead": {
+        "top_ids": [
+          29288,
+          21350,
+          2931
+        ],
+        "top_logits": [
+          23.625,
+          23.625,
+          18.125
+        ],
+        "top_probs": [
+          0.49843457341194153,
+          0.49843457341194153,
+          0.0020369882695376873
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 21350
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/495",
+      "position": 34,
+      "ar": {
+        "top_ids": [
+          281,
+          30,
+          1535
+        ],
+        "top_logits": [
+          21.75,
+          21.625,
+          17.25
+        ],
+        "top_probs": [
+          0.5228123068809509,
+          0.4613802433013916,
+          0.005807920824736357
+        ],
+        "top2_probability_margin": 0.061432063579559326,
+        "top1_logit_margin": 0.125,
+        "argmax": 281
+      },
+      "loopahead": {
+        "top_ids": [
+          281,
+          30,
+          1535
+        ],
+        "top_logits": [
+          21.625,
+          21.625,
+          17.25
+        ],
+        "top_probs": [
+          0.49175772070884705,
+          0.49175772070884705,
+          0.0061903162859380245
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/456",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          18907,
+          416,
+          278
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          15.8125
+        ],
+        "top_probs": [
+          0.40164175629615784,
+          0.40164175629615784,
+          0.10810041427612305
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 416
+      },
+      "loopahead": {
+        "top_ids": [
+          18907,
+          416,
+          278
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          15.75
+        ],
+        "top_probs": [
+          0.4265458583831787,
+          0.3764254152774811,
+          0.1078476831316948
+        ],
+        "top2_probability_margin": 0.05012044310569763,
+        "top1_logit_margin": 0.125,
+        "argmax": 18907
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/393",
+      "position": 30,
+      "ar": {
+        "top_ids": [
+          1990,
+          4739,
+          1181
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          20.0
+        ],
+        "top_probs": [
+          0.23917140066623688,
+          0.2110680192708969,
+          0.2110680192708969
+        ],
+        "top2_probability_margin": 0.028103381395339966,
+        "top1_logit_margin": 0.125,
+        "argmax": 1990
+      },
+      "loopahead": {
+        "top_ids": [
+          1990,
+          1181,
+          4739
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          20.0
+        ],
+        "top_probs": [
+          0.2324836552143097,
+          0.2324836552143097,
+          0.20516610145568848
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1181
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/156",
+      "position": 98,
+      "ar": {
+        "top_ids": [
+          3159,
+          3043,
+          4559
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          19.375
+        ],
+        "top_probs": [
+          0.4089704751968384,
+          0.3609151840209961,
+          0.15045185387134552
+        ],
+        "top2_probability_margin": 0.048055291175842285,
+        "top1_logit_margin": 0.125,
+        "argmax": 3159
+      },
+      "loopahead": {
+        "top_ids": [
+          3159,
+          3043,
+          4559
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          19.375
+        ],
+        "top_probs": [
+          0.37930288910865784,
+          0.37930288910865784,
+          0.15811696648597717
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3043
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/531",
+      "position": 237,
+      "ar": {
+        "top_ids": [
+          553,
+          314,
+          416
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          16.0
+        ],
+        "top_probs": [
+          0.46624556183815,
+          0.46624556183815,
+          0.04336759075522423
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "loopahead": {
+        "top_ids": [
+          553,
+          314,
+          416
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          16.0
+        ],
+        "top_probs": [
+          0.49729979038238525,
+          0.4388655126094818,
+          0.04082085192203522
+        ],
+        "top2_probability_margin": 0.05843427777290344,
+        "top1_logit_margin": 0.125,
+        "argmax": 553
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/559",
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          34,
+          33,
+          35
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          16.875
+        ],
+        "top_probs": [
+          0.4680110812187195,
+          0.4130183160305023,
+          0.02991894632577896
+        ],
+        "top2_probability_margin": 0.05499276518821716,
+        "top1_logit_margin": 0.125,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          34,
+          33,
+          35
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          16.875
+        ],
+        "top_probs": [
+          0.4412485659122467,
+          0.4412485659122467,
+          0.02820807509124279
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/349",
+      "position": 11,
+      "ar": {
+        "top_ids": [
+          22787,
+          3636,
+          22338
+        ],
+        "top_logits": [
+          13.9375,
+          13.9375,
+          11.625
+        ],
+        "top_probs": [
+          0.3819725513458252,
+          0.3819725513458252,
+          0.03782040625810623
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3636
+      },
+      "loopahead": {
+        "top_ids": [
+          22787,
+          3636,
+          22338
+        ],
+        "top_logits": [
+          13.9375,
+          13.8125,
+          11.6875
+        ],
+        "top_probs": [
+          0.3989652395248413,
+          0.35208559036254883,
+          0.04205062612891197
+        ],
+        "top2_probability_margin": 0.04687964916229248,
+        "top1_logit_margin": 0.125,
+        "argmax": 22787
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/357",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          1431,
+          1423,
+          3361
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.5
+        ],
+        "top_probs": [
+          0.2537235915660858,
+          0.2537235915660858,
+          0.11985054612159729
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1423
+      },
+      "loopahead": {
+        "top_ids": [
+          1431,
+          1423,
+          3361
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          16.5
+        ],
+        "top_probs": [
+          0.2772839367389679,
+          0.24470221996307373,
+          0.11558914184570312
+        ],
+        "top2_probability_margin": 0.032581716775894165,
+        "top1_logit_margin": 0.125,
+        "argmax": 1431
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/291",
+      "position": 141,
+      "ar": {
+        "top_ids": [
+          6805,
+          1138,
+          216
+        ],
+        "top_logits": [
+          16.375,
+          16.25,
+          15.9375
+        ],
+        "top_probs": [
+          0.38321682810783386,
+          0.33818766474723816,
+          0.24742338061332703
+        ],
+        "top2_probability_margin": 0.0450291633605957,
+        "top1_logit_margin": 0.125,
+        "argmax": 6805
+      },
+      "loopahead": {
+        "top_ids": [
+          1138,
+          6805,
+          216
+        ],
+        "top_logits": [
+          16.5,
+          16.125,
+          16.0
+        ],
+        "top_probs": [
+          0.42214858531951904,
+          0.2901381850242615,
+          0.2560460567474365
+        ],
+        "top2_probability_margin": 0.13201040029525757,
+        "top1_logit_margin": 0.375,
+        "argmax": 1138
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/548",
+      "position": 104,
+      "ar": {
+        "top_ids": [
+          378,
+          198,
+          414
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          12.6875
+        ],
+        "top_probs": [
+          0.5200134515762329,
+          0.4589102268218994,
+          0.004226417280733585
+        ],
+        "top2_probability_margin": 0.061103224754333496,
+        "top1_logit_margin": 0.125,
+        "argmax": 378
+      },
+      "loopahead": {
+        "top_ids": [
+          378,
+          198,
+          414
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          12.5
+        ],
+        "top_probs": [
+          0.48923802375793457,
+          0.48923802375793457,
+          0.0037353781517595053
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/437",
+      "position": 136,
+      "ar": {
+        "top_ids": [
+          3346,
+          1042,
+          4110
+        ],
+        "top_logits": [
+          25.375,
+          25.25,
+          18.25
+        ],
+        "top_probs": [
+          0.5308985710144043,
+          0.4685163199901581,
+          0.00042723160004243255
+        ],
+        "top2_probability_margin": 0.062382251024246216,
+        "top1_logit_margin": 0.125,
+        "argmax": 3346
+      },
+      "loopahead": {
+        "top_ids": [
+          3346,
+          1042,
+          4110
+        ],
+        "top_logits": [
+          25.25,
+          25.25,
+          18.25
+        ],
+        "top_probs": [
+          0.49968603253364563,
+          0.49968603253364563,
+          0.0004556546628009528
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1042
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/87",
+      "position": 61,
+      "ar": {
+        "top_ids": [
+          7948,
+          378,
+          339
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.375
+        ],
+        "top_probs": [
+          0.46273335814476013,
+          0.4083607494831085,
+          0.08041099458932877
+        ],
+        "top2_probability_margin": 0.05437260866165161,
+        "top1_logit_margin": 0.125,
+        "argmax": 7948
+      },
+      "loopahead": {
+        "top_ids": [
+          7948,
+          378,
+          339
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          18.375
+        ],
+        "top_probs": [
+          0.4316001832485199,
+          0.4316001832485199,
+          0.084987111389637
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/145",
+      "position": 139,
+      "ar": {
+        "top_ids": [
+          3717,
+          1550,
+          378
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          19.875
+        ],
+        "top_probs": [
+          0.33040595054626465,
+          0.33040595054626465,
+          0.17685356736183167
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1550
+      },
+      "loopahead": {
+        "top_ids": [
+          3717,
+          1550,
+          378
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          19.875
+        ],
+        "top_probs": [
+          0.35881564021110535,
+          0.31665369868278503,
+          0.16949251294136047
+        ],
+        "top2_probability_margin": 0.04216194152832031,
+        "top1_logit_margin": 0.125,
+        "argmax": 3717
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/276",
+      "position": 59,
+      "ar": {
+        "top_ids": [
+          281,
+          28,
+          37557
+        ],
+        "top_logits": [
+          16.375,
+          16.25,
+          14.1875
+        ],
+        "top_probs": [
+          0.46016615629196167,
+          0.4060952067375183,
+          0.0516292080283165
+        ],
+        "top2_probability_margin": 0.05407094955444336,
+        "top1_logit_margin": 0.125,
+        "argmax": 281
+      },
+      "loopahead": {
+        "top_ids": [
+          281,
+          28,
+          37557
+        ],
+        "top_logits": [
+          16.375,
+          16.375,
+          14.25
+        ],
+        "top_probs": [
+          0.43469077348709106,
+          0.43469077348709106,
+          0.05191641300916672
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/526",
+      "position": 44,
+      "ar": {
+        "top_ids": [
+          41893,
+          378,
+          198
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          14.9375
+        ],
+        "top_probs": [
+          0.36330318450927734,
+          0.32061392068862915,
+          0.05233879014849663
+        ],
+        "top2_probability_margin": 0.04268926382064819,
+        "top1_logit_margin": 0.125,
+        "argmax": 41893
+      },
+      "loopahead": {
+        "top_ids": [
+          41893,
+          378,
+          198
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          14.875
+        ],
+        "top_probs": [
+          0.34024494886398315,
+          0.34024494886398315,
+          0.05217825621366501
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 378
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/335",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          378,
+          198,
+          657
+        ],
+        "top_logits": [
+          15.5625,
+          15.5,
+          15.0
+        ],
+        "top_probs": [
+          0.2484576553106308,
+          0.23340436816215515,
+          0.14156688749790192
+        ],
+        "top2_probability_margin": 0.015053287148475647,
+        "top1_logit_margin": 0.0625,
+        "argmax": 378
+      },
+      "loopahead": {
+        "top_ids": [
+          378,
+          198,
+          657
+        ],
+        "top_logits": [
+          15.5625,
+          15.5625,
+          15.0
+        ],
+        "top_probs": [
+          0.24480055272579193,
+          0.24480055272579193,
+          0.13948313891887665
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/151",
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          365,
+          28,
+          314
+        ],
+        "top_logits": [
+          19.5,
+          19.375,
+          17.75
+        ],
+        "top_probs": [
+          0.45844849944114685,
+          0.40457937121391296,
+          0.07966639846563339
+        ],
+        "top2_probability_margin": 0.05386912822723389,
+        "top1_logit_margin": 0.125,
+        "argmax": 365
+      },
+      "loopahead": {
+        "top_ids": [
+          365,
+          28,
+          314
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          17.75
+        ],
+        "top_probs": [
+          0.4275442063808441,
+          0.4275442063808441,
+          0.08418843895196915
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/103",
+      "position": 158,
+      "ar": {
+        "top_ids": [
+          198,
+          38,
+          2
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          14.6875
+        ],
+        "top_probs": [
+          0.5269604325294495,
+          0.465040922164917,
+          0.007061273790895939
+        ],
+        "top2_probability_margin": 0.06191951036453247,
+        "top1_logit_margin": 0.125,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          198,
+          38,
+          2
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          14.625
+        ],
+        "top_probs": [
+          0.4959608316421509,
+          0.4959608316421509,
+          0.007074500899761915
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 38
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/159",
+      "position": 174,
+      "ar": {
+        "top_ids": [
+          1036,
+          357,
+          18563
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          16.5
+        ],
+        "top_probs": [
+          0.4112934172153473,
+          0.4112934172153473,
+          0.07147207111120224
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 357
+      },
+      "loopahead": {
+        "top_ids": [
+          1036,
+          357,
+          18563
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          16.625
+        ],
+        "top_probs": [
+          0.4299301505088806,
+          0.3794120252132416,
+          0.08465826511383057
+        ],
+        "top2_probability_margin": 0.05051812529563904,
+        "top1_logit_margin": 0.125,
+        "argmax": 1036
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/155",
+      "position": 35,
+      "ar": {
+        "top_ids": [
+          4308,
+          3525,
+          597
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          18.375
+        ],
+        "top_probs": [
+          0.3138345181941986,
+          0.27695798873901367,
+          0.1308256983757019
+        ],
+        "top2_probability_margin": 0.036876529455184937,
+        "top1_logit_margin": 0.125,
+        "argmax": 4308
+      },
+      "loopahead": {
+        "top_ids": [
+          4308,
+          3525,
+          597
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          18.375
+        ],
+        "top_probs": [
+          0.2907150089740753,
+          0.2907150089740753,
+          0.13732405006885529
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3525
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/274",
+      "position": 124,
+      "ar": {
+        "top_ids": [
+          284,
+          28,
+          30
+        ],
+        "top_logits": [
+          20.25,
+          20.125,
+          14.1875
+        ],
+        "top_probs": [
+          0.5295819044113159,
+          0.4673543870449066,
+          0.0012331695761531591
+        ],
+        "top2_probability_margin": 0.0622275173664093,
+        "top1_logit_margin": 0.125,
+        "argmax": 284
+      },
+      "loopahead": {
+        "top_ids": [
+          284,
+          28,
+          30
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          14.1875
+        ],
+        "top_probs": [
+          0.49853232502937317,
+          0.49853232502937317,
+          0.0011608684435486794
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/85",
+      "position": 27,
+      "ar": {
+        "top_ids": [
+          553,
+          314,
+          28098
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          16.625
+        ],
+        "top_probs": [
+          0.4826630651950836,
+          0.4826630651950836,
+          0.0165158212184906
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "loopahead": {
+        "top_ids": [
+          553,
+          314,
+          28098
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          16.625
+        ],
+        "top_probs": [
+          0.5139685869216919,
+          0.45357567071914673,
+          0.015520506538450718
+        ],
+        "top2_probability_margin": 0.060392916202545166,
+        "top1_logit_margin": 0.125,
+        "argmax": 553
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/83",
+      "position": 57,
+      "ar": {
+        "top_ids": [
+          7948,
+          198,
+          6762
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          19.375
+        ],
+        "top_probs": [
+          0.22695598006248474,
+          0.22695598006248474,
+          0.17675349116325378
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          7948,
+          198,
+          6762
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          19.375
+        ],
+        "top_probs": [
+          0.2510930001735687,
+          0.22158879041671753,
+          0.1725735366344452
+        ],
+        "top2_probability_margin": 0.029504209756851196,
+        "top1_logit_margin": 0.125,
+        "argmax": 7948
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/296",
+      "position": 54,
+      "ar": {
+        "top_ids": [
+          9817,
+          5649,
+          637
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          17.875
+        ],
+        "top_probs": [
+          0.3052677512168884,
+          0.3052677512168884,
+          0.20980724692344666
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 5649
+      },
+      "loopahead": {
+        "top_ids": [
+          9817,
+          5649,
+          637
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.875
+        ],
+        "top_probs": [
+          0.3121701776981354,
+          0.2754892110824585,
+          0.21455121040344238
+        ],
+        "top2_probability_margin": 0.03668096661567688,
+        "top1_logit_margin": 0.125,
+        "argmax": 9817
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/255",
+      "position": 32,
+      "ar": {
+        "top_ids": [
+          11160,
+          2498,
+          7452
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          17.125
+        ],
+        "top_probs": [
+          0.2245829552412033,
+          0.2245829552412033,
+          0.19819375872612
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2498
+      },
+      "loopahead": {
+        "top_ids": [
+          11160,
+          2498,
+          7452
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          17.125
+        ],
+        "top_probs": [
+          0.24760903418064117,
+          0.21851420402526855,
+          0.19283811748027802
+        ],
+        "top2_probability_margin": 0.02909483015537262,
+        "top1_logit_margin": 0.125,
+        "argmax": 11160
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/307",
+      "position": 132,
+      "ar": {
+        "top_ids": [
+          2015,
+          198,
+          3550
+        ],
+        "top_logits": [
+          15.25,
+          15.1875,
+          14.375
+        ],
+        "top_probs": [
+          0.2521076500415802,
+          0.23683321475982666,
+          0.10509409755468369
+        ],
+        "top2_probability_margin": 0.01527443528175354,
+        "top1_logit_margin": 0.0625,
+        "argmax": 2015
+      },
+      "loopahead": {
+        "top_ids": [
+          2015,
+          198,
+          3550
+        ],
+        "top_logits": [
+          15.25,
+          15.25,
+          14.3125
+        ],
+        "top_probs": [
+          0.2495564967393875,
+          0.2495564967393875,
+          0.09772772341966629
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/426",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          13739,
+          592,
+          359
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          17.0
+        ],
+        "top_probs": [
+          0.37786945700645447,
+          0.33346861600875854,
+          0.2291894108057022
+        ],
+        "top2_probability_margin": 0.04440084099769592,
+        "top1_logit_margin": 0.125,
+        "argmax": 13739
+      },
+      "loopahead": {
+        "top_ids": [
+          13739,
+          592,
+          359
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          17.0
+        ],
+        "top_probs": [
+          0.34908413887023926,
+          0.34908413887023926,
+          0.23992179334163666
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 592
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/109",
+      "position": 126,
+      "ar": {
+        "top_ids": [
+          18778,
+          645,
+          585
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          18.125
+        ],
+        "top_probs": [
+          0.3207188546657562,
+          0.3207188546657562,
+          0.17166844010353088
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 645
+      },
+      "loopahead": {
+        "top_ids": [
+          18778,
+          645,
+          585
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          18.0
+        ],
+        "top_probs": [
+          0.35544347763061523,
+          0.31367775797843933,
+          0.14817087352275848
+        ],
+        "top2_probability_margin": 0.0417657196521759,
+        "top1_logit_margin": 0.125,
+        "argmax": 18778
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/86",
+      "position": 138,
+      "ar": {
+        "top_ids": [
+          4508,
+          1818,
+          1337
+        ],
+        "top_logits": [
+          14.4375,
+          14.375,
+          14.375
+        ],
+        "top_probs": [
+          0.12408850342035294,
+          0.1165703609585762,
+          0.1165703609585762
+        ],
+        "top2_probability_margin": 0.007518142461776733,
+        "top1_logit_margin": 0.0625,
+        "argmax": 4508
+      },
+      "loopahead": {
+        "top_ids": [
+          4508,
+          1818,
+          1337
+        ],
+        "top_logits": [
+          14.375,
+          14.375,
+          14.375
+        ],
+        "top_probs": [
+          0.118973508477211,
+          0.118973508477211,
+          0.118973508477211
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1337
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/491",
+      "position": 6,
+      "ar": {
+        "top_ids": [
+          1576,
+          963,
+          10848
+        ],
+        "top_logits": [
+          23.25,
+          23.125,
+          22.625
+        ],
+        "top_probs": [
+          0.39305949211120605,
+          0.34687379002571106,
+          0.21038959920406342
+        ],
+        "top2_probability_margin": 0.046185702085494995,
+        "top1_logit_margin": 0.125,
+        "argmax": 1576
+      },
+      "loopahead": {
+        "top_ids": [
+          963,
+          1576,
+          10848
+        ],
+        "top_logits": [
+          23.25,
+          23.125,
+          22.625
+        ],
+        "top_probs": [
+          0.3930760622024536,
+          0.34688839316368103,
+          0.21039846539497375
+        ],
+        "top2_probability_margin": 0.04618766903877258,
+        "top1_logit_margin": 0.125,
+        "argmax": 963
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "specbench/302",
+      "position": 37,
+      "ar": {
+        "top_ids": [
+          15090,
+          6372,
+          378
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          17.625
+        ],
+        "top_probs": [
+          0.355783075094223,
+          0.355783075094223,
+          0.1904369741678238
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 6372
+      },
+      "loopahead": {
+        "top_ids": [
+          15090,
+          6372,
+          378
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.5
+        ],
+        "top_probs": [
+          0.3812158703804016,
+          0.33642181754112244,
+          0.18007363379001617
+        ],
+        "top2_probability_margin": 0.044794052839279175,
+        "top1_logit_margin": 0.125,
+        "argmax": 15090
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/477",
+      "position": 55,
+      "ar": {
+        "top_ids": [
+          30,
+          28,
+          284
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          18.875
+        ],
+        "top_probs": [
+          0.32809963822364807,
+          0.32809963822364807,
+          0.2895469069480896
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          30,
+          284,
+          28
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          18.875
+        ],
+        "top_probs": [
+          0.341448575258255,
+          0.30132728815078735,
+          0.30132728815078735
+        ],
+        "top2_probability_margin": 0.04012128710746765,
+        "top1_logit_margin": 0.125,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/267",
+      "position": 133,
+      "ar": {
+        "top_ids": [
+          597,
+          506,
+          314
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          18.625
+        ],
+        "top_probs": [
+          0.43677854537963867,
+          0.3854556977748871,
+          0.07590072602033615
+        ],
+        "top2_probability_margin": 0.05132284760475159,
+        "top1_logit_margin": 0.125,
+        "argmax": 597
+      },
+      "loopahead": {
+        "top_ids": [
+          597,
+          506,
+          314
+        ],
+        "top_logits": [
+          20.375,
+          20.375,
+          18.75
+        ],
+        "top_probs": [
+          0.4114028215408325,
+          0.4114028215408325,
+          0.08101001381874084
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 506
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/146",
+      "position": 146,
+      "ar": {
+        "top_ids": [
+          2779,
+          260,
+          2099
+        ],
+        "top_logits": [
+          16.625,
+          16.625,
+          15.0625
+        ],
+        "top_probs": [
+          0.25407880544662476,
+          0.25407880544662476,
+          0.053257811814546585
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "loopahead": {
+        "top_ids": [
+          2779,
+          260,
+          2099
+        ],
+        "top_logits": [
+          16.625,
+          16.5,
+          15.125
+        ],
+        "top_probs": [
+          0.261688768863678,
+          0.23093952238559723,
+          0.05839065834879875
+        ],
+        "top2_probability_margin": 0.03074924647808075,
+        "top1_logit_margin": 0.125,
+        "argmax": 2779
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/177",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          338,
+          28,
+          3297
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          15.75
+        ],
+        "top_probs": [
+          0.4674307107925415,
+          0.4674307107925415,
+          0.02988184429705143
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          338,
+          28,
+          3297
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          15.75
+        ],
+        "top_probs": [
+          0.4984839856624603,
+          0.43991056084632874,
+          0.028122542425990105
+        ],
+        "top2_probability_margin": 0.05857342481613159,
+        "top1_logit_margin": 0.125,
+        "argmax": 338
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/502",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          506,
+          284,
+          347
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          16.5
+        ],
+        "top_probs": [
+          0.4933004677295685,
+          0.4933004677295685,
+          0.009035113267600536
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 284
+      },
+      "loopahead": {
+        "top_ids": [
+          506,
+          284,
+          347
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          16.5
+        ],
+        "top_probs": [
+          0.523775041103363,
+          0.4622298777103424,
+          0.009593275375664234
+        ],
+        "top2_probability_margin": 0.06154516339302063,
+        "top1_logit_margin": 0.125,
+        "argmax": 506
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/123",
+      "position": 79,
+      "ar": {
+        "top_ids": [
+          13046,
+          96,
+          584
+        ],
+        "top_logits": [
+          21.875,
+          21.75,
+          19.75
+        ],
+        "top_probs": [
+          0.44475698471069336,
+          0.39249667525291443,
+          0.05311864987015724
+        ],
+        "top2_probability_margin": 0.05226030945777893,
+        "top1_logit_margin": 0.125,
+        "argmax": 13046
+      },
+      "loopahead": {
+        "top_ids": [
+          13046,
+          96,
+          584
+        ],
+        "top_logits": [
+          21.75,
+          21.75,
+          19.75
+        ],
+        "top_probs": [
+          0.4132707715034485,
+          0.4132707715034485,
+          0.05593011528253555
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 96
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/474",
+      "position": 134,
+      "ar": {
+        "top_ids": [
+          20391,
+          338,
+          28
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          16.75
+        ],
+        "top_probs": [
+          0.3965548872947693,
+          0.3965548872947693,
+          0.11361487954854965
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 338
+      },
+      "loopahead": {
+        "top_ids": [
+          20391,
+          338,
+          28
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          16.75
+        ],
+        "top_probs": [
+          0.4151531457901001,
+          0.36637136340141296,
+          0.11894337832927704
+        ],
+        "top2_probability_margin": 0.048781782388687134,
+        "top1_logit_margin": 0.125,
+        "argmax": 20391
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/82",
+      "position": 132,
+      "ar": {
+        "top_ids": [
+          38045,
+          77,
+          1750
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          18.0
+        ],
+        "top_probs": [
+          0.477642297744751,
+          0.477642297744751,
+          0.03920726478099823
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 77
+      },
+      "loopahead": {
+        "top_ids": [
+          38045,
+          77,
+          1750
+        ],
+        "top_logits": [
+          20.5,
+          20.375,
+          17.75
+        ],
+        "top_probs": [
+          0.5109647512435913,
+          0.4509247839450836,
+          0.03266488015651703
+        ],
+        "top2_probability_margin": 0.06003996729850769,
+        "top1_logit_margin": 0.125,
+        "argmax": 38045
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/96",
+      "position": 76,
+      "ar": {
+        "top_ids": [
+          346,
+          260,
+          253
+        ],
+        "top_logits": [
+          21.25,
+          21.125,
+          19.75
+        ],
+        "top_probs": [
+          0.44082245230674744,
+          0.38902443647384644,
+          0.09836078435182571
+        ],
+        "top2_probability_margin": 0.051798015832901,
+        "top1_logit_margin": 0.125,
+        "argmax": 346
+      },
+      "loopahead": {
+        "top_ids": [
+          346,
+          260,
+          253
+        ],
+        "top_logits": [
+          21.25,
+          21.25,
+          19.75
+        ],
+        "top_probs": [
+          0.4190880060195923,
+          0.4190880060195923,
+          0.0935111790895462
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/311",
+      "position": 288,
+      "ar": {
+        "top_ids": [
+          18706,
+          7127,
+          2437
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          18.875
+        ],
+        "top_probs": [
+          0.31169113516807556,
+          0.27506646513938904,
+          0.18905024230480194
+        ],
+        "top2_probability_margin": 0.03662467002868652,
+        "top1_logit_margin": 0.125,
+        "argmax": 18706
+      },
+      "loopahead": {
+        "top_ids": [
+          18706,
+          7127,
+          2437
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          18.875
+        ],
+        "top_probs": [
+          0.298007994890213,
+          0.298007994890213,
+          0.1807509809732437
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7127
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/326",
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          282,
+          30,
+          28
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          15.875
+        ],
+        "top_probs": [
+          0.3491838872432709,
+          0.3491838872432709,
+          0.11336340755224228
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          282,
+          30,
+          28
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          15.875
+        ],
+        "top_probs": [
+          0.3638206422328949,
+          0.3210705816745758,
+          0.11811526864767075
+        ],
+        "top2_probability_margin": 0.04275006055831909,
+        "top1_logit_margin": 0.125,
+        "argmax": 282
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/446",
+      "position": 24,
+      "ar": {
+        "top_ids": [
+          1792,
+          1711,
+          1672
+        ],
+        "top_logits": [
+          16.0,
+          15.9375,
+          15.125
+        ],
+        "top_probs": [
+          0.3083317279815674,
+          0.2896508574485779,
+          0.1285317838191986
+        ],
+        "top2_probability_margin": 0.018680870532989502,
+        "top1_logit_margin": 0.0625,
+        "argmax": 1792
+      },
+      "loopahead": {
+        "top_ids": [
+          1792,
+          1711,
+          1672
+        ],
+        "top_logits": [
+          15.9375,
+          15.9375,
+          15.125
+        ],
+        "top_probs": [
+          0.29639244079589844,
+          0.29639244079589844,
+          0.13152335584163666
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1711
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/84",
+      "position": 122,
+      "ar": {
+        "top_ids": [
+          5196,
+          502,
+          260
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          16.5
+        ],
+        "top_probs": [
+          0.27225467562675476,
+          0.27225467562675476,
+          0.16513080894947052
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 502
+      },
+      "loopahead": {
+        "top_ids": [
+          5196,
+          502,
+          260
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.625
+        ],
+        "top_probs": [
+          0.29057013988494873,
+          0.25642725825309753,
+          0.1762397140264511
+        ],
+        "top2_probability_margin": 0.034142881631851196,
+        "top1_logit_margin": 0.125,
+        "argmax": 5196
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/93",
+      "position": 149,
+      "ar": {
+        "top_ids": [
+          750,
+          550,
+          15229
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          14.875
+        ],
+        "top_probs": [
+          0.43157699704170227,
+          0.3808653652667999,
+          0.03542599827051163
+        ],
+        "top2_probability_margin": 0.050711631774902344,
+        "top1_logit_margin": 0.125,
+        "argmax": 750
+      },
+      "loopahead": {
+        "top_ids": [
+          750,
+          550,
+          15229
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          14.875
+        ],
+        "top_probs": [
+          0.40240389108657837,
+          0.40240389108657837,
+          0.03742939233779907
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 550
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/95",
+      "position": 21,
+      "ar": {
+        "top_ids": [
+          617,
+          28,
+          284
+        ],
+        "top_logits": [
+          19.125,
+          19.0,
+          17.375
+        ],
+        "top_probs": [
+          0.4346281886100769,
+          0.3835580050945282,
+          0.07552704215049744
+        ],
+        "top2_probability_margin": 0.051070183515548706,
+        "top1_logit_margin": 0.125,
+        "argmax": 617
+      },
+      "loopahead": {
+        "top_ids": [
+          617,
+          28,
+          284
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          17.25
+        ],
+        "top_probs": [
+          0.4076942205429077,
+          0.4076942205429077,
+          0.07084662467241287
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/407",
+      "position": 41,
+      "ar": {
+        "top_ids": [
+          2959,
+          198,
+          1065
+        ],
+        "top_logits": [
+          23.5,
+          23.375,
+          20.75
+        ],
+        "top_probs": [
+          0.4898299276828766,
+          0.43227338790893555,
+          0.031313780695199966
+        ],
+        "top2_probability_margin": 0.05755653977394104,
+        "top1_logit_margin": 0.125,
+        "argmax": 2959
+      },
+      "loopahead": {
+        "top_ids": [
+          2959,
+          198,
+          1065
+        ],
+        "top_logits": [
+          23.5,
+          23.5,
+          20.75
+        ],
+        "top_probs": [
+          0.46317169070243835,
+          0.46317169070243835,
+          0.029609574005007744
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/527",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          64,
+          57,
+          504
+        ],
+        "top_logits": [
+          14.8125,
+          14.8125,
+          14.25
+        ],
+        "top_probs": [
+          0.19086112082004547,
+          0.19086112082004547,
+          0.1087493821978569
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 57
+      },
+      "loopahead": {
+        "top_ids": [
+          64,
+          57,
+          504
+        ],
+        "top_logits": [
+          14.8125,
+          14.75,
+          14.25
+        ],
+        "top_probs": [
+          0.1930686980485916,
+          0.18137125670909882,
+          0.11000722646713257
+        ],
+        "top2_probability_margin": 0.011697441339492798,
+        "top1_logit_margin": 0.0625,
+        "argmax": 64
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/314",
+      "position": 8,
+      "ar": {
+        "top_ids": [
+          5496,
+          281,
+          1130
+        ],
+        "top_logits": [
+          18.125,
+          18.125,
+          17.5
+        ],
+        "top_probs": [
+          0.35130614042282104,
+          0.35130614042282104,
+          0.188040629029274
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 281
+      },
+      "loopahead": {
+        "top_ids": [
+          5496,
+          281,
+          1130
+        ],
+        "top_logits": [
+          18.125,
+          18.0,
+          17.375
+        ],
+        "top_probs": [
+          0.3749697506427765,
+          0.3309096395969391,
+          0.17712317407131195
+        ],
+        "top2_probability_margin": 0.0440601110458374,
+        "top1_logit_margin": 0.125,
+        "argmax": 5496
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/110",
+      "position": 62,
+      "ar": {
+        "top_ids": [
+          9948,
+          28,
+          5794
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.25
+        ],
+        "top_probs": [
+          0.4472326636314392,
+          0.3946814239025116,
+          0.0685853511095047
+        ],
+        "top2_probability_margin": 0.05255123972892761,
+        "top1_logit_margin": 0.125,
+        "argmax": 9948
+      },
+      "loopahead": {
+        "top_ids": [
+          9948,
+          28,
+          5794
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          18.125
+        ],
+        "top_probs": [
+          0.4210379123687744,
+          0.4210379123687744,
+          0.06456825882196426
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/256",
+      "position": 244,
+      "ar": {
+        "top_ids": [
+          10602,
+          2634,
+          253
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          14.75
+        ],
+        "top_probs": [
+          0.522241473197937,
+          0.4608764946460724,
+          0.00844124797731638
+        ],
+        "top2_probability_margin": 0.061364978551864624,
+        "top1_logit_margin": 0.125,
+        "argmax": 10602
+      },
+      "loopahead": {
+        "top_ids": [
+          10602,
+          2634,
+          253
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          14.625
+        ],
+        "top_probs": [
+          0.4926820695400238,
+          0.4926820695400238,
+          0.007027732208371162
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2634
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/209",
+      "position": 13,
+      "ar": {
+        "top_ids": [
+          354,
+          253,
+          599
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          16.0
+        ],
+        "top_probs": [
+          0.4550687074661255,
+          0.4550687074661255,
+          0.06158684939146042
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "loopahead": {
+        "top_ids": [
+          354,
+          253,
+          599
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          16.0
+        ],
+        "top_probs": [
+          0.4810958206653595,
+          0.42456555366516113,
+          0.0651092380285263
+        ],
+        "top2_probability_margin": 0.056530267000198364,
+        "top1_logit_margin": 0.125,
+        "argmax": 354
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/523",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          17638,
+          15433,
+          260
+        ],
+        "top_logits": [
+          15.25,
+          15.25,
+          15.125
+        ],
+        "top_probs": [
+          0.2155267298221588,
+          0.2155267298221588,
+          0.19020166993141174
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 15433
+      },
+      "loopahead": {
+        "top_ids": [
+          17638,
+          15433,
+          260
+        ],
+        "top_logits": [
+          15.3125,
+          15.25,
+          15.0625
+        ],
+        "top_probs": [
+          0.22933100163936615,
+          0.21543654799461365,
+          0.1786031723022461
+        ],
+        "top2_probability_margin": 0.013894453644752502,
+        "top1_logit_margin": 0.0625,
+        "argmax": 17638
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/142",
+      "position": 77,
+      "ar": {
+        "top_ids": [
+          4882,
+          1032,
+          198
+        ],
+        "top_logits": [
+          17.75,
+          17.625,
+          17.375
+        ],
+        "top_probs": [
+          0.27828773856163025,
+          0.24558806419372559,
+          0.19126418232917786
+        ],
+        "top2_probability_margin": 0.03269967436790466,
+        "top1_logit_margin": 0.125,
+        "argmax": 4882
+      },
+      "loopahead": {
+        "top_ids": [
+          4882,
+          1032,
+          198
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          17.375
+        ],
+        "top_probs": [
+          0.26749899983406067,
+          0.26749899983406067,
+          0.18384920060634613
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1032
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/117",
+      "position": 38,
+      "ar": {
+        "top_ids": [
+          932,
+          416,
+          314
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          19.625
+        ],
+        "top_probs": [
+          0.2644217312335968,
+          0.23335134983062744,
+          0.23335134983062744
+        ],
+        "top2_probability_margin": 0.03107038140296936,
+        "top1_logit_margin": 0.125,
+        "argmax": 932
+      },
+      "loopahead": {
+        "top_ids": [
+          932,
+          416,
+          314
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          19.625
+        ],
+        "top_probs": [
+          0.2467871755361557,
+          0.2467871755361557,
+          0.2467871755361557
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/129",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          1758,
+          1232,
+          2067
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          17.875
+        ],
+        "top_probs": [
+          0.4071387052536011,
+          0.4071387052536011,
+          0.07075009495019913
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1232
+      },
+      "loopahead": {
+        "top_ids": [
+          1758,
+          1232,
+          2067
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          17.875
+        ],
+        "top_probs": [
+          0.4377494156360626,
+          0.3863125145435333,
+          0.06713104993104935
+        ],
+        "top2_probability_margin": 0.0514369010925293,
+        "top1_logit_margin": 0.125,
+        "argmax": 1758
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/458",
+      "position": 16,
+      "ar": {
+        "top_ids": [
+          38482,
+          2769,
+          913
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          14.9375
+        ],
+        "top_probs": [
+          0.4892689883708954,
+          0.4892689883708954,
+          0.006556208711117506
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2769
+      },
+      "loopahead": {
+        "top_ids": [
+          38482,
+          2769,
+          913
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          14.9375
+        ],
+        "top_probs": [
+          0.5194956660270691,
+          0.45845329761505127,
+          0.006961246021091938
+        ],
+        "top2_probability_margin": 0.06104236841201782,
+        "top1_logit_margin": 0.125,
+        "argmax": 38482
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/410",
+      "position": 50,
+      "ar": {
+        "top_ids": [
+          1094,
+          198,
+          3717
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          15.5
+        ],
+        "top_probs": [
+          0.4400096833705902,
+          0.3883071839809418,
+          0.05954883620142937
+        ],
+        "top2_probability_margin": 0.05170249938964844,
+        "top1_logit_margin": 0.125,
+        "argmax": 1094
+      },
+      "loopahead": {
+        "top_ids": [
+          1094,
+          198,
+          3717
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          15.4375
+        ],
+        "top_probs": [
+          0.4136858880519867,
+          0.4136858880519867,
+          0.05959710478782654
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/81",
+      "position": 296,
+      "ar": {
+        "top_ids": [
+          16416,
+          4326,
+          4009
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          19.125
+        ],
+        "top_probs": [
+          0.3784824013710022,
+          0.3784824013710022,
+          0.08445084095001221
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 4326
+      },
+      "loopahead": {
+        "top_ids": [
+          16416,
+          4326,
+          4009
+        ],
+        "top_logits": [
+          20.75,
+          20.625,
+          19.25
+        ],
+        "top_probs": [
+          0.4043067693710327,
+          0.35679948329925537,
+          0.09021303802728653
+        ],
+        "top2_probability_margin": 0.047507286071777344,
+        "top1_logit_margin": 0.125,
+        "argmax": 16416
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "specbench/102",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          527,
+          260,
+          284
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          16.75
+        ],
+        "top_probs": [
+          0.21270312368869781,
+          0.18770985305309296,
+          0.11385178565979004
+        ],
+        "top2_probability_margin": 0.02499327063560486,
+        "top1_logit_margin": 0.125,
+        "argmax": 527
+      },
+      "loopahead": {
+        "top_ids": [
+          527,
+          260,
+          284
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.75
+        ],
+        "top_probs": [
+          0.1957610547542572,
+          0.1957610547542572,
+          0.11873508244752884
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "started_unix": 1794484353.782493,
+  "input_provenance": {
+    "scope": "frozen-benchmark-input",
+    "path": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/inputs/specbench.jsonl",
+    "sha256": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+    "prompt_format": "chat",
+    "max_new_tokens": 512,
+    "stop_ids": [
+      0,
+      2
+    ]
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t0",
+      "sha256": "88701b4cd9536bcc1b844133825d285778b96d96e37aa588d9957fc90296c8c5"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t0-v1",
+      "sha256": "e9580c67376f7487cfa0361cf695ba8a066c1de7771f692ff59d86c2af8eaab6"
+    }
+  },
+  "limitations": [
+    "Instrumented BF16 replay only; timings are excluded from the benchmark.",
+    "Probability ties/margins describe actual reproduced divergences, not proof that all discrepancies disappear in FP32."
+  ],
+  "cuda_acquisition": {
+    "gpu": 3,
+    "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+    "pid": 283938,
+    "started_unix": 1794484354.977021,
+    "acquired_unix": 1794484355.8372786,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "finished_unix": 1794487387.0569687
+}

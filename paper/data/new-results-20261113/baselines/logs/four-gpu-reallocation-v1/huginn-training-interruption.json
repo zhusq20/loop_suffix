@@ -1,0 +1,80 @@
+{
+  "status": "interrupted_by_user_resource_and_architecture_change",
+  "reason": "User released four GPUs and requested a narrower Huginn DFlash candidate",
+  "saved_step": 4000,
+  "last_logged_progress": {
+    "step": 4245,
+    "total_updates": 8886,
+    "epoch": 2,
+    "loss": 1.656637191772461,
+    "accuracy": 0.5106768608093262,
+    "lr": 0.00034135198025904613,
+    "grad_norm": 0.13515008985996246,
+    "update_wall_s": 4.386422879993916,
+    "peak_allocated_bytes": 62314270208,
+    "finished_unix": 1794351118.2414975
+  },
+  "training_finish": {
+    "name": "dflash-huginn-3.5b-formal-v1",
+    "argv": [
+      "/tmp/loopfill-specforge-venv/bin/torchrun",
+      "--standalone",
+      "--nproc_per_node=4",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--teachers",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-3.5b-formal-v1",
+      "--cpu-groups",
+      "0-3,4-7,52-55,60-63",
+      "--epochs",
+      "6",
+      "--micro-batch",
+      "4",
+      "--accumulation",
+      "2",
+      "--save-every",
+      "500",
+      "--checkpoint-layers"
+    ],
+    "pid": 317144,
+    "started_unix": 1794330462.9272084,
+    "exit_code": 1,
+    "finished_unix": 1794351154.2714334
+  },
+  "rank_reservations": [
+    {
+      "started_unix": 1794330468.3347046,
+      "finished_unix": 1794351121.4236002,
+      "reserved_gpu_seconds": 20653.08889555931,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "failed"
+    },
+    {
+      "started_unix": 1794330468.3192272,
+      "finished_unix": 1794351121.4532487,
+      "reserved_gpu_seconds": 20653.134021759033,
+      "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+      "status": "failed"
+    },
+    {
+      "started_unix": 1794330468.2326758,
+      "finished_unix": 1794351121.480745,
+      "reserved_gpu_seconds": 20653.248069524765,
+      "gpu_uuid": "GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a",
+      "status": "failed"
+    },
+    {
+      "started_unix": 1794330468.210496,
+      "finished_unix": 1794351121.3908424,
+      "reserved_gpu_seconds": 20653.18034672737,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "failed"
+    }
+  ],
+  "consumed_training_gpu_hours": 22.94795870376958,
+  "not_formal_training_complete": true,
+  "recorded_unix": 1794351327.2389553
+}

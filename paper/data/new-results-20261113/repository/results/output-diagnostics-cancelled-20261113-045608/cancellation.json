@@ -1,0 +1,134 @@
+{
+  "stage": "cancelled_by_user",
+  "updated_unix": 1794517004.0567124,
+  "user_instruction_verbatim": "不需要做差异诊断实验",
+  "scope": "All output-divergence diagnostics cancelled. Formal timing, AR controls, timing profiles, SQL evaluations and artifact integrity checks continue.",
+  "automatic_restart_allowed": false,
+  "requires_new_explicit_request_for_output_divergence_diagnostics": true,
+  "stopped_processes": [
+    {
+      "pid": 48618,
+      "state": "S",
+      "start_ticks": "52427020",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+        "--plan",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+      ],
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 64214,
+      "state": "S",
+      "start_ticks": "52560728",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/queue_loopahead_math_continuation.py"
+      ],
+      "signal": "SIGTERM"
+    },
+    {
+      "pid": 137616,
+      "state": "R",
+      "start_ticks": "53176293",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/diagnose_packed_dflash.py",
+        "--plan",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/plan.json",
+        "--job",
+        "table1-ouro-1.4b-gsm8k-t0",
+        "--ar",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t0-ar",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/diagnostics/table1-ouro-1.4b-gsm8k-t0",
+        "--lock-fd",
+        "5"
+      ],
+      "signal": "SIGTERM"
+    }
+  ],
+  "queues": [
+    {
+      "queue_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1",
+      "cancelled_groups": [
+        "table1-ouro-1.4b-gsm8k-t0-greedy",
+        "table1-ouro-1.4b-math500-t0-greedy",
+        "table1-ouro-1.4b-bbh-t0-greedy",
+        "table1-ouro-1.4b-humanevalplus-t0-greedy",
+        "table1-ouro-1.4b-mbppplus-t0-greedy",
+        "table1-ouro-1.4b-specbench-t0-greedy"
+      ],
+      "validated_groups_preserved": 0,
+      "exit_receipts": {
+        "table1-ouro-1.4b-gsm8k-t0-greedy": {
+          "group": "table1-ouro-1.4b-gsm8k-t0-greedy",
+          "step": "table1-ouro-1.4b-gsm8k-t0-greedy",
+          "gpu": 7,
+          "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+          "argv": [
+            "taskset",
+            "--cpu-list",
+            "60-63",
+            "/tmp/loopfill-dflash-venv/bin/python",
+            "-u",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/diagnose_packed_dflash.py",
+            "--plan",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/plan.json",
+            "--job",
+            "table1-ouro-1.4b-gsm8k-t0",
+            "--ar",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t0-ar",
+            "--out",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/diagnostics/table1-ouro-1.4b-gsm8k-t0",
+            "--lock-fd",
+            "5"
+          ],
+          "started_unix": 1794516726.6440153,
+          "pid": 137616,
+          "start_ticks": "53176293",
+          "supervisor_identity": {
+            "pid": 137615,
+            "state": "R",
+            "start_ticks": "53176287",
+            "argv": [
+              "/opt/conda/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/loop_queue_recovery.py",
+              "--spec",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/logs/table1-ouro-1.4b-gsm8k-t0-greedy-launcher.json.supervisor.json",
+              "--lock-fd",
+              "5"
+            ]
+          },
+          "exit_code": -15,
+          "finished_unix": 1794517003.5943608,
+          "exit_evidence": "supervisor_waitpid"
+        }
+      },
+      "stop_marker": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/STOP"
+    },
+    {
+      "queue_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1",
+      "cancelled_groups": [
+        "loopahead-ouro-2.6b-math500-v1"
+      ],
+      "validated_groups_preserved": 0,
+      "exit_receipts": {},
+      "stop_marker": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/STOP"
+    },
+    {
+      "queue_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1",
+      "cancelled_groups": [
+        "loopahead-ouro-2.6b-math500-v1"
+      ],
+      "validated_groups_preserved": 26,
+      "exit_receipts": {},
+      "stop_marker": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/STOP"
+    }
+  ]
+}

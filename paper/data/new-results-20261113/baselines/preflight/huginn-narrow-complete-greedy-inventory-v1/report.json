@@ -1,0 +1,138 @@
+{
+  "status": "cpu_inventory_complete_numerical_replay_pending",
+  "checked_unix": 1794420003.7925518,
+  "head": "71812aa95d714c4b72e9cbbc1936a7b93b2e60c3",
+  "completed_formal_cells": 31,
+  "requests_audited": 842,
+  "pending_first_divergences": 172,
+  "cells": [
+    {
+      "benchmark": "gsm8k",
+      "requests": 300,
+      "divergences": 76,
+      "position_min": 3,
+      "position_max": 198,
+      "numerical_replay": "pending",
+      "expected_diagnostic_folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1",
+      "source_runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1",
+          "metadata_sha256": "f87f955d671045687c72e03dd695518247591426a49889ae8720f22423acc3f2",
+          "journal_sha256": "2121f4d6b969a2e36f5043b763c71d63abaaa1836657b2b7a768d8791a820f8a",
+          "complete_sha256": "0232b12b85ddd726f1687ae1317f6bc285361cf6784e7ba14afc0b4323edaf74"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-v1",
+          "metadata_sha256": "6b0ef18e94dc02d0056f1d5dbf731017f2c17d29aa82061315ed34670449234b",
+          "journal_sha256": "baab6a5cdea21209b714fcbde194bbff5c19636e6c738915ef7ec333f55600c0",
+          "complete_sha256": "98d0904c3fbedcb263c9909eafd0692d401b996516a9ac336357759e94b49b07"
+        }
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 182221,
+          "launch_sha256": "a61be3a1178e2bfc39d672b5756fbf4491f67df6a8c4a206d9609774e4781943",
+          "exit_receipt_sha256": "1f62d8ac2e75bfaf1e67d94ea59a1ef0b63904b823a9f5e479bd5a8bf1641f52",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 219749,
+          "launch_sha256": "2602c9733b06f3be97ff6f34afcc311ed214eba5046396a9f0bef7200da4b880",
+          "exit_receipt_sha256": "f5b0092e02b06f92bd9e20ca4a5d21cbf22827276ac6472723682827c3db5069",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        }
+      }
+    },
+    {
+      "benchmark": "humanevalplus",
+      "requests": 164,
+      "divergences": 26,
+      "position_min": 8,
+      "position_max": 338,
+      "numerical_replay": "pending",
+      "expected_diagnostic_folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-humanevalplus-v1",
+      "source_runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1",
+          "metadata_sha256": "12f7c507af39e17da9595a36ae8b69b876df979cdbb999a7e222d890fc52123d",
+          "journal_sha256": "47e93db5857a40365b5e171317070254f5a3d7b3db3adf0627ccbbf297c42ccb",
+          "complete_sha256": "3b927c87d1051f9420735ef3c7f9af6bbf92e07c7a04ba5b58d4656e5ee7a58b"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+          "metadata_sha256": "6e6830be53d148e8e150dc704b5e3e03e3226911baec2dd747574890d71f6631",
+          "journal_sha256": "1f042df0f220118a949f867ba55f83d24873021db947d9e8169f333bfa0fe66c",
+          "complete_sha256": "d2762a0a5e0fabfabbfa634347181ecb349f58fae455c8e7ce3ced39ec65f37f"
+        }
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 299585,
+          "launch_sha256": "b402b38edb7c3ff94d5f45375ae09360699eec23c1464e6d33019bc3f5c402f3",
+          "exit_receipt_sha256": "84e0f7ba03c05315f5c148580377a6879cb461930ff61ac0ce0fa43ddcfa22f9",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 330907,
+          "launch_sha256": "74d7b86f557f4426b481c7f2ad4bf4e40803f63bd0acd96e1b0e66c9d0cd4ca6",
+          "exit_receipt_sha256": "6966950d195f22d679133bf6eb3a183b77ff11f62c052d4251ac76a9a149b9a4",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        }
+      }
+    },
+    {
+      "benchmark": "mbppplus",
+      "requests": 378,
+      "divergences": 70,
+      "position_min": 5,
+      "position_max": 308,
+      "numerical_replay": "pending",
+      "expected_diagnostic_folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1",
+      "source_runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1",
+          "metadata_sha256": "06225fb5c4009ec7f04e1304284727c766a908bb6b4d920760353b52ab6d1917",
+          "journal_sha256": "6e9a3d483d4cd89dc02eb6d1e25822eb0fff7c10ca149a7cffd511a6d11b2f5f",
+          "complete_sha256": "fd3d9be5ec0c2863b46b981ec4c9124c11c7d9162e2f7286fd176662129245e5"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1",
+          "metadata_sha256": "956a3943491b9971e6c5dac050ee4cb21a1a740374689fade9df507f6a714262",
+          "journal_sha256": "c86d72fa5fce9b73604907c9c63c4772d14f8a8d470d1aa9224ea85a73403aab",
+          "complete_sha256": "2abce12ab7dd902631d8ba575f927280a45bb20df682529e50c147733bef72b5"
+        }
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 343065,
+          "launch_sha256": "f0d23808b12ca535ee3e75f1e9c4ee320f74d348273184b3e117944046d8478c",
+          "exit_receipt_sha256": "150f113763644bebeb173f1a692721ded69dd988f8c34bb558d81a7a3898ce95",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 382061,
+          "launch_sha256": "86ef070f156d02d457f20a5c7dbf06d6ef7e439a7df8ca5851a8fe77e6f6d1d0",
+          "exit_receipt_sha256": "3d4c2b5c92fcf8e43ee3df742a367da9245d73fa265cfa8493ed275d5dad51f9",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        }
+      }
+    }
+  ],
+  "case_manifest_sha256": "02c492de30083a1f346a5f6a83594efd5db8c702a9f211a2a19fb2df6531ac1a",
+  "formal_output_sha256": {
+    "results.csv": "b56f5d8f5809651970f26978eb73e4e5734d2c576a229762135de7a820e170c7",
+    "formal-agreement.json": "bbbf08ea2bff78dfb3c84250eee04a6557d52606bb22a1789e7107ab6dd811fc",
+    "formal-matrix-status.json": "4b79e30abe8ecc171abacbed0a7339e95b09580b5ee8fbd50eeecfbabe5d94bd",
+    "table2_rows.md": "3bc5c34cb76560aa461cb89450d8109e6de12d1d95994dd029538f593f3c3587"
+  },
+  "diagnostic_runner_sha256": "8d9c8953f9270d3f19fe1c1c2c39846ecec4f698403858009e2b194dd7fa612e",
+  "runner_preserves_full_512_budget": true,
+  "source_sha256": "157a1658f52ec8a227a91790b632fc5d4aab501a181f01938c96c2ef04224d6b",
+  "limitation": "No GPU execution, probability margins, numerical equivalence, or new benchmark completion claimed."
+}

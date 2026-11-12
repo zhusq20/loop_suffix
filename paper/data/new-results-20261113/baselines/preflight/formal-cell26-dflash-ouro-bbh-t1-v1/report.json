@@ -1,0 +1,244 @@
+{
+  "status": "complete_formal_sampling_cell_with_declared_limitations",
+  "checked_unix": 1794397884.807266,
+  "completed_cells": 26,
+  "expected_cells": 72,
+  "previous_commit": "9ae099735001898d06e71b5f80c83fda6dfa7db3",
+  "previous_25_rows_and_agreements_unchanged": true,
+  "requests_per_stage": {
+    "ar": 270,
+    "dflash": 270,
+    "dflash-profile": 270
+  },
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "summaries": {
+    "ar": {
+      "decode_tokens": 69158,
+      "decode_s": 5918.854849174619,
+      "loops": 276632,
+      "tok_s": 11.684354788603077,
+      "gamma": 1.0
+    },
+    "dflash": {
+      "decode_tokens": 66194,
+      "decode_s": 2139.6085739284754,
+      "loops": 87604,
+      "tok_s": 30.937434447864007,
+      "gamma": 3.022419067622483
+    },
+    "dflash-profile": {
+      "decode_tokens": 66194,
+      "decode_s": 2150.4566797316074,
+      "loops": 87604,
+      "tok_s": 30.78136873152985,
+      "gamma": 3.022419067622483
+    }
+  },
+  "journal_sha256": {
+    "ar": "e1ad71a10830a89de3f2442860e0c6cd55b0d459e6d20dc8541b6458a10a5d67",
+    "dflash": "5dd0ebd580b33e4ea14a7c299b81df4c93094b1bfda248c64a8907c5f307d768",
+    "dflash-profile": "f4572512c8b165518b806e4b7764272c9f2e37267594ed6e5bdac6c4c06b5de9"
+  },
+  "execution_evidence": {
+    "ar": {
+      "kind": "actual_successful_process_exit",
+      "pid": 39200,
+      "launch_sha256": "61e98666eb40c06fdf689c752901aa757bd8b76288a0cbce6fe409a1cfc69a07",
+      "exit_receipt_sha256": "d8f4f5ab089373cc5c4d0b3f9d393c374610622406a49d705cb3847b399d448f",
+      "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+    },
+    "dflash": {
+      "kind": "actual_successful_process_exit",
+      "pid": 117735,
+      "launch_sha256": "8726178bae422d6811dacf2a7002c186b76c92ccdaf318da40521a4fe8a6e924",
+      "exit_receipt_sha256": "8bf5978375b246951da4f70963b0620dc26979e7420aee93acf6f94e635c1226",
+      "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+    },
+    "dflash-profile": {
+      "kind": "actual_successful_process_exit",
+      "pid": 142592,
+      "launch_sha256": "e00079814fcbc88e27a6c7c3f053d31a9bb131bfeb4c5a7cf37c862b0ab5ce99",
+      "exit_receipt_sha256": "ab1a758133c7a24d4db2e83dfdfcd5e0cc7524a8901a9d0a496f13300e4fba0e",
+      "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+    }
+  },
+  "actual_exit_receipts": {
+    "ar": {
+      "name": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "ar",
+        "--dataset",
+        "bbh",
+        "--temperature",
+        "1",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1"
+      ],
+      "pid": 39200,
+      "started_unix": 1794387467.0731647,
+      "exit_code": 0,
+      "finished_unix": 1794393438.9832778
+    },
+    "dflash": {
+      "name": "dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "bbh",
+        "--temperature",
+        "1",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+      ],
+      "pid": 117735,
+      "started_unix": 1794393439.0319028,
+      "exit_code": 0,
+      "finished_unix": 1794395633.0031726
+    },
+    "dflash-profile": {
+      "name": "dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "bbh",
+        "--temperature",
+        "1",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+        "--profile"
+      ],
+      "pid": 142592,
+      "started_unix": 1794395633.0605927,
+      "exit_code": 0,
+      "finished_unix": 1794397835.6659403
+    }
+  },
+  "worker_exit": {
+    "worker_pid": 39190,
+    "started_unix": 1794387467.0362725,
+    "job_sha256": "409a3d8cb5e64d5ad4abe61dcc59e69c9a8a7bb3d2ea5f9a39a2ba5e32c895a8",
+    "source_sha256": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "exit_code": 0,
+    "finished_unix": 1794397835.7095792
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794397848.3358462,
+    "completion_basis": "direct_child_exit_code"
+  },
+  "training_audit_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "profile_all_tokens_and_verification_counts_match_timed_run": true,
+  "draft_gpu_s": 73.4833063318729,
+  "profile_wall_relative_difference": 0.005070135694593025,
+  "result": {
+    "method": "dflash",
+    "model": "ouro-2.6b",
+    "benchmark": "bbh",
+    "temperature": "1",
+    "eta": "2.6477657523751668",
+    "gamma": "3.022419067622483",
+    "method_tok_s": "30.937434447864007",
+    "ar_tok_s": "11.684354788603077",
+    "drafter_time_frac": "0.03417102377577034",
+    "match_rate": "0.011111111111111112",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+    "eta_latency": "2.766326009951986",
+    "eta_throughput": "2.6477657523751668",
+    "aligned_token_match_rate": "0.13079771044382865",
+    "method_decode_tokens": "66194",
+    "ar_decode_tokens": "69158",
+    "method_decode_s": "2139.6085739284754",
+    "ar_decode_s": "5918.854849174619",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794387523.6497762",
+    "ar_last_completed_unix": "1794393438.1063821",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1"
+  },
+  "agreement": {
+    "match_rate": 0.011111111111111112,
+    "aligned_token_match_rate": 0.13079771044382865,
+    "exact_sequences": 3,
+    "requests": 270
+  },
+  "output_sha256": {
+    "results.csv": "301503ad330ec79391df5037a36eb889860c662e837a631d88b2aac8671250a6",
+    "table2_rows.md": "bf56ae28d4e9fd7fa3dbdb3e874eec248528d9852898c7757df82c714f125a34",
+    "formal-agreement.json": "d85fb811afe5f8b170beb4889105b7dc743585ca1050a91d9ec3e009632b42bc",
+    "formal-matrix-status.json": "319f8d0033c7a5af725e227bb81f547c8025501a5964d064dad0fab39ef54bc4"
+  },
+  "collector_exit_code": 0,
+  "collection_source_sha256": {
+    "collect_results.py": "7afc730570a04c2a350e7e6b347c7e39e80ceaf5bedca7db1bf19996cd40a770",
+    "result_evidence.py": "d3b438b9ca068a48f6f68f00cad358e6b52d95ad7a713609846faba9161d0d2a"
+  },
+  "verification_source_sha256": "adfa86ec8912acb7b8b29487fa59dcf3bf3b940e5973a27712544af94df37a64",
+  "limitations": [
+    "T1 same-seed token agreement is descriptive, not a sampling-distribution proof.",
+    "Shared-host timings remain uncorrected; profile wall differences include run variation.",
+    "Original CUDA-startup failure remains archived.",
+    "26/72 cells complete; final training, remaining benchmarks and diagnostics are pending."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "status": "complete_final_narrow_timing_live_profile_formal_cell_pending",
+  "checked_unix": 1794412911.6152256,
+  "timed_summary": {
+    "decode_tokens": 25532,
+    "decode_s": 498.0394169688225,
+    "loops": 126144,
+    "tok_s": 51.26501865132156,
+    "gamma": 6.47691527143582
+  },
+  "ar_summary": {
+    "decode_tokens": 25297,
+    "decode_s": 2611.524722635746,
+    "loops": 809504,
+    "tok_s": 9.686678353352281,
+    "gamma": 1.0
+  },
+  "requests_per_completed_stage": 164,
+  "journal_sha256": {
+    "ar": "47e93db5857a40365b5e171317070254f5a3d7b3db3adf0627ccbbf297c42ccb",
+    "timed": "1f042df0f220118a949f867ba55f83d24873021db947d9e8169f333bfa0fe66c"
+  },
+  "execution_evidence": {
+    "ar": {
+      "kind": "actual_successful_process_exit",
+      "pid": 299585,
+      "launch_sha256": "b402b38edb7c3ff94d5f45375ae09360699eec23c1464e6d33019bc3f5c402f3",
+      "exit_receipt_sha256": "84e0f7ba03c05315f5c148580377a6879cb461930ff61ac0ce0fa43ddcfa22f9",
+      "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+    },
+    "timed": {
+      "kind": "actual_successful_process_exit",
+      "pid": 330907,
+      "launch_sha256": "74d7b86f557f4426b481c7f2ad4bf4e40803f63bd0acd96e1b0e66c9d0cd4ca6",
+      "exit_receipt_sha256": "6966950d195f22d679133bf6eb3a183b77ff11f62c052d4251ac76a9a149b9a4",
+      "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+    }
+  },
+  "timed_actual_exit": {
+    "name": "dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "humanevalplus",
+      "--temperature",
+      "0",
+      "--gpu",
+      "4",
+      "--cpus",
+      "48-51",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886"
+    ],
+    "pid": 330907,
+    "started_unix": 1794412296.4966648,
+    "exit_code": 0,
+    "finished_unix": 1794412850.5153894
+  },
+  "training_binding": {
+    "training_name": "dflash-huginn-narrow-formal-v1",
+    "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+    "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+    "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1/report.json",
+    "audit_report_sha256": "02bc2ffd720010a53686a14123797f43a7c12032eb713c8d307647ef451daaa6",
+    "queue_complete_sha256": "dcee2382eeb36f12083c16f17ff4a74593d833786ddbf696f803b90080a0c9aa",
+    "weights_sha256": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "completion_basis": "separate_projected_training_queue_exit0_export_and_full_CPU_audit",
+    "interrupted_wide_training": "dflash-huginn-3.5b-formal-v1 remains incomplete and separately costed"
+  },
+  "agreement": {
+    "match_rate": 0.8414634146341463,
+    "aligned_token_match_rate": 0.9050279329608939,
+    "exact_sequences": 138,
+    "requests": 164
+  },
+  "first_divergences": 26,
+  "checkpoint_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity",
+    "checkpoint",
+    "checkpoint_sha256",
+    "draft_architecture",
+    "draft_parameters",
+    "training_completion_evidence"
+  ],
+  "profile_metadata_sha256": "e602c6020c9e98cb92bfaea86cf8cc188c775c58a3e79a81e5b9a899ddba0cc2",
+  "profile_launcher": {
+    "name": "dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "humanevalplus",
+      "--temperature",
+      "0",
+      "--gpu",
+      "4",
+      "--cpus",
+      "48-51",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+      "--profile"
+    ],
+    "pid": 336954,
+    "started_unix": 1794412850.568588
+  },
+  "actual_parent": 299577,
+  "actual_start_ticks": "42788686",
+  "actual_native_driver_map": "/usr/lib64/libcuda.so.570.148.08",
+  "observed_requests": 5,
+  "observed_prefix_sha256": "cea1c0e10c9a7e03d0b9b596b052f1a9e60216797c049b670af02fee92e4b216",
+  "observed_prefix_tokens_and_verification_counts_match": true,
+  "formal_outputs_unchanged": true,
+  "verification_source_sha256": "116b9ffe98aba3462459e9b7247cd65b8aace56ff117f615c3a08a0fe6678c7e",
+  "limitations": [
+    "Complete 164-request final narrow timing, but the full profile and actual worker exit remain pending.",
+    "Only the observed profile prefix is compared here; no full-task draft fraction is inferred.",
+    "BF16 first divergences require later actual-prefix BF16 and FP32 diagnostics.",
+    "Shared-host timings remain uncorrected; this is not a trained wide-versus-narrow comparison.",
+    "Formal table remains at 29/72 cells."
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "status": "main_model_measurements_complete_with_declared_limitations",
+  "main_cells": 48,
+  "all_collected_cells": 56,
+  "expected_all_cells": 72,
+  "requests_per_cell": {
+    "gsm8k": 300,
+    "math500": 500,
+    "bbh": 270,
+    "humanevalplus": 164,
+    "mbppplus": 378,
+    "specbench": 480
+  },
+  "measured_method_requests": 16736,
+  "actual_timed_exit0_cells": 45,
+  "original_timed_exit_unavailable": [
+    [
+      "dflash",
+      "huginn-3.5b",
+      "math500",
+      0
+    ],
+    [
+      "dflash",
+      "huginn-3.5b",
+      "math500",
+      1
+    ],
+    [
+      "dflash",
+      "ouro-2.6b",
+      "specbench",
+      1
+    ]
+  ],
+  "means": [
+    {
+      "model": "huginn-3.5b",
+      "temperature": 0,
+      "method": "dflash",
+      "mean_eta_latency": 3.80135526324223,
+      "mean_eta_throughput": 3.815598100943898,
+      "mean_gamma": 4.486039788243964,
+      "target_backends": [
+        "legacy_HF_full_loop",
+        "packed_full_loop"
+      ],
+      "mixed_target_backends": true
+    },
+    {
+      "model": "huginn-3.5b",
+      "temperature": 0,
+      "method": "loopahead",
+      "mean_eta_latency": 4.102203867365943,
+      "mean_eta_throughput": 4.113674697898141,
+      "mean_gamma": 6.31115460588667,
+      "target_backends": [
+        "packed_LoopAhead"
+      ],
+      "mixed_target_backends": false
+    },
+    {
+      "model": "huginn-3.5b",
+      "temperature": 1,
+      "method": "dflash",
+      "mean_eta_latency": 2.3591805514981363,
+      "mean_eta_throughput": 2.3066013731116746,
+      "mean_gamma": 2.5344829127790125,
+      "target_backends": [
+        "packed_full_loop"
+      ],
+      "mixed_target_backends": false
+    },
+    {
+      "model": "huginn-3.5b",
+      "temperature": 1,
+      "method": "loopahead",
+      "mean_eta_latency": 2.6771927113756835,
+      "mean_eta_throughput": 2.7352019448247553,
+      "mean_gamma": 4.227523012720409,
+      "target_backends": [
+        "packed_LoopAhead"
+      ],
+      "mixed_target_backends": false
+    },
+    {
+      "model": "ouro-2.6b",
+      "temperature": 0,
+      "method": "dflash",
+      "mean_eta_latency": 3.5742717301932476,
+      "mean_eta_throughput": 3.5412752306560282,
+      "mean_gamma": 4.001366455831781,
+      "target_backends": [
+        "legacy_HF_full_loop"
+      ],
+      "mixed_target_backends": false
+    },
+    {
+      "model": "ouro-2.6b",
+      "temperature": 0,
+      "method": "loopahead",
+      "mean_eta_latency": 4.407294550029773,
+      "mean_eta_throughput": 4.411849933458914,
+      "mean_gamma": 5.359743356105868,
+      "target_backends": [
+        "packed_LoopAhead"
+      ],
+      "mixed_target_backends": false
+    },
+    {
+      "model": "ouro-2.6b",
+      "temperature": 1,
+      "method": "dflash",
+      "mean_eta_latency": 2.426935812819542,
+      "mean_eta_throughput": 2.459461260496084,
+      "mean_gamma": 2.781292278018559,
+      "target_backends": [
+        "legacy_HF_full_loop",
+        "packed_full_loop"
+      ],
+      "mixed_target_backends": true
+    },
+    {
+      "model": "ouro-2.6b",
+      "temperature": 1,
+      "method": "loopahead",
+      "mean_eta_latency": 3.2952733228171747,
+      "mean_eta_throughput": 3.293550468977715,
+      "mean_gamma": 4.111482411884959,
+      "target_backends": [
+        "packed_LoopAhead"
+      ],
+      "mixed_target_backends": false
+    }
+  ],
+  "results_snapshot_sha256": "7d6259aeb33b611da04a6406ad9eb0aaa0e8a38b91b576df81faa7b1ccd7c369",
+  "collection_report_sha256": "82ac937eabf1419f6b02e94fbb3c2ba26c3b58534d926c03886588b76ea5df05",
+  "evidence_sha256": "c7b4e45613f2653a59ddc44a1daff4b690fd1e2361b9041399d364570d881629",
+  "check_source_sha256": "5fb5c7c06bae32f7519fdc05cefa44ca9463a93d860501a40d1646222f478f57",
+  "checked_unix": 1794474242.0604112,
+  "new_gpu_measurements": 0,
+  "limitations": [
+    "Only main-model measurements are complete; full 72-cell delivery, sixth training and remaining numerical checks are pending.",
+    "Three original packed timed exit receipts are unavailable; complete artifact checks and actual AR/profile exits do not reconstruct them.",
+    "DFlash HF and packed target backends retain separate measured AR denominators; mixed-backend means are explicitly labelled.",
+    "LoopAhead uses the historical same-host AR measurements; cross-date timing drift is uncorrected.",
+    "BF16 whole-output differences and T1 same-seed statistics are retained; this summary does not establish numerical or distribution equivalence."
+  ]
+}

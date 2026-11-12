@@ -1,0 +1,41 @@
+{
+  "name": "loopahead-trained-ouro-1.4b-common-prefix-fp32-v1",
+  "gpu": 3,
+  "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_trained_loopahead.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-ouro-1.4b-gsm8k-ar-bfloat16-n20-v1",
+    "--loopahead",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-ouro-1.4b-gsm8k-loopahead-bfloat16-n20-v1",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-ouro-1.4b-common-prefix-fp32-v1"
+  ],
+  "started_unix": 1794451001.297121,
+  "pid": 394308,
+  "start_ticks": "46603759",
+  "supervisor_identity": {
+    "pid": 394307,
+    "state": "R",
+    "start_ticks": "46603752",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-common-prefix-fp32-v1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794451399.4882936,
+  "exit_evidence": "supervisor_waitpid"
+}

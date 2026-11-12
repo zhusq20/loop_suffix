@@ -1,0 +1,42 @@
+[
+  {
+    "file": "dflash_inference.py",
+    "repository": "https://github.com/z-lab/dflash",
+    "revision": "94e4abc5e0c31b67bc1a9d30f1cc34ece28a8756",
+    "upstream_file": "dflash/model.py",
+    "source_sha256": "6dfb12d0eeebe085d78d23fc816a481a8b25257fd76891e939a41423c29c697b",
+    "changes": "Package-relative imports; optimizer rank-zero printing is local."
+  },
+  {
+    "file": "dflash_train.py",
+    "repository": "https://github.com/sgl-project/SpecForge",
+    "revision": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "upstream_file": "specforge/modeling/draft/dflash.py",
+    "source_sha256": "da5ab1738b954800950405131f1d1d97c3345f37e32676d511d3a25dfddd9d75",
+    "changes": "Package-relative imports; optimizer rank-zero printing is local."
+  },
+  {
+    "file": "dflash_loss.py",
+    "repository": "https://github.com/sgl-project/SpecForge",
+    "revision": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "upstream_file": "specforge/core/dflash.py",
+    "source_sha256": "dc91f444a09bd0ea4bf0139a6eac7647b8d445aaaea1f64d8ad6a71f9f2e53eb",
+    "changes": "Package-relative imports; optimizer rank-zero printing is local."
+  },
+  {
+    "file": "optimizer.py",
+    "repository": "https://github.com/sgl-project/SpecForge",
+    "revision": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "upstream_file": "specforge/optimizer.py",
+    "source_sha256": "f0aedfad5fe11100470e7f49518b20d439cf47ec9afc195af089dfeca3affc54",
+    "changes": "Package-relative imports; optimizer rank-zero printing is local."
+  },
+  {
+    "file": "lr_scheduler.py",
+    "repository": "https://github.com/sgl-project/SpecForge",
+    "revision": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "upstream_file": "specforge/lr_scheduler.py",
+    "source_sha256": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "changes": "Package-relative imports; optimizer rank-zero printing is local."
+  }
+]

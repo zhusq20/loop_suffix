@@ -1,0 +1,35 @@
+{
+  "scheduling_amendment": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/appendix-dflash-incremental-v1",
+  "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+  "original_spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+  ],
+  "started_unix": 1794505039.0291681,
+  "pid": 519800,
+  "start_ticks": "52007532",
+  "supervisor_identity": {
+    "pid": 519799,
+    "state": "R",
+    "start_ticks": "52007526",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/incremental-launcher.json.supervisor.json",
+      "--lock-fd",
+      "5"
+    ]
+  },
+  "exit_code": -15,
+  "finished_unix": 1794505242.6822257,
+  "exit_evidence": "supervisor_waitpid"
+}

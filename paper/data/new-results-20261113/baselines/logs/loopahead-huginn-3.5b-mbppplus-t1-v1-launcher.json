@@ -1,0 +1,26 @@
+{
+  "name": "loopahead-huginn-3.5b-mbppplus-t1-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "mbppplus",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1"
+  ],
+  "pid": 451139,
+  "started_unix": 1794421951.786896
+}

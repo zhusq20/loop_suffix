@@ -1,0 +1,564 @@
+{
+  "status": "complete_throughput_artifact_summary",
+  "measured_cells": 20,
+  "requests": 9600,
+  "source_sha256": "69f5254567e6f26d1f80ddefd10c880491db43f18dd343c57e16238668171328",
+  "audit_reports": {
+    "dflash": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/completed-dflash-throughput-v2/report.json",
+      "sha256": "a1ade071b537314c5d2750e575f1ac3f53ae23342545ea13408200daaf350450"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/user-resume-eight-gpu-v1/loopahead-throughput-audit.json",
+      "sha256": "cd2c1392292d603411d8f41b7e319fc37fde88ad1d2a953eff5c44a3421c006d"
+    }
+  },
+  "input_alignment": {
+    "huginn-3.5b": {
+      "requests": 480,
+      "identical_request_order_and_prompt_tokens": true,
+      "loopahead_input": {
+        "path": "/ossfs/workspace/sz/loopfill/results/loopfill-table2-20261107-v2/inputs/huginn-3.5b.jsonl",
+        "sha256": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e"
+      },
+      "dflash_input": {
+        "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/inputs/huginn-3.5b-table2.jsonl",
+        "sha256": "09c62c20bd32f428baa3f63b1fe8b3d84e41714f4f0d43c05b081b5cfd1ec173"
+      }
+    },
+    "ouro-2.6b": {
+      "requests": 480,
+      "identical_request_order_and_prompt_tokens": true,
+      "loopahead_input": {
+        "path": "/ossfs/workspace/sz/loopfill/results/loopfill-table2-20261107-v2/inputs/ouro-2.6b.jsonl",
+        "sha256": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d"
+      },
+      "dflash_input": {
+        "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/inputs/ouro-2.6b-table2.jsonl",
+        "sha256": "5052256d9a8f07b0b62896103b077813b80ed3f3aa61c73037ca17021fd3d0bb"
+      }
+    }
+  },
+  "cells": {
+    "dflash/huginn-3.5b/b1": {
+      "id": "table2-huginn-3.5b-b1",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/metadata.json": "cf81924bfd437e266fa95eb3e0edc2dffea55a96c54474ad2676ab53340ac55d",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/summary.json": "dfaebe42e3318e9316b76e3ec718fa6a4e12985a9fa64aa8f1a61a4684ae2579",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/complete.json": "8b839a118d1135e7e68cc5c0cfaf32bae507a904feb8adb6abb7a3df634e4bf3",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/requests.jsonl": "429f5d5852b7846617f8b7c08bb604fef10b33015ee8e7ff5f7ed77ad007de2c",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b1-attempt1-exit.json": "997d8c787800d19738c81bae94bddaab895770e996723411b1ff72b70b15d77a"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/ouro-2.6b/b1": {
+      "id": "table2-ouro-2.6b-b1",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/metadata.json": "e0653a9c3ffa2955b920bbaa414ecd5c0266f9b84d9b2e0a65d1d83267d45331",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/summary.json": "614bc1c3003fb777ca37b9b20659054f97c69bd5104a6f625198231612e67254",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/complete.json": "618ac305351b37507b2d6091a91f8a195df5d4d539db8e07c97d15d11509eeb5",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/requests.jsonl": "af8cc544d4774ab29412b33f3cb1c3dd9ebd9dc4bf83b14f70f4fb590148def4",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b1-attempt1-exit.json": "807436ca68b35597b86a21267ea01a42ee9c62e83c69861895a37292d02d62b5"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/huginn-3.5b/b2": {
+      "id": "table2-huginn-3.5b-b2",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/metadata.json": "8e3d790d37502a0b3e6f95259b98648745eef26a56e25653ddef8a6608793473",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/summary.json": "9f6491382cd6645e271a2a05e9ff2add720b3a08e38545ecbbdd34e916fdf9b7",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/complete.json": "85f45e0c637364a4c78370d23730424b95f9c0a74e084629cb9a564f3d5f3ff7",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/requests.jsonl": "990bbaf0da06031bc606fd8dcf91841ee32b3cacefa1bad469e760b6befb080f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b2-attempt1-exit.json": "5d0dc7ad001c457b854f9bc46b8c06d03c81ad64d08f1d775eae8847f82806c6"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/ouro-2.6b/b2": {
+      "id": "table2-ouro-2.6b-b2",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/metadata.json": "c7c480c68d7daa5bb9abf649ee57d88326560cd09237a7f4adca15b34c353b90",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/summary.json": "688c283f650b2cb88f46799c81aa16fa213c2120cfbfdb6c0abad31c2ab0edeb",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/complete.json": "e5d9cb88653d35bea36ea57a5c1f4ea6227495cc7a43236ed96afcb9fad994ee",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/requests.jsonl": "3611d0d53f7c1fca06694589a6cff4b39092889eaf2ffd6fb443f3607c5f2314",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b2-attempt1-exit.json": "a53c4b16cf33a576a792a0385b0372c49cf8402e666db9746d13a73e5b4cc32e"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/huginn-3.5b/b4": {
+      "id": "table2-huginn-3.5b-b4",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/metadata.json": "4f173dac4dbc2a92023893c3653aa6c1e7c4c887f3bb26d4adde7efba98d0f02",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/summary.json": "5caf4486aa346f43af8c25e855169323d8ac030a721dcacca16838254c456f77",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/complete.json": "be7211ea1181f402aa4994cc8de0bdfe8f56c71c9ab639ea3508fca906ae0f38",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/requests.jsonl": "38de50a34ad878c5b2c418a0c2395ed5d67d8a9887b8c37d01ce837f49fd73da",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b4-attempt1-exit.json": "a2b55d0f4ea710bd0bc34d6a7d0aea999d2b94104bdee8d3ce78ea893b13b197"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/ouro-2.6b/b4": {
+      "id": "table2-ouro-2.6b-b4",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/metadata.json": "388cef0a9fdfb38e8e79d597aa289caff208764907157be9d834956653569139",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/summary.json": "6b364abdb480ea978fee48775d602b5eaa4a6a7a95658badea4e11d90d5ae4d4",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/complete.json": "ad2d7ad886707ad0bb3e666a162854f1bd8647fe0241b4544bbadbfbe104978e",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/requests.jsonl": "2e9fd7e752558000afec24f00e79ff37310babdaeea05ad17b229eac326a2682",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b4-attempt1-exit.json": "5e6c004e73569ec441c21495eb09952a1d45da1223b644fe20d53e310e09a402"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/huginn-3.5b/b8": {
+      "id": "table2-huginn-3.5b-b8",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/metadata.json": "74829e57c8ed2a736b484a6d48a21fc63d79a80e9d6806abe6cb0f247a0f6e6d",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/summary.json": "b02a1236897c5c3e4d66741f325dd1646977c70ef489c049f79e18afbb4df233",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/complete.json": "c4a99c324eeafdbfc36b153231ee2ac40d1ebb7a89103d0b7cdec99064fdd8f9",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/requests.jsonl": "4bc7eba404cc36c8dba173800fd5aedd8052ccb9461d8ce25ba8d99558b732f3",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b8-attempt1-exit.json": "aee9a8583b2361e016c55a29a5dd2ee31bfb4877f30163e937dfc78dd74a0840"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/ouro-2.6b/b8": {
+      "id": "table2-ouro-2.6b-b8",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/metadata.json": "d1f16d840d982008a497709efdf04a321fe4c18a02d99bd2de58420c067a9f0f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/summary.json": "255af6574a3827f7b8e631e9a23478539e00c3204fa2e251653deaf714afaa9f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/complete.json": "e1ae1e15903bf23d306113a81fff864540f89bb851f2c4f697ad655cda89c13b",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/requests.jsonl": "b5099b2a979218ecc47b062e818b4660395e85cf6e637968d17db6d0fad22b06",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b8-attempt1-exit.json": "15b810c77e4759015ac932bdd45790c59d75d79e76fb2bfc9664fd3ee2aa20d6"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/huginn-3.5b/b16": {
+      "id": "table2-huginn-3.5b-b16",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/metadata.json": "79e77eb6c05bb8761768ced6a3c67c59b957406bc0bd0e23bd5c2ee66f0c738e",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/summary.json": "5346c69bcda1f84a0723d3c913b0f1f3ef906b2667c67576db1db1739259338a",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/complete.json": "44c27fc51bfced84166ec5cea707a569e2b06bb18935cb10baa1c03c04725a50",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/requests.jsonl": "81e33eb493f1a1e459d0c7d1f20722984d1ac0d66a30a8ba02e14c6f0a3fd462",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b16-attempt1-exit.json": "917b0d7d9fe8ba3b3bdcb53772d94da7a42a5fb128d9e9c84bd7342ecfdcc2b3"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    "dflash/ouro-2.6b/b16": {
+      "id": "table2-ouro-2.6b-b16",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/metadata.json": "fee37f75d9b11a02f73af272a83f110ded696f3a75cad695c65cb6eeb1280da2",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/summary.json": "2ca7aca675e33382d7ef6f2e1aa05820ff1a417c5f2a5383701575d6c7990c0f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/complete.json": "8b614d79197167f617a16a580659e2fa17b3e466165c527989bea3d1b5d4b8a0",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/requests.jsonl": "257b0892a687aa6b830a91a3cd1bc80c26b70818bb60a4cc8789dbd2ef4fb1c6",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b16-attempt1-exit.json": "8a8d45e8bbd781992b84a9738fa429244aa1e1569805c19a1c38c45ddedbd5a7"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    "loopahead/huginn-3.5b/b1": {
+      "id": "huginn-3.5b-b1",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "huginn-3.5b",
+        "batch": "1",
+        "output_tput": "23.9498451040512",
+        "total_tput": "85.45626528593048",
+        "wall_s": "2299.5973360463977",
+        "output_tokens": "55075",
+        "input_tokens": "141440",
+        "requests": "480",
+        "gamma": "5.328290838111505",
+        "peak_allocated_bytes": "15224485888",
+        "max_advance_requests": "1",
+        "max_lad_batch": "1",
+        "outcome": "complete",
+        "historical_ar_tput": "5.8878911118916015",
+        "ratio_to_historical_ar": "4.067644025495037",
+        "historical_loopfill_tput": "26.168861878724435",
+        "ratio_to_historical_loopfill": "0.9152039249946395"
+      },
+      "placement_only_source_change": [],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b1/metadata.json": "a13cd0f2f465786ee1951d2d5d13a27715f1401c4b443eb9d84ced81fc2c8791",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b1/complete.json": "289c704c79a615dc23423cbdd5d78c0178438435c69ac28030f604a71936361d",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b1/summary.json": "569d6dc05b8e88215542c42f4db4e73b4130e57cb745af4927e5bc9bd38ea0d6",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b1/requests.jsonl": "fc821f5f34382980e3179624597d06700dfe40065c4bf12d3a8423ed0b6c1eb4",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b1-launcher.json": "a81178f4fbc064b2feb9b58c4bc4eed8d978ce4124c8dc3ea614be5c0503f19c",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b1-finished.json": "4928f75812283522b889c35b368849fa7ea3c9ab9ebf9ab5c06845a378018f78"
+      }
+    },
+    "loopahead/ouro-2.6b/b1": {
+      "id": "ouro-2.6b-b1",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "ouro-2.6b",
+        "batch": "1",
+        "output_tput": "22.75853716591769",
+        "total_tput": "54.79502782018337",
+        "wall_s": "4495.280133962631",
+        "output_tokens": "102306",
+        "input_tokens": "144013",
+        "requests": "480",
+        "gamma": "4.481285069864672",
+        "peak_allocated_bytes": "9747680256",
+        "max_advance_requests": "1",
+        "max_lad_batch": "1",
+        "outcome": "complete",
+        "historical_ar_tput": "5.527994973633944",
+        "ratio_to_historical_ar": "4.116960538941461",
+        "historical_loopfill_tput": "27.11705413832038",
+        "ratio_to_historical_loopfill": "0.8392702632752624"
+      },
+      "placement_only_source_change": [],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b1/metadata.json": "9e10ca7b9eceeec70789cc31468edb95b29758e6127f05edae523a16490fffdc",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b1/complete.json": "c8270300f49292b3a6c30057a029766b306ad33ea675bfd5e1d253632c8e5171",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b1/summary.json": "ec95cef409aefcbc76a15e6797e29384cd5bbd9022fb406026720dd163e38634",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b1/requests.jsonl": "7d9f920804084951b6746a91a693765ee46b56a729874c41cfec85ffeea6d251",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b1-launcher.json": "4bfc22e04fa203bb3ac357029557a6387217977124a9c98c10400ec481605f5d",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b1-finished.json": "99e91c929c570fb5666c73773df2478dc5347e056f707d564f98a8ababa755ee"
+      }
+    },
+    "loopahead/huginn-3.5b/b2": {
+      "id": "huginn-3.5b-b2",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "huginn-3.5b",
+        "batch": "2",
+        "output_tput": "35.81501476152421",
+        "total_tput": "127.01943102075117",
+        "wall_s": "1550.8020971044898",
+        "output_tokens": "55542",
+        "input_tokens": "141440",
+        "requests": "480",
+        "gamma": "5.449996906897618",
+        "peak_allocated_bytes": "23163039744",
+        "max_advance_requests": "2",
+        "max_lad_batch": "2",
+        "outcome": "complete",
+        "historical_ar_tput": "11.108120298553628",
+        "ratio_to_historical_ar": "3.2242192017120694",
+        "historical_loopfill_tput": "40.72717253066902",
+        "ratio_to_historical_loopfill": "0.8793886866208112"
+      },
+      "placement_only_source_change": [],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b2/metadata.json": "c5e6ba711df3d685ca95c8988727ec9fb0350b43dec4f4cfbf41697bfe3d4be6",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b2/complete.json": "28981f4bd6920e76749616fca69516d137aaf561ad9bb1f8d5ea8ccec6a50e24",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b2/summary.json": "da28c8b8b3416a8a0bfa9707dddeb36aa500d82eb7875c72a10b1ad89c0f3fc6",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b2/requests.jsonl": "1605c1ca148b57d273c832b5657990629b946da4b11b5deee25877da4edda5b8",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b2-launcher.json": "0cefd9004d7010937d0e0b66757f682d4541202e375d90208519efbd124a263c",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b2-finished.json": "18d37420f844918615ee38da91c2fa55d74b4d46dbc6dca5a934f1af4471f362"
+      }
+    },
+    "loopahead/ouro-2.6b/b2": {
+      "id": "ouro-2.6b-b2",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "ouro-2.6b",
+        "batch": "2",
+        "output_tput": "43.05073455079775",
+        "total_tput": "105.7560781214797",
+        "wall_s": "2296.6623225286603",
+        "output_tokens": "98873",
+        "input_tokens": "144013",
+        "requests": "480",
+        "gamma": "4.507805609960027",
+        "peak_allocated_bytes": "14070839808",
+        "max_advance_requests": "2",
+        "max_lad_batch": "2",
+        "outcome": "complete",
+        "historical_ar_tput": "10.651749622678926",
+        "ratio_to_historical_ar": "4.041658513934394",
+        "historical_loopfill_tput": "51.16769958759732",
+        "ratio_to_historical_loopfill": "0.8413654492537112"
+      },
+      "placement_only_source_change": [],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b2/metadata.json": "6adce93a9b6d43871f8f19cd7d35aea8ecc71179c5c036bbff6585f3ddf09360",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b2/complete.json": "81172114201af36814fa47dd52e51feda61881709c77574e520915aa269a6420",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b2/summary.json": "d540a58b8e8bb0b540cc3658084de1d6c6d160e18b1b4fbe7a7e6a11bb280052",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b2/requests.jsonl": "7510bfb753788486ec34d8cdb3553ee76322294a38799b5de6125ba171e8d3c8",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b2-launcher.json": "956a20c30c872631d376eb3660f21c37c192d8627ef39c49dd223e9b42efbecb",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b2-finished.json": "2030b4411d9712ccaaac24190ee6a945a79a3c636c511608010bce660dc31a51"
+      }
+    },
+    "loopahead/huginn-3.5b/b4": {
+      "id": "huginn-3.5b-b4",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "huginn-3.5b",
+        "batch": "4",
+        "output_tput": "52.21269223069903",
+        "total_tput": "190.6634456823314",
+        "wall_s": "1021.5906845852733",
+        "output_tokens": "53340",
+        "input_tokens": "141440",
+        "requests": "480",
+        "gamma": "5.290695492249371",
+        "peak_allocated_bytes": "39055447040",
+        "max_advance_requests": "4",
+        "max_lad_batch": "3",
+        "outcome": "complete",
+        "historical_ar_tput": "18.996580956134704",
+        "ratio_to_historical_ar": "2.7485310304661748",
+        "historical_loopfill_tput": "59.501956600099255",
+        "ratio_to_historical_loopfill": "0.8774953835822591"
+      },
+      "placement_only_source_change": [
+        "configs/gpu-allocation.json"
+      ],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b4/metadata.json": "19e29c692a5b296cdcd96dbfc2eb34c1cf0833a65df2afdd38dbeeff21105684",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b4/complete.json": "31b8f7bbee18c6585132dbe49600a3092a07cef35c3eb393c5588fefe00237da",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b4/summary.json": "9cb6b78873aea71973893690880708ad1890a0d715efb2f6f66073fbc370153e",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b4/requests.jsonl": "4856f20a46a3721c48e24d417cadc011b21b67238bfca50668656d367f873e87",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b4-launcher.json": "de3959ff3d8c6f2471b6bd52678440c0e835be09f833b166cede7f8edeee0c5c",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b4-finished.json": "17e4bddbced3f60a834fb961a93625ee7ff1b61a60445851926bcc34a5fcdacb"
+      }
+    },
+    "loopahead/ouro-2.6b/b4": {
+      "id": "ouro-2.6b-b4",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "ouro-2.6b",
+        "batch": "4",
+        "output_tput": "74.51669558046099",
+        "total_tput": "183.29567727010985",
+        "wall_s": "1323.9046529307961",
+        "output_tokens": "98653",
+        "input_tokens": "144013",
+        "requests": "480",
+        "gamma": "4.440007236217268",
+        "peak_allocated_bytes": "22729416704",
+        "max_advance_requests": "4",
+        "max_lad_batch": "4",
+        "outcome": "complete",
+        "historical_ar_tput": "20.747851396557056",
+        "ratio_to_historical_ar": "3.5915379456027168",
+        "historical_loopfill_tput": "86.21714004148247",
+        "ratio_to_historical_loopfill": "0.8642909698072572"
+      },
+      "placement_only_source_change": [
+        "configs/gpu-allocation.json"
+      ],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b4/metadata.json": "d892175c577f38e1788faa7e96c8740320b76b5ac88539b129ab7c799a29ea6b",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b4/complete.json": "63998d48b9a125600e67653dffeefcf5cd9b2fe99da661453cab2bec23e2d4d0",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b4/summary.json": "bb6f01dcddc2218c59ad6d936f403d8a7d5d58ba4868d57a86ae491ab0e6db01",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b4/requests.jsonl": "e695b2c04b3dad4a8ab3d175d4ccf295e37b9093cc723b08e34fdc432fcd601b",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b4-launcher.json": "40c97b5a1552d33282bdeb8271462c72e55859f3fde63910bebfd6e9150b3945",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b4-finished.json": "dcd126f968792ee9989896c7d38b4784d4bc7a36b892c57377773ea324d4c50b"
+      }
+    },
+    "loopahead/huginn-3.5b/b8": {
+      "id": "huginn-3.5b-b8",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "huginn-3.5b",
+        "batch": "8",
+        "output_tput": "76.11809427034447",
+        "total_tput": "268.9422382255961",
+        "wall_s": "733.5181015133858",
+        "output_tokens": "55834",
+        "input_tokens": "141440",
+        "requests": "480",
+        "gamma": "5.393286890436985",
+        "peak_allocated_bytes": "70874517504",
+        "max_advance_requests": "8",
+        "max_lad_batch": "7",
+        "outcome": "complete",
+        "historical_ar_tput": "32.99454545702096",
+        "ratio_to_historical_ar": "2.3069902378105707",
+        "historical_loopfill_tput": "88.17778253863986",
+        "ratio_to_historical_loopfill": "0.8632343894221791"
+      },
+      "placement_only_source_change": [
+        "configs/gpu-allocation.json"
+      ],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b8/metadata.json": "18cadcd16f77efe014aba0fa6ac257c38e9353219713d391b847015aa4303b8a",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b8/complete.json": "82be8ff78ade33bb14c429d08d4469194f46f5c8e1f954b11b362e34b2d2b715",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b8/summary.json": "4e0c95821d5a175967d18a9234e63f348294c820be66a4161df8b84c42aab401",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b8/requests.jsonl": "f8b130b203b6dfb60d488209ecb61b63a0c7e6349dfc09a1c77e9a3ed0c9adce",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b8-launcher.json": "6d95920b3d8f885fd4b2a51a5b8748aec5df136e00dd2230e72fd5babbb49600",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b8-finished.json": "06ed2362b696ea8553d91c375791dde2c22574174cf5f1e824787f359af07ca8"
+      }
+    },
+    "loopahead/ouro-2.6b/b8": {
+      "id": "ouro-2.6b-b8",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "ouro-2.6b",
+        "batch": "8",
+        "output_tput": "124.17155841118338",
+        "total_tput": "305.2289935758124",
+        "wall_s": "795.3995364457369",
+        "output_tokens": "98766",
+        "input_tokens": "144013",
+        "requests": "480",
+        "gamma": "4.453123407147307",
+        "peak_allocated_bytes": "40078975488",
+        "max_advance_requests": "8",
+        "max_lad_batch": "8",
+        "outcome": "complete",
+        "historical_ar_tput": "38.71789888611055",
+        "ratio_to_historical_ar": "3.2070841131239183",
+        "historical_loopfill_tput": "140.9422439316542",
+        "ratio_to_historical_loopfill": "0.8810102276461325"
+      },
+      "placement_only_source_change": [
+        "configs/gpu-allocation.json"
+      ],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b8/metadata.json": "dfc85e1675b3c13e07d2b283cc957ab287e119771519fe1936f0d575f7be490e",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b8/complete.json": "e6608f17ea1a7ce82a82e79b03605a92084971c1902aee5bf67c01815c1fc2a9",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b8/summary.json": "8026f0b5986ff0f3ff5280fdec824e7d00c89059c1dfaf4fee33cecb4743de33",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b8/requests.jsonl": "f5df9bf1c13bc80fffdd99d8c158958f8563c1d7b3bf5c3dba4672316bc1325e",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b8-launcher.json": "320e36c9ff1157c92df99e8e6de1c410a686d204e5ec56d3753d0b95ed134e36",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b8-finished.json": "f0e577c91f292da6c89cfd84cf77b2d26e7a5a2b4237cce40f5c6a9328619919"
+      }
+    },
+    "loopahead/huginn-3.5b/b16": {
+      "id": "huginn-3.5b-b16",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "huginn-3.5b",
+        "batch": "16",
+        "output_tput": "100.24115697878817",
+        "total_tput": "360.0276793160756",
+        "wall_s": "544.4470279961824",
+        "output_tokens": "54576",
+        "input_tokens": "141440",
+        "requests": "480",
+        "gamma": "5.336950757809321",
+        "peak_allocated_bytes": "134556908032",
+        "max_advance_requests": "16",
+        "max_lad_batch": "9",
+        "outcome": "complete",
+        "historical_ar_tput": "48.339976576229446",
+        "ratio_to_historical_ar": "2.0736699534951875",
+        "historical_loopfill_tput": "117.51800363649375",
+        "ratio_to_historical_loopfill": "0.8529855330835413"
+      },
+      "placement_only_source_change": [
+        "configs/gpu-allocation.json"
+      ],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b16/metadata.json": "376224a10e30ad23f1119371376fc30f7f26742ce252875d1abafb8f1351e25a",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b16/complete.json": "874e4b96bd2cc700fcbf611abfda177d1fe891a6052bae9d089a671ccc0d0f0b",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b16/summary.json": "cbbaf72dedf037fb04530a31cf178c6aefacfbeb9a8853e1fb8a3ad5b1a19106",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/huginn-3.5b-b16/requests.jsonl": "bf7b890c25d36a5d4af1a6b18b8d44f6fd330e347286d7ea5508c1daee9e4fbc",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b16-launcher.json": "273c5ba58b68f6a56c5d6d1bb1b4c6a7b554d673df613cffc8acfe8b1643c322",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/huginn-3.5b-b16-finished.json": "e53c55e2cea72757f771616a5b827da9a746614bbf7402d862cb92e1654dd7c3"
+      }
+    },
+    "loopahead/ouro-2.6b/b16": {
+      "id": "ouro-2.6b-b16",
+      "requests": 480,
+      "actual_exit_code": 0,
+      "row": {
+        "model": "ouro-2.6b",
+        "batch": "16",
+        "output_tput": "186.65447688073144",
+        "total_tput": "457.4897448279035",
+        "wall_s": "531.7365093976259",
+        "output_tokens": "99251",
+        "input_tokens": "144013",
+        "requests": "480",
+        "gamma": "4.474996318823836",
+        "peak_allocated_bytes": "74806801920",
+        "max_advance_requests": "16",
+        "max_lad_batch": "16",
+        "outcome": "complete",
+        "historical_ar_tput": "67.48118158555856",
+        "ratio_to_historical_ar": "2.7660226524645917",
+        "historical_loopfill_tput": "189.55626449904798",
+        "ratio_to_historical_loopfill": "0.9846916817759346"
+      },
+      "placement_only_source_change": [
+        "configs/gpu-allocation.json"
+      ],
+      "actual_source_root": "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b16/metadata.json": "49f808a55db05b9e61da6f130c1554dd0794fc1f5ad5fe9f8fe90d6c0cbc57cb",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b16/complete.json": "9d46dc9471f88bbfeb32dcba1f4bc683990e4f129639fc8e84e501f20dbd08a1",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b16/summary.json": "2a5ae5cd4f55d317cc37e62046c3787b20c16e219343c8ce3dd06ca4b8a28fc8",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/runs/ouro-2.6b-b16/requests.jsonl": "142a5ef99496b5b844276eae21bb18a9bae994b22421b73a880c14e81469958d",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b16-launcher.json": "2cda1a6c0ca86dc9fdd61b3be3322d419566a67fd3b644286757a3b589fd7bda",
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/logs/ouro-2.6b-b16-finished.json": "d4fd7748edf2081122246daf42a8d59f7ac928effda6a0f0dda00551f084e0ee"
+      }
+    }
+  },
+  "historical_measurements": {
+    "path": "/ossfs/workspace/sz/loopfill/results/loopfill-table2-20261107-v2/measurements.csv",
+    "sha256": "58de027c2bbb188bad36eb285611f3b438e7f1a5f7767c5831a2c79ed3d9cba4"
+  },
+  "results_sha256": "217cb838efeec1249b75034f2dc2eff577b8612bea14cf67d4dd11e2c930f242",
+  "summary_sha256": "6fbe87a27ee460a586a7d97293d58cc9e8e7b0804f0159149971af3bc5e433f3",
+  "new_gpu_runs": 0,
+  "checked_unix": 1794466613.4732985
+}

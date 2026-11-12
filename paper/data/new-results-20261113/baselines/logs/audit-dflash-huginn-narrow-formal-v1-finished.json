@@ -1,0 +1,18 @@
+{
+  "name": "audit-dflash-huginn-narrow-formal-v1",
+  "argv": [
+    "taskset",
+    "-c",
+    "80-83",
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_projected_dflash_training.py",
+    "--scope",
+    "formal",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1"
+  ],
+  "pid": 174116,
+  "started_unix": 1794398428.7375324,
+  "exit_code": 0,
+  "finished_unix": 1794398442.1743953
+}

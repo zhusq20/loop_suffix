@@ -1,0 +1,42 @@
+{
+  "status": "legacy_inputs_preserved_for_final_collection",
+  "legacy_rows": 48,
+  "loopahead_rows": 36,
+  "retained_HF_dflash_rows": 12,
+  "combined_cells_at_snapshot": 60,
+  "expected_combined_cells": 72,
+  "original_inputs_unchanged": true,
+  "new_gpu_runs": 0,
+  "source_input_sha256": {
+    "results.csv": "0d15f06df225c1005844225639e564b9cb6aa2794841362b53b0baff915bf4b0",
+    "formal-agreement.json": "9d55eb911329c3cb8b7ebb3b9ac2d186c34115c0386f99b2449fe967c05a63e7",
+    "formal-matrix-status.json": "cbe370f29e02479072722d0286be0246b79eb07a0dc2c44aa0a593276d8d3330",
+    "table2_rows.md": "0e0118f3bd3a5d56ccee158456637ef803949f098fd16cd01e6ebf56fa660d08"
+  },
+  "collector_source_sha256": {
+    "collect_results.py": "a41bb742e543a7f828ce2bafa87262bda4ba4657f05d972c0e5df1e17e43a60d",
+    "collect_combined_results.py": "568f2c1c6fbd88db82447679ee17346f96992ccde9b91c08f94b3e8b2c5ec55a",
+    "collect_combined_results_archived.py": "6f370c26d706408c9bcd44ea2aa13b58a52581da790d01603379f8fa7582b392"
+  },
+  "collection_report": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/combined-results-cell60-v1/report.json",
+    "sha256": "62763827765802196eb5a089acca6b79d2944b2bb525faacdf464ff23e8f725e"
+  },
+  "completed_loopahead_pipeline": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/complete.json",
+    "sha256": "2979fb3183f613ae34d6e4944d088ff9cff21f897520a9226cd20c7d6c8860a0"
+  },
+  "gpu3_reservation_released": true,
+  "run_command_template": [
+    "/opt/conda/bin/python",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/collect_combined_results_archived.py",
+    "--legacy-results",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/final-legacy-inputs-v1/results.csv",
+    "--legacy-agreement",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/final-legacy-inputs-v1/formal-agreement.json",
+    "--out",
+    "<fresh output directory>"
+  ],
+  "scope": "All 36 LoopAhead and 12 retained HF DFlash inputs are preserved. Packed DFlash cells are loaded independently. This snapshot does not complete the 72-cell goal, final numerical checks, or the last training.",
+  "checked_unix": 1794482123.683393
+}

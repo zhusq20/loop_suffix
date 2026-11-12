@@ -1,0 +1,43 @@
+{
+  "status": "prepared_resume_inputs_verified_no_gpu_run",
+  "reused_cases": 262,
+  "pending_cases": 167,
+  "first_pending_source_id": "test/intermediate_algebra/956.json",
+  "negative_bindings_rejected": [
+    "ar",
+    "loopahead",
+    "observed_margin_report",
+    "paper_check",
+    "changed_capsule",
+    "existing_output"
+  ],
+  "torch_imported": false,
+  "new_gpu_runs": 0,
+  "partial_evidence": {
+    "partial_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/report.json",
+    "partial_report_sha256": "5853743677d22273d43d495e4c1ffab2eabff4af9c1ccd97a0cb658f4aef5bc7",
+    "recovered_records": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/interrupted-loopahead-math-fp32-v1/recovered-records.partial.jsonl",
+    "recovered_records_sha256": "a68257dd54ab8a97fb81f5e554553c9faef4f415bdb49d5aceb76bc437881abf",
+    "original_log": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32.log",
+    "original_log_sha256": "204086fa1f6c74041ac0b25e6726da9dd820ff51d43292794180c19641a834cd",
+    "original_interrupted_exit": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json",
+    "original_interrupted_exit_sha256": "04567d90e0d062db8c3849c09c968580aa60226f4b8c100b0bbe257d5f18ae40",
+    "original_interrupted_exit_code": -15,
+    "original_source_sha256": "8e4c18ebc54ef0c0b1475ead9573ec80ca4da24c8af18c670231d28526addc7f",
+    "reused_cases": 262,
+    "expected_cases": 429,
+    "limitation": "The original attempt exited -15. Only its emitted, source-bound records are reused; this attempt must execute every remaining case and actually exit 0."
+  },
+  "source_sha256": {
+    "diagnose_trained_loopahead.py": "8e4c18ebc54ef0c0b1475ead9573ec80ca4da24c8af18c670231d28526addc7f",
+    "diagnose_trained_loopahead_resume.py": "ad413afbdd2e8c038bea5707d318c445ccf672cca30a9c075b9790a854ace615",
+    "loopahead_partial_resume.py": "ede86c154b1d44ac935e952b0c4d607220e4c7e583f47b9b34357d97cfea2523",
+    "test_loopahead_partial_resume.py": "6a27749f8b9edfe4438af6b3f5af61f8e890f7e1aacad25f51a047e405e42729"
+  },
+  "checker_sha256": "d6828b210fd756b8f99cad382a6ac77f2d85fe59b2ebeec71c310c0e1ae2dc42",
+  "checked_unix": 1794509718.6286418,
+  "limitations": [
+    "Prepared only. No resumed GPU worker or new complete numerical group exists.",
+    "A new attempt and explicit audit integration must preserve the interrupted -15 receipt."
+  ]
+}

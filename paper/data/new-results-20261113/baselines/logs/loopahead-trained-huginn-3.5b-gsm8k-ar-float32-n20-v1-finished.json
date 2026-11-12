@@ -1,0 +1,30 @@
+{
+  "name": "loopahead-trained-huginn-3.5b-gsm8k-ar-float32-n20-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "ar",
+    "--dataset",
+    "gsm8k",
+    "--count",
+    "20",
+    "--pilot",
+    "--trace",
+    "--dtype",
+    "float32",
+    "--gpu",
+    "1",
+    "--cpus",
+    "4-7",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-ar-float32-n20-v1"
+  ],
+  "pid": 245909,
+  "started_unix": 1794323335.0799015,
+  "exit_code": 0,
+  "finished_unix": 1794323676.4712183
+}

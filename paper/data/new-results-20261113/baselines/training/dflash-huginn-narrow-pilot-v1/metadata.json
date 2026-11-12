@@ -1,0 +1,589 @@
+{
+  "model": "huginn-3.5b",
+  "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "seed": 42,
+  "epochs": 1,
+  "draft_architecture": "target-width-projections-v1",
+  "target_hidden_size": 5280,
+  "draft_hidden_size": 2048,
+  "draft_intermediate_size": 5632,
+  "draft_config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+  "selection_manifest": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/dflash-pilot.jsonl",
+  "selection_manifest_sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16",
+  "training_scope": "pilot2000",
+  "world_size": 1,
+  "micro_batch": 4,
+  "accumulation": 8,
+  "global_batch": 32,
+  "examples": 1893,
+  "excluded_under_32_tokens": [
+    "codealpaca/16187",
+    "codealpaca/16893",
+    "codealpaca/14640",
+    "codealpaca/9052",
+    "ultrachat/a80c7d53cf843d84a06ddd80266bb52ba968e5030f26980ad49a688b775689ec",
+    "codealpaca/13332",
+    "ultrachat/7bd15a01855848fdb728f42437c750c2fb0c3fa58e87b4833b6333c211eec109",
+    "ultrachat/390cc677019189b9c0cd7ff8c594bedce66185324d69e36342199e8d8b0099fc",
+    "ultrachat/21cdedc90ffff4996ae480130d1d523f75817db02450721414792515b4fc5fed",
+    "nemotron-v1/9f4754fa-e4cc-42f6-821b-04e3be68c845",
+    "ultrachat/a4a658ef7253347737bb9cbbf517a8d29b1aa48c70d26cde6ca9e389eeabcc32",
+    "codealpaca/5112",
+    "ultrachat/bee2f28b4e0486a6d37d27811a92cb9d25cbad50b320178a37f75c31842b09a2",
+    "codealpaca/15728",
+    "codealpaca/7098",
+    "codealpaca/7471",
+    "codealpaca/11232",
+    "codealpaca/16314",
+    "codealpaca/19747",
+    "codealpaca/3049",
+    "codealpaca/19389",
+    "ultrachat/597921a1040a7646b5dad22d9c7457956645a6862354cebfb3e08c9fb693bdcb",
+    "codealpaca/15560",
+    "codealpaca/16890",
+    "ultrachat/437938ce1966985b3f925c0e0e92ded31a0908ea6e385ebc808b9f43a977a94f",
+    "ultrachat/74d9e31b6aa57b6b2c194d67158018111d730bb6846c6afed3225a7c45fe8cca",
+    "ultrachat/4329a2bb7e8dc9cf1e176b6270cf443f5c1e7d1db36536fd5ca9b009e84bb8cd",
+    "ultrachat/b3d3a3c9abdf9965d46cd1047da7727050bad0682484e996588de9764343bfcf",
+    "ultrachat/43f68dec4718bb1db7f3e52344022ced23690db9ba301b387953a072cf41a43a",
+    "codealpaca/19578",
+    "codealpaca/1601",
+    "codealpaca/17022",
+    "codealpaca/3667",
+    "codealpaca/9517",
+    "ultrachat/e938ad8ba87ed38aed8429c187feca2661b5db44336199ba6dfed889c3fb0da3",
+    "codealpaca/12929",
+    "codealpaca/12987",
+    "codealpaca/3465",
+    "codealpaca/4736",
+    "codealpaca/9256",
+    "ultrachat/1eead546f985e9c185636cb74290050ccec311f3a82afb27e9edd19f12730e2c",
+    "ultrachat/3227ddda844b5a4b482277e76f2f93b9b9c1e2effca0552e1767ea8f6f09253d",
+    "ultrachat/ec87a0f6956a6073c6d21f7278d26dcaeb554bb23bb4e2bea6e49d0aa3f2c452",
+    "ultrachat/fed12883e6f986ac3fb75e5af6487714f3032dffb46966c8d7b9f701f07b0f99",
+    "ultrachat/2209573d4b07230ad63ff6afc48ee0dd02fc6ffa50af96e452584bfbab86c595",
+    "ultrachat/2456462d727c26b8979b0cac7629f96f17a593d171efcc98480fe17b75e6e6ac",
+    "codealpaca/16439",
+    "codealpaca/5572",
+    "codealpaca/6414",
+    "codealpaca/14404",
+    "codealpaca/2271",
+    "codealpaca/5428",
+    "codealpaca/14041",
+    "codealpaca/15293",
+    "codealpaca/18734",
+    "codealpaca/560",
+    "codealpaca/2086",
+    "codealpaca/10359",
+    "nemotron-v1/b71c6903-ae91-4833-9d1e-163f3b1c5c7a",
+    "nemotron-v1/462da863-40f3-40f2-9151-b81e6f5e4ab0",
+    "ultrachat/8ec071d78f1af77bdcab0d5b671c03055e7398b97ec1be6a6413ec15c3c00d8f",
+    "ultrachat/9a5321e637897c45d030996614339a91cacdf363fca7fcd4b8e63e36e8efa71f",
+    "ultrachat/6cc94325664749ffbca721e6df4231466fb8bb82ab5128420b4284b9eb23c87c",
+    "ultrachat/07ddc7db0878150bc7ed8ddbb6fa9b618dfeb3701ae1a2c7221ddb9530fa1111",
+    "codealpaca/19646",
+    "codealpaca/3470",
+    "codealpaca/645",
+    "codealpaca/13365",
+    "codealpaca/15659",
+    "codealpaca/6504",
+    "ultrachat/bbb1b1cd6d18d0ffcff2f7c81ba9dcdbb25540fddda4096d3423b1229a4da076",
+    "codealpaca/8366",
+    "nemotron-v1/333da305-838d-4117-94e1-adef93f10644",
+    "ultrachat/49e02b95ccac6e4b7e6955d52054213d9c7a16b662179edacbb31e8b5aa4d168",
+    "ultrachat/f64d6f25506a3a2e1645aad7c190e229afb3320b44f802822cf90b0228b2d1cd",
+    "nemotron-v1/3625e45e-7009-42e1-a30f-4268b1fd1bff",
+    "codealpaca/18968",
+    "ultrachat/fc9bd71bd59f46bf6b82f5699219bef8ee149d0fc16b42feaa2a06f20d6f8592",
+    "ultrachat/ed9e95f0c445ca15a5ed30afe29a7e2adaf3816401fd2e8e0ea9db452e8e8d5c",
+    "nemotron-v1/e092ea89-83c5-450f-8177-5df6d1abaea1",
+    "codealpaca/7710",
+    "codealpaca/16476",
+    "codealpaca/5576",
+    "codealpaca/19007",
+    "ultrachat/250dfc26fba9b4a3f957ca829f53f831f1d4a1cad3bc5601d1a10069885b9477",
+    "ultrachat/776c1d25b004a289c9fd31e64f1ffbe4094418512c0fbc9d71d3bedd4464618b",
+    "ultrachat/cb6c3cdbeec01df4acadc55e93d352b8e44820c6e0f152fa386ff633faedb4da",
+    "nemotron-v1/5c648315-fcb2-4dde-992a-33180f4c3e41",
+    "ultrachat/ad07b2079a1e562c25e671f0329e7611851b75013e08059c0c73bf5fd4fa71f9",
+    "ultrachat/d817c89801c595112fc4d9c37f5d598f6ff71c1fb19a7674621ea025a7ed059a",
+    "nemotron-v1/068e3982-8691-4ef0-92c4-c4e1a14a3c36",
+    "ultrachat/4b7d642f98d21c6c4ec54bbe6e9f799a0fcfe42fd84598a049ffdb0d62e5f81e",
+    "codealpaca/18981",
+    "codealpaca/10547",
+    "codealpaca/17344",
+    "codealpaca/2124",
+    "codealpaca/6539",
+    "codealpaca/12900",
+    "codealpaca/13133",
+    "codealpaca/17691",
+    "codealpaca/5710",
+    "codealpaca/9553",
+    "codealpaca/11884",
+    "codealpaca/18151",
+    "ultrachat/739775c9945a6fba673e96a437dbed405ca9bb3014f834d09d293aed3e115878",
+    "ultrachat/da9f09f3d33ccb0240634cb237a324274453d2ea1627f2f6162a463335c52d6e",
+    "ultrachat/b9906f65596e6fdebfaeba7621ce388a21e91c2b5f573794bdcf8eab24d85b7c"
+  ],
+  "sources": [
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard0/teachers.jsonl",
+      "sha256": "d14867cf455e6799fed6b9a677cc21cdb9374fd11c2684557552fccbfbbf7ae8",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 0,
+        "max_batch": 32,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "identical_prompt_length",
+        "teacher_cache": "huginn_preallocated",
+        "production_cache_proof_sha256": "efdad843f4a529e79847b15d13244db1d109807d05459dcdc5233252c156e175",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard1/teachers.jsonl",
+      "sha256": "753be71a2455621c73d9839596ebf5b9f19ee1684987e3a5da1ec64a25027af3",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 1,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "e4d70875453a43c7862b4bb39a5b7601d5429922c0aa800ea375b398623177fc",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard2/teachers.jsonl",
+      "sha256": "0521bbedd231125ecaed4578726d2bcce7a49ad9a32b1a56216259dc3c80df18",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 2,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "ca5516f8745962a196be2c14ec7438830b9b13f83b362acee09dfdd16e2b24ed",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard3/teachers.jsonl",
+      "sha256": "2b1824314732e02130f669f0939843a44bb97bdead6aa34e52093dd5dc43386b",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 3,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "1ab8e6bb8f99d10ed47af9a8e191c0674385bbb45ad89c1f889527ba0ca38fc0",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard4/teachers.jsonl",
+      "sha256": "31c7404c65e89ce4ac9e5618d1298008323136c688742b2d390f00039090b1e5",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 4,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "bb4ed9d1f1de35b73a22c795727062bdc18a01483f51c4beaf385378d8527963",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard5/teachers.jsonl",
+      "sha256": "618994e26fd557bf6f859f8f16c3498666bf2a8c9c0fdc4c5e814da00c785f2d",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 5,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "a67af315500e86af47311d2b9f819c111f046c5e4eab53316852af7769edece9",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard6/teachers.jsonl",
+      "sha256": "bf351d5f3a9b12f20b754be99ab6065d06454ea3aa563ee25e5a9b961e0168c8",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 6,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "0e01cac1a63a8e55d3da0b33af1f4ae5382332b3f361d074175e4896f34759f0",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard7/teachers.jsonl",
+      "sha256": "aaba0da3927f0f692377fa718cc4322e58e171956c26560438e03f6adfde7d86",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+        "batch_plan_sha256": "6dca07c80e2857f9c39af2d06427b24bbfce964ab92625bd9236e76914f3cfe4",
+        "shards": 8,
+        "shard": 7,
+        "max_batch": 32,
+        "execution_batch_plan_sha256": "ad3e4fc44097bc7e1542ec722c42a07a78c44ff50190feabdc029f3b531062a2",
+        "packed_regrouping": true,
+        "kv_budget_gib": 70,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505,
+            65508
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "packed_ragged_length_sorted_same_frozen_shard_assignment",
+        "teacher_cache": "packed_graph",
+        "production_cache_proof_sha256": null,
+        "packed_graph_proof_sha256": "ead1ac8017222993f627c64c90286866e2befddc22695f3cff767051b0b87fd4",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    }
+  ],
+  "max_seq": 3072,
+  "num_anchors": 512,
+  "block_size": 16,
+  "loss_decay_gamma": 7.0,
+  "lr": 0.0006,
+  "warmup_ratio": 0.04,
+  "max_grad_norm": 1.0,
+  "weight_decay": 0.0,
+  "adam_betas": [
+    0.9,
+    0.999
+  ],
+  "total_updates": 60,
+  "target_features": [
+    1,
+    126,
+    128,
+    130,
+    131
+  ],
+  "mask_token_id": 65513,
+  "draft_parameters": 332621056,
+  "smoke": false,
+  "torch": "2.9.1+cu128",
+  "transformers": "4.57.1",
+  "gradient_checkpointing": true,
+  "distributed": "DDP",
+  "final_global_batch": "deterministically pad from shuffled epoch start",
+  "target_generation_software": "recorded in teacher sources; target features recomputed in training environment",
+  "source_sha256": "74eb5919f4228083e85dfc9982f78ab5b0c569d14e43510e7d598cbc19ae245c"
+}

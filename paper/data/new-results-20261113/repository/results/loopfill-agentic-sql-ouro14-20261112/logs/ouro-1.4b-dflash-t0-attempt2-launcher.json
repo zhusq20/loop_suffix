@@ -1,0 +1,51 @@
+{
+  "job_id": "ouro-1.4b-dflash-t0",
+  "smoke": false,
+  "gpu": 5,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "52-55",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/runtime/native_cuda_env.py",
+    "--record",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/logs/ouro-1.4b-dflash-t0-attempt2-environment.json",
+    "--",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/scripts/loop_agentic_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/runs/ouro-1.4b-dflash-t0",
+    "--model",
+    "ouro-1.4b",
+    "--arm",
+    "dflash",
+    "--temperature",
+    "0",
+    "--q",
+    "4",
+    "--n",
+    "16",
+    "--cache-mode",
+    "stream"
+  ],
+  "started_unix": 1794500226.4590554,
+  "pid": 464352,
+  "start_ticks": "51526275",
+  "supervisor_identity": {
+    "pid": 464351,
+    "state": "R",
+    "start_ticks": "51526269",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/logs/ouro-1.4b-dflash-t0-attempt2-launcher.json.supervisor.json",
+      "--lock-fd",
+      "5"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "status": "controller_handoff_passed",
+  "observed_unix": 1794435138.3924165,
+  "controller_pid": 100836,
+  "workers": {
+    "table1-ouro-2.6b-math500-t0": {
+      "same_pid": true,
+      "state": "R"
+    },
+    "table1-ouro-2.6b-math500-t1": {
+      "same_pid": true,
+      "state": "R"
+    },
+    "table1-huginn-3.5b-math500-t1": {
+      "same_pid": true,
+      "state": "R"
+    },
+    "table1-ouro-2.6b-specbench-t1": {
+      "same_pid": true,
+      "state": "R"
+    },
+    "table1-ouro-2.6b-specbench-t0": {
+      "same_pid": true,
+      "state": "R"
+    },
+    "table1-ouro-2.6b-mbppplus-t1": {
+      "same_pid": true,
+      "state": "R"
+    },
+    "loopahead-ouro-2.6b-specbench-t1": {
+      "same_pid": true,
+      "state": "R"
+    }
+  },
+  "reused_jobs": [
+    "table1-ouro-2.6b-bbh-t0",
+    "table1-huginn-3.5b-gsm8k-t0",
+    "table1-ouro-2.6b-gsm8k-t0",
+    "table1-huginn-3.5b-humanevalplus-t0",
+    "table1-ouro-2.6b-humanevalplus-t0",
+    "table1-huginn-3.5b-mbppplus-t0",
+    "table1-ouro-2.6b-mbppplus-t0",
+    "table1-ouro-2.6b-bbh-t1",
+    "table1-ouro-2.6b-gsm8k-t1"
+  ],
+  "complete_artifacts_without_exit": [
+    "table1-huginn-3.5b-math500-t0"
+  ]
+}

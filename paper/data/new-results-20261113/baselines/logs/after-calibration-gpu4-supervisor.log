@@ -1,0 +1,32 @@
+[
+  {
+    "model": "huginn-3.5b",
+    "requests": 300,
+    "ar_tok_s": 6.880619683980688,
+    "loopspec_tok_s": 24.295684121849572,
+    "eta_latency": 3.4830083009425725,
+    "eta_throughput": 3.5310313950957446,
+    "gamma": 4.879450055685703,
+    "ar_vs_loopspec_sequence_matches": 211,
+    "ar_repeat_sequences": 300,
+    "loopspec_repeat_sequences": 300,
+    "ar_repeat_calls": 300,
+    "loopspec_repeat_calls": 300,
+    "status": "full300_environment_calibration"
+  },
+  {
+    "model": "ouro-2.6b",
+    "requests": 300,
+    "ar_tok_s": 6.283125405930346,
+    "loopspec_tok_s": 20.390690178476117,
+    "eta_latency": 3.18866694808451,
+    "eta_throughput": 3.2453100743827754,
+    "gamma": 3.592205340785018,
+    "ar_vs_loopspec_sequence_matches": 205,
+    "ar_repeat_sequences": 300,
+    "loopspec_repeat_sequences": 300,
+    "ar_repeat_calls": 300,
+    "loopspec_repeat_calls": 300,
+    "status": "full300_environment_calibration"
+  }
+]

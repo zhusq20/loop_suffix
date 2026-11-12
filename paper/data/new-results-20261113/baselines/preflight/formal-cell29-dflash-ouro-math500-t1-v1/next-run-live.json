@@ -1,0 +1,45 @@
+{
+  "status": "live_next_HumanEval_AR_observed_not_complete",
+  "checked_unix": 1794409743.8993857,
+  "pid": 299585,
+  "worker_pid": 299577,
+  "start_ticks": "42465757",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "ar",
+    "--dataset",
+    "humanevalplus",
+    "--temperature",
+    "0",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1"
+  ],
+  "launcher_sha256": "b402b38edb7c3ff94d5f45375ae09360699eec23c1464e6d33019bc3f5c402f3",
+  "job_sha256": "ba3a3dd997830dc5395f85d2f417ff246ee35324652d375a9b5cfe360695f37f",
+  "metadata_sha256": "12f7c507af39e17da9595a36ae8b69b876df979cdbb999a7e222d890fc52123d",
+  "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+  "native_driver": "/usr/lib64/libcuda.so.570.148.08",
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "cpu_affinity": [
+    48,
+    49,
+    50,
+    51
+  ],
+  "observed_requests": 2,
+  "observed_prefix_sha256": "55020f66ad2ec4cea18b762004c560d1689b4f1e51f16519f59c03f058499641",
+  "limitations": [
+    "Only the observed prefix and actual runtime/source identity are checked here.",
+    "HumanEval+ AR, DFlash timing and profiling remain incomplete.",
+    "No CUDA-acquisition attempt or retry count is inferred."
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "checked_unix": 1794467649.0646358,
+  "training_audit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v1/report.json",
+    "sha256": "736990ffd79895f739d5b3d669003f305e62dd9be0b9d252b635489c664a6367"
+  },
+  "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+  "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+  "parameters": 11051008,
+  "epochs": 3,
+  "updates": 13533,
+  "train_requests": 9025,
+  "eligible_train_requests": 9022,
+  "dev_requests": 782,
+  "confirmation_requests": 782,
+  "training_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-formal-v1-finished.json",
+    "sha256": "9157927f2da8014a64d890c5cd7679b4098721fb1f555ea3fa430ad7bc09e2fc",
+    "exit_code": 0
+  },
+  "audit_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/audit-loopahead-ouro14-resume-v1-finished.json",
+    "sha256": "38159a7c0e02bec2da2a050788f3b5786952b10957b38606dbf5fa3eb49ba571",
+    "exit_code": 0
+  },
+  "probe_exits": {
+    "loopahead-trained-ouro-1.4b-gsm8k-ar-bfloat16-n20-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-gsm8k-ar-bfloat16-n20-v1-finished.json",
+      "sha256": "45b4eff76f5daa49d8d07d1c34846ad5b95a25ff1036d9c98076b9cbd8ec8722",
+      "exit_code": 0
+    },
+    "loopahead-trained-ouro-1.4b-gsm8k-loopahead-bfloat16-n20-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-gsm8k-loopahead-bfloat16-n20-v1-finished.json",
+      "sha256": "bfa21de17548f0cf7af8847d059faccbdf45e11e6d3435a21cba157dfccd422f",
+      "exit_code": 0
+    },
+    "loopahead-trained-ouro-1.4b-gsm8k-ar-float32-n20-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-gsm8k-ar-float32-n20-v1-finished.json",
+      "sha256": "47b40c3e63077972872a43881c117d5b565c9544ccc9427d9fa7aed3e105f655",
+      "exit_code": 0
+    },
+    "loopahead-trained-ouro-1.4b-gsm8k-loopahead-float32-n20-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-gsm8k-loopahead-float32-n20-v1-finished.json",
+      "sha256": "c2a90604b8ee89735652637fe93dffc81ded574db9caff89cee43e81e5da34fa",
+      "exit_code": 0
+    },
+    "loopahead-trained-ouro-1.4b-common-prefix-fp32-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-common-prefix-fp32-v1-finished.json",
+      "sha256": "471ba0cc0133b5b351515d42d7e2aa285229ea666f066e45a6eb6502987ba905",
+      "exit_code": 0
+    },
+    "loopahead-dev16-ouro-1.4b-native-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-dev16-ouro-1.4b-native-v1-finished.json",
+      "sha256": "8aed4d41b6fae8d7d0022e6e93bf79236821386f568f898868fcf7c9723fd7a9",
+      "exit_code": 0
+    },
+    "loopahead-dev16-ouro-1.4b-profile-v1": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-dev16-ouro-1.4b-profile-v1-finished.json",
+      "sha256": "6d363c8464fb548e6c139fa04703c14834e36384abc16dd7bd7df261170cacd3",
+      "exit_code": 0
+    },
+    "admission": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-admission-ouro-1.4b-v1-finished.json",
+      "sha256": "9635907e3956228907eabe9d743ed1da50f4f2a78b45dc862941bed8e92147c8",
+      "exit_code": 0
+    }
+  },
+  "gsm20_whole_sequence_matches": {
+    "bfloat16": 4,
+    "float32": 20
+  },
+  "fp32_common_prefix_cases": 16,
+  "admission": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-1.4b-admission-v1.json",
+    "sha256": "b39fc04e0c68bcf3f9c5e161ce17afe4635f9ecc2436d09002fd5f98893c57fa",
+    "development_requests": 16
+  },
+  "limitation": "Completed training and small probes only; full formal numerical checks remain separate.",
+  "check_source_sha256": "a41456c7a625486614ec7cd4c6edc4be3defd707a7c6597218e75b596dee3b72"
+}

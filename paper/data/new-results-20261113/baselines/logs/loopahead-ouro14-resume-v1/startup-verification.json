@@ -1,0 +1,25 @@
+{
+  "observed_unix": 1794435887.7330682,
+  "launcher": {
+    "pid": 105015,
+    "argv": [
+      "taskset",
+      "-c",
+      "80-83",
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/resume_ouro14_loopahead.py"
+    ],
+    "started_unix": 1794435470.2646642,
+    "plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json"
+  },
+  "start_ticks": "45050655",
+  "state": "S",
+  "status": {
+    "stage": "waiting_for_current_gpu_job",
+    "controller_pid": 105015,
+    "updated_unix": 1794435878.7300692,
+    "gpu": 3,
+    "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3"
+  }
+}

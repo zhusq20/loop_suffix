@@ -1,0 +1,33 @@
+{
+  "model": "huginn-3.5b",
+  "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+  "stage": "untrained_drafter_compatibility",
+  "started_unix": 1794289756.5861166,
+  "torch": "2.6.0+cu126",
+  "transformers": "4.57.1",
+  "target_path": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "draft_parameters": 2116288320,
+  "mask_token_id": 65513,
+  "mask_token": "<|fim_pad|>",
+  "features": [
+    1,
+    126,
+    128,
+    130,
+    131
+  ],
+  "seed": 0,
+  "prompt": "Write a short Python function that adds two integers.\n",
+  "repeat_exact": true,
+  "greedy_ar_equal": true,
+  "first_divergence": null,
+  "peak_allocated_bytes": 15708611072,
+  "limitations": [
+    "random drafter; no training or quality claim",
+    "one short synthetic prompt only",
+    "wall times are diagnostic and must not enter paper tables",
+    "greedy differences, if any, require common-prefix numerical diagnosis"
+  ],
+  "status": "smoke_complete_not_trained_pilot",
+  "finished_unix": 1794289779.9253662
+}

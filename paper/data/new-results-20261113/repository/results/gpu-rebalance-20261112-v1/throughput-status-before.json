@@ -1,0 +1,32 @@
+{
+  "updated_unix": 1794422623.7978446,
+  "stage": "formal",
+  "completed": [
+    "huginn-3.5b-fp32-b2",
+    "ouro-2.6b-fp32-b2",
+    "ouro-2.6b-bf16-b16",
+    "huginn-3.5b-bf16-b16",
+    "huginn-3.5b-b2",
+    "huginn-3.5b-b1",
+    "ouro-2.6b-b2"
+  ],
+  "failed": [],
+  "formal_completed": 3,
+  "formal_oom": 0,
+  "planned_cells": 10,
+  "running": {
+    "ouro-2.6b-b1": {
+      "pid": 417115,
+      "gpu": 3,
+      "started_unix": 1794419625.2834544
+    }
+  },
+  "pending": [
+    "huginn-3.5b-b4",
+    "ouro-2.6b-b4",
+    "huginn-3.5b-b8",
+    "ouro-2.6b-b8",
+    "huginn-3.5b-b16",
+    "ouro-2.6b-b16"
+  ]
+}

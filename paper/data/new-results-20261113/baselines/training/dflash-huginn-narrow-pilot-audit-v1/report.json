@@ -1,0 +1,670 @@
+{
+  "status": "complete_training_audit_not_benchmark",
+  "scope": "pilot",
+  "reportable": false,
+  "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-pilot-v1",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-pilot-v1/checkpoint-000060",
+  "model": "huginn-3.5b",
+  "metadata_sha256": "782a9588caf69e7a1ae8f9a8ef411b9de7e4b04e144c3ef9a81c82341eba8c8d",
+  "complete_sha256": "47f03a8dcc11703d592435914cae2cc755972d4dbc83eca1eb049aef8aa0d076",
+  "metrics_sha256": "92d8553c9b4dfbf54f3b6ffa1c472933e9cda528974e3e04fce24cbf70ef08eb",
+  "weights_sha256": "f7cd716a686b7d887d89cbe5f3261cc58b9414aedeb9cfdfd7a8aa0cbdc0222c",
+  "checkpoint_config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+  "selection_manifest_sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16",
+  "examples": 1893,
+  "excluded_under_32_tokens": 107,
+  "epochs": 1,
+  "global_batch": 32,
+  "world_size": 1,
+  "full50k_teacher_hashes_and_id_coverage_verified": true,
+  "exact_selection_exclusions_verified": true,
+  "frozen_training_sources_verified": {
+    "train_projected_dflash.py": "74eb5919f4228083e85dfc9982f78ab5b0c569d14e43510e7d598cbc19ae245c",
+    "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "dflash_impl/projected_draft.py": "c2ad128db2ef2cc8d56c245e2fc90848c0c6f6c17c201236b70dbf2a99af6d88",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "configs/dflash-huginn-narrow-2048-v1.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "exported_file_hashes": {
+    "complete.json": "47f03a8dcc11703d592435914cae2cc755972d4dbc83eca1eb049aef8aa0d076",
+    "latest.json": "b83087f06bd64aa5ca7962ffc8ce5d16bdffe9339725852f45dc276821e18fcc",
+    "metadata.json": "782a9588caf69e7a1ae8f9a8ef411b9de7e4b04e144c3ef9a81c82341eba8c8d",
+    "metrics.jsonl": "92d8553c9b4dfbf54f3b6ffa1c472933e9cda528974e3e04fce24cbf70ef08eb",
+    "progress.json": "0e632559353ffa083e4cc60e791ef3cb98eb721a1a1810fc643a7dbc09c9af3f",
+    "reservation-cost-rank0.jsonl": "4d1b0cb0785c945e0b72961d44625922d4d5c1c7b7e39719ff188f78577304cb",
+    "source-manifest.json": "49bf3370b878d671ae3fc39237a6872e93604c3888bca9ece6a94270cab95408"
+  },
+  "metrics": {
+    "updates": 60,
+    "updates_per_epoch": 60,
+    "epoch_update_counts": {
+      "0": 60
+    },
+    "all_logged_metrics_finite": true,
+    "first_loss": 11.071976661682129,
+    "final_loss": 6.3935227394104,
+    "max_grad_norm": 23.492048263549805,
+    "rank0_peak_allocated_bytes": 27612045824,
+    "sum_optimizer_update_wall_s": 557.1226124241948,
+    "timing_scope": "Logged optimizer updates only; full GPU reservation cost is reported separately."
+  },
+  "learning_rate_schedule": {
+    "all_logged_learning_rates_match": true,
+    "max_absolute_error": 0.0,
+    "scheduler_source_sha256": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "torch": "2.9.1+cu128",
+    "specforge_commit": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "pinned_dependency_hashes": {
+      "specforge/lr_scheduler.py": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+      "specforge/optimizer.py": "f0aedfad5fe11100470e7f49518b20d439cf47ec9afc195af089dfeca3affc54"
+    },
+    "logged_max_lr": 0.0006004402987126596,
+    "nominal_lr": 0.0006,
+    "note": "Replay the pinned official scheduler, including its warmup-to-cosine boundary behavior."
+  },
+  "weights": {
+    "parameters": 332621056,
+    "tensor_count": 60,
+    "all_weights_finite": true,
+    "cuda_initialized": false,
+    "tensors": [
+      {
+        "name": "fc.weight",
+        "shape": [
+          2048,
+          26400
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 54067200,
+        "max_abs": 0.1123046875
+      },
+      {
+        "name": "hidden_norm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.015625
+      },
+      {
+        "name": "input_projection.weight",
+        "shape": [
+          2048,
+          5280
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 10813440,
+        "max_abs": 0.10888671875
+      },
+      {
+        "name": "layers.0.input_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.0.mlp.down_proj.weight",
+        "shape": [
+          2048,
+          5632
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.10693359375
+      },
+      {
+        "name": "layers.0.mlp.gate_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.1064453125
+      },
+      {
+        "name": "layers.0.mlp.up_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.1123046875
+      },
+      {
+        "name": "layers.0.post_attention_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.0.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.0.self_attn.k_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1064453125
+      },
+      {
+        "name": "layers.0.self_attn.o_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10546875
+      },
+      {
+        "name": "layers.0.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.0.self_attn.q_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10546875
+      },
+      {
+        "name": "layers.0.self_attn.v_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.109375
+      },
+      {
+        "name": "layers.1.input_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.1.mlp.down_proj.weight",
+        "shape": [
+          2048,
+          5632
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.11572265625
+      },
+      {
+        "name": "layers.1.mlp.gate_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.1025390625
+      },
+      {
+        "name": "layers.1.mlp.up_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.10693359375
+      },
+      {
+        "name": "layers.1.post_attention_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.1.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.015625
+      },
+      {
+        "name": "layers.1.self_attn.k_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10546875
+      },
+      {
+        "name": "layers.1.self_attn.o_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1083984375
+      },
+      {
+        "name": "layers.1.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.1.self_attn.q_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1064453125
+      },
+      {
+        "name": "layers.1.self_attn.v_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1044921875
+      },
+      {
+        "name": "layers.2.input_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.2.mlp.down_proj.weight",
+        "shape": [
+          2048,
+          5632
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.10546875
+      },
+      {
+        "name": "layers.2.mlp.gate_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.11181640625
+      },
+      {
+        "name": "layers.2.mlp.up_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.1044921875
+      },
+      {
+        "name": "layers.2.post_attention_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.2.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.2.self_attn.k_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10791015625
+      },
+      {
+        "name": "layers.2.self_attn.o_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.111328125
+      },
+      {
+        "name": "layers.2.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.015625
+      },
+      {
+        "name": "layers.2.self_attn.q_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10791015625
+      },
+      {
+        "name": "layers.2.self_attn.v_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1044921875
+      },
+      {
+        "name": "layers.3.input_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.3.mlp.down_proj.weight",
+        "shape": [
+          2048,
+          5632
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.107421875
+      },
+      {
+        "name": "layers.3.mlp.gate_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.1044921875
+      },
+      {
+        "name": "layers.3.mlp.up_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.10791015625
+      },
+      {
+        "name": "layers.3.post_attention_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.3.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.3.self_attn.k_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.107421875
+      },
+      {
+        "name": "layers.3.self_attn.o_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.103515625
+      },
+      {
+        "name": "layers.3.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.3.self_attn.q_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1015625
+      },
+      {
+        "name": "layers.3.self_attn.v_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.107421875
+      },
+      {
+        "name": "layers.4.input_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.4.mlp.down_proj.weight",
+        "shape": [
+          2048,
+          5632
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.1123046875
+      },
+      {
+        "name": "layers.4.mlp.gate_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.10791015625
+      },
+      {
+        "name": "layers.4.mlp.up_proj.weight",
+        "shape": [
+          5632,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 11534336,
+        "max_abs": 0.10595703125
+      },
+      {
+        "name": "layers.4.post_attention_layernorm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0078125
+      },
+      {
+        "name": "layers.4.self_attn.k_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.015625
+      },
+      {
+        "name": "layers.4.self_attn.k_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10693359375
+      },
+      {
+        "name": "layers.4.self_attn.o_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10986328125
+      },
+      {
+        "name": "layers.4.self_attn.q_norm.weight",
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 128,
+        "max_abs": 1.015625
+      },
+      {
+        "name": "layers.4.self_attn.q_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.10693359375
+      },
+      {
+        "name": "layers.4.self_attn.v_proj.weight",
+        "shape": [
+          2048,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 4194304,
+        "max_abs": 0.1044921875
+      },
+      {
+        "name": "norm.weight",
+        "shape": [
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 2048,
+        "max_abs": 1.0
+      },
+      {
+        "name": "output_projection.weight",
+        "shape": [
+          5280,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "parameters": 10813440,
+        "max_abs": 0.11474609375
+      }
+    ]
+  },
+  "rng_files": {
+    "rng-rank0.pt": {
+      "bytes": 6901,
+      "sha256": "634c7b883fc2d7cc56290fe5e8a2418cfa77e8bf71c3b6c91b3ab0ce8686fe24"
+    }
+  },
+  "optimizer_state_bytes": 4656807633,
+  "exit_receipt_sha256": "1d6404ff59184d8b808acbadd4477a51a2306b6cdd4b9987206b34c65768ffc9",
+  "actual_exit_code": 0,
+  "closed_gpu_reservation_hours": 0.1674676881896125,
+  "limitations": [
+    "Training artifact audit only; no held-out acceptance or speed claim.",
+    "Pilot2000 is not formal50k training and cannot substitute for the final model.",
+    "RNG files hashed; optimizer state presence/size checked, not a resume test.",
+    "All weights and logged rank0 updates finite; this is not numerical decoding equivalence."
+  ],
+  "started_unix": 1794353360.5583599,
+  "finished_unix": 1794353369.1807675
+}

@@ -1,0 +1,96 @@
+{
+  "status": "all_observed_formal_first_divergences_checked",
+  "method": "dflash",
+  "model": "huginn-3.5b",
+  "benchmark": "mbppplus",
+  "temperature": 0,
+  "formal_requests": 378,
+  "whole_sequence_matches_bf16": 308,
+  "whole_sequence_match_rate_bf16": 0.8148148148148148,
+  "first_divergences": 70,
+  "bf16_divergences_reproduced": 70,
+  "at_least_one_bf16_top2_tie": 67,
+  "no_bf16_top2_tie": 3,
+  "fp32_argmax_equal": 70,
+  "max_fp32_logit_difference": 6.103515625e-05,
+  "bf16_probability_margin_range": {
+    "ar": [
+      0.0,
+      0.07274246215820312
+    ],
+    "dflash": [
+      0.0,
+      0.06230303645133972
+    ]
+  },
+  "actual_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-mbppplus-v1-observed-exit.json",
+    "sha256": "79c028dc80db93c2e850bf17a717c5d73bbc0930ea34e89a1f4363b3391e8f91",
+    "exit_code": 0
+  },
+  "artifacts": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/metadata.json": "4fedf1ce023d1286ea4e49f1168e5424d3df3d163ade6b81ad9c613d8bac2f9d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/complete.json": "0691b00661acc731569128d6c2bcd4592e73a955f791f211a2be22a751bde9c4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1/diagnosis.json": "c27e065c77f38f50ecde5f661e141fefeeaa65bfce745c1c12ef21cecb489114",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-mbppplus-v1-observed-launcher.json": "2289a0dc16cf0d711cd884b4560b40364c4216fd04048210f9a600fe3832d9a4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-mbppplus-v1-observed-exit.json": "79c028dc80db93c2e850bf17a717c5d73bbc0930ea34e89a1f4363b3391e8f91"
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1",
+      "sha256": "6e9a3d483d4cd89dc02eb6d1e25822eb0fff7c10ca149a7cffd511a6d11b2f5f"
+    },
+    "dflash": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1",
+      "sha256": "c86d72fa5fce9b73604907c9c63c4772d14f8a8d470d1aa9224ea85a73403aab"
+    }
+  },
+  "checkpoint_sha256": {
+    "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "existing_validation": {
+    "method": "dflash",
+    "model": "huginn-3.5b",
+    "benchmark": "mbppplus",
+    "cases": 70,
+    "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-mbppplus-v1",
+    "result_sha256": "c27e065c77f38f50ecde5f661e141fefeeaa65bfce745c1c12ef21cecb489114",
+    "loopahead_fp32_report_sha256": null
+  },
+  "original_timed_row_unchanged": {
+    "method": "dflash",
+    "model": "huginn-3.5b",
+    "benchmark": "mbppplus",
+    "temperature": "0",
+    "eta": "4.173183444604706",
+    "gamma": "5.216223439796873",
+    "method_tok_s": "48.539344769531034",
+    "ar_tok_s": "11.63125115726342",
+    "drafter_time_frac": "0.034282971985547535",
+    "match_rate": "0.8148148148148148",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run; Our narrow Huginn adaptation:5layers,H2048,FF5632,332621056 trainable parameters with target-width projections; not an author checkpoint",
+    "eta_latency": "4.215949139730417",
+    "eta_throughput": "4.173183444604706",
+    "aligned_token_match_rate": "0.7363667431528584",
+    "method_decode_tokens": "39033",
+    "ar_decode_tokens": "39433",
+    "method_decode_s": "804.151769772172",
+    "ar_decode_s": "3390.2629619836807",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794413420.2554238",
+    "ar_last_completed_unix": "1794416868.145545",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1",
+    "target_backend": "legacy_HF_full_loop",
+    "method_exit_evidence": "actual_exit0",
+    "profile_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-profile-v1",
+    "numerical_diagnostics": "not_all_completed"
+  },
+  "check_source_sha256": "e142f1dfea5827a2bc45d9261eeacf90507e22460d48129f2932a06bb3ecbbe2",
+  "checked_unix": 1794472957.5885918,
+  "limitation": "Every observed first divergence of this cell only. FP32 common-prefix agreement does not replace the original BF16 whole-sequence agreement or certify other cells."
+}

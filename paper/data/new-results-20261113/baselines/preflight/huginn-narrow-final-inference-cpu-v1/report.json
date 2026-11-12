@@ -1,0 +1,29 @@
+{
+  "status": "final_checkpoint_deployment_CPU_load_passed_not_GPU_benchmark",
+  "pid": 191788,
+  "started_unix": 1794400045.8390763,
+  "finished_unix": 1794400048.2391224,
+  "python": "/tmp/loopfill-dflash-venv/bin/python",
+  "torch": "2.6.0+cu126",
+  "transformers": "4.57.1",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+  "weights_sha256": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+  "training_audit_sha256": "02bc2ffd720010a53686a14123797f43a7c12032eb713c8d307647ef451daaa6",
+  "config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+  "parameters": 332621056,
+  "tensors": 60,
+  "loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "all_loaded_tensors_equal_saved_weights": true,
+  "all_tensors_on_CPU": true,
+  "cuda_initialized": false,
+  "source_sha256": "7d44f06dee6aa0e087c6beed521b453c6d86b110f9ef8abddbaa77c1272d492f",
+  "limitations": [
+    "CPU serialization/deployment compatibility of the final 8886-step checkpoint only.",
+    "No forward pass, CUDA model load, acceptance, speed or numerical-decoding equivalence measured."
+  ]
+}

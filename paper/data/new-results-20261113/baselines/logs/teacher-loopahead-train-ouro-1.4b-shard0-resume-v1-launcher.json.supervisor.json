@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/generate_teachers.py",
+    "--model",
+    "ouro-1.4b",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/loopahead-train/ouro-1.4b/shard0",
+    "--manifest",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/loopahead-train.jsonl",
+    "--shard",
+    "0",
+    "--shards",
+    "1",
+    "--max-batch",
+    "32",
+    "--kv-budget-gib",
+    "70"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/teacher-loopahead-train-ouro-1.4b-shard0-resume-v1-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/teacher-loopahead-train-ouro-1.4b-shard0-resume-v1-finished.json",
+  "metadata": {
+    "name": "teacher-loopahead-train-ouro-1.4b-shard0-resume-v1",
+    "gpu": 3,
+    "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill",
+  "extra_launcher": null,
+  "extra_exit": null
+}

@@ -1,0 +1,54 @@
+{
+  "status": "CPU_observer_installed_actual_priority_dispatch_pending",
+  "observed_unix": 1794396394.2108517,
+  "processes": [
+    {
+      "launcher": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/huginn-math-priority-launch-v1/launcher.json",
+      "pid": 150153,
+      "state": "S",
+      "ticks": "41138148",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/huginn-math-priority-launch-v1/launch.py"
+      ],
+      "cpu_affinity": [
+        80,
+        81,
+        82,
+        83
+      ]
+    },
+    {
+      "launcher": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/huginn-math-priority-v1-launcher.json",
+      "pid": 150154,
+      "state": "S",
+      "ticks": "41138162",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/prioritize_huginn_math.py",
+        "--execute"
+      ],
+      "cpu_affinity": [
+        80,
+        81,
+        82,
+        83
+      ]
+    }
+  ],
+  "policy_sha256": "dd78c8cbfea6143f1276aef38f84feac4eed0a850b8da819dbf1340c8645a50f",
+  "cpu_validation_sha256": "cb81bf50289dc178d1c07811adf6e33191e7dbf2914aaff4bb5e82f2c70361ef",
+  "observer_sha256": "bc9d47c110ed4d660ab1f725659378c62252dc2cbc48251ddda1c2778d2e4504",
+  "live_status": {
+    "stage": "waiting_for_both_actual_workers",
+    "updated_unix": 1794396387.7613854,
+    "evidence": {
+      "dflash-huginn-3.5b-math500-t0": null,
+      "dflash-huginn-3.5b-math500-t1": null
+    }
+  },
+  "formal_results_unchanged": true,
+  "gpu_jobs_launched_by_observer": 0
+}

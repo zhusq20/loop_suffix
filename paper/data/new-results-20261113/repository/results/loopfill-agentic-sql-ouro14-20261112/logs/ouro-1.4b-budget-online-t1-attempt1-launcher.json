@@ -1,0 +1,52 @@
+{
+  "job_id": "ouro-1.4b-budget-online-t1",
+  "smoke": true,
+  "gpu": 7,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "60-63",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/runtime/native_cuda_env.py",
+    "--record",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/logs/ouro-1.4b-budget-online-t1-attempt1-environment.json",
+    "--",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/scripts/loop_agentic_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/validation/ouro-1.4b-budget-online-t1",
+    "--model",
+    "ouro-1.4b",
+    "--arm",
+    "budget-online",
+    "--temperature",
+    "1",
+    "--q",
+    "4",
+    "--n",
+    "16",
+    "--cache-mode",
+    "stream",
+    "--smoke"
+  ],
+  "started_unix": 1794496066.5937572,
+  "pid": 415826,
+  "start_ticks": "51110288",
+  "supervisor_identity": {
+    "pid": 415824,
+    "state": "R",
+    "start_ticks": "51110282",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/logs/ouro-1.4b-budget-online-t1-attempt1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "5"
+    ]
+  }
+}

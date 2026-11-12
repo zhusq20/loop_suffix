@@ -1,0 +1,38 @@
+[
+  {
+    "model": "ouro-2.6b",
+    "pid": 438945,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/probe_dflash_target.py",
+      "--model",
+      "ouro-2.6b",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-native-ouro-2.6b-v1"
+    ],
+    "log": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-native-ouro-2.6b-v1.log"
+  },
+  {
+    "model": "huginn-3.5b",
+    "pid": 438946,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/probe_dflash_target.py",
+      "--model",
+      "huginn-3.5b",
+      "--gpu",
+      "6",
+      "--cpus",
+      "56-59",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-native-huginn-3.5b-v1"
+    ],
+    "log": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-native-huginn-3.5b-v1.log"
+  }
+]

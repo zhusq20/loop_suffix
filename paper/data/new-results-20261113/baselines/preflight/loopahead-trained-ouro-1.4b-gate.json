@@ -1,0 +1,9 @@
+{
+  "model": "ouro-1.4b",
+  "bfloat16_exact_sequences": 4,
+  "requests": 20,
+  "float32_exact_sequences": 20,
+  "common_prefix_diagnosis": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-ouro-1.4b-common-prefix-fp32-v1/report.json",
+  "common_prefix_diagnosis_sha256": "84c1236448b27490b0df29d1c3cc9fd37750e7f370016f0ebd5f6bcdeab447a2",
+  "limitation": "FP32 whole-sequence and observed BF16 common-prefix checks passed; finite-precision discrepancies remain explicitly reported, without claiming every formal benchmark sequence matches."
+}

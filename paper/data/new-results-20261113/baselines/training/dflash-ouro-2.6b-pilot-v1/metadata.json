@@ -1,0 +1,302 @@
+{
+  "model": "ouro-2.6b",
+  "revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "seed": 42,
+  "epochs": 1,
+  "world_size": 2,
+  "micro_batch": 4,
+  "accumulation": 4,
+  "global_batch": 32,
+  "examples": 1923,
+  "excluded_under_32_tokens": [
+    "ultrachat/480364dd2b802629714c5249716a00b660129238b99c6df19b05612a9518cc85",
+    "ultrachat/c97edc55413d07741f757655142646755962b6d043ca4fbe1e69d4c9f5d74e3b",
+    "codealpaca/19578",
+    "codealpaca/3043",
+    "ultrachat/3cfd0e50eb27b8e217230f35db005160816746d0ef3bd54a28c6b35c2decba33",
+    "codealpaca/7324",
+    "nemotron-v1/bc47ebf6-bcc4-4cbf-8a27-25a5713ff5d4",
+    "codealpaca/3465",
+    "codealpaca/7710",
+    "codealpaca/11232",
+    "codealpaca/19747",
+    "nemotron-v1/c8e5a66f-f838-416c-b304-f4161135976f",
+    "codealpaca/8915",
+    "codealpaca/16890",
+    "codealpaca/9553",
+    "codealpaca/1838",
+    "codealpaca/13133",
+    "nemotron-v1/5fafc337-28a2-4f39-83f3-ed926122cab9",
+    "codealpaca/11884",
+    "codealpaca/19007",
+    "codealpaca/14617",
+    "ultrachat/e4f7993ba373e2ba8e5a5cebd2a9d1b75dc629e8627bb13f0a46b6af88cac496",
+    "codealpaca/3470",
+    "codealpaca/10547",
+    "codealpaca/17344",
+    "ultrachat/6c1c20c7d26950e3cccef4d359db785814c25c2309dcf127fdbc11163ae6df76",
+    "codealpaca/7471",
+    "codealpaca/16439",
+    "nemotron-v1/98c09a09-3dba-4b4d-a2a4-b67836423802",
+    "nemotron-v1/f78f7bb6-0ca2-4db0-bf01-63fbaae4e78d",
+    "codealpaca/14404",
+    "codealpaca/5428",
+    "codealpaca/17691",
+    "codealpaca/6504",
+    "codealpaca/18221",
+    "codealpaca/5710",
+    "codealpaca/2086",
+    "codealpaca/5653",
+    "codealpaca/9256",
+    "nemotron-v1/597862d5-f57c-4e45-9f2a-826a20ca8593",
+    "codealpaca/8366",
+    "nemotron-v1/955aa38a-df99-4f39-b3bf-54bb88307076",
+    "nemotron-v1/098ac956-32d5-40e6-9519-3fe93954be8b",
+    "ultrachat/a5061777fb13b836a3cb53d61c3fa28ded9cde1e70971291f30ec2593b2853a0",
+    "codealpaca/645",
+    "ultrachat/15d4153f47ae39bca41af1601a29c97c097f969a80b4bc9018c0a9b68ec75ac2",
+    "nemotron-v1/21da02ca-795d-42fb-b384-12d49dbb49d8",
+    "nemotron-v1/15b876e3-804d-4814-a5c1-dd55e4c398c4",
+    "codealpaca/7098",
+    "codealpaca/9517",
+    "codealpaca/19389",
+    "codealpaca/16893",
+    "codealpaca/14640",
+    "codealpaca/560",
+    "codealpaca/16476",
+    "codealpaca/1640",
+    "codealpaca/3794",
+    "ultrachat/a80c7d53cf843d84a06ddd80266bb52ba968e5030f26980ad49a688b775689ec",
+    "ultrachat/437938ce1966985b3f925c0e0e92ded31a0908ea6e385ebc808b9f43a977a94f",
+    "ultrachat/250dfc26fba9b4a3f957ca829f53f831f1d4a1cad3bc5601d1a10069885b9477",
+    "ultrachat/ec87a0f6956a6073c6d21f7278d26dcaeb554bb23bb4e2bea6e49d0aa3f2c452",
+    "ultrachat/2456462d727c26b8979b0cac7629f96f17a593d171efcc98480fe17b75e6e6ac",
+    "codealpaca/17022",
+    "codealpaca/6539",
+    "codealpaca/1601",
+    "codealpaca/13365",
+    "codealpaca/6414",
+    "codealpaca/16314",
+    "codealpaca/18734",
+    "codealpaca/652",
+    "nemotron-v1/3c486c07-76f2-4d75-8f74-e7f7672d43d4",
+    "codealpaca/2271",
+    "codealpaca/15560",
+    "ultrachat/1eead546f985e9c185636cb74290050ccec311f3a82afb27e9edd19f12730e2c",
+    "ultrachat/f64d6f25506a3a2e1645aad7c190e229afb3320b44f802822cf90b0228b2d1cd",
+    "ultrachat/ed9e95f0c445ca15a5ed30afe29a7e2adaf3816401fd2e8e0ea9db452e8e8d5c",
+    "ultrachat/a4a658ef7253347737bb9cbbf517a8d29b1aa48c70d26cde6ca9e389eeabcc32"
+  ],
+  "sources": [
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-pilot/ouro-2.6b/shard0/teachers.jsonl",
+      "sha256": "8f8595a7f04ff443e9371eefce4ffc64280577e0556a165d096bd3a6d66c62da",
+      "metadata": {
+        "model": "ouro-2.6b",
+        "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+        "manifest_sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16",
+        "batch_plan_sha256": "fbfc09a3c782aa5463eab22bc481dc125bb5e0e51d5dd616d28edb1e95a6942e",
+        "shards": 4,
+        "shard": 0,
+        "max_batch": 32,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 4,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              0
+            ],
+            "generation_config": [],
+            "model_config": [
+              0
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "tokenizer",
+          "stop_ids": [
+            0,
+            2
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "left_padded_real_positions",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-pilot/ouro-2.6b/shard1/teachers.jsonl",
+      "sha256": "fcdcfe191ac5ad565bf605aa89d86d51f1c746fe71976bb48760118830e3dc69",
+      "metadata": {
+        "model": "ouro-2.6b",
+        "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+        "manifest_sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16",
+        "batch_plan_sha256": "fbfc09a3c782aa5463eab22bc481dc125bb5e0e51d5dd616d28edb1e95a6942e",
+        "shards": 4,
+        "shard": 1,
+        "max_batch": 32,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 4,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              0
+            ],
+            "generation_config": [],
+            "model_config": [
+              0
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "tokenizer",
+          "stop_ids": [
+            0,
+            2
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "left_padded_real_positions",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-pilot/ouro-2.6b/shard2/teachers.jsonl",
+      "sha256": "101d042509fa0add602d584c7e66c1c0a2fa78269675d4dce03ef15e97f286e4",
+      "metadata": {
+        "model": "ouro-2.6b",
+        "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+        "manifest_sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16",
+        "batch_plan_sha256": "fbfc09a3c782aa5463eab22bc481dc125bb5e0e51d5dd616d28edb1e95a6942e",
+        "shards": 4,
+        "shard": 2,
+        "max_batch": 32,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 4,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              0
+            ],
+            "generation_config": [],
+            "model_config": [
+              0
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "tokenizer",
+          "stop_ids": [
+            0,
+            2
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "left_padded_real_positions",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-pilot/ouro-2.6b/shard3/teachers.jsonl",
+      "sha256": "933014498ec26d556aa6a8c4401c8db34c5a00921954c5b646f996687a83388d",
+      "metadata": {
+        "model": "ouro-2.6b",
+        "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+        "manifest_sha256": "671845f638143b287b270d86cb5b955eebe01e40a754c8c3e4f11603a53e5d16",
+        "batch_plan_sha256": "fbfc09a3c782aa5463eab22bc481dc125bb5e0e51d5dd616d28edb1e95a6942e",
+        "shards": 4,
+        "shard": 3,
+        "max_batch": 32,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 4,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "chat",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              0
+            ],
+            "generation_config": [],
+            "model_config": [
+              0
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "tokenizer",
+          "stop_ids": [
+            0,
+            2
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "left_padded_real_positions",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    }
+  ],
+  "max_seq": 3072,
+  "num_anchors": 512,
+  "block_size": 16,
+  "loss_decay_gamma": 7.0,
+  "lr": 0.0006,
+  "warmup_ratio": 0.04,
+  "max_grad_norm": 1.0,
+  "weight_decay": 0.0,
+  "adam_betas": [
+    0.9,
+    0.999
+  ],
+  "total_updates": 61,
+  "target_features": [
+    145,
+    156,
+    167,
+    178,
+    189
+  ],
+  "mask_token_id": 0,
+  "draft_parameters": 277898496,
+  "smoke": false,
+  "torch": "2.9.1+cu128",
+  "transformers": "4.57.1",
+  "gradient_checkpointing": false,
+  "distributed": "DDP",
+  "final_global_batch": "deterministically pad from shuffled epoch start",
+  "target_generation_software": "recorded in teacher sources; target features recomputed in training environment",
+  "source_sha256": "57b95c5cc340960e946a3b4f0baee6e968a2f2d616c4a1ecce0ca19ec01afd5f"
+}

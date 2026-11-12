@@ -1,0 +1,74 @@
+{
+  "completed_utc": "2026-11-11T18:14:14.193537+00:00",
+  "status": "passed",
+  "tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "29",
+    "time": "11.987",
+    "timestamp": "2026-11-12T02:13:38.882968+08:00",
+    "hostname": "gpulingjun010010017117.os30"
+  },
+  "scope": "CPU tiny-model training, exact resume, artifact reload, packed inference, algorithms, packaging isolation; no new full-size GPU training or benchmark",
+  "environment": {
+    "python": "3.10.16",
+    "torch": "2.6.0+cu126",
+    "transformers": "4.57.1",
+    "device": "cpu",
+    "training_attention": "sdpa"
+  },
+  "wheel": {
+    "file": "loop_suffix-0.1.0-py3-none-any.whl",
+    "sha256": "c97822d5aa844f0a59948232d1130682217af585ec3e6e3ef2bed3e79eca6a14"
+  },
+  "isolation": {
+    "cwd": "/tmp/loop-baseline-portable-audit",
+    "installed_package": "/tmp/loop-baseline-portable-audit/final-site",
+    "blocked_file_prefixes": [
+      "/ossfs/workspace/sz/",
+      "/ossfs/workspace/loop_suffix/src/"
+    ],
+    "guard": "/tmp/loop-baseline-portable-audit/guard/sitecustomize.py",
+    "tested_checkout_source": false
+  },
+  "checks": {
+    "ruff": "passed, excluding unchanged vendored source",
+    "diff_check": "passed",
+    "installed_files_match": 29,
+    "huginn_draft_parameters": 332621056,
+    "cli_help": "passed"
+  },
+  "source_sha256": {
+    "src/llm_memory_editability/baselines/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "src/llm_memory_editability/baselines/__main__.py": "9f82f480661bb39a09940afc1c0ecfd5ddd7811c9224851cd3b1dc0af670dccc",
+    "src/llm_memory_editability/baselines/common.py": "b1d3ecdb550ddf2898522dfd370a2c1c8285e7d5eee51c5763225baa9f7f66a9",
+    "src/llm_memory_editability/baselines/configs/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "src/llm_memory_editability/baselines/configs/dflash-huginn-332m.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+    "src/llm_memory_editability/baselines/dflash/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "src/llm_memory_editability/baselines/dflash/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "src/llm_memory_editability/baselines/dflash/projected_draft.py": "977190c4aa0d7b1f094875883beb9d57aaa4668ebcfcce0ac3415d1f882a3aa5",
+    "src/llm_memory_editability/baselines/dflash/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "src/llm_memory_editability/baselines/extract_features.py": "f2e3412b32a403b14d491927f91d586219400919491431b52a4380242c69e0dc",
+    "src/llm_memory_editability/baselines/infer.py": "259403a6679774cee3b0ef4f75f1303f1c3c033f99253c34cb4ee97c4c35199e",
+    "src/llm_memory_editability/baselines/loopahead/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "src/llm_memory_editability/baselines/loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "src/llm_memory_editability/baselines/loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "src/llm_memory_editability/baselines/loopahead/engine.py": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+    "src/llm_memory_editability/baselines/loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "src/llm_memory_editability/baselines/loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "src/llm_memory_editability/baselines/loopahead/training_data.py": "e1f81b5dfde26127b6358108349b00ce05d5f2a1b54913d12db1acd6fc6e1e2a",
+    "src/llm_memory_editability/baselines/train_dflash.py": "bde92ba47d964599fb13fd2afc2e8186b52763b35eed14af3fc85c26abc820e6",
+    "src/llm_memory_editability/baselines/train_loopahead.py": "008c1ac5e4a6b88359855d383ecabfd84b361c60375258373263818142def1be",
+    "src/llm_memory_editability/baselines/vendor/LICENSE.SpecForge": "da25818d68a3da676fed16a019beadd6b12f5e4d59ade85840c23a6070240323",
+    "src/llm_memory_editability/baselines/vendor/LICENSE.dflash": "6fd2aebd899c0b48ea9abb845aef043c6dadff00a6726a10a1bc32db528a5422",
+    "src/llm_memory_editability/baselines/vendor/ORIGINS.json": "2faa834e133a84d2fffbf4719a948d94296243359d05916341de7961aeb2bed8",
+    "src/llm_memory_editability/baselines/vendor/__init__.py": "69077515ceac69f9dd049166d58ecd7424755337571bdd0f825cd00cc94c3d64",
+    "src/llm_memory_editability/baselines/vendor/dflash_inference.py": "6dfb12d0eeebe085d78d23fc816a481a8b25257fd76891e939a41423c29c697b",
+    "src/llm_memory_editability/baselines/vendor/dflash_loss.py": "0ec797d25243774a2271b49f731d5ef0286488128b71777db8ce3c64cca25861",
+    "src/llm_memory_editability/baselines/vendor/dflash_train.py": "da5ab1738b954800950405131f1d1d97c3345f37e32676d511d3a25dfddd9d75",
+    "src/llm_memory_editability/baselines/vendor/lr_scheduler.py": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "src/llm_memory_editability/baselines/vendor/optimizer.py": "fa28c4935037e729c938763bdca8a1d154df125c90a7a0fa12a2e97b75cb16e2"
+  }
+}

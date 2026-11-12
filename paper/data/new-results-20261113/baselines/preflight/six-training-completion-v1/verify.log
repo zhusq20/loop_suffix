@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/six-training-completion-v1/verify.py", line 178, in <module>
+    main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/six-training-completion-v1/verify.py", line 58, in main
+    check(report_path)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/six-training-completion-v1/verify.py", line 48, in check
+    digest = sha(path)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/six-training-completion-v1/verify.py", line 38, in sha
+    return hashlib.file_digest(stream, 'sha256').hexdigest()
+AttributeError: module 'hashlib' has no attribute 'file_digest'

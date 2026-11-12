@@ -1,0 +1,89 @@
+{
+  "checked_unix": 1794470043.8767753,
+  "controllers": {
+    "packed-dflash-supplement-v1": {
+      "pid": 153662,
+      "alive": true,
+      "stage": "running",
+      "running": {
+        "table1-huginn-3.5b-math500-t1-profile": {
+          "pid": 36405,
+          "gpu": 1,
+          "alive": true
+        },
+        "table1-ouro-2.6b-mbppplus-t1-profile": {
+          "pid": 56397,
+          "gpu": 4,
+          "alive": true
+        },
+        "table1-huginn-3.5b-specbench-t1-profile": {
+          "pid": 57615,
+          "gpu": 7,
+          "alive": true
+        },
+        "table1-ouro-2.6b-specbench-t1-profile": {
+          "pid": 63640,
+          "gpu": 6,
+          "alive": true
+        }
+      }
+    },
+    "baseline-diagnostics-resume-v1": {
+      "pid": 33751,
+      "alive": true,
+      "stage": "running",
+      "running": {
+        "dflash-huginn-3.5b-humanevalplus-v1-observed": {
+          "pid": 103517,
+          "gpu": 2,
+          "alive": true
+        }
+      }
+    },
+    "appendix-loopahead-diagnostics-v1": {
+      "pid": 45833,
+      "alive": true,
+      "stage": "running",
+      "running": {
+        "loopahead-ouro-1.4b-gsm8k-v1-observed": {
+          "pid": 97806,
+          "gpu": 5,
+          "alive": true
+        }
+      }
+    },
+    "loopahead-ouro14-resume-v1": {
+      "pid": 105015,
+      "alive": true,
+      "stage": "running",
+      "running": {}
+    },
+    "ouro14-packed-evaluation-v1": {
+      "pid": 510179,
+      "alive": true,
+      "stage": "waiting_for_full_training",
+      "running": {}
+    },
+    "portable-dflash-training-audit-v1": {
+      "pid": 90453,
+      "alive": true,
+      "stage": "waiting_for_existing_training_and_parent_audit",
+      "running": {}
+    },
+    "portable_training": {
+      "stage": "teachers",
+      "worker_pid": 10995,
+      "progress": {
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/progress.json": {
+          "completed_requests": 49184,
+          "planned_requests": 50000,
+          "last_batch": 1536,
+          "last_batch_wall_s": 49.86356046795845,
+          "last_batch_size": 32,
+          "updated_unix": 1794470029.494879
+        }
+      },
+      "alive": true
+    }
+  }
+}

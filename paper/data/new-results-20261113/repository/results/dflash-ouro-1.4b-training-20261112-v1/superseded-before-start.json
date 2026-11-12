@@ -1,0 +1,29 @@
+{
+  "stopped_unix": 1794424824.3116016,
+  "pid": 491616,
+  "previous_status": {
+    "stage": "waiting_for_existing_queues",
+    "controller_pid": 491616,
+    "updated_unix": 1794424820.242929,
+    "candidate_gpus": [
+      5,
+      0,
+      7,
+      1
+    ],
+    "reasons": {
+      "5": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation",
+      "0": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation",
+      "7": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation",
+      "1": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation"
+    },
+    "planned_stages": [
+      "teachers",
+      "smoke",
+      "train",
+      "audit"
+    ]
+  },
+  "reason": "User questioned drafter size; revise the unstarted 278M recipe before dispatch.",
+  "teacher_or_training_started": false
+}

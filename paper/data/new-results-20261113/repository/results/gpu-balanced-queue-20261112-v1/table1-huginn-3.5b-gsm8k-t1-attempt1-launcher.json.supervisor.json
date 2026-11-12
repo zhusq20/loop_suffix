@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "60-63",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2",
+    "--job",
+    "table1-huginn-3.5b-gsm8k-t1",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1",
+    "--lock-fd",
+    "13"
+  ],
+  "launcher_path": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/table1-huginn-3.5b-gsm8k-t1-attempt1-launcher.json",
+  "exit_path": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/table1-huginn-3.5b-gsm8k-t1-attempt1-exit.json",
+  "metadata": {
+    "gpu": 7,
+    "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/plan.json"
+  },
+  "cwd": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source",
+  "extra_launcher": null,
+  "extra_exit": null
+}

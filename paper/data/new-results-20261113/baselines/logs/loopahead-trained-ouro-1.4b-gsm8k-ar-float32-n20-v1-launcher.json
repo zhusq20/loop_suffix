@@ -1,0 +1,46 @@
+{
+  "name": "loopahead-trained-ouro-1.4b-gsm8k-ar-float32-n20-v1",
+  "gpu": 3,
+  "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-1.4b",
+    "--method",
+    "ar",
+    "--dataset",
+    "gsm8k",
+    "--count",
+    "20",
+    "--pilot",
+    "--trace",
+    "--dtype",
+    "float32",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-ouro-1.4b-gsm8k-ar-float32-n20-v1"
+  ],
+  "started_unix": 1794450049.598489,
+  "pid": 382582,
+  "start_ticks": "46508589",
+  "supervisor_identity": {
+    "pid": 382581,
+    "state": "R",
+    "start_ticks": "46508582",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-ouro-1.4b-gsm8k-ar-float32-n20-v1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  }
+}

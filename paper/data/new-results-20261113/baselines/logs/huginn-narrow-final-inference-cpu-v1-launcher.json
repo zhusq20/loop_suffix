@@ -1,0 +1,13 @@
+{
+  "name": "huginn-narrow-final-inference-cpu-v1",
+  "argv": [
+    "taskset",
+    "-c",
+    "80-83",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-narrow-final-inference-cpu-v1/check.py"
+  ],
+  "pid": 191788,
+  "started_unix": 1794400043.5418148
+}

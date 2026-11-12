@@ -1,0 +1,16 @@
+{
+  "stage": "waiting_for_training_exit_and_export",
+  "model": "huginn-3.5b",
+  "completed": [
+    {
+      "model": "ouro-2.6b",
+      "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-ouro-2.6b-formal-audit-v1/report.json",
+      "audit_report_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+      "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+      "weights_sha256": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+      "reused_existing_audit": true,
+      "training_gpu_hours": 12.010792617665397
+    }
+  ],
+  "updated_unix": 1794351114.2266166
+}

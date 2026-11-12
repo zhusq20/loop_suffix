@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/start-loopahead-train-huginn.py", line 42, in <module>
+    run(name,argv)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/start-loopahead-train-huginn.py", line 26, in run
+    if code:raise RuntimeError(f'{name} failed; dependent work stopped')
+RuntimeError: loopahead-trained-huginn-3.5b-gsm8k-loopahead-bfloat16-n20-v1 failed; dependent work stopped

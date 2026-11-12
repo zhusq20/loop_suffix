@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "0-3",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite",
+    "--job",
+    "validate-ouro-1.4b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/validate-ouro-1.4b/attempt1",
+    "--lock-fd",
+    "4"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/validate-ouro-1.4b-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/validate-ouro-1.4b-exit.json",
+  "metadata": {
+    "stage": "validate",
+    "job_id": "validate-ouro-1.4b",
+    "gpu": 0,
+    "plan_sha256": "1eb9641bdd9c554d90f5439fc3d81df193017d082e5376bf5385fde7aae0f05e"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/source",
+  "extra_launcher": null,
+  "extra_exit": null
+}

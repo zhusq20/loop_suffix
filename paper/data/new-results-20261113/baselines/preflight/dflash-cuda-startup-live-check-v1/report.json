@@ -1,0 +1,94 @@
+{
+  "status": "actual_startup_verified_timed_evaluation_incomplete",
+  "checked_unix": 1794362089.3159864,
+  "model": "ouro-2.6b",
+  "dataset": "gsm8k",
+  "temperature": 1.0,
+  "pid": 181571,
+  "proc_start_ticks": "37697936",
+  "actual_state": "R",
+  "ar_requests": 300,
+  "ar_summary": {
+    "decode_tokens": 58994,
+    "decode_s": 5086.573546215892,
+    "loops": 235976,
+    "tok_s": 11.597984274480417,
+    "gamma": 1.0
+  },
+  "ar_exit_code": 0,
+  "ar_journal_sha256": "35299574da9f60d0c697fddd0de328d5cefbc8cac95d58eb4909659d31bad90e",
+  "matched_configuration_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "cuda",
+    "dtype",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "ar_source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69",
+  "dflash_source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+  "old_and_new_entrypoints_pass_reviewed_source_identity": true,
+  "target_and_decode_sources_identical": true,
+  "startup_helper_sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "training_audit_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "checkpoint_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 181571,
+    "started_unix": 1794361944.6816423,
+    "acquired_unix": 1794361946.157134,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "actual_gpu_context_verified": true,
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "observed_prefix_requests": 20,
+  "observed_prefix_sha256": "aff38b8d58bd710b4b37ef585d9669f30b2ff26106aa92c40eadc463716996cf",
+  "snapshot_sha256": {
+    "ar-complete.json": "1e3ed4f8e15e9840d2d3cdceb0bcd2c939f97673654a388813aafc6f79f6f0d6",
+    "ar-exit.json": "d333a9c814cda65182b6db3e1df99d68a266369c2867783e7e22090146be2e53",
+    "ar-metadata.json": "df299592a56dbb7ee4ae713996f18948df8b9025351bc1d8bdf5f5f7f3bea337",
+    "dflash-metadata.json": "ed4a6f120bedbd4063b4b9a7b6328529b26c597228e00bc4ce7a455c7b45c6ba",
+    "cuda-acquisition.json": "fce9f74688bc74033e673a5bdc4445d046dd4fa847ebf0d6e52149c466c55af4",
+    "checkpoint-loading.json": "ea8462ce1fb5161e28a2547070c1a7915315f32097d1aec2ca40a21e18831d85",
+    "dflash-launcher.json": "111be50af1245b05d1a5e5e3dc66206c24b16cd052798142307e02c3b20491f2"
+  },
+  "limitations": [
+    "Actual GPU startup succeeded on first attempt; real busy-error retry was not exercised. Retry and fault cases retain prior CPU mock coverage.",
+    "Full timed DFlash evaluation and independent full-task profile remain incomplete; no formal matrix cell is added.",
+    "T1 sampled sequence equality is not a proof of accuracy or distribution preservation."
+  ],
+  "checker_note": "Initial read-only check used the generic audit status complete and rejected the report before writing artifacts. Corrected to its actual complete_training_audit_not_benchmark schema; no GPU process changed."
+}

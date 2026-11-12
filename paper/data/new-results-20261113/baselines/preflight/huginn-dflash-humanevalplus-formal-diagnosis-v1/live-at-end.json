@@ -1,0 +1,123 @@
+{
+  "checked_unix": 1794471393.499575,
+  "check_actual_exit_code": 0,
+  "controllers": {
+    "packed-dflash-supplement-v1": {
+      "pid": 153662,
+      "alive": true,
+      "stage": "running",
+      "running": {
+        "table1-huginn-3.5b-math500-t1-profile": {
+          "pid": 36405,
+          "gpu": 1,
+          "alive": true
+        },
+        "table1-ouro-2.6b-mbppplus-t1-profile": {
+          "pid": 56397,
+          "gpu": 4,
+          "alive": true
+        },
+        "table1-ouro-2.6b-specbench-t1-profile": {
+          "pid": 63640,
+          "gpu": 6,
+          "alive": true
+        }
+      }
+    },
+    "loopahead-ouro14-resume-v1": {
+      "pid": 105015,
+      "alive": true,
+      "stage": "running",
+      "running": {}
+    },
+    "ouro14-packed-evaluation-v1": {
+      "pid": 510179,
+      "alive": true,
+      "stage": "waiting_for_full_training",
+      "running": {}
+    },
+    "baseline-diagnostics-resume-v1": {
+      "pid": 33751,
+      "alive": true,
+      "stage": "waiting_for_measurement_priority",
+      "running": {}
+    },
+    "appendix-loopahead-diagnostics-v1": {
+      "pid": 45833,
+      "alive": true,
+      "stage": "running",
+      "running": {
+        "loopahead-ouro-1.4b-gsm8k-v1-observed": {
+          "pid": 97806,
+          "gpu": 5,
+          "alive": true
+        },
+        "loopahead-ouro-1.4b-math500-v1-observed": {
+          "pid": 108209,
+          "gpu": 7,
+          "alive": true
+        },
+        "loopahead-ouro-1.4b-bbh-v1-observed": {
+          "pid": 113499,
+          "gpu": 2,
+          "alive": true
+        }
+      }
+    },
+    "portable-dflash-training-audit-v1": {
+      "pid": 90453,
+      "alive": true,
+      "stage": "waiting_for_existing_training_and_parent_audit",
+      "running": {}
+    }
+  },
+  "portable_training": {
+    "stage": "teachers",
+    "controller_pid": 497107,
+    "updated_unix": 1794471385.7960553,
+    "gpu": 0,
+    "worker": {
+      "stage": "teachers",
+      "pid": 10995,
+      "argv": [
+        "taskset",
+        "--cpu-list",
+        "0-3",
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/source/teacher/experiments/baselines/generate_teachers.py",
+        "--model",
+        "ouro-1.4b",
+        "--manifest",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/inputs/dflash-train.jsonl",
+        "--shard",
+        "0",
+        "--shards",
+        "1",
+        "--max-batch",
+        "32",
+        "--kv-budget-gib",
+        "70",
+        "--gpu",
+        "0",
+        "--cpus",
+        "0-3",
+        "--out",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0"
+      ],
+      "gpu": 0,
+      "started_unix": 1794428119.7968464,
+      "log": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/logs/teachers.log"
+    },
+    "progress": {
+      "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/progress.json": {
+        "completed_requests": 49920,
+        "planned_requests": 50000,
+        "last_batch": 1559,
+        "last_batch_wall_s": 65.84232859313488,
+        "last_batch_size": 32,
+        "updated_unix": 1794471314.7063692
+      }
+    }
+  }
+}

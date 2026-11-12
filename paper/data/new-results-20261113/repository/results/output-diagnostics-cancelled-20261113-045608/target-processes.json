@@ -1,0 +1,48 @@
+{
+  "controllers": [
+    {
+      "pid": 48618,
+      "state": "S",
+      "start_ticks": "52427020",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+        "--plan",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+      ]
+    },
+    {
+      "pid": 64214,
+      "state": "S",
+      "start_ticks": "52560728",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/queue_loopahead_math_continuation.py"
+      ]
+    }
+  ],
+  "workers": [
+    {
+      "pid": 137616,
+      "state": "R",
+      "start_ticks": "53176293",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/diagnose_packed_dflash.py",
+        "--plan",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/plan.json",
+        "--job",
+        "table1-ouro-1.4b-gsm8k-t0",
+        "--ar",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t0-ar",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/diagnostics/table1-ouro-1.4b-gsm8k-t0",
+        "--lock-fd",
+        "5"
+      ]
+    }
+  ]
+}

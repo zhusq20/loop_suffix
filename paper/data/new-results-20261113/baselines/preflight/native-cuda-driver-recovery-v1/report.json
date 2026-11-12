@@ -1,0 +1,236 @@
+{
+  "status": "process_local_native_driver_recovery_verified",
+  "checked_unix": 1794381465.6723819,
+  "kernel_version": "570.148.08",
+  "unfixed_default_loader": [
+    "/usr/local/cuda/compat/libcuda.so.570.86.15"
+  ],
+  "ld_cache_mtime": 1794378966.2280037,
+  "external_cache_update_attribution": "unknown; observed modification time and changed resolver only",
+  "failed_jobs": [],
+  "preserved_failed_attempts": 6,
+  "archive_manifest_sha256": "fc51e84e55a12fb23be44fc716b20f728c41c2a269f9396fcfcb204e915b309a",
+  "main_controller": 477516,
+  "appendix_controller": 478387,
+  "appendix_stage": "waiting_for_main48",
+  "live_processes": {
+    "477516": {
+      "state": "S",
+      "start_ticks": "39622686",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--execute",
+        "--resume",
+        "--retry-failed",
+        "loopahead-huginn-3.5b-bbh-t1",
+        "--retry-failed",
+        "loopahead-ouro-2.6b-bbh-t1",
+        "--retry-failed",
+        "dflash-ouro-2.6b-bbh-t1",
+        "--retry-failed",
+        "loopahead-huginn-3.5b-humanevalplus-t1",
+        "--retry-failed",
+        "loopahead-ouro-2.6b-humanevalplus-t1",
+        "--retry-failed",
+        "dflash-ouro-2.6b-humanevalplus-t1"
+      ]
+    },
+    "478387": {
+      "state": "S",
+      "start_ticks": "39629964",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_appendix.py",
+        "--execute"
+      ]
+    },
+    "420683": {
+      "state": "S",
+      "start_ticks": "39205891",
+      "argv": [
+        "python",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-math500-t1.json"
+      ]
+    },
+    "420686": {
+      "state": "R",
+      "start_ticks": "39205913",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "ar",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "1",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1"
+      ]
+    },
+    "65472": {
+      "state": "R",
+      "start_ticks": "36937712",
+      "argv": [
+        "/tmp/loopfill-specforge-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--teachers",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+        "--cpu-groups",
+        "12-15,56-59",
+        "--micro-batch",
+        "4",
+        "--accumulation",
+        "4",
+        "--checkpoint-layers",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+        "--epochs",
+        "6",
+        "--save-every",
+        "500"
+      ]
+    },
+    "65473": {
+      "state": "R",
+      "start_ticks": "36937712",
+      "argv": [
+        "/tmp/loopfill-specforge-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--teachers",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+        "--cpu-groups",
+        "12-15,56-59",
+        "--micro-batch",
+        "4",
+        "--accumulation",
+        "4",
+        "--checkpoint-layers",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+        "--epochs",
+        "6",
+        "--save-every",
+        "500"
+      ]
+    }
+  },
+  "probe_reports": {
+    "loopahead": {
+      "status": "cuda_context_and_tensor_matmul_flash_attention_passed",
+      "executable": "/tmp/loopfill-venv/bin/python",
+      "torch": "2.6.0+cu126",
+      "torch_cuda": "12.6",
+      "transformers": "4.55.0",
+      "flash_attn": "2.7.2",
+      "acquisition": {
+        "gpu": 2,
+        "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+        "pid": 474503,
+        "started_unix": 1794380953.2635016,
+        "acquired_unix": 1794380953.9112601,
+        "attempts": 1,
+        "cuda_busy_errors": 0,
+        "timing_scope": "startup only; outside benchmark decode"
+      },
+      "loaded_driver_libraries": [
+        "/usr/lib64/libcuda.so.570.148.08"
+      ],
+      "flash_attention_max_abs_error": 0.001953125,
+      "ld_cache_mtime": 1794378966.2280037,
+      "source_sha256": "ede31ff0ec1f784bbf3509409c7fb0b17a78a2da28f3ead6f1ee0a643f5e0767",
+      "limitation": "Startup and small GPU kernels only; not a full-model benchmark or distribution test."
+    },
+    "dflash": {
+      "status": "cuda_context_and_tensor_matmul_flash_attention_passed",
+      "executable": "/tmp/loopfill-dflash-venv/bin/python",
+      "torch": "2.6.0+cu126",
+      "torch_cuda": "12.6",
+      "transformers": "4.57.1",
+      "flash_attn": "2.7.2",
+      "acquisition": {
+        "gpu": 2,
+        "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+        "pid": 474822,
+        "started_unix": 1794380978.3867853,
+        "acquired_unix": 1794380979.0608122,
+        "attempts": 1,
+        "cuda_busy_errors": 0,
+        "timing_scope": "startup only; outside benchmark decode"
+      },
+      "loaded_driver_libraries": [
+        "/usr/lib64/libcuda.so.570.148.08"
+      ],
+      "flash_attention_max_abs_error": 0.001953125,
+      "ld_cache_mtime": 1794378966.2280037,
+      "source_sha256": "ede31ff0ec1f784bbf3509409c7fb0b17a78a2da28f3ead6f1ee0a643f5e0767",
+      "limitation": "Startup and small GPU kernels only; not a full-model benchmark or distribution test."
+    }
+  },
+  "probe_exit_evidence": {
+    "loopahead": {
+      "exec_session": 69203,
+      "observed_exit_code": 0
+    },
+    "dflash": {
+      "exec_session": 91990,
+      "observed_exit_code": 0
+    }
+  },
+  "actual_formal_recovery": {
+    "pid": 478437,
+    "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1",
+    "requests_checked": 15,
+    "source_identity": "all archived/current SHA256 matched",
+    "loaded_driver_libraries": [
+      "/usr/lib64/libcuda.so.570.148.08"
+    ],
+    "cuda_acquisition": {
+      "gpu": 2,
+      "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+      "pid": 478437,
+      "started_unix": 1794381269.782065,
+      "acquired_unix": 1794381270.6292198,
+      "attempts": 1,
+      "cuda_busy_errors": 0,
+      "timing_scope": "startup only; outside benchmark decode"
+    }
+  },
+  "evaluation_and_training_sources_unchanged": true,
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "released_gpus": [
+    0,
+    1,
+    5,
+    7
+  ],
+  "limitations": [
+    "No system driver, ldconfig cache, or existing process was changed by this correction.",
+    "The probe checks CUDA startup and small kernels; it is not a full-model benchmark or distribution test.",
+    "Six original startup failures remain archived; no failed request output was relabelled as successful.",
+    "Formal recovery has started; those benchmark cells are not complete."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "model": "huginn-3.5b",
+  "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "method": "ar",
+  "dataset": "math500",
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "count": 500,
+  "full_count": 500,
+  "max_new_tokens": 512,
+  "max_seq": 2304,
+  "input_sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        65505
+      ],
+      "generation_config": [
+        65505,
+        65508
+      ],
+      "model_config": [
+        65505
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "model_config",
+    "stop_ids": [
+      65505,
+      65508
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+  "cpu_affinity": [
+    56,
+    57,
+    58,
+    59
+  ],
+  "torch": "2.6.0+cu126",
+  "dtype": "bfloat16",
+  "transformers": "4.57.1",
+  "cuda": "12.6",
+  "graph": false,
+  "compile": false,
+  "checkpoint": null,
+  "checkpoint_sha256": {},
+  "stage": "formal",
+  "trace": false,
+  "profiling": false,
+  "draft_architecture": "target-width-projections-v1",
+  "draft_parameters": 332621056,
+  "training_completion_evidence": null,
+  "reportable": true,
+  "denominator": "full-depth HF LoopTarget AR, same target version and precision",
+  "sampling": "frozen positional target uniforms for AR; DFlash softmax-q rejection with request-hashed seed",
+  "source_sha256": {
+    "evaluate_projected_dflash.py": "9bd281587011eae187e4eee5cf464745fbfbba9a5cb5f6ea9e4d94acf53a975d",
+    "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "dflash_impl/projected_draft.py": "c2ad128db2ef2cc8d56c245e2fc90848c0c6f6c17c201236b70dbf2a99af6d88"
+  }
+}

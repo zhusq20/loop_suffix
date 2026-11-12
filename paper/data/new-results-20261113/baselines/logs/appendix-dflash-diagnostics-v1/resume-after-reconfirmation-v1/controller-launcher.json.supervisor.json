@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1/controller-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1/controller-exit.json",
+  "metadata": {
+    "recovery": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1",
+    "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+    "authorization_context_sha256": "693286ccac4d1abf972fc665eb3f3f422186f65f4ce9837dc364d7de87fe0546"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill/experiments/baselines",
+  "extra_launcher": null,
+  "extra_exit": null
+}

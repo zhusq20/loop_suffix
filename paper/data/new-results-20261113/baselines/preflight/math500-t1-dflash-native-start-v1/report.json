@@ -1,0 +1,227 @@
+{
+  "status": "completed_AR_and_live_DFlash_stage_verified_not_complete_cell",
+  "checked_unix": 1794395006.0838141,
+  "ar_summary": {
+    "decode_tokens": 205470,
+    "decode_s": 17816.09863936901,
+    "loops": 821880,
+    "tok_s": 11.532827930463068,
+    "gamma": 1.0
+  },
+  "ar_journal_sha256": "d56ed57190a2105d59ed704fad8651895c2707a7546f480d9b98ffba1c356892",
+  "ar_execution_evidence": {
+    "kind": "actual_successful_process_exit",
+    "pid": 420686,
+    "launch_sha256": "8d4345d2de6380d104976710d5cdd59b5042c3b659495bf36caf743b4bae0884",
+    "exit_receipt_sha256": "3af241fba080ce91494a1ed00c3328c95720d01620b1472d8ae1c211a568f7cd",
+    "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+  },
+  "ar_actual_exit": {
+    "name": "dflash-stack-ouro-2.6b-math500-t1-ar-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "ar",
+      "--dataset",
+      "math500",
+      "--temperature",
+      "1",
+      "--gpu",
+      "4",
+      "--cpus",
+      "48-51",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1"
+    ],
+    "pid": 420686,
+    "started_unix": 1794377022.8435104,
+    "exit_code": 0,
+    "finished_unix": 1794394917.3838923
+  },
+  "dflash_launcher": {
+    "name": "dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "math500",
+      "--temperature",
+      "1",
+      "--gpu",
+      "4",
+      "--cpus",
+      "48-51",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+    ],
+    "pid": 134675,
+    "started_unix": 1794394917.4335377
+  },
+  "dflash_start_ticks": "40995372",
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "metadata_sha256": {
+    "ar": "eec752d6add0fdd9f8a885335829ec6420912dfb0f34a2c16ec88d5f3bf186b7",
+    "dflash": "8fe1d2a8bd10e4ce7e092c45e3abfafc5a152d81baa9efab3cd61e6f31e7b76e"
+  },
+  "source_manifest_sha256": {
+    "ar": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "dflash": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+  },
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "checkpoint_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "training_audit_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "loaded_libcuda": [
+    "/usr/lib64/libcuda.so.570.148.08"
+  ],
+  "ld_library_path": "/tmp/loopfill-native-driver-570.148.08::/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "cuda_acquisition": {
+    "gpu": 4,
+    "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+    "pid": 134675,
+    "started_unix": 1794394919.6243167,
+    "acquired_unix": 1794394920.6274261,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "gpu_contexts": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029, 117735, 12140 MiB\nGPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3, 65472, 30620 MiB\nGPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda, 134675, 8564 MiB\nGPU-e54049b5-ca93-d066-efc5-6942d59bf762, 65473, 30860 MiB\n",
+  "native_driver_reexec_record_sha256": "1adefed22a50b73b752d0b27237be9941cfcf419a68637cfe67ba195dd4bcc02",
+  "native_driver_reexec": {
+    "created_unix": 1794394917.7716198,
+    "kernel_version": "570.148.08",
+    "kernel_description": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  570.148.08  Release Build  (dvs-builder@U22-I3-AE18-23-3)  Wed May 21 07:03:28 UTC 2025\nGCC version:  gcc version 10.2.1 20200825 (Alibaba 10.2.1-3.8 2.32) (GCC) \n",
+    "directory": "/tmp/loopfill-native-driver-570.148.08",
+    "bindings": {
+      "libcuda.so": "/usr/lib64/libcuda.so.570.148.08",
+      "libcuda.so.1": "/usr/lib64/libcuda.so.570.148.08",
+      "libcuda.so.570.148.08": "/usr/lib64/libcuda.so.570.148.08",
+      "libcudadebugger.so.1": "/usr/lib64/libcudadebugger.so.570.148.08",
+      "libcudadebugger.so.570.148.08": "/usr/lib64/libcudadebugger.so.570.148.08",
+      "libnvidia-ml.so.1": "/usr/lib64/libnvidia-ml.so.570.148.08",
+      "libnvidia-ml.so.570.148.08": "/usr/lib64/libnvidia-ml.so.570.148.08",
+      "libnvidia-nvvm.so.4": "/usr/lib64/libnvidia-nvvm.so.570.148.08",
+      "libnvidia-nvvm.so.570.148.08": "/usr/lib64/libnvidia-nvvm.so.570.148.08",
+      "libnvidia-ptxjitcompiler.so.1": "/usr/lib64/libnvidia-ptxjitcompiler.so.570.148.08",
+      "libnvidia-ptxjitcompiler.so.570.148.08": "/usr/lib64/libnvidia-ptxjitcompiler.so.570.148.08"
+    },
+    "native_library_sha256": {
+      "/usr/lib64/libcuda.so.570.148.08": "cb120b839ca5d69de93b360a5d4592ecf5ac4a983521fcf4169e281deb49c883",
+      "/usr/lib64/libcudadebugger.so.570.148.08": "877816b78ee90701c0b185e04fa58ef4118d509918f3c89cc6637e075f6930f7",
+      "/usr/lib64/libnvidia-ml.so.570.148.08": "82ed7464081aa881e13e9b673d294fd8bc3f067338ff97fa4c4fd241c92e0a07",
+      "/usr/lib64/libnvidia-nvvm.so.570.148.08": "76c85d62a7be0daa70d9f158f1bd7bbf5be430a02b68f9582c4b5050cf6c22d3",
+      "/usr/lib64/libnvidia-ptxjitcompiler.so.570.148.08": "52b84381f6f8be21c42bfe3caa5e9afdb58d159622c671f2d142f66dca8d2fdd"
+    },
+    "previous_ld_library_path": ":/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+    "ld_library_path": "/tmp/loopfill-native-driver-570.148.08::/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+    "ld_cache_mtime": 1794378966.2280037,
+    "source_sha256": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+    "scope": "child process environment only; no system driver/cache modification",
+    "command": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "dflash",
+      "--dataset",
+      "math500",
+      "--temperature",
+      "1",
+      "--gpu",
+      "4",
+      "--cpus",
+      "48-51",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+      "--checkpoint",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+    ]
+  },
+  "parent_ld_library_path": ":/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "official_upstream": {
+    "commit": "94e4abc5e0c31b67bc1a9d30f1cc34ece28a8756",
+    "clean_checkout": true,
+    "model_source_sha256": "6dfb12d0eeebe085d78d23fc816a481a8b25257fd76891e939a41423c29c697b"
+  },
+  "observed_requests": 3,
+  "observed_prefix_sha256": "336dcc4d7e5d9f11b07adf32d93a902c1e2f8c20d0cf0b254c8ec49b5d833288",
+  "allocation": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794353566.114057,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": [
+      3,
+      6
+    ]
+  },
+  "completed_cells": 25,
+  "results_unchanged": {
+    "results.csv": "46ec2382abdfade1f0143ecbf9ba5c22587d32cc44cc404eb139b9bb21aea052",
+    "table2_rows.md": "65efd8ea42833103135194a0c4ceb1627bd9cd60356acd337dbff5d002282d9c",
+    "formal-agreement.json": "8f453500ba03bd87b59660a8074a6e66d1b8c2d5e64acbc7047ad64041e807e6",
+    "formal-matrix-status.json": "34370152e1d9b9aa7122255d8a26c3e5434afbc3ba504a24fb4c560449c94cd0"
+  },
+  "verification_source_sha256": "93e1b32ab9fad50942277076171bf883e714ae58eaf382c8ac00993ab574fdac",
+  "limitations": [
+    "DFlash timing and its separate full-task profile remain incomplete; no speed ratio is reported for this cell.",
+    "Actual old-parent entry re-exec, native driver mapping and normal CUDA acquisition verified; no real busy-retry is claimed.",
+    "Shared-host timing variation is retained without correction.",
+    "The original failed startup remains in its recovery archive."
+  ]
+}

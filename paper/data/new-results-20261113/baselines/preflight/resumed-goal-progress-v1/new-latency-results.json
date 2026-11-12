@@ -1,0 +1,273 @@
+{
+  "status": "verified_new_results_without_gpu_reruns",
+  "previous_count": 35,
+  "current_count": 41,
+  "preserved_existing_rows": 35,
+  "new_results": [
+    {
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-2.6b",
+        "benchmark": "specbench",
+        "temperature": "1",
+        "eta": "2.621501777405376",
+        "gamma": "3.2918593490969372",
+        "method_tok_s": "16.797527743349786",
+        "ar_tok_s": "6.407597312398198",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.0125",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "2.7063652078585614",
+        "eta_throughput": "2.621501777405376",
+        "aligned_token_match_rate": "0.032304860689254984",
+        "method_decode_tokens": "84888",
+        "ar_decode_tokens": "87636",
+        "method_decode_s": "5053.600821323693",
+        "ar_decode_s": "13676.889437235892",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794089233.253369",
+        "ar_last_completed_unix": "1794102960.1998506",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t1"
+      },
+      "source_journals": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2",
+          "sha256": "e0e492b9f8a9c9c37da14a978b8be9813aa931c167fc652c036a0106af4328a9",
+          "metadata_sha256": "ab740b5e45a1df1df110eaaaf3adc8dff20e71f4da3250000837bf99e8b0851c",
+          "complete_sha256": "c9fbc00cb17cfdee64e1a4746f3e6ec0944f8e78eb5654b204f4d571738cb3e9"
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t1",
+          "sha256": "d1c885713ba1e1a61bc93b8f53c60673246433fae42c07eddf83ad917014b176",
+          "metadata_sha256": "0c44a38957c4d5f9240bbbfab9b487cd9ef8ea41811a90bc33406ecc7af35fb3",
+          "complete_sha256": "b1e8906c8f4fcf70c3b084fece475e6f4445ab137105d5cfa44175d3f63524e2"
+        }
+      }
+    },
+    {
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "gsm8k",
+        "temperature": "0",
+        "eta": "3.7106999422899882",
+        "gamma": "4.72390139335477",
+        "method_tok_s": "46.59121888377818",
+        "ar_tok_s": "12.555911178047259",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.22666666666666666",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "3.6980430041558443",
+        "eta_throughput": "3.7106999422899882",
+        "aligned_token_match_rate": "0.49585040523970453",
+        "method_decode_tokens": "132222",
+        "ar_decode_tokens": "131771",
+        "method_decode_s": "2837.9167398437858",
+        "ar_decode_s": "10494.738146156073",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1793990805.2656174",
+        "ar_last_completed_unix": "1794001313.5731204",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t0-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t0"
+      },
+      "source_journals": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t0-v1",
+          "sha256": "70e016bc371926114e608d3c6da980fa4f22ba1ba2ec2433e602fde3648c542b",
+          "metadata_sha256": "652d35af78d155b4bcbffdc33525bb7b8eeeb0b263214741bc42d5235fb66de7",
+          "complete_sha256": "870442091ef01697cd6768568fe4d3e8b9100f7cca58c5c6e89ecaf7f436d461"
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t0",
+          "sha256": "63f54f66c43291257407e42da23a94800a725e37ad3a12d8fd273d60384d7841",
+          "metadata_sha256": "d0c93f28b2ad9bfbccd5382cb134c6b6c906328f0718e94140361a38a56ab841",
+          "complete_sha256": "4b1ad7f752863a8088fd7c742196a41608ad970cbca87dfe5f40d83de30e572d"
+        }
+      }
+    },
+    {
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "math500",
+        "temperature": "0",
+        "eta": "4.424783777757001",
+        "gamma": "5.743004153917161",
+        "method_tok_s": "56.27408134670744",
+        "ar_tok_s": "12.717927965111494",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.244",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "4.407047413842508",
+        "eta_throughput": "4.424783777757001",
+        "aligned_token_match_rate": "0.5558069768083606",
+        "method_decode_tokens": "251970",
+        "ar_decode_tokens": "250960",
+        "method_decode_s": "4477.5497701615095",
+        "ar_decode_s": "19732.7741349414",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1793992813.2334888",
+        "ar_last_completed_unix": "1794012542.4634724",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t0-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-math500-t0"
+      },
+      "source_journals": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t0-v1",
+          "sha256": "a9cc1afd145bdf2fc8e29d35eb66399129bf0828de9dc0b0f6cfc8bdef74bd0f",
+          "metadata_sha256": "ebf3ae95eebfeb5c1dcad4e48328b4057580e6831b0dc51355eb2b89c45051c1",
+          "complete_sha256": "07657919749c592e365266a82063312df003fbe5a659afa9b81aaca3da26c1cf"
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-math500-t0",
+          "sha256": "2f43e6e39369af64370d2767aa2bb303f85296df9636b668e05d6dc2da49bf32",
+          "metadata_sha256": "86185675f0776a668e0be161c1fa76ab4ce05f26b479bd2dbc073edc0e02fc83",
+          "complete_sha256": "544c636ca869b3f7069cd1b833dcf47edd75c6851adece5f6c9fb0d35358a2b3"
+        }
+      }
+    },
+    {
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "bbh",
+        "temperature": "0",
+        "eta": "3.762202460285895",
+        "gamma": "4.794020820357683",
+        "method_tok_s": "46.818398967554494",
+        "ar_tok_s": "12.444412405173086",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.8222222222222222",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "3.7536837390506523",
+        "eta_throughput": "3.762202460285895",
+        "aligned_token_match_rate": "0.9121570923997584",
+        "method_decode_tokens": "53880",
+        "ar_decode_tokens": "53758",
+        "method_decode_s": "1150.8296137452126",
+        "ar_decode_s": "4319.850407533348",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794001367.2473717",
+        "ar_last_completed_unix": "1794005681.6245935",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t0-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t0"
+      },
+      "source_journals": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t0-v1",
+          "sha256": "91262e20d2ba27a2c46239a222d00a34d74eec7f51c301ddc3acc6abbf559e19",
+          "metadata_sha256": "8b7819c09ec1d51b2ec3e263de34bfea48759e357900c4632b2962c9d06403d2",
+          "complete_sha256": "595e93e3c57390da2f3a2144ef1409f6094091172247e381e7002c5f859c2a6d"
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t0",
+          "sha256": "6d32d20381a892a5ba90f631ebf6acab5dae7341e9eb95604208affb08eeffc7",
+          "metadata_sha256": "85072ef6232d4728432e182328c168e11686f4f4a42e038c2545e3e3e296d7c7",
+          "complete_sha256": "7dd6c816b94137588a071b34f891729caac45e219b4458d2e0c5148ff9111104"
+        }
+      }
+    },
+    {
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "humanevalplus",
+        "temperature": "0",
+        "eta": "4.7041085968290695",
+        "gamma": "5.970528499200553",
+        "method_tok_s": "58.80038331796877",
+        "ar_tok_s": "12.49979291668665",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.7926829268292683",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "4.789771557004093",
+        "eta_throughput": "4.7041085968290695",
+        "aligned_token_match_rate": "0.8418354553812721",
+        "method_decode_tokens": "34541",
+        "ar_decode_tokens": "35170",
+        "method_decode_s": "587.428143337369",
+        "ar_decode_s": "2813.646612741053",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794006290.7002609",
+        "ar_last_completed_unix": "1794009091.2044513",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t0-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t0"
+      },
+      "source_journals": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t0-v1",
+          "sha256": "bad8d5ac9490647ee3bedbc85da32fb143138bfd259aa8d17172f29a4b17853d",
+          "metadata_sha256": "2b2f1c502323c1230674f5981ede8f7310011079ffacd05cfed3f3bd2798f81f",
+          "complete_sha256": "8f0663066600a4e072daed69a9ff00fc0e5ec75201db55de017e962607a66f54"
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t0",
+          "sha256": "492b0eb07f7783086dd3d3db71699c3ed02ce39181ccc6e3ff6b1a2fb8f9cbe3",
+          "metadata_sha256": "04483bc64beba1ee3a45890d99776ccb3c6af40339dcf90d1937a6d7bdf9557b",
+          "complete_sha256": "7a7d2d72a5f3cf26e36f237d19a84f757e89612b5c3914c266bf1e087fa23b4c"
+        }
+      }
+    },
+    {
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-1.4b",
+        "benchmark": "mbppplus",
+        "temperature": "0",
+        "eta": "4.2931086400506615",
+        "gamma": "5.484858055233884",
+        "method_tok_s": "54.61556536215416",
+        "ar_tok_s": "12.721682571142587",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.5079365079365079",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "4.254819984472163",
+        "eta_throughput": "4.2931086400506615",
+        "aligned_token_match_rate": "0.6666830358239006",
+        "method_decode_tokens": "78151",
+        "ar_decode_tokens": "77454",
+        "method_decode_s": "1430.9290672317147",
+        "ar_decode_s": "6088.345591619611",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794008839.7067502",
+        "ar_last_completed_unix": "1794014946.0575354",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t0-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t0"
+      },
+      "source_journals": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t0-v1",
+          "sha256": "4e70bf062a87a006c0e2acafe291b39236b2149a4e436de7b6b9871304f2d8fa",
+          "metadata_sha256": "86b7ffa714a5fc5c8906a96bea146bb7a29141728765da185481d2ee1a735b19",
+          "complete_sha256": "caa5cf434a1787c7a822f662d9c7e653be09ec9f93bf13c04010b9d0a6fc506e"
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t0",
+          "sha256": "f78c1954e734e658224649defe9c8b1b32cedd9fa49e61dc72179682e1782d3d",
+          "metadata_sha256": "4e965f3897ea0a70713454518c8857e118bba4337854491fd90e4ac7bcc7fce1",
+          "complete_sha256": "51a389106d055154592d125d04068b575fdc05b360081914aa1aa7b25d208b78"
+        }
+      }
+    }
+  ],
+  "verified_unix": 1794464020.414646,
+  "formal_output_sha256": {
+    "results.csv": "201e45369d21207bdc87fc0bc1def35bedb415c0d27cdfb07ecb28d83aded1c4",
+    "formal-agreement.json": "f85d4eb17441c8a753b42888349c22c1e9ebd7e7a7e3787abcbca21741dee805",
+    "formal-matrix-status.json": "5e86cdc38a1fbfcc854f4e862484e1e23099b27aa00296cafb6e382f363a54b0",
+    "table2_rows.md": "e6724f5d64eb6a21a6d038a9969970455237ca0634994e5cbeb758f09a02b02a"
+  }
+}

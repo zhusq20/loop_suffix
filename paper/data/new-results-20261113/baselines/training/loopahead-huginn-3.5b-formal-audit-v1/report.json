@@ -1,0 +1,359 @@
+{
+  "status": "complete_LAD_training_audit_not_benchmark",
+  "model": "huginn-3.5b",
+  "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1",
+  "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+  "selected_step": 13500,
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "parameters": 17673376,
+  "epochs": 3,
+  "updates": 13539,
+  "logged_optimization_records": 543,
+  "all_logged_values_finite": true,
+  "logged_learning_rate_max_error": 4.0657581468206416e-20,
+  "saved_checkpoints": [
+    {
+      "step": 500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-000500/lad.pt",
+      "sha256": "298a9ff14cc00c929ad04df7ae73c2daa119064cce1c25d2b98e0d35c04c0577",
+      "all_weights_finite": true
+    },
+    {
+      "step": 1000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-001000/lad.pt",
+      "sha256": "04eaf1e939b42ea23e583ed0814462599a0c3fd8ce3c7a75468c17d7787e8f00",
+      "all_weights_finite": true
+    },
+    {
+      "step": 1500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-001500/lad.pt",
+      "sha256": "41019506329c5105e85d662f5453089257e23bf6cef62d9ce6fefe41c6473546",
+      "all_weights_finite": true
+    },
+    {
+      "step": 2000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-002000/lad.pt",
+      "sha256": "ac6c4853ac01e8e12339eebd24a63ddd5a752c687e9d08678e56c752655af660",
+      "all_weights_finite": true
+    },
+    {
+      "step": 2500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-002500/lad.pt",
+      "sha256": "c9df3ec2a2fa3d35172c07a3de536011d40fc2e06658f95a8737ed488eb70540",
+      "all_weights_finite": true
+    },
+    {
+      "step": 3000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-003000/lad.pt",
+      "sha256": "a3fac1c32b5be84680a810b1f4ac32eb399cb1203307d2e24f79a3a3e698b8ef",
+      "all_weights_finite": true
+    },
+    {
+      "step": 3500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-003500/lad.pt",
+      "sha256": "9efafad34dad6554cc27bf93fac6f441ef0699316bae4181a22172736397bac8",
+      "all_weights_finite": true
+    },
+    {
+      "step": 4000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-004000/lad.pt",
+      "sha256": "9ff1272367ee163ca5a610f843196cd83e07b3c731e61c6aeceef2a0ac221d3a",
+      "all_weights_finite": true
+    },
+    {
+      "step": 4500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-004500/lad.pt",
+      "sha256": "83e0facce3712428e16cae42badf18ea02c827a60356fa362265603a1e973207",
+      "all_weights_finite": true
+    },
+    {
+      "step": 5000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-005000/lad.pt",
+      "sha256": "5c04064ef87de85e2e19f2917d517394ced8c26ffbfa62a144aa6a99649777a2",
+      "all_weights_finite": true
+    },
+    {
+      "step": 5500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-005500/lad.pt",
+      "sha256": "8fc2a0abfa21ded9d86e3d3280ca4635effa95d374fbc44cdfb5752a67cdd360",
+      "all_weights_finite": true
+    },
+    {
+      "step": 6000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-006000/lad.pt",
+      "sha256": "150f2b45b1fbc35d4744276ea5096d50a156566b3997bab73ce1a07789aebf84",
+      "all_weights_finite": true
+    },
+    {
+      "step": 6500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-006500/lad.pt",
+      "sha256": "e1779a4e4f2cc5e2261e223ec132a62a567e63d825cf7fc929d7db0844e97d9d",
+      "all_weights_finite": true
+    },
+    {
+      "step": 7000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-007000/lad.pt",
+      "sha256": "e2b30a28a0b26478e91a2e36520ee5763a7a6fc5f4fd2d0e4c81d3b3d03df1e7",
+      "all_weights_finite": true
+    },
+    {
+      "step": 7500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-007500/lad.pt",
+      "sha256": "b33411119530149d0a2a928e0241cfef184f910637a87e6711a05417cb8b2994",
+      "all_weights_finite": true
+    },
+    {
+      "step": 8000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-008000/lad.pt",
+      "sha256": "d0ecec14bf5c341a9bcd0c95e05be70c9b4110b1204ba8369609e35b9e8c58e9",
+      "all_weights_finite": true
+    },
+    {
+      "step": 8500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-008500/lad.pt",
+      "sha256": "f15d134e9525d899a9f0c44d52b1f768c19c0ef5a52ddc42a3baaf1b7af3d48a",
+      "all_weights_finite": true
+    },
+    {
+      "step": 9000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-009000/lad.pt",
+      "sha256": "29e92454c954bda58a4ec3d37b3a9d16348ee67c1967532b879483458488c582",
+      "all_weights_finite": true
+    },
+    {
+      "step": 9500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-009500/lad.pt",
+      "sha256": "0297f6530b8bbd40cbd32050114f29f7739b2b1b357371345edc24b970239603",
+      "all_weights_finite": true
+    },
+    {
+      "step": 10000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-010000/lad.pt",
+      "sha256": "10683b4a1320760dee73e7d2826e63b7f9192872d8d2013a7f4293ef12e10d28",
+      "all_weights_finite": true
+    },
+    {
+      "step": 10500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-010500/lad.pt",
+      "sha256": "de21d37f47a20a0f71cfe73e5cfd348d1eb7773b93f1ea9ba3ff5f23c47c0470",
+      "all_weights_finite": true
+    },
+    {
+      "step": 11000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-011000/lad.pt",
+      "sha256": "2b6a2dbc2ac0b1e4cbc5d34ec1cb877025fe8e74ed8addf73e7d547d45ca12a3",
+      "all_weights_finite": true
+    },
+    {
+      "step": 11500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-011500/lad.pt",
+      "sha256": "45d380e9e09f5f25e7f0a69f2a00ab8a83099b26d8dda7e320d47e16491dca50",
+      "all_weights_finite": true
+    },
+    {
+      "step": 12000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-012000/lad.pt",
+      "sha256": "db7f5a96d6a8fc31ef6aad054cffe54dfd0fb93e9fddda886abbe198d479397f",
+      "all_weights_finite": true
+    },
+    {
+      "step": 12500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-012500/lad.pt",
+      "sha256": "8c773de4c064d7d74b8fcbecc092b1a68190b8c268d2257c0c807f74bcb68799",
+      "all_weights_finite": true
+    },
+    {
+      "step": 13000,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013000/lad.pt",
+      "sha256": "24016d925e50d07dfb1369d93c28248595e54acef25b75479f8954b8439cdb74",
+      "all_weights_finite": true
+    },
+    {
+      "step": 13500,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+      "sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+      "all_weights_finite": true
+    },
+    {
+      "step": 13539,
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013539/lad.pt",
+      "sha256": "9e9046cd530451d0dc6f10ba86b641ac90de0997cf6f6fdc22346482f793568b",
+      "all_weights_finite": true
+    }
+  ],
+  "all_saved_parameters_finite": true,
+  "selected_by_frozen_dev_rule": true,
+  "confirmation_files": 1,
+  "dev_accepted_prefix": 1.9937919560185187,
+  "confirmation_accepted_prefix": 1.9742418981481482,
+  "frequent8192_exactly_recomputed_from_training_counts": true,
+  "feature_index_coverage": {
+    "train": {
+      "requests": 9025,
+      "eligible": 9025,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard0/index.json",
+          "sha256": "48d4b5ff2abc5d63600aaec759a07fbb41943fae6e341b818e43c8a27eef829d"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard1/index.json",
+          "sha256": "97b1a3ef5ea185f1c470d70dab07dde9abe157f68ea159d9474af7fda6d5d00d"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard2/index.json",
+          "sha256": "8e026a7fe34f4b38d64719d58b3068e8954b67c84af44f4e3fe0cbdadb9bf62a"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard3/index.json",
+          "sha256": "68b084aeb327306739492caefe3857a1629e4507de146f8dcf64f8cc0dcb2f65"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard4/index.json",
+          "sha256": "79e4a28b8c259a3a4ac01c2eda3aeb77b91771b41c08b3c74ce984884c2b80be"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard5/index.json",
+          "sha256": "5abc4071e1a2bcb8a6074fcd806d5e058097ba16de10585ed097417753ebd162"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard6/index.json",
+          "sha256": "242cafaaed4cc88d4021229d1ee63d44dfd4654929cdfd2396a8684fcc607dfa"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard7/index.json",
+          "sha256": "69db9c049887058cf62bf952b7d929a70082aa346331f6bea34ca24b6a3d75de"
+        }
+      ]
+    },
+    "dev": {
+      "requests": 782,
+      "eligible": 782,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard0/index.json",
+          "sha256": "fbc1a54f50decfbadf6b1bc3d3b366432c3eaeaaa089cf8aae20393b81adb5be"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard1/index.json",
+          "sha256": "b0e7f27f3eac4a08d67cd7c90c68a672b824816b59be76d9943fd76df6fdf413"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard2/index.json",
+          "sha256": "a14332f2db2b5d752a0b9424187b59cadb8e4f613384f873d97f256846794cd0"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard3/index.json",
+          "sha256": "69903ab1bc7756e703c127c5ef0c88fbd862e5d90b8b136d4a6a20f654ec5ac5"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard4/index.json",
+          "sha256": "c65aa3df9834f06aad7ae2ea7f7ff16571be818ce8d0f236f22046156a5be03b"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard5/index.json",
+          "sha256": "9f7f8aff5b90864ed870b78fc51b5c8bbe14b07724209a6a8864461b621bdcd3"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard6/index.json",
+          "sha256": "8fd696f3109a851c1ebb2372a347cddfd53b70bef4c517af1c510d9095892384"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard7/index.json",
+          "sha256": "3058db3e4eb85ae25c1d8a80fb4f8e1e1b60a7fd8ade05a28afcd2c7539a557a"
+        }
+      ]
+    },
+    "confirmation": {
+      "requests": 782,
+      "eligible": 782,
+      "index_sources": [
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard0/index.json",
+          "sha256": "3c78c956a562b3bc5eb8197fb8f0f4876fe809b3df9bc009a8e64d56b7799ef0"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard1/index.json",
+          "sha256": "1a5679fe5b3e52c74c290c4e471607f19b6d51c37211eaa7dc97523604c93fd9"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard2/index.json",
+          "sha256": "57a6d1c5e4a1f3719b9ced50b4b7735e6308a9ffd84dc72ff908d947c94e7575"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard3/index.json",
+          "sha256": "ab65c7fa6308c44f05df433165597f8c20b296bcd01c35a373f0706a37ccde04"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard4/index.json",
+          "sha256": "7ee4978187575280d024b73a0a8e044cddefc136e5b7f127d45404f2ff1008c1"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard5/index.json",
+          "sha256": "3f3003212d76c6a9c0f54c03c4a08993160b0298466c76463fe9fa5d37f6808d"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard6/index.json",
+          "sha256": "6d97aeb50ee361892863cf330ac3e96982f742c6b5910965f32a526ef50c7e3d"
+        },
+        {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard7/index.json",
+          "sha256": "a231e4ba30c22cec4973f51affab89163e1ee4e1322ad5583955b221970324b7"
+        }
+      ]
+    }
+  },
+  "frozen_source_hashes": {
+    "train_loopahead.py": "0c7f4a57799c26e2f7e2e2e637de31514735ea43ec46b60cefb1916dc32ce300",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/training_data.py": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "artifact_hashes": {
+    "metadata.json": "2ecc5f61abac6aa96701e815e35595400cc003c24f1940cd9c905d35e91c6a38",
+    "complete.json": "6bb35ca183ee8eb40b5805a462114ce0905402e0bf0a605333daa5c9b7248e18",
+    "best.json": "277856cb7ee58a880fc2ea16e054e94002839e827a3001ec4e183da26a132a3b",
+    "confirmation.json": "b9ca733602d2403903477d02fe4bba3fb52758ead60b7fb11555012df58c293c",
+    "metrics.jsonl": "e44cbf2f0e0be97672d75822ead46bc9e8af86dd6a7ff37bac483e564470ada8",
+    "dev-metrics.jsonl": "0f69d0a13055f39e6a4725b57e2856cc42a1bbcd74319fb26424b3e7478083ad",
+    "frequent-token-ids.json": "b96edfbaaab759ffa270b6ef34e9c7ad73026af1dac9b43a9f6f383d4bd5035a"
+  },
+  "actual_training_exit": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-train-huginn-events.jsonl",
+    "sha256": "92e515307648aa5f4b5404e13a6aa07080d0705eea80abc84439e4ddcad0af79",
+    "receipt": {
+      "name": "loopahead-huginn-3.5b-formal-v1",
+      "pid": 189636,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/train_loopahead.py",
+        "--model",
+        "huginn-3.5b",
+        "--features",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/features",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1"
+      ],
+      "started_unix": 1794319519.1456218,
+      "event": "finish",
+      "exit_code": 0,
+      "finished_unix": 1794320238.5631602
+    }
+  },
+  "training_gpu_hours": 0.1995019594166014,
+  "cuda_initialized": false,
+  "started_unix": 1794354830.9369001,
+  "finished_unix": 1794354843.2659714,
+  "limitations": [
+    "Checks every recorded optimization row at the actual1/25/final cadence; not a full per-update log.",
+    "Recomputes checkpoint selection from saved domain metrics; does not rerun GPU dev/confirmation evaluation.",
+    "One confirmation artifact and trainer control flow support the once-after-selection procedure; not an external invocation count.",
+    "Checks feature index hashes/IDs/counts; large feature tensors and frozen head contents retain their separate data audits.",
+    "Finite trained weights and selection checks do not establish decoding correctness or benchmark speed."
+  ]
+}

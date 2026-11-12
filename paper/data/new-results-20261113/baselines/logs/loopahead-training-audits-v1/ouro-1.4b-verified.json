@@ -1,0 +1,26 @@
+{
+  "model": "ouro-1.4b",
+  "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v2/report.json",
+  "audit_report_sha256": "0d8f27ae01d9c1d178b55d877ce34a754d1e7ea7d1d571a90bfcfb539dd6c2ec",
+  "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+  "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+  "actual_audit_exit": {
+    "name": "audit-loopahead-ouro-1.4b-formal-v2",
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+      "--model",
+      "ouro-1.4b",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v2"
+    ],
+    "pid": 372162,
+    "started_unix": 1794449114.679747,
+    "exit_code": 0,
+    "finished_unix": 1794449124.121611
+  },
+  "training_gpu_hours": 0.14642724653085074,
+  "reused_existing_audit": false,
+  "checked_unix": 1794449124.2951734
+}

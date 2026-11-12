@@ -1,0 +1,28 @@
+{
+  "name": "loopahead-ouro-2.6b-gsm8k-t0-v1",
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "gsm8k",
+    "--temperature",
+    "0",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+    "--gpu",
+    "5",
+    "--cpus",
+    "52-55",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t0-v1"
+  ],
+  "pid": 250675,
+  "started_unix": 1794323877.7763462,
+  "exit_code": 0,
+  "finished_unix": 1794325437.817789
+}

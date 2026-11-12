@@ -1,0 +1,52 @@
+{
+  "created_unix": 1794499283.2285795,
+  "kernel_version": "570.148.08",
+  "kernel_description": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  570.148.08  Release Build  (dvs-builder@U22-I3-AE18-23-3)  Wed May 21 07:03:28 UTC 2025\nGCC version:  gcc version 10.2.1 20200825 (Alibaba 10.2.1-3.8 2.32) (GCC) \n",
+  "directory": "/tmp/loopfill-native-driver-570.148.08",
+  "bindings": {
+    "libcuda.so": "/usr/lib64/libcuda.so.570.148.08",
+    "libcuda.so.1": "/usr/lib64/libcuda.so.570.148.08",
+    "libcuda.so.570.148.08": "/usr/lib64/libcuda.so.570.148.08",
+    "libcudadebugger.so.1": "/usr/lib64/libcudadebugger.so.570.148.08",
+    "libcudadebugger.so.570.148.08": "/usr/lib64/libcudadebugger.so.570.148.08",
+    "libnvidia-ml.so.1": "/usr/lib64/libnvidia-ml.so.570.148.08",
+    "libnvidia-ml.so.570.148.08": "/usr/lib64/libnvidia-ml.so.570.148.08",
+    "libnvidia-nvvm.so.4": "/usr/lib64/libnvidia-nvvm.so.570.148.08",
+    "libnvidia-nvvm.so.570.148.08": "/usr/lib64/libnvidia-nvvm.so.570.148.08",
+    "libnvidia-ptxjitcompiler.so.1": "/usr/lib64/libnvidia-ptxjitcompiler.so.570.148.08",
+    "libnvidia-ptxjitcompiler.so.570.148.08": "/usr/lib64/libnvidia-ptxjitcompiler.so.570.148.08"
+  },
+  "native_library_sha256": {
+    "/usr/lib64/libcuda.so.570.148.08": "cb120b839ca5d69de93b360a5d4592ecf5ac4a983521fcf4169e281deb49c883",
+    "/usr/lib64/libcudadebugger.so.570.148.08": "877816b78ee90701c0b185e04fa58ef4118d509918f3c89cc6637e075f6930f7",
+    "/usr/lib64/libnvidia-ml.so.570.148.08": "82ed7464081aa881e13e9b673d294fd8bc3f067338ff97fa4c4fd241c92e0a07",
+    "/usr/lib64/libnvidia-nvvm.so.570.148.08": "76c85d62a7be0daa70d9f158f1bd7bbf5be430a02b68f9582c4b5050cf6c22d3",
+    "/usr/lib64/libnvidia-ptxjitcompiler.so.570.148.08": "52b84381f6f8be21c42bfe3caa5e9afdb58d159622c671f2d142f66dca8d2fdd"
+  },
+  "previous_ld_library_path": ":/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "ld_library_path": "/tmp/loopfill-native-driver-570.148.08::/opt/conda/lib/python3.10/site-packages/aistudio_common/reader/libs/:/opt/taobao/java/jre/lib/amd64/server/:/usr/local/cuda/lib64",
+  "ld_cache_mtime": 1794378966.2280037,
+  "source_sha256": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+  "scope": "child process environment only; no system driver/cache modification",
+  "command": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/source/scripts/loop_agentic_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/runs/ouro-1.4b-ar-t0",
+    "--model",
+    "ouro-1.4b",
+    "--arm",
+    "ar",
+    "--temperature",
+    "0",
+    "--q",
+    "4",
+    "--n",
+    "16",
+    "--cache-mode",
+    "stream"
+  ]
+}

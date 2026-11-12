@@ -1,0 +1,104 @@
+{
+  "status": "complete",
+  "model": "ouro-2.6b",
+  "manifest_sha256": "01375c1058ef2611418ef697a4f1008091360cb4ebc6156ab8a846cbb095ddb4",
+  "stage": "full_teacher_audit_not_benchmark",
+  "completed_requests": 50000,
+  "completed_shards": [
+    {
+      "shard": 0,
+      "requests": 6262,
+      "teachers_sha256": "5cea97d378ca9bd9f91ee520112e7d7500d7776a20a27a909d236c9f4026a6ae",
+      "output_tokens": 2571667,
+      "finished_unix": 1794304913.9252827
+    },
+    {
+      "shard": 1,
+      "requests": 6255,
+      "teachers_sha256": "c5a0bf742b3675115e010b9bd9b39464b6de03501725675351200cf4734df72d",
+      "output_tokens": 2576711,
+      "finished_unix": 1794305163.7713602
+    },
+    {
+      "shard": 2,
+      "requests": 6253,
+      "teachers_sha256": "c31bb8770e7080733b09f348bef89f0879edc520267807f6121e4f80bd54bf5f",
+      "output_tokens": 2569736,
+      "finished_unix": 1794308056.731789
+    },
+    {
+      "shard": 3,
+      "requests": 6251,
+      "teachers_sha256": "885fb3bcf1a90cbdbf86e21e12b3c1672bb5bfe195596135975db2ef06c6ac52",
+      "output_tokens": 2563229,
+      "finished_unix": 1794307834.9739845
+    },
+    {
+      "shard": 4,
+      "requests": 6248,
+      "teachers_sha256": "2110cf228c18d1e19bcd1744f04c5185dabf9745192b45683c1933a5ade4edb3",
+      "output_tokens": 2571433,
+      "finished_unix": 1794312076.2557373
+    },
+    {
+      "shard": 5,
+      "requests": 6247,
+      "teachers_sha256": "203553676afc71b8851af66b780f6cbd899a084a31bd90812e8ab8d339103c52",
+      "output_tokens": 2562168,
+      "finished_unix": 1794312324.9227638
+    },
+    {
+      "shard": 6,
+      "requests": 6245,
+      "teachers_sha256": "8d401ad956f681572f9d5d280ae69e8ba918580a9ac8255fe8a4595fdbaeae15",
+      "output_tokens": 2575872,
+      "finished_unix": 1794315182.6014235
+    },
+    {
+      "shard": 7,
+      "requests": 6239,
+      "teachers_sha256": "4f93dde7a133ee236fd292ca8fc478ee230f87d03c9aba36419d60120f52b111",
+      "output_tokens": 2565021,
+      "finished_unix": 1794314916.335799
+    }
+  ],
+  "global_assignment_sha256": "72f65716cc4946bc03515a1dc68cb9f9b7bd4d85f48c0672fdcc2985b75ed2da",
+  "all_eight_shard_assignments_disjoint_and_exhaustive": true,
+  "graph_checks": [
+    {
+      "shard": 4,
+      "batches": 197,
+      "full_depth_all_batches": true
+    },
+    {
+      "shard": 5,
+      "batches": 197,
+      "full_depth_all_batches": true
+    },
+    {
+      "shard": 6,
+      "batches": 197,
+      "full_depth_all_batches": true
+    },
+    {
+      "shard": 7,
+      "batches": 197,
+      "full_depth_all_batches": true
+    }
+  ],
+  "training_input_gate_passed": true,
+  "eligible_training_examples": 48137,
+  "excluded_under_32_tokens": 1863,
+  "eligible_source_counts": {
+    "codealpaca": 3857,
+    "nemotron_math": 19670,
+    "nemotron_code": 10000,
+    "ultrachat": 14610
+  },
+  "total_output_tokens": 20555837,
+  "actual_generation_gpu_hours": 19.7196911162138,
+  "training_reader_sha256": "dca8aafb4eb8600c8a252e150d61018a2b0a017395c57615beacbb1a0c9518d4",
+  "audit_source_sha256": "c05e47abd214ef9d7dfcaac6cd806732eba542f7c78ed14270f3f4efbe8057be",
+  "wall_s": 11.970070838928223,
+  "finished_unix": 1794318674.1023238
+}

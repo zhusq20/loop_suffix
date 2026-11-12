@@ -1,0 +1,23 @@
+{
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "released_gpus": [
+    0,
+    1,
+    5,
+    7
+  ],
+  "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+  "updated_unix": 1794353566.114057,
+  "deferred_jobs": [
+    "train-huginn-3.5b"
+  ],
+  "reserved_for_development": [
+    3,
+    6
+  ]
+}

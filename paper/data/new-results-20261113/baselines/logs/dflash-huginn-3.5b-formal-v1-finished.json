@@ -1,0 +1,30 @@
+{
+  "name": "dflash-huginn-3.5b-formal-v1",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/torchrun",
+    "--standalone",
+    "--nproc_per_node=4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-3.5b-formal-v1",
+    "--cpu-groups",
+    "0-3,4-7,52-55,60-63",
+    "--epochs",
+    "6",
+    "--micro-batch",
+    "4",
+    "--accumulation",
+    "2",
+    "--save-every",
+    "500",
+    "--checkpoint-layers"
+  ],
+  "pid": 317144,
+  "started_unix": 1794330462.9272084,
+  "exit_code": 1,
+  "finished_unix": 1794351154.2714334
+}

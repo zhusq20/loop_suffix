@@ -1,0 +1,26 @@
+{
+  "name": "dflash-huginn-narrow-micro4-smoke-v1",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+    "--cpu-groups",
+    "12-15",
+    "--epochs",
+    "1",
+    "--micro-batch",
+    "4",
+    "--checkpoint-layers",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-micro4-smoke-v1",
+    "--accumulation",
+    "1",
+    "--smoke"
+  ],
+  "pid": 44222,
+  "started_unix": 1794352595.2668214
+}

@@ -1,0 +1,228 @@
+{
+  "status": "complete_formal_cell_with_greedy_diagnostics_pending",
+  "checked_unix": 1794382396.6272466,
+  "completed_cells": 23,
+  "expected_cells": 72,
+  "previous_commit": "021dd6203b6b10a0c9aaf98f700343d64bbc0ebf",
+  "previous_22_rows_and_agreements_unchanged": true,
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "requests_per_stage": {
+    "ar": 480,
+    "dflash": 480,
+    "dflash-profile": 480
+  },
+  "summaries": {
+    "ar": {
+      "decode_tokens": 80933,
+      "decode_s": 6974.607906259596,
+      "loops": 323732,
+      "tok_s": 11.60394979728738,
+      "gamma": 1.0
+    },
+    "dflash": {
+      "decode_tokens": 80294,
+      "decode_s": 2710.299698099494,
+      "loops": 112068,
+      "tok_s": 29.625506011864093,
+      "gamma": 2.865902844701431
+    },
+    "dflash-profile": {
+      "decode_tokens": 80294,
+      "decode_s": 2718.061007872224,
+      "loops": 112068,
+      "tok_s": 29.54091161583472,
+      "gamma": 2.865902844701431
+    }
+  },
+  "journal_sha256": {
+    "ar": "5755e0d5cd1b650c4348f8eeff19cb323a9935eb002ab415387f4f6614a8a3a8",
+    "dflash": "20f7f610356b9585c1e336e4fb37ae86c39b91662a946b604ea84bd520365521",
+    "dflash-profile": "d35cb36e4a088f498b0368c4d00b8e5a061ba1d2708f65bda0b9cfb246a26c2a"
+  },
+  "source_manifest_sha256": {
+    "ar": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "dflash": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "dflash-profile": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+  },
+  "actual_exit_receipts": {
+    "ar": {
+      "name": "dflash-stack-ouro-2.6b-specbench-t0-ar-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "ar",
+        "--dataset",
+        "specbench",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-specbench-t0-ar-v1"
+      ],
+      "pid": 287005,
+      "started_unix": 1794367900.0953488,
+      "exit_code": 0,
+      "finished_unix": 1794374948.171204
+    },
+    "dflash": {
+      "name": "dflash-stack-ouro-2.6b-specbench-t0-dflash-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "specbench",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-specbench-t0-dflash-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+      ],
+      "pid": 390394,
+      "started_unix": 1794374948.2149248,
+      "exit_code": 0,
+      "finished_unix": 1794377729.2682924
+    },
+    "dflash-profile": {
+      "name": "dflash-stack-ouro-2.6b-specbench-t0-dflash-profile-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "specbench",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-specbench-t0-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+        "--profile"
+      ],
+      "pid": 430917,
+      "started_unix": 1794377729.31802,
+      "exit_code": 0,
+      "finished_unix": 1794380517.09285
+    }
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794380521.9966872,
+    "completion_basis": "direct_child_exit_code"
+  },
+  "worker_exit": {
+    "worker_pid": 287000,
+    "started_unix": 1794367900.062626,
+    "job_sha256": "17e3acedf5c519f1ea49a356a0632db28b2b354905ed7505971b56460c340f6a",
+    "source_sha256": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "exit_code": 0,
+    "finished_unix": 1794380517.124033
+  },
+  "profile_all_tokens_and_verification_counts_match_timed_run": true,
+  "draft_gpu_s": 87.98710093569758,
+  "profile_wall_relative_difference": 0.0028636352570796664,
+  "result": {
+    "method": "dflash",
+    "model": "ouro-2.6b",
+    "benchmark": "specbench",
+    "temperature": "0",
+    "eta": "2.5530536178973784",
+    "gamma": "2.865902844701431",
+    "method_tok_s": "29.625506011864093",
+    "ar_tok_s": "11.60394979728738",
+    "drafter_time_frac": "0.03237127521452376",
+    "match_rate": "0.6416666666666667",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+    "eta_latency": "2.5733714655800997",
+    "eta_throughput": "2.5530536178973784",
+    "aligned_token_match_rate": "0.6412967046064001",
+    "method_decode_tokens": "80294",
+    "ar_decode_tokens": "80933",
+    "method_decode_s": "2710.299698099494",
+    "ar_decode_s": "6974.607906259596",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794367912.804783",
+    "ar_last_completed_unix": "1794374947.3181899",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-specbench-t0-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-specbench-t0-ar-v1"
+  },
+  "agreement": {
+    "match_rate": 0.6416666666666667,
+    "aligned_token_match_rate": 0.6412967046064001,
+    "exact_sequences": 308,
+    "requests": 480
+  },
+  "first_divergences_pending": 172,
+  "ouro_dflash_t0_six_task_means": {
+    "eta_latency": 3.5742717301932476,
+    "eta_throughput": 3.5412752306560282,
+    "gamma": 4.001366455831781,
+    "tasks": 6,
+    "requests": 2092,
+    "exact_sequences": 1111,
+    "convention": "Arithmetic mean of the six task metrics; not a pooled ratio."
+  },
+  "limitations": [
+    "All first-divergence BF16/FP32 prefix diagnostics for this cell remain pending.",
+    "Shared host timings are retained without correction or CPU isolation claims.",
+    "Profile wall-time difference includes run variation, not just instrumentation overhead.",
+    "This cell completed before the native driver loader recovery."
+  ],
+  "output_sha256": {
+    "results.csv": "38086781b46c8f822672771fa4aecd61127cae5b48169d28156749c0ba738ae6",
+    "table2_rows.md": "1195000a1dd121552fb44483421e42730d5efc4250de2aba9a05575b4d54f9ac",
+    "formal-agreement.json": "ab3f1360e674bcd2c91b0e155a59466d08e45a0790179631d66d98fa1986048e",
+    "formal-matrix-status.json": "291ffa8d92b8ba7ae37c303d524e5177380e99d4ef78afbd087d361f5fd655f5"
+  },
+  "collector_exit_code": 0,
+  "collector_stdout": "{\"completed\": 23, \"expected\": 72, \"missing\": 49}\n",
+  "verification_source_sha256": "77ef12f297a8a30eb8c235c6d8f736c1703858ebc16070eda70eab1a46f11dd1"
+}

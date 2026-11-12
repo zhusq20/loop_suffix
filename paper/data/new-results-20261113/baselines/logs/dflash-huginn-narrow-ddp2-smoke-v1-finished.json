@@ -1,0 +1,31 @@
+{
+  "name": "dflash-huginn-narrow-ddp2-smoke-v1",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/torchrun",
+    "--standalone",
+    "--nproc_per_node=2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+    "--cpu-groups",
+    "12-15,56-59",
+    "--micro-batch",
+    "4",
+    "--accumulation",
+    "4",
+    "--checkpoint-layers",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-ddp2-smoke-v1",
+    "--epochs",
+    "1",
+    "--save-every",
+    "1",
+    "--smoke"
+  ],
+  "pid": 64537,
+  "started_unix": 1794354274.4798903,
+  "exit_code": 0,
+  "finished_unix": 1794354338.2756355
+}

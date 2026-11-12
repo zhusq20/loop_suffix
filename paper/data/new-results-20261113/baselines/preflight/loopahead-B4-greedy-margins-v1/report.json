@@ -1,0 +1,3138 @@
+{
+  "status": "complete",
+  "model": "ouro-2.6b",
+  "dataset": "paper-humaneval164",
+  "cases": 67,
+  "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+  "results": [
+    {
+      "source_id": "HumanEval/10",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          16.125,
+          16.125,
+          15.9375
+        ],
+        "top_probs": [
+          0.23330435156822205,
+          0.23330435156822205,
+          0.19341610372066498
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 19
+      },
+      "loopahead": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          16.25,
+          16.0,
+          15.9375
+        ],
+        "top_probs": [
+          0.2634114921092987,
+          0.20514509081840515,
+          0.19271597266197205
+        ],
+        "top2_probability_margin": 0.058266401290893555,
+        "top1_logit_margin": 0.25,
+        "argmax": 1604
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/16",
+      "position": 17,
+      "ar": {
+        "top_ids": [
+          7544,
+          3659,
+          254
+        ],
+        "top_logits": [
+          14.875,
+          14.8125,
+          14.8125
+        ],
+        "top_probs": [
+          0.07249075174331665,
+          0.0680987536907196,
+          0.0680987536907196
+        ],
+        "top2_probability_margin": 0.004391998052597046,
+        "top1_logit_margin": 0.0625,
+        "argmax": 7544
+      },
+      "loopahead": {
+        "top_ids": [
+          7544,
+          3659,
+          254
+        ],
+        "top_logits": [
+          14.8125,
+          14.8125,
+          14.8125
+        ],
+        "top_probs": [
+          0.07030484825372696,
+          0.07030484825372696,
+          0.07030484825372696
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 254
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/18",
+      "position": 195,
+      "ar": {
+        "top_ids": [
+          19161,
+          15423,
+          7306
+        ],
+        "top_logits": [
+          15.125,
+          15.0625,
+          15.0625
+        ],
+        "top_probs": [
+          0.11091706901788712,
+          0.1041969433426857,
+          0.1041969433426857
+        ],
+        "top2_probability_margin": 0.006720125675201416,
+        "top1_logit_margin": 0.0625,
+        "argmax": 19161
+      },
+      "loopahead": {
+        "top_ids": [
+          19161,
+          7306,
+          15423
+        ],
+        "top_logits": [
+          15.0625,
+          15.0625,
+          15.0
+        ],
+        "top_probs": [
+          0.10702066123485565,
+          0.10702066123485565,
+          0.10053660720586777
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 7306
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/23",
+      "position": 283,
+      "ar": {
+        "top_ids": [
+          1321,
+          98,
+          83
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          15.6875
+        ],
+        "top_probs": [
+          0.37065067887306213,
+          0.3270980715751648,
+          0.08803725987672806
+        ],
+        "top2_probability_margin": 0.04355260729789734,
+        "top1_logit_margin": 0.125,
+        "argmax": 1321
+      },
+      "loopahead": {
+        "top_ids": [
+          1321,
+          98,
+          83
+        ],
+        "top_logits": [
+          17.125,
+          17.125,
+          15.6875
+        ],
+        "top_probs": [
+          0.35471516847610474,
+          0.35471516847610474,
+          0.0842522382736206
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 98
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/24",
+      "position": 101,
+      "ar": {
+        "top_ids": [
+          99,
+          94,
+          3002
+        ],
+        "top_logits": [
+          20.25,
+          20.25,
+          17.875
+        ],
+        "top_probs": [
+          0.4337269365787506,
+          0.4337269365787506,
+          0.04034288972616196
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 94
+      },
+      "loopahead": {
+        "top_ids": [
+          99,
+          94,
+          3002
+        ],
+        "top_logits": [
+          20.375,
+          20.25,
+          17.875
+        ],
+        "top_probs": [
+          0.4643949866294861,
+          0.4098271131515503,
+          0.038119859993457794
+        ],
+        "top2_probability_margin": 0.05456787347793579,
+        "top1_logit_margin": 0.125,
+        "argmax": 99
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/30",
+      "position": 135,
+      "ar": {
+        "top_ids": [
+          13723,
+          10836,
+          9934
+        ],
+        "top_logits": [
+          18.375,
+          18.25,
+          17.625
+        ],
+        "top_probs": [
+          0.1879793107509613,
+          0.1658911556005478,
+          0.08879514038562775
+        ],
+        "top2_probability_margin": 0.022088155150413513,
+        "top1_logit_margin": 0.125,
+        "argmax": 13723
+      },
+      "loopahead": {
+        "top_ids": [
+          13723,
+          10836,
+          9934
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          17.625
+        ],
+        "top_probs": [
+          0.18793831765651703,
+          0.18793831765651703,
+          0.08877577632665634
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 10836
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/31",
+      "position": 96,
+      "ar": {
+        "top_ids": [
+          30921,
+          92,
+          391
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          16.625
+        ],
+        "top_probs": [
+          0.11440189927816391,
+          0.11440189927816391,
+          0.10095932334661484
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 92
+      },
+      "loopahead": {
+        "top_ids": [
+          30921,
+          391,
+          92
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.75
+        ],
+        "top_probs": [
+          0.12550294399261475,
+          0.11075596511363983,
+          0.11075596511363983
+        ],
+        "top2_probability_margin": 0.014746978878974915,
+        "top1_logit_margin": 0.125,
+        "argmax": 30921
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/35",
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          2179,
+          34,
+          33
+        ],
+        "top_logits": [
+          11.375,
+          11.375,
+          11.1875
+        ],
+        "top_probs": [
+          0.04631172865629196,
+          0.04631172865629196,
+          0.0383937731385231
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          2179,
+          34,
+          33
+        ],
+        "top_logits": [
+          11.4375,
+          11.3125,
+          11.1875
+        ],
+        "top_probs": [
+          0.04897068440914154,
+          0.04321647807955742,
+          0.038138408213853836
+        ],
+        "top2_probability_margin": 0.005754206329584122,
+        "top1_logit_margin": 0.125,
+        "argmax": 2179
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/36",
+      "position": 404,
+      "ar": {
+        "top_ids": [
+          2837,
+          2179,
+          18511
+        ],
+        "top_logits": [
+          26.25,
+          26.25,
+          14.375
+        ],
+        "top_probs": [
+          0.49999696016311646,
+          0.49999696016311646,
+          3.4811312161764363e-06
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2179
+      },
+      "loopahead": {
+        "top_ids": [
+          2837,
+          2179,
+          18511
+        ],
+        "top_logits": [
+          26.25,
+          26.125,
+          14.375
+        ],
+        "top_probs": [
+          0.5312060117721558,
+          0.46878764033317566,
+          3.6984179132559802e-06
+        ],
+        "top2_probability_margin": 0.0624183714389801,
+        "top1_logit_margin": 0.125,
+        "argmax": 2837
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/39",
+      "position": 96,
+      "ar": {
+        "top_ids": [
+          41435,
+          314,
+          7845
+        ],
+        "top_logits": [
+          20.875,
+          20.75,
+          17.375
+        ],
+        "top_probs": [
+          0.5062044262886047,
+          0.4467238187789917,
+          0.015286048874258995
+        ],
+        "top2_probability_margin": 0.05948060750961304,
+        "top1_logit_margin": 0.125,
+        "argmax": 41435
+      },
+      "loopahead": {
+        "top_ids": [
+          41435,
+          314,
+          7845
+        ],
+        "top_logits": [
+          20.875,
+          20.875,
+          17.375
+        ],
+        "top_probs": [
+          0.4779670834541321,
+          0.4779670834541321,
+          0.014433355070650578
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/40",
+      "position": 321,
+      "ar": {
+        "top_ids": [
+          3007,
+          354,
+          624
+        ],
+        "top_logits": [
+          21.375,
+          21.25,
+          17.25
+        ],
+        "top_probs": [
+          0.5251301527023315,
+          0.46342575550079346,
+          0.008487938903272152
+        ],
+        "top2_probability_margin": 0.061704397201538086,
+        "top1_logit_margin": 0.125,
+        "argmax": 3007
+      },
+      "loopahead": {
+        "top_ids": [
+          3007,
+          354,
+          624
+        ],
+        "top_logits": [
+          21.375,
+          21.375,
+          17.25
+        ],
+        "top_probs": [
+          0.49458932876586914,
+          0.49458932876586914,
+          0.007994292303919792
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 354
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/43",
+      "position": 44,
+      "ar": {
+        "top_ids": [
+          357,
+          965,
+          338
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          19.875
+        ],
+        "top_probs": [
+          0.2945709228515625,
+          0.2599579095840454,
+          0.2599579095840454
+        ],
+        "top2_probability_margin": 0.03461301326751709,
+        "top1_logit_margin": 0.125,
+        "argmax": 357
+      },
+      "loopahead": {
+        "top_ids": [
+          965,
+          357,
+          338
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          19.875
+        ],
+        "top_probs": [
+          0.27337634563446045,
+          0.27337634563446045,
+          0.27337634563446045
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 338
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/44",
+      "position": 58,
+      "ar": {
+        "top_ids": [
+          34,
+          33,
+          35
+        ],
+        "top_logits": [
+          18.5,
+          18.375,
+          15.6875
+        ],
+        "top_probs": [
+          0.45351454615592957,
+          0.4002251923084259,
+          0.027235666289925575
+        ],
+        "top2_probability_margin": 0.05328935384750366,
+        "top1_logit_margin": 0.125,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          34,
+          33,
+          35
+        ],
+        "top_logits": [
+          18.375,
+          18.375,
+          15.6875
+        ],
+        "top_probs": [
+          0.4241337478160858,
+          0.4241337478160858,
+          0.028862664476037025
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/49",
+      "position": 62,
+      "ar": {
+        "top_ids": [
+          41,
+          39,
+          33
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          16.625
+        ],
+        "top_probs": [
+          0.4035433530807495,
+          0.4035433530807495,
+          0.07946239411830902
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 39
+      },
+      "loopahead": {
+        "top_ids": [
+          41,
+          39,
+          33
+        ],
+        "top_logits": [
+          18.25,
+          18.0,
+          16.625
+        ],
+        "top_probs": [
+          0.44894787669181824,
+          0.34964096546173096,
+          0.08840306848287582
+        ],
+        "top2_probability_margin": 0.09930691123008728,
+        "top1_logit_margin": 0.25,
+        "argmax": 41
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/50",
+      "position": 40,
+      "ar": {
+        "top_ids": [
+          20854,
+          102,
+          26700
+        ],
+        "top_logits": [
+          15.25,
+          15.25,
+          14.9375
+        ],
+        "top_probs": [
+          0.07202494144439697,
+          0.07202494144439697,
+          0.05269457399845123
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 102
+      },
+      "loopahead": {
+        "top_ids": [
+          20854,
+          102,
+          26700
+        ],
+        "top_logits": [
+          15.3125,
+          15.25,
+          15.0
+        ],
+        "top_probs": [
+          0.07376445084810257,
+          0.06929528713226318,
+          0.053967222571372986
+        ],
+        "top2_probability_margin": 0.004469163715839386,
+        "top1_logit_margin": 0.0625,
+        "argmax": 20854
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/51",
+      "position": 943,
+      "ar": {
+        "top_ids": [
+          27763,
+          3870,
+          5073
+        ],
+        "top_logits": [
+          23.875,
+          23.875,
+          17.75
+        ],
+        "top_probs": [
+          0.4986647963523865,
+          0.4986647963523865,
+          0.0010908248368650675
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3870
+      },
+      "loopahead": {
+        "top_ids": [
+          27763,
+          3870,
+          5073
+        ],
+        "top_logits": [
+          24.0,
+          23.875,
+          17.875
+        ],
+        "top_probs": [
+          0.5298046469688416,
+          0.46755096316337585,
+          0.0011589430505409837
+        ],
+        "top2_probability_margin": 0.0622536838054657,
+        "top1_logit_margin": 0.125,
+        "argmax": 27763
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/53",
+      "position": 109,
+      "ar": {
+        "top_ids": [
+          7536,
+          284,
+          314
+        ],
+        "top_logits": [
+          18.0,
+          18.0,
+          17.625
+        ],
+        "top_probs": [
+          0.25006115436553955,
+          0.25006115436553955,
+          0.1718643456697464
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 284
+      },
+      "loopahead": {
+        "top_ids": [
+          7536,
+          284,
+          314
+        ],
+        "top_logits": [
+          18.0,
+          17.875,
+          17.625
+        ],
+        "top_probs": [
+          0.2615528106689453,
+          0.23081953823566437,
+          0.17976245284080505
+        ],
+        "top2_probability_margin": 0.030733272433280945,
+        "top1_logit_margin": 0.125,
+        "argmax": 7536
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/60",
+      "position": 403,
+      "ar": {
+        "top_ids": [
+          727,
+          28,
+          25
+        ],
+        "top_logits": [
+          19.0,
+          19.0,
+          16.125
+        ],
+        "top_probs": [
+          0.4854678213596344,
+          0.4854678213596344,
+          0.02738822065293789
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          727,
+          28,
+          25
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          16.25
+        ],
+        "top_probs": [
+          0.5128331780433655,
+          0.4525737166404724,
+          0.03278432786464691
+        ],
+        "top2_probability_margin": 0.060259461402893066,
+        "top1_logit_margin": 0.125,
+        "argmax": 727
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/61",
+      "position": 872,
+      "ar": {
+        "top_ids": [
+          1715,
+          75,
+          1470
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          16.75
+        ],
+        "top_probs": [
+          0.19173172116279602,
+          0.19173172116279602,
+          0.16920265555381775
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 75
+      },
+      "loopahead": {
+        "top_ids": [
+          1715,
+          75,
+          1470
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          16.625
+        ],
+        "top_probs": [
+          0.20164336264133453,
+          0.17794963717460632,
+          0.15703999996185303
+        ],
+        "top2_probability_margin": 0.02369372546672821,
+        "top1_logit_margin": 0.125,
+        "argmax": 1715
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/62",
+      "position": 83,
+      "ar": {
+        "top_ids": [
+          36,
+          34,
+          33
+        ],
+        "top_logits": [
+          18.625,
+          18.625,
+          17.25
+        ],
+        "top_probs": [
+          0.373111754655838,
+          0.373111754655838,
+          0.09433742612600327
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          36,
+          34,
+          33
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          17.25
+        ],
+        "top_probs": [
+          0.40351051092147827,
+          0.3560967743396759,
+          0.09003536403179169
+        ],
+        "top2_probability_margin": 0.04741373658180237,
+        "top1_logit_margin": 0.125,
+        "argmax": 36
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/63",
+      "position": 302,
+      "ar": {
+        "top_ids": [
+          3638,
+          9842,
+          14332
+        ],
+        "top_logits": [
+          16.125,
+          15.75,
+          15.4375
+        ],
+        "top_probs": [
+          0.11646512150764465,
+          0.08004523068666458,
+          0.05856233835220337
+        ],
+        "top2_probability_margin": 0.03641989082098007,
+        "top1_logit_margin": 0.375,
+        "argmax": 3638
+      },
+      "loopahead": {
+        "top_ids": [
+          9842,
+          3638,
+          7987
+        ],
+        "top_logits": [
+          16.375,
+          15.8125,
+          15.6875
+        ],
+        "top_probs": [
+          0.14769592881202698,
+          0.08415459841489792,
+          0.07426617294549942
+        ],
+        "top2_probability_margin": 0.06354133039712906,
+        "top1_logit_margin": 0.5625,
+        "argmax": 9842
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "HumanEval/64",
+      "position": 53,
+      "ar": {
+        "top_ids": [
+          2097,
+          49,
+          14555
+        ],
+        "top_logits": [
+          12.8125,
+          12.8125,
+          12.25
+        ],
+        "top_probs": [
+          0.09176139533519745,
+          0.09176139533519745,
+          0.05228406563401222
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 49
+      },
+      "loopahead": {
+        "top_ids": [
+          2097,
+          49,
+          14555
+        ],
+        "top_logits": [
+          12.8125,
+          12.75,
+          12.3125
+        ],
+        "top_probs": [
+          0.09089146554470062,
+          0.08538462966680527,
+          0.05512845888733864
+        ],
+        "top2_probability_margin": 0.005506835877895355,
+        "top1_logit_margin": 0.0625,
+        "argmax": 2097
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/65",
+      "position": 39,
+      "ar": {
+        "top_ids": [
+          2179,
+          476,
+          216
+        ],
+        "top_logits": [
+          20.625,
+          20.625,
+          15.9375
+        ],
+        "top_probs": [
+          0.494920015335083,
+          0.494920015335083,
+          0.0045580556616187096
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 476
+      },
+      "loopahead": {
+        "top_ids": [
+          2179,
+          476,
+          216
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          15.875
+        ],
+        "top_probs": [
+          0.5256823301315308,
+          0.4639129936695099,
+          0.0045480430126190186
+        ],
+        "top2_probability_margin": 0.061769336462020874,
+        "top1_logit_margin": 0.125,
+        "argmax": 2179
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/67",
+      "position": 224,
+      "ar": {
+        "top_ids": [
+          907,
+          262,
+          253
+        ],
+        "top_logits": [
+          13.375,
+          13.25,
+          13.0625
+        ],
+        "top_probs": [
+          0.1142292320728302,
+          0.10080693662166595,
+          0.0835718885064125
+        ],
+        "top2_probability_margin": 0.013422295451164246,
+        "top1_logit_margin": 0.125,
+        "argmax": 907
+      },
+      "loopahead": {
+        "top_ids": [
+          907,
+          262,
+          253
+        ],
+        "top_logits": [
+          13.375,
+          13.375,
+          13.0
+        ],
+        "top_probs": [
+          0.11061245948076248,
+          0.11061245948076248,
+          0.07602275907993317
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 262
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/68",
+      "position": 35,
+      "ar": {
+        "top_ids": [
+          2701,
+          787,
+          750
+        ],
+        "top_logits": [
+          20.5,
+          20.5,
+          13.875
+        ],
+        "top_probs": [
+          0.4984685778617859,
+          0.4984685778617859,
+          0.0006613583536818624
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 787
+      },
+      "loopahead": {
+        "top_ids": [
+          2701,
+          787,
+          750
+        ],
+        "top_logits": [
+          20.625,
+          20.5,
+          13.9375
+        ],
+        "top_probs": [
+          0.5296456813812256,
+          0.467410683631897,
+          0.0006601476925425231
+        ],
+        "top2_probability_margin": 0.06223499774932861,
+        "top1_logit_margin": 0.125,
+        "argmax": 2701
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/72",
+      "position": 12,
+      "ar": {
+        "top_ids": [
+          6765,
+          2933,
+          523
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          15.1875
+        ],
+        "top_probs": [
+          0.27657756209373474,
+          0.27657756209373474,
+          0.05797380581498146
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2933
+      },
+      "loopahead": {
+        "top_ids": [
+          6765,
+          2933,
+          523
+        ],
+        "top_logits": [
+          16.875,
+          16.75,
+          15.25
+        ],
+        "top_probs": [
+          0.29962822794914246,
+          0.2644209861755371,
+          0.05900029465556145
+        ],
+        "top2_probability_margin": 0.03520724177360535,
+        "top1_logit_margin": 0.125,
+        "argmax": 6765
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/73",
+      "position": 172,
+      "ar": {
+        "top_ids": [
+          21274,
+          11139,
+          314
+        ],
+        "top_logits": [
+          23.625,
+          23.625,
+          15.5
+        ],
+        "top_probs": [
+          0.4997076392173767,
+          0.4997076392173767,
+          0.00014793581794947386
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 11139
+      },
+      "loopahead": {
+        "top_ids": [
+          21274,
+          11139,
+          314
+        ],
+        "top_logits": [
+          23.75,
+          23.625,
+          15.4375
+        ],
+        "top_probs": [
+          0.5309239029884338,
+          0.46853867173194885,
+          0.00013030449918005615
+        ],
+        "top2_probability_margin": 0.062385231256484985,
+        "top1_logit_margin": 0.125,
+        "argmax": 21274
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/74",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          17.375,
+          17.375,
+          16.25
+        ],
+        "top_probs": [
+          0.3163658678531647,
+          0.3163658678531647,
+          0.10270895808935165
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 19
+      },
+      "loopahead": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          16.25
+        ],
+        "top_probs": [
+          0.34555643796920776,
+          0.3049525022506714,
+          0.09900358319282532
+        ],
+        "top2_probability_margin": 0.04060393571853638,
+        "top1_logit_margin": 0.125,
+        "argmax": 1604
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/77",
+      "position": 114,
+      "ar": {
+        "top_ids": [
+          1758,
+          2067,
+          44
+        ],
+        "top_logits": [
+          16.625,
+          16.5,
+          16.375
+        ],
+        "top_probs": [
+          0.22110550105571747,
+          0.19512490928173065,
+          0.1721971333026886
+        ],
+        "top2_probability_margin": 0.025980591773986816,
+        "top1_logit_margin": 0.125,
+        "argmax": 1758
+      },
+      "loopahead": {
+        "top_ids": [
+          2067,
+          1758,
+          44
+        ],
+        "top_logits": [
+          16.625,
+          16.5,
+          16.375
+        ],
+        "top_probs": [
+          0.22065164148807526,
+          0.19472439587116241,
+          0.17184367775917053
+        ],
+        "top2_probability_margin": 0.025927245616912842,
+        "top1_logit_margin": 0.125,
+        "argmax": 2067
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "HumanEval/81",
+      "position": 122,
+      "ar": {
+        "top_ids": [
+          19161,
+          1589,
+          472
+        ],
+        "top_logits": [
+          14.5625,
+          14.5,
+          14.125
+        ],
+        "top_probs": [
+          0.2053782343864441,
+          0.19293498992919922,
+          0.13260215520858765
+        ],
+        "top2_probability_margin": 0.012443244457244873,
+        "top1_logit_margin": 0.0625,
+        "argmax": 19161
+      },
+      "loopahead": {
+        "top_ids": [
+          19161,
+          1589,
+          472
+        ],
+        "top_logits": [
+          14.5625,
+          14.5625,
+          14.1875
+        ],
+        "top_probs": [
+          0.19708800315856934,
+          0.19708800315856934,
+          0.13545647263526917
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1589
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/82",
+      "position": 2,
+      "ar": {
+        "top_ids": [
+          9552,
+          314,
+          8535
+        ],
+        "top_logits": [
+          13.625,
+          13.5625,
+          11.4375
+        ],
+        "top_probs": [
+          0.1970522105693817,
+          0.18511343002319336,
+          0.022108644247055054
+        ],
+        "top2_probability_margin": 0.011938780546188354,
+        "top1_logit_margin": 0.0625,
+        "argmax": 9552
+      },
+      "loopahead": {
+        "top_ids": [
+          9552,
+          314,
+          8535
+        ],
+        "top_logits": [
+          13.5625,
+          13.5625,
+          11.4375
+        ],
+        "top_probs": [
+          0.18658655881881714,
+          0.18658655881881714,
+          0.02228458784520626
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/83",
+      "position": 98,
+      "ar": {
+        "top_ids": [
+          11355,
+          486,
+          3738
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          19.125
+        ],
+        "top_probs": [
+          0.20522980391979218,
+          0.20522980391979218,
+          0.18111465871334076
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 486
+      },
+      "loopahead": {
+        "top_ids": [
+          11355,
+          3738,
+          486
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          19.25
+        ],
+        "top_probs": [
+          0.21525946259498596,
+          0.18996581435203552,
+          0.18996581435203552
+        ],
+        "top2_probability_margin": 0.02529364824295044,
+        "top1_logit_margin": 0.125,
+        "argmax": 11355
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/84",
+      "position": 190,
+      "ar": {
+        "top_ids": [
+          11087,
+          253,
+          260
+        ],
+        "top_logits": [
+          21.375,
+          21.375,
+          19.875
+        ],
+        "top_probs": [
+          0.40842685103416443,
+          0.40842685103416443,
+          0.09113235026597977
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "loopahead": {
+        "top_ids": [
+          11087,
+          253,
+          260
+        ],
+        "top_logits": [
+          21.5,
+          21.375,
+          19.875
+        ],
+        "top_probs": [
+          0.4434565305709839,
+          0.3913489878177643,
+          0.08732175827026367
+        ],
+        "top2_probability_margin": 0.052107542753219604,
+        "top1_logit_margin": 0.125,
+        "argmax": 11087
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/87",
+      "position": 15,
+      "ar": {
+        "top_ids": [
+          288,
+          31,
+          588
+        ],
+        "top_logits": [
+          16.75,
+          16.625,
+          14.75
+        ],
+        "top_probs": [
+          0.4097243547439575,
+          0.3615804612636566,
+          0.055450160056352615
+        ],
+        "top2_probability_margin": 0.0481438934803009,
+        "top1_logit_margin": 0.125,
+        "argmax": 288
+      },
+      "loopahead": {
+        "top_ids": [
+          288,
+          31,
+          588
+        ],
+        "top_logits": [
+          16.75,
+          16.75,
+          14.75
+        ],
+        "top_probs": [
+          0.3903423845767975,
+          0.3903423845767975,
+          0.05282709747552872
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 31
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/91",
+      "position": 33,
+      "ar": {
+        "top_ids": [
+          334,
+          30,
+          282
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          17.75
+        ],
+        "top_probs": [
+          0.502773642539978,
+          0.44369620084762573,
+          0.05299195274710655
+        ],
+        "top2_probability_margin": 0.059077441692352295,
+        "top1_logit_margin": 0.125,
+        "argmax": 334
+      },
+      "loopahead": {
+        "top_ids": [
+          334,
+          30,
+          282
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          17.625
+        ],
+        "top_probs": [
+          0.4747103750705719,
+          0.4747103750705719,
+          0.05003410205245018
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/96",
+      "position": 171,
+      "ar": {
+        "top_ids": [
+          80,
+          24,
+          13084
+        ],
+        "top_logits": [
+          20.125,
+          20.125,
+          19.0
+        ],
+        "top_probs": [
+          0.4268120229244232,
+          0.4268120229244232,
+          0.1385655701160431
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 24
+      },
+      "loopahead": {
+        "top_ids": [
+          80,
+          24,
+          13084
+        ],
+        "top_logits": [
+          20.125,
+          20.0,
+          18.875
+        ],
+        "top_probs": [
+          0.45729371905326843,
+          0.4035602807998657,
+          0.13101685047149658
+        ],
+        "top2_probability_margin": 0.05373343825340271,
+        "top1_logit_margin": 0.125,
+        "argmax": 80
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/100",
+      "position": 169,
+      "ar": {
+        "top_ids": [
+          971,
+          28,
+          327
+        ],
+        "top_logits": [
+          23.125,
+          23.125,
+          19.25
+        ],
+        "top_probs": [
+          0.4938434064388275,
+          0.4938434064388275,
+          0.010249393060803413
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 28
+      },
+      "loopahead": {
+        "top_ids": [
+          971,
+          28,
+          327
+        ],
+        "top_logits": [
+          23.25,
+          23.125,
+          19.25
+        ],
+        "top_probs": [
+          0.5250713229179382,
+          0.4633738398551941,
+          0.009617017582058907
+        ],
+        "top2_probability_margin": 0.06169748306274414,
+        "top1_logit_margin": 0.125,
+        "argmax": 971
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/102",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          16.25
+        ],
+        "top_probs": [
+          0.3059883117675781,
+          0.3059883117675781,
+          0.11256682127714157
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 19
+      },
+      "loopahead": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          16.25
+        ],
+        "top_probs": [
+          0.33076211810112,
+          0.2918965220451355,
+          0.10738272964954376
+        ],
+        "top2_probability_margin": 0.0388655960559845,
+        "top1_logit_margin": 0.125,
+        "argmax": 1604
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/106",
+      "position": 78,
+      "ar": {
+        "top_ids": [
+          4186,
+          1517,
+          4218
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          16.875
+        ],
+        "top_probs": [
+          0.2565675675868988,
+          0.2565675675868988,
+          0.13733072578907013
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1517
+      },
+      "loopahead": {
+        "top_ids": [
+          4186,
+          1517,
+          4218
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          16.875
+        ],
+        "top_probs": [
+          0.28031694889068604,
+          0.24737884104251862,
+          0.1324123591184616
+        ],
+        "top2_probability_margin": 0.03293810784816742,
+        "top1_logit_margin": 0.125,
+        "argmax": 4186
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/108",
+      "position": 208,
+      "ar": {
+        "top_ids": [
+          6887,
+          198,
+          2550
+        ],
+        "top_logits": [
+          22.25,
+          22.25,
+          18.0
+        ],
+        "top_probs": [
+          0.4935360848903656,
+          0.4935360848903656,
+          0.007039913907647133
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          6887,
+          198,
+          2550
+        ],
+        "top_logits": [
+          22.375,
+          22.25,
+          18.125
+        ],
+        "top_probs": [
+          0.5242416858673096,
+          0.4626416563987732,
+          0.007477905601263046
+        ],
+        "top2_probability_margin": 0.06160002946853638,
+        "top1_logit_margin": 0.125,
+        "argmax": 6887
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/113",
+      "position": 225,
+      "ar": {
+        "top_ids": [
+          23141,
+          84,
+          89
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          19.125
+        ],
+        "top_probs": [
+          0.3038445711135864,
+          0.3038445711135864,
+          0.1842910349369049
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 84
+      },
+      "loopahead": {
+        "top_ids": [
+          23141,
+          84,
+          89
+        ],
+        "top_logits": [
+          19.625,
+          19.5,
+          19.125
+        ],
+        "top_probs": [
+          0.31403517723083496,
+          0.27713507413864136,
+          0.19047196209430695
+        ],
+        "top2_probability_margin": 0.036900103092193604,
+        "top1_logit_margin": 0.125,
+        "argmax": 23141
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/114",
+      "position": 127,
+      "ar": {
+        "top_ids": [
+          284,
+          30,
+          28
+        ],
+        "top_logits": [
+          19.875,
+          19.875,
+          19.0
+        ],
+        "top_probs": [
+          0.3439028561115265,
+          0.3439028561115265,
+          0.14336003363132477
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "loopahead": {
+        "top_ids": [
+          284,
+          30,
+          28
+        ],
+        "top_logits": [
+          19.875,
+          19.75,
+          18.875
+        ],
+        "top_probs": [
+          0.369321346282959,
+          0.32592496275901794,
+          0.13586574792861938
+        ],
+        "top2_probability_margin": 0.04339638352394104,
+        "top1_logit_margin": 0.125,
+        "argmax": 284
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/115",
+      "position": 151,
+      "ar": {
+        "top_ids": [
+          253,
+          216,
+          634
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          18.375
+        ],
+        "top_probs": [
+          0.3946228325366974,
+          0.34825342893600464,
+          0.16450326144695282
+        ],
+        "top2_probability_margin": 0.04636940360069275,
+        "top1_logit_margin": 0.125,
+        "argmax": 253
+      },
+      "loopahead": {
+        "top_ids": [
+          253,
+          216,
+          634
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          18.375
+        ],
+        "top_probs": [
+          0.3614806532859802,
+          0.3614806532859802,
+          0.17075137794017792
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/120",
+      "position": 507,
+      "ar": {
+        "top_ids": [
+          2880,
+          1750,
+          77
+        ],
+        "top_logits": [
+          23.25,
+          23.25,
+          12.625
+        ],
+        "top_probs": [
+          0.49998772144317627,
+          0.49998772144317627,
+          1.2150117072451394e-05
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1750
+      },
+      "loopahead": {
+        "top_ids": [
+          2880,
+          1750,
+          77
+        ],
+        "top_logits": [
+          23.375,
+          23.25,
+          12.75
+        ],
+        "top_probs": [
+          0.5311959981918335,
+          0.4687787890434265,
+          1.2908503776998259e-05
+        ],
+        "top2_probability_margin": 0.06241720914840698,
+        "top1_logit_margin": 0.125,
+        "argmax": 2880
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/121",
+      "position": 87,
+      "ar": {
+        "top_ids": [
+          260,
+          253,
+          2179
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          16.75
+        ],
+        "top_probs": [
+          0.3029879629611969,
+          0.3029879629611969,
+          0.1431213766336441
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "loopahead": {
+        "top_ids": [
+          260,
+          253,
+          2179
+        ],
+        "top_logits": [
+          17.5,
+          17.375,
+          16.75
+        ],
+        "top_probs": [
+          0.31318607926368713,
+          0.27638575434684753,
+          0.14793863892555237
+        ],
+        "top2_probability_margin": 0.0368003249168396,
+        "top1_logit_margin": 0.125,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/122",
+      "position": 137,
+      "ar": {
+        "top_ids": [
+          216,
+          34,
+          527
+        ],
+        "top_logits": [
+          20.0,
+          20.0,
+          12.25
+        ],
+        "top_probs": [
+          0.4998282194137573,
+          0.4998282194137573,
+          0.00021529727382585406
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          216,
+          34,
+          527
+        ],
+        "top_logits": [
+          20.0,
+          19.875,
+          12.125
+        ],
+        "top_probs": [
+          0.5310314297676086,
+          0.46863359212875366,
+          0.00020186042820569128
+        ],
+        "top2_probability_margin": 0.06239783763885498,
+        "top1_logit_margin": 0.125,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/123",
+      "position": 126,
+      "ar": {
+        "top_ids": [
+          8762,
+          979,
+          2179
+        ],
+        "top_logits": [
+          20.875,
+          20.75,
+          18.875
+        ],
+        "top_probs": [
+          0.49502936005592346,
+          0.43686187267303467,
+          0.06699493527412415
+        ],
+        "top2_probability_margin": 0.058167487382888794,
+        "top1_logit_margin": 0.125,
+        "argmax": 8762
+      },
+      "loopahead": {
+        "top_ids": [
+          8762,
+          979,
+          2179
+        ],
+        "top_logits": [
+          20.75,
+          20.75,
+          19.0
+        ],
+        "top_probs": [
+          0.45950019359588623,
+          0.45950019359588623,
+          0.07984915375709534
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 979
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/124",
+      "position": 437,
+      "ar": {
+        "top_ids": [
+          472,
+          448,
+          1004
+        ],
+        "top_logits": [
+          19.375,
+          19.25,
+          14.625
+        ],
+        "top_probs": [
+          0.5198107957839966,
+          0.45873138308525085,
+          0.004497244488447905
+        ],
+        "top2_probability_margin": 0.06107941269874573,
+        "top1_logit_margin": 0.125,
+        "argmax": 472
+      },
+      "loopahead": {
+        "top_ids": [
+          472,
+          448,
+          1004
+        ],
+        "top_logits": [
+          19.375,
+          19.375,
+          14.625
+        ],
+        "top_probs": [
+          0.48983651399612427,
+          0.48983651399612427,
+          0.004237916320562363
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 448
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/127",
+      "position": 173,
+      "ar": {
+        "top_ids": [
+          3725,
+          198,
+          0
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          15.6875
+        ],
+        "top_probs": [
+          0.4377553164958954,
+          0.4377553164958954,
+          0.07146159559488297
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 198
+      },
+      "loopahead": {
+        "top_ids": [
+          3725,
+          198,
+          0
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          15.8125
+        ],
+        "top_probs": [
+          0.4636094570159912,
+          0.4091339111328125,
+          0.07568216323852539
+        ],
+        "top2_probability_margin": 0.05447554588317871,
+        "top1_logit_margin": 0.125,
+        "argmax": 3725
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/128",
+      "position": 28,
+      "ar": {
+        "top_ids": [
+          446,
+          79,
+          28
+        ],
+        "top_logits": [
+          19.75,
+          19.75,
+          15.6875
+        ],
+        "top_probs": [
+          0.49472367763519287,
+          0.49472367763519287,
+          0.008512190543115139
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 79
+      },
+      "loopahead": {
+        "top_ids": [
+          446,
+          79,
+          28
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          15.6875
+        ],
+        "top_probs": [
+          0.5252588987350464,
+          0.46353933215141296,
+          0.009037577547132969
+        ],
+        "top2_probability_margin": 0.06171956658363342,
+        "top1_logit_margin": 0.125,
+        "argmax": 446
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/131",
+      "position": 488,
+      "ar": {
+        "top_ids": [
+          34,
+          33,
+          32
+        ],
+        "top_logits": [
+          22.25,
+          21.875,
+          20.625
+        ],
+        "top_probs": [
+          0.5304577350616455,
+          0.36457791924476624,
+          0.10445331037044525
+        ],
+        "top2_probability_margin": 0.16587981581687927,
+        "top1_logit_margin": 0.375,
+        "argmax": 34
+      },
+      "loopahead": {
+        "top_ids": [
+          33,
+          34,
+          32
+        ],
+        "top_logits": [
+          22.125,
+          22.0,
+          20.5
+        ],
+        "top_probs": [
+          0.48067498207092285,
+          0.42419418692588806,
+          0.0946505069732666
+        ],
+        "top2_probability_margin": 0.05648079514503479,
+        "top1_logit_margin": 0.125,
+        "argmax": 33
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "HumanEval/132",
+      "position": 126,
+      "ar": {
+        "top_ids": [
+          1072,
+          314,
+          2761
+        ],
+        "top_logits": [
+          19.25,
+          19.25,
+          18.0
+        ],
+        "top_probs": [
+          0.3867225646972656,
+          0.3867225646972656,
+          0.11079787462949753
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 314
+      },
+      "loopahead": {
+        "top_ids": [
+          1072,
+          314,
+          2761
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          18.0
+        ],
+        "top_probs": [
+          0.40362197160720825,
+          0.3561951518058777,
+          0.11563963443040848
+        ],
+        "top2_probability_margin": 0.047426819801330566,
+        "top1_logit_margin": 0.125,
+        "argmax": 1072
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/134",
+      "position": 133,
+      "ar": {
+        "top_ids": [
+          599,
+          253,
+          3922
+        ],
+        "top_logits": [
+          17.625,
+          17.5,
+          16.5
+        ],
+        "top_probs": [
+          0.37531864643096924,
+          0.33121752738952637,
+          0.12184812128543854
+        ],
+        "top2_probability_margin": 0.04410111904144287,
+        "top1_logit_margin": 0.125,
+        "argmax": 599
+      },
+      "loopahead": {
+        "top_ids": [
+          599,
+          253,
+          3922
+        ],
+        "top_logits": [
+          17.5,
+          17.5,
+          16.625
+        ],
+        "top_probs": [
+          0.339711457490921,
+          0.339711457490921,
+          0.14161279797554016
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 253
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/135",
+      "position": 180,
+      "ar": {
+        "top_ids": [
+          1578,
+          1517,
+          5905
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          17.75
+        ],
+        "top_probs": [
+          0.3751061260700226,
+          0.3751061260700226,
+          0.17718759179115295
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1517
+      },
+      "loopahead": {
+        "top_ids": [
+          1578,
+          1517,
+          5905
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          17.75
+        ],
+        "top_probs": [
+          0.4038326144218445,
+          0.35638102889060974,
+          0.1683424711227417
+        ],
+        "top2_probability_margin": 0.04745158553123474,
+        "top1_logit_margin": 0.125,
+        "argmax": 1578
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/136",
+      "position": 283,
+      "ar": {
+        "top_ids": [
+          715,
+          30,
+          365
+        ],
+        "top_logits": [
+          23.0,
+          22.875,
+          16.875
+        ],
+        "top_probs": [
+          0.5298529267311096,
+          0.46759358048439026,
+          0.0011590486392378807
+        ],
+        "top2_probability_margin": 0.06225934624671936,
+        "top1_logit_margin": 0.125,
+        "argmax": 715
+      },
+      "loopahead": {
+        "top_ids": [
+          715,
+          30,
+          365
+        ],
+        "top_logits": [
+          22.875,
+          22.875,
+          17.0
+        ],
+        "top_probs": [
+          0.49859586358070374,
+          0.49859586358070374,
+          0.001400453271344304
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 30
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/138",
+      "position": 140,
+      "ar": {
+        "top_ids": [
+          11139,
+          1806,
+          808
+        ],
+        "top_logits": [
+          17.125,
+          17.0,
+          16.625
+        ],
+        "top_probs": [
+          0.21422681212425232,
+          0.18905450403690338,
+          0.1299351304769516
+        ],
+        "top2_probability_margin": 0.025172308087348938,
+        "top1_logit_margin": 0.125,
+        "argmax": 11139
+      },
+      "loopahead": {
+        "top_ids": [
+          11139,
+          1806,
+          808
+        ],
+        "top_logits": [
+          17.0,
+          17.0,
+          16.75
+        ],
+        "top_probs": [
+          0.19349023699760437,
+          0.19349023699760437,
+          0.15069034695625305
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1806
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/143",
+      "position": 190,
+      "ar": {
+        "top_ids": [
+          4928,
+          2244,
+          6330
+        ],
+        "top_logits": [
+          22.75,
+          22.75,
+          19.625
+        ],
+        "top_probs": [
+          0.48108842968940735,
+          0.48108842968940735,
+          0.021137550473213196
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 2244
+      },
+      "loopahead": {
+        "top_ids": [
+          4928,
+          2244,
+          6330
+        ],
+        "top_logits": [
+          22.75,
+          22.625,
+          19.75
+        ],
+        "top_probs": [
+          0.508459746837616,
+          0.44871416687965393,
+          0.02531472034752369
+        ],
+        "top2_probability_margin": 0.059745579957962036,
+        "top1_logit_margin": 0.125,
+        "argmax": 4928
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/145",
+      "position": 143,
+      "ar": {
+        "top_ids": [
+          15328,
+          1230,
+          4047
+        ],
+        "top_logits": [
+          22.625,
+          22.5,
+          17.625
+        ],
+        "top_probs": [
+          0.5291047096252441,
+          0.4669332802295685,
+          0.00356507976539433
+        ],
+        "top2_probability_margin": 0.06217142939567566,
+        "top1_logit_margin": 0.125,
+        "argmax": 15328
+      },
+      "loopahead": {
+        "top_ids": [
+          15328,
+          1230,
+          4047
+        ],
+        "top_logits": [
+          22.625,
+          22.625,
+          17.75
+        ],
+        "top_probs": [
+          0.4979170560836792,
+          0.4979170560836792,
+          0.003801643382757902
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1230
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/146",
+      "position": 148,
+      "ar": {
+        "top_ids": [
+          35717,
+          840,
+          1603
+        ],
+        "top_logits": [
+          18.625,
+          18.5,
+          17.875
+        ],
+        "top_probs": [
+          0.3380126357078552,
+          0.2982950806617737,
+          0.15966586768627167
+        ],
+        "top2_probability_margin": 0.03971755504608154,
+        "top1_logit_margin": 0.125,
+        "argmax": 35717
+      },
+      "loopahead": {
+        "top_ids": [
+          35717,
+          840,
+          1603
+        ],
+        "top_logits": [
+          18.5,
+          18.5,
+          17.875
+        ],
+        "top_probs": [
+          0.3118778467178345,
+          0.3118778467178345,
+          0.16693618893623352
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 840
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/147",
+      "position": 30,
+      "ar": {
+        "top_ids": [
+          3564,
+          1517,
+          2909
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          17.0
+        ],
+        "top_probs": [
+          0.2878280580043793,
+          0.2878280580043793,
+          0.22416071593761444
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1517
+      },
+      "loopahead": {
+        "top_ids": [
+          3564,
+          1517,
+          2909
+        ],
+        "top_logits": [
+          17.25,
+          17.125,
+          17.0
+        ],
+        "top_probs": [
+          0.3010319471359253,
+          0.26565974950790405,
+          0.23444391787052155
+        ],
+        "top2_probability_margin": 0.03537219762802124,
+        "top1_logit_margin": 0.125,
+        "argmax": 3564
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/152",
+      "position": 167,
+      "ar": {
+        "top_ids": [
+          13738,
+          2064,
+          19
+        ],
+        "top_logits": [
+          13.375,
+          13.3125,
+          12.875
+        ],
+        "top_probs": [
+          0.17467576265335083,
+          0.16409270465373993,
+          0.10594620555639267
+        ],
+        "top2_probability_margin": 0.010583057999610901,
+        "top1_logit_margin": 0.0625,
+        "argmax": 13738
+      },
+      "loopahead": {
+        "top_ids": [
+          2064,
+          13738,
+          19
+        ],
+        "top_logits": [
+          13.6875,
+          13.0,
+          12.875
+        ],
+        "top_probs": [
+          0.22281526029109955,
+          0.11203855276107788,
+          0.09887367486953735
+        ],
+        "top2_probability_margin": 0.11077670753002167,
+        "top1_logit_margin": 0.6875,
+        "argmax": 2064
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "HumanEval/153",
+      "position": 34,
+      "ar": {
+        "top_ids": [
+          10922,
+          1943,
+          13824
+        ],
+        "top_logits": [
+          18.25,
+          18.125,
+          17.875
+        ],
+        "top_probs": [
+          0.37774738669395447,
+          0.333360880613327,
+          0.2596217393875122
+        ],
+        "top2_probability_margin": 0.04438650608062744,
+        "top1_logit_margin": 0.125,
+        "argmax": 10922
+      },
+      "loopahead": {
+        "top_ids": [
+          10922,
+          1943,
+          13824
+        ],
+        "top_logits": [
+          18.25,
+          18.25,
+          17.875
+        ],
+        "top_probs": [
+          0.36168795824050903,
+          0.36168795824050903,
+          0.24858427047729492
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 1943
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/155",
+      "position": 3,
+      "ar": {
+        "top_ids": [
+          2199,
+          260,
+          31131
+        ],
+        "top_logits": [
+          15.4375,
+          15.375,
+          14.4375
+        ],
+        "top_probs": [
+          0.33373892307281494,
+          0.3135187029838562,
+          0.12277570366859436
+        ],
+        "top2_probability_margin": 0.02022022008895874,
+        "top1_logit_margin": 0.0625,
+        "argmax": 2199
+      },
+      "loopahead": {
+        "top_ids": [
+          260,
+          2199,
+          31131
+        ],
+        "top_logits": [
+          15.4375,
+          15.375,
+          14.4375
+        ],
+        "top_probs": [
+          0.335499107837677,
+          0.3151722550392151,
+          0.12342324107885361
+        ],
+        "top2_probability_margin": 0.020326852798461914,
+        "top1_logit_margin": 0.0625,
+        "argmax": 260
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": false
+    },
+    {
+      "source_id": "HumanEval/157",
+      "position": 1,
+      "ar": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          17.375,
+          17.25,
+          15.6875
+        ],
+        "top_probs": [
+          0.35717156529426575,
+          0.3152028024196625,
+          0.06607010215520859
+        ],
+        "top2_probability_margin": 0.04196876287460327,
+        "top1_logit_margin": 0.125,
+        "argmax": 1604
+      },
+      "loopahead": {
+        "top_ids": [
+          1604,
+          19,
+          342
+        ],
+        "top_logits": [
+          17.25,
+          17.25,
+          15.6875
+        ],
+        "top_probs": [
+          0.3283137083053589,
+          0.3283137083053589,
+          0.06881828606128693
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 19
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/160",
+      "position": 42,
+      "ar": {
+        "top_ids": [
+          36988,
+          15695,
+          28640
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          17.875
+        ],
+        "top_probs": [
+          0.3946149945259094,
+          0.3482465147972107,
+          0.14517076313495636
+        ],
+        "top2_probability_margin": 0.04636847972869873,
+        "top1_logit_margin": 0.125,
+        "argmax": 36988
+      },
+      "loopahead": {
+        "top_ids": [
+          36988,
+          15695,
+          28640
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          17.75
+        ],
+        "top_probs": [
+          0.3757149875164032,
+          0.3757149875164032,
+          0.13821783661842346
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 15695
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/161",
+      "position": 29,
+      "ar": {
+        "top_ids": [
+          333,
+          216,
+          289
+        ],
+        "top_logits": [
+          19.25,
+          19.125,
+          16.375
+        ],
+        "top_probs": [
+          0.5106157064437866,
+          0.4506167471408844,
+          0.02880696766078472
+        ],
+        "top2_probability_margin": 0.05999895930290222,
+        "top1_logit_margin": 0.125,
+        "argmax": 333
+      },
+      "loopahead": {
+        "top_ids": [
+          333,
+          216,
+          289
+        ],
+        "top_logits": [
+          19.125,
+          19.125,
+          16.75
+        ],
+        "top_probs": [
+          0.47318968176841736,
+          0.47318968176841736,
+          0.04401349276304245
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 216
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "HumanEval/162",
+      "position": 85,
+      "ar": {
+        "top_ids": [
+          3725,
+          3391,
+          198
+        ],
+        "top_logits": [
+          19.75,
+          19.625,
+          17.75
+        ],
+        "top_probs": [
+          0.47794485092163086,
+          0.4217848479747772,
+          0.06468280404806137
+        ],
+        "top2_probability_margin": 0.05616000294685364,
+        "top1_logit_margin": 0.125,
+        "argmax": 3725
+      },
+      "loopahead": {
+        "top_ids": [
+          3725,
+          3391,
+          198
+        ],
+        "top_logits": [
+          19.625,
+          19.625,
+          17.625
+        ],
+        "top_probs": [
+          0.45093512535095215,
+          0.45093512535095215,
+          0.06102742999792099
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3391
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "started_unix": 1794484749.1529746,
+  "input_provenance": {
+    "scope": "B4-paper-check",
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/paper-inputs/humaneval.jsonl",
+    "sha256": "a9e455e5983275b9ef82716e6c32dae97b15e07a0c14a2810b40c65362635e8d",
+    "prompt_format": "completion",
+    "max_new_tokens": 1024,
+    "stop_ids": [
+      0
+    ],
+    "historical_evaluator_sha256": {
+      "ar": "edd47657bfda4fd5c87e6b9018b29492b29644951b71e6b7c0736adf18b814d0",
+      "loopahead": "14d75e6557012807624c81047dcb0924c38481dafa7db15993807b019858e955"
+    },
+    "physical_nodes": {
+      "ar": 1,
+      "loopahead": 32
+    },
+    "source_manifest_sha256": "941dab3a2f139c12ac741eb3be5ca607170725a180b7a75ed947c7786581d93a",
+    "isolation_audit_sha256": "c5d8d04997854bb82f655a75f66fb8674e659cb0f45df511a308c0ff34dbf8eb"
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-B4-ouro-2.6b-humaneval-ar-v1",
+      "sha256": "90dc6eb6cc4d8d0b2ced6061d4294c460ebde01fd545a89b13a5c5f15596d957"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-B4-ouro-2.6b-humaneval-loopahead-v1",
+      "sha256": "f99c53b09def7a1c1956e42c17fe908750a14ee8fb7fa59dd4bbadc0d9ec8700"
+    }
+  },
+  "limitations": [
+    "Instrumented BF16 replay only; timings are excluded from the benchmark.",
+    "Probability ties/margins describe actual reproduced divergences, not proof that all discrepancies disappear in FP32."
+  ],
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 288565,
+    "started_unix": 1794484750.3530777,
+    "acquired_unix": 1794484751.298055,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "finished_unix": 1794486808.9940927
+}

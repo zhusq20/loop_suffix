@@ -1,0 +1,25 @@
+{
+  "status": "cuda_context_and_tensor_matmul_flash_attention_passed",
+  "executable": "/tmp/loopfill-venv/bin/python",
+  "torch": "2.6.0+cu126",
+  "torch_cuda": "12.6",
+  "transformers": "4.55.0",
+  "flash_attn": "2.7.2",
+  "acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 474503,
+    "started_unix": 1794380953.2635016,
+    "acquired_unix": 1794380953.9112601,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "loaded_driver_libraries": [
+    "/usr/lib64/libcuda.so.570.148.08"
+  ],
+  "flash_attention_max_abs_error": 0.001953125,
+  "ld_cache_mtime": 1794378966.2280037,
+  "source_sha256": "ede31ff0ec1f784bbf3509409c7fb0b17a78a2da28f3ead6f1ee0a643f5e0767",
+  "limitation": "Startup and small GPU kernels only; not a full-model benchmark or distribution test."
+}

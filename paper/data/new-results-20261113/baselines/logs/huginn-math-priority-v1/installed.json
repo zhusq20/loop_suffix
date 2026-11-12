@@ -1,0 +1,71 @@
+{
+  "pid": 150154,
+  "installed_unix": 1794396347.481942,
+  "before": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794353566.114057,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": [
+      3,
+      6
+    ]
+  },
+  "after": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794396347.4244928,
+    "deferred_jobs": [
+      "train-huginn-3.5b",
+      "dflash-huginn-3.5b-gsm8k-t0",
+      "dflash-huginn-3.5b-bbh-t0",
+      "dflash-huginn-3.5b-humanevalplus-t0",
+      "dflash-huginn-3.5b-mbppplus-t0",
+      "dflash-huginn-3.5b-specbench-t0",
+      "dflash-huginn-3.5b-gsm8k-t1"
+    ],
+    "reserved_for_development": [
+      3,
+      6
+    ],
+    "temporary_huginn_math_priority": {
+      "owner": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/huginn-math-priority-v1",
+      "priority_jobs": [
+        "dflash-huginn-3.5b-math500-t0",
+        "dflash-huginn-3.5b-math500-t1"
+      ],
+      "postponed_jobs": [
+        "dflash-huginn-3.5b-gsm8k-t0",
+        "dflash-huginn-3.5b-bbh-t0",
+        "dflash-huginn-3.5b-humanevalplus-t0",
+        "dflash-huginn-3.5b-mbppplus-t0",
+        "dflash-huginn-3.5b-specbench-t0",
+        "dflash-huginn-3.5b-gsm8k-t1"
+      ]
+    }
+  }
+}

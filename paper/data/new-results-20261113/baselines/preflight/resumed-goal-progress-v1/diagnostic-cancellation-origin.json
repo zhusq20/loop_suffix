@@ -1,0 +1,26 @@
+{
+  "status": "cancellation_origin_unconfirmed",
+  "observed_unix": 1794464053.9000869,
+  "facts": "A cancellation record and stopped diagnostic controller exist. The future Ouro1.4B controller was replaced with a version excluding six diagnostic steps; training and measurements remain live.",
+  "authority": "These filesystem records are evidence of execution state, not proof of a direct instruction from this user or of another chat session.",
+  "user_context": "User asked where the alleged other conversation came from. Assistant corrected that it was an inference; user has not confirmed cancelling diagnostics in this thread.",
+  "scope": "Continue authorized training, measurements and result audit. Do not infer that all required numerical diagnostics passed or that their requirement was waived.",
+  "files": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/cancellation.json": {
+      "sha256": "be23f8bf7284d69b187f5030a2648e87cd7f87523ed585435ee35ca15d4e3bff",
+      "mtime": 1794461141.6892855
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/STOP": {
+      "sha256": "3244c6c707b0086de967753535ea9c95a4c41c0dfe34e0502c6d3f47ec742c99",
+      "mtime": 1794461141.5176866
+    },
+    "/ossfs/workspace/loop_suffix/results/output-diagnostics-cancelled-20261112/cancellation.json": {
+      "sha256": "b6daf23ee3a04b5dbd00b187ce7bdbee363c75fc420c4409ea5b0a7bbf32ce60",
+      "mtime": 1794461141.7621403
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/amendments/output-diagnostics-cancelled/launcher.json": {
+      "sha256": "40c51026e43e887507d8b68e7615d70e9c455374058c88f9ff0c0516ec3ae3cc",
+      "mtime": 1794461202.767029
+    }
+  }
+}

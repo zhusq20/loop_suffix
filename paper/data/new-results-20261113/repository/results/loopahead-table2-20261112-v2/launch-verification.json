@@ -1,0 +1,67 @@
+{
+  "status": "verified_formal_launch_after_cpu_and_real_GPU_checks",
+  "verified_unix": 1794419659.9308038,
+  "running": [
+    {
+      "cell": "huginn-3.5b-b1",
+      "pid": 417113,
+      "gpu": 2,
+      "batch": 1,
+      "requests": 480,
+      "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c"
+    },
+    {
+      "cell": "ouro-2.6b-b1",
+      "pid": 417115,
+      "gpu": 3,
+      "batch": 1,
+      "requests": 480,
+      "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630"
+    },
+    {
+      "cell": "huginn-3.5b-b2",
+      "pid": 417118,
+      "gpu": 4,
+      "batch": 2,
+      "requests": 480,
+      "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c"
+    },
+    {
+      "cell": "ouro-2.6b-b2",
+      "pid": 417121,
+      "gpu": 6,
+      "batch": 2,
+      "requests": 480,
+      "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630"
+    }
+  ],
+  "formal_results_complete": false,
+  "cpu_checks": {
+    "command": "CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=1 /tmp/loopfill-venv/bin/python -m pytest -q experiments/baselines/loopahead/test_batch.py experiments/baselines/loopahead/test_decode.py experiments/baselines/loopahead/test_lad.py",
+    "passed": 19
+  },
+  "preflight": {
+    "huginn-3.5b-bf16-b16": {
+      "requests": 34,
+      "requests_sha256": "9b02467239c0fc3d70e29e0e86e9c22678e2efc7989e6e4190e81e4806639c37",
+      "finished_unix": 1794419611.6660364
+    },
+    "huginn-3.5b-fp32-b2": {
+      "status": "passed_real_target_fp32_batch_parity",
+      "requests": 4,
+      "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+      "finished_unix": 1794419593.053394
+    },
+    "ouro-2.6b-bf16-b16": {
+      "requests": 34,
+      "requests_sha256": "22699d4f49a7eb6c6569569662cdf3cb5eb2d42f853317fbf195f941eae81806",
+      "finished_unix": 1794419596.2469091
+    },
+    "ouro-2.6b-fp32-b2": {
+      "status": "passed_real_target_fp32_batch_parity",
+      "requests": 4,
+      "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+      "finished_unix": 1794419586.4305422
+    }
+  }
+}

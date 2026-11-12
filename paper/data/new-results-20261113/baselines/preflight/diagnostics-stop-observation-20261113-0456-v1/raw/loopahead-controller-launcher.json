@@ -1,0 +1,29 @@
+{
+  "plan_sha256": "994a83735b8ff36410e856979802e7fd91fab2cc62c34d3f0008918fa6fb2a8e",
+  "activation_source_sha256": "eb6be4683b14c914191f47c0b07c5588caf358f5c4c0b05d509206a32dc869ca",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/queue_loopahead_math_continuation.py"
+  ],
+  "started_unix": 1794510570.994019,
+  "pid": 64214,
+  "start_ticks": "52560728",
+  "supervisor_identity": {
+    "pid": 64213,
+    "state": "R",
+    "start_ticks": "52560722",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/controller-launcher.json.supervisor.json",
+      "--lock-fd",
+      "3"
+    ]
+  }
+}

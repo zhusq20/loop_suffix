@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/archive_throughput_evidence.py", line 151, in <module>
+    archive(parser.parse_args().out.resolve())
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/archive_throughput_evidence.py", line 115, in archive
+    assert read(direct) == receipt
+AssertionError

@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/queue_loopahead_math_continuation.py"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/controller-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/controller-exit.json",
+  "metadata": {
+    "plan_sha256": "994a83735b8ff36410e856979802e7fd91fab2cc62c34d3f0008918fa6fb2a8e",
+    "activation_source_sha256": "eb6be4683b14c914191f47c0b07c5588caf358f5c4c0b05d509206a32dc869ca"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill/experiments/baselines",
+  "extra_launcher": null,
+  "extra_exit": null
+}

@@ -1,0 +1,126 @@
+{
+  "status": "CPU_priority_and_cleanup_checks_passed_actual_dispatch_pending",
+  "checks": [
+    "Unfinished Huginn training leaves other runnable jobs unchanged",
+    "Existing controller readiness dispatches both MATH cells first after training",
+    "Install preserves GPU allocation, training reservations and unrelated policy fields",
+    "Cleanup preserves coordinator reservation release and unrelated deferrals",
+    "Duplicate installation and changed ownership are rejected",
+    "Pending/state-only and unrelated live processes cannot satisfy startup evidence",
+    "Actual observer main restores isolated policy on success",
+    "Actual observer main restores isolated policy on error",
+    "Actual observer main restores isolated policy on interrupt",
+    "Actual observer main restores isolated policy on still_waiting"
+  ],
+  "plan": {
+    "owner": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/huginn-math-priority-v1",
+    "priority_jobs": [
+      "dflash-huginn-3.5b-math500-t0",
+      "dflash-huginn-3.5b-math500-t1"
+    ],
+    "postponed_jobs": [
+      "dflash-huginn-3.5b-gsm8k-t0",
+      "dflash-huginn-3.5b-bbh-t0",
+      "dflash-huginn-3.5b-humanevalplus-t0",
+      "dflash-huginn-3.5b-mbppplus-t0",
+      "dflash-huginn-3.5b-specbench-t0",
+      "dflash-huginn-3.5b-gsm8k-t1"
+    ],
+    "historical_AR": [
+      {
+        "job": "dflash-huginn-3.5b-math500-t1",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t1",
+        "requests": 500,
+        "decode_s": 17514.0900343284,
+        "requests_sha256": "277efd5be06f47f6e2a03731f97f0bacdacaf641fef4d3fb4cf38807467276ce"
+      },
+      {
+        "job": "dflash-huginn-3.5b-math500-t0",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t0",
+        "requests": 500,
+        "decode_s": 17151.362770482898,
+        "requests_sha256": "5e931648819e34ea820db7321fd851ddaf2f6139be7e333d659a9c2aea912664"
+      },
+      {
+        "job": "dflash-huginn-3.5b-mbppplus-t1",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t1",
+        "requests": 378,
+        "decode_s": 10466.827805951238,
+        "requests_sha256": "88c6c2ead3c84b419b26ea77e438393ab446221440b2dff402efeadf8a9d992d"
+      },
+      {
+        "job": "dflash-huginn-3.5b-bbh-t0",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t0",
+        "requests": 270,
+        "decode_s": 7751.694911524653,
+        "requests_sha256": "433ae1e30911fbad68494edbea6d662ab2b67da269e9b7732440e0d61bff73c1"
+      },
+      {
+        "job": "dflash-huginn-3.5b-bbh-t1",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t1",
+        "requests": 270,
+        "decode_s": 7533.878991141915,
+        "requests_sha256": "99dc13f6558b0b8535f5f7c2a3c8312445bc99d1bad2f924cade209c5eb372d1"
+      },
+      {
+        "job": "dflash-huginn-3.5b-specbench-t1",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t1",
+        "requests": 480,
+        "decode_s": 7037.431478984654,
+        "requests_sha256": "9ffab1f9fa12e1a566251be3be7b9a6be50e0647560b286f2bdef426284b46bb"
+      },
+      {
+        "job": "dflash-huginn-3.5b-specbench-t0",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t0",
+        "requests": 480,
+        "decode_s": 6766.16689439863,
+        "requests_sha256": "ecc4f6d80195d981e62cec07a2925c9380dc964aa5b58c1a5a49416842dcb789"
+      },
+      {
+        "job": "dflash-huginn-3.5b-mbppplus-t0",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t0",
+        "requests": 378,
+        "decode_s": 5791.361055098474,
+        "requests_sha256": "967dafc9dd226731dfae3b779e3212649ce05c1ded3036775d3682da60a1cbde"
+      },
+      {
+        "job": "dflash-huginn-3.5b-gsm8k-t0",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t0",
+        "requests": 300,
+        "decode_s": 4461.007359459996,
+        "requests_sha256": "7bb991a398a050874013eae832253772952cc5569e9cac1b61132ff7f050bf07"
+      },
+      {
+        "job": "dflash-huginn-3.5b-gsm8k-t1",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t1",
+        "requests": 300,
+        "decode_s": 4322.464291840792,
+        "requests_sha256": "f04b86fda535d05cc52c68f1c0797aeca779ecff1271a31acc507dd3c63ae162"
+      },
+      {
+        "job": "dflash-huginn-3.5b-humanevalplus-t1",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t1",
+        "requests": 164,
+        "decode_s": 3645.2078398689628,
+        "requests_sha256": "5e96148c6f716f5641564546d7623d943fec620e836a42336bc0a8d0aa47e374"
+      },
+      {
+        "job": "dflash-huginn-3.5b-humanevalplus-t0",
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t0",
+        "requests": 164,
+        "decode_s": 3486.1283281594515,
+        "requests_sha256": "5513819d7428d7c7c5c75efdef7d66dc0e0ebf4bbfd1e92f4a165abd78c1e4f7"
+      }
+    ],
+    "basis": "Historical AR durations are scheduling proxies, not new benchmark results or predicted finish times."
+  },
+  "production_policy_and_results_unchanged": {
+    "results.csv": "46ec2382abdfade1f0143ecbf9ba5c22587d32cc44cc404eb139b9bb21aea052",
+    "table2_rows.md": "65efd8ea42833103135194a0c4ceb1627bd9cd60356acd337dbff5d002282d9c",
+    "formal-agreement.json": "8f453500ba03bd87b59660a8074a6e66d1b8c2d5e64acbc7047ad64041e807e6",
+    "formal-matrix-status.json": "34370152e1d9b9aa7122255d8a26c3e5434afbc3ba504a24fb4c560449c94cd0",
+    "configs/gpu-allocation.json": "17841b5a2e1617a2490b15dc810037f5b56f2a1de38d860de1f4cf8239e4f613"
+  },
+  "gpu_jobs_launched": 0,
+  "torch_imported": false
+}

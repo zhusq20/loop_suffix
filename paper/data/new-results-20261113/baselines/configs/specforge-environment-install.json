@@ -1,0 +1,36 @@
+{
+  "started_unix": 1794289451.5584793,
+  "status": "installed_not_validated",
+  "finished_unix": 1794289534.666909,
+  "commands": [
+    [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "uv"
+    ],
+    [
+      "/tmp/loopfill-dflash-venv/bin/uv",
+      "python",
+      "install",
+      "3.11"
+    ],
+    [
+      "/tmp/loopfill-dflash-venv/bin/uv",
+      "venv",
+      "--python",
+      "3.11",
+      "/tmp/loopfill-specforge-venv"
+    ],
+    [
+      "/tmp/loopfill-dflash-venv/bin/uv",
+      "pip",
+      "install",
+      "--python",
+      "/tmp/loopfill-specforge-venv/bin/python",
+      "-e",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/third_party/SpecForge"
+    ]
+  ]
+}

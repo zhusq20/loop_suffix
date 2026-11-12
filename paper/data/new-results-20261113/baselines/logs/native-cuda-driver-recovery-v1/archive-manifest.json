@@ -1,0 +1,1251 @@
+{
+  "created_unix": 1794381190.5437424,
+  "failures": [
+    {
+      "job": "loopahead-huginn-3.5b-bbh-t1",
+      "leaf": "loopahead-huginn-3.5b-bbh-t1-v1",
+      "leaf_exit": {
+        "name": "loopahead-huginn-3.5b-bbh-t1-v1",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+          "--model",
+          "huginn-3.5b",
+          "--method",
+          "loopahead",
+          "--dataset",
+          "bbh",
+          "--temperature",
+          "1",
+          "--checkpoint",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1"
+        ],
+        "pid": 468975,
+        "started_unix": 1794380522.51246,
+        "exit_code": 1,
+        "finished_unix": 1794380524.6577961
+      },
+      "outer_exit": {
+        "exit_code": 1,
+        "finished_unix": 1794380537.3279989,
+        "completion_basis": "direct_child_exit_code"
+      },
+      "zero_requests": true
+    },
+    {
+      "job": "loopahead-ouro-2.6b-bbh-t1",
+      "leaf": "loopahead-ouro-2.6b-bbh-t1-v1",
+      "leaf_exit": {
+        "name": "loopahead-ouro-2.6b-bbh-t1-v1",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+          "--model",
+          "ouro-2.6b",
+          "--method",
+          "loopahead",
+          "--dataset",
+          "bbh",
+          "--temperature",
+          "1",
+          "--checkpoint",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+          "--admission",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+        ],
+        "pid": 469171,
+        "started_unix": 1794380537.7985575,
+        "exit_code": 1,
+        "finished_unix": 1794380540.1065047
+      },
+      "outer_exit": {
+        "exit_code": 1,
+        "finished_unix": 1794380552.6831303,
+        "completion_basis": "direct_child_exit_code"
+      },
+      "zero_requests": true
+    },
+    {
+      "job": "dflash-ouro-2.6b-bbh-t1",
+      "leaf": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+      "leaf_exit": {
+        "name": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+        "argv": [
+          "/tmp/loopfill-dflash-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+          "--model",
+          "ouro-2.6b",
+          "--method",
+          "ar",
+          "--dataset",
+          "bbh",
+          "--temperature",
+          "1",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1"
+        ],
+        "pid": 469347,
+        "started_unix": 1794380553.0991366,
+        "exit_code": 1,
+        "finished_unix": 1794380555.0528
+      },
+      "outer_exit": {
+        "exit_code": 1,
+        "finished_unix": 1794380567.9951522,
+        "completion_basis": "direct_child_exit_code"
+      },
+      "zero_requests": true
+    },
+    {
+      "job": "loopahead-huginn-3.5b-humanevalplus-t1",
+      "leaf": "loopahead-huginn-3.5b-humanevalplus-t1-v1",
+      "leaf_exit": {
+        "name": "loopahead-huginn-3.5b-humanevalplus-t1-v1",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+          "--model",
+          "huginn-3.5b",
+          "--method",
+          "loopahead",
+          "--dataset",
+          "humanevalplus",
+          "--temperature",
+          "1",
+          "--checkpoint",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1"
+        ],
+        "pid": 469575,
+        "started_unix": 1794380568.4782367,
+        "exit_code": 1,
+        "finished_unix": 1794380570.5761774
+      },
+      "outer_exit": {
+        "exit_code": 1,
+        "finished_unix": 1794380583.3695982,
+        "completion_basis": "direct_child_exit_code"
+      },
+      "zero_requests": true
+    },
+    {
+      "job": "loopahead-ouro-2.6b-humanevalplus-t1",
+      "leaf": "loopahead-ouro-2.6b-humanevalplus-t1-v1",
+      "leaf_exit": {
+        "name": "loopahead-ouro-2.6b-humanevalplus-t1-v1",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+          "--model",
+          "ouro-2.6b",
+          "--method",
+          "loopahead",
+          "--dataset",
+          "humanevalplus",
+          "--temperature",
+          "1",
+          "--checkpoint",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1",
+          "--admission",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-2.6b-admission-v1.json"
+        ],
+        "pid": 469813,
+        "started_unix": 1794380583.8419454,
+        "exit_code": 1,
+        "finished_unix": 1794380586.0031083
+      },
+      "outer_exit": {
+        "exit_code": 1,
+        "finished_unix": 1794380598.6878316,
+        "completion_basis": "direct_child_exit_code"
+      },
+      "zero_requests": true
+    },
+    {
+      "job": "dflash-ouro-2.6b-humanevalplus-t1",
+      "leaf": "dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1",
+      "leaf_exit": {
+        "name": "dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1",
+        "argv": [
+          "/tmp/loopfill-dflash-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+          "--model",
+          "ouro-2.6b",
+          "--method",
+          "ar",
+          "--dataset",
+          "humanevalplus",
+          "--temperature",
+          "1",
+          "--gpu",
+          "2",
+          "--cpus",
+          "8-11",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1"
+        ],
+        "pid": 470110,
+        "started_unix": 1794380599.114753,
+        "exit_code": 1,
+        "finished_unix": 1794380600.978884
+      },
+      "outer_exit": {
+        "exit_code": 1,
+        "finished_unix": 1794380613.9788136,
+        "completion_basis": "direct_child_exit_code"
+      },
+      "zero_requests": true
+    }
+  ],
+  "paths": [
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/runs/loopahead-huginn-3.5b-bbh-t1-v1",
+      "is_directory": true,
+      "files": [
+        {
+          "relative": "failure.json",
+          "sha256": "07b60992d1bd711fa1fa2d05b67826ba108da28dd610e5b4e05eed275c9cd3a1",
+          "size": 859
+        },
+        {
+          "relative": "reservation-cost.json",
+          "sha256": "0454a8740cae50cf16d6217d3dc3ae5e455ca1543b3a19df99163cbbdd647487",
+          "size": 206
+        },
+        {
+          "relative": "source/evaluate_loopahead.py",
+          "sha256": "bb90a31ed60c950213a03b6962c8ac806e7bb0c6c3b727558359226c6baa69e7",
+          "size": 17569
+        },
+        {
+          "relative": "source/gpu_allocation.py",
+          "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+          "size": 828
+        },
+        {
+          "relative": "source/gpu_startup.py",
+          "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+          "size": 2141
+        },
+        {
+          "relative": "source/loopahead/__init__.py",
+          "sha256": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+          "size": 81
+        },
+        {
+          "relative": "source/loopahead/admission.py",
+          "sha256": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+          "size": 3883
+        },
+        {
+          "relative": "source/loopahead/decode.py",
+          "sha256": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+          "size": 13207
+        },
+        {
+          "relative": "source/loopahead/engine.py",
+          "sha256": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+          "size": 6497
+        },
+        {
+          "relative": "source/loopahead/lad.py",
+          "sha256": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+          "size": 5845
+        },
+        {
+          "relative": "source/loopahead/sampling.py",
+          "sha256": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+          "size": 1945
+        },
+        {
+          "relative": "source/loopahead/test_admission.py",
+          "sha256": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+          "size": 2048
+        },
+        {
+          "relative": "source/loopahead/test_decode.py",
+          "sha256": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+          "size": 6345
+        },
+        {
+          "relative": "source/loopahead/test_lad.py",
+          "sha256": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+          "size": 1482
+        },
+        {
+          "relative": "source/loopahead/test_sampling.py",
+          "sha256": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+          "size": 2961
+        },
+        {
+          "relative": "source/loopahead/test_training_data.py",
+          "sha256": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+          "size": 1327
+        },
+        {
+          "relative": "source/loopahead/training_data.py",
+          "sha256": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+          "size": 4297
+        },
+        {
+          "relative": "source/provenance.py",
+          "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+          "size": 822
+        },
+        {
+          "relative": "source-manifest.json",
+          "sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+          "size": 1525
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-huginn-3.5b-bbh-t1-v1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-huginn-3.5b-bbh-t1-v1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1-v1.log",
+          "sha256": "1f1d6b131d33a7535a43322b6aa825368e0e506121966b163295c2649b6fd2ec",
+          "size": 939
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-huginn-3.5b-bbh-t1-v1-launcher.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-huginn-3.5b-bbh-t1-v1-launcher.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1-v1-launcher.json",
+          "sha256": "b2fa2a76140279a8e02e465b58f019f07958c45352c3e8a407cf5b68c3bd6bb1",
+          "size": 672
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-huginn-3.5b-bbh-t1-v1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-huginn-3.5b-bbh-t1-v1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1-v1-finished.json",
+          "sha256": "86f7370c777e99d26ddb75430ad754da8b0886144d46f949e8a865e5dae04295",
+          "size": 729
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1.json",
+          "sha256": "bf0d0dfb47c1cee4bff7ccf7db40bd38ab6d5f910d42433d61dddcd4a384356b",
+          "size": 218
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1.log",
+          "sha256": "0dd699e82b67a13c0d353178a87e9a599c93dca638d3f4c0d1defd907071586b",
+          "size": 785
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1-finished.json",
+          "sha256": "c649af1c8a27cfab4814392d52601d998cc00a369dd52cee0dab79cf40cd01ef",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1-worker-exit.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-bbh-t1-worker-exit.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-bbh-t1-worker-exit.json",
+          "sha256": "976f4cc33e9ed116c57b4e314d67af05ab4e5d0a9cc5e9eb04684d105bc1e511",
+          "size": 293
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+      "is_directory": true,
+      "files": [
+        {
+          "relative": "failure.json",
+          "sha256": "07b60992d1bd711fa1fa2d05b67826ba108da28dd610e5b4e05eed275c9cd3a1",
+          "size": 859
+        },
+        {
+          "relative": "reservation-cost.json",
+          "sha256": "54cbce67e573ab0899e2313a656bc3a7a4adc7b4cb780efcb4c3ba3b5ef7abfc",
+          "size": 206
+        },
+        {
+          "relative": "source/evaluate_loopahead.py",
+          "sha256": "bb90a31ed60c950213a03b6962c8ac806e7bb0c6c3b727558359226c6baa69e7",
+          "size": 17569
+        },
+        {
+          "relative": "source/gpu_allocation.py",
+          "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+          "size": 828
+        },
+        {
+          "relative": "source/gpu_startup.py",
+          "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+          "size": 2141
+        },
+        {
+          "relative": "source/loopahead/__init__.py",
+          "sha256": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+          "size": 81
+        },
+        {
+          "relative": "source/loopahead/admission.py",
+          "sha256": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+          "size": 3883
+        },
+        {
+          "relative": "source/loopahead/decode.py",
+          "sha256": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+          "size": 13207
+        },
+        {
+          "relative": "source/loopahead/engine.py",
+          "sha256": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+          "size": 6497
+        },
+        {
+          "relative": "source/loopahead/lad.py",
+          "sha256": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+          "size": 5845
+        },
+        {
+          "relative": "source/loopahead/sampling.py",
+          "sha256": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+          "size": 1945
+        },
+        {
+          "relative": "source/loopahead/test_admission.py",
+          "sha256": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+          "size": 2048
+        },
+        {
+          "relative": "source/loopahead/test_decode.py",
+          "sha256": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+          "size": 6345
+        },
+        {
+          "relative": "source/loopahead/test_lad.py",
+          "sha256": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+          "size": 1482
+        },
+        {
+          "relative": "source/loopahead/test_sampling.py",
+          "sha256": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+          "size": 2961
+        },
+        {
+          "relative": "source/loopahead/test_training_data.py",
+          "sha256": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+          "size": 1327
+        },
+        {
+          "relative": "source/loopahead/training_data.py",
+          "sha256": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+          "size": 4297
+        },
+        {
+          "relative": "source/provenance.py",
+          "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+          "size": 822
+        },
+        {
+          "relative": "source-manifest.json",
+          "sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+          "size": 1525
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-bbh-t1-v1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-ouro-2.6b-bbh-t1-v1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1-v1.log",
+          "sha256": "1f1d6b131d33a7535a43322b6aa825368e0e506121966b163295c2649b6fd2ec",
+          "size": 939
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-bbh-t1-v1-launcher.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-ouro-2.6b-bbh-t1-v1-launcher.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1-v1-launcher.json",
+          "sha256": "8c96320c4e1c9cc8fc332c1f0fba8f14e5933c41f7fa2703b7ecf3a3b8734a9e",
+          "size": 789
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-bbh-t1-v1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-ouro-2.6b-bbh-t1-v1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1-v1-finished.json",
+          "sha256": "d1daf42f5bb3babfe7f08eb03cd5345823e62208113c15128acd17f69d124ff5",
+          "size": 846
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1.json",
+          "sha256": "c72d078d5a81c188d2faf33f5f17e202ed4f01436a608d78786e7cb220caf382",
+          "size": 213
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1.log",
+          "sha256": "12f535a3f17fc30b3ce986659320ec80971016a7b9c23a1fcdfc5d0d36b069de",
+          "size": 781
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1-finished.json",
+          "sha256": "2e7977126930953c999de749f98233fd102802564a8265fd99641caf6a109e41",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1-worker-exit.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-bbh-t1-worker-exit.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-bbh-t1-worker-exit.json",
+          "sha256": "3a33c530c9aa58ae870c9e8ece6bebd18c7625dfe4738912d25fbc32d5b89089",
+          "size": 292
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+      "is_directory": true,
+      "files": [
+        {
+          "relative": "failure.json",
+          "sha256": "470b754df28804416ea9a18059057156ef9ccd1fc2d0744b1c8466b8548a8de6",
+          "size": 899
+        },
+        {
+          "relative": "reservation-cost.json",
+          "sha256": "49713732e0afe2e014973e05637ac26ce8395c98198949bf52fab22151c11498",
+          "size": 205
+        },
+        {
+          "relative": "source/dflash_impl/decode.py",
+          "sha256": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+          "size": 8023
+        },
+        {
+          "relative": "source/dflash_impl/target.py",
+          "sha256": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+          "size": 10371
+        },
+        {
+          "relative": "source/evaluate_dflash.py",
+          "sha256": "b0c8de5a93fd1534c47cc52f1a4952aa69108cb4a4096ea57208fb11552cb14d",
+          "size": 9897
+        },
+        {
+          "relative": "source/gpu_allocation.py",
+          "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+          "size": 828
+        },
+        {
+          "relative": "source/gpu_startup.py",
+          "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+          "size": 2141
+        },
+        {
+          "relative": "source/provenance.py",
+          "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+          "size": 822
+        },
+        {
+          "relative": "source-manifest.json",
+          "sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+          "size": 551
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1.log",
+          "sha256": "aaa4ec1b59dc7c4e4a638381560dde3901e5a596034a3ceca0f36dc3dae8d29c",
+          "size": 937
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1-launcher.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1-launcher.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1-launcher.json",
+          "sha256": "dadf70a25a03d8a81d787027d8fc59b4a7ac1d6ced101399b6bd3eefe95f8c07",
+          "size": 530
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-stack-ouro-2.6b-bbh-t1-ar-v1-finished.json",
+          "sha256": "994db4c8936b1e853ea06afac021ffa7801417e5af37d29f769055f42ba817cb",
+          "size": 584
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-bbh-t1.json",
+          "sha256": "8edcecb27a7f518c6fd58defb520378f2e1fe8639b2b2df777f1a92e40b0beac",
+          "size": 208
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-bbh-t1.log",
+          "sha256": "be879f92e2366ee7dde20385942503534f25d302fcac1da87c0e0bb3552fd61f",
+          "size": 793
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-bbh-t1-finished.json",
+          "sha256": "09d54c1dc69df382273986c84e20db30c720ab58ab1df07b730e6bb81e6a92b9",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1-worker-exit.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-bbh-t1-worker-exit.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-bbh-t1-worker-exit.json",
+          "sha256": "77b6cbb2b6319e402ece037910b8b16e1f216b9e45979ca5be8416902b27db8e",
+          "size": 293
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1",
+      "is_directory": true,
+      "files": [
+        {
+          "relative": "failure.json",
+          "sha256": "07b60992d1bd711fa1fa2d05b67826ba108da28dd610e5b4e05eed275c9cd3a1",
+          "size": 859
+        },
+        {
+          "relative": "reservation-cost.json",
+          "sha256": "bd303a8fe5b7391c9d435b3314a832d580ad6bd8b6eb7011d12caddc90edcbcd",
+          "size": 205
+        },
+        {
+          "relative": "source/evaluate_loopahead.py",
+          "sha256": "bb90a31ed60c950213a03b6962c8ac806e7bb0c6c3b727558359226c6baa69e7",
+          "size": 17569
+        },
+        {
+          "relative": "source/gpu_allocation.py",
+          "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+          "size": 828
+        },
+        {
+          "relative": "source/gpu_startup.py",
+          "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+          "size": 2141
+        },
+        {
+          "relative": "source/loopahead/__init__.py",
+          "sha256": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+          "size": 81
+        },
+        {
+          "relative": "source/loopahead/admission.py",
+          "sha256": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+          "size": 3883
+        },
+        {
+          "relative": "source/loopahead/decode.py",
+          "sha256": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+          "size": 13207
+        },
+        {
+          "relative": "source/loopahead/engine.py",
+          "sha256": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+          "size": 6497
+        },
+        {
+          "relative": "source/loopahead/lad.py",
+          "sha256": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+          "size": 5845
+        },
+        {
+          "relative": "source/loopahead/sampling.py",
+          "sha256": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+          "size": 1945
+        },
+        {
+          "relative": "source/loopahead/test_admission.py",
+          "sha256": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+          "size": 2048
+        },
+        {
+          "relative": "source/loopahead/test_decode.py",
+          "sha256": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+          "size": 6345
+        },
+        {
+          "relative": "source/loopahead/test_lad.py",
+          "sha256": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+          "size": 1482
+        },
+        {
+          "relative": "source/loopahead/test_sampling.py",
+          "sha256": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+          "size": 2961
+        },
+        {
+          "relative": "source/loopahead/test_training_data.py",
+          "sha256": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+          "size": 1327
+        },
+        {
+          "relative": "source/loopahead/training_data.py",
+          "sha256": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+          "size": 4297
+        },
+        {
+          "relative": "source/provenance.py",
+          "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+          "size": 822
+        },
+        {
+          "relative": "source-manifest.json",
+          "sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+          "size": 1525
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-huginn-3.5b-humanevalplus-t1-v1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-huginn-3.5b-humanevalplus-t1-v1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1-v1.log",
+          "sha256": "1f1d6b131d33a7535a43322b6aa825368e0e506121966b163295c2649b6fd2ec",
+          "size": 939
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-huginn-3.5b-humanevalplus-t1-v1-launcher.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-huginn-3.5b-humanevalplus-t1-v1-launcher.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1-v1-launcher.json",
+          "sha256": "a0218c9a7c218d2260c0a9a6c7a7e17f9022b82b078a04e2aa86753cdb77cb65",
+          "size": 704
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-huginn-3.5b-humanevalplus-t1-v1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-huginn-3.5b-humanevalplus-t1-v1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1-v1-finished.json",
+          "sha256": "c871ed8e0e2aac47734633dd7455f6e4c665e242e5664d5e7b6ab15e5b05181f",
+          "size": 761
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1.json",
+          "sha256": "5f148e4f3ec99979d993b6bf6370ea6eca06c85581b710a5bf8073ee02a71f03",
+          "size": 238
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1.log",
+          "sha256": "c9c94e97d145537651fb5e4c1e06909abe9d820bdbc5464693d1ed2c38586258",
+          "size": 805
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1-finished.json",
+          "sha256": "427080da0bfe2d3fa9e404b4ffd2909ae60f0a245c3aad77f53a6e5f8d037df9",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1-worker-exit.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-huginn-3.5b-humanevalplus-t1-worker-exit.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-huginn-3.5b-humanevalplus-t1-worker-exit.json",
+          "sha256": "8ea083b3911103a55be32f75bade825b9a9b176664f6c131a3a5a7ef0d514723",
+          "size": 293
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1",
+      "is_directory": true,
+      "files": [
+        {
+          "relative": "failure.json",
+          "sha256": "07b60992d1bd711fa1fa2d05b67826ba108da28dd610e5b4e05eed275c9cd3a1",
+          "size": 859
+        },
+        {
+          "relative": "reservation-cost.json",
+          "sha256": "50bdeeda8877c593a7f03a4c14132052bb5226258ad58f7a0f2efc099eb0dc0d",
+          "size": 205
+        },
+        {
+          "relative": "source/evaluate_loopahead.py",
+          "sha256": "bb90a31ed60c950213a03b6962c8ac806e7bb0c6c3b727558359226c6baa69e7",
+          "size": 17569
+        },
+        {
+          "relative": "source/gpu_allocation.py",
+          "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+          "size": 828
+        },
+        {
+          "relative": "source/gpu_startup.py",
+          "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+          "size": 2141
+        },
+        {
+          "relative": "source/loopahead/__init__.py",
+          "sha256": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+          "size": 81
+        },
+        {
+          "relative": "source/loopahead/admission.py",
+          "sha256": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+          "size": 3883
+        },
+        {
+          "relative": "source/loopahead/decode.py",
+          "sha256": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+          "size": 13207
+        },
+        {
+          "relative": "source/loopahead/engine.py",
+          "sha256": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+          "size": 6497
+        },
+        {
+          "relative": "source/loopahead/lad.py",
+          "sha256": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+          "size": 5845
+        },
+        {
+          "relative": "source/loopahead/sampling.py",
+          "sha256": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+          "size": 1945
+        },
+        {
+          "relative": "source/loopahead/test_admission.py",
+          "sha256": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+          "size": 2048
+        },
+        {
+          "relative": "source/loopahead/test_decode.py",
+          "sha256": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+          "size": 6345
+        },
+        {
+          "relative": "source/loopahead/test_lad.py",
+          "sha256": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+          "size": 1482
+        },
+        {
+          "relative": "source/loopahead/test_sampling.py",
+          "sha256": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+          "size": 2961
+        },
+        {
+          "relative": "source/loopahead/test_training_data.py",
+          "sha256": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+          "size": 1327
+        },
+        {
+          "relative": "source/loopahead/training_data.py",
+          "sha256": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+          "size": 4297
+        },
+        {
+          "relative": "source/provenance.py",
+          "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+          "size": 822
+        },
+        {
+          "relative": "source-manifest.json",
+          "sha256": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+          "size": 1525
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-humanevalplus-t1-v1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-ouro-2.6b-humanevalplus-t1-v1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1-v1.log",
+          "sha256": "1f1d6b131d33a7535a43322b6aa825368e0e506121966b163295c2649b6fd2ec",
+          "size": 939
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-humanevalplus-t1-v1-launcher.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-ouro-2.6b-humanevalplus-t1-v1-launcher.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1-v1-launcher.json",
+          "sha256": "d4a4ca7a2b6e93161dc2be60d650c4da08e10ddbc44a54c39594200cce14d3d5",
+          "size": 819
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-2.6b-humanevalplus-t1-v1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/loopahead-ouro-2.6b-humanevalplus-t1-v1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1-v1-finished.json",
+          "sha256": "e0988b9b09a14f960bc47741f8e502946c3880b398162e55f32a66796c6a4c83",
+          "size": 876
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1.json",
+          "sha256": "7244e60cb81ae3c55907bc53aa0e1e46f329ad1549f4bfae0559ed723fae80b8",
+          "size": 233
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1.log",
+          "sha256": "d52fad1754de772f8b5b240ed4f6b03e289091fb492d86dca133531035a8821a",
+          "size": 801
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1-finished.json",
+          "sha256": "2ba3dd29a1a988d8b0114be1eaa134ef6b1f76228932932200787bbf9f7405ec",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1-worker-exit.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/loopahead-ouro-2.6b-humanevalplus-t1-worker-exit.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "loopahead-ouro-2.6b-humanevalplus-t1-worker-exit.json",
+          "sha256": "777e7b640877833df2a1bb63439edb2517d6822b344edd69970d2d559471a73e",
+          "size": 293
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/runs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1",
+      "is_directory": true,
+      "files": [
+        {
+          "relative": "failure.json",
+          "sha256": "1c29c63a482fdf04554fe9fb3f16a5a81c42b658a646799888fa1e1db2a00b65",
+          "size": 899
+        },
+        {
+          "relative": "reservation-cost.json",
+          "sha256": "4bcf0634276d5cffe698bbcd815a673d782c052fa4f6254d952375ccde38a1be",
+          "size": 205
+        },
+        {
+          "relative": "source/dflash_impl/decode.py",
+          "sha256": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+          "size": 8023
+        },
+        {
+          "relative": "source/dflash_impl/target.py",
+          "sha256": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+          "size": 10371
+        },
+        {
+          "relative": "source/evaluate_dflash.py",
+          "sha256": "b0c8de5a93fd1534c47cc52f1a4952aa69108cb4a4096ea57208fb11552cb14d",
+          "size": 9897
+        },
+        {
+          "relative": "source/gpu_allocation.py",
+          "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+          "size": 828
+        },
+        {
+          "relative": "source/gpu_startup.py",
+          "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+          "size": 2141
+        },
+        {
+          "relative": "source/provenance.py",
+          "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+          "size": 822
+        },
+        {
+          "relative": "source-manifest.json",
+          "sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+          "size": 551
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1.log",
+          "sha256": "aaa4ec1b59dc7c4e4a638381560dde3901e5a596034a3ceca0f36dc3dae8d29c",
+          "size": 937
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1-launcher.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1-launcher.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1-launcher.json",
+          "sha256": "8e4034eb508f9b11b079e1592d03beb4d49b4a6d5de285ea548de8836d758b6f",
+          "size": 559
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-stack-ouro-2.6b-humanevalplus-t1-ar-v1-finished.json",
+          "sha256": "ead0a64bc26daf46e6d1a1f64be4316ffbcafc13b96f17dd759255f58bebc73d",
+          "size": 615
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-humanevalplus-t1.json",
+          "sha256": "d6458663cea7828ce7f8ebfd5af85573a9a15eada43e04424e06d8a3116a4b8e",
+          "size": 227
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1.log",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1.log",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-humanevalplus-t1.log",
+          "sha256": "f9884742fe79dd34bd8c50ce128abe9c5733827e254266c41c9dd9076239ddd4",
+          "size": 813
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1-finished.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1-finished.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-humanevalplus-t1-finished.json",
+          "sha256": "b02fdc44652ba8c3e68a0fa99afb5a606cd3a8a29c7498dac51c47ace682856e",
+          "size": 108
+        }
+      ]
+    },
+    {
+      "source": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1-worker-exit.json",
+      "destination": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/native-cuda-driver-recovery-v1/failed-attempts/logs/formal-controller-v1/dflash-ouro-2.6b-humanevalplus-t1-worker-exit.json",
+      "is_directory": false,
+      "files": [
+        {
+          "relative": "dflash-ouro-2.6b-humanevalplus-t1-worker-exit.json",
+          "sha256": "db4ccc8dee12ce9babf9d7def189aba25389f1155d7ca7977bd43909a514ef52",
+          "size": 293
+        }
+      ]
+    }
+  ]
+}

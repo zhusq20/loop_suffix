@@ -1,0 +1,29 @@
+{
+  "pid": 513244,
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/generate_teachers.py",
+    "--model",
+    "huginn-3.5b",
+    "--manifest",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/dflash-train.jsonl",
+    "--shard",
+    "0",
+    "--shards",
+    "8",
+    "--max-batch",
+    "32",
+    "--kv-budget-gib",
+    "70",
+    "--production-cache-proof",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-production-cache-v1",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b/shard0"
+  ],
+  "started_unix": 1794298248.459936
+}

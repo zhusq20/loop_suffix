@@ -135,6 +135,16 @@ def main():
     parser.add_argument('--resume', action='store_true')
     args = parser.parse_args()
     plan = read(HERE / 'plan.json')
+    reuse_path = BASE / 'preflight/user-resume-eight-gpu-v1/reuse.json'
+    reuse_manifest = read(reuse_path)
+    assert reuse_manifest['status'] == 'verified_existing_measurements_for_reuse'
+    reused = reuse_manifest['reuse']
+    for evidence in reused.values():
+        for run in evidence['runs'].values():
+            for name, key in [('requests.jsonl', 'requests_sha256'),
+                              ('metadata.json', 'metadata_sha256'),
+                              ('complete.json', 'complete_sha256')]:
+                assert sha(Path(run['path']) / name) == run[key]
     assert sha(HERE / 'lock_handoff.py') == plan['lock_handoff_sha256']
     amendment = read(HERE / 'recovery-amendment.json')
     assert amendment['original_controller_sha256'] == plan['controller_sha256']
@@ -178,6 +188,19 @@ def main():
                  scheduling='Retry first; then longest historical AR time first / 3, next available GPU.',
                  estimates={j['id']: cost(j) for j in jobs}, frozen_at_unix=time.time()))
         overlay = read(HERE / 'dispatch.json') if args.resume else {}
+        for key, evidence in reused.items():
+            if key not in original and key not in overlay:
+                overlay[key] = dict(outcome='reused_existing_measurement',
+                    reuse_manifest=str(reuse_path), reuse_manifest_sha256=sha(reuse_path),
+                    method_run=evidence['row']['method_run'],
+                    provenance_note=evidence['provenance_note'])
+        job_by_id = {j['id']: j for j in jobs}
+        for key, state in overlay.items():
+            if state['outcome'] == 'interrupted' and state.get('preserved_artifact_audit') == 'passed':
+                assert state.get('exit_code') is None
+                dflash.audit(SUITE, job_by_id[key], SUITE / state['out'])
+                state.update(outcome='complete_artifact_exit_unavailable',
+                    recovery_reason='Complete measurement artifacts revalidated; no automatic rerun. Process exit remains unknown and must be disclosed.')
         active, retired = {}, False
         retry = None
         legacy_lock = None
@@ -197,7 +220,7 @@ def main():
                     if attempt > overlay.get(key, {}).get('attempt', 0):
                         overlay[key] = dict(launch, outcome='running', attempt=attempt, out=str(out))
                 state = overlay.get(key)
-                if state:
+                if state and 'gpu' in state:
                     assigned[state['gpu']] += cost(job)
                 if state and state['outcome'] == 'running':
                     exit_path = HERE / f'{key}-attempt{state["attempt"]}-exit.json'
@@ -287,6 +310,8 @@ def main():
                         try:
                             dflash.audit(SUITE, entry['job'], SUITE / state['out'])
                             state['preserved_artifact_audit'] = 'passed'
+                            state['outcome'] = 'complete_artifact_exit_unavailable'
+                            state['recovery_reason'] = 'Complete measurement artifacts pass audit; retain without automatic rerun per user instruction. Process exit remains unknown and must be disclosed.'
                         except Exception as error:
                             state['preserved_artifact_audit'] = repr(error)
                     save(SUITE / 'logs' / f'{key}-attempt{state["attempt"]}-exit.json', state)
@@ -371,7 +396,9 @@ def main():
             if retired:
                 save(SUITE / 'dispatch.json', merged)
                 rows = dflash.summarize(SUITE)
-                counts = {s: sum(r['outcome'] == s for r in rows) for s in ['pending','running','complete','failed','oom','interrupted']}
+                counts = {s: sum(r['outcome'] == s for r in rows) for s in
+                    ['pending','running','complete','failed','oom','interrupted',
+                     'reused_existing_measurement','complete_artifact_exit_unavailable']}
                 save(SUITE / 'status.json', dict(status='running', counts=counts,
                      active={k:v for k,v in merged.items() if v['outcome'] == 'running'},
                      allowed_gpus=list(range(8)), planned=protocol['planned_formal_cells'],
@@ -383,6 +410,8 @@ def main():
                          original_running={k:v for k,v in old.items() if v['outcome'] == 'running' and k not in overlay},
                          retry=read(HERE / 'retry-status.json'), reserved_for_sql=sorted(reserved),
                          completed=[k for k,v in overlay.items() if v['outcome'] == 'complete'],
+                         reused_existing=[k for k,v in overlay.items() if v['outcome'] == 'reused_existing_measurement'],
+                         complete_artifacts_without_exit=[k for k,v in overlay.items() if v['outcome'] == 'complete_artifact_exit_unavailable'],
                          failed={k:v['outcome'] for k,v in overlay.items() if v['outcome'] in ['failed','oom']})
             save(HERE / 'status.json', state)
             if time.time() - last_telemetry >= 30:
@@ -397,7 +426,7 @@ def main():
                 save(SUITE / 'status.json', dict(status='finished', outcomes=terminal,
                      allowed_gpus=list(range(8)), updated_unix=time.time(), placement_amendment=str(HERE / 'plan.json')))
                 state.update(stage='complete' if retry['outcome'] == 'complete' and
-                    all(x == 'complete' for x in terminal.values()) else 'needs_attention', finished_unix=time.time())
+                    all(x in ['complete','reused_existing_measurement'] for x in terminal.values()) else 'needs_attention', finished_unix=time.time())
                 save(HERE / 'status.json', state)
                 save(HERE / 'finished.json', state)
                 assert (SUITE / 'STOP').read_text() == plan['stop_content']

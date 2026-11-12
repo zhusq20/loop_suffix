@@ -1,0 +1,26 @@
+{
+  "name": "dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "ar",
+    "--dataset",
+    "gsm8k",
+    "--temperature",
+    "1",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1"
+  ],
+  "pid": 101799,
+  "started_unix": 1794356805.9840043,
+  "exit_code": 0,
+  "finished_unix": 1794361943.0267265
+}

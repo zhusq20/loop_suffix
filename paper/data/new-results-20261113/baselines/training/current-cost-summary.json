@@ -1,0 +1,354 @@
+{
+  "partial": true,
+  "rows": [
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "counts": {
+        "dflash-train": {
+          "completed": 50000,
+          "expected": 50000
+        }
+      },
+      "generation_gpu_hours": {
+        "complete": 23.727771791881985
+      },
+      "feature_gpu_hours": {},
+      "training_gpu_hours": {
+        "complete": 24.4894640036424
+      },
+      "details": {
+        "steps": 8886,
+        "epochs": 6,
+        "eligible": 47387,
+        "eligible_source_counts": {
+          "codealpaca": 3470,
+          "nemotron_code": 9884,
+          "nemotron_math": 19900,
+          "ultrachat": 14133
+        },
+        "gpus": 2,
+        "selection": "final narrow Huginn checkpoint;332621056 parameters",
+        "rank0_peak_allocated_bytes": 28501811200,
+        "metadata_sha256": "36112bb83e1e893045af3b090bedd8364643d48f878289b8f76baa095039cb9b",
+        "complete_sha256": "f5e3ab33c20efd9b277e7103e981835337b924a08f564a26c3529749c16b8d65"
+      },
+      "status": "complete",
+      "reservation_paths": [
+        "checkpoints/dflash-huginn-narrow-formal-v1/reservation-cost-rank0.jsonl",
+        "checkpoints/dflash-huginn-narrow-formal-v1/reservation-cost-rank1.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "data/teachers/dflash-train/huginn-3.5b/shard7/reservation-cost.jsonl"
+      ]
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "counts": {
+        "dflash-train": {
+          "completed": 50000,
+          "expected": 50000
+        }
+      },
+      "generation_gpu_hours": {
+        "complete": 19.7196911162138
+      },
+      "feature_gpu_hours": {},
+      "training_gpu_hours": {
+        "complete": 12.010792617665397
+      },
+      "details": {
+        "steps": 9030,
+        "epochs": 6,
+        "eligible": 48137,
+        "eligible_source_counts": {
+          "codealpaca": 3857,
+          "nemotron_code": 10000,
+          "nemotron_math": 19670,
+          "ultrachat": 14610
+        },
+        "gpus": 2,
+        "selection": "final checkpoint",
+        "rank0_peak_allocated_bytes": 41377969152,
+        "metadata_sha256": "2365af833cb3018edaff2e426d0e1f38414e8f42e8fb69a344a55b5e47c7a416",
+        "complete_sha256": "e7b2570e8a39066ec9607fe986345419e06f6ef03ae5acd06421a4c578e4d235"
+      },
+      "status": "complete",
+      "reservation_paths": [
+        "checkpoints/dflash-ouro-2.6b-formal-v1/reservation-cost-rank0.jsonl",
+        "checkpoints/dflash-ouro-2.6b-formal-v1/reservation-cost-rank1.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard3/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard4/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard5/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard6/reservation-cost.jsonl",
+        "data/teachers/dflash-train/ouro-2.6b/shard7/reservation-cost.jsonl"
+      ]
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-1.4b",
+      "counts": {
+        "dflash-train": {
+          "completed": 50000,
+          "expected": 50000
+        }
+      },
+      "generation_gpu_hours": {
+        "complete": 12.060123348765902
+      },
+      "feature_gpu_hours": {},
+      "training_gpu_hours": {},
+      "details": {},
+      "status": "pending",
+      "reservation_paths": [
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-exit.json"
+      ],
+      "cost_source": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3",
+      "cost_scope": "Closed parent child-stage intervals plus observed gaps while the same GPU lease is held. Teacher nested reservations are not added again. CPU audit and one-update smoke are separate extras. Running-stage durations are not estimated. Final bound is the completion-marker timestamp; the unrecorded final marker-to-lock-release interval is excluded."
+    },
+    {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "counts": {
+        "loopahead-train": {
+          "completed": 9025,
+          "expected": 9025
+        },
+        "loopahead-dev": {
+          "completed": 782,
+          "expected": 782
+        },
+        "loopahead-confirmation": {
+          "completed": 782,
+          "expected": 782
+        }
+      },
+      "generation_gpu_hours": {
+        "complete": 11.704819595747525
+      },
+      "feature_gpu_hours": {
+        "complete": 0.4011701241466734
+      },
+      "training_gpu_hours": {
+        "complete": 0.1995019594166014
+      },
+      "details": {
+        "steps": 13539,
+        "epochs": 3,
+        "eligible": 9025,
+        "eligible_source_counts": {
+          "gsm8k": 2000,
+          "math": 2000,
+          "python": 2000,
+          "reasoning": 2025,
+          "ultrachat": 1000
+        },
+        "gpus": 1,
+        "selection": "checkpoint-013500",
+        "rank0_peak_allocated_bytes": 1875459584,
+        "metadata_sha256": "2ecc5f61abac6aa96701e815e35595400cc003c24f1940cd9c905d35e91c6a38",
+        "complete_sha256": "6bb35ca183ee8eb40b5805a462114ce0905402e0bf0a605333daa5c9b7248e18"
+      },
+      "status": "complete",
+      "reservation_paths": [
+        "checkpoints/loopahead-huginn-3.5b-formal-v1/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/huginn-3.5b/shard7/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/huginn-3.5b/shard7/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/huginn-3.5b/shard7/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "features/loopahead-confirmation/huginn-3.5b/shard7/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "features/loopahead-dev/huginn-3.5b/shard7/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard0/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard1/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard2/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard3/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard4/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard5/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard6/reservation-cost.jsonl",
+        "features/loopahead-train/huginn-3.5b/shard7/reservation-cost.jsonl"
+      ]
+    },
+    {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "counts": {
+        "loopahead-train": {
+          "completed": 9025,
+          "expected": 9025
+        },
+        "loopahead-dev": {
+          "completed": 782,
+          "expected": 782
+        },
+        "loopahead-confirmation": {
+          "completed": 782,
+          "expected": 782
+        }
+      },
+      "generation_gpu_hours": {
+        "complete": 4.853004624446233
+      },
+      "feature_gpu_hours": {
+        "complete": 0.1475107212861379
+      },
+      "training_gpu_hours": {
+        "complete": 0.14824656864007313
+      },
+      "details": {
+        "steps": 13539,
+        "epochs": 3,
+        "eligible": 9025,
+        "eligible_source_counts": {
+          "gsm8k": 2000,
+          "math": 2000,
+          "python": 2000,
+          "reasoning": 2025,
+          "ultrachat": 1000
+        },
+        "gpus": 1,
+        "selection": "checkpoint-013000",
+        "rank0_peak_allocated_bytes": 735053312,
+        "metadata_sha256": "a4cf2c1d4416caf090bdf6b9bd34fd90c6bbda0dad6a4cdbfee71e5c48be59c8",
+        "complete_sha256": "60f9a7d4b0ebd12210c103a059d9924800658e5335daa91abb6a90dcbcb15785"
+      },
+      "status": "complete",
+      "reservation_paths": [
+        "checkpoints/loopahead-ouro-2.6b-formal-v1/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/ouro-2.6b/shard3/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/ouro-2.6b/shard3/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/ouro-2.6b/shard3/reservation-cost.jsonl",
+        "features/loopahead-confirmation/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "features/loopahead-confirmation/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "features/loopahead-confirmation/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "features/loopahead-confirmation/ouro-2.6b/shard3/reservation-cost.jsonl",
+        "features/loopahead-dev/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "features/loopahead-dev/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "features/loopahead-dev/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "features/loopahead-dev/ouro-2.6b/shard3/reservation-cost.jsonl",
+        "features/loopahead-train/ouro-2.6b/shard0/reservation-cost.jsonl",
+        "features/loopahead-train/ouro-2.6b/shard1/reservation-cost.jsonl",
+        "features/loopahead-train/ouro-2.6b/shard2/reservation-cost.jsonl",
+        "features/loopahead-train/ouro-2.6b/shard3/reservation-cost.jsonl"
+      ]
+    },
+    {
+      "method": "loopahead",
+      "model": "ouro-1.4b",
+      "counts": {
+        "loopahead-train": {
+          "completed": 9025,
+          "expected": 9025
+        },
+        "loopahead-dev": {
+          "completed": 782,
+          "expected": 782
+        },
+        "loopahead-confirmation": {
+          "completed": 782,
+          "expected": 782
+        }
+      },
+      "generation_gpu_hours": {
+        "complete": 2.456943763759401
+      },
+      "feature_gpu_hours": {
+        "complete": 0.08352445662021638
+      },
+      "training_gpu_hours": {
+        "complete": 0.14642724653085074
+      },
+      "details": {
+        "steps": 13533,
+        "epochs": 3,
+        "eligible": 9022,
+        "eligible_source_counts": {
+          "gsm8k": 2000,
+          "math": 2000,
+          "python": 1999,
+          "reasoning": 2025,
+          "ultrachat": 998
+        },
+        "gpus": 1,
+        "selection": "checkpoint-013533",
+        "rank0_peak_allocated_bytes": 735053824,
+        "metadata_sha256": "e1cd71d67f2588c7a580bb314a27ababfe096e9c52a285e1b112fafa77dccb6f",
+        "complete_sha256": "1ebeed11ab297516913eb4a5ea401cfae80b7c0e2976976792ba32076d19fa03"
+      },
+      "status": "complete",
+      "reservation_paths": [
+        "checkpoints/loopahead-ouro-1.4b-formal-v1/reservation-cost.jsonl",
+        "data/teachers/loopahead-confirmation/ouro-1.4b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-dev/ouro-1.4b/shard0/reservation-cost.jsonl",
+        "data/teachers/loopahead-train/ouro-1.4b/shard0/reservation-cost.jsonl",
+        "features/loopahead-confirmation/ouro-1.4b/shard0/reservation-cost.jsonl",
+        "features/loopahead-dev/ouro-1.4b/shard0/reservation-cost.jsonl",
+        "features/loopahead-train/ouro-1.4b/shard0/reservation-cost.jsonl"
+      ]
+    }
+  ],
+  "ledger_sha256": "5fc429bdb304173afaf57d39438f3329675ca1240a85c572a01163161b1d0ff8",
+  "ledger_snapshot": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/current-cost-summary-ledger.json",
+  "total_recorded_gpu_hours": 136.61136521842744,
+  "hardware": [
+    "0, NVIDIA L20X, GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111, 143771 MiB",
+    "1, NVIDIA L20X, GPU-520fad11-804c-b419-7096-2a19c219449b, 143771 MiB",
+    "2, NVIDIA L20X, GPU-861ad2de-b899-21ca-707e-44c0a1ce1029, 143771 MiB",
+    "3, NVIDIA L20X, GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3, 143771 MiB",
+    "4, NVIDIA L20X, GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda, 143771 MiB",
+    "5, NVIDIA L20X, GPU-2dc90f87-ad67-93a7-d0c5-218a3543318a, 143771 MiB",
+    "6, NVIDIA L20X, GPU-e54049b5-ca93-d066-efc5-6942d59bf762, 143771 MiB",
+    "7, NVIDIA L20X, GPU-afc353e9-924d-40c1-75bb-c126dc83e41e, 143771 MiB"
+  ]
+}

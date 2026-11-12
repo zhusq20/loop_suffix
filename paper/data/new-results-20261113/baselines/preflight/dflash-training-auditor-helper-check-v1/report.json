@@ -1,0 +1,42 @@
+{
+  "status": "helper_checks_passed_not_formal_training_audit",
+  "pilot": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-pilot-v1",
+  "pilot_metrics_sha256": "99e0983158cdf4ae195eadc09a7e3099faeb0afe24d4dd865d84e2b584a6c68c",
+  "pilot_weights_sha256": "4db62032ecb2b269f7b3ca6680fcfec1e03bab123ce1f77350f0c5e20cc57d73",
+  "metrics": {
+    "updates": 61,
+    "updates_per_epoch": 61,
+    "epoch_update_counts": {
+      "0": 61
+    },
+    "all_logged_metrics_finite": true,
+    "first_loss": 11.644363403320312,
+    "final_loss": 6.596668243408203,
+    "max_grad_norm": 90.4066162109375,
+    "rank0_peak_allocated_bytes": 40777707008,
+    "sum_optimizer_update_wall_s": 153.8257414624095,
+    "timing_scope": "Logged optimizer updates only; full GPU reservation cost is reported separately."
+  },
+  "learning_rate_schedule": {
+    "all_logged_learning_rates_match": true,
+    "max_absolute_error": 0.0,
+    "scheduler_source_sha256": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+    "torch": "2.9.1+cu128",
+    "specforge_commit": "ea5a5f5902b3493b3b6045f249f5aa57cbd100a1",
+    "pinned_dependency_hashes": {
+      "specforge/lr_scheduler.py": "839d4b3aec754c7c5ea16e69c84776357e6741efa1b9455b0203056f2b59ef7e",
+      "specforge/optimizer.py": "f0aedfad5fe11100470e7f49518b20d439cf47ec9afc195af089dfeca3affc54"
+    },
+    "logged_max_lr": 0.0006004254928233804,
+    "nominal_lr": 0.0006,
+    "note": "Replay the pinned official scheduler, including its warmup-to-cosine boundary behavior."
+  },
+  "weights": {
+    "parameters": 277898496,
+    "tensor_count": 58,
+    "all_weights_finite": true,
+    "cuda_initialized": false
+  },
+  "incomplete_formal_refused_without_output": true,
+  "finished_unix": 1794340353.9214768
+}

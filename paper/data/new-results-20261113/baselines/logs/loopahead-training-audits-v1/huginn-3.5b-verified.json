@@ -1,0 +1,26 @@
+{
+  "model": "huginn-3.5b",
+  "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-huginn-3.5b-formal-audit-v2/report.json",
+  "audit_report_sha256": "d4a29c8c6e48ff6c9e830ba41f332536e71e8b761afaa76335924d55d25f5379",
+  "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+  "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+  "actual_audit_exit": {
+    "name": "audit-loopahead-huginn-3.5b-formal-v2",
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+      "--model",
+      "huginn-3.5b",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-huginn-3.5b-formal-audit-v2"
+    ],
+    "pid": 71753,
+    "started_unix": 1794354885.8423781,
+    "exit_code": 0,
+    "finished_unix": 1794354891.5099359
+  },
+  "training_gpu_hours": 0.1995019594166014,
+  "reused_existing_audit": true,
+  "checked_unix": 1794355336.5574117
+}

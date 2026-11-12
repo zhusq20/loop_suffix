@@ -1,0 +1,19 @@
+{
+  "status": "prepared_and_cpu_verified_not_started",
+  "source_manifest_sha256": "e4e68c3fe6de46553d90a74a2a55b0e2d2d0875769a923fd1bda327fa0837b80",
+  "inputs_report_sha256": "3f765f311dd09a31927ee9d0b01e2eca9b71d7e05cd5c30d8978d9d27706f539",
+  "test_actual_exit_sha256": "24ccebeb891aaec8cdbbe4d7ca7a611679dc7b2e00b57d08fef955f1d64e2330",
+  "inputs_actual_exit_sha256": "828f056eaf9106bb804351eabd58ca2c0b47c94ca06a3c5480ef91aabc81bb67",
+  "tests": 8,
+  "negative_bindings": 6,
+  "reused_cases": 262,
+  "pending_cases": 167,
+  "new_gpu_runs": 0,
+  "original_entry_unchanged": true,
+  "unchanged_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "checked_unix": 1794509845.1847444,
+  "remaining_work": [
+    "Freeze a new attempt and integrate its original interrupted and resumed evidence into the numerical audit.",
+    "Schedule only the remaining 167 cases after measurement priority, then require actual exit 0 and full 429-case validation."
+  ]
+}

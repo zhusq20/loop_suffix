@@ -1,0 +1,1602 @@
+[
+  {
+    "instance_id": "spider-dev-0503",
+    "original_index": 503,
+    "db_id": "battle_death",
+    "question": "How many battles did not lose any ship with tonnage '225'?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"battle\" (\n\"id\" int,\n\"name\" text,\n\"date\" text,\n\"bulgarian_commander\" text,\n\"latin_commander\" text,\n\"result\" text,\nprimary key(\"id\")\n);\nCREATE TABLE \"death\" (\n\"caused_by_ship_id\" int,\n\"id\" int,\n\"note\" text,\n\"killed\" int,\n\"injured\" int,\nprimary key(\"id\"),\nforeign key (\"caused_by_ship_id\") references `ship`(\"id\") \n);\nCREATE TABLE \"ship\" (\n\"lost_in_battle\" int,\n\"id\" int,\n\"name\" text,\n\"tonnage\" text,\n\"ship_type\" text,\n\"location\" text,\n\"disposition_of_ship\" text,\nprimary key(\"id\"),\nforeign key (`lost_in_battle`) references `battle`(\"id\") \n);\n\nQuestion: How many battles did not lose any ship with tonnage '225'?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0011",
+    "original_index": 11,
+    "db_id": "concert_singer",
+    "question": "How many singers are from each country?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"concert\" (\n\"concert_ID\" int,\n\"concert_Name\" text,\n\"Theme\" text,\n\"Stadium_ID\" text,\n\"Year\" text,\nPRIMARY KEY (\"concert_ID\"),\nFOREIGN KEY (\"Stadium_ID\") REFERENCES \"stadium\"(\"Stadium_ID\")\n);\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Country\" text,\n\"Song_Name\" text,\n\"Song_release_year\" text,\n\"Age\" int,\n\"Is_male\" bool,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"singer_in_concert\" (\n\"concert_ID\" int,\n\"Singer_ID\" text,\nPRIMARY KEY (\"concert_ID\",\"Singer_ID\"),\nFOREIGN KEY (\"concert_ID\") REFERENCES \"concert\"(\"concert_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES \"singer\"(\"Singer_ID\")\n);\nCREATE TABLE \"stadium\" (\n\"Stadium_ID\" int,\n\"Location\" text,\n\"Name\" text,\n\"Capacity\" int,\n\"Highest\" int,\n\"Lowest\" int,\n\"Average\" int,\nPRIMARY KEY (\"Stadium_ID\")\n);\n\nQuestion: How many singers are from each country?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0555",
+    "original_index": 555,
+    "db_id": "student_transcripts_tracking",
+    "question": "Who is the first student to register? List the first name, middle name and last name.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`line_1` VARCHAR(255),\n`line_2` VARCHAR(255),\n`line_3` VARCHAR(255),\n`city` VARCHAR(255),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(255),\n`country` VARCHAR(255),\n`other_address_details` VARCHAR(255)\n);\nCREATE TABLE `Courses` (\n`course_id` INTEGER PRIMARY KEY,\n`course_name` VARCHAR(255),\n`course_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Degree_Programs` (\n`degree_program_id` INTEGER PRIMARY KEY,\n`department_id` INTEGER NOT NULL,\n`degree_summary_name` VARCHAR(255),\n`degree_summary_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )\n);\nCREATE TABLE `Departments` (\n`department_id` INTEGER PRIMARY KEY,\n`department_name` VARCHAR(255),\n`department_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Sections` (\n`section_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`section_name` VARCHAR(255),\n`section_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )\n);\nCREATE TABLE `Semesters` (\n`semester_id` INTEGER PRIMARY KEY,\n`semester_name` VARCHAR(255),\n`semester_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Student_Enrolment` (\n`student_enrolment_id` INTEGER PRIMARY KEY,\n`degree_program_id` INTEGER NOT NULL,\n`semester_id` INTEGER NOT NULL,\n`student_id` INTEGER NOT NULL,\n`other_details` VARCHAR(255),\nFOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),\nFOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),\nFOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )\n);\nCREATE TABLE `Student_Enrolment_Courses` (\n`student_course_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`student_enrolment_id` INTEGER NOT NULL,\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),\nFOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )\n);\nCREATE TABLE `Students` (\n`student_id` INTEGER PRIMARY KEY,\n`current_address_id` INTEGER NOT NULL,\n`permanent_address_id` INTEGER NOT NULL,\n`first_name` VARCHAR(80),\n`middle_name` VARCHAR(40),\n`last_name` VARCHAR(40),\n`cell_mobile_number` VARCHAR(40),\n`email_address` VARCHAR(40),\n`ssn` VARCHAR(40),\n`date_first_registered` DATETIME,\n`date_left` DATETIME,\n`other_student_details` VARCHAR(255),\nFOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )\n);\nCREATE TABLE `Transcript_Contents` (\n`student_course_id` INTEGER NOT NULL,\n`transcript_id` INTEGER NOT NULL,\nFOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),\nFOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )\n);\nCREATE TABLE `Transcripts` (\n`transcript_id` INTEGER PRIMARY KEY,\n`transcript_date` DATETIME,\n`other_details` VARCHAR(255)\n);\n\nQuestion: Who is the first student to register? List the first name, middle name and last name."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0986",
+    "original_index": 986,
+    "db_id": "dog_kennels",
+    "question": "What is the average age of all the dogs?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Breeds` (\n`breed_code` VARCHAR(10) PRIMARY KEY ,\n`breed_name` VARCHAR(80)\n);\nCREATE TABLE `Charges` (\n`charge_id` INTEGER PRIMARY KEY ,\n`charge_type` VARCHAR(10),\n`charge_amount` DECIMAL(19,4)\n);\nCREATE TABLE `Dogs` (\n`dog_id` INTEGER PRIMARY KEY ,\n`owner_id` INTEGER NOT NULL,\n`abandoned_yn` VARCHAR(1),\n`breed_code` VARCHAR(10) NOT NULL,\n`size_code` VARCHAR(10) NOT NULL,\n`name` VARCHAR(50),\n`age` VARCHAR(20),\n`date_of_birth` DATETIME,\n`gender` VARCHAR(1),\n`weight` VARCHAR(20),\n`date_arrived` DATETIME,\n`date_adopted` DATETIME,\n`date_departed` DATETIME,\nFOREIGN KEY (`breed_code` ) REFERENCES `Breeds`(`breed_code` ),\nFOREIGN KEY (`size_code` ) REFERENCES `Sizes`(`size_code` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` )\n);\nCREATE TABLE `Owners` (\n`owner_id` INTEGER PRIMARY KEY ,\n`first_name` VARCHAR(50),\n`last_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Professionals` (\n`professional_id` INTEGER PRIMARY KEY ,\n`role_code` VARCHAR(10) NOT NULL,\n`first_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`last_name` VARCHAR(50),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Sizes` (\n`size_code` VARCHAR(10) PRIMARY KEY ,\n`size_description` VARCHAR(80)\n);\nCREATE TABLE `Treatment_Types` (\n`treatment_type_code` VARCHAR(10) PRIMARY KEY ,\n`treatment_type_description` VARCHAR(80)\n);\nCREATE TABLE `Treatments` (\n`treatment_id` INTEGER PRIMARY KEY ,\n`dog_id` INTEGER NOT NULL,\n`professional_id` INTEGER NOT NULL,\n`treatment_type_code` VARCHAR(10) NOT NULL,\n`date_of_treatment` DATETIME,\n`cost_of_treatment` DECIMAL(19,4),\nFOREIGN KEY (`treatment_type_code` ) REFERENCES `Treatment_Types`(`treatment_type_code` ),\nFOREIGN KEY (`professional_id` ) REFERENCES `Professionals`(`professional_id` ),\nFOREIGN KEY (`dog_id` ) REFERENCES `Dogs`(`dog_id` )\n);\n\nQuestion: What is the average age of all the dogs?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0121",
+    "original_index": 121,
+    "db_id": "car_1",
+    "question": "What are all the makers and models?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);\n\nQuestion: What are all the makers and models?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0048",
+    "original_index": 48,
+    "db_id": "pets_1",
+    "question": "How much does the youngest dog weigh?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Has_Pet (\n       StuID\t\tINTEGER,\n       PetID\t\tINTEGER,\n       FOREIGN KEY(PetID) REFERENCES Pets(PetID),\n       FOREIGN KEY(StuID) REFERENCES Student(StuID)\n);\nCREATE TABLE Pets (\n       PetID\t\tINTEGER PRIMARY KEY,\n       PetType\t\tVARCHAR(20),\n       pet_age INTEGER,\n       weight REAL\n);\nCREATE TABLE Student (\n       StuID    \tINTEGER PRIMARY KEY,\n       LName\t\tVARCHAR(12),\n       Fname\t\tVARCHAR(12),\n       Age\t\tINTEGER,\n       Sex\t\tVARCHAR(1),\n       Major\t\tINTEGER,\n       Advisor\t\tINTEGER,\n       city_code\tVARCHAR(3)\n);\n\nQuestion: How much does the youngest dog weigh?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0554",
+    "original_index": 554,
+    "db_id": "student_transcripts_tracking",
+    "question": "What is the mobile phone number of the student named Timmothy Ward ?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`line_1` VARCHAR(255),\n`line_2` VARCHAR(255),\n`line_3` VARCHAR(255),\n`city` VARCHAR(255),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(255),\n`country` VARCHAR(255),\n`other_address_details` VARCHAR(255)\n);\nCREATE TABLE `Courses` (\n`course_id` INTEGER PRIMARY KEY,\n`course_name` VARCHAR(255),\n`course_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Degree_Programs` (\n`degree_program_id` INTEGER PRIMARY KEY,\n`department_id` INTEGER NOT NULL,\n`degree_summary_name` VARCHAR(255),\n`degree_summary_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )\n);\nCREATE TABLE `Departments` (\n`department_id` INTEGER PRIMARY KEY,\n`department_name` VARCHAR(255),\n`department_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Sections` (\n`section_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`section_name` VARCHAR(255),\n`section_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )\n);\nCREATE TABLE `Semesters` (\n`semester_id` INTEGER PRIMARY KEY,\n`semester_name` VARCHAR(255),\n`semester_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Student_Enrolment` (\n`student_enrolment_id` INTEGER PRIMARY KEY,\n`degree_program_id` INTEGER NOT NULL,\n`semester_id` INTEGER NOT NULL,\n`student_id` INTEGER NOT NULL,\n`other_details` VARCHAR(255),\nFOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),\nFOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),\nFOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )\n);\nCREATE TABLE `Student_Enrolment_Courses` (\n`student_course_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`student_enrolment_id` INTEGER NOT NULL,\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),\nFOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )\n);\nCREATE TABLE `Students` (\n`student_id` INTEGER PRIMARY KEY,\n`current_address_id` INTEGER NOT NULL,\n`permanent_address_id` INTEGER NOT NULL,\n`first_name` VARCHAR(80),\n`middle_name` VARCHAR(40),\n`last_name` VARCHAR(40),\n`cell_mobile_number` VARCHAR(40),\n`email_address` VARCHAR(40),\n`ssn` VARCHAR(40),\n`date_first_registered` DATETIME,\n`date_left` DATETIME,\n`other_student_details` VARCHAR(255),\nFOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )\n);\nCREATE TABLE `Transcript_Contents` (\n`student_course_id` INTEGER NOT NULL,\n`transcript_id` INTEGER NOT NULL,\nFOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),\nFOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )\n);\nCREATE TABLE `Transcripts` (\n`transcript_id` INTEGER PRIMARY KEY,\n`transcript_date` DATETIME,\n`other_details` VARCHAR(255)\n);\n\nQuestion: What is the mobile phone number of the student named Timmothy Ward ?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0641",
+    "original_index": 641,
+    "db_id": "tvshow",
+    "question": "find id of the tv channels that from the countries where have more than two tv channels.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"Cartoon\" (\n\"id\" real,\n\"Title\" text,\n\"Directed_by\" text,\n\"Written_by\" text,\n\"Original_air_date\" text,\n\"Production_code\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\nCREATE TABLE \"TV_Channel\" (\n\"id\" text,\n\"series_name\" text,\n\"Country\" text,\n\"Language\" text,\n\"Content\" text,\n\"Pixel_aspect_ratio_PAR\" text,\n\"Hight_definition_TV\" text,\n\"Pay_per_view_PPV\" text,\n\"Package_Option\" text,\nPRIMARY KEY (\"id\")\n);\nCREATE TABLE \"TV_series\" (\n\"id\" real,\n\"Episode\" text,\n\"Air_Date\" text,\n\"Rating\" text,\n\"Share\" real,\n\"18_49_Rating_Share\" text,\n\"Viewers_m\" text,\n\"Weekly_Rank\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\n\nQuestion: find id of the tv channels that from the countries where have more than two tv channels."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0830",
+    "original_index": 830,
+    "db_id": "orchestra",
+    "question": "What is the average attendance of shows?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"conductor\" (\n\"Conductor_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"Nationality\" text,\n\"Year_of_Work\" int,\nPRIMARY KEY (\"Conductor_ID\")\n);\nCREATE TABLE \"orchestra\" (\n\"Orchestra_ID\" int,\n\"Orchestra\" text,\n\"Conductor_ID\" int,\n\"Record_Company\" text,\n\"Year_of_Founded\" real,\n\"Major_Record_Format\" text,\nPRIMARY KEY (\"Orchestra_ID\"),\nFOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)\n);\nCREATE TABLE \"performance\" (\n\"Performance_ID\" int,\n\"Orchestra_ID\" int,\n\"Type\" text,\n\"Date\" text,\n\"Official_ratings_(millions)\" real,\n\"Weekly_rank\" text,\n\"Share\" text,\nPRIMARY KEY (\"Performance_ID\"),\nFOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)\n);\nCREATE TABLE \"show\" (\n\"Show_ID\" int,\n\"Performance_ID\" int,\n\"If_first_show\" bool,\n\"Result\" text,\n\"Attendance\" real,\nFOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)\n);\n\nQuestion: What is the average attendance of shows?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0308",
+    "original_index": 308,
+    "db_id": "cre_Doc_Template_Mgt",
+    "question": "Count the number of documents that use the PPT template type.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Documents (\nDocument_ID INTEGER NOT NULL,\nTemplate_ID INTEGER,\nDocument_Name VARCHAR(255),\nDocument_Description VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Document_ID),\nFOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)\n);\nCREATE TABLE Paragraphs (\nParagraph_ID INTEGER NOT NULL,\nDocument_ID INTEGER NOT NULL,\nParagraph_Text VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Paragraph_ID),\nFOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)\n);\nCREATE TABLE Ref_Template_Types (\nTemplate_Type_Code CHAR(15) NOT NULL,\nTemplate_Type_Description VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_Type_Code)\n);\nCREATE TABLE Templates (\nTemplate_ID INTEGER NOT NULL,\nVersion_Number INTEGER NOT NULL,\nTemplate_Type_Code CHAR(15) NOT NULL,\nDate_Effective_From DATETIME,\nDate_Effective_To DATETIME,\nTemplate_Details VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_ID),\nFOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)\n);\n\nQuestion: Count the number of documents that use the PPT template type."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0348",
+    "original_index": 348,
+    "db_id": "cre_Doc_Template_Mgt",
+    "question": "What are the type codes and descriptions for all template types?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Documents (\nDocument_ID INTEGER NOT NULL,\nTemplate_ID INTEGER,\nDocument_Name VARCHAR(255),\nDocument_Description VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Document_ID),\nFOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)\n);\nCREATE TABLE Paragraphs (\nParagraph_ID INTEGER NOT NULL,\nDocument_ID INTEGER NOT NULL,\nParagraph_Text VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Paragraph_ID),\nFOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)\n);\nCREATE TABLE Ref_Template_Types (\nTemplate_Type_Code CHAR(15) NOT NULL,\nTemplate_Type_Description VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_Type_Code)\n);\nCREATE TABLE Templates (\nTemplate_ID INTEGER NOT NULL,\nVersion_Number INTEGER NOT NULL,\nTemplate_Type_Code CHAR(15) NOT NULL,\nDate_Effective_From DATETIME,\nDate_Effective_To DATETIME,\nTemplate_Details VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_ID),\nFOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)\n);\n\nQuestion: What are the type codes and descriptions for all template types?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0469",
+    "original_index": 469,
+    "db_id": "wta_1",
+    "question": "Find the average ranking for each player and their first name.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE matches(\n  \"best_of\" INT,\n  \"draw_size\" INT,\n  \"loser_age\" FLOAT,\n  \"loser_entry\" TEXT,\n  \"loser_hand\" TEXT,\n  \"loser_ht\" INT,\n  \"loser_id\" INT,\n  \"loser_ioc\" TEXT,\n  \"loser_name\" TEXT,\n  \"loser_rank\" INT,\n  \"loser_rank_points\" INT,\n  \"loser_seed\" INT,\n  \"match_num\" INT,\n  \"minutes\" INT,\n  \"round\" TEXT,\n  \"score\" TEXT,\n  \"surface\" TEXT,\n  \"tourney_date\" DATE,\n  \"tourney_id\" TEXT,\n  \"tourney_level\" TEXT,\n  \"tourney_name\" TEXT,\n  \"winner_age\" FLOAT,\n  \"winner_entry\" TEXT,\n  \"winner_hand\" TEXT,\n  \"winner_ht\" INT,\n  \"winner_id\" INT,\n  \"winner_ioc\" TEXT,\n  \"winner_name\" TEXT,\n  \"winner_rank\" INT,\n  \"winner_rank_points\" INT,\n  \"winner_seed\" INT,\n  \"year\" INT,\n  FOREIGN KEY(loser_id) REFERENCES players(player_id),\n  FOREIGN KEY(winner_id) REFERENCES players(player_id)\n);\nCREATE TABLE players(\n    \"player_id\" INT PRIMARY KEY,\n    \"first_name\" TEXT,\n    \"last_name\" TEXT,\n    \"hand\" TEXT,\n    \"birth_date\" DATE,\n    \"country_code\" TEXT\n);\nCREATE TABLE rankings(\"ranking_date\" DATE,\"ranking\" INT,\"player_id\" INT,\"ranking_points\" INT,\"tours\" INT,FOREIGN KEY(player_id) REFERENCES players(player_id));\n\nQuestion: Find the average ranking for each player and their first name."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0438",
+    "original_index": 438,
+    "db_id": "wta_1",
+    "question": "What is the average rank for winners in all matches?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE matches(\n  \"best_of\" INT,\n  \"draw_size\" INT,\n  \"loser_age\" FLOAT,\n  \"loser_entry\" TEXT,\n  \"loser_hand\" TEXT,\n  \"loser_ht\" INT,\n  \"loser_id\" INT,\n  \"loser_ioc\" TEXT,\n  \"loser_name\" TEXT,\n  \"loser_rank\" INT,\n  \"loser_rank_points\" INT,\n  \"loser_seed\" INT,\n  \"match_num\" INT,\n  \"minutes\" INT,\n  \"round\" TEXT,\n  \"score\" TEXT,\n  \"surface\" TEXT,\n  \"tourney_date\" DATE,\n  \"tourney_id\" TEXT,\n  \"tourney_level\" TEXT,\n  \"tourney_name\" TEXT,\n  \"winner_age\" FLOAT,\n  \"winner_entry\" TEXT,\n  \"winner_hand\" TEXT,\n  \"winner_ht\" INT,\n  \"winner_id\" INT,\n  \"winner_ioc\" TEXT,\n  \"winner_name\" TEXT,\n  \"winner_rank\" INT,\n  \"winner_rank_points\" INT,\n  \"winner_seed\" INT,\n  \"year\" INT,\n  FOREIGN KEY(loser_id) REFERENCES players(player_id),\n  FOREIGN KEY(winner_id) REFERENCES players(player_id)\n);\nCREATE TABLE players(\n    \"player_id\" INT PRIMARY KEY,\n    \"first_name\" TEXT,\n    \"last_name\" TEXT,\n    \"hand\" TEXT,\n    \"birth_date\" DATE,\n    \"country_code\" TEXT\n);\nCREATE TABLE rankings(\"ranking_date\" DATE,\"ranking\" INT,\"player_id\" INT,\"ranking_points\" INT,\"tours\" INT,FOREIGN KEY(player_id) REFERENCES players(player_id));\n\nQuestion: What is the average rank for winners in all matches?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0323",
+    "original_index": 323,
+    "db_id": "cre_Doc_Template_Mgt",
+    "question": "What are the ids of templates with template type code PP or PPT?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Documents (\nDocument_ID INTEGER NOT NULL,\nTemplate_ID INTEGER,\nDocument_Name VARCHAR(255),\nDocument_Description VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Document_ID),\nFOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)\n);\nCREATE TABLE Paragraphs (\nParagraph_ID INTEGER NOT NULL,\nDocument_ID INTEGER NOT NULL,\nParagraph_Text VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Paragraph_ID),\nFOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)\n);\nCREATE TABLE Ref_Template_Types (\nTemplate_Type_Code CHAR(15) NOT NULL,\nTemplate_Type_Description VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_Type_Code)\n);\nCREATE TABLE Templates (\nTemplate_ID INTEGER NOT NULL,\nVersion_Number INTEGER NOT NULL,\nTemplate_Type_Code CHAR(15) NOT NULL,\nDate_Effective_From DATETIME,\nDate_Effective_To DATETIME,\nTemplate_Details VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_ID),\nFOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)\n);\n\nQuestion: What are the ids of templates with template type code PP or PPT?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0784",
+    "original_index": 784,
+    "db_id": "world_1",
+    "question": "Which cities are in European countries where English is not the official language?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `city` (\n  `ID` integer NOT NULL PRIMARY KEY AUTOINCREMENT\n,  `Name` char(35) NOT NULL DEFAULT ''\n,  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `District` char(20) NOT NULL DEFAULT ''\n,  `Population` integer NOT NULL DEFAULT '0'\n,  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\nCREATE TABLE `country` (\n  `Code` char(3) NOT NULL DEFAULT ''\n,  `Name` char(52) NOT NULL DEFAULT ''\n,  `Continent` text  NOT NULL DEFAULT 'Asia'\n,  `Region` char(26) NOT NULL DEFAULT ''\n,  `SurfaceArea` float(10,2) NOT NULL DEFAULT '0.00'\n,  `IndepYear` integer DEFAULT NULL\n,  `Population` integer NOT NULL DEFAULT '0'\n,  `LifeExpectancy` float(3,1) DEFAULT NULL\n,  `GNP` float(10,2) DEFAULT NULL\n,  `GNPOld` float(10,2) DEFAULT NULL\n,  `LocalName` char(45) NOT NULL DEFAULT ''\n,  `GovernmentForm` char(45) NOT NULL DEFAULT ''\n,  `HeadOfState` char(60) DEFAULT NULL\n,  `Capital` integer DEFAULT NULL\n,  `Code2` char(2) NOT NULL DEFAULT ''\n,  PRIMARY KEY (`Code`)\n);\nCREATE TABLE `countrylanguage` (\n  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `Language` char(30) NOT NULL DEFAULT ''\n,  `IsOfficial` text  NOT NULL DEFAULT 'F'\n,  `Percentage` float(4,1) NOT NULL DEFAULT '0.0'\n,  PRIMARY KEY (`CountryCode`,`Language`)\n,  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\n\nQuestion: Which cities are in European countries where English is not the official language?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0944",
+    "original_index": 944,
+    "db_id": "dog_kennels",
+    "question": "What are the first name and last name of the professionals who have done treatment with cost below average?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Breeds` (\n`breed_code` VARCHAR(10) PRIMARY KEY ,\n`breed_name` VARCHAR(80)\n);\nCREATE TABLE `Charges` (\n`charge_id` INTEGER PRIMARY KEY ,\n`charge_type` VARCHAR(10),\n`charge_amount` DECIMAL(19,4)\n);\nCREATE TABLE `Dogs` (\n`dog_id` INTEGER PRIMARY KEY ,\n`owner_id` INTEGER NOT NULL,\n`abandoned_yn` VARCHAR(1),\n`breed_code` VARCHAR(10) NOT NULL,\n`size_code` VARCHAR(10) NOT NULL,\n`name` VARCHAR(50),\n`age` VARCHAR(20),\n`date_of_birth` DATETIME,\n`gender` VARCHAR(1),\n`weight` VARCHAR(20),\n`date_arrived` DATETIME,\n`date_adopted` DATETIME,\n`date_departed` DATETIME,\nFOREIGN KEY (`breed_code` ) REFERENCES `Breeds`(`breed_code` ),\nFOREIGN KEY (`size_code` ) REFERENCES `Sizes`(`size_code` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` )\n);\nCREATE TABLE `Owners` (\n`owner_id` INTEGER PRIMARY KEY ,\n`first_name` VARCHAR(50),\n`last_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Professionals` (\n`professional_id` INTEGER PRIMARY KEY ,\n`role_code` VARCHAR(10) NOT NULL,\n`first_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`last_name` VARCHAR(50),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Sizes` (\n`size_code` VARCHAR(10) PRIMARY KEY ,\n`size_description` VARCHAR(80)\n);\nCREATE TABLE `Treatment_Types` (\n`treatment_type_code` VARCHAR(10) PRIMARY KEY ,\n`treatment_type_description` VARCHAR(80)\n);\nCREATE TABLE `Treatments` (\n`treatment_id` INTEGER PRIMARY KEY ,\n`dog_id` INTEGER NOT NULL,\n`professional_id` INTEGER NOT NULL,\n`treatment_type_code` VARCHAR(10) NOT NULL,\n`date_of_treatment` DATETIME,\n`cost_of_treatment` DECIMAL(19,4),\nFOREIGN KEY (`treatment_type_code` ) REFERENCES `Treatment_Types`(`treatment_type_code` ),\nFOREIGN KEY (`professional_id` ) REFERENCES `Professionals`(`professional_id` ),\nFOREIGN KEY (`dog_id` ) REFERENCES `Dogs`(`dog_id` )\n);\n\nQuestion: What are the first name and last name of the professionals who have done treatment with cost below average?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0412",
+    "original_index": 412,
+    "db_id": "museum_visit",
+    "question": "Find the names of the visitors whose membership level is higher than 4, and order the results by the level from high to low.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"museum\" (\n\"Museum_ID\" int,\n\"Name\" text,\n\"Num_of_Staff\" int,\n\"Open_Year\" text,\nPRIMARY KEY (\"Museum_ID\")\n);\nCREATE TABLE \"visit\" (\n\"Museum_ID\" int,\n\"visitor_ID\" text,\n\"Num_of_Ticket\" int,\n\"Total_spent\" real,\nPRIMARY KEY (\"Museum_ID\",\"visitor_ID\"),\nFOREIGN KEY (\"Museum_ID\") REFERENCES `museum`(\"Museum_ID\"),\nFOREIGN KEY (\"visitor_ID\") REFERENCES `visitor`(\"ID\")\n);\nCREATE TABLE \"visitor\" (\n\"ID\" int,\n\"Name\" text,\n\"Level_of_membership\" int,\n\"Age\" int,\nPRIMARY KEY (\"ID\")\n);\n\nQuestion: Find the names of the visitors whose membership level is higher than 4, and order the results by the level from high to low."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0333",
+    "original_index": 333,
+    "db_id": "cre_Doc_Template_Mgt",
+    "question": "Show all template type codes with less than three templates.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Documents (\nDocument_ID INTEGER NOT NULL,\nTemplate_ID INTEGER,\nDocument_Name VARCHAR(255),\nDocument_Description VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Document_ID),\nFOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)\n);\nCREATE TABLE Paragraphs (\nParagraph_ID INTEGER NOT NULL,\nDocument_ID INTEGER NOT NULL,\nParagraph_Text VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Paragraph_ID),\nFOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)\n);\nCREATE TABLE Ref_Template_Types (\nTemplate_Type_Code CHAR(15) NOT NULL,\nTemplate_Type_Description VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_Type_Code)\n);\nCREATE TABLE Templates (\nTemplate_ID INTEGER NOT NULL,\nVersion_Number INTEGER NOT NULL,\nTemplate_Type_Code CHAR(15) NOT NULL,\nDate_Effective_From DATETIME,\nDate_Effective_To DATETIME,\nTemplate_Details VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_ID),\nFOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)\n);\n\nQuestion: Show all template type codes with less than three templates."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0456",
+    "original_index": 456,
+    "db_id": "wta_1",
+    "question": "What are the full names of all players, sorted by birth date?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE matches(\n  \"best_of\" INT,\n  \"draw_size\" INT,\n  \"loser_age\" FLOAT,\n  \"loser_entry\" TEXT,\n  \"loser_hand\" TEXT,\n  \"loser_ht\" INT,\n  \"loser_id\" INT,\n  \"loser_ioc\" TEXT,\n  \"loser_name\" TEXT,\n  \"loser_rank\" INT,\n  \"loser_rank_points\" INT,\n  \"loser_seed\" INT,\n  \"match_num\" INT,\n  \"minutes\" INT,\n  \"round\" TEXT,\n  \"score\" TEXT,\n  \"surface\" TEXT,\n  \"tourney_date\" DATE,\n  \"tourney_id\" TEXT,\n  \"tourney_level\" TEXT,\n  \"tourney_name\" TEXT,\n  \"winner_age\" FLOAT,\n  \"winner_entry\" TEXT,\n  \"winner_hand\" TEXT,\n  \"winner_ht\" INT,\n  \"winner_id\" INT,\n  \"winner_ioc\" TEXT,\n  \"winner_name\" TEXT,\n  \"winner_rank\" INT,\n  \"winner_rank_points\" INT,\n  \"winner_seed\" INT,\n  \"year\" INT,\n  FOREIGN KEY(loser_id) REFERENCES players(player_id),\n  FOREIGN KEY(winner_id) REFERENCES players(player_id)\n);\nCREATE TABLE players(\n    \"player_id\" INT PRIMARY KEY,\n    \"first_name\" TEXT,\n    \"last_name\" TEXT,\n    \"hand\" TEXT,\n    \"birth_date\" DATE,\n    \"country_code\" TEXT\n);\nCREATE TABLE rankings(\"ranking_date\" DATE,\"ranking\" INT,\"player_id\" INT,\"ranking_points\" INT,\"tours\" INT,FOREIGN KEY(player_id) REFERENCES players(player_id));\n\nQuestion: What are the full names of all players, sorted by birth date?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0576",
+    "original_index": 576,
+    "db_id": "student_transcripts_tracking",
+    "question": "What is the id of the semester that had both Masters and Bachelors students enrolled?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`line_1` VARCHAR(255),\n`line_2` VARCHAR(255),\n`line_3` VARCHAR(255),\n`city` VARCHAR(255),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(255),\n`country` VARCHAR(255),\n`other_address_details` VARCHAR(255)\n);\nCREATE TABLE `Courses` (\n`course_id` INTEGER PRIMARY KEY,\n`course_name` VARCHAR(255),\n`course_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Degree_Programs` (\n`degree_program_id` INTEGER PRIMARY KEY,\n`department_id` INTEGER NOT NULL,\n`degree_summary_name` VARCHAR(255),\n`degree_summary_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )\n);\nCREATE TABLE `Departments` (\n`department_id` INTEGER PRIMARY KEY,\n`department_name` VARCHAR(255),\n`department_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Sections` (\n`section_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`section_name` VARCHAR(255),\n`section_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )\n);\nCREATE TABLE `Semesters` (\n`semester_id` INTEGER PRIMARY KEY,\n`semester_name` VARCHAR(255),\n`semester_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Student_Enrolment` (\n`student_enrolment_id` INTEGER PRIMARY KEY,\n`degree_program_id` INTEGER NOT NULL,\n`semester_id` INTEGER NOT NULL,\n`student_id` INTEGER NOT NULL,\n`other_details` VARCHAR(255),\nFOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),\nFOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),\nFOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )\n);\nCREATE TABLE `Student_Enrolment_Courses` (\n`student_course_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`student_enrolment_id` INTEGER NOT NULL,\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),\nFOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )\n);\nCREATE TABLE `Students` (\n`student_id` INTEGER PRIMARY KEY,\n`current_address_id` INTEGER NOT NULL,\n`permanent_address_id` INTEGER NOT NULL,\n`first_name` VARCHAR(80),\n`middle_name` VARCHAR(40),\n`last_name` VARCHAR(40),\n`cell_mobile_number` VARCHAR(40),\n`email_address` VARCHAR(40),\n`ssn` VARCHAR(40),\n`date_first_registered` DATETIME,\n`date_left` DATETIME,\n`other_student_details` VARCHAR(255),\nFOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )\n);\nCREATE TABLE `Transcript_Contents` (\n`student_course_id` INTEGER NOT NULL,\n`transcript_id` INTEGER NOT NULL,\nFOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),\nFOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )\n);\nCREATE TABLE `Transcripts` (\n`transcript_id` INTEGER PRIMARY KEY,\n`transcript_date` DATETIME,\n`other_details` VARCHAR(255)\n);\n\nQuestion: What is the id of the semester that had both Masters and Bachelors students enrolled?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1001",
+    "original_index": 1001,
+    "db_id": "singer",
+    "question": "What is the count of singers?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Birth_Year\" real,\n\"Net_Worth_Millions\" real,\n\"Citizenship\" text,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"song\" (\n\"Song_ID\" int,\n\"Title\" text,\n\"Singer_ID\" int,\n\"Sales\" real,\n\"Highest_Position\" real,\nPRIMARY KEY (\"Song_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES `singer`(\"Singer_ID\")\n);\n\nQuestion: What is the count of singers?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0420",
+    "original_index": 420,
+    "db_id": "museum_visit",
+    "question": "What are the id, name and membership level of visitors who have spent the largest amount of money in total in all museum tickets?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"museum\" (\n\"Museum_ID\" int,\n\"Name\" text,\n\"Num_of_Staff\" int,\n\"Open_Year\" text,\nPRIMARY KEY (\"Museum_ID\")\n);\nCREATE TABLE \"visit\" (\n\"Museum_ID\" int,\n\"visitor_ID\" text,\n\"Num_of_Ticket\" int,\n\"Total_spent\" real,\nPRIMARY KEY (\"Museum_ID\",\"visitor_ID\"),\nFOREIGN KEY (\"Museum_ID\") REFERENCES `museum`(\"Museum_ID\"),\nFOREIGN KEY (\"visitor_ID\") REFERENCES `visitor`(\"ID\")\n);\nCREATE TABLE \"visitor\" (\n\"ID\" int,\n\"Name\" text,\n\"Level_of_membership\" int,\n\"Age\" int,\nPRIMARY KEY (\"ID\")\n);\n\nQuestion: What are the id, name and membership level of visitors who have spent the largest amount of money in total in all museum tickets?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0319",
+    "original_index": 319,
+    "db_id": "cre_Doc_Template_Mgt",
+    "question": "Show template ids, version numbers, and template type codes for all templates.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Documents (\nDocument_ID INTEGER NOT NULL,\nTemplate_ID INTEGER,\nDocument_Name VARCHAR(255),\nDocument_Description VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Document_ID),\nFOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)\n);\nCREATE TABLE Paragraphs (\nParagraph_ID INTEGER NOT NULL,\nDocument_ID INTEGER NOT NULL,\nParagraph_Text VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Paragraph_ID),\nFOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)\n);\nCREATE TABLE Ref_Template_Types (\nTemplate_Type_Code CHAR(15) NOT NULL,\nTemplate_Type_Description VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_Type_Code)\n);\nCREATE TABLE Templates (\nTemplate_ID INTEGER NOT NULL,\nVersion_Number INTEGER NOT NULL,\nTemplate_Type_Code CHAR(15) NOT NULL,\nDate_Effective_From DATETIME,\nDate_Effective_To DATETIME,\nTemplate_Details VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_ID),\nFOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)\n);\n\nQuestion: Show template ids, version numbers, and template type codes for all templates."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0402",
+    "original_index": 402,
+    "db_id": "course_teach",
+    "question": "What are the names of the teachers and the courses they teach in ascending alphabetical order by the name of the teacher?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"course\" (\n\"Course_ID\" int,\n\"Staring_Date\" text,\n\"Course\" text,\nPRIMARY KEY (\"Course_ID\")\n);\nCREATE TABLE \"course_arrange\" (\n\"Course_ID\" int,\n\"Teacher_ID\" int,\n\"Grade\" int,\nPRIMARY KEY (\"Course_ID\",\"Teacher_ID\",\"Grade\"),\nFOREIGN KEY (\"Course_ID\") REFERENCES `course`(\"Course_ID\"),\nFOREIGN KEY (\"Teacher_ID\") REFERENCES `teacher`(\"Teacher_ID\")\n);\nCREATE TABLE \"teacher\" (\n\"Teacher_ID\" int,\n\"Name\" text,\n\"Age\" text,\n\"Hometown\" text,\nPRIMARY KEY (\"Teacher_ID\")\n);\n\nQuestion: What are the names of the teachers and the courses they teach in ascending alphabetical order by the name of the teacher?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0129",
+    "original_index": 129,
+    "db_id": "car_1",
+    "question": "Which countries in europe have at least 3 car manufacturers?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);\n\nQuestion: Which countries in europe have at least 3 car manufacturers?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0659",
+    "original_index": 659,
+    "db_id": "poker_player",
+    "question": "What are the names of poker players?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"people\" (\n\"People_ID\" int,\n\"Nationality\" text,\n\"Name\" text,\n\"Birth_Date\" text,\n\"Height\" real,\nPRIMARY KEY (\"People_ID\")\n);\nCREATE TABLE \"poker_player\" (\n\"Poker_Player_ID\" int,\n\"People_ID\" int,\n\"Final_Table_Made\" real,\n\"Best_Finish\" real,\n\"Money_Rank\" real,\n\"Earnings\" real,\nPRIMARY KEY (\"Poker_Player_ID\"),\nFOREIGN KEY (\"People_ID\") REFERENCES `people`(\"People_ID\")\n);\n\nQuestion: What are the names of poker players?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0866",
+    "original_index": 866,
+    "db_id": "network_1",
+    "question": "Show all the grades of the high schoolers.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Friend(\n\tstudent_id int, \n\tfriend_id int,\n\tprimary key (student_id,friend_id),\n\tforeign key(student_id) references Highschooler(ID),\n\tforeign key (friend_id) references Highschooler(ID)\n);\nCREATE TABLE Highschooler(\n\tID int primary key, \n\tname text, \n\tgrade int);\nCREATE TABLE Likes(\n\tstudent_id int, \n\tliked_id int,\n\tprimary key (student_id, liked_id),\n        foreign key (liked_id) references Highschooler(ID),\n        foreign key (student_id) references Highschooler(ID)\n);\n\nQuestion: Show all the grades of the high schoolers."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0510",
+    "original_index": 510,
+    "db_id": "student_transcripts_tracking",
+    "question": "How many courses are there?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`line_1` VARCHAR(255),\n`line_2` VARCHAR(255),\n`line_3` VARCHAR(255),\n`city` VARCHAR(255),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(255),\n`country` VARCHAR(255),\n`other_address_details` VARCHAR(255)\n);\nCREATE TABLE `Courses` (\n`course_id` INTEGER PRIMARY KEY,\n`course_name` VARCHAR(255),\n`course_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Degree_Programs` (\n`degree_program_id` INTEGER PRIMARY KEY,\n`department_id` INTEGER NOT NULL,\n`degree_summary_name` VARCHAR(255),\n`degree_summary_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )\n);\nCREATE TABLE `Departments` (\n`department_id` INTEGER PRIMARY KEY,\n`department_name` VARCHAR(255),\n`department_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Sections` (\n`section_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`section_name` VARCHAR(255),\n`section_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )\n);\nCREATE TABLE `Semesters` (\n`semester_id` INTEGER PRIMARY KEY,\n`semester_name` VARCHAR(255),\n`semester_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Student_Enrolment` (\n`student_enrolment_id` INTEGER PRIMARY KEY,\n`degree_program_id` INTEGER NOT NULL,\n`semester_id` INTEGER NOT NULL,\n`student_id` INTEGER NOT NULL,\n`other_details` VARCHAR(255),\nFOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),\nFOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),\nFOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )\n);\nCREATE TABLE `Student_Enrolment_Courses` (\n`student_course_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`student_enrolment_id` INTEGER NOT NULL,\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),\nFOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )\n);\nCREATE TABLE `Students` (\n`student_id` INTEGER PRIMARY KEY,\n`current_address_id` INTEGER NOT NULL,\n`permanent_address_id` INTEGER NOT NULL,\n`first_name` VARCHAR(80),\n`middle_name` VARCHAR(40),\n`last_name` VARCHAR(40),\n`cell_mobile_number` VARCHAR(40),\n`email_address` VARCHAR(40),\n`ssn` VARCHAR(40),\n`date_first_registered` DATETIME,\n`date_left` DATETIME,\n`other_student_details` VARCHAR(255),\nFOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )\n);\nCREATE TABLE `Transcript_Contents` (\n`student_course_id` INTEGER NOT NULL,\n`transcript_id` INTEGER NOT NULL,\nFOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),\nFOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )\n);\nCREATE TABLE `Transcripts` (\n`transcript_id` INTEGER PRIMARY KEY,\n`transcript_date` DATETIME,\n`other_details` VARCHAR(255)\n);\n\nQuestion: How many courses are there?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0293",
+    "original_index": 293,
+    "db_id": "employee_hire_evaluation",
+    "question": "Which district has both stores with less than 3000 products and stores with more than 10000 products?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"employee\" (\n\"Employee_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"City\" text,\nPRIMARY KEY (\"Employee_ID\")\n);\nCREATE TABLE \"evaluation\" (\n\"Employee_ID\" text,\n\"Year_awarded\" text,\n\"Bonus\" real,\nPRIMARY KEY (\"Employee_ID\",\"Year_awarded\"),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"hiring\" (\n\"Shop_ID\" int,\n\"Employee_ID\" int,\n\"Start_from\" text,\n\"Is_full_time\" bool,\nPRIMARY KEY (\"Employee_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Name\" text,\n\"Location\" text,\n\"District\" text,\n\"Number_products\" int,\n\"Manager_name\" text,\nPRIMARY KEY (\"Shop_ID\")\n);\n\nQuestion: Which district has both stores with less than 3000 products and stores with more than 10000 products?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0499",
+    "original_index": 499,
+    "db_id": "battle_death",
+    "question": "What are the ids and names of the battles that led to more than 10 people killed in total.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"battle\" (\n\"id\" int,\n\"name\" text,\n\"date\" text,\n\"bulgarian_commander\" text,\n\"latin_commander\" text,\n\"result\" text,\nprimary key(\"id\")\n);\nCREATE TABLE \"death\" (\n\"caused_by_ship_id\" int,\n\"id\" int,\n\"note\" text,\n\"killed\" int,\n\"injured\" int,\nprimary key(\"id\"),\nforeign key (\"caused_by_ship_id\") references `ship`(\"id\") \n);\nCREATE TABLE \"ship\" (\n\"lost_in_battle\" int,\n\"id\" int,\n\"name\" text,\n\"tonnage\" text,\n\"ship_type\" text,\n\"location\" text,\n\"disposition_of_ship\" text,\nprimary key(\"id\"),\nforeign key (`lost_in_battle`) references `battle`(\"id\") \n);\n\nQuestion: What are the ids and names of the battles that led to more than 10 people killed in total."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0561",
+    "original_index": 561,
+    "db_id": "student_transcripts_tracking",
+    "question": "Which address holds the most number of students currently? List the address id and all lines.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`line_1` VARCHAR(255),\n`line_2` VARCHAR(255),\n`line_3` VARCHAR(255),\n`city` VARCHAR(255),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(255),\n`country` VARCHAR(255),\n`other_address_details` VARCHAR(255)\n);\nCREATE TABLE `Courses` (\n`course_id` INTEGER PRIMARY KEY,\n`course_name` VARCHAR(255),\n`course_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Degree_Programs` (\n`degree_program_id` INTEGER PRIMARY KEY,\n`department_id` INTEGER NOT NULL,\n`degree_summary_name` VARCHAR(255),\n`degree_summary_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )\n);\nCREATE TABLE `Departments` (\n`department_id` INTEGER PRIMARY KEY,\n`department_name` VARCHAR(255),\n`department_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Sections` (\n`section_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`section_name` VARCHAR(255),\n`section_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )\n);\nCREATE TABLE `Semesters` (\n`semester_id` INTEGER PRIMARY KEY,\n`semester_name` VARCHAR(255),\n`semester_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Student_Enrolment` (\n`student_enrolment_id` INTEGER PRIMARY KEY,\n`degree_program_id` INTEGER NOT NULL,\n`semester_id` INTEGER NOT NULL,\n`student_id` INTEGER NOT NULL,\n`other_details` VARCHAR(255),\nFOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),\nFOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),\nFOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )\n);\nCREATE TABLE `Student_Enrolment_Courses` (\n`student_course_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`student_enrolment_id` INTEGER NOT NULL,\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),\nFOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )\n);\nCREATE TABLE `Students` (\n`student_id` INTEGER PRIMARY KEY,\n`current_address_id` INTEGER NOT NULL,\n`permanent_address_id` INTEGER NOT NULL,\n`first_name` VARCHAR(80),\n`middle_name` VARCHAR(40),\n`last_name` VARCHAR(40),\n`cell_mobile_number` VARCHAR(40),\n`email_address` VARCHAR(40),\n`ssn` VARCHAR(40),\n`date_first_registered` DATETIME,\n`date_left` DATETIME,\n`other_student_details` VARCHAR(255),\nFOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )\n);\nCREATE TABLE `Transcript_Contents` (\n`student_course_id` INTEGER NOT NULL,\n`transcript_id` INTEGER NOT NULL,\nFOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),\nFOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )\n);\nCREATE TABLE `Transcripts` (\n`transcript_id` INTEGER PRIMARY KEY,\n`transcript_date` DATETIME,\n`other_details` VARCHAR(255)\n);\n\nQuestion: Which address holds the most number of students currently? List the address id and all lines."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0746",
+    "original_index": 746,
+    "db_id": "world_1",
+    "question": "What are the names of nations speak both English and French?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `city` (\n  `ID` integer NOT NULL PRIMARY KEY AUTOINCREMENT\n,  `Name` char(35) NOT NULL DEFAULT ''\n,  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `District` char(20) NOT NULL DEFAULT ''\n,  `Population` integer NOT NULL DEFAULT '0'\n,  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\nCREATE TABLE `country` (\n  `Code` char(3) NOT NULL DEFAULT ''\n,  `Name` char(52) NOT NULL DEFAULT ''\n,  `Continent` text  NOT NULL DEFAULT 'Asia'\n,  `Region` char(26) NOT NULL DEFAULT ''\n,  `SurfaceArea` float(10,2) NOT NULL DEFAULT '0.00'\n,  `IndepYear` integer DEFAULT NULL\n,  `Population` integer NOT NULL DEFAULT '0'\n,  `LifeExpectancy` float(3,1) DEFAULT NULL\n,  `GNP` float(10,2) DEFAULT NULL\n,  `GNPOld` float(10,2) DEFAULT NULL\n,  `LocalName` char(45) NOT NULL DEFAULT ''\n,  `GovernmentForm` char(45) NOT NULL DEFAULT ''\n,  `HeadOfState` char(60) DEFAULT NULL\n,  `Capital` integer DEFAULT NULL\n,  `Code2` char(2) NOT NULL DEFAULT ''\n,  PRIMARY KEY (`Code`)\n);\nCREATE TABLE `countrylanguage` (\n  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `Language` char(30) NOT NULL DEFAULT ''\n,  `IsOfficial` text  NOT NULL DEFAULT 'F'\n,  `Percentage` float(4,1) NOT NULL DEFAULT '0.0'\n,  PRIMARY KEY (`CountryCode`,`Language`)\n,  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\n\nQuestion: What are the names of nations speak both English and French?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0454",
+    "original_index": 454,
+    "db_id": "wta_1",
+    "question": "What is the first name and country code of the oldest player?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE matches(\n  \"best_of\" INT,\n  \"draw_size\" INT,\n  \"loser_age\" FLOAT,\n  \"loser_entry\" TEXT,\n  \"loser_hand\" TEXT,\n  \"loser_ht\" INT,\n  \"loser_id\" INT,\n  \"loser_ioc\" TEXT,\n  \"loser_name\" TEXT,\n  \"loser_rank\" INT,\n  \"loser_rank_points\" INT,\n  \"loser_seed\" INT,\n  \"match_num\" INT,\n  \"minutes\" INT,\n  \"round\" TEXT,\n  \"score\" TEXT,\n  \"surface\" TEXT,\n  \"tourney_date\" DATE,\n  \"tourney_id\" TEXT,\n  \"tourney_level\" TEXT,\n  \"tourney_name\" TEXT,\n  \"winner_age\" FLOAT,\n  \"winner_entry\" TEXT,\n  \"winner_hand\" TEXT,\n  \"winner_ht\" INT,\n  \"winner_id\" INT,\n  \"winner_ioc\" TEXT,\n  \"winner_name\" TEXT,\n  \"winner_rank\" INT,\n  \"winner_rank_points\" INT,\n  \"winner_seed\" INT,\n  \"year\" INT,\n  FOREIGN KEY(loser_id) REFERENCES players(player_id),\n  FOREIGN KEY(winner_id) REFERENCES players(player_id)\n);\nCREATE TABLE players(\n    \"player_id\" INT PRIMARY KEY,\n    \"first_name\" TEXT,\n    \"last_name\" TEXT,\n    \"hand\" TEXT,\n    \"birth_date\" DATE,\n    \"country_code\" TEXT\n);\nCREATE TABLE rankings(\"ranking_date\" DATE,\"ranking\" INT,\"player_id\" INT,\"ranking_points\" INT,\"tours\" INT,FOREIGN KEY(player_id) REFERENCES players(player_id));\n\nQuestion: What is the first name and country code of the oldest player?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0031",
+    "original_index": 31,
+    "db_id": "concert_singer",
+    "question": "Show names for all stadiums except for stadiums having a concert in year 2014.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"concert\" (\n\"concert_ID\" int,\n\"concert_Name\" text,\n\"Theme\" text,\n\"Stadium_ID\" text,\n\"Year\" text,\nPRIMARY KEY (\"concert_ID\"),\nFOREIGN KEY (\"Stadium_ID\") REFERENCES \"stadium\"(\"Stadium_ID\")\n);\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Country\" text,\n\"Song_Name\" text,\n\"Song_release_year\" text,\n\"Age\" int,\n\"Is_male\" bool,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"singer_in_concert\" (\n\"concert_ID\" int,\n\"Singer_ID\" text,\nPRIMARY KEY (\"concert_ID\",\"Singer_ID\"),\nFOREIGN KEY (\"concert_ID\") REFERENCES \"concert\"(\"concert_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES \"singer\"(\"Singer_ID\")\n);\nCREATE TABLE \"stadium\" (\n\"Stadium_ID\" int,\n\"Location\" text,\n\"Name\" text,\n\"Capacity\" int,\n\"Highest\" int,\n\"Lowest\" int,\n\"Average\" int,\nPRIMARY KEY (\"Stadium_ID\")\n);\n\nQuestion: Show names for all stadiums except for stadiums having a concert in year 2014."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0091",
+    "original_index": 91,
+    "db_id": "car_1",
+    "question": "How many countries are listed?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);\n\nQuestion: How many countries are listed?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0711",
+    "original_index": 711,
+    "db_id": "world_1",
+    "question": "What region is Kabul in?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `city` (\n  `ID` integer NOT NULL PRIMARY KEY AUTOINCREMENT\n,  `Name` char(35) NOT NULL DEFAULT ''\n,  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `District` char(20) NOT NULL DEFAULT ''\n,  `Population` integer NOT NULL DEFAULT '0'\n,  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\nCREATE TABLE `country` (\n  `Code` char(3) NOT NULL DEFAULT ''\n,  `Name` char(52) NOT NULL DEFAULT ''\n,  `Continent` text  NOT NULL DEFAULT 'Asia'\n,  `Region` char(26) NOT NULL DEFAULT ''\n,  `SurfaceArea` float(10,2) NOT NULL DEFAULT '0.00'\n,  `IndepYear` integer DEFAULT NULL\n,  `Population` integer NOT NULL DEFAULT '0'\n,  `LifeExpectancy` float(3,1) DEFAULT NULL\n,  `GNP` float(10,2) DEFAULT NULL\n,  `GNPOld` float(10,2) DEFAULT NULL\n,  `LocalName` char(45) NOT NULL DEFAULT ''\n,  `GovernmentForm` char(45) NOT NULL DEFAULT ''\n,  `HeadOfState` char(60) DEFAULT NULL\n,  `Capital` integer DEFAULT NULL\n,  `Code2` char(2) NOT NULL DEFAULT ''\n,  PRIMARY KEY (`Code`)\n);\nCREATE TABLE `countrylanguage` (\n  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `Language` char(30) NOT NULL DEFAULT ''\n,  `IsOfficial` text  NOT NULL DEFAULT 'F'\n,  `Percentage` float(4,1) NOT NULL DEFAULT '0.0'\n,  PRIMARY KEY (`CountryCode`,`Language`)\n,  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\n\nQuestion: What region is Kabul in?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0803",
+    "original_index": 803,
+    "db_id": "world_1",
+    "question": "Return the names of the 3 most populated countries.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `city` (\n  `ID` integer NOT NULL PRIMARY KEY AUTOINCREMENT\n,  `Name` char(35) NOT NULL DEFAULT ''\n,  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `District` char(20) NOT NULL DEFAULT ''\n,  `Population` integer NOT NULL DEFAULT '0'\n,  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\nCREATE TABLE `country` (\n  `Code` char(3) NOT NULL DEFAULT ''\n,  `Name` char(52) NOT NULL DEFAULT ''\n,  `Continent` text  NOT NULL DEFAULT 'Asia'\n,  `Region` char(26) NOT NULL DEFAULT ''\n,  `SurfaceArea` float(10,2) NOT NULL DEFAULT '0.00'\n,  `IndepYear` integer DEFAULT NULL\n,  `Population` integer NOT NULL DEFAULT '0'\n,  `LifeExpectancy` float(3,1) DEFAULT NULL\n,  `GNP` float(10,2) DEFAULT NULL\n,  `GNPOld` float(10,2) DEFAULT NULL\n,  `LocalName` char(45) NOT NULL DEFAULT ''\n,  `GovernmentForm` char(45) NOT NULL DEFAULT ''\n,  `HeadOfState` char(60) DEFAULT NULL\n,  `Capital` integer DEFAULT NULL\n,  `Code2` char(2) NOT NULL DEFAULT ''\n,  PRIMARY KEY (`Code`)\n);\nCREATE TABLE `countrylanguage` (\n  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `Language` char(30) NOT NULL DEFAULT ''\n,  `IsOfficial` text  NOT NULL DEFAULT 'F'\n,  `Percentage` float(4,1) NOT NULL DEFAULT '0.0'\n,  PRIMARY KEY (`CountryCode`,`Language`)\n,  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\n\nQuestion: Return the names of the 3 most populated countries."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0597",
+    "original_index": 597,
+    "db_id": "tvshow",
+    "question": "List the number of different series names and contents in the TV Channel table.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"Cartoon\" (\n\"id\" real,\n\"Title\" text,\n\"Directed_by\" text,\n\"Written_by\" text,\n\"Original_air_date\" text,\n\"Production_code\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\nCREATE TABLE \"TV_Channel\" (\n\"id\" text,\n\"series_name\" text,\n\"Country\" text,\n\"Language\" text,\n\"Content\" text,\n\"Pixel_aspect_ratio_PAR\" text,\n\"Hight_definition_TV\" text,\n\"Pay_per_view_PPV\" text,\n\"Package_Option\" text,\nPRIMARY KEY (\"id\")\n);\nCREATE TABLE \"TV_series\" (\n\"id\" real,\n\"Episode\" text,\n\"Air_Date\" text,\n\"Rating\" text,\n\"Share\" real,\n\"18_49_Rating_Share\" text,\n\"Viewers_m\" text,\n\"Weekly_Rank\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\n\nQuestion: List the number of different series names and contents in the TV Channel table."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1025",
+    "original_index": 1025,
+    "db_id": "singer",
+    "question": "For each singer name, what is the total sales for their songs?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Birth_Year\" real,\n\"Net_Worth_Millions\" real,\n\"Citizenship\" text,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"song\" (\n\"Song_ID\" int,\n\"Title\" text,\n\"Singer_ID\" int,\n\"Sales\" real,\n\"Highest_Position\" real,\nPRIMARY KEY (\"Song_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES `singer`(\"Singer_ID\")\n);\n\nQuestion: For each singer name, what is the total sales for their songs?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0865",
+    "original_index": 865,
+    "db_id": "network_1",
+    "question": "What are the names and grades for each high schooler?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Friend(\n\tstudent_id int, \n\tfriend_id int,\n\tprimary key (student_id,friend_id),\n\tforeign key(student_id) references Highschooler(ID),\n\tforeign key (friend_id) references Highschooler(ID)\n);\nCREATE TABLE Highschooler(\n\tID int primary key, \n\tname text, \n\tgrade int);\nCREATE TABLE Likes(\n\tstudent_id int, \n\tliked_id int,\n\tprimary key (student_id, liked_id),\n        foreign key (liked_id) references Highschooler(ID),\n        foreign key (student_id) references Highschooler(ID)\n);\n\nQuestion: What are the names and grades for each high schooler?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0959",
+    "original_index": 959,
+    "db_id": "dog_kennels",
+    "question": "Find the arriving date and the departing date of the dogs that received a treatment.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Breeds` (\n`breed_code` VARCHAR(10) PRIMARY KEY ,\n`breed_name` VARCHAR(80)\n);\nCREATE TABLE `Charges` (\n`charge_id` INTEGER PRIMARY KEY ,\n`charge_type` VARCHAR(10),\n`charge_amount` DECIMAL(19,4)\n);\nCREATE TABLE `Dogs` (\n`dog_id` INTEGER PRIMARY KEY ,\n`owner_id` INTEGER NOT NULL,\n`abandoned_yn` VARCHAR(1),\n`breed_code` VARCHAR(10) NOT NULL,\n`size_code` VARCHAR(10) NOT NULL,\n`name` VARCHAR(50),\n`age` VARCHAR(20),\n`date_of_birth` DATETIME,\n`gender` VARCHAR(1),\n`weight` VARCHAR(20),\n`date_arrived` DATETIME,\n`date_adopted` DATETIME,\n`date_departed` DATETIME,\nFOREIGN KEY (`breed_code` ) REFERENCES `Breeds`(`breed_code` ),\nFOREIGN KEY (`size_code` ) REFERENCES `Sizes`(`size_code` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` )\n);\nCREATE TABLE `Owners` (\n`owner_id` INTEGER PRIMARY KEY ,\n`first_name` VARCHAR(50),\n`last_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Professionals` (\n`professional_id` INTEGER PRIMARY KEY ,\n`role_code` VARCHAR(10) NOT NULL,\n`first_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`last_name` VARCHAR(50),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Sizes` (\n`size_code` VARCHAR(10) PRIMARY KEY ,\n`size_description` VARCHAR(80)\n);\nCREATE TABLE `Treatment_Types` (\n`treatment_type_code` VARCHAR(10) PRIMARY KEY ,\n`treatment_type_description` VARCHAR(80)\n);\nCREATE TABLE `Treatments` (\n`treatment_id` INTEGER PRIMARY KEY ,\n`dog_id` INTEGER NOT NULL,\n`professional_id` INTEGER NOT NULL,\n`treatment_type_code` VARCHAR(10) NOT NULL,\n`date_of_treatment` DATETIME,\n`cost_of_treatment` DECIMAL(19,4),\nFOREIGN KEY (`treatment_type_code` ) REFERENCES `Treatment_Types`(`treatment_type_code` ),\nFOREIGN KEY (`professional_id` ) REFERENCES `Professionals`(`professional_id` ),\nFOREIGN KEY (`dog_id` ) REFERENCES `Dogs`(`dog_id` )\n);\n\nQuestion: Find the arriving date and the departing date of the dogs that received a treatment."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1016",
+    "original_index": 1016,
+    "db_id": "singer",
+    "question": "Show different citizenships and the maximum net worth of singers of each citizenship.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Birth_Year\" real,\n\"Net_Worth_Millions\" real,\n\"Citizenship\" text,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"song\" (\n\"Song_ID\" int,\n\"Title\" text,\n\"Singer_ID\" int,\n\"Sales\" real,\n\"Highest_Position\" real,\nPRIMARY KEY (\"Song_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES `singer`(\"Singer_ID\")\n);\n\nQuestion: Show different citizenships and the maximum net worth of singers of each citizenship."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0211",
+    "original_index": 211,
+    "db_id": "flight_2",
+    "question": "How many flights depart from City 'Aberdeen' and have destination City 'Ashley'?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE 'airlines' (\n\tuid INTEGER PRIMARY KEY, \n\tAirline TEXT, \n\tAbbreviation TEXT, \n\tCountry TEXT\n);\nCREATE TABLE 'airports' (\n\tCity TEXT, \n\tAirportCode TEXT PRIMARY KEY, \n\tAirportName TEXT, \n\tCountry TEXT, \n\tCountryAbbrev TEXT\n);\nCREATE TABLE 'flights' (\n\tAirline INTEGER, \n\tFlightNo INTEGER, \n\tSourceAirport TEXT, \n\tDestAirport TEXT, \n\tPRIMARY KEY(Airline, FlightNo),\n\tFOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),\n\tFOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)\n);\n\nQuestion: How many flights depart from City 'Aberdeen' and have destination City 'Ashley'?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0459",
+    "original_index": 459,
+    "db_id": "wta_1",
+    "question": "Find the first name and country code of the player who did the most number of tours.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE matches(\n  \"best_of\" INT,\n  \"draw_size\" INT,\n  \"loser_age\" FLOAT,\n  \"loser_entry\" TEXT,\n  \"loser_hand\" TEXT,\n  \"loser_ht\" INT,\n  \"loser_id\" INT,\n  \"loser_ioc\" TEXT,\n  \"loser_name\" TEXT,\n  \"loser_rank\" INT,\n  \"loser_rank_points\" INT,\n  \"loser_seed\" INT,\n  \"match_num\" INT,\n  \"minutes\" INT,\n  \"round\" TEXT,\n  \"score\" TEXT,\n  \"surface\" TEXT,\n  \"tourney_date\" DATE,\n  \"tourney_id\" TEXT,\n  \"tourney_level\" TEXT,\n  \"tourney_name\" TEXT,\n  \"winner_age\" FLOAT,\n  \"winner_entry\" TEXT,\n  \"winner_hand\" TEXT,\n  \"winner_ht\" INT,\n  \"winner_id\" INT,\n  \"winner_ioc\" TEXT,\n  \"winner_name\" TEXT,\n  \"winner_rank\" INT,\n  \"winner_rank_points\" INT,\n  \"winner_seed\" INT,\n  \"year\" INT,\n  FOREIGN KEY(loser_id) REFERENCES players(player_id),\n  FOREIGN KEY(winner_id) REFERENCES players(player_id)\n);\nCREATE TABLE players(\n    \"player_id\" INT PRIMARY KEY,\n    \"first_name\" TEXT,\n    \"last_name\" TEXT,\n    \"hand\" TEXT,\n    \"birth_date\" DATE,\n    \"country_code\" TEXT\n);\nCREATE TABLE rankings(\"ranking_date\" DATE,\"ranking\" INT,\"player_id\" INT,\"ranking_points\" INT,\"tours\" INT,FOREIGN KEY(player_id) REFERENCES players(player_id));\n\nQuestion: Find the first name and country code of the player who did the most number of tours."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0392",
+    "original_index": 392,
+    "db_id": "course_teach",
+    "question": "Where is the youngest teacher from?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"course\" (\n\"Course_ID\" int,\n\"Staring_Date\" text,\n\"Course\" text,\nPRIMARY KEY (\"Course_ID\")\n);\nCREATE TABLE \"course_arrange\" (\n\"Course_ID\" int,\n\"Teacher_ID\" int,\n\"Grade\" int,\nPRIMARY KEY (\"Course_ID\",\"Teacher_ID\",\"Grade\"),\nFOREIGN KEY (\"Course_ID\") REFERENCES `course`(\"Course_ID\"),\nFOREIGN KEY (\"Teacher_ID\") REFERENCES `teacher`(\"Teacher_ID\")\n);\nCREATE TABLE \"teacher\" (\n\"Teacher_ID\" int,\n\"Name\" text,\n\"Age\" text,\n\"Hometown\" text,\nPRIMARY KEY (\"Teacher_ID\")\n);\n\nQuestion: Where is the youngest teacher from?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0203",
+    "original_index": 203,
+    "db_id": "flight_2",
+    "question": "How many flights depart from 'APG'?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE 'airlines' (\n\tuid INTEGER PRIMARY KEY, \n\tAirline TEXT, \n\tAbbreviation TEXT, \n\tCountry TEXT\n);\nCREATE TABLE 'airports' (\n\tCity TEXT, \n\tAirportCode TEXT PRIMARY KEY, \n\tAirportName TEXT, \n\tCountry TEXT, \n\tCountryAbbrev TEXT\n);\nCREATE TABLE 'flights' (\n\tAirline INTEGER, \n\tFlightNo INTEGER, \n\tSourceAirport TEXT, \n\tDestAirport TEXT, \n\tPRIMARY KEY(Airline, FlightNo),\n\tFOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),\n\tFOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)\n);\n\nQuestion: How many flights depart from 'APG'?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0041",
+    "original_index": 41,
+    "db_id": "concert_singer",
+    "question": "Find the name and location of the stadiums which some concerts happened in the years of both 2014 and 2015.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"concert\" (\n\"concert_ID\" int,\n\"concert_Name\" text,\n\"Theme\" text,\n\"Stadium_ID\" text,\n\"Year\" text,\nPRIMARY KEY (\"concert_ID\"),\nFOREIGN KEY (\"Stadium_ID\") REFERENCES \"stadium\"(\"Stadium_ID\")\n);\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Country\" text,\n\"Song_Name\" text,\n\"Song_release_year\" text,\n\"Age\" int,\n\"Is_male\" bool,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"singer_in_concert\" (\n\"concert_ID\" int,\n\"Singer_ID\" text,\nPRIMARY KEY (\"concert_ID\",\"Singer_ID\"),\nFOREIGN KEY (\"concert_ID\") REFERENCES \"concert\"(\"concert_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES \"singer\"(\"Singer_ID\")\n);\nCREATE TABLE \"stadium\" (\n\"Stadium_ID\" int,\n\"Location\" text,\n\"Name\" text,\n\"Capacity\" int,\n\"Highest\" int,\n\"Lowest\" int,\n\"Average\" int,\nPRIMARY KEY (\"Stadium_ID\")\n);\n\nQuestion: Find the name and location of the stadiums which some concerts happened in the years of both 2014 and 2015."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0092",
+    "original_index": 92,
+    "db_id": "car_1",
+    "question": "How many countries exist?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);\n\nQuestion: How many countries exist?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0605",
+    "original_index": 605,
+    "db_id": "tvshow",
+    "question": "List the language used least number of TV Channel. List language and number of TV Channel.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"Cartoon\" (\n\"id\" real,\n\"Title\" text,\n\"Directed_by\" text,\n\"Written_by\" text,\n\"Original_air_date\" text,\n\"Production_code\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\nCREATE TABLE \"TV_Channel\" (\n\"id\" text,\n\"series_name\" text,\n\"Country\" text,\n\"Language\" text,\n\"Content\" text,\n\"Pixel_aspect_ratio_PAR\" text,\n\"Hight_definition_TV\" text,\n\"Pay_per_view_PPV\" text,\n\"Package_Option\" text,\nPRIMARY KEY (\"id\")\n);\nCREATE TABLE \"TV_series\" (\n\"id\" real,\n\"Episode\" text,\n\"Air_Date\" text,\n\"Rating\" text,\n\"Share\" real,\n\"18_49_Rating_Share\" text,\n\"Viewers_m\" text,\n\"Weekly_Rank\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\n\nQuestion: List the language used least number of TV Channel. List language and number of TV Channel."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0890",
+    "original_index": 890,
+    "db_id": "network_1",
+    "question": "Show the names of all of the high schooler Kyle's friends.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Friend(\n\tstudent_id int, \n\tfriend_id int,\n\tprimary key (student_id,friend_id),\n\tforeign key(student_id) references Highschooler(ID),\n\tforeign key (friend_id) references Highschooler(ID)\n);\nCREATE TABLE Highschooler(\n\tID int primary key, \n\tname text, \n\tgrade int);\nCREATE TABLE Likes(\n\tstudent_id int, \n\tliked_id int,\n\tprimary key (student_id, liked_id),\n        foreign key (liked_id) references Highschooler(ID),\n        foreign key (student_id) references Highschooler(ID)\n);\n\nQuestion: Show the names of all of the high schooler Kyle's friends."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0065",
+    "original_index": 65,
+    "db_id": "pets_1",
+    "question": "Find the first name and age of students who have a dog but do not have a cat as a pet.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Has_Pet (\n       StuID\t\tINTEGER,\n       PetID\t\tINTEGER,\n       FOREIGN KEY(PetID) REFERENCES Pets(PetID),\n       FOREIGN KEY(StuID) REFERENCES Student(StuID)\n);\nCREATE TABLE Pets (\n       PetID\t\tINTEGER PRIMARY KEY,\n       PetType\t\tVARCHAR(20),\n       pet_age INTEGER,\n       weight REAL\n);\nCREATE TABLE Student (\n       StuID    \tINTEGER PRIMARY KEY,\n       LName\t\tVARCHAR(12),\n       Fname\t\tVARCHAR(12),\n       Age\t\tINTEGER,\n       Sex\t\tVARCHAR(1),\n       Major\t\tINTEGER,\n       Advisor\t\tINTEGER,\n       city_code\tVARCHAR(3)\n);\n\nQuestion: Find the first name and age of students who have a dog but do not have a cat as a pet."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0033",
+    "original_index": 33,
+    "db_id": "concert_singer",
+    "question": "Show the name and theme for all concerts and the number of singers in each concert.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"concert\" (\n\"concert_ID\" int,\n\"concert_Name\" text,\n\"Theme\" text,\n\"Stadium_ID\" text,\n\"Year\" text,\nPRIMARY KEY (\"concert_ID\"),\nFOREIGN KEY (\"Stadium_ID\") REFERENCES \"stadium\"(\"Stadium_ID\")\n);\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Country\" text,\n\"Song_Name\" text,\n\"Song_release_year\" text,\n\"Age\" int,\n\"Is_male\" bool,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"singer_in_concert\" (\n\"concert_ID\" int,\n\"Singer_ID\" text,\nPRIMARY KEY (\"concert_ID\",\"Singer_ID\"),\nFOREIGN KEY (\"concert_ID\") REFERENCES \"concert\"(\"concert_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES \"singer\"(\"Singer_ID\")\n);\nCREATE TABLE \"stadium\" (\n\"Stadium_ID\" int,\n\"Location\" text,\n\"Name\" text,\n\"Capacity\" int,\n\"Highest\" int,\n\"Lowest\" int,\n\"Average\" int,\nPRIMARY KEY (\"Stadium_ID\")\n);\n\nQuestion: Show the name and theme for all concerts and the number of singers in each concert."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0212",
+    "original_index": 212,
+    "db_id": "flight_2",
+    "question": "How many flights fly from Aberdeen to Ashley?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE 'airlines' (\n\tuid INTEGER PRIMARY KEY, \n\tAirline TEXT, \n\tAbbreviation TEXT, \n\tCountry TEXT\n);\nCREATE TABLE 'airports' (\n\tCity TEXT, \n\tAirportCode TEXT PRIMARY KEY, \n\tAirportName TEXT, \n\tCountry TEXT, \n\tCountryAbbrev TEXT\n);\nCREATE TABLE 'flights' (\n\tAirline INTEGER, \n\tFlightNo INTEGER, \n\tSourceAirport TEXT, \n\tDestAirport TEXT, \n\tPRIMARY KEY(Airline, FlightNo),\n\tFOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),\n\tFOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)\n);\n\nQuestion: How many flights fly from Aberdeen to Ashley?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0996",
+    "original_index": 996,
+    "db_id": "dog_kennels",
+    "question": "What are all the possible breed type and size type combinations?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Breeds` (\n`breed_code` VARCHAR(10) PRIMARY KEY ,\n`breed_name` VARCHAR(80)\n);\nCREATE TABLE `Charges` (\n`charge_id` INTEGER PRIMARY KEY ,\n`charge_type` VARCHAR(10),\n`charge_amount` DECIMAL(19,4)\n);\nCREATE TABLE `Dogs` (\n`dog_id` INTEGER PRIMARY KEY ,\n`owner_id` INTEGER NOT NULL,\n`abandoned_yn` VARCHAR(1),\n`breed_code` VARCHAR(10) NOT NULL,\n`size_code` VARCHAR(10) NOT NULL,\n`name` VARCHAR(50),\n`age` VARCHAR(20),\n`date_of_birth` DATETIME,\n`gender` VARCHAR(1),\n`weight` VARCHAR(20),\n`date_arrived` DATETIME,\n`date_adopted` DATETIME,\n`date_departed` DATETIME,\nFOREIGN KEY (`breed_code` ) REFERENCES `Breeds`(`breed_code` ),\nFOREIGN KEY (`size_code` ) REFERENCES `Sizes`(`size_code` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` )\n);\nCREATE TABLE `Owners` (\n`owner_id` INTEGER PRIMARY KEY ,\n`first_name` VARCHAR(50),\n`last_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Professionals` (\n`professional_id` INTEGER PRIMARY KEY ,\n`role_code` VARCHAR(10) NOT NULL,\n`first_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`last_name` VARCHAR(50),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Sizes` (\n`size_code` VARCHAR(10) PRIMARY KEY ,\n`size_description` VARCHAR(80)\n);\nCREATE TABLE `Treatment_Types` (\n`treatment_type_code` VARCHAR(10) PRIMARY KEY ,\n`treatment_type_description` VARCHAR(80)\n);\nCREATE TABLE `Treatments` (\n`treatment_id` INTEGER PRIMARY KEY ,\n`dog_id` INTEGER NOT NULL,\n`professional_id` INTEGER NOT NULL,\n`treatment_type_code` VARCHAR(10) NOT NULL,\n`date_of_treatment` DATETIME,\n`cost_of_treatment` DECIMAL(19,4),\nFOREIGN KEY (`treatment_type_code` ) REFERENCES `Treatment_Types`(`treatment_type_code` ),\nFOREIGN KEY (`professional_id` ) REFERENCES `Professionals`(`professional_id` ),\nFOREIGN KEY (`dog_id` ) REFERENCES `Dogs`(`dog_id` )\n);\n\nQuestion: What are all the possible breed type and size type combinations?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1010",
+    "original_index": 1010,
+    "db_id": "singer",
+    "question": "What is the name of the singer with the largest net worth?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Birth_Year\" real,\n\"Net_Worth_Millions\" real,\n\"Citizenship\" text,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"song\" (\n\"Song_ID\" int,\n\"Title\" text,\n\"Singer_ID\" int,\n\"Sales\" real,\n\"Highest_Position\" real,\nPRIMARY KEY (\"Song_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES `singer`(\"Singer_ID\")\n);\n\nQuestion: What is the name of the singer with the largest net worth?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0591",
+    "original_index": 591,
+    "db_id": "tvshow",
+    "question": "list all cartoon titles and their directors ordered by their air date",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"Cartoon\" (\n\"id\" real,\n\"Title\" text,\n\"Directed_by\" text,\n\"Written_by\" text,\n\"Original_air_date\" text,\n\"Production_code\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\nCREATE TABLE \"TV_Channel\" (\n\"id\" text,\n\"series_name\" text,\n\"Country\" text,\n\"Language\" text,\n\"Content\" text,\n\"Pixel_aspect_ratio_PAR\" text,\n\"Hight_definition_TV\" text,\n\"Pay_per_view_PPV\" text,\n\"Package_Option\" text,\nPRIMARY KEY (\"id\")\n);\nCREATE TABLE \"TV_series\" (\n\"id\" real,\n\"Episode\" text,\n\"Air_Date\" text,\n\"Rating\" text,\n\"Share\" real,\n\"18_49_Rating_Share\" text,\n\"Viewers_m\" text,\n\"Weekly_Rank\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\n\nQuestion: list all cartoon titles and their directors ordered by their air date"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0156",
+    "original_index": 156,
+    "db_id": "car_1",
+    "question": "What is the horsepower of the car with the greatest accelerate?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);\n\nQuestion: What is the horsepower of the car with the greatest accelerate?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0120",
+    "original_index": 120,
+    "db_id": "car_1",
+    "question": "What is the minimum weight of the car with 8 cylinders produced in 1974 ?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);\n\nQuestion: What is the minimum weight of the car with 8 cylinders produced in 1974 ?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0264",
+    "original_index": 264,
+    "db_id": "employee_hire_evaluation",
+    "question": "Count the number of employees for each city.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"employee\" (\n\"Employee_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"City\" text,\nPRIMARY KEY (\"Employee_ID\")\n);\nCREATE TABLE \"evaluation\" (\n\"Employee_ID\" text,\n\"Year_awarded\" text,\n\"Bonus\" real,\nPRIMARY KEY (\"Employee_ID\",\"Year_awarded\"),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"hiring\" (\n\"Shop_ID\" int,\n\"Employee_ID\" int,\n\"Start_from\" text,\n\"Is_full_time\" bool,\nPRIMARY KEY (\"Employee_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Name\" text,\n\"Location\" text,\n\"District\" text,\n\"Number_products\" int,\n\"Manager_name\" text,\nPRIMARY KEY (\"Shop_ID\")\n);\n\nQuestion: Count the number of employees for each city."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0640",
+    "original_index": 640,
+    "db_id": "tvshow",
+    "question": "What is the pixel aspect ratio and country of origin for all TV channels that do not use English?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"Cartoon\" (\n\"id\" real,\n\"Title\" text,\n\"Directed_by\" text,\n\"Written_by\" text,\n\"Original_air_date\" text,\n\"Production_code\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\nCREATE TABLE \"TV_Channel\" (\n\"id\" text,\n\"series_name\" text,\n\"Country\" text,\n\"Language\" text,\n\"Content\" text,\n\"Pixel_aspect_ratio_PAR\" text,\n\"Hight_definition_TV\" text,\n\"Pay_per_view_PPV\" text,\n\"Package_Option\" text,\nPRIMARY KEY (\"id\")\n);\nCREATE TABLE \"TV_series\" (\n\"id\" real,\n\"Episode\" text,\n\"Air_Date\" text,\n\"Rating\" text,\n\"Share\" real,\n\"18_49_Rating_Share\" text,\n\"Viewers_m\" text,\n\"Weekly_Rank\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\n\nQuestion: What is the pixel aspect ratio and country of origin for all TV channels that do not use English?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0504",
+    "original_index": 504,
+    "db_id": "battle_death",
+    "question": "List the name and date the battle that has lost the ship named 'Lettice' and the ship named 'HMS Atalanta'",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"battle\" (\n\"id\" int,\n\"name\" text,\n\"date\" text,\n\"bulgarian_commander\" text,\n\"latin_commander\" text,\n\"result\" text,\nprimary key(\"id\")\n);\nCREATE TABLE \"death\" (\n\"caused_by_ship_id\" int,\n\"id\" int,\n\"note\" text,\n\"killed\" int,\n\"injured\" int,\nprimary key(\"id\"),\nforeign key (\"caused_by_ship_id\") references `ship`(\"id\") \n);\nCREATE TABLE \"ship\" (\n\"lost_in_battle\" int,\n\"id\" int,\n\"name\" text,\n\"tonnage\" text,\n\"ship_type\" text,\n\"location\" text,\n\"disposition_of_ship\" text,\nprimary key(\"id\"),\nforeign key (`lost_in_battle`) references `battle`(\"id\") \n);\n\nQuestion: List the name and date the battle that has lost the ship named 'Lettice' and the ship named 'HMS Atalanta'"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0856",
+    "original_index": 856,
+    "db_id": "orchestra",
+    "question": "Show the record companies shared by orchestras founded before 2003 and after 2003.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"conductor\" (\n\"Conductor_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"Nationality\" text,\n\"Year_of_Work\" int,\nPRIMARY KEY (\"Conductor_ID\")\n);\nCREATE TABLE \"orchestra\" (\n\"Orchestra_ID\" int,\n\"Orchestra\" text,\n\"Conductor_ID\" int,\n\"Record_Company\" text,\n\"Year_of_Founded\" real,\n\"Major_Record_Format\" text,\nPRIMARY KEY (\"Orchestra_ID\"),\nFOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)\n);\nCREATE TABLE \"performance\" (\n\"Performance_ID\" int,\n\"Orchestra_ID\" int,\n\"Type\" text,\n\"Date\" text,\n\"Official_ratings_(millions)\" real,\n\"Weekly_rank\" text,\n\"Share\" text,\nPRIMARY KEY (\"Performance_ID\"),\nFOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)\n);\nCREATE TABLE \"show\" (\n\"Show_ID\" int,\n\"Performance_ID\" int,\n\"If_first_show\" bool,\n\"Result\" text,\n\"Attendance\" real,\nFOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)\n);\n\nQuestion: Show the record companies shared by orchestras founded before 2003 and after 2003."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0829",
+    "original_index": 829,
+    "db_id": "orchestra",
+    "question": "Return the record companies of orchestras, sorted descending by the years in which they were founded.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"conductor\" (\n\"Conductor_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"Nationality\" text,\n\"Year_of_Work\" int,\nPRIMARY KEY (\"Conductor_ID\")\n);\nCREATE TABLE \"orchestra\" (\n\"Orchestra_ID\" int,\n\"Orchestra\" text,\n\"Conductor_ID\" int,\n\"Record_Company\" text,\n\"Year_of_Founded\" real,\n\"Major_Record_Format\" text,\nPRIMARY KEY (\"Orchestra_ID\"),\nFOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)\n);\nCREATE TABLE \"performance\" (\n\"Performance_ID\" int,\n\"Orchestra_ID\" int,\n\"Type\" text,\n\"Date\" text,\n\"Official_ratings_(millions)\" real,\n\"Weekly_rank\" text,\n\"Share\" text,\nPRIMARY KEY (\"Performance_ID\"),\nFOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)\n);\nCREATE TABLE \"show\" (\n\"Show_ID\" int,\n\"Performance_ID\" int,\n\"If_first_show\" bool,\n\"Result\" text,\n\"Attendance\" real,\nFOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)\n);\n\nQuestion: Return the record companies of orchestras, sorted descending by the years in which they were founded."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0941",
+    "original_index": 941,
+    "db_id": "dog_kennels",
+    "question": "Find the owner id and zip code of the owner who spent the most money in total for his or her dogs.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Breeds` (\n`breed_code` VARCHAR(10) PRIMARY KEY ,\n`breed_name` VARCHAR(80)\n);\nCREATE TABLE `Charges` (\n`charge_id` INTEGER PRIMARY KEY ,\n`charge_type` VARCHAR(10),\n`charge_amount` DECIMAL(19,4)\n);\nCREATE TABLE `Dogs` (\n`dog_id` INTEGER PRIMARY KEY ,\n`owner_id` INTEGER NOT NULL,\n`abandoned_yn` VARCHAR(1),\n`breed_code` VARCHAR(10) NOT NULL,\n`size_code` VARCHAR(10) NOT NULL,\n`name` VARCHAR(50),\n`age` VARCHAR(20),\n`date_of_birth` DATETIME,\n`gender` VARCHAR(1),\n`weight` VARCHAR(20),\n`date_arrived` DATETIME,\n`date_adopted` DATETIME,\n`date_departed` DATETIME,\nFOREIGN KEY (`breed_code` ) REFERENCES `Breeds`(`breed_code` ),\nFOREIGN KEY (`size_code` ) REFERENCES `Sizes`(`size_code` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` )\n);\nCREATE TABLE `Owners` (\n`owner_id` INTEGER PRIMARY KEY ,\n`first_name` VARCHAR(50),\n`last_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Professionals` (\n`professional_id` INTEGER PRIMARY KEY ,\n`role_code` VARCHAR(10) NOT NULL,\n`first_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`last_name` VARCHAR(50),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Sizes` (\n`size_code` VARCHAR(10) PRIMARY KEY ,\n`size_description` VARCHAR(80)\n);\nCREATE TABLE `Treatment_Types` (\n`treatment_type_code` VARCHAR(10) PRIMARY KEY ,\n`treatment_type_description` VARCHAR(80)\n);\nCREATE TABLE `Treatments` (\n`treatment_id` INTEGER PRIMARY KEY ,\n`dog_id` INTEGER NOT NULL,\n`professional_id` INTEGER NOT NULL,\n`treatment_type_code` VARCHAR(10) NOT NULL,\n`date_of_treatment` DATETIME,\n`cost_of_treatment` DECIMAL(19,4),\nFOREIGN KEY (`treatment_type_code` ) REFERENCES `Treatment_Types`(`treatment_type_code` ),\nFOREIGN KEY (`professional_id` ) REFERENCES `Professionals`(`professional_id` ),\nFOREIGN KEY (`dog_id` ) REFERENCES `Dogs`(`dog_id` )\n);\n\nQuestion: Find the owner id and zip code of the owner who spent the most money in total for his or her dogs."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0773",
+    "original_index": 773,
+    "db_id": "world_1",
+    "question": "Which countries have greater area than that of any country in Europe?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `city` (\n  `ID` integer NOT NULL PRIMARY KEY AUTOINCREMENT\n,  `Name` char(35) NOT NULL DEFAULT ''\n,  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `District` char(20) NOT NULL DEFAULT ''\n,  `Population` integer NOT NULL DEFAULT '0'\n,  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\nCREATE TABLE `country` (\n  `Code` char(3) NOT NULL DEFAULT ''\n,  `Name` char(52) NOT NULL DEFAULT ''\n,  `Continent` text  NOT NULL DEFAULT 'Asia'\n,  `Region` char(26) NOT NULL DEFAULT ''\n,  `SurfaceArea` float(10,2) NOT NULL DEFAULT '0.00'\n,  `IndepYear` integer DEFAULT NULL\n,  `Population` integer NOT NULL DEFAULT '0'\n,  `LifeExpectancy` float(3,1) DEFAULT NULL\n,  `GNP` float(10,2) DEFAULT NULL\n,  `GNPOld` float(10,2) DEFAULT NULL\n,  `LocalName` char(45) NOT NULL DEFAULT ''\n,  `GovernmentForm` char(45) NOT NULL DEFAULT ''\n,  `HeadOfState` char(60) DEFAULT NULL\n,  `Capital` integer DEFAULT NULL\n,  `Code2` char(2) NOT NULL DEFAULT ''\n,  PRIMARY KEY (`Code`)\n);\nCREATE TABLE `countrylanguage` (\n  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `Language` char(30) NOT NULL DEFAULT ''\n,  `IsOfficial` text  NOT NULL DEFAULT 'F'\n,  `Percentage` float(4,1) NOT NULL DEFAULT '0.0'\n,  PRIMARY KEY (`CountryCode`,`Language`)\n,  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\n\nQuestion: Which countries have greater area than that of any country in Europe?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0391",
+    "original_index": 391,
+    "db_id": "course_teach",
+    "question": "What is the hometown of the youngest teacher?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"course\" (\n\"Course_ID\" int,\n\"Staring_Date\" text,\n\"Course\" text,\nPRIMARY KEY (\"Course_ID\")\n);\nCREATE TABLE \"course_arrange\" (\n\"Course_ID\" int,\n\"Teacher_ID\" int,\n\"Grade\" int,\nPRIMARY KEY (\"Course_ID\",\"Teacher_ID\",\"Grade\"),\nFOREIGN KEY (\"Course_ID\") REFERENCES `course`(\"Course_ID\"),\nFOREIGN KEY (\"Teacher_ID\") REFERENCES `teacher`(\"Teacher_ID\")\n);\nCREATE TABLE \"teacher\" (\n\"Teacher_ID\" int,\n\"Name\" text,\n\"Age\" text,\n\"Hometown\" text,\nPRIMARY KEY (\"Teacher_ID\")\n);\n\nQuestion: What is the hometown of the youngest teacher?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0047",
+    "original_index": 47,
+    "db_id": "pets_1",
+    "question": "Find the weight of the youngest dog.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Has_Pet (\n       StuID\t\tINTEGER,\n       PetID\t\tINTEGER,\n       FOREIGN KEY(PetID) REFERENCES Pets(PetID),\n       FOREIGN KEY(StuID) REFERENCES Student(StuID)\n);\nCREATE TABLE Pets (\n       PetID\t\tINTEGER PRIMARY KEY,\n       PetType\t\tVARCHAR(20),\n       pet_age INTEGER,\n       weight REAL\n);\nCREATE TABLE Student (\n       StuID    \tINTEGER PRIMARY KEY,\n       LName\t\tVARCHAR(12),\n       Fname\t\tVARCHAR(12),\n       Age\t\tINTEGER,\n       Sex\t\tVARCHAR(1),\n       Major\t\tINTEGER,\n       Advisor\t\tINTEGER,\n       city_code\tVARCHAR(3)\n);\n\nQuestion: Find the weight of the youngest dog."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0064",
+    "original_index": 64,
+    "db_id": "pets_1",
+    "question": "What are the ids of the students who do not own cats as pets?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Has_Pet (\n       StuID\t\tINTEGER,\n       PetID\t\tINTEGER,\n       FOREIGN KEY(PetID) REFERENCES Pets(PetID),\n       FOREIGN KEY(StuID) REFERENCES Student(StuID)\n);\nCREATE TABLE Pets (\n       PetID\t\tINTEGER PRIMARY KEY,\n       PetType\t\tVARCHAR(20),\n       pet_age INTEGER,\n       weight REAL\n);\nCREATE TABLE Student (\n       StuID    \tINTEGER PRIMARY KEY,\n       LName\t\tVARCHAR(12),\n       Fname\t\tVARCHAR(12),\n       Age\t\tINTEGER,\n       Sex\t\tVARCHAR(1),\n       Major\t\tINTEGER,\n       Advisor\t\tINTEGER,\n       city_code\tVARCHAR(3)\n);\n\nQuestion: What are the ids of the students who do not own cats as pets?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0416",
+    "original_index": 416,
+    "db_id": "museum_visit",
+    "question": "Find the average number of staff working for the museums that were open before 2009.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"museum\" (\n\"Museum_ID\" int,\n\"Name\" text,\n\"Num_of_Staff\" int,\n\"Open_Year\" text,\nPRIMARY KEY (\"Museum_ID\")\n);\nCREATE TABLE \"visit\" (\n\"Museum_ID\" int,\n\"visitor_ID\" text,\n\"Num_of_Ticket\" int,\n\"Total_spent\" real,\nPRIMARY KEY (\"Museum_ID\",\"visitor_ID\"),\nFOREIGN KEY (\"Museum_ID\") REFERENCES `museum`(\"Museum_ID\"),\nFOREIGN KEY (\"visitor_ID\") REFERENCES `visitor`(\"ID\")\n);\nCREATE TABLE \"visitor\" (\n\"ID\" int,\n\"Name\" text,\n\"Level_of_membership\" int,\n\"Age\" int,\nPRIMARY KEY (\"ID\")\n);\n\nQuestion: Find the average number of staff working for the museums that were open before 2009."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0027",
+    "original_index": 27,
+    "db_id": "concert_singer",
+    "question": "What is the year that had the most concerts?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"concert\" (\n\"concert_ID\" int,\n\"concert_Name\" text,\n\"Theme\" text,\n\"Stadium_ID\" text,\n\"Year\" text,\nPRIMARY KEY (\"concert_ID\"),\nFOREIGN KEY (\"Stadium_ID\") REFERENCES \"stadium\"(\"Stadium_ID\")\n);\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Country\" text,\n\"Song_Name\" text,\n\"Song_release_year\" text,\n\"Age\" int,\n\"Is_male\" bool,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"singer_in_concert\" (\n\"concert_ID\" int,\n\"Singer_ID\" text,\nPRIMARY KEY (\"concert_ID\",\"Singer_ID\"),\nFOREIGN KEY (\"concert_ID\") REFERENCES \"concert\"(\"concert_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES \"singer\"(\"Singer_ID\")\n);\nCREATE TABLE \"stadium\" (\n\"Stadium_ID\" int,\n\"Location\" text,\n\"Name\" text,\n\"Capacity\" int,\n\"Highest\" int,\n\"Lowest\" int,\n\"Average\" int,\nPRIMARY KEY (\"Stadium_ID\")\n);\n\nQuestion: What is the year that had the most concerts?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0384",
+    "original_index": 384,
+    "db_id": "course_teach",
+    "question": "What are the names of the teachers ordered by ascending age?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"course\" (\n\"Course_ID\" int,\n\"Staring_Date\" text,\n\"Course\" text,\nPRIMARY KEY (\"Course_ID\")\n);\nCREATE TABLE \"course_arrange\" (\n\"Course_ID\" int,\n\"Teacher_ID\" int,\n\"Grade\" int,\nPRIMARY KEY (\"Course_ID\",\"Teacher_ID\",\"Grade\"),\nFOREIGN KEY (\"Course_ID\") REFERENCES `course`(\"Course_ID\"),\nFOREIGN KEY (\"Teacher_ID\") REFERENCES `teacher`(\"Teacher_ID\")\n);\nCREATE TABLE \"teacher\" (\n\"Teacher_ID\" int,\n\"Name\" text,\n\"Age\" text,\n\"Hometown\" text,\nPRIMARY KEY (\"Teacher_ID\")\n);\n\nQuestion: What are the names of the teachers ordered by ascending age?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0417",
+    "original_index": 417,
+    "db_id": "museum_visit",
+    "question": "What are the opening year and staff number of the museum named Plaza Museum?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"museum\" (\n\"Museum_ID\" int,\n\"Name\" text,\n\"Num_of_Staff\" int,\n\"Open_Year\" text,\nPRIMARY KEY (\"Museum_ID\")\n);\nCREATE TABLE \"visit\" (\n\"Museum_ID\" int,\n\"visitor_ID\" text,\n\"Num_of_Ticket\" int,\n\"Total_spent\" real,\nPRIMARY KEY (\"Museum_ID\",\"visitor_ID\"),\nFOREIGN KEY (\"Museum_ID\") REFERENCES `museum`(\"Museum_ID\"),\nFOREIGN KEY (\"visitor_ID\") REFERENCES `visitor`(\"ID\")\n);\nCREATE TABLE \"visitor\" (\n\"ID\" int,\n\"Name\" text,\n\"Level_of_membership\" int,\n\"Age\" int,\nPRIMARY KEY (\"ID\")\n);\n\nQuestion: What are the opening year and staff number of the museum named Plaza Museum?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0862",
+    "original_index": 862,
+    "db_id": "network_1",
+    "question": "How many high schoolers are there?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Friend(\n\tstudent_id int, \n\tfriend_id int,\n\tprimary key (student_id,friend_id),\n\tforeign key(student_id) references Highschooler(ID),\n\tforeign key (friend_id) references Highschooler(ID)\n);\nCREATE TABLE Highschooler(\n\tID int primary key, \n\tname text, \n\tgrade int);\nCREATE TABLE Likes(\n\tstudent_id int, \n\tliked_id int,\n\tprimary key (student_id, liked_id),\n        foreign key (liked_id) references Highschooler(ID),\n        foreign key (student_id) references Highschooler(ID)\n);\n\nQuestion: How many high schoolers are there?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0824",
+    "original_index": 824,
+    "db_id": "orchestra",
+    "question": "List the names of conductors in ascending order of age.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"conductor\" (\n\"Conductor_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"Nationality\" text,\n\"Year_of_Work\" int,\nPRIMARY KEY (\"Conductor_ID\")\n);\nCREATE TABLE \"orchestra\" (\n\"Orchestra_ID\" int,\n\"Orchestra\" text,\n\"Conductor_ID\" int,\n\"Record_Company\" text,\n\"Year_of_Founded\" real,\n\"Major_Record_Format\" text,\nPRIMARY KEY (\"Orchestra_ID\"),\nFOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)\n);\nCREATE TABLE \"performance\" (\n\"Performance_ID\" int,\n\"Orchestra_ID\" int,\n\"Type\" text,\n\"Date\" text,\n\"Official_ratings_(millions)\" real,\n\"Weekly_rank\" text,\n\"Share\" text,\nPRIMARY KEY (\"Performance_ID\"),\nFOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)\n);\nCREATE TABLE \"show\" (\n\"Show_ID\" int,\n\"Performance_ID\" int,\n\"If_first_show\" bool,\n\"Result\" text,\n\"Attendance\" real,\nFOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)\n);\n\nQuestion: List the names of conductors in ascending order of age."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0249",
+    "original_index": 249,
+    "db_id": "flight_2",
+    "question": "What are flight numbers of flights arriving at Airport \"APG\"?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE 'airlines' (\n\tuid INTEGER PRIMARY KEY, \n\tAirline TEXT, \n\tAbbreviation TEXT, \n\tCountry TEXT\n);\nCREATE TABLE 'airports' (\n\tCity TEXT, \n\tAirportCode TEXT PRIMARY KEY, \n\tAirportName TEXT, \n\tCountry TEXT, \n\tCountryAbbrev TEXT\n);\nCREATE TABLE 'flights' (\n\tAirline INTEGER, \n\tFlightNo INTEGER, \n\tSourceAirport TEXT, \n\tDestAirport TEXT, \n\tPRIMARY KEY(Airline, FlightNo),\n\tFOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),\n\tFOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)\n);\n\nQuestion: What are flight numbers of flights arriving at Airport \"APG\"?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0658",
+    "original_index": 658,
+    "db_id": "poker_player",
+    "question": "Return the maximum final tables made across all poker players who have earnings below 200000.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"people\" (\n\"People_ID\" int,\n\"Nationality\" text,\n\"Name\" text,\n\"Birth_Date\" text,\n\"Height\" real,\nPRIMARY KEY (\"People_ID\")\n);\nCREATE TABLE \"poker_player\" (\n\"Poker_Player_ID\" int,\n\"People_ID\" int,\n\"Final_Table_Made\" real,\n\"Best_Finish\" real,\n\"Money_Rank\" real,\n\"Earnings\" real,\nPRIMARY KEY (\"Poker_Player_ID\"),\nFOREIGN KEY (\"People_ID\") REFERENCES `people`(\"People_ID\")\n);\n\nQuestion: Return the maximum final tables made across all poker players who have earnings below 200000."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1000",
+    "original_index": 1000,
+    "db_id": "singer",
+    "question": "How many singers are there?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Birth_Year\" real,\n\"Net_Worth_Millions\" real,\n\"Citizenship\" text,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"song\" (\n\"Song_ID\" int,\n\"Title\" text,\n\"Singer_ID\" int,\n\"Sales\" real,\n\"Highest_Position\" real,\nPRIMARY KEY (\"Song_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES `singer`(\"Singer_ID\")\n);\n\nQuestion: How many singers are there?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0072",
+    "original_index": 72,
+    "db_id": "pets_1",
+    "question": "What is the average and maximum age for each pet type?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Has_Pet (\n       StuID\t\tINTEGER,\n       PetID\t\tINTEGER,\n       FOREIGN KEY(PetID) REFERENCES Pets(PetID),\n       FOREIGN KEY(StuID) REFERENCES Student(StuID)\n);\nCREATE TABLE Pets (\n       PetID\t\tINTEGER PRIMARY KEY,\n       PetType\t\tVARCHAR(20),\n       pet_age INTEGER,\n       weight REAL\n);\nCREATE TABLE Student (\n       StuID    \tINTEGER PRIMARY KEY,\n       LName\t\tVARCHAR(12),\n       Fname\t\tVARCHAR(12),\n       Age\t\tINTEGER,\n       Sex\t\tVARCHAR(1),\n       Major\t\tINTEGER,\n       Advisor\t\tINTEGER,\n       city_code\tVARCHAR(3)\n);\n\nQuestion: What is the average and maximum age for each pet type?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0282",
+    "original_index": 282,
+    "db_id": "employee_hire_evaluation",
+    "question": "What are the names of the employees who never received any evaluation?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"employee\" (\n\"Employee_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"City\" text,\nPRIMARY KEY (\"Employee_ID\")\n);\nCREATE TABLE \"evaluation\" (\n\"Employee_ID\" text,\n\"Year_awarded\" text,\n\"Bonus\" real,\nPRIMARY KEY (\"Employee_ID\",\"Year_awarded\"),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"hiring\" (\n\"Shop_ID\" int,\n\"Employee_ID\" int,\n\"Start_from\" text,\n\"Is_full_time\" bool,\nPRIMARY KEY (\"Employee_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Name\" text,\n\"Location\" text,\n\"District\" text,\n\"Number_products\" int,\n\"Manager_name\" text,\nPRIMARY KEY (\"Shop_ID\")\n);\n\nQuestion: What are the names of the employees who never received any evaluation?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0259",
+    "original_index": 259,
+    "db_id": "employee_hire_evaluation",
+    "question": "How many employees are there?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"employee\" (\n\"Employee_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"City\" text,\nPRIMARY KEY (\"Employee_ID\")\n);\nCREATE TABLE \"evaluation\" (\n\"Employee_ID\" text,\n\"Year_awarded\" text,\n\"Bonus\" real,\nPRIMARY KEY (\"Employee_ID\",\"Year_awarded\"),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"hiring\" (\n\"Shop_ID\" int,\n\"Employee_ID\" int,\n\"Start_from\" text,\n\"Is_full_time\" bool,\nPRIMARY KEY (\"Employee_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Name\" text,\n\"Location\" text,\n\"District\" text,\n\"Number_products\" int,\n\"Manager_name\" text,\nPRIMARY KEY (\"Shop_ID\")\n);\n\nQuestion: How many employees are there?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0413",
+    "original_index": 413,
+    "db_id": "museum_visit",
+    "question": "What is the average age of the visitors whose membership level is not higher than 4?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"museum\" (\n\"Museum_ID\" int,\n\"Name\" text,\n\"Num_of_Staff\" int,\n\"Open_Year\" text,\nPRIMARY KEY (\"Museum_ID\")\n);\nCREATE TABLE \"visit\" (\n\"Museum_ID\" int,\n\"visitor_ID\" text,\n\"Num_of_Ticket\" int,\n\"Total_spent\" real,\nPRIMARY KEY (\"Museum_ID\",\"visitor_ID\"),\nFOREIGN KEY (\"Museum_ID\") REFERENCES `museum`(\"Museum_ID\"),\nFOREIGN KEY (\"visitor_ID\") REFERENCES `visitor`(\"ID\")\n);\nCREATE TABLE \"visitor\" (\n\"ID\" int,\n\"Name\" text,\n\"Level_of_membership\" int,\n\"Age\" int,\nPRIMARY KEY (\"ID\")\n);\n\nQuestion: What is the average age of the visitors whose membership level is not higher than 4?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0223",
+    "original_index": 223,
+    "db_id": "flight_2",
+    "question": "Which city has most number of departing flights?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE 'airlines' (\n\tuid INTEGER PRIMARY KEY, \n\tAirline TEXT, \n\tAbbreviation TEXT, \n\tCountry TEXT\n);\nCREATE TABLE 'airports' (\n\tCity TEXT, \n\tAirportCode TEXT PRIMARY KEY, \n\tAirportName TEXT, \n\tCountry TEXT, \n\tCountryAbbrev TEXT\n);\nCREATE TABLE 'flights' (\n\tAirline INTEGER, \n\tFlightNo INTEGER, \n\tSourceAirport TEXT, \n\tDestAirport TEXT, \n\tPRIMARY KEY(Airline, FlightNo),\n\tFOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),\n\tFOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)\n);\n\nQuestion: Which city has most number of departing flights?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0502",
+    "original_index": 502,
+    "db_id": "battle_death",
+    "question": "How many different results are there for the battles?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"battle\" (\n\"id\" int,\n\"name\" text,\n\"date\" text,\n\"bulgarian_commander\" text,\n\"latin_commander\" text,\n\"result\" text,\nprimary key(\"id\")\n);\nCREATE TABLE \"death\" (\n\"caused_by_ship_id\" int,\n\"id\" int,\n\"note\" text,\n\"killed\" int,\n\"injured\" int,\nprimary key(\"id\"),\nforeign key (\"caused_by_ship_id\") references `ship`(\"id\") \n);\nCREATE TABLE \"ship\" (\n\"lost_in_battle\" int,\n\"id\" int,\n\"name\" text,\n\"tonnage\" text,\n\"ship_type\" text,\n\"location\" text,\n\"disposition_of_ship\" text,\nprimary key(\"id\"),\nforeign key (`lost_in_battle`) references `battle`(\"id\") \n);\n\nQuestion: How many different results are there for the battles?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0883",
+    "original_index": 883,
+    "db_id": "network_1",
+    "question": "How many friends does each student have?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE Friend(\n\tstudent_id int, \n\tfriend_id int,\n\tprimary key (student_id,friend_id),\n\tforeign key(student_id) references Highschooler(ID),\n\tforeign key (friend_id) references Highschooler(ID)\n);\nCREATE TABLE Highschooler(\n\tID int primary key, \n\tname text, \n\tgrade int);\nCREATE TABLE Likes(\n\tstudent_id int, \n\tliked_id int,\n\tprimary key (student_id, liked_id),\n        foreign key (liked_id) references Highschooler(ID),\n        foreign key (student_id) references Highschooler(ID)\n);\n\nQuestion: How many friends does each student have?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0263",
+    "original_index": 263,
+    "db_id": "employee_hire_evaluation",
+    "question": "What is the number of employees from each city?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"employee\" (\n\"Employee_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"City\" text,\nPRIMARY KEY (\"Employee_ID\")\n);\nCREATE TABLE \"evaluation\" (\n\"Employee_ID\" text,\n\"Year_awarded\" text,\n\"Bonus\" real,\nPRIMARY KEY (\"Employee_ID\",\"Year_awarded\"),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"hiring\" (\n\"Shop_ID\" int,\n\"Employee_ID\" int,\n\"Start_from\" text,\n\"Is_full_time\" bool,\nPRIMARY KEY (\"Employee_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Name\" text,\n\"Location\" text,\n\"District\" text,\n\"Number_products\" int,\n\"Manager_name\" text,\nPRIMARY KEY (\"Shop_ID\")\n);\n\nQuestion: What is the number of employees from each city?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0693",
+    "original_index": 693,
+    "db_id": "voter_1",
+    "question": "What are the distinct states and create time of all votes?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `AREA_CODE_STATE` (\n  `area_code` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  PRIMARY KEY (`area_code`)\n);\nCREATE TABLE `CONTESTANTS` (\n  `contestant_number` integer\n,  `contestant_name` varchar(50) NOT NULL\n,  PRIMARY KEY (`contestant_number`)\n);\nCREATE TABLE `VOTES` (\n  `vote_id` integer NOT NULL PRIMARY KEY\n,  `phone_number` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  `contestant_number` integer NOT NULL\n,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n, \tFOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)\n, \tFOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)\n);\n\nQuestion: What are the distinct states and create time of all votes?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0397",
+    "original_index": 397,
+    "db_id": "course_teach",
+    "question": "Show the hometowns shared by at least two teachers.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"course\" (\n\"Course_ID\" int,\n\"Staring_Date\" text,\n\"Course\" text,\nPRIMARY KEY (\"Course_ID\")\n);\nCREATE TABLE \"course_arrange\" (\n\"Course_ID\" int,\n\"Teacher_ID\" int,\n\"Grade\" int,\nPRIMARY KEY (\"Course_ID\",\"Teacher_ID\",\"Grade\"),\nFOREIGN KEY (\"Course_ID\") REFERENCES `course`(\"Course_ID\"),\nFOREIGN KEY (\"Teacher_ID\") REFERENCES `teacher`(\"Teacher_ID\")\n);\nCREATE TABLE \"teacher\" (\n\"Teacher_ID\" int,\n\"Name\" text,\n\"Age\" text,\n\"Hometown\" text,\nPRIMARY KEY (\"Teacher_ID\")\n);\n\nQuestion: Show the hometowns shared by at least two teachers."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0661",
+    "original_index": 661,
+    "db_id": "poker_player",
+    "question": "What are the names of poker players whose earnings is higher than 300000?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"people\" (\n\"People_ID\" int,\n\"Nationality\" text,\n\"Name\" text,\n\"Birth_Date\" text,\n\"Height\" real,\nPRIMARY KEY (\"People_ID\")\n);\nCREATE TABLE \"poker_player\" (\n\"Poker_Player_ID\" int,\n\"People_ID\" int,\n\"Final_Table_Made\" real,\n\"Best_Finish\" real,\n\"Money_Rank\" real,\n\"Earnings\" real,\nPRIMARY KEY (\"Poker_Player_ID\"),\nFOREIGN KEY (\"People_ID\") REFERENCES `people`(\"People_ID\")\n);\n\nQuestion: What are the names of poker players whose earnings is higher than 300000?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0684",
+    "original_index": 684,
+    "db_id": "poker_player",
+    "question": "What are the names of people who do not play poker?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"people\" (\n\"People_ID\" int,\n\"Nationality\" text,\n\"Name\" text,\n\"Birth_Date\" text,\n\"Height\" real,\nPRIMARY KEY (\"People_ID\")\n);\nCREATE TABLE \"poker_player\" (\n\"Poker_Player_ID\" int,\n\"People_ID\" int,\n\"Final_Table_Made\" real,\n\"Best_Finish\" real,\n\"Money_Rank\" real,\n\"Earnings\" real,\nPRIMARY KEY (\"Poker_Player_ID\"),\nFOREIGN KEY (\"People_ID\") REFERENCES `people`(\"People_ID\")\n);\n\nQuestion: What are the names of people who do not play poker?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0838",
+    "original_index": 838,
+    "db_id": "orchestra",
+    "question": "List the name of the conductor with the most years of work.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"conductor\" (\n\"Conductor_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"Nationality\" text,\n\"Year_of_Work\" int,\nPRIMARY KEY (\"Conductor_ID\")\n);\nCREATE TABLE \"orchestra\" (\n\"Orchestra_ID\" int,\n\"Orchestra\" text,\n\"Conductor_ID\" int,\n\"Record_Company\" text,\n\"Year_of_Founded\" real,\n\"Major_Record_Format\" text,\nPRIMARY KEY (\"Orchestra_ID\"),\nFOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)\n);\nCREATE TABLE \"performance\" (\n\"Performance_ID\" int,\n\"Orchestra_ID\" int,\n\"Type\" text,\n\"Date\" text,\n\"Official_ratings_(millions)\" real,\n\"Weekly_rank\" text,\n\"Share\" text,\nPRIMARY KEY (\"Performance_ID\"),\nFOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)\n);\nCREATE TABLE \"show\" (\n\"Show_ID\" int,\n\"Performance_ID\" int,\n\"If_first_show\" bool,\n\"Result\" text,\n\"Attendance\" real,\nFOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)\n);\n\nQuestion: List the name of the conductor with the most years of work."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0690",
+    "original_index": 690,
+    "db_id": "voter_1",
+    "question": "What are the maximum and minimum values of area codes?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `AREA_CODE_STATE` (\n  `area_code` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  PRIMARY KEY (`area_code`)\n);\nCREATE TABLE `CONTESTANTS` (\n  `contestant_number` integer\n,  `contestant_name` varchar(50) NOT NULL\n,  PRIMARY KEY (`contestant_number`)\n);\nCREATE TABLE `VOTES` (\n  `vote_id` integer NOT NULL PRIMARY KEY\n,  `phone_number` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  `contestant_number` integer NOT NULL\n,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n, \tFOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)\n, \tFOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)\n);\n\nQuestion: What are the maximum and minimum values of area codes?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0501",
+    "original_index": 501,
+    "db_id": "battle_death",
+    "question": "What are the distinct battle names which are between bulgarian commander 'Kaloyan' and latin commander 'Baldwin I'?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"battle\" (\n\"id\" int,\n\"name\" text,\n\"date\" text,\n\"bulgarian_commander\" text,\n\"latin_commander\" text,\n\"result\" text,\nprimary key(\"id\")\n);\nCREATE TABLE \"death\" (\n\"caused_by_ship_id\" int,\n\"id\" int,\n\"note\" text,\n\"killed\" int,\n\"injured\" int,\nprimary key(\"id\"),\nforeign key (\"caused_by_ship_id\") references `ship`(\"id\") \n);\nCREATE TABLE \"ship\" (\n\"lost_in_battle\" int,\n\"id\" int,\n\"name\" text,\n\"tonnage\" text,\n\"ship_type\" text,\n\"location\" text,\n\"disposition_of_ship\" text,\nprimary key(\"id\"),\nforeign key (`lost_in_battle`) references `battle`(\"id\") \n);\n\nQuestion: What are the distinct battle names which are between bulgarian commander 'Kaloyan' and latin commander 'Baldwin I'?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0650",
+    "original_index": 650,
+    "db_id": "poker_player",
+    "question": "What are the earnings of poker players, ordered descending by value?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE \"people\" (\n\"People_ID\" int,\n\"Nationality\" text,\n\"Name\" text,\n\"Birth_Date\" text,\n\"Height\" real,\nPRIMARY KEY (\"People_ID\")\n);\nCREATE TABLE \"poker_player\" (\n\"Poker_Player_ID\" int,\n\"People_ID\" int,\n\"Final_Table_Made\" real,\n\"Best_Finish\" real,\n\"Money_Rank\" real,\n\"Earnings\" real,\nPRIMARY KEY (\"Poker_Player_ID\"),\nFOREIGN KEY (\"People_ID\") REFERENCES `people`(\"People_ID\")\n);\n\nQuestion: What are the earnings of poker players, ordered descending by value?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1030",
+    "original_index": 1030,
+    "db_id": "real_estate_properties",
+    "question": "How many available features are there in total?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Other_Available_Features` (\n`feature_id` INTEGER PRIMARY KEY,\n`feature_type_code` VARCHAR(20) NOT NULL,\n`feature_name` VARCHAR(80),\n`feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_type_code` ) REFERENCES `Ref_Feature_Types`(`feature_type_code` )\n);\nCREATE TABLE `Other_Property_Features` (\n`property_id` INTEGER NOT NULL,\n`feature_id` INTEGER NOT NULL,\n`property_feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_id` ) REFERENCES `Other_Available_Features`(`feature_id` ),\nFOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )\n);\nCREATE TABLE `Properties` (\n`property_id` INTEGER PRIMARY KEY,\n`property_type_code` VARCHAR(20) NOT NULL,\n`date_on_market` DATETIME,\n`date_sold` DATETIME,\n`property_name` VARCHAR(80),\n`property_address` VARCHAR(255),\n`room_count` INTEGER,\n`vendor_requested_price` DECIMAL(19,4),\n`buyer_offered_price` DECIMAL(19,4),\n`agreed_selling_price` DECIMAL(19,4),\n`apt_feature_1` VARCHAR(255),\n`apt_feature_2` VARCHAR(255),\n`apt_feature_3` VARCHAR(255),\n`fld_feature_1` VARCHAR(255),\n`fld_feature_2` VARCHAR(255),\n`fld_feature_3` VARCHAR(255),\n`hse_feature_1` VARCHAR(255),\n`hse_feature_2` VARCHAR(255),\n`hse_feature_3` VARCHAR(255),\n`oth_feature_1` VARCHAR(255),\n`oth_feature_2` VARCHAR(255),\n`oth_feature_3` VARCHAR(255),\n`shp_feature_1` VARCHAR(255),\n`shp_feature_2` VARCHAR(255),\n`shp_feature_3` VARCHAR(255),\n`other_property_details` VARCHAR(255),\nFOREIGN KEY (`property_type_code` ) REFERENCES `Ref_Property_Types`(`property_type_code` )\n);\nCREATE TABLE `Ref_Feature_Types` (\n`feature_type_code` VARCHAR(20) PRIMARY KEY,\n`feature_type_name` VARCHAR(80)\n);\nCREATE TABLE `Ref_Property_Types` (\n`property_type_code` VARCHAR(20) PRIMARY KEY,\n`property_type_description` VARCHAR(80)\n);\n\nQuestion: How many available features are there in total?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0700",
+    "original_index": 700,
+    "db_id": "voter_1",
+    "question": "List the area codes in which voters voted both for the contestant 'Tabatha Gehling' and the contestant 'Kelly Clauss'.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `AREA_CODE_STATE` (\n  `area_code` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  PRIMARY KEY (`area_code`)\n);\nCREATE TABLE `CONTESTANTS` (\n  `contestant_number` integer\n,  `contestant_name` varchar(50) NOT NULL\n,  PRIMARY KEY (`contestant_number`)\n);\nCREATE TABLE `VOTES` (\n  `vote_id` integer NOT NULL PRIMARY KEY\n,  `phone_number` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  `contestant_number` integer NOT NULL\n,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n, \tFOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)\n, \tFOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)\n);\n\nQuestion: List the area codes in which voters voted both for the contestant 'Tabatha Gehling' and the contestant 'Kelly Clauss'."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1031",
+    "original_index": 1031,
+    "db_id": "real_estate_properties",
+    "question": "What is the feature type name of feature AirCon?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Other_Available_Features` (\n`feature_id` INTEGER PRIMARY KEY,\n`feature_type_code` VARCHAR(20) NOT NULL,\n`feature_name` VARCHAR(80),\n`feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_type_code` ) REFERENCES `Ref_Feature_Types`(`feature_type_code` )\n);\nCREATE TABLE `Other_Property_Features` (\n`property_id` INTEGER NOT NULL,\n`feature_id` INTEGER NOT NULL,\n`property_feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_id` ) REFERENCES `Other_Available_Features`(`feature_id` ),\nFOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )\n);\nCREATE TABLE `Properties` (\n`property_id` INTEGER PRIMARY KEY,\n`property_type_code` VARCHAR(20) NOT NULL,\n`date_on_market` DATETIME,\n`date_sold` DATETIME,\n`property_name` VARCHAR(80),\n`property_address` VARCHAR(255),\n`room_count` INTEGER,\n`vendor_requested_price` DECIMAL(19,4),\n`buyer_offered_price` DECIMAL(19,4),\n`agreed_selling_price` DECIMAL(19,4),\n`apt_feature_1` VARCHAR(255),\n`apt_feature_2` VARCHAR(255),\n`apt_feature_3` VARCHAR(255),\n`fld_feature_1` VARCHAR(255),\n`fld_feature_2` VARCHAR(255),\n`fld_feature_3` VARCHAR(255),\n`hse_feature_1` VARCHAR(255),\n`hse_feature_2` VARCHAR(255),\n`hse_feature_3` VARCHAR(255),\n`oth_feature_1` VARCHAR(255),\n`oth_feature_2` VARCHAR(255),\n`oth_feature_3` VARCHAR(255),\n`shp_feature_1` VARCHAR(255),\n`shp_feature_2` VARCHAR(255),\n`shp_feature_3` VARCHAR(255),\n`other_property_details` VARCHAR(255),\nFOREIGN KEY (`property_type_code` ) REFERENCES `Ref_Property_Types`(`property_type_code` )\n);\nCREATE TABLE `Ref_Feature_Types` (\n`feature_type_code` VARCHAR(20) PRIMARY KEY,\n`feature_type_name` VARCHAR(80)\n);\nCREATE TABLE `Ref_Property_Types` (\n`property_type_code` VARCHAR(20) PRIMARY KEY,\n`property_type_description` VARCHAR(80)\n);\n\nQuestion: What is the feature type name of feature AirCon?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1032",
+    "original_index": 1032,
+    "db_id": "real_estate_properties",
+    "question": "Show the property type descriptions of properties belonging to that code.",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Other_Available_Features` (\n`feature_id` INTEGER PRIMARY KEY,\n`feature_type_code` VARCHAR(20) NOT NULL,\n`feature_name` VARCHAR(80),\n`feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_type_code` ) REFERENCES `Ref_Feature_Types`(`feature_type_code` )\n);\nCREATE TABLE `Other_Property_Features` (\n`property_id` INTEGER NOT NULL,\n`feature_id` INTEGER NOT NULL,\n`property_feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_id` ) REFERENCES `Other_Available_Features`(`feature_id` ),\nFOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )\n);\nCREATE TABLE `Properties` (\n`property_id` INTEGER PRIMARY KEY,\n`property_type_code` VARCHAR(20) NOT NULL,\n`date_on_market` DATETIME,\n`date_sold` DATETIME,\n`property_name` VARCHAR(80),\n`property_address` VARCHAR(255),\n`room_count` INTEGER,\n`vendor_requested_price` DECIMAL(19,4),\n`buyer_offered_price` DECIMAL(19,4),\n`agreed_selling_price` DECIMAL(19,4),\n`apt_feature_1` VARCHAR(255),\n`apt_feature_2` VARCHAR(255),\n`apt_feature_3` VARCHAR(255),\n`fld_feature_1` VARCHAR(255),\n`fld_feature_2` VARCHAR(255),\n`fld_feature_3` VARCHAR(255),\n`hse_feature_1` VARCHAR(255),\n`hse_feature_2` VARCHAR(255),\n`hse_feature_3` VARCHAR(255),\n`oth_feature_1` VARCHAR(255),\n`oth_feature_2` VARCHAR(255),\n`oth_feature_3` VARCHAR(255),\n`shp_feature_1` VARCHAR(255),\n`shp_feature_2` VARCHAR(255),\n`shp_feature_3` VARCHAR(255),\n`other_property_details` VARCHAR(255),\nFOREIGN KEY (`property_type_code` ) REFERENCES `Ref_Property_Types`(`property_type_code` )\n);\nCREATE TABLE `Ref_Feature_Types` (\n`feature_type_code` VARCHAR(20) PRIMARY KEY,\n`feature_type_name` VARCHAR(80)\n);\nCREATE TABLE `Ref_Property_Types` (\n`property_type_code` VARCHAR(20) PRIMARY KEY,\n`property_type_description` VARCHAR(80)\n);\n\nQuestion: Show the property type descriptions of properties belonging to that code."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0701",
+    "original_index": 701,
+    "db_id": "voter_1",
+    "question": "Return the names of the contestants whose names contain the substring 'Al' .",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `AREA_CODE_STATE` (\n  `area_code` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  PRIMARY KEY (`area_code`)\n);\nCREATE TABLE `CONTESTANTS` (\n  `contestant_number` integer\n,  `contestant_name` varchar(50) NOT NULL\n,  PRIMARY KEY (`contestant_number`)\n);\nCREATE TABLE `VOTES` (\n  `vote_id` integer NOT NULL PRIMARY KEY\n,  `phone_number` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  `contestant_number` integer NOT NULL\n,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n, \tFOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)\n, \tFOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)\n);\n\nQuestion: Return the names of the contestants whose names contain the substring 'Al' ."
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-0694",
+    "original_index": 694,
+    "db_id": "voter_1",
+    "question": "What are the contestant numbers and names of the contestants who had at least two votes?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `AREA_CODE_STATE` (\n  `area_code` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  PRIMARY KEY (`area_code`)\n);\nCREATE TABLE `CONTESTANTS` (\n  `contestant_number` integer\n,  `contestant_name` varchar(50) NOT NULL\n,  PRIMARY KEY (`contestant_number`)\n);\nCREATE TABLE `VOTES` (\n  `vote_id` integer NOT NULL PRIMARY KEY\n,  `phone_number` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  `contestant_number` integer NOT NULL\n,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n, \tFOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)\n, \tFOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)\n);\n\nQuestion: What are the contestant numbers and names of the contestants who had at least two votes?"
+      }
+    ]
+  },
+  {
+    "instance_id": "spider-dev-1033",
+    "original_index": 1033,
+    "db_id": "real_estate_properties",
+    "question": "What are the names of properties that are either houses or apartments with more than 1 room?",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a SQL agent. Write one read-only SQLite query that answers the user question. Return only the SQL query, optionally inside a single sql code fence. An execution tool will run your query. If it reports an error, correct the query using the database schema and error. Do not change the database."
+      },
+      {
+        "role": "user",
+        "content": "Database schema:\nCREATE TABLE `Other_Available_Features` (\n`feature_id` INTEGER PRIMARY KEY,\n`feature_type_code` VARCHAR(20) NOT NULL,\n`feature_name` VARCHAR(80),\n`feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_type_code` ) REFERENCES `Ref_Feature_Types`(`feature_type_code` )\n);\nCREATE TABLE `Other_Property_Features` (\n`property_id` INTEGER NOT NULL,\n`feature_id` INTEGER NOT NULL,\n`property_feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_id` ) REFERENCES `Other_Available_Features`(`feature_id` ),\nFOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )\n);\nCREATE TABLE `Properties` (\n`property_id` INTEGER PRIMARY KEY,\n`property_type_code` VARCHAR(20) NOT NULL,\n`date_on_market` DATETIME,\n`date_sold` DATETIME,\n`property_name` VARCHAR(80),\n`property_address` VARCHAR(255),\n`room_count` INTEGER,\n`vendor_requested_price` DECIMAL(19,4),\n`buyer_offered_price` DECIMAL(19,4),\n`agreed_selling_price` DECIMAL(19,4),\n`apt_feature_1` VARCHAR(255),\n`apt_feature_2` VARCHAR(255),\n`apt_feature_3` VARCHAR(255),\n`fld_feature_1` VARCHAR(255),\n`fld_feature_2` VARCHAR(255),\n`fld_feature_3` VARCHAR(255),\n`hse_feature_1` VARCHAR(255),\n`hse_feature_2` VARCHAR(255),\n`hse_feature_3` VARCHAR(255),\n`oth_feature_1` VARCHAR(255),\n`oth_feature_2` VARCHAR(255),\n`oth_feature_3` VARCHAR(255),\n`shp_feature_1` VARCHAR(255),\n`shp_feature_2` VARCHAR(255),\n`shp_feature_3` VARCHAR(255),\n`other_property_details` VARCHAR(255),\nFOREIGN KEY (`property_type_code` ) REFERENCES `Ref_Property_Types`(`property_type_code` )\n);\nCREATE TABLE `Ref_Feature_Types` (\n`feature_type_code` VARCHAR(20) PRIMARY KEY,\n`feature_type_name` VARCHAR(80)\n);\nCREATE TABLE `Ref_Property_Types` (\n`property_type_code` VARCHAR(20) PRIMARY KEY,\n`property_type_description` VARCHAR(80)\n);\n\nQuestion: What are the names of properties that are either houses or apartments with more than 1 room?"
+      }
+    ]
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "updated_unix": 1794422774.3323295,
+  "controller_pid": 430447,
+  "stage": "running",
+  "target_cells": 12,
+  "completed": [
+    "loopahead-huginn-3.5b-gsm8k-t1",
+    "loopahead-ouro-2.6b-gsm8k-t1",
+    "loopahead-huginn-3.5b-math500-t1",
+    "loopahead-ouro-2.6b-math500-t1",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "loopahead-huginn-3.5b-humanevalplus-t1"
+  ],
+  "completed_count": 7,
+  "failed": {},
+  "running": {
+    "loopahead-ouro-2.6b-humanevalplus-t1": {
+      "pid": 440598,
+      "gpu": 4,
+      "gpus": [
+        4
+      ],
+      "started_unix": 1794421206.15367,
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1/loopahead-ouro-2.6b-humanevalplus-t1.json"
+      ]
+    },
+    "loopahead-huginn-3.5b-mbppplus-t1": {
+      "pid": 451129,
+      "gpu": 2,
+      "gpus": [
+        2
+      ],
+      "started_unix": 1794421951.5455573,
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1/loopahead-huginn-3.5b-mbppplus-t1.json"
+      ]
+    },
+    "loopahead-ouro-2.6b-mbppplus-t1": {
+      "pid": 451140,
+      "gpu": 6,
+      "gpus": [
+        6
+      ],
+      "started_unix": 1794421951.8136404,
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/loop_suffix/results/loopahead-t1-resume-20261112-v1/loopahead-ouro-2.6b-mbppplus-t1.json"
+      ]
+    }
+  },
+  "pending": [
+    "loopahead-huginn-3.5b-specbench-t1",
+    "loopahead-ouro-2.6b-specbench-t1"
+  ],
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "throughput_dispatch_resumed": false,
+  "throughput_running": {
+    "ouro-2.6b-b1": {
+      "pid": 417115,
+      "gpu": 3,
+      "started_unix": 1794419625.2834544
+    }
+  }
+}

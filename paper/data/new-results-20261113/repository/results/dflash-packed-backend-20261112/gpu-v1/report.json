@@ -1,0 +1,228 @@
+{
+  "status": "complete_gpu_diagnostic",
+  "tiny": false,
+  "reportable": false,
+  "started_unix": 1794419097.5622656,
+  "engine_source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/source/src",
+  "models": {
+    "huginn-3.5b": {
+      "model": "huginn-3.5b",
+      "path": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+      "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c"
+    },
+    "ouro-1.4b": {
+      "model": "ouro-1.4b",
+      "path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-1.4B/snapshots/574fa66cb8bf5abdc979642d01cf2b79b16bfab1",
+      "revision": "574fa66cb8bf5abdc979642d01cf2b79b16bfab1"
+    },
+    "ouro-2.6b": {
+      "model": "ouro-2.6b",
+      "path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd",
+      "revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd"
+    }
+  },
+  "checks": {
+    "huginn-3.5b": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "logits",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "features",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "logits",
+          "width": 4,
+          "max_abs": 4.76837158203125e-06
+        },
+        {
+          "kind": "features",
+          "width": 4,
+          "max_abs": 9.5367431640625e-06
+        },
+        {
+          "kind": "logits",
+          "width": 3,
+          "max_abs": 5.0067901611328125e-06
+        },
+        {
+          "kind": "features",
+          "width": 3,
+          "max_abs": 5.7220458984375e-06
+        },
+        {
+          "kind": "logits",
+          "width": 1,
+          "max_abs": 3.337860107421875e-06
+        },
+        {
+          "kind": "features",
+          "width": 1,
+          "max_abs": 3.814697265625e-06
+        }
+      ],
+      "tolerance": 0.0005,
+      "logits_top1_equal": true,
+      "partial_rejection_and_recompute": true
+    },
+    "ouro-2.6b": {
+      "status": "passed",
+      "cases": [
+        {
+          "kind": "logits",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "features",
+          "width": 6,
+          "max_abs": 0.0
+        },
+        {
+          "kind": "logits",
+          "width": 4,
+          "max_abs": 2.422928810119629e-05
+        },
+        {
+          "kind": "features",
+          "width": 4,
+          "max_abs": 4.090368747711182e-06
+        },
+        {
+          "kind": "logits",
+          "width": 3,
+          "max_abs": 2.0503997802734375e-05
+        },
+        {
+          "kind": "features",
+          "width": 3,
+          "max_abs": 4.76837158203125e-06
+        },
+        {
+          "kind": "logits",
+          "width": 1,
+          "max_abs": 1.52587890625e-05
+        },
+        {
+          "kind": "features",
+          "width": 1,
+          "max_abs": 2.6226043701171875e-06
+        }
+      ],
+      "tolerance": 0.0005,
+      "logits_top1_equal": true,
+      "partial_rejection_and_recompute": true
+    }
+  },
+  "benchmarks": {
+    "huginn-3.5b": {
+      "summary": {
+        "native-ar": {
+          "requests": 4,
+          "decode_tokens": 448,
+          "decode_s": 40.58121073246002,
+          "token_s": 11.039591769539163,
+          "gamma": 1.0
+        },
+        "packed-ar": {
+          "requests": 4,
+          "decode_tokens": 448,
+          "decode_s": 63.81350661069155,
+          "token_s": 7.020457326269866,
+          "gamma": 1.0
+        },
+        "native-dflash": {
+          "requests": 4,
+          "decode_tokens": 448,
+          "decode_s": 14.627062305808067,
+          "token_s": 30.62815968330904,
+          "gamma": 3.7966101694915255,
+          "eta_latency": 2.7743924161959823
+        },
+        "packed-dflash": {
+          "requests": 4,
+          "decode_tokens": 448,
+          "decode_s": 17.684031173586845,
+          "token_s": 25.33359026584052,
+          "gamma": 4.072727272727272,
+          "eta_latency": 3.608538459602154
+        }
+      },
+      "exact_sequences": {
+        "native-ar/packed-ar": 4,
+        "native-dflash/packed-dflash": 3,
+        "packed-ar/packed-dflash": 4
+      },
+      "requests": 4,
+      "journal_sha256": "409185d41b605008b286b896ae3fd95c799f8369c92ec7b530512e3f481dd051"
+    },
+    "ouro-2.6b": {
+      "summary": {
+        "native-ar": {
+          "requests": 4,
+          "decode_tokens": 443,
+          "decode_s": 37.97625328600407,
+          "token_s": 11.66518446840213,
+          "gamma": 1.0
+        },
+        "packed-ar": {
+          "requests": 4,
+          "decode_tokens": 441,
+          "decode_s": 70.5653508529067,
+          "token_s": 6.24952607292017,
+          "gamma": 1.0
+        },
+        "native-dflash": {
+          "requests": 4,
+          "decode_tokens": 441,
+          "decode_s": 9.996839001774788,
+          "token_s": 44.11394440999871,
+          "gamma": 4.323529411764706,
+          "eta_latency": 3.7988261368680596
+        },
+        "packed-dflash": {
+          "requests": 4,
+          "decode_tokens": 441,
+          "decode_s": 17.93825225532055,
+          "token_s": 24.58433484617755,
+          "gamma": 4.41,
+          "eta_latency": 3.933791868267254
+        }
+      },
+      "exact_sequences": {
+        "native-ar/packed-ar": 1,
+        "native-dflash/packed-dflash": 3,
+        "packed-ar/packed-dflash": 3
+      },
+      "requests": 4,
+      "journal_sha256": "0ec78809d7bb50398ca3a1550f492516bbdf17e124202c44b4d62e768c339471"
+    }
+  },
+  "limitations": [
+    "Bounded diagnostics only; not a full benchmark matrix.",
+    "BF16 outputs may differ by execution shape; report exact agreement separately.",
+    "No claim of a proportional speed benefit or task-quality equivalence."
+  ],
+  "environment": {
+    "python": "3.10.16 (main, Dec 11 2024, 16:24:50) [GCC 11.2.0]",
+    "torch": "2.6.0+cu126",
+    "transformers": "4.57.1",
+    "cuda": "12.6",
+    "executable": "/tmp/loopfill-dflash-venv/bin/python",
+    "cpu_affinity": [
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  "finished_unix": 1794419424.675168,
+  "gpu": 2,
+  "reserved_gpu_seconds": 325.75793957710266,
+  "cuda_lease_device": "cuda:0"
+}

@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "previous46_unchanged": true,
+  "completed": 47,
+  "expected": 72,
+  "added": [
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "benchmark": "humanevalplus",
+      "temperature": "1",
+      "eta": "2.5573086007648462",
+      "gamma": "2.8441919497159436",
+      "method_tok_s": "17.61856469740708",
+      "ar_tok_s": "6.889494952677075",
+      "drafter_time_frac": "0.021844975849612005",
+      "match_rate": "0.0",
+      "engine": "official_dflash_with_packed_loop_target",
+      "status": "complete_with_declared_limitations",
+      "notes": "Official frozen DFlash drafter/decoder with our packed full-loop target adapter; fresh own-stack AR; separate full-task profile matches every token and verification; numerical diagnostics not all completed. ",
+      "eta_latency": "2.7765220069587557",
+      "eta_throughput": "2.5573086007648462",
+      "aligned_token_match_rate": "0.03901072418363658",
+      "method_decode_tokens": "23530",
+      "ar_decode_tokens": "25547",
+      "method_decode_s": "1335.5230919271708",
+      "ar_decode_s": "3708.1092555373907",
+      "ar_provenance": "new_same_packed_stack_AR",
+      "ar_first_completed_unix": "1794443517.6197717",
+      "ar_last_completed_unix": "1794447202.7687824",
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-ar",
+      "target_backend": "packed_full_loop",
+      "method_exit_evidence": "actual_exit0",
+      "profile_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-profile",
+      "numerical_diagnostics": "not_all_completed"
+    }
+  ],
+  "collector_actual_exit_code": 0,
+  "results_sha256": "d57db9b3bbf335cc31be58a1cd1d130e1de3c54b0b2471dd988223a183f2243c",
+  "checked_unix": 1794466159.408699
+}

@@ -1,0 +1,92 @@
+{
+  "updated_unix": 1794326497.8860536,
+  "completed": [
+    "check-huginn-lad",
+    "loopahead-huginn-3.5b-gsm8k-t0",
+    "loopahead-ouro-2.6b-gsm8k-t0"
+  ],
+  "failed": [],
+  "running": {
+    "train-ouro-2.6b": {
+      "pid": 210022,
+      "gpus": [
+        2,
+        4
+      ],
+      "started_unix": 1794320971.3908956
+    },
+    "loopahead-huginn-3.5b-math500-t0": {
+      "pid": 263754,
+      "gpus": [
+        1
+      ],
+      "started_unix": 1794325325.1430774
+    },
+    "loopahead-ouro-2.6b-math500-t0": {
+      "pid": 264951,
+      "gpus": [
+        6
+      ],
+      "started_unix": 1794325416.3817854
+    },
+    "loopahead-huginn-3.5b-bbh-t0": {
+      "pid": 265171,
+      "gpus": [
+        3
+      ],
+      "started_unix": 1794325431.604361
+    },
+    "loopahead-ouro-2.6b-bbh-t0": {
+      "pid": 265480,
+      "gpus": [
+        5
+      ],
+      "started_unix": 1794325446.8829107
+    }
+  },
+  "pending": [
+    "train-huginn-3.5b",
+    "dflash-huginn-3.5b-gsm8k-t0",
+    "dflash-ouro-2.6b-gsm8k-t0",
+    "dflash-huginn-3.5b-math500-t0",
+    "dflash-ouro-2.6b-math500-t0",
+    "dflash-huginn-3.5b-bbh-t0",
+    "dflash-ouro-2.6b-bbh-t0",
+    "loopahead-huginn-3.5b-humanevalplus-t0",
+    "dflash-huginn-3.5b-humanevalplus-t0",
+    "loopahead-ouro-2.6b-humanevalplus-t0",
+    "dflash-ouro-2.6b-humanevalplus-t0",
+    "loopahead-huginn-3.5b-mbppplus-t0",
+    "dflash-huginn-3.5b-mbppplus-t0",
+    "loopahead-ouro-2.6b-mbppplus-t0",
+    "dflash-ouro-2.6b-mbppplus-t0",
+    "loopahead-huginn-3.5b-specbench-t0",
+    "dflash-huginn-3.5b-specbench-t0",
+    "loopahead-ouro-2.6b-specbench-t0",
+    "dflash-ouro-2.6b-specbench-t0",
+    "loopahead-huginn-3.5b-gsm8k-t1",
+    "dflash-huginn-3.5b-gsm8k-t1",
+    "loopahead-ouro-2.6b-gsm8k-t1",
+    "dflash-ouro-2.6b-gsm8k-t1",
+    "loopahead-huginn-3.5b-math500-t1",
+    "dflash-huginn-3.5b-math500-t1",
+    "loopahead-ouro-2.6b-math500-t1",
+    "dflash-ouro-2.6b-math500-t1",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "dflash-huginn-3.5b-bbh-t1",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "dflash-ouro-2.6b-bbh-t1",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "dflash-huginn-3.5b-humanevalplus-t1",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "dflash-ouro-2.6b-humanevalplus-t1",
+    "loopahead-huginn-3.5b-mbppplus-t1",
+    "dflash-huginn-3.5b-mbppplus-t1",
+    "loopahead-ouro-2.6b-mbppplus-t1",
+    "dflash-ouro-2.6b-mbppplus-t1",
+    "loopahead-huginn-3.5b-specbench-t1",
+    "dflash-huginn-3.5b-specbench-t1",
+    "loopahead-ouro-2.6b-specbench-t1",
+    "dflash-ouro-2.6b-specbench-t1"
+  ]
+}

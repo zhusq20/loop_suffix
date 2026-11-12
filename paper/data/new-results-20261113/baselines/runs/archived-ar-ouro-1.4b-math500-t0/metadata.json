@@ -1,0 +1,89 @@
+{
+  "model": "ouro-1.4b",
+  "model_revision": "574fa66cb8bf5abdc979642d01cf2b79b16bfab1",
+  "method": "ar",
+  "dataset": "math500",
+  "input_sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+  "count": 500,
+  "full_count": 500,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "dtype": "bfloat16",
+  "max_new_tokens": 512,
+  "max_seq": 2304,
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Released tokenizer EOS plus chat end token."
+  },
+  "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+  "gpu": "NVIDIA L20X",
+  "cpu_affinity": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "torch": "2.6.0+cu126",
+  "transformers": "4.55.0",
+  "graph": false,
+  "compile": false,
+  "physical_nodes": 1,
+  "reportable": true,
+  "stage": "formal",
+  "frozen_source_sha256": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "scripts/loop_latency_inputs.py": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+    "scripts/loop_latency_suite.py": "126d66f3c24ec53100182cf0c58057eb71dade51084912c1d9c1d69b4a9faf5d",
+    "scripts/loop_latency_worker.py": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2"
+  },
+  "measurement_provenance": {
+    "kind": "archived_same_host_AR",
+    "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/ouro-1.4b-math500-ar",
+    "source_sha256": {
+      "metadata.json": "499d5c555efa25b5ab878ab9ad581b9a46fdf2e2e718daa857cdb0fda81fc91e",
+      "requests.jsonl": "2f43e6e39369af64370d2767aa2bb303f85296df9636b668e05d6dc2da49bf32",
+      "summary.json": "44cc9d2d5893a089c359c734436ddfe96ff6910fd7a5501c5fe80023894d38d6",
+      "complete.json": "544c636ca869b3f7069cd1b833dcf47edd75c6851adece5f6c9fb0d35358a2b3"
+    },
+    "imported_unix": 1794301574.5431952,
+    "first_request_completed_unix": 1793992813.2334888,
+    "last_request_completed_unix": 1794012542.4634724,
+    "new_measurement": false,
+    "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+  }
+}

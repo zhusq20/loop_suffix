@@ -1,0 +1,148 @@
+{
+  "status": "interrupted_partial_stdout_preserved_not_complete_diagnostic",
+  "expected_cases": 429,
+  "recovered_cases": 262,
+  "remaining_cases": 167,
+  "recovered_same_top1": 262,
+  "actual_original_exit_code": -15,
+  "counts_toward_completed_numerical_groups": false,
+  "new_gpu_runs": 0,
+  "no_production_files_changed": true,
+  "unchanged_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "artifact_bindings": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-launcher.json": {
+      "sha256": "18a2765c1251dcddea00badc729369e2fc445a60e9e3a61080a66b66e55ddc53",
+      "snapshot": "evidence/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-launcher.json"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json": {
+      "sha256": "04567d90e0d062db8c3849c09c968580aa60226f4b8c100b0bbe257d5f18ae40",
+      "snapshot": "evidence/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32-exit.json"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-launcher.json": {
+      "sha256": "60ba33882334084c3ddd7b2185a31d9cdb9223f42cb10cd2b752663516c3bd29",
+      "snapshot": "evidence/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-launcher.json"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-exit.json": {
+      "sha256": "29e04768dcc451a4df4febe342a1060c7fc7485fe5520b31f9c7d44fb4f1bca0",
+      "snapshot": "evidence/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-observed-exit.json"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source-manifest.json": {
+      "sha256": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source-manifest.json"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/diagnose_trained_loopahead.py": {
+      "sha256": "8e4c18ebc54ef0c0b1475ead9573ec80ca4da24c8af18c670231d28526addc7f",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/diagnose_trained_loopahead.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead_diagnostic_inputs.py": {
+      "sha256": "a743af5a1c12f4f42705db9a3526a44ee1e1abdcdb0f8d606a20e6c2511cda5d",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead_diagnostic_inputs.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/provenance.py": {
+      "sha256": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/provenance.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/gpu_startup.py": {
+      "sha256": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/gpu_startup.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/gpu_allocation.py": {
+      "sha256": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/gpu_allocation.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/__init__.py": {
+      "sha256": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/__init__.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/admission.py": {
+      "sha256": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/admission.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/batch.py": {
+      "sha256": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/batch.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/decode.py": {
+      "sha256": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/decode.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/engine.py": {
+      "sha256": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/engine.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/lad.py": {
+      "sha256": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/lad.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/sampling.py": {
+      "sha256": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/sampling.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_admission.py": {
+      "sha256": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_admission.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_batch.py": {
+      "sha256": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_batch.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_decode.py": {
+      "sha256": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_decode.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_lad.py": {
+      "sha256": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_lad.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_sampling.py": {
+      "sha256": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_sampling.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_training_data.py": {
+      "sha256": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/test_training_data.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/training_data.py": {
+      "sha256": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/fp32-common-prefix/source/loopahead/training_data.py"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json": {
+      "sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/report.json": {
+      "sha256": "d90495eba76fa3bb34bb780db99adcc872626a29c853f7930ea2eca38a36f7f9",
+      "snapshot": "evidence/preflight/formal-greedy-margins/loopahead-ouro-2.6b-math500-v1/report.json"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0/requests.jsonl": {
+      "sha256": "b645e7064e21d40c1be833a0d05ea9f156cdf763b45cf3801b8ddb592ba482c7"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0/metadata.json": {
+      "sha256": "04868de3be9d41bdb664580fed701bdb6cbcedbef1b33c2850b0c46d2bfded57"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t0/complete.json": {
+      "sha256": "22f306b4a32621da5f4356b14f04db17b42d9041e0cd258cb22b03f5130627e3"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1/requests.jsonl": {
+      "sha256": "e33a05aa5d85268157163c553dc17b37c1dc22610b66860cdea3ce58d3bb51e6"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1/metadata.json": {
+      "sha256": "5d63f19fd6e8712fe4f3c318fcfaace5245e416ee59545c112db411f13619cb2"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t0-v1/complete.json": {
+      "sha256": "92dbef7773e7c8282f9f9c9ee42c9a5d1259d00edbe5c92a81c8e3dfbae966a1"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32.log": {
+      "sha256": "204086fa1f6c74041ac0b25e6726da9dd820ff51d43292794180c19641a834cd",
+      "snapshot": "evidence/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-math500-v1-fp32.log"
+    }
+  },
+  "recovered_records_sha256": "a68257dd54ab8a97fb81f5e554553c9faef4f415bdb49d5aceb76bc437881abf",
+  "source_sha256": "aed094a07bc84e46978cd317b19f043bef5b313e0024d1856e888c5c11e4db8f",
+  "checked_unix": 1794506901.8321757,
+  "limitations": [
+    "Only emitted stdout records are preserved; the interrupted worker produced no final report.",
+    "Common prefixes and BF16 records are joined from the original inputs, not newly generated.",
+    "Full logits were not saved; the reported max-logit difference cannot be independently recomputed.",
+    "This is not a resumed job, a complete FP32 benchmark, an exit-0 diagnostic, or approval to restart."
+  ]
+}

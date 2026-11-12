@@ -1,0 +1,99 @@
+{
+  "status": "all_observed_formal_first_divergences_checked",
+  "method": "loopahead",
+  "model": "ouro-1.4b",
+  "benchmark": "bbh",
+  "temperature": 0,
+  "formal_requests": 270,
+  "whole_sequence_matches_bf16": 222,
+  "whole_sequence_match_rate_bf16": 0.8222222222222222,
+  "first_divergences": 48,
+  "bf16_divergences_reproduced": 48,
+  "at_least_one_bf16_top2_tie": 42,
+  "no_bf16_top2_tie": 6,
+  "fp32_argmax_equal": 48,
+  "max_fp32_logit_difference": 0.00016236305236816406,
+  "actual_exits": {
+    "loopahead-ouro-1.4b-bbh-v1-observed": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-observed-exit.json",
+      "sha256": "127da7bb3efaecdcb92af6e0eb30f8eed66ad53baf0fcccdbdb329a35581cc74",
+      "exit_code": 0
+    },
+    "loopahead-ouro-1.4b-bbh-v1-fp32": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-fp32-exit.json",
+      "sha256": "197d17f839c3f1a5f71de002c85ab5b22c67265457177f0ebb35e99dee69b90f",
+      "exit_code": 0
+    }
+  },
+  "artifact_sha256": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/report.json": "e11de8a366c232b5ef6404a11b900200b3ec8b5d9d72fdc5bea4cf8b7d3eb780",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/source-manifest.json": "1615795a07c50eeb33ac06f044739e1523083eb3527d5cf7273ee0cae6e4f241",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-observed-launcher.json": "da8675651918cbe6945cf16afd84750fcb52e46855ec012e6aad9597eab3abef",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-observed-exit.json": "127da7bb3efaecdcb92af6e0eb30f8eed66ad53baf0fcccdbdb329a35581cc74",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/fp32-common-prefix/report.json": "9d16e5372a0327f5b016b1a66841a11fe15ef9c70fe53f9c6eb89aac5a747b21",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1/fp32-common-prefix/source-manifest.json": "0b15d91e6d80a57ca55b62e7aaea437b78caf01953e7e8073029c11b116dbb35",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-fp32-launcher.json": "42b6c604717f8bf99d594fde2d1aa47b725919ef266b24d43fd7743f023a798b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/logs/loopahead-ouro-1.4b-bbh-v1-fp32-exit.json": "197d17f839c3f1a5f71de002c85ab5b22c67265457177f0ebb35e99dee69b90f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t0-v1/metadata.json": "8b7819c09ec1d51b2ec3e263de34bfea48759e357900c4632b2962c9d06403d2"
+  },
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+  "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t0",
+      "sha256": "6d32d20381a892a5ba90f631ebf6acab5dae7341e9eb95604208affb08eeffc7"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t0-v1",
+      "sha256": "91262e20d2ba27a2c46239a222d00a34d74eec7f51c301ddc3acc6abbf559e19"
+    }
+  },
+  "existing_validation": {
+    "method": "loopahead",
+    "model": "ouro-1.4b",
+    "benchmark": "bbh",
+    "cases": 48,
+    "folder": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-1.4b-bbh-v1",
+    "result_sha256": "e11de8a366c232b5ef6404a11b900200b3ec8b5d9d72fdc5bea4cf8b7d3eb780",
+    "loopahead_fp32_report_sha256": "9d16e5372a0327f5b016b1a66841a11fe15ef9c70fe53f9c6eb89aac5a747b21"
+  },
+  "original_timed_row_unchanged": {
+    "method": "loopahead",
+    "model": "ouro-1.4b",
+    "benchmark": "bbh",
+    "temperature": "0",
+    "eta": "3.762202460285895",
+    "gamma": "4.794020820357683",
+    "method_tok_s": "46.818398967554494",
+    "ar_tok_s": "12.444412405173086",
+    "drafter_time_frac": "NA",
+    "match_rate": "0.8222222222222222",
+    "engine": "ours",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+    "eta_latency": "3.7536837390506523",
+    "eta_throughput": "3.762202460285895",
+    "aligned_token_match_rate": "0.9121570923997584",
+    "method_decode_tokens": "53880",
+    "ar_decode_tokens": "53758",
+    "method_decode_s": "1150.8296137452126",
+    "ar_decode_s": "4319.850407533348",
+    "ar_provenance": "archived_same_host_AR",
+    "ar_first_completed_unix": "1794001367.2473717",
+    "ar_last_completed_unix": "1794005681.6245935",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t0-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t0",
+    "target_backend": "packed_LoopAhead",
+    "method_exit_evidence": "actual_exit0",
+    "profile_run": "",
+    "numerical_diagnostics": "not_all_completed"
+  },
+  "checked_unix": 1794472705.5483518,
+  "new_gpu_measurements": 0,
+  "limitations": [
+    "All observed first divergences of this formal cell only; full BF16 output agreement is unchanged.",
+    "Forced FP32 common-prefix replay may change the proposed tree; it is not complete FP32 benchmark generation.",
+    "Logged top-three values and margins are checked arithmetically; full logits are not regenerated by this CPU audit."
+  ]
+}

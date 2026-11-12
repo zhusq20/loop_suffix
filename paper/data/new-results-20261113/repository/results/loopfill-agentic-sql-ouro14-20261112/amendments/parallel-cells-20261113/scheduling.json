@@ -1,0 +1,26 @@
+{
+  "placement": "first_idle_per_cell",
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "created_unix": 1794516852.146294,
+  "authorization": "User explicitly requested every remaining experiment to run independently in parallel on free GPUs; no same-device method grouping.",
+  "protocol_sha256": "589fb96b34f1911bec0b3d8142892acfdb72607e940a5a6d50731cb016d05dc8",
+  "jobs_sha256": "b2276ffa8d4bb79504ae57067824ac41db55799f456fca249626835f90f1bd62",
+  "scheduler_root": "/ossfs/workspace/loop_suffix/results/loopfill-agentic-sql-ouro14-20261112/amendments/parallel-cells-20261113/source",
+  "scheduler_sha256": {
+    "loop_agentic_suite.py": "c1353daef5340d2e3e197dc1524d2ee35a598930a5f5c502d56b7e33b4f25402",
+    "loop_agentic_ouro14.py": "830d2ac127027612598cba95cab2d4eba3881a2642bf9da157510b5bf5b762d9",
+    "loop_agentic_finalize.py": "05434870cf52cd6050dc28dbcc5622057c484936bdfeb1f30ad54ebe7ea6bb87"
+  },
+  "original_inference_sources_unchanged": true,
+  "completed_measurements_preserved": true,
+  "comparison": "AR remains the same model/temperature reference; device differences are disclosed, not controlled by co-location."
+}

@@ -1,0 +1,210 @@
+{
+  "status": "cpu_inputs_and_mock_dispatch_passed_gpu_replay_pending",
+  "checked_unix": 1794385482.7111304,
+  "development": {
+    "narrow": {
+      "identity": {
+        "model": "huginn-3.5b",
+        "dataset": "heldout-huginn-dflash-dev20",
+        "label": "narrow",
+        "development_only": true,
+        "max_new_tokens": 128,
+        "count": 20,
+        "cases": 8,
+        "source_report_sha256": "c3cbc9734de017f011f1458651c1b55471f1747cb6c8cb07acb02cdce00d5b0e",
+        "source_metadata_sha256": "7cb3f1396ac8b234128fc2c8fdaacb105a3736f741b67ea546b7d75d3e5238cc",
+        "inputs_sha256": "aec11336b2ca404571136a18b5a320d285bf43fda6debff00c31b744c3d12cc7",
+        "plan_sha256": "79d093f0d4e1a0e417b30e5841d5436d4854746c38f50f2e118aacc64a58f01c",
+        "checkpoint": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-pilot-v1/checkpoint-000060",
+          "step": 60,
+          "training_examples": 1893,
+          "training_epochs_planned": 1,
+          "parameters": 332621056,
+          "hashes": {
+            "model.safetensors": "f7cd716a686b7d887d89cbe5f3261cc58b9414aedeb9cfdfd7a8aa0cbdc0222c"
+          },
+          "config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+          "training_metadata_sha256": "782a9588caf69e7a1ae8f9a8ef411b9de7e4b04e144c3ef9a81c82341eba8c8d",
+          "loading": {
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "error_msgs": []
+          }
+        },
+        "source_journals": {
+          "ar": {
+            "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-compare-v1/ar.jsonl",
+            "sha256": "b368da4c61d4524c9de530a69f82abc0eb7376355f02fe8ff49fbdb5a6152054"
+          },
+          "narrow": {
+            "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-compare-v1/narrow.jsonl",
+            "sha256": "ed3926eda4f32277f83ac8e7151e5df1c52291eb1e24b9519d977d3af8ef0a29"
+          }
+        }
+      },
+      "first_divergences": [
+        {
+          "source_id": "ultrachat/adcda52b719987653efa3dfe733701bd01474cc0bc10ee6823fdafc68c588a68",
+          "position": 29,
+          "ar_token": 461,
+          "dflash_token": 865
+        },
+        {
+          "source_id": "nemotron-v1/a322ade6-c8e8-42c7-aec4-a783ff417bb8",
+          "position": 127,
+          "ar_token": 1570,
+          "dflash_token": 879
+        },
+        {
+          "source_id": "ultrachat/e7d03eefaa0b8068850fb7a01f7d74ccb829c470541a549391dfc6d3f4437eaf",
+          "position": 114,
+          "ar_token": 1121,
+          "dflash_token": 19208
+        },
+        {
+          "source_id": "nemotron-v1/644b6135-3f1a-4780-bf7c-9f0c29eea9f0",
+          "position": 94,
+          "ar_token": 44,
+          "dflash_token": 48
+        },
+        {
+          "source_id": "ultrachat/bb6f66ff5c67053129dc3b9f2afaff7790873cd69667fb15957c99d9879f73eb",
+          "position": 31,
+          "ar_token": 344,
+          "dflash_token": 399
+        },
+        {
+          "source_id": "ultrachat/10517dfd119469bd5ffa2b6601f25353ce2d92ab9ce10529c85537effa2224e1",
+          "position": 28,
+          "ar_token": 51977,
+          "dflash_token": 47318
+        },
+        {
+          "source_id": "ultrachat/7533291e998e8947ab4d0aca7e02f8c9730d814e719c2aae4f80321e5fc93630",
+          "position": 16,
+          "ar_token": 12562,
+          "dflash_token": 48036
+        },
+        {
+          "source_id": "ultrachat/6eb7f07554ec4b978b4231cf28549a9b81f91be10d24deb9cee5baa64c6ed3f4",
+          "position": 43,
+          "ar_token": 31177,
+          "dflash_token": 33615
+        }
+      ]
+    },
+    "wide": {
+      "identity": {
+        "model": "huginn-3.5b",
+        "dataset": "heldout-huginn-dflash-dev20",
+        "label": "wide",
+        "development_only": true,
+        "max_new_tokens": 128,
+        "count": 20,
+        "cases": 7,
+        "source_report_sha256": "c3cbc9734de017f011f1458651c1b55471f1747cb6c8cb07acb02cdce00d5b0e",
+        "source_metadata_sha256": "7cb3f1396ac8b234128fc2c8fdaacb105a3736f741b67ea546b7d75d3e5238cc",
+        "inputs_sha256": "aec11336b2ca404571136a18b5a320d285bf43fda6debff00c31b744c3d12cc7",
+        "plan_sha256": "79d093f0d4e1a0e417b30e5841d5436d4854746c38f50f2e118aacc64a58f01c",
+        "checkpoint": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-3.5b-formal-v1/checkpoint-004000",
+          "step": 4000,
+          "training_examples": 47387,
+          "training_epochs_planned": 6,
+          "parameters": 2116288320,
+          "hashes": {
+            "model.safetensors": "709b03867ffd6364f7d6466b0314df2f835a3d4090b4d54c467dde074a9f0edd"
+          },
+          "config_sha256": "27bac5503098f82c7f5ec8a9aa75c76c6ab727c5464988f45325bc503e0fc496",
+          "training_metadata_sha256": "f7e7663a7221736adb79098deb7ff0ccd72a5793af15f4c9e47bfab2975e610e",
+          "loading": {
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "error_msgs": []
+          }
+        },
+        "source_journals": {
+          "ar": {
+            "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-compare-v1/ar.jsonl",
+            "sha256": "b368da4c61d4524c9de530a69f82abc0eb7376355f02fe8ff49fbdb5a6152054"
+          },
+          "wide": {
+            "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-compare-v1/wide.jsonl",
+            "sha256": "c5327f5eb39334a898200c12a9c108e7f9c800d9deaf875bb397459af4631b5f"
+          }
+        }
+      },
+      "first_divergences": [
+        {
+          "source_id": "ultrachat/adcda52b719987653efa3dfe733701bd01474cc0bc10ee6823fdafc68c588a68",
+          "position": 29,
+          "ar_token": 461,
+          "dflash_token": 865
+        },
+        {
+          "source_id": "nemotron-v1/a322ade6-c8e8-42c7-aec4-a783ff417bb8",
+          "position": 127,
+          "ar_token": 1570,
+          "dflash_token": 879
+        },
+        {
+          "source_id": "ultrachat/e7d03eefaa0b8068850fb7a01f7d74ccb829c470541a549391dfc6d3f4437eaf",
+          "position": 86,
+          "ar_token": 16275,
+          "dflash_token": 305
+        },
+        {
+          "source_id": "nemotron-v1/644b6135-3f1a-4780-bf7c-9f0c29eea9f0",
+          "position": 94,
+          "ar_token": 44,
+          "dflash_token": 48
+        },
+        {
+          "source_id": "ultrachat/bb6f66ff5c67053129dc3b9f2afaff7790873cd69667fb15957c99d9879f73eb",
+          "position": 31,
+          "ar_token": 344,
+          "dflash_token": 399
+        },
+        {
+          "source_id": "ultrachat/7533291e998e8947ab4d0aca7e02f8c9730d814e719c2aae4f80321e5fc93630",
+          "position": 16,
+          "ar_token": 12562,
+          "dflash_token": 48036
+        },
+        {
+          "source_id": "ultrachat/6eb7f07554ec4b978b4231cf28549a9b81f91be10d24deb9cee5baa64c6ed3f4",
+          "position": 43,
+          "ar_token": 31177,
+          "dflash_token": 33615
+        }
+      ]
+    }
+  },
+  "checks": [
+    "formal_budget_rejected",
+    "wrong_model_rejected",
+    "formal_scope_rejected",
+    "wrong_target_depth_rejected",
+    "changed_archived_decoder_rejected",
+    "reordered_inputs_rejected",
+    "wrong_first_divergence_rejected",
+    "failed_source_process_rejected",
+    "incomplete_matrix_gate",
+    "mock_dispatch_preserves36_formal_B4_and_adds2_development_jobs"
+  ],
+  "original_B4_cases_verified": 67,
+  "mock_child_commands": 58,
+  "current_formal_cells": 24,
+  "production_results_unchanged": true,
+  "torch_imported": false,
+  "actual_gpu_jobs_started": 0,
+  "limitations": [
+    "No development GPU replay has run. Both narrow8 and wide7 cases remain pending.",
+    "Scheduling test uses synthetic records in a temporary directory and a mocked child launcher.",
+    "Real frozen data, both checkpoint files and source hashes were checked once per unique path; negative checks reuse that hash cache.",
+    "max128 development diagnostics are separate from36 formal T0 cells and B4."
+  ]
+}

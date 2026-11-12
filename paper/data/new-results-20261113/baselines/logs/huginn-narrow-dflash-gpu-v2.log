@@ -1,0 +1,54 @@
+Set TORCH_CUDA_ARCH_LIST to 9.0
+/ossfs/workspace/sz/loopfill/experiments/baselines/third_party/SpecForge/specforge/modeling/draft/llama3_eagle.py:33: UserWarning: flash_attn is not found, falling back to flex_attention. Please install flash_attn if you want to use the flash attention backend.
+  warnings.warn(
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+<frozen importlib._bootstrap_external>:1241: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+Loading full frozen Huginn target and projected drafter
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.15s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.37s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.35s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.04it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.09s/it]
+/tmp/loopfill-specforge-venv/lib/python3.11/site-packages/torch/nn/attention/flex_attention.py:1622: FutureWarning: return_lse is deprecated and will be removed in v2.10. Please use return_aux=AuxRequest(lse=True) instead.
+  _warn_once(
+Optimizer update passed; checking deployment class and T0/T1 decoding
+`torch_dtype` is deprecated! Use `dtype` instead!
+{
+  "status": "passed_gpu_compatibility_not_trained_pilot",
+  "model": "huginn-3.5b",
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "started_unix": 1794352230.2553308,
+  "draft_parameters": 332621056,
+  "training_source_id": "ultrachat/ab3bf99140773bb7d199c3ff02ab0d92c807db18d6fc96c3b20ff880d93ab102",
+  "training_prompt_tokens": 14,
+  "training_answer_tokens": 32,
+  "training_loss": 11.017903327941895,
+  "accuracy": 0.0,
+  "grad_norm": 53.5372314453125,
+  "projection_gradients": {
+    "fc.weight": 13.896332740783691,
+    "input_projection.weight": 20.607423782348633,
+    "output_projection.weight": 10.080175399780273
+  },
+  "update_wall_s": 5.657559759914875,
+  "training_peak_allocated_bytes": 15236449280,
+  "target_frozen": true,
+  "target_loop_depth": 32,
+  "target_features": [
+    1,
+    126,
+    128,
+    130,
+    131
+  ],
+  "optimizer": "Pinned official BF16Optimizer; one diagnostic update, microbatch1,512 anchors",
+  "repeat_exact": true,
+  "greedy_ar_equal": true,
+  "first_divergence": null,
+  "torch": "2.9.1+cu128",
+  "checkpoint_loading_clean": true,
+  "limitations": [
+    "One real-target optimizer update and one synthetic decode prompt only; not trained-pilot quality or speed.",
+    "Microbatch1 on one short training example does not establish the longest-batch memory bound.",
+    "AR/drafter finite-precision discrepancies, if any, require separate numerical diagnosis.",
+    "Target/head remain full width; no claim of proportional end-to-end speed improvement."
+  ],
+  "finished_unix": 1794352271.784523
+}

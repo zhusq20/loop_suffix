@@ -1,0 +1,24 @@
+{
+  "pid": 467140,
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-pilot/ouro-2.6b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-smoke-v1",
+    "--cpu-groups",
+    "4-7",
+    "--micro-batch",
+    "4",
+    "--accumulation",
+    "1",
+    "--epochs",
+    "1",
+    "--smoke"
+  ],
+  "started_unix": 1794292500.3317335
+}

@@ -1,0 +1,45 @@
+{
+  "group": "loopahead-ouro-2.6b-specbench-v1",
+  "step": "loopahead-ouro-2.6b-specbench-v1-observed",
+  "gpu": 3,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "12-15",
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_formal_loopahead.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t0",
+    "--loopahead",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t0-v1",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/loopahead-ouro-2.6b-specbench-v1"
+  ],
+  "started_unix": 1794484352.9180627,
+  "pid": 283938,
+  "start_ticks": "49938921",
+  "supervisor_identity": {
+    "pid": 283937,
+    "state": "R",
+    "start_ticks": "49938914",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/loopahead-ouro-2.6b-specbench-v1-observed-launcher.json.supervisor.json",
+      "--lock-fd",
+      "14"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794487387.8914258,
+  "exit_evidence": "supervisor_waitpid"
+}

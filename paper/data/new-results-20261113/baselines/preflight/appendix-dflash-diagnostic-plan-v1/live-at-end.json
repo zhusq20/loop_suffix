@@ -1,0 +1,163 @@
+{
+  "controllers": [
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1",
+      "identity": {
+        "pid": 153662,
+        "state": "S",
+        "start_ticks": "45175843",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/orchestrate_packed_dflash_supplements.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json"
+        ]
+      },
+      "stage": "running",
+      "updated_unix": 1794466296.4070272,
+      "completed_cells": 6,
+      "running_workers": 6,
+      "task": null,
+      "failures": {}
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1",
+      "identity": {
+        "pid": 105015,
+        "state": "S",
+        "start_ticks": "45050655",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/resume_ouro14_loopahead.py"
+        ]
+      },
+      "stage": "running",
+      "updated_unix": 1794464760.4015074,
+      "completed_cells": null,
+      "running_workers": 0,
+      "task": "loopahead-ouro-1.4b-gsm8k-t1-v1",
+      "failures": null,
+      "child_live": true,
+      "child_pid": 35929
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1",
+      "identity": {
+        "pid": 33751,
+        "state": "S",
+        "start_ticks": "47964278",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/orchestrate_baseline_diagnostics_resume.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/plan.json"
+        ]
+      },
+      "stage": "waiting_for_measurement_priority",
+      "updated_unix": 1794466303.1671414,
+      "completed_cells": null,
+      "running_workers": 0,
+      "task": null,
+      "failures": {}
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1",
+      "identity": {
+        "pid": 45833,
+        "state": "S",
+        "start_ticks": "48050473",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json"
+        ]
+      },
+      "stage": "waiting_for_measurement_priority",
+      "updated_unix": 1794466296.554339,
+      "completed_cells": null,
+      "running_workers": 0,
+      "task": null,
+      "failures": {}
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1",
+      "identity": {
+        "pid": 510179,
+        "state": "S",
+        "start_ticks": "47623899",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/amendments/output-diagnostics-cancelled/resume_ouro14_dflash_evaluation.py",
+          "--plan",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/plan-no-output-diagnostics.json"
+        ]
+      },
+      "stage": "waiting_for_full_training",
+      "updated_unix": 1794466289.097616,
+      "completed_cells": null,
+      "running_workers": 0,
+      "task": null,
+      "failures": null
+    },
+    {
+      "root": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3",
+      "identity": {
+        "pid": 497107,
+        "state": "S",
+        "start_ticks": "44019573",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/controller.py"
+        ]
+      },
+      "stage": "teachers",
+      "updated_unix": 1794466298.1873498,
+      "completed_cells": null,
+      "running_workers": 0,
+      "task": null,
+      "failures": null,
+      "child_pid": 10995,
+      "progress": {
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/progress.json": {
+          "completed_requests": 46432,
+          "planned_requests": 50000,
+          "last_batch": 1450,
+          "last_batch_wall_s": 39.20522900670767,
+          "last_batch_size": 32,
+          "updated_unix": 1794466268.8514373
+        }
+      }
+    },
+    {
+      "root": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1",
+      "identity": {
+        "pid": 55011,
+        "state": "S",
+        "start_ticks": "48112626",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/resume_appendix_dflash_diagnostics.py",
+          "--spec",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/spec.json"
+        ]
+      },
+      "status": {
+        "stage": "waiting_for_existing_training_and_measurements",
+        "controller_pid": 55011,
+        "updated_unix": 1794466289.029766,
+        "evaluator": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1",
+        "expected_groups": 6,
+        "gpu_workers": 0
+      }
+    }
+  ],
+  "observed_unix": 1794466303.7530324
+}

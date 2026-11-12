@@ -1,0 +1,902 @@
+{
+  "status": "partial_T1_source_coverage",
+  "expected_cells": 36,
+  "completed_cells": 31,
+  "missing": [
+    [
+      "dflash",
+      "ouro-1.4b",
+      "bbh"
+    ],
+    [
+      "dflash",
+      "ouro-1.4b",
+      "humanevalplus"
+    ],
+    [
+      "dflash",
+      "ouro-1.4b",
+      "math500"
+    ],
+    [
+      "dflash",
+      "ouro-1.4b",
+      "mbppplus"
+    ],
+    [
+      "dflash",
+      "ouro-1.4b",
+      "specbench"
+    ]
+  ],
+  "cells": {
+    "dflash/huginn-3.5b/gsm8k": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1",
+      "metadata_sha256": "85896c5d07b7794014a4dd2bea809c6155626c0af8bcfdf918fbd0c8d01e3946",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/huginn-3.5b/math500": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t1/attempt1",
+      "metadata_sha256": "1b701f7956e7bc1701b87e348cec26b2be34d3f3377dcd390efa6620eaaa5742",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/huginn-3.5b/bbh": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-bbh-t1/attempt1",
+      "metadata_sha256": "d131ff0d9f5e08f4e063f73d89759285a391691f137ebb0ed775f15fa9ce439b",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/huginn-3.5b/humanevalplus": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1",
+      "metadata_sha256": "b94bfdec638d798403cfa1f4baeab5af9d844977601dbaf498fa325c10daa428",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/huginn-3.5b/mbppplus": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-mbppplus-t1/attempt1",
+      "metadata_sha256": "11ae9adc479e57faba965be2ef5c4776e3a378728acd666f2742c5abaa439471",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/huginn-3.5b/specbench": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-specbench-t1/attempt1",
+      "metadata_sha256": "be60f2cebc68ca3cbc76315cf7ee64e43d22ceade306da7e8c79a0b6b38ba8b6",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/huginn-3.5b/gsm8k": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1",
+      "metadata_sha256": "8937ee1ac7832c629c504d35eebb9b2bdc0a2fbf062557025b16c4a0aaf64e32",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/huginn-3.5b/math500": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1",
+      "metadata_sha256": "9e81d732a92b51b41415c17e0e2f06fc52600619f3129c926e781327d166de21",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/huginn-3.5b/bbh": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1",
+      "metadata_sha256": "162af8e0123ee939e57f29cd1ec5cacdd7cc0b51461bfa97c80e080d2ca8f2e3",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/huginn-3.5b/humanevalplus": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1",
+      "metadata_sha256": "b00cda00fee1819c8b67830feed2004ec488755a9441947c4d0e055634529fea",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/huginn-3.5b/mbppplus": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1",
+      "metadata_sha256": "7d2a783430aa8b71729ca6e180f823568972b4542add75acef1e12008dbb9d9b",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/huginn-3.5b/specbench": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1",
+      "metadata_sha256": "fb2c13657cb070da45161f910be1a13f06c63fd391862052c611015733718c0f",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-2.6b/gsm8k": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1",
+      "metadata_sha256": "ed4a6f120bedbd4063b4b9a7b6328529b26c597228e00bc4ce7a455c7b45c6ba",
+      "target_backend": "legacy_HF_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1/source/dflash_impl/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-2.6b/math500": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+      "metadata_sha256": "8fe1d2a8bd10e4ce7e092c45e3abfafc5a152d81baa9efab3cd61e6f31e7b76e",
+      "target_backend": "legacy_HF_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1/source/dflash_impl/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-2.6b/bbh": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+      "metadata_sha256": "48cb86dd0cdfe1273700fd81696231e35ab02929b27ae5aab1bcfe67bedf057c",
+      "target_backend": "legacy_HF_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1/source/dflash_impl/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-2.6b/humanevalplus": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-humanevalplus-t1/attempt1",
+      "metadata_sha256": "c59d44b20bdca9ea1e6ef2cfdc7b42e918702e0ffbdf08d2d1e5fccbca6e7c26",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-2.6b/mbppplus": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-mbppplus-t1/attempt1",
+      "metadata_sha256": "712b68983d912b003bcbf81d04c793a54e78a0dd30d549a335f354026e8a0997",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-2.6b/specbench": {
+      "method_run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t1/attempt1",
+      "metadata_sha256": "19fdbcf5dc6bb88457c050ded58cfd1bb88f3567f12807cfe10ff5d46768c1d5",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-2.6b/gsm8k": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1",
+      "metadata_sha256": "ca2e9c1165d4ed30e8113b55262cd0d3c2ffddefffbc86459c74985acb5b389a",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-2.6b/math500": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1",
+      "metadata_sha256": "cdd44ba5caed7e7399a4154ee682d36398610b1a462e8af8cfce49b45ff03bb1",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-2.6b/bbh": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1",
+      "metadata_sha256": "acdd796f5bc7a64b0761378e3897d37427850af8ae761c651aecce5a06450907",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-2.6b/humanevalplus": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1",
+      "metadata_sha256": "40c911115e585d593b26e45ae496af78161e05667919a0d7760632354350fbc4",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-2.6b/mbppplus": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1",
+      "metadata_sha256": "c702aacbdcc211d629f5aa155356c3b5acba6a52359e01a2fbdeacdef12eead5",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-2.6b/specbench": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2",
+      "metadata_sha256": "ab740b5e45a1df1df110eaaaf3adc8dff20e71f4da3250000837bf99e8b0851c",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "dflash/ouro-1.4b/gsm8k": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1",
+      "metadata_sha256": "fecc8e643298068cd8f91c5fa639eba114f8e86f1ce26ab57653e1c69a7ebeb7",
+      "target_backend": "packed_full_loop",
+      "actual_source_paths": {
+        "dflash_impl/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/source/baselines/dflash/decode.py"
+      },
+      "tested_source_sha256": {
+        "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-1.4b/gsm8k": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1",
+      "metadata_sha256": "329895745003f3cbc5b8b6ae707cafc182825c6e1592287d6684aa5bbe343974",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-1.4b/math500": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1",
+      "metadata_sha256": "49ddf24d0b7a303048201ae4200a19a897e85499887fbbc24b9d63c3c565a992",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-1.4b/bbh": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1",
+      "metadata_sha256": "cf5b5b3b35b437ad8ca7d2e0571dd925a862e85cdc718919d50f0278b0af2739",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-1.4b/humanevalplus": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1",
+      "metadata_sha256": "0944c1c1343f005e1ac9c678533a1995c0b51fd6ab4de1dfad21e66f44e40e53",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-1.4b/mbppplus": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1",
+      "metadata_sha256": "2ddb11079a62f3ac54cd2e30c3211b69f6ba2c94d0fb8df320d59bf37d42f567",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    },
+    "loopahead/ouro-1.4b/specbench": {
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1",
+      "metadata_sha256": "f11221c1054bdee6cef1dbe08a1304e51373b7eeabc32f73d8af215cb5056c53",
+      "target_backend": "packed_LoopAhead",
+      "actual_source_paths": {
+        "loopahead/sampling.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/source/loopahead/sampling.py",
+        "loopahead/decode.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/source/loopahead/decode.py",
+        "loopahead/admission.py": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/source/loopahead/admission.py"
+      },
+      "tested_source_sha256": {
+        "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+        "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+        "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6"
+      },
+      "runtime_torch": "2.6.0+cu126",
+      "test_scope": "source identity plus recorded CPU algorithm checks"
+    }
+  },
+  "tests_directory": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/sampling-CPU-evidence-v1",
+  "test_artifact_sha256": {
+    "tests.json": "85403554722f1b3a25b8c98c714d5d24450684d9d69cab59b98b00190988140d",
+    "launcher.json": "556f7f665c35a2d84bec1c1b5e3d7c1d09e74d4be6adaec8ee4413c243d5a72f",
+    "exit.json": "b78e5c75471a5d58aa1e5549dfd22cf4890da799724f6ef938dcb4ce6e36cf2e",
+    "source-manifest.json": "f4ae192bc64aba0a59a421c380c7e0330a4624c4046c3cdcb151227aa8c079af",
+    "run_tests.py": "780fb22b6b42cec59fb40aae3e2a34495d5ae5c3f7f7743fe3b59f15429f2129"
+  },
+  "verified_measurement_artifact_sha256": {
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1/metadata.json": "85896c5d07b7794014a4dd2bea809c6155626c0af8bcfdf918fbd0c8d01e3946",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1/complete.json": "ff45788d92c61e495444b7ee221133574611f5ffd293fada4c0fbbd8c46aeeb1",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1/requests.jsonl": "344bb34caa3f472e6077b02bcc4d5a8c6b0452b474216490bd8c7a05f5b1d3cb",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-gsm8k-t1/attempt1/summary.json": "105d07d85969f3fdbf67299bd0dbf030ab7bf27887fc40c3cfeb6a1f0b88e8c3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-ar/metadata.json": "5e0c4986c3283030e8ec7e0ed480dca66920392adfcfab0863f873f3960aff68",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-ar/complete.json": "b7d46aa651c5690bea0c6688ec5cabc45bfeb1bbf225c3e5ab27019d77d3f015",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-ar/requests.jsonl": "fb765da28c64f2d4954a91e275fb152061b03b5b7ec36003fe638b2fb57e7345",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-ar/summary.json": "998d75e95448e81ad36126fb26541734813d1d881a0fe9398dfa670f3385bc6a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-profile/metadata.json": "0b092a020ecc3b6737a625ffd4353912fc61d7ca51f251d58db6e4c9c9d53390",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-profile/complete.json": "420318af1895120685a9c09cfe3a9aa1aafb36333766cd5e851ccd15c1e042b6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-profile/requests.jsonl": "8ddfc1314fa3feba37387f6f86ccf2b310899b54eb8647fc76b520d5dd09a8ff",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-gsm8k-t1-profile/summary.json": "9f2a720233eca6fe43a9a1cf520084f41b6c934ec997e94e546288e47cce8982",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t1/attempt1/metadata.json": "1b701f7956e7bc1701b87e348cec26b2be34d3f3377dcd390efa6620eaaa5742",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t1/attempt1/complete.json": "4cd84c9f0bc50655584b27940343d3c52183821558be788b87db9914ec236d42",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t1/attempt1/requests.jsonl": "18d3bea6db7a9ca4d0ad5fbf6e75dba24061280696dbffd052e709de19d80e93",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-math500-t1/attempt1/summary.json": "03d280f57b5b150247468c0c91c0f5fed15586f22df12b7cc237e7d8f541d7db",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-ar/metadata.json": "ef9c6da741b3664dfb957995659ab306bcbbea2ff39af2f0c669a629c90f4dfb",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-ar/complete.json": "57b7615511384c92c2ef463bb113e1961369756c4478215eff832d380bda0548",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-ar/requests.jsonl": "fdaa932ae1320b7f8942091464a0827309bbc676390f0194d2993ac5ac95d8ef",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-ar/summary.json": "527dbce3e05933d4abf77615cf13fb12b6162c94c0a1fc2dc38edef167255d30",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-profile/metadata.json": "70b954b33c79b78c01635136943945078a0517e95b8a1c4a2ac79d9e2d8fb342",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-profile/complete.json": "d3c3f17e54a2edba8e8a9ae2de684a2fb68018dc80ca37830f4283e982567a97",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-profile/requests.jsonl": "d4fdd43147b665f05b36d63e1da5a6ef409f0fe8556f9f01081f343dc832acad",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-profile/summary.json": "298741f5c694e9b1f71a53e710d1ea89502b9795a6d19c78e4b467f99f509359",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-bbh-t1/attempt1/metadata.json": "d131ff0d9f5e08f4e063f73d89759285a391691f137ebb0ed775f15fa9ce439b",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-bbh-t1/attempt1/complete.json": "99701519e437cff52c03a8f08085fee5703ef9185fd04739d20f56bbf2cb63e5",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-bbh-t1/attempt1/requests.jsonl": "1be5c26342d3f64ecb73b2d33dad269a5f7190b662da68c8166f29673c688502",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-bbh-t1/attempt1/summary.json": "962f97fcfa87f639e98a25aab5f3f93ac2008dfbb0baf6448e8b50fd1d7d3548",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-ar/metadata.json": "22cdf2b3e9705a7eb86a3c419ac30d7f98cd553890bfd64746e3dfa39df17853",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-ar/complete.json": "3b9f8eaac500b50e3cea0d662fe142920d8d6298a0d80ce464dcb093d6596fb6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-ar/requests.jsonl": "2e779b9ce9661186ac0ff3ed3af1520600af5dbae6d3c6d1866283f5577eecf7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-ar/summary.json": "fd2e92316d73cf76606a43d99c2fa764d287691c243eb01a508d7471d5d535e1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-profile/metadata.json": "9de29a0772cfcb339c1f8efdb5d0c729a9481be09c37f9c776bdc7005c742d47",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-profile/complete.json": "e6b13da0d8b1ace9f9b9a964e4d58dcf06092eaf8e6ef6f0f3899a45547fbc50",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-profile/requests.jsonl": "0afe192f8955e22754ea374616745837b35b62f59374a80cc1810f415ef70c90",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-bbh-t1-profile/summary.json": "40db77836dbd3c93c3c39ff6f9ef7c09a33d438b1b73b314410f20d271f4b810",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1/metadata.json": "b94bfdec638d798403cfa1f4baeab5af9d844977601dbaf498fa325c10daa428",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1/complete.json": "fb9e07164383fefb5339066f3db8a584af2904dafbdb9d0e0d38bf587984b324",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1/requests.jsonl": "025baf0e9f8a094b25abcee7119faa1ab6bd015d5109b243bdd52ce51dc852db",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1/summary.json": "cb3663250bcd755a08861717556e457925bada75e7dea0109a1f2c108f268235",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-ar/metadata.json": "8b9e72fbba0d7da0830bd56d10a866aaa10819c478a0988d85a94d96c4a66ab3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-ar/complete.json": "c48d2664988f723ed546ada6ade515d3b0e9a9defffe84e9982457a4792e6817",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-ar/requests.jsonl": "b236fa7ac7a03a21606348acbb658c85d1a1c48e0172fe83d5267ab6e94f3cb1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-ar/summary.json": "14aaa86d62fa3eb95bb1d9e7a5c8111e9c7a54e0fd22e92b5d99476410868de8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-profile/metadata.json": "1049c526942304277f5b80b00457f31df7011ab295fba212b9e389c662d75d42",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-profile/complete.json": "63b1b7045d92f03b4e5c2a313664c37b27ca9738f544bcf3a90ffd9dcce072d4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-profile/requests.jsonl": "e209e31a353022855f6de1271a1b5b6cd4a33306483997424482e8d2ce0ef455",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-humanevalplus-t1-profile/summary.json": "e69f5f34ce885e5d8a7516f33b3224d06e2465f6ac1fbd8f2355f9c596c7482b",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-mbppplus-t1/attempt1/metadata.json": "11ae9adc479e57faba965be2ef5c4776e3a378728acd666f2742c5abaa439471",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-mbppplus-t1/attempt1/complete.json": "369f45ab4bcafe7c8239b960f6ed4b99ec76054ac91fbf535c61d67f22ef9531",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-mbppplus-t1/attempt1/requests.jsonl": "b31fbb9b5286580d396b1e4ea05eb22a8dff99d76940d0ae60a19cbc768fd2c3",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-mbppplus-t1/attempt1/summary.json": "e16560239d3e254ebf5fa27fbe72b80e9ed2af8da7ccc319447541d4fa1b926a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-ar/metadata.json": "7ca17f35e7dd5d30e33dada1fb14d7fd059a890b89fd0b82473558cbd48001ee",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-ar/complete.json": "990ae523211b09da61f8f3b4144e51602d44e389e64bb529d2724a4c95bd94a4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-ar/requests.jsonl": "759c8940b5edd9bd7ad7aeed6df649ca44972b17365e735256edd85da61faebc",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-ar/summary.json": "1575961c137d0c28292b9735079672bd3caee20d6538deedb9a0a27d26352e26",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-profile/metadata.json": "6056b09b608ee037a0719be943ed15e7bd3361d95bba329df4258f32a52f9fc0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-profile/complete.json": "62db7de8a98b1e00b26cdc20f36db7cd0a3463ace5c3880d7a8006e257993cb3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-profile/requests.jsonl": "382372181dcfbb66e2355be9d29b5574b01962d07db397a835fc48f279280b10",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-profile/summary.json": "9a6c85a35df9027dd4b738ae25600372cff8610703ac2106f2bc9715446a7f2e",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-specbench-t1/attempt1/metadata.json": "be60f2cebc68ca3cbc76315cf7ee64e43d22ceade306da7e8c79a0b6b38ba8b6",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-specbench-t1/attempt1/complete.json": "d98a6b28e47addbf09ead018e96f5aefddbd2c09341ebf1b2460f6574174d993",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-specbench-t1/attempt1/requests.jsonl": "b5663926459087a73d23137700ee0d5e4c732916c5b21c16b89140d279e7ead5",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-specbench-t1/attempt1/summary.json": "938bc359d057b37d3e91356e89ce9f062757969021fce1bcae8e168dfc896652",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-ar/metadata.json": "af3d7c20bfc13f683b57eccca880aebcc8a8556abbe22f92379bd16772cd77c1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-ar/complete.json": "3404934bfde52ce63065aafb8018d8ad9f1356c76ab7cfaf8309d66bec6560b5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-ar/requests.jsonl": "747d2f548330cca9fa2b3d06f98857cac2513cb28f16289da97ff833f4ef3528",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-ar/summary.json": "2c1b6dffa4a182c5bfb9b9ab229b3a4af09b801114b21d685d49316024570257",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-profile/metadata.json": "0d96df88cd8099d1c612c8217a0baede026a4ac84d408d2ae269948a45adf358",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-profile/complete.json": "11fc44776e79d7f4e1eba081b8b7d6feb888b6ff9b68f6591a14506222866940",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-profile/requests.jsonl": "de3a57c39c171246cc9b57b111fc7e8bfdcf11fef9610095571dd589eacb9935",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-profile/summary.json": "d5377b9ea2a65aec250da493a670d80de05f6b84661b4a198b1308d779f6e7fc",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/metadata.json": "8937ee1ac7832c629c504d35eebb9b2bdc0a2fbf062557025b16c4a0aaf64e32",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/complete.json": "817695e317058007edab881ebb2928b5ff512f8ccceae28b045b8734e6f64b1c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/requests.jsonl": "fe11041003eb66019dfd98d69ef6cbdf8de3c02aa3fd13d2bc1c636e12b36178",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/summary.json": "a14bc0e5983bc254414bc65be60e319176f8f085785af3e1e8147e5c18a38069",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t1/metadata.json": "4a501f975f98e3c0492a22b891d78c855b3a8ca497e426809c38ba9075204ae9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t1/complete.json": "5be39dfcd777034a71442b322ef4cbdf7ccc2f65bc4e67614cb953b2db5897c1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t1/requests.jsonl": "f04b86fda535d05cc52c68f1c0797aeca779ecff1271a31acc507dd3c63ae162",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t1/summary.json": "536cae519e6634a365c59b201a3b32563c9803b24296ad545023eadb42cc0408",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/metadata.json": "9e81d732a92b51b41415c17e0e2f06fc52600619f3129c926e781327d166de21",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/complete.json": "dd6bb89890b624af6b184961900f5474e7c78ed1464686b3e863a132fd7f6cdd",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/requests.jsonl": "2c4faeba000cb713c8a0967118d479ed5c7146b26e55a0c17221b92cd39f352d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/summary.json": "f6e6d91e092abf123b4aac3d4b8bbb913432850d93c275ca519f29b2555259e3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-math500-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t1/metadata.json": "24b983c85dab80cb9dfc3c842d4a15a550b62c458827a90cc0aead4e27f53351",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t1/complete.json": "375bc13d4675e009a62f88226e2f7456e712a0f50df6e64e4824f71178e4f605",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t1/requests.jsonl": "277efd5be06f47f6e2a03731f97f0bacdacaf641fef4d3fb4cf38807467276ce",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-math500-t1/summary.json": "e150c94f0e2804f169b648d453a2e9a452db0e09e7107851f1a0d29ff9569dde",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/metadata.json": "162af8e0123ee939e57f29cd1ec5cacdd7cc0b51461bfa97c80e080d2ca8f2e3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/complete.json": "386a93cc1b97eb617b1fd9d13c8917b8923cbeedeb7244af8b1ffeac3873fa68",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/requests.jsonl": "b290fcabc8085c836b953171aa7b4033a0e08d266524270cc4ccb70cfdbd522d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/summary.json": "b962ea7923515e2a6e2724f21ce42eff64fd3c5d2458b99e65397d0c7d605311",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-bbh-t1-v1/source-manifest.json": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t1/metadata.json": "482338f8b352ea808d08d14f053a49db69b3a40e0342f7fd9821700e9e2a0d10",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t1/complete.json": "88d81a25ca0cf2f1c12e1394b1718ea740614c2dd720e991a8c2fd05f4e340c5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t1/requests.jsonl": "99dc13f6558b0b8535f5f7c2a3c8312445bc99d1bad2f924cade209c5eb372d1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-bbh-t1/summary.json": "7736f46cf3bcff753c4c642bca83a28c0870e792488ae713e277801d8243d819",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/metadata.json": "b00cda00fee1819c8b67830feed2004ec488755a9441947c4d0e055634529fea",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/complete.json": "af473ddab69ee53a405e6b52a34e39bb4c6007f05d0b6530627e481b758f5492",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/requests.jsonl": "d463e59b142841e67a5694be4d3a23b65687f96910ade468caa1b79887474d81",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/summary.json": "3f2a64695ada3d737578075de7b419655cb013f11a42cbbe5e38e0ff560b3e56",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-humanevalplus-t1-v1/source-manifest.json": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t1/metadata.json": "8b879b5ae554bdc360ee34778031db41cf178cca85d765bcf8e4612ff9bf25a1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t1/complete.json": "1ca99e97e696d8b054b0437fe2538050b56d7bc60bda7940da239888a1c1490d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t1/requests.jsonl": "5e96148c6f716f5641564546d7623d943fec620e836a42336bc0a8d0aa47e374",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-humanevalplus-t1/summary.json": "d6fa3ffbb5c5f75447e35c4a3f31329a558de9b02dac27a2d25878f39d71fdb1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/metadata.json": "7d2a783430aa8b71729ca6e180f823568972b4542add75acef1e12008dbb9d9b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/complete.json": "0fd09cb3ef7313891014c91c0963b02c3ea31928dd56163327da9bc24cf93171",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/requests.jsonl": "60ffe166b94893641deb0381be68f2c4571a46b63138ad839e8d1556bca522db",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/summary.json": "c1faf21d7a447361d7026f5757520eb5f2c561708aef3648a36da6e1ed3bb966",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t1/metadata.json": "efa699ba68d83303c9816160980f2e9d4577d007a9e5fe1d73819a8f3d415c83",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t1/complete.json": "5fffcf92c13abd18e340552ca80ff8f9f9318e070caaa1b725268d2ce92384e3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t1/requests.jsonl": "88c6c2ead3c84b419b26ea77e438393ab446221440b2dff402efeadf8a9d992d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t1/summary.json": "3e9d603bbc8a120ece02664a5a0a1c9e0e4a9bebd9b12e1d431d9d0d34fb92bc",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/metadata.json": "fb2c13657cb070da45161f910be1a13f06c63fd391862052c611015733718c0f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/complete.json": "0d0eaeb9b713f1d59b6a94dfb50f0f0243baec05ec3a01a74e610a4fd061eae8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/requests.jsonl": "64b9fa034b2fcf31cf6d87f0d0105494188d5e8999528cf1280eeb5c13864f3d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/summary.json": "decf144c3e23aa6f55dffed9a7be3f7436fd64de3dedc6977e81ec93ecacaa81",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t1/metadata.json": "18f2e32483a03a6f6a901f91fd9fb312271d27b360e441592bc2db121f130d91",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t1/complete.json": "13d3619c285e31cbd1b45830dc5b2b709448f427e41336c788b7bf5ee09f8a83",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t1/requests.jsonl": "9ffab1f9fa12e1a566251be3be7b9a6be50e0647560b286f2bdef426284b46bb",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t1/summary.json": "8f060a56f7262ce3d8674a2326ef8889287fc9a3b271370d904075892a232d0b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1/metadata.json": "ed4a6f120bedbd4063b4b9a7b6328529b26c597228e00bc4ce7a455c7b45c6ba",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1/complete.json": "3f29c37520193591a01e61e7ff3a295f9edcc728d8500f6ce4bd613aa1d3c68e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1/requests.jsonl": "1074b86b730857feea78bbc72bde2d042f6c518688f301bd64dafb172da21530",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1/summary.json": "8c516bbbef9baccf3c857e5a638ab9db668b605f135185a92ebac635696f3d06",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1/source-manifest.json": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1/metadata.json": "df299592a56dbb7ee4ae713996f18948df8b9025351bc1d8bdf5f5f7f3bea337",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1/complete.json": "1e3ed4f8e15e9840d2d3cdceb0bcd2c939f97673654a388813aafc6f79f6f0d6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1/requests.jsonl": "35299574da9f60d0c697fddd0de328d5cefbc8cac95d58eb4909659d31bad90e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1/summary.json": "0436c655e405a22ec581074a803141114cfe380fa4e39894c61907a1f1cd0f76",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1/source-manifest.json": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1/metadata.json": "542fdc6ad78996ec85462065cb69ebf7a38eca52bfb804b9c314c19e33ce8e1e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1/complete.json": "ceea73432a77376ef5b39a7aabef76b8973bec0cf7f567237316a8206a632aa0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1/requests.jsonl": "28c148e29f25c7440ea8b304aa35188974736147acb625a2bfcbc54c522ba733",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1/summary.json": "8ae4514b39d29e9c64eeb7f5e2cbd2d1c3d9f7dfc592514ab88e08658b143030",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1/source-manifest.json": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1/metadata.json": "8fe1d2a8bd10e4ce7e092c45e3abfafc5a152d81baa9efab3cd61e6f31e7b76e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1/complete.json": "5204ba7e89eb4a819521078a16dd5f9d8013b7aa7bd7ca6f8b875e996a7839fe",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1/requests.jsonl": "bf725d13532b4ff5986e6384698bb9871dc1af7e6b1fc6650d576658b901ad79",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1/summary.json": "904d10dcfc8cfc4edd122814668f1b86ed626687f2606826ede619c9177e79b0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1/source-manifest.json": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1/metadata.json": "eec752d6add0fdd9f8a885335829ec6420912dfb0f34a2c16ec88d5f3bf186b7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1/complete.json": "18021a39a4617bc4944e7bf19036e0dfd85795c0775c3f3b4ef2b82f069c85f4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1/requests.jsonl": "d56ed57190a2105d59ed704fad8651895c2707a7546f480d9b98ffba1c356892",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1/summary.json": "0e4519025fb3d48900c1ba4f3169902e9ba4b4fe8920925b306a3b53756fd90d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1/source-manifest.json": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1/metadata.json": "51192b673796f7ac5cef190b914c3dca25753287a7eee7319108d852fda8109b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1/complete.json": "881ca1f3a9778b535b6c39e4bea6639592e212b2a93b5d967036638f284ee07e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1/requests.jsonl": "1f56f7313177b8ed9f6d252fc1982eb7f2c49cca3d25b1e1d287f4f037e6e86c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1/summary.json": "2da81360e0fc7dbfcb4db3b143d9cd89bbc561cd327f6c0519fa14025620393f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1/source-manifest.json": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1/metadata.json": "48cb86dd0cdfe1273700fd81696231e35ab02929b27ae5aab1bcfe67bedf057c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1/complete.json": "9f59888741a25e41dd425da0903a0d5963e60128d21389bf16bc77cb59c062b3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1/requests.jsonl": "5dd0ebd580b33e4ea14a7c299b81df4c93094b1bfda248c64a8907c5f307d768",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1/summary.json": "b8365f415571123393b6898eae8ab565c0a54040a6189a709050c76fd8445f81",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1/source-manifest.json": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1/metadata.json": "172ccaf45c6dbb531b26cbf271aeb2bf06aa776cac9aec2aece73767ee03d798",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1/complete.json": "92d0458f51e10fd45d484172221134ac6cf6031f9d78f32a81198bce2a3a5fba",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1/requests.jsonl": "e1ad71a10830a89de3f2442860e0c6cd55b0d459e6d20dc8541b6458a10a5d67",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1/summary.json": "3645d001bc1249d5320cec50d7ced94223cfda906f70e709058f5c9b3a94a6d7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1/source-manifest.json": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1/metadata.json": "65c15a8d8b4cf6eee516aa8438b219647ca8749e14e12f6a403160b6070cacc8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1/complete.json": "569e42155891c8a771c9fc26719dab8fac4e780273b6ecde8d3008d42399ed53",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1/requests.jsonl": "f4572512c8b165518b806e4b7764272c9f2e37267594ed6e5bdac6c4c06b5de9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1/summary.json": "72813f0fdfc904008a6e2b90b5fcb6784fdd0d0e84d0ca74929f89b6773877e8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1/source-manifest.json": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-humanevalplus-t1/attempt1/metadata.json": "c59d44b20bdca9ea1e6ef2cfdc7b42e918702e0ffbdf08d2d1e5fccbca6e7c26",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-humanevalplus-t1/attempt1/complete.json": "8eb3955c22798b83e664197970485123e04a336978d2609a8f18d153b6895a46",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-humanevalplus-t1/attempt1/requests.jsonl": "be9d08a450a492d6fa5e3a7a1d5239752b54a8415d5ea6793497a4a6f9601d66",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-humanevalplus-t1/attempt1/summary.json": "08619d881f36000171c8cbc9ef0293a142ab619de64a31ce7dac318d57d5ba30",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-ar/metadata.json": "a5c4a83d1dfb3ea7dd3e533a0e0b15eddaf793966285ddff546ee9d88ec8f657",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-ar/complete.json": "f0edef9514237a52721da29ec1448f02f010978d44855b69e4ecf0b51e09f7ed",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-ar/requests.jsonl": "fa0ed44e23468ea362303f96dc0f32715da0a1bf9e6fc09293804b3a4f955ddd",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-ar/summary.json": "96a1ca8bb15d8ab235e0e764f30fa4b5d8fb5d6e8792d270d90d5939aaf9f0c3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-profile/metadata.json": "8a6ac438999ab7bff18674b9f95cd56300ec187bdfa600fa48e88693674eb0f5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-profile/complete.json": "afa6578e2610cb39680723ea03000c0d14772c5973499e56004f8ccee9e53cbe",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-profile/requests.jsonl": "3893dff5fc3e478a2a2514fffe8435f4bfb7564256b77fed518f2b3840d136b6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-humanevalplus-t1-profile/summary.json": "1f92b288618c86f0dc565948fd08c5caf09e7a7acd83b3c4c8db1badf5d8e5ea",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-mbppplus-t1/attempt1/metadata.json": "712b68983d912b003bcbf81d04c793a54e78a0dd30d549a335f354026e8a0997",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-mbppplus-t1/attempt1/complete.json": "611ae1e8755baf355f3d981677c13a3716e679a707f2865d41ac23ce7793dcc9",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-mbppplus-t1/attempt1/requests.jsonl": "a3f4abfa414aef17ed3cc4b710afad86986d65973b05b8a36a8e39b946e85bec",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-mbppplus-t1/attempt1/summary.json": "68581763625c490ad5a0915963d84180c24e87a3469369fb3acc3c54466488cf",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-ar/metadata.json": "5f8efe08c1bd2d1d263e41f42450380e3bf3aa82fcabf33be870660c52019e4c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-ar/complete.json": "9efc82d50bd3042ecdc7d70cbb13abcb6594a756cda182e3678e6f8b83b51171",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-ar/requests.jsonl": "23af10ac005d31034febd8c59755937619b53e40c326bec13348cd8cabbd203c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-ar/summary.json": "cddbe3da122b22a81be80557edaefcad66995b183b630a6e9d350223d1ac16f3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-profile/metadata.json": "9e4f055dd1c31f771e202d7ea8ee4a2c296805ada1d68c86853091c51b11b5fb",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-profile/complete.json": "2b7771f97d75df268d0d555e483d21a72b41655ead7bdbbdcca0bcb6337ba113",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-profile/requests.jsonl": "8284b9af24f485e938290b92fd1005823072d59181a0e9683c67187c2a237a88",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-profile/summary.json": "5a324942f32f7dea887ec151efaa6dae70a79719908fa0def4f533356aab21d4",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t1/attempt1/metadata.json": "19fdbcf5dc6bb88457c050ded58cfd1bb88f3567f12807cfe10ff5d46768c1d5",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t1/attempt1/complete.json": "e80d86098fd3f17d4b2f03a4faa0e6704e1f044c3b690c72e096deefb9ade223",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t1/attempt1/requests.jsonl": "2f8c60d371e9ff17ef364f8728c85bc9fbcc9cc9228b33d78d0a776954bdea17",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t1/attempt1/summary.json": "85aba067309234407d53ba67f409195a7afdc8c28e828a4f57529871f9c2015d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-ar/metadata.json": "7abadb4a081d0d399dde91440103e1a433066e97a17d1b33027c8cf8b70eb256",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-ar/complete.json": "7ada1d19edc5ea69d2f6d20832472fd23bfc29ed7608cfc75bde6f7a6ddc7bfa",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-ar/requests.jsonl": "384f6754ed9546a441f185549090aacb76a6bf4a570331804009a35632fdbbbc",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-ar/summary.json": "a48468cc111fcfc402af83017d5b55614dc39ed6a908d52ea78263bf8dc1a4d0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-profile/metadata.json": "6f29bcb9eb22e1c936d2ce6220cc925e6db1d2d08c99010058a58b01ef3cf055",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-profile/complete.json": "c1e18a5bb89dc7229d3543338f0398128107bf8843920961d7198a4fc48e12d1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-profile/requests.jsonl": "e51dd3b4cc4a5d9a31265ca9e767d18fa75706e4ac869c811d0d253810a1676e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-profile/summary.json": "25528b77735cebdf11c0afd7c0cf871d409e91c5cdc58e6dab7c07783129615b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/metadata.json": "ca2e9c1165d4ed30e8113b55262cd0d3c2ffddefffbc86459c74985acb5b389a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/complete.json": "aac864f4a66e5f11549bcadd02e9646cb1f3c787d16cbc028146c57178835345",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/requests.jsonl": "1c3538b06913cceab39c5b4d6cf0dd6609dbd5c9e877b30ecc9a7263e75437e7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/summary.json": "7e1bab5a79f1ae269cd7a5eba594a0aa09e238d3ad55bdc2d858b382e5f47411",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t1/metadata.json": "6462e7982fa8b8b4395f1735955ee42116f1063904a537abf1d5becad13ad749",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t1/complete.json": "79a22279032ee796f289b726696ddc87e0614c6e3daeef3c2294644b07ddf29b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t1/requests.jsonl": "dc4eb4f90a3b3bd7d3886fd13720ca7247b393b410cde807daa09253ca1f9ef7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t1/summary.json": "2f955fe472cf989f7d6b78db2b7844b24d09a6ff99f96b1053966c3e1052188f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/metadata.json": "cdd44ba5caed7e7399a4154ee682d36398610b1a462e8af8cfce49b45ff03bb1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/complete.json": "4dd21173033fa6f62e408bce22909048802fcfebb3076df3a3f976b220248c6e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/requests.jsonl": "7b180120a6f1162328a250f53535e932d1843b45471f6b57af61d58709abc3e8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/summary.json": "fad73fa068940d99ed6a9c63a8ac5d3b99227293b3541bf7654824f8a2866605",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-math500-t1-v1/source-manifest.json": "2b81f739faec05759bd134bd401f9e122427a30fc403e7d39ea410ca85c8d471",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t1/metadata.json": "d5eb1c5593932102e9b5977360dead992722b4cad174ac4d6224f6e4875dc995",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t1/complete.json": "c4fc4562a02fb368a3156917d406c6e086ddd85407d3bc8960e2be2ed4fac825",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t1/requests.jsonl": "8218ffdc14b858c3925d62f566f91c5fd8eb73384b7543e0b48839c888e0cf88",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-math500-t1/summary.json": "fa0a3e99e2da3a3f4a174b128c7de02c84fc49d59b617c25629270373293a525",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/metadata.json": "acdd796f5bc7a64b0761378e3897d37427850af8ae761c651aecce5a06450907",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/complete.json": "68425445cf148c7c3f62f60ee0a420b044efb08da62ab73141ecc02c0f1a7a5a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/requests.jsonl": "e0aaf3104f871e3009696db3be8f08ba078afbbc27de4d55958fda5b7945f1c9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/summary.json": "3ce0b088a6eba474d14a69a1b598d49c26373abf249b921fcdc02c0d4eec924b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-bbh-t1-v1/source-manifest.json": "6631a278284ac21c65e45286ca2dc99127664d386d06d604c997b75fb87562a5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t1/metadata.json": "50f2b9971f48e06ac1d982d0e85e88bc36df719402c8e9f5a4a98643855cf30a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t1/complete.json": "6e7a7132a9925240a490a80767d5c561846b0c4be1e1d6a3f9281d6db14acc1f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t1/requests.jsonl": "edb3b53ebf7433fbf1ee837c6b3ffb759b2500be8f40a2ac0c72c9dd7c63e5c2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-bbh-t1/summary.json": "8a3734bd4e2abcb8c195b975a5d82b680c6990aa27ad822f013a3362942e8d08",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/metadata.json": "40c911115e585d593b26e45ae496af78161e05667919a0d7760632354350fbc4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/complete.json": "0aeae6c39a6dcb817419a2b9bf296eb6c50f62c9d017ac2fc38c61bb3e46f46e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/requests.jsonl": "fe65e0f6b6633920ebe92cab74187677c447b0af08404496949338a5e4a7d13e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/summary.json": "5f9cc7c6d45fa258cca666863c27b60f890658122e54461daa0ec801d234447f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-humanevalplus-t1/metadata.json": "15639df3e24cf0ddd89e550104883f7d89b43fc6b2dc70e77d135568ba3effe0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-humanevalplus-t1/complete.json": "f5ab2f5922e09cd7e780152ac4c7dc07b2bab8a44a21f632e729e0c3f899c82a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-humanevalplus-t1/requests.jsonl": "d7a61649a2b50f779ae70ac9f9aa86222140adb81d8a91819ea32314f5d17cea",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-humanevalplus-t1/summary.json": "7e769dc537442236f25a77a70d9d9729a98ffb23ce0276d1ce16e8b8af49f910",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/metadata.json": "c702aacbdcc211d629f5aa155356c3b5acba6a52359e01a2fbdeacdef12eead5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/complete.json": "20babd0c377bfface3a513710f70c75e05b140b5e0b22045c77efde350b565e6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/requests.jsonl": "36f676f1e95c9139a10a13a2ddd0d40b8f8916cdb605d0b43308ddf0aca48cff",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/summary.json": "2909fb39050fff61eb213fdd05fe414d5a37660b91c0d346fd074dcf92b5c14b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-mbppplus-t1/metadata.json": "02b422ff8e0a80b40cca3371a149618502a5170e638cb345d2778f547f71d361",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-mbppplus-t1/complete.json": "8847de6c7349a085802cfc93589f5ab3bdf43879eeedc181a74cb00ce29815dd",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-mbppplus-t1/requests.jsonl": "ec0041c7c2968f91cabea1b149fb0c491eb969329e426a2ea67029e64c88f874",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-mbppplus-t1/summary.json": "d1d946ddd11caf40a0f4f154c704b04c6a18385cb05b630867727ef8cc6cb292",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/metadata.json": "ab740b5e45a1df1df110eaaaf3adc8dff20e71f4da3250000837bf99e8b0851c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/complete.json": "c9fbc00cb17cfdee64e1a4746f3e6ec0944f8e78eb5654b204f4d571738cb3e9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/requests.jsonl": "e0e492b9f8a9c9c37da14a978b8be9813aa931c167fc652c036a0106af4328a9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/summary.json": "d065254cc5ddd3381430a323479ba43047ba429ca659b5b69b8f8aeb64742427",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t1/metadata.json": "0c44a38957c4d5f9240bbbfab9b487cd9ef8ea41811a90bc33406ecc7af35fb3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t1/complete.json": "b1e8906c8f4fcf70c3b084fece475e6f4445ab137105d5cfa44175d3f63524e2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t1/requests.jsonl": "d1c885713ba1e1a61bc93b8f53c60673246433fae42c07eddf83ad917014b176",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-specbench-t1/summary.json": "3fec174d4c29e9011ec97ed8c50df9d606aa13685084dc47d1b35941a229b210",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/metadata.json": "fecc8e643298068cd8f91c5fa639eba114f8e86f1ce26ab57653e1c69a7ebeb7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/complete.json": "cd48cfa618602a15dffa3166f8348620385293b44a384d89895101848cca6283",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/requests.jsonl": "41126c6bb0a302b67a67eda57a2b42cc01489851d765eace9a7fe90c85252936",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-gsm8k-t1/attempt1/summary.json": "ba0a956e417b5801d3a36c3de4944d003804389dd63ec92c6514b8794125d64c",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-ar/metadata.json": "91c4a77834a12102192368fcdfb8cbc773659d22d7bdc40533a093e347d5dbdc",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-ar/complete.json": "25ce4d4e4670ef6164f6c3eebcbb6d69e4c5fb61a7e6285c08ea112857c9d663",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-ar/requests.jsonl": "8661080c9a713be3624baca6b21fd4fea5a0d642535931f08f26e1adca259a21",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-ar/summary.json": "44df9ab56e87a67a67a97523279192ebcdad5d4f2ad66c25a0040d57a32c893b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-profile/metadata.json": "c429bd7156a432379735059a41680ac8750b8a92fbdb7aaf5d6f19c525e5efc4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-profile/complete.json": "444751b671cfe3b509177c551b6b32aff4e991c3bf89d5b9a3dc4ac3970ba7e3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-profile/requests.jsonl": "92e87a3e5d55963e2cb20be0a59e4e2a12fc7efdaad26fd68c88fd3aa4ba7e6a",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-profile/summary.json": "9a283022fc1c7789f48b24bfc922e5cc4b59f54c09a0850b4c103a3997695550",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/metadata.json": "329895745003f3cbc5b8b6ae707cafc182825c6e1592287d6684aa5bbe343974",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/complete.json": "c14da0cf102892e75fa91129779b44b067c1ea5b730f7b9ebfd4d64f34dcce13",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/requests.jsonl": "dec93486eef80c1fb533d6d6d7a6a328c08f192f19613c8232f83b54bd4c2c18",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/summary.json": "900646ad6f1f9d8f634bd18db3cce3f59f9d5204b375327c3fcbd5d0b576fef5",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-gsm8k-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t1/metadata.json": "85868f29f354e47fa6beef0523f2cd4101cda3adb4a9ef20a726207d2fdde724",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t1/complete.json": "2db9c8ff843d7e00b92f700f58595c21285f0c15f1110b9d168c237958f71b1b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t1/requests.jsonl": "550b2707998d11196ae96730c08b3e7fbcaa158f7b7e7afffe4b9d8b804c1b3d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-gsm8k-t1/summary.json": "9d414e5099121e6eb899aa511b4bd94b8c252c8e06b7a0043e0cf01605974049",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/metadata.json": "49ddf24d0b7a303048201ae4200a19a897e85499887fbbc24b9d63c3c565a992",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/complete.json": "dea742d11df1d0187d286ec2ef4cca790f23a2188da46debd3732c27a451693f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/requests.jsonl": "564201186fb73251533a423f271d70fd16b09f7376fea1e540aca5166f3899d3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/summary.json": "36a5551b162d0a36acc4ea540c85239a5b5e2e5736cf3dbacf706c549aa73032",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-math500-t1/metadata.json": "8d3b187341373ce9e9b14e1f432937b77d5618f343bc46f373c2a2da5c3819b0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-math500-t1/complete.json": "aef08160135af2a5c3167dea0e46d714576a9b3d6f158535030d45efef04c120",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-math500-t1/requests.jsonl": "082ebb6a8cae2a461b49ee7228b38a33b6fceb9f23c17eb3ea2246b1dbce76d3",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-math500-t1/summary.json": "4aaf1eb7215535b809d8e42bb3e0084d81e4ea2037279868c3d93f16cfe821ee",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/metadata.json": "cf5b5b3b35b437ad8ca7d2e0571dd925a862e85cdc718919d50f0278b0af2739",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/complete.json": "284db0f87e3972af2cd0d779e9fd9bfa2668216d6ef515292a07ea7f8da79994",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/requests.jsonl": "786d8add2679a358f33a433ebb980f535470799cfac2dd2cf30ce11cf00cc2eb",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/summary.json": "c25e55ae2c070bd8c636b87204229de8f35c05bac00f36ac6205470bca6f9406",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t1/metadata.json": "a088dc37025366b17627f71e24f2880a12cf7d0e5cb8026f8103fa2ebab991db",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t1/complete.json": "9e3664e9c5881dbe07dcb97d138cd995cf5e50f6f9ed4ef120619ade8012b9f0",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t1/requests.jsonl": "200a8c9770d86484c0bb4add757b5d21e2b817243b98a61180b0f9ec8f399740",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-bbh-t1/summary.json": "4410749360fb7c6a3ed97ac9013e7a1a54c60e6413e00628d80fa87aab8c52da",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/metadata.json": "0944c1c1343f005e1ac9c678533a1995c0b51fd6ab4de1dfad21e66f44e40e53",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/complete.json": "ff69de5a96d8754c4628928afa70621f5a32a7971e8a258465c59be07cd7e91d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/requests.jsonl": "9c4ceca96121be4a32d0e8d128548776b191a19e8f7173326bdc63764e3e5a86",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/summary.json": "1b3c82a8c5bd11f392d36a463a36857a4ddda3a93dfef1f4a290c49d06a7a38f",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-humanevalplus-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t1/metadata.json": "c1e8457a6c537beebd44b99e52caaeab930a0dab6a4e55137081b7b061664b58",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t1/complete.json": "930a9e5a77f83f89f542c45c581ccf8844c68f8b1ff9126efcee366735f1bea6",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t1/requests.jsonl": "48129e2a8adb9571509383e24e633b0a76f8e7030c4c6eb39f48737ae9dbf97e",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-humanevalplus-t1/summary.json": "b5e288b5fb5f94c8d5d26503aa19acd72489123911a553764096ddf4afe6e017",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/metadata.json": "2ddb11079a62f3ac54cd2e30c3211b69f6ba2c94d0fb8df320d59bf37d42f567",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/complete.json": "226e8573bb8cabeff4c8db2d4fa22393a158568975de16c91d5c8529287883ac",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/requests.jsonl": "c4757aa071d25d5eb86b0b93c51fda8b8e7e8a72e0709732c36c993ec4ee79c1",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/summary.json": "e4f55ba7ca3d1c042afabe01e5c0b407ce5e42f09d435cfdb84b36421be9bc19",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-mbppplus-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t1/metadata.json": "3ef2138b45eee000c275bd001ed17fc600b38c51a963dbfe3a70cbadf999cfa7",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t1/complete.json": "0d22e8ba63c18da5d8df0db916acbc875d6dd88d053f9fe4edb78e05136596ad",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t1/requests.jsonl": "8a98a37ae49b781e9a286c9cf33e05808c6b217f64575f4935f80dcc38e1269d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-mbppplus-t1/summary.json": "67f1a931b76cfcb95d67c214ee1c32b68c1e7d360be42c67c18deda62049dbb9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/metadata.json": "f11221c1054bdee6cef1dbe08a1304e51373b7eeabc32f73d8af215cb5056c53",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/complete.json": "f8461fee55cf367987350cd612ed9450782058a944977160a1a09726d8fdc17b",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/requests.jsonl": "a832268e57bffd87bad0f64a5324ffd1820ebf6b26f170bdae04f5ca2bb407e8",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/summary.json": "9aec95c0d7b2e3c6c94ef33425276ca7e32d0b80ffb97fa56f17836a56afd4c4",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-specbench-t1-v1/source-manifest.json": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-specbench-t1/metadata.json": "b4a65a10b7de0d131ec8435fa35775ec050b612305482e055def0918b8ba1e64",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-specbench-t1/complete.json": "3684786026a593708b26956ead34d150098bffe11fe6f794fb15384457bf9af2",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-specbench-t1/requests.jsonl": "44b6a4b088f78ce7e899614c03d75a9b8aad1d3d742ba5e61e14ad1bf24feae9",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-1.4b-specbench-t1/summary.json": "3f32fba083b71d7ad555b5e3541f5a66a89785743b59bee5a4b16ac1b3702a11"
+  },
+  "unchanged_results_csv_sha256": "af26112c3454124c098f641c64fb10a98d8af5e44382fe727cf2833d3a747333",
+  "report_source_sha256": {
+    "audit_sampling_sources.py": "aab98ffc438e747a92ac602d896a4c74df8969d75ebcdd10b27a5a1d981b291d",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "new_gpu_runs": 0,
+  "checked_unix": 1794513968.1138968,
+  "supplemental_algorithm_evidence": {
+    "stochastic-decode-CPU-n8000-v1": {
+      "sequences": 32000,
+      "configurations": 4,
+      "actual_test_exit_code": 0,
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/stochastic-decode-CPU-n8000-v1/report.json": "b60e216848851c248215d987c7c9f87bbbcac34edf6b06c515a7ff175d101660",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/stochastic-decode-CPU-n8000-v1/verification.json": "af80057395126f75a939947b728181e6f4377df60d9abfa0724171973d4571cf",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/stochastic-decode-CPU-n8000-v1/plan.json": "dfcb22c1d8d3b080d13983762b22a904ba6a4bbb178ee9dcce00fbb8c4172d26",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/stochastic-decode-CPU-n8000-v1/source-manifest.json": "dfceeaffc6dea54a5c70b4e4bc5162246de8b56b34335b000130b899b008596d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/stochastic-decode-CPU-n8000-v1/verify.py": "49ec9c5f77ff3244a35e98309b350245117bf792d8f19c83027b9e1c3d486a1e",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/stochastic-decode-CPU-n8000-v1-launcher.json": "7f043a914099501b7361b2be23722746459ed5a4dfbb7320bf00a919dbae2a50",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/stochastic-decode-CPU-n8000-v1-exit.json": "9c4e9a21c37d0270c9b6d8b64eef4a64b56582c2626ec6a12adc5bc240c51083"
+      },
+      "scope": "Reused completed CPU synthetic checks; no new samples, GPU runs, or universal distribution claim."
+    },
+    "retention-sampling-CPU-n32000-v1": {
+      "sequences": 96000,
+      "configurations": 3,
+      "actual_test_exit_code": 0,
+      "artifact_sha256": {
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/retention-sampling-CPU-n32000-v1/report.json": "4082eb0329ebc136b8a7d9d95c1899f63c7d444bb9aa7b098256b6245043459b",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/retention-sampling-CPU-n32000-v1/verification.json": "b884f1c5f589a00516b50cb49fbe3023b21a58dac48ed456982d19b5a964e6ee",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/retention-sampling-CPU-n32000-v1/plan.json": "2edb2e4aa66ddb56769618475d363aa5b8b3f476c553a5e8886f09c003dc22aa",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/retention-sampling-CPU-n32000-v1/source-manifest.json": "3d42f760b613a324d8c51b1fa295008100760dd33a18dedcdf1c27f0d8005c7d",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/retention-sampling-CPU-n32000-v1/verify.py": "e9f817bd11ad87c2eb75f31108d4c450f24faa7f771ec809023854d39874b6ed",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/retention-sampling-CPU-n32000-v1-launcher.json": "3f519bc1ae10a9835c563b7e662226dd14df4309f7b40937847aaa3c6a60b2fb",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/retention-sampling-CPU-n32000-v1-exit.json": "b83d63105c33a85068e4db467bc5db3805a40ade174a30bfe00474cd34f7f8ab",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/verify-retention-sampling-CPU-n32000-v1-launcher.json": "841bd2ebf9495272244e7e9d6b3f400c9f8a66855311d6d71ad3091c1f811bdb",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/verify-retention-sampling-CPU-n32000-v1-exit.json": "9961d443345ece3173f472a50f6a4c50696308839649339efdb179f027ed49d7"
+      },
+      "scope": "Reused completed CPU synthetic checks; no new samples, GPU runs, or universal distribution claim."
+    }
+  },
+  "planned_ouro14_DFlash": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/source/baselines/dflash/decode.py",
+    "sha256": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "measured_T1_cells": 1,
+    "status": "frozen_source_with_pending_measurements"
+  },
+  "limitations": [
+    "CPU tests cover small-vocabulary conditional enumeration/Monte Carlo and scheduler/EOS/cap/admission oracles.",
+    "Code identity binds those tests to measured implementations; it does not statistically prove distribution equality for every real-model prompt.",
+    "The 17 unit tests are supplemented by 32,000 complete synthetic decodes and 96,000 eviction/cascade-path decodes. These finite checks are not a universal proof.",
+    "BF16 full-depth logits can vary with execution shape; common-prefix numerical evidence and output differences are reported separately.",
+    "T1 same-seed token agreement is descriptive. No benchmark outputs were regenerated here.",
+    "A frozen Ouro1.4B DFlash source alone does not count as a measured cell; only the actual collected rows are counted."
+  ]
+}

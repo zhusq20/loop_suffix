@@ -1,0 +1,48 @@
+{
+  "status": "unchanged_sources_verified_before_versioning",
+  "sources": {
+    "loopahead/batch.py": {
+      "sha256": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+      "already_used_in_archives": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source/loopahead/batch.py": {
+          "archived": "/ossfs/workspace/sz/loopfill/experiments/baselines/external-evidence/extra-throughput-v1/files/external-results/loopahead-table2-20261112-v2/source/loopahead/batch.py",
+          "sha256": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+          "bytes": 12802
+        },
+        "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source/loopahead/batch.py": {
+          "archived": "/ossfs/workspace/sz/loopfill/experiments/baselines/external-evidence/extra-throughput-v1/files/external-results/gpu-rebalance-20261112-v1/source/loopahead/batch.py",
+          "sha256": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+          "bytes": 12802
+        }
+      },
+      "pinned_waiter_spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c"
+    },
+    "loopahead/test_batch.py": {
+      "sha256": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+      "already_used_in_archives": {
+        "/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2/source/loopahead/test_batch.py": {
+          "archived": "/ossfs/workspace/sz/loopfill/experiments/baselines/external-evidence/extra-throughput-v1/files/external-results/loopahead-table2-20261112-v2/source/loopahead/test_batch.py",
+          "sha256": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+          "bytes": 5224
+        },
+        "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/source/loopahead/test_batch.py": {
+          "archived": "/ossfs/workspace/sz/loopfill/experiments/baselines/external-evidence/extra-throughput-v1/files/external-results/gpu-rebalance-20261112-v1/source/loopahead/test_batch.py",
+          "sha256": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+          "bytes": 5224
+        }
+      },
+      "pinned_waiter_spec_sha256": "19b1497549548ca931eb4afcdc7db395b6404cfe279c327992bde11c7676343c"
+    }
+  },
+  "archive_manifest_sha256": "485d6b245f0f0be882911d16e3da3244d4450d7fc20268e1a0de2b8aad3ef420",
+  "previous_head": "23451daa6c1fd30fec8a5c11bccb69a0854dd4bf",
+  "runtime_source_edits": 0,
+  "new_gpu_runs": 0,
+  "new_test_runs": 0,
+  "untracked_historical_dispatchers_preserved": {
+    "orchestrate_loopahead_t1_resume.py": "f74775ae99339f47b6d4b22dc9ea0fc26414b5cd78a06f0c4a8af9b93ca6f8a9",
+    "orchestrate_loopahead_throughput.py": "4ebc0c248f6afb1318ef40df174996b7440396db63c5d0deb710ff2f28602340"
+  },
+  "scope": "Version the two unchanged batching source files already bound to measured archives; preserve the two historical root dispatchers without claiming they are the currently executed versions.",
+  "checked_unix": 1794480868.040973
+}

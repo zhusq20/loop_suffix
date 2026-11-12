@@ -1,0 +1,36 @@
+{
+  "argv": [
+    "/tmp/loopfill-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+    "--model",
+    "ouro-1.4b",
+    "--method",
+    "loopahead",
+    "--dataset",
+    "bbh",
+    "--temperature",
+    "1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-bbh-t1-v1",
+    "--admission",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-1.4b-admission-v1.json"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-bbh-t1-v1-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-bbh-t1-v1-finished.json",
+  "metadata": {
+    "name": "loopahead-ouro-1.4b-bbh-t1-v1",
+    "gpu": 3,
+    "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill",
+  "extra_launcher": null,
+  "extra_exit": null
+}

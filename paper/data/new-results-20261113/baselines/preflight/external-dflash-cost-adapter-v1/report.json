@@ -1,0 +1,44 @@
+{
+  "status": "passed_partial_integration",
+  "unchanged_completed_rows": 5,
+  "unit_tests": {
+    "count": 6,
+    "actual_process_exit_code": 0,
+    "scope": "Synthetic accounting timestamps only; never real measurements"
+  },
+  "renderer_actual_exit_code": 0,
+  "external_training_status": "pending",
+  "running_stage_cost_estimated": false,
+  "full_training_branch": "Pending real teacher completion, six epochs and parent CPU audit; not certified by the partial run",
+  "total_recorded_gpu_hours": 124.53746790316369,
+  "external_closed_intervals": [
+    {
+      "stage": "before_teachers",
+      "category": "held_gpu_between_stages",
+      "started_unix": 1794428119.4834957,
+      "finished_unix": 1794428119.7968464,
+      "status": "complete",
+      "reserved_gpu_seconds": 0.3133506774902344,
+      "path": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-launcher.json",
+      "line": 1,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "scope": "portable_ouro14_dflash",
+      "interval_id": "before_teachers",
+      "evidence": {
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers-launcher.json": "7e59520b00c6c9346a8b1dc0e2b98e696fa07eeae1ab9c2791c888a6ef02da8a",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/selection.json": "2daacea4c2468d8dbe6b80041f9ae476591315d4a2da238a17dbffb81966635c"
+      }
+    }
+  ],
+  "source_sha256": {
+    "external_dflash_costs.py": "bc0d340798915e94b631f6036d511c0a42e8231efc9c1bd100623c207c74e5a7",
+    "render_training_costs.py": "10f6a74b8bb43541adb0b719c908e30b7302e10bb87a8c3eaebe04cdaf77f972",
+    "test_external_dflash_costs.py": "a51c3b364180dbb0c2c571f645baf9d190b3411d70cbe4f5a8ee34a2a902a05e"
+  },
+  "output_sha256": {
+    "current-cost-summary.md": "7d05752f4aa062424630c09ec69b0122f6399255f0251b7409ad214cf5e4e8a0",
+    "current-cost-summary.json": "7d7ddd6a0912a4af525138e968661f1e917e92af2c1edea275d6409ad86019a3",
+    "current-cost-summary-ledger.json": "f346c1470567e7fb9af12f753161d3df67d92616d509bb386edbef7940e5c788"
+  },
+  "checked_unix": 1794466159.0171533
+}

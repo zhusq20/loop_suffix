@@ -1,0 +1,47 @@
+{
+  "job_id": "table1-huginn-3.5b-mbppplus-t1",
+  "stage": "ar",
+  "gpu": 6,
+  "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+  "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "56-59",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+    "--binding",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-huginn-3.5b-mbppplus-t1-ar.json",
+    "--job",
+    "table1-huginn-3.5b-mbppplus-t1",
+    "--stage",
+    "ar",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-ar",
+    "--lock-fd",
+    "8"
+  ],
+  "started_unix": 1794450291.0668898,
+  "pid": 385535,
+  "start_ticks": "46532736",
+  "supervisor_identity": {
+    "pid": 385534,
+    "state": "R",
+    "start_ticks": "46532729",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-huginn-3.5b-mbppplus-t1-ar-launcher.json.supervisor.json",
+      "--lock-fd",
+      "8"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794461060.6829305,
+  "exit_evidence": "supervisor_waitpid"
+}

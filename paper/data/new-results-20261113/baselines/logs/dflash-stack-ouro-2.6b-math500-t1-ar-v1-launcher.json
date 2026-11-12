@@ -1,0 +1,24 @@
+{
+  "name": "dflash-stack-ouro-2.6b-math500-t1-ar-v1",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "ar",
+    "--dataset",
+    "math500",
+    "--temperature",
+    "1",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1"
+  ],
+  "pid": 420686,
+  "started_unix": 1794377022.8435104
+}

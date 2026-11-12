@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 222, in <module>
+    if __name__=='__main__':main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 177, in main
+    entry=json.loads(args.worker.read_text());worker(entry['job'],entry['gpus'],uuids);return
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 117, in worker
+    run_command(name,argv,env)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py", line 43, in run_command
+    if code:raise RuntimeError(f'{name} exited {code}; see {log}')
+RuntimeError: loopahead-trained-huginn-3.5b-gsm8k-ar-float32-n20-v1 exited 1; see /ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-trained-huginn-3.5b-gsm8k-ar-float32-n20-v1.log

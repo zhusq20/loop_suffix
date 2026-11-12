@@ -1,0 +1,26 @@
+{
+  "name": "dflash-huginn-micro4-memory-smoke-v1",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-micro4-memory-smoke-v1",
+    "--cpu-groups",
+    "0-3",
+    "--epochs",
+    "1",
+    "--micro-batch",
+    "4",
+    "--accumulation",
+    "1",
+    "--checkpoint-layers",
+    "--smoke"
+  ],
+  "pid": 315049,
+  "started_unix": 1794330234.7771678
+}

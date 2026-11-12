@@ -1,0 +1,33 @@
+{
+  "job": {
+    "id": "table1-huginn-3.5b-humanevalplus-t1",
+    "kind": "latency",
+    "model": "huginn-3.5b",
+    "dataset": "humanevalplus",
+    "temperature": 1,
+    "batch": 1,
+    "max_seq": 1024,
+    "max_new_tokens": 512,
+    "count": 164,
+    "inputs": "inputs/huginn-3.5b-humanevalplus.jsonl",
+    "inputs_sha256": "0738065ae5955a5cd99db031497dc5ba0f0235f5e2fba0df9aee600278e82065",
+    "original_inputs_sha256": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8"
+  },
+  "stage": "ar",
+  "timed": {
+    "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-humanevalplus-t1/attempt1",
+    "hashes": {
+      "metadata.json": "b94bfdec638d798403cfa1f4baeab5af9d844977601dbaf498fa325c10daa428",
+      "complete.json": "fb9e07164383fefb5339066f3db8a584af2904dafbdb9d0e0d38bf587984b324",
+      "requests.jsonl": "025baf0e9f8a094b25abcee7119faa1ab6bd015d5109b243bdd52ce51dc852db",
+      "summary.json": "cb3663250bcd755a08861717556e457925bada75e7dea0109a1f2c108f268235"
+    },
+    "exit_evidence": {
+      "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table1-huginn-3.5b-humanevalplus-t1-attempt1-exit.json",
+      "sha256": "78a16e25ad5096516ec9f446d77de6417b1de996112161dcb202c1ef51c3fdfb",
+      "actual_exit_code": 0
+    }
+  },
+  "plan_sha256": "0e398011930f446630667e45cdcac5ab15b7ef6f5af2d813d9defbe46927340d",
+  "created_unix": 1794443449.6050344
+}

@@ -1,0 +1,47 @@
+{
+  "status": "partial_completed_shard_audit",
+  "audited_shard_stages": 3,
+  "records": [
+    {
+      "stage": "train",
+      "shard": 2,
+      "requests": 1125,
+      "state_tokens": 685353,
+      "chunks": 18,
+      "bytes": 7239571928,
+      "index_sha256": "8e026a7fe34f4b38d64719d58b3068e8954b67c84af44f4e3fe0cbdadb9bf62a",
+      "teacher_sha256": "141772ff4f450eb647032f4c4e311db1d31bd98c08ea5266ce01e81c76829727",
+      "all_states_finite": true,
+      "all_teacher_token_ids_equal": true
+    },
+    {
+      "stage": "dev",
+      "shard": 2,
+      "requests": 91,
+      "state_tokens": 58454,
+      "chunks": 2,
+      "bytes": 617466960,
+      "index_sha256": "a14332f2db2b5d752a0b9424187b59cadb8e4f613384f873d97f256846794cd0",
+      "teacher_sha256": "e4c9f10ecdd5d2c2ea919a9c57ccf65780804579f58857e54167f7be46cc76b3",
+      "all_states_finite": true,
+      "all_teacher_token_ids_equal": true
+    },
+    {
+      "stage": "confirmation",
+      "shard": 2,
+      "requests": 102,
+      "state_tokens": 63806,
+      "chunks": 2,
+      "bytes": 674003644,
+      "index_sha256": "57a6d1c5e4a1f3719b9ced50b4b7735e6308a9ffd84dc72ff908d947c94e7575",
+      "teacher_sha256": "e41379b55af0166640f20d68df54a63e023d049551524662b92386d5a23a5355",
+      "all_states_finite": true,
+      "all_teacher_token_ids_equal": true
+    }
+  ],
+  "components_sha256": "d96da1e706c8e4635150ae9cf8b6b35932d961f18f84a9d23a6fd20556cd76c3",
+  "same_components_as_previously_audited_shards": true,
+  "wall_s": 27.084514617919922,
+  "finished_unix": 1794309558.0659542,
+  "limitation": "Shard2 only; previous shard0/1 audit is separate. Full9025/782/782 data gate remains pending."
+}

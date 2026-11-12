@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/orchestrate_t1_with_rebalance_hold.py", line 228, in <module>
+    main()
+  File "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/orchestrate_t1_with_rebalance_hold.py", line 224, in main
+    execute(args.out.resolve(), args.resume)
+  File "/ossfs/workspace/loop_suffix/results/gpu-rebalance-20261112-v1/orchestrate_t1_with_rebalance_hold.py", line 207, in execute
+    assert state['stage'] == 'complete', state
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'updated_unix': 1794426292.302972, 'controller_pid': 464925, 'stage': 'needs_attention', 'target_cells': 12, 'completed': ['loopahead-huginn-3.5b-gsm8k-t1', 'loopahead-ouro-2.6b-gsm8k-t1', 'loopahead-huginn-3.5b-math500-t1', 'loopahead-ouro-2.6b-math500-t1', 'loopahead-huginn-3.5b-bbh-t1', 'loopahead-ouro-2.6b-bbh-t1', 'loopahead-huginn-3.5b-humanevalplus-t1', 'loopahead-ouro-2.6b-humanevalplus-t1', 'loopahead-huginn-3.5b-mbppplus-t1', 'loopahead-ouro-2.6b-mbppplus-t1', 'loopahead-huginn-3.5b-specbench-t1'], 'completed_count': 11, 'failed': {'loopahead-ouro-2.6b-specbench-t1': "AssertionError('Worker exited 1')"}, 'running': {}, 'pending': [], 'allowed_gpus': [2, 3, 4, 6], 'throughput_dispatch_resumed': True, 'throughput_running': {}, 'finished_unix': 1794426314.4825437, 'collect_exit_code': 0, 'collected_t1_rows': 11}

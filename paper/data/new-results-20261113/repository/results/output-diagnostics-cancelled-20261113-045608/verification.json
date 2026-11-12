@@ -1,0 +1,179 @@
+{
+  "verified_unix": 1794517050.4035697,
+  "active_diagnostic_processes": [],
+  "queue_checks": {
+    "appendix-dflash-diagnostics-v1": {
+      "stage": "cancelled_by_user",
+      "stop_marker": true
+    },
+    "loopahead-math-fp32-continuation-v1": {
+      "stage": "cancelled_by_user",
+      "stop_marker": true
+    },
+    "baseline-diagnostics-resume-v1": {
+      "stage": "cancelled_by_user",
+      "stop_marker": true
+    }
+  },
+  "measurement_workers_live": {
+    "table1-ouro-1.4b-math500-t0-ar": true,
+    "table1-ouro-1.4b-math500-t1-ar": true,
+    "table1-ouro-1.4b-math500-t0-profile": true,
+    "table1-ouro-1.4b-math500-t1-profile": true,
+    "table1-ouro-1.4b-mbppplus-t1-profile": true,
+    "table1-ouro-1.4b-specbench-t0-profile": true,
+    "table1-ouro-1.4b-specbench-t1-profile": true
+  },
+  "measurement_failures": {},
+  "sql_status": {
+    "status": "running",
+    "completed": 7,
+    "total": 14,
+    "main_completed": 7,
+    "prior_pids": [],
+    "failed": [],
+    "updated_unix": 1794517048.9701555,
+    "running": {
+      "ouro-1.4b-ar-t1": {
+        "gpu": 7,
+        "smoke": false,
+        "pid": 142106
+      }
+    },
+    "bindings": {},
+    "placement": "first_idle_per_cell",
+    "allowed_gpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "cell_gpus": {
+      "ouro-1.4b-ar-t0": 5,
+      "ouro-1.4b-budget-online-t0": 5,
+      "ouro-1.4b-budget-suffix-t0": 5,
+      "ouro-1.4b-dflash-t0": 5,
+      "ouro-1.4b-loopahead-t0": 5,
+      "ouro-1.4b-loopspec-dual-t0": 5,
+      "ouro-1.4b-wavefront-t0": 5,
+      "ouro-1.4b-ar-t1": 7
+    }
+  },
+  "exit_receipts": {
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/logs/table1-ouro-1.4b-gsm8k-t0-greedy-exit.json": {
+      "group": "table1-ouro-1.4b-gsm8k-t0-greedy",
+      "step": "table1-ouro-1.4b-gsm8k-t0-greedy",
+      "gpu": 7,
+      "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+      "argv": [
+        "taskset",
+        "--cpu-list",
+        "60-63",
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/diagnose_packed_dflash.py",
+        "--plan",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/plan.json",
+        "--job",
+        "table1-ouro-1.4b-gsm8k-t0",
+        "--ar",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t0-ar",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/diagnostics/table1-ouro-1.4b-gsm8k-t0",
+        "--lock-fd",
+        "5"
+      ],
+      "started_unix": 1794516726.6440153,
+      "pid": 137616,
+      "start_ticks": "53176293",
+      "supervisor_identity": {
+        "pid": 137615,
+        "state": "R",
+        "start_ticks": "53176287",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/loop_queue_recovery.py",
+          "--spec",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/logs/table1-ouro-1.4b-gsm8k-t0-greedy-launcher.json.supervisor.json",
+          "--lock-fd",
+          "5"
+        ]
+      },
+      "exit_code": -15,
+      "finished_unix": 1794517003.5943608,
+      "exit_evidence": "supervisor_waitpid"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1/controller-exit.json": {
+      "recovery": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1",
+      "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+      "authorization_context_sha256": "693286ccac4d1abf972fc665eb3f3f422186f65f4ce9837dc364d7de87fe0546",
+      "argv": [
+        "taskset",
+        "--cpu-list",
+        "80-83",
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+        "--plan",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+      ],
+      "started_unix": 1794509233.9147525,
+      "pid": 48618,
+      "start_ticks": "52427020",
+      "supervisor_identity": {
+        "pid": 48615,
+        "state": "R",
+        "start_ticks": "52427014",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/loop_queue_recovery.py",
+          "--spec",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1/controller-launcher.json.supervisor.json",
+          "--lock-fd",
+          "4"
+        ]
+      },
+      "exit_code": -15,
+      "finished_unix": 1794517003.4305685,
+      "exit_evidence": "supervisor_waitpid"
+    },
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/controller-exit.json": {
+      "plan_sha256": "994a83735b8ff36410e856979802e7fd91fab2cc62c34d3f0008918fa6fb2a8e",
+      "activation_source_sha256": "eb6be4683b14c914191f47c0b07c5588caf358f5c4c0b05d509206a32dc869ca",
+      "argv": [
+        "taskset",
+        "--cpu-list",
+        "80-83",
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/queue_loopahead_math_continuation.py"
+      ],
+      "started_unix": 1794510570.994019,
+      "pid": 64214,
+      "start_ticks": "52560728",
+      "supervisor_identity": {
+        "pid": 64213,
+        "state": "R",
+        "start_ticks": "52560722",
+        "argv": [
+          "/opt/conda/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/source/loop_queue_recovery.py",
+          "--spec",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/controller-launcher.json.supervisor.json",
+          "--lock-fd",
+          "3"
+        ]
+      },
+      "exit_code": -15,
+      "finished_unix": 1794517003.4305427,
+      "exit_evidence": "supervisor_waitpid"
+    }
+  }
+}

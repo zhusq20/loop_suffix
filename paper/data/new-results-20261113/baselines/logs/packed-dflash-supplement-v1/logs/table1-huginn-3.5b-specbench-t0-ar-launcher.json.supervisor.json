@@ -1,0 +1,34 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "56-59",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+    "--binding",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-huginn-3.5b-specbench-t0-ar.json",
+    "--job",
+    "table1-huginn-3.5b-specbench-t0",
+    "--stage",
+    "ar",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t0-ar",
+    "--lock-fd",
+    "8"
+  ],
+  "launcher_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-huginn-3.5b-specbench-t0-ar-launcher.json",
+  "exit_path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-huginn-3.5b-specbench-t0-ar-exit.json",
+  "metadata": {
+    "job_id": "table1-huginn-3.5b-specbench-t0",
+    "stage": "ar",
+    "gpu": 6,
+    "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+    "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json"
+  },
+  "cwd": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source",
+  "extra_launcher": null,
+  "extra_exit": null
+}

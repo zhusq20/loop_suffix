@@ -1,0 +1,50 @@
+{
+  "step": 13500,
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500",
+  "domains": {
+    "python": {
+      "accepted_prefix": 1.9013671875,
+      "ce": 3.4538513792733614,
+      "prefix_sum": 1947.0,
+      "windows": 1024,
+      "ce_sum": 24608.6910773227,
+      "labels": 7125
+    },
+    "gsm8k": {
+      "accepted_prefix": 2.69921875,
+      "ce": 1.928797397209981,
+      "prefix_sum": 2764.0,
+      "windows": 1024,
+      "ce_sum": 13736.895062929485,
+      "labels": 7122
+    },
+    "math": {
+      "accepted_prefix": 2.1865234375,
+      "ce": 2.8244562441811616,
+      "prefix_sum": 2239.0,
+      "windows": 1024,
+      "ce_sum": 20124.250739790776,
+      "labels": 7125
+    },
+    "reasoning": {
+      "accepted_prefix": 1.8175925925925926,
+      "ce": 3.876177558627607,
+      "prefix_sum": 3926.0,
+      "windows": 2160,
+      "ce_sum": 58301.586659317836,
+      "labels": 15041
+    },
+    "ultrachat": {
+      "accepted_prefix": 1.3642578125,
+      "ce": 5.374916642796287,
+      "prefix_sum": 1397.0,
+      "windows": 1024,
+      "ce_sum": 38194.157663710415,
+      "labels": 7106
+    }
+  },
+  "accepted_prefix": 1.9937919560185187,
+  "ce": 3.491639844417679,
+  "requests": 782,
+  "ineligible_requests": 0
+}

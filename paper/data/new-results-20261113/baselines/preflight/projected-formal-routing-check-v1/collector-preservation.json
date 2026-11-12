@@ -1,0 +1,69 @@
+{
+  "previous_cells": 18,
+  "current_cells": 19,
+  "previous_rows_and_agreement_unchanged": true,
+  "new_cell": {
+    "method": "dflash",
+    "model": "ouro-2.6b",
+    "benchmark": "humanevalplus",
+    "temperature": "0",
+    "eta": "3.9028177506209087",
+    "gamma": "4.4328115942028985",
+    "method_tok_s": "45.14203795084107",
+    "ar_tok_s": "11.566524709912297",
+    "drafter_time_frac": "0.032380723581944174",
+    "match_rate": "0.6951219512195121",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+    "eta_latency": "3.9358916122378673",
+    "eta_throughput": "3.9028177506209087",
+    "aligned_token_match_rate": "0.7485069844931437",
+    "method_decode_tokens": "38233",
+    "ar_decode_tokens": "38557",
+    "method_decode_s": "846.9489135965705",
+    "ar_decode_s": "3333.499125018716",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794348890.4613297",
+    "ar_last_completed_unix": "1794352217.0404499",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1"
+  },
+  "journals": {
+    "ar": {
+      "count": 164,
+      "sha256": "8f385e5c70dab5ceb9908342f466e25725ec230e0b3d7794226abca27a9024e4",
+      "decode_tokens": 38557,
+      "decode_s": 3333.499125018716,
+      "draft_gpu_s": 0
+    },
+    "dflash": {
+      "count": 164,
+      "sha256": "ddd33101574fcbbc5b51a54188fb646feb537477e7c6de010bb78c9a291a09f3",
+      "decode_tokens": 38233,
+      "decode_s": 846.9489135965705,
+      "draft_gpu_s": 0
+    },
+    "dflash-profile": {
+      "count": 164,
+      "sha256": "c8472fd649719ae51aa9a6ed3f278b5549048114c4de801330f216488a355538",
+      "decode_tokens": 38233,
+      "decode_s": 846.5704936981201,
+      "draft_gpu_s": 27.41256514906884
+    }
+  },
+  "exits": {
+    "ar": 0,
+    "dflash": 0,
+    "dflash-profile": 0
+  },
+  "outer_exit": {
+    "worker_pid": 508130,
+    "started_unix": 1794348850.770551,
+    "job_sha256": "8e711b5df10dfc30ce39b07adc67f99a419580d00e8c02420f5f0421dd1facd2",
+    "source_sha256": "f4e24e76eb4e11cff1aa38479d12282af71891435a4688155bd0cb76d71f3290",
+    "exit_code": 0,
+    "finished_unix": 1794353975.7505918
+  },
+  "checked_unix": 1794354098.0008714
+}

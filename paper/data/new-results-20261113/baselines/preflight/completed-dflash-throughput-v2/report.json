@@ -1,0 +1,338 @@
+{
+  "status": "complete_throughput_artifact_audit",
+  "cells": 10,
+  "requests": 4800,
+  "results": [
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "batch": 1,
+      "requests": 480,
+      "output_tokens": 53898,
+      "wall_s": 2935.1668678969145,
+      "output_tok_s": 18.362840147013046,
+      "gamma": 3.107504363001745,
+      "historical_ar_tok_s": 5.8878911118916015,
+      "historical_loopfill_tok_s": 26.168861878724435,
+      "ratio_to_historical_ar": 3.1187465593455275,
+      "ratio_to_historical_loopfill": 0.701705723088486,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "batch": 1,
+      "requests": 480,
+      "output_tokens": 99777,
+      "wall_s": 6169.996444903314,
+      "output_tok_s": 16.17132212165538,
+      "gamma": 2.97162950770612,
+      "historical_ar_tok_s": 5.527994973633944,
+      "historical_loopfill_tok_s": 27.11705413832038,
+      "ratio_to_historical_ar": 2.9253503664141034,
+      "ratio_to_historical_loopfill": 0.5963524665757453,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "batch": 2,
+      "requests": 480,
+      "output_tokens": 55313,
+      "wall_s": 1667.1830255165696,
+      "output_tok_s": 33.17752109601854,
+      "gamma": 3.172471650081,
+      "historical_ar_tok_s": 11.108120298553628,
+      "historical_loopfill_tok_s": 40.72717253066902,
+      "ratio_to_historical_ar": 2.9867808597948415,
+      "ratio_to_historical_loopfill": 0.8146286381907478,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "batch": 2,
+      "requests": 480,
+      "output_tokens": 99952,
+      "wall_s": 3464.983412154019,
+      "output_tok_s": 28.846314140899306,
+      "gamma": 2.9610930848688715,
+      "historical_ar_tok_s": 10.651749622678926,
+      "historical_loopfill_tok_s": 51.16769958759732,
+      "ratio_to_historical_ar": 2.7081291959286995,
+      "ratio_to_historical_loopfill": 0.5637602310323805,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "batch": 4,
+      "requests": 480,
+      "output_tokens": 53627,
+      "wall_s": 933.0813616886735,
+      "output_tok_s": 57.47301596823973,
+      "gamma": 3.1487054920315183,
+      "historical_ar_tok_s": 18.996580956134704,
+      "historical_loopfill_tok_s": 59.501956600099255,
+      "ratio_to_historical_ar": 3.0254400042276846,
+      "ratio_to_historical_loopfill": 0.9659012787512916,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "batch": 4,
+      "requests": 480,
+      "output_tokens": 101465,
+      "wall_s": 1817.3698512166739,
+      "output_tok_s": 55.83068296861658,
+      "gamma": 3.0079230333899263,
+      "historical_ar_tok_s": 20.747851396557056,
+      "historical_loopfill_tok_s": 86.21714004148247,
+      "ratio_to_historical_ar": 2.690913960270664,
+      "ratio_to_historical_loopfill": 0.6475589765765164,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "batch": 8,
+      "requests": 480,
+      "output_tokens": 52966,
+      "wall_s": 562.9829378053546,
+      "output_tok_s": 94.0810039580852,
+      "gamma": 3.1189683860232944,
+      "historical_ar_tok_s": 32.99454545702096,
+      "historical_loopfill_tok_s": 88.17778253863986,
+      "ratio_to_historical_ar": 2.8514108212412292,
+      "ratio_to_historical_loopfill": 1.0669468118781342,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "batch": 8,
+      "requests": 480,
+      "output_tokens": 101205,
+      "wall_s": 1046.3842595815659,
+      "output_tok_s": 96.71877140092917,
+      "gamma": 2.995449949443883,
+      "historical_ar_tok_s": 38.71789888611055,
+      "historical_loopfill_tok_s": 140.9422439316542,
+      "ratio_to_historical_ar": 2.4980377082297083,
+      "ratio_to_historical_loopfill": 0.6862298250894182,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "requests": 480,
+      "output_tokens": 53134,
+      "wall_s": 411.32294527441263,
+      "output_tok_s": 129.178302865044,
+      "gamma": 3.11783514921838,
+      "historical_ar_tok_s": 48.339976576229446,
+      "historical_loopfill_tok_s": 117.51800363649375,
+      "ratio_to_historical_ar": 2.6722872457610114,
+      "ratio_to_historical_loopfill": 1.099221386236426,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1",
+      "actual_exit_code": 0
+    },
+    {
+      "method": "dflash",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "requests": 480,
+      "output_tokens": 101079,
+      "wall_s": 658.5846461057663,
+      "output_tok_s": 153.47913225381674,
+      "gamma": 2.967522123893805,
+      "historical_ar_tok_s": 67.48118158555856,
+      "historical_loopfill_tok_s": 189.55626449904798,
+      "ratio_to_historical_ar": 2.2743990049910794,
+      "ratio_to_historical_loopfill": 0.8096758640999046,
+      "run": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1",
+      "actual_exit_code": 0
+    }
+  ],
+  "evidence": [
+    {
+      "id": "table2-huginn-3.5b-b1",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/metadata.json": "cf81924bfd437e266fa95eb3e0edc2dffea55a96c54474ad2676ab53340ac55d",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/summary.json": "dfaebe42e3318e9316b76e3ec718fa6a4e12985a9fa64aa8f1a61a4684ae2579",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/complete.json": "8b839a118d1135e7e68cc5c0cfaf32bae507a904feb8adb6abb7a3df634e4bf3",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b1/attempt1/requests.jsonl": "429f5d5852b7846617f8b7c08bb604fef10b33015ee8e7ff5f7ed77ad007de2c",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b1-attempt1-exit.json": "997d8c787800d19738c81bae94bddaab895770e996723411b1ff72b70b15d77a"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-ouro-2.6b-b1",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/metadata.json": "e0653a9c3ffa2955b920bbaa414ecd5c0266f9b84d9b2e0a65d1d83267d45331",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/summary.json": "614bc1c3003fb777ca37b9b20659054f97c69bd5104a6f625198231612e67254",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/complete.json": "618ac305351b37507b2d6091a91f8a195df5d4d539db8e07c97d15d11509eeb5",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b1/attempt1/requests.jsonl": "af8cc544d4774ab29412b33f3cb1c3dd9ebd9dc4bf83b14f70f4fb590148def4",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b1-attempt1-exit.json": "807436ca68b35597b86a21267ea01a42ee9c62e83c69861895a37292d02d62b5"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-huginn-3.5b-b2",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/metadata.json": "8e3d790d37502a0b3e6f95259b98648745eef26a56e25653ddef8a6608793473",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/summary.json": "9f6491382cd6645e271a2a05e9ff2add720b3a08e38545ecbbdd34e916fdf9b7",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/complete.json": "85f45e0c637364a4c78370d23730424b95f9c0a74e084629cb9a564f3d5f3ff7",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b2/attempt1/requests.jsonl": "990bbaf0da06031bc606fd8dcf91841ee32b3cacefa1bad469e760b6befb080f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b2-attempt1-exit.json": "5d0dc7ad001c457b854f9bc46b8c06d03c81ad64d08f1d775eae8847f82806c6"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-ouro-2.6b-b2",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/metadata.json": "c7c480c68d7daa5bb9abf649ee57d88326560cd09237a7f4adca15b34c353b90",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/summary.json": "688c283f650b2cb88f46799c81aa16fa213c2120cfbfdb6c0abad31c2ab0edeb",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/complete.json": "e5d9cb88653d35bea36ea57a5c1f4ea6227495cc7a43236ed96afcb9fad994ee",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1/requests.jsonl": "3611d0d53f7c1fca06694589a6cff4b39092889eaf2ffd6fb443f3607c5f2314",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b2-attempt1-exit.json": "a53c4b16cf33a576a792a0385b0372c49cf8402e666db9746d13a73e5b4cc32e"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-huginn-3.5b-b4",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/metadata.json": "4f173dac4dbc2a92023893c3653aa6c1e7c4c887f3bb26d4adde7efba98d0f02",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/summary.json": "5caf4486aa346f43af8c25e855169323d8ac030a721dcacca16838254c456f77",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/complete.json": "be7211ea1181f402aa4994cc8de0bdfe8f56c71c9ab639ea3508fca906ae0f38",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b4/attempt1/requests.jsonl": "38de50a34ad878c5b2c418a0c2395ed5d67d8a9887b8c37d01ce837f49fd73da",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b4-attempt1-exit.json": "a2b55d0f4ea710bd0bc34d6a7d0aea999d2b94104bdee8d3ce78ea893b13b197"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-ouro-2.6b-b4",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/metadata.json": "388cef0a9fdfb38e8e79d597aa289caff208764907157be9d834956653569139",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/summary.json": "6b364abdb480ea978fee48775d602b5eaa4a6a7a95658badea4e11d90d5ae4d4",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/complete.json": "ad2d7ad886707ad0bb3e666a162854f1bd8647fe0241b4544bbadbfbe104978e",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b4/attempt1/requests.jsonl": "2e9fd7e752558000afec24f00e79ff37310babdaeea05ad17b229eac326a2682",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b4-attempt1-exit.json": "5e6c004e73569ec441c21495eb09952a1d45da1223b644fe20d53e310e09a402"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-huginn-3.5b-b8",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/metadata.json": "74829e57c8ed2a736b484a6d48a21fc63d79a80e9d6806abe6cb0f247a0f6e6d",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/summary.json": "b02a1236897c5c3e4d66741f325dd1646977c70ef489c049f79e18afbb4df233",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/complete.json": "c4a99c324eeafdbfc36b153231ee2ac40d1ebb7a89103d0b7cdec99064fdd8f9",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b8/attempt1/requests.jsonl": "4bc7eba404cc36c8dba173800fd5aedd8052ccb9461d8ce25ba8d99558b732f3",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b8-attempt1-exit.json": "aee9a8583b2361e016c55a29a5dd2ee31bfb4877f30163e937dfc78dd74a0840"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-ouro-2.6b-b8",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/metadata.json": "d1f16d840d982008a497709efdf04a321fe4c18a02d99bd2de58420c067a9f0f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/summary.json": "255af6574a3827f7b8e631e9a23478539e00c3204fa2e251653deaf714afaa9f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/complete.json": "e1ae1e15903bf23d306113a81fff864540f89bb851f2c4f697ad655cda89c13b",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b8/attempt1/requests.jsonl": "b5099b2a979218ecc47b062e818b4660395e85cf6e637968d17db6d0fad22b06",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b8-attempt1-exit.json": "15b810c77e4759015ac932bdd45790c59d75d79e76fb2bfc9664fd3ee2aa20d6"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-huginn-3.5b-b16",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/metadata.json": "79e77eb6c05bb8761768ced6a3c67c59b957406bc0bd0e23bd5c2ee66f0c738e",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/summary.json": "5346c69bcda1f84a0723d3c913b0f1f3ef906b2667c67576db1db1739259338a",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/complete.json": "44c27fc51bfced84166ec5cea707a569e2b06bb18935cb10baa1c03c04725a50",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-huginn-3.5b-b16/attempt1/requests.jsonl": "81e33eb493f1a1e459d0c7d1f20722984d1ac0d66a30a8ba02e14c6f0a3fd462",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-huginn-3.5b-b16-attempt1-exit.json": "917b0d7d9fe8ba3b3bdcb53772d94da7a42a5fb128d9e9c84bd7342ecfdcc2b3"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+        "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+        "complete.json": "e0caec736fba5d99ae219d9fcbcb02e06dc0cf6e2fdc58435243bb210402a49a"
+      },
+      "actual_exit_code": 0
+    },
+    {
+      "id": "table2-ouro-2.6b-b16",
+      "artifacts": {
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/metadata.json": "fee37f75d9b11a02f73af272a83f110ded696f3a75cad695c65cb6eeb1280da2",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/summary.json": "2ca7aca675e33382d7ef6f2e1aa05820ff1a417c5f2a5383701575d6c7990c0f",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/complete.json": "8b614d79197167f617a16a580659e2fa17b3e466165c527989bea3d1b5d4b8a0",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b16/attempt1/requests.jsonl": "257b0892a687aa6b830a91a3cd1bc80c26b70818bb60a4cc8789dbd2ef4fb1c6",
+        "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table2-ouro-2.6b-b16-attempt1-exit.json": "8a8d45e8bbd781992b84a9738fa429244aa1e1569805c19a1c38c45ddedbd5a7"
+      },
+      "checkpoint_sha256": {
+        "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+        "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e",
+        "complete.json": "8b5030b8e4f17f79f75f85037d535ed30fa051c659d7f0be7a803895c11a5e2c"
+      },
+      "actual_exit_code": 0
+    }
+  ],
+  "protocol_sha256": "6d06a4e8491ce7a17ead410ba562186e79081f0de3489c0fce299a6ef4d8b149",
+  "source_sha256": "28b7d443522976b0dff5e32e9bda2cb535532010156e546bf7f0237b59bbd5b9",
+  "checked_unix": 1794463778.5613403,
+  "new_gpu_runs": 0,
+  "limitations": [
+    "Ratios use original same-host historical AR/LoopFill measurements; no fresh batch-throughput AR and no drift correction.",
+    "Single timing repeat, shared host, BF16 output differences; not a decoding-equivalence or task-quality validation.",
+    "Max1024 continuous end-to-end throughput includes prefill/scheduling/persistence; separate from max512 decode-only latency."
+  ]
+}

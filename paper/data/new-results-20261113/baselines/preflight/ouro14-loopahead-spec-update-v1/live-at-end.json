@@ -1,0 +1,505 @@
+{
+  "checked_unix": 1794468671.0340183,
+  "controllers": {
+    "logs/packed-dflash-supplement-v1/status.json": {
+      "pid": 153662,
+      "stage": "running",
+      "alive": true,
+      "start_ticks": "45175843",
+      "status": {
+        "stage": "running",
+        "controller_pid": 153662,
+        "updated_unix": 1794468662.4685245,
+        "completed_cells": 7,
+        "expected_cells": 12,
+        "expected_supplement_runs": 24,
+        "running": {
+          "table1-huginn-3.5b-math500-t1-profile": {
+            "job_id": "table1-huginn-3.5b-math500-t1",
+            "stage": "profile",
+            "gpu": 1,
+            "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+            "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+            "argv": [
+              "taskset",
+              "--cpu-list",
+              "4-7",
+              "/tmp/loopfill-dflash-venv/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+              "--plan",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+              "--binding",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-huginn-3.5b-math500-t1-profile.json",
+              "--job",
+              "table1-huginn-3.5b-math500-t1",
+              "--stage",
+              "profile",
+              "--out",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-math500-t1-profile",
+              "--lock-fd",
+              "6"
+            ],
+            "started_unix": 1794464790.935516,
+            "pid": 36405,
+            "start_ticks": "47982722",
+            "supervisor_identity": {
+              "pid": 36404,
+              "state": "R",
+              "start_ticks": "47982716",
+              "argv": [
+                "/opt/conda/bin/python",
+                "-u",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+                "--spec",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-huginn-3.5b-math500-t1-profile-launcher.json.supervisor.json",
+                "--lock-fd",
+                "6"
+              ]
+            },
+            "outcome": "running",
+            "out": "runs/table1-huginn-3.5b-math500-t1-profile"
+          },
+          "table1-huginn-3.5b-mbppplus-t1-profile": {
+            "job_id": "table1-huginn-3.5b-mbppplus-t1",
+            "stage": "profile",
+            "gpu": 2,
+            "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+            "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+            "argv": [
+              "taskset",
+              "--cpu-list",
+              "8-11",
+              "/tmp/loopfill-dflash-venv/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+              "--plan",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+              "--binding",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-huginn-3.5b-mbppplus-t1-profile.json",
+              "--job",
+              "table1-huginn-3.5b-mbppplus-t1",
+              "--stage",
+              "profile",
+              "--out",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-mbppplus-t1-profile",
+              "--lock-fd",
+              "4"
+            ],
+            "started_unix": 1794465585.2401493,
+            "pid": 47265,
+            "start_ticks": "48062153",
+            "supervisor_identity": {
+              "pid": 47264,
+              "state": "R",
+              "start_ticks": "48062146",
+              "argv": [
+                "/opt/conda/bin/python",
+                "-u",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+                "--spec",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-huginn-3.5b-mbppplus-t1-profile-launcher.json.supervisor.json",
+                "--lock-fd",
+                "4"
+              ]
+            },
+            "outcome": "running",
+            "out": "runs/table1-huginn-3.5b-mbppplus-t1-profile"
+          },
+          "table1-ouro-2.6b-mbppplus-t1-profile": {
+            "job_id": "table1-ouro-2.6b-mbppplus-t1",
+            "stage": "profile",
+            "gpu": 4,
+            "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+            "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+            "argv": [
+              "taskset",
+              "--cpu-list",
+              "48-51",
+              "/tmp/loopfill-dflash-venv/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+              "--plan",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+              "--binding",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-ouro-2.6b-mbppplus-t1-profile.json",
+              "--job",
+              "table1-ouro-2.6b-mbppplus-t1",
+              "--stage",
+              "profile",
+              "--out",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-mbppplus-t1-profile",
+              "--lock-fd",
+              "10"
+            ],
+            "started_unix": 1794466213.307159,
+            "pid": 56397,
+            "start_ticks": "48124960",
+            "supervisor_identity": {
+              "pid": 56383,
+              "state": "R",
+              "start_ticks": "48124953",
+              "argv": [
+                "/opt/conda/bin/python",
+                "-u",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+                "--spec",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-ouro-2.6b-mbppplus-t1-profile-launcher.json.supervisor.json",
+                "--lock-fd",
+                "10"
+              ]
+            },
+            "outcome": "running",
+            "out": "runs/table1-ouro-2.6b-mbppplus-t1-profile"
+          },
+          "table1-huginn-3.5b-specbench-t1-profile": {
+            "job_id": "table1-huginn-3.5b-specbench-t1",
+            "stage": "profile",
+            "gpu": 7,
+            "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+            "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+            "argv": [
+              "taskset",
+              "--cpu-list",
+              "60-63",
+              "/tmp/loopfill-dflash-venv/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+              "--plan",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+              "--binding",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-huginn-3.5b-specbench-t1-profile.json",
+              "--job",
+              "table1-huginn-3.5b-specbench-t1",
+              "--stage",
+              "profile",
+              "--out",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-huginn-3.5b-specbench-t1-profile",
+              "--lock-fd",
+              "14"
+            ],
+            "started_unix": 1794466312.2175317,
+            "pid": 57615,
+            "start_ticks": "48134851",
+            "supervisor_identity": {
+              "pid": 57614,
+              "state": "R",
+              "start_ticks": "48134844",
+              "argv": [
+                "/opt/conda/bin/python",
+                "-u",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+                "--spec",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-huginn-3.5b-specbench-t1-profile-launcher.json.supervisor.json",
+                "--lock-fd",
+                "14"
+              ]
+            },
+            "outcome": "running",
+            "out": "runs/table1-huginn-3.5b-specbench-t1-profile"
+          },
+          "table1-ouro-2.6b-specbench-t1-profile": {
+            "job_id": "table1-ouro-2.6b-specbench-t1",
+            "stage": "profile",
+            "gpu": 6,
+            "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+            "supplement_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+            "argv": [
+              "taskset",
+              "--cpu-list",
+              "56-59",
+              "/tmp/loopfill-dflash-venv/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/supplement_packed_dflash.py",
+              "--plan",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/plan.json",
+              "--binding",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/bindings/table1-ouro-2.6b-specbench-t1-profile.json",
+              "--job",
+              "table1-ouro-2.6b-specbench-t1",
+              "--stage",
+              "profile",
+              "--out",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/runs/table1-ouro-2.6b-specbench-t1-profile",
+              "--lock-fd",
+              "8"
+            ],
+            "started_unix": 1794466827.131095,
+            "pid": 63640,
+            "start_ticks": "48186342",
+            "supervisor_identity": {
+              "pid": 63639,
+              "state": "R",
+              "start_ticks": "48186336",
+              "argv": [
+                "/opt/conda/bin/python",
+                "-u",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/source/loop_queue_recovery.py",
+                "--spec",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/packed-dflash-supplement-v1/logs/table1-ouro-2.6b-specbench-t1-profile-launcher.json.supervisor.json",
+                "--lock-fd",
+                "8"
+              ]
+            },
+            "outcome": "running",
+            "out": "runs/table1-ouro-2.6b-specbench-t1-profile"
+          }
+        },
+        "awaiting_timed_measurements": [],
+        "existing_queue_pending": [],
+        "ready_supplements": [],
+        "failures": {}
+      }
+    },
+    "logs/loopahead-ouro14-resume-v1/status.json": {
+      "pid": 105015,
+      "stage": "running",
+      "alive": true,
+      "start_ticks": "45050655",
+      "status": {
+        "stage": "running",
+        "controller_pid": 105015,
+        "updated_unix": 1794467398.2315264,
+        "gpu": 3,
+        "child": {
+          "name": "loopahead-ouro-1.4b-math500-t1-v1",
+          "gpu": 3,
+          "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+          "argv": [
+            "/tmp/loopfill-venv/bin/python",
+            "-u",
+            "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_loopahead.py",
+            "--model",
+            "ouro-1.4b",
+            "--method",
+            "loopahead",
+            "--dataset",
+            "math500",
+            "--temperature",
+            "1",
+            "--checkpoint",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+            "--gpu",
+            "3",
+            "--cpus",
+            "12-15",
+            "--out",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-1.4b-math500-t1-v1",
+            "--admission",
+            "/ossfs/workspace/sz/loopfill/experiments/baselines/configs/loopahead-ouro-1.4b-admission-v1.json"
+          ],
+          "started_unix": 1794467398.1764224,
+          "pid": 71027,
+          "start_ticks": "48243446",
+          "supervisor_identity": {
+            "pid": 71026,
+            "state": "R",
+            "start_ticks": "48243441",
+            "argv": [
+              "/opt/conda/bin/python",
+              "-u",
+              "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+              "--spec",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro-1.4b-math500-t1-v1-launcher.json.supervisor.json",
+              "--lock-fd",
+              "4"
+            ]
+          }
+        },
+        "task": "loopahead-ouro-1.4b-math500-t1-v1"
+      }
+    },
+    "logs/ouro14-packed-evaluation-v1/status.json": {
+      "pid": 510179,
+      "stage": "waiting_for_full_training",
+      "alive": true,
+      "start_ticks": "47623899",
+      "status": {
+        "stage": "waiting_for_full_training",
+        "controller_pid": 510179,
+        "updated_unix": 1794468666.6367333
+      }
+    },
+    "logs/baseline-diagnostics-resume-v1/status.json": {
+      "pid": 33751,
+      "stage": "running",
+      "alive": true,
+      "start_ticks": "47964278",
+      "status": {
+        "stage": "running",
+        "controller_pid": 33751,
+        "updated_unix": 1794468669.820465,
+        "expected_groups": 27,
+        "validated_groups": [
+          "loopahead-huginn-3.5b-gsm8k-v1"
+        ],
+        "running": {
+          "dflash-huginn-3.5b-gsm8k-v1-observed": {
+            "group": "dflash-huginn-3.5b-gsm8k-v1",
+            "step": "dflash-huginn-3.5b-gsm8k-v1-observed",
+            "gpu": 5,
+            "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+            "argv": [
+              "taskset",
+              "--cpu-list",
+              "52-55",
+              "/tmp/loopfill-dflash-venv/bin/python",
+              "-u",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/lock_handoff.py",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_dflash.py",
+              "--ar",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1",
+              "--dflash",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-v1",
+              "--gpu",
+              "5",
+              "--cpus",
+              "52-55",
+              "--out",
+              "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-huginn-3.5b-gsm8k-v1",
+              "--shard",
+              "0",
+              "--shards",
+              "1"
+            ],
+            "started_unix": 1794468002.8188512,
+            "pid": 78201,
+            "start_ticks": "48303911",
+            "supervisor_identity": {
+              "pid": 78199,
+              "state": "R",
+              "start_ticks": "48303904",
+              "argv": [
+                "/opt/conda/bin/python",
+                "-u",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+                "--spec",
+                "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-huginn-3.5b-gsm8k-v1-observed-launcher.json.supervisor.json",
+                "--lock-fd",
+                "4"
+              ]
+            },
+            "outcome": "running"
+          }
+        },
+        "ready": [
+          "dflash-huginn-3.5b-humanevalplus-v1-observed",
+          "dflash-huginn-3.5b-mbppplus-v1-observed",
+          "loopahead-huginn-3.5b-math500-v1-observed",
+          "loopahead-huginn-3.5b-bbh-v1-observed",
+          "loopahead-huginn-3.5b-humanevalplus-v1-observed",
+          "loopahead-huginn-3.5b-mbppplus-v1-observed",
+          "loopahead-huginn-3.5b-specbench-v1-observed",
+          "dflash-ouro-2.6b-gsm8k-v1-observed",
+          "dflash-ouro-2.6b-math500-v1-observed",
+          "dflash-ouro-2.6b-bbh-v1-observed",
+          "dflash-ouro-2.6b-humanevalplus-v1-observed",
+          "dflash-ouro-2.6b-mbppplus-v1-observed",
+          "dflash-ouro-2.6b-specbench-v1-observed",
+          "loopahead-ouro-2.6b-gsm8k-v1-observed",
+          "loopahead-ouro-2.6b-math500-v1-observed",
+          "loopahead-ouro-2.6b-bbh-v1-observed",
+          "loopahead-ouro-2.6b-humanevalplus-v1-observed",
+          "loopahead-ouro-2.6b-mbppplus-v1-observed",
+          "loopahead-ouro-2.6b-specbench-v1-observed",
+          "loopahead-ouro-2.6b-paper-humaneval164-v1-observed",
+          "development-narrow",
+          "development-wide",
+          "table1-huginn-3.5b-bbh-t0-greedy",
+          "table1-huginn-3.5b-math500-t0-greedy",
+          "table1-huginn-3.5b-specbench-t0-greedy"
+        ],
+        "priority_pending": [],
+        "failures": {}
+      }
+    },
+    "logs/appendix-loopahead-diagnostics-v1/status.json": {
+      "pid": 45833,
+      "stage": "waiting_for_measurement_priority",
+      "alive": true,
+      "start_ticks": "48050473",
+      "status": {
+        "stage": "waiting_for_measurement_priority",
+        "controller_pid": 45833,
+        "updated_unix": 1794468670.1905963,
+        "expected_groups": 6,
+        "validated_groups": [],
+        "running": {},
+        "ready": [
+          "loopahead-ouro-1.4b-gsm8k-v1-observed",
+          "loopahead-ouro-1.4b-math500-v1-observed",
+          "loopahead-ouro-1.4b-bbh-v1-observed",
+          "loopahead-ouro-1.4b-humanevalplus-v1-observed",
+          "loopahead-ouro-1.4b-mbppplus-v1-observed",
+          "loopahead-ouro-1.4b-specbench-v1-observed"
+        ],
+        "priority_pending": [],
+        "failures": {}
+      }
+    },
+    "logs/appendix-dflash-diagnostics-v1/waiter-status.json": {
+      "pid": 55011,
+      "stage": "waiting_for_existing_training_and_measurements",
+      "alive": true,
+      "start_ticks": "48112626",
+      "status": {
+        "stage": "waiting_for_existing_training_and_measurements",
+        "controller_pid": 55011,
+        "updated_unix": 1794468657.2920628,
+        "evaluator": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1",
+        "expected_groups": 6,
+        "gpu_workers": 0
+      }
+    }
+  },
+  "portable_training": {
+    "stage": "teachers",
+    "controller_pid": 497107,
+    "updated_unix": 1794468661.2002597,
+    "gpu": 0,
+    "worker": {
+      "stage": "teachers",
+      "pid": 10995,
+      "argv": [
+        "taskset",
+        "--cpu-list",
+        "0-3",
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/source/teacher/experiments/baselines/generate_teachers.py",
+        "--model",
+        "ouro-1.4b",
+        "--manifest",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/inputs/dflash-train.jsonl",
+        "--shard",
+        "0",
+        "--shards",
+        "1",
+        "--max-batch",
+        "32",
+        "--kv-budget-gib",
+        "70",
+        "--gpu",
+        "0",
+        "--cpus",
+        "0-3",
+        "--out",
+        "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0"
+      ],
+      "gpu": 0,
+      "started_unix": 1794428119.7968464,
+      "log": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/logs/teachers.log"
+    },
+    "progress": {
+      "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/teachers/shard0/progress.json": {
+        "completed_requests": 48256,
+        "planned_requests": 50000,
+        "last_batch": 1507,
+        "last_batch_wall_s": 44.18695141375065,
+        "last_batch_size": 32,
+        "updated_unix": 1794468659.210879
+      }
+    }
+  }
+}

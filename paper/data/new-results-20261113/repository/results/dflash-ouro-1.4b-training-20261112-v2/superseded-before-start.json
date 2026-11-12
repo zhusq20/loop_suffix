@@ -1,0 +1,30 @@
+{
+  "stopped_unix": 1794425125.1879692,
+  "pid": 494976,
+  "previous_status": {
+    "stage": "waiting_for_existing_queues",
+    "controller_pid": 494976,
+    "updated_unix": 1794425111.3665125,
+    "candidate_gpus": [
+      5,
+      0,
+      7,
+      1
+    ],
+    "reasons": {
+      "5": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation",
+      "0": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation",
+      "7": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation",
+      "1": "waiting_for_six_migrated_LoopAhead_cells_and_reconciliation"
+    },
+    "planned_stages": [
+      "teachers",
+      "smoke",
+      "train",
+      "audit"
+    ]
+  },
+  "reason": "User explicitly selected the 163.6M drafter instead of 78.9M.",
+  "teacher_or_training_started": false,
+  "successor": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3"
+}

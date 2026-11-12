@@ -1,0 +1,31 @@
+{
+  "pid": 250664,
+  "argv": [
+    "python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+    "--execute",
+    "--resume",
+    "--retry-failed",
+    "loopahead-ouro-2.6b-gsm8k-t0"
+  ],
+  "started_unix": 1794323876.8908968,
+  "excluded_attempt": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/contended-runs/loopahead-ouro-2.6b-gsm8k-t0-v1-weather-training-v1",
+  "preserved_workers": {
+    "train-ouro-2.6b": {
+      "pid": 210022,
+      "gpus": [
+        2,
+        4
+      ],
+      "started_unix": 1794320971.3908956
+    },
+    "check-huginn-lad": {
+      "pid": 245906,
+      "gpus": [
+        1
+      ],
+      "started_unix": 1794323334.8619328
+    }
+  }
+}

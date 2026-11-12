@@ -1,0 +1,65 @@
+{
+  "status": "live_next_SpecBench_AR_observed_not_complete",
+  "checked_unix": 1794418804.6871603,
+  "pid": 401821,
+  "worker_pid": 401812,
+  "start_ticks": "43364204",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--method",
+    "ar",
+    "--dataset",
+    "specbench",
+    "--temperature",
+    "0",
+    "--gpu",
+    "4",
+    "--cpus",
+    "48-51",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1"
+  ],
+  "launcher_sha256": "42003a2e8005c78e6ddd5f8f2d01804797804f03ab5ab4b508f40aef1078cf5a",
+  "job_sha256": "35c453c5232f626fbb5946ddc1cb2b32e008d0968935f50383a5f2ddf437065e",
+  "metadata_sha256": "bdc8e92ddb5cd14679c5c78b42a59d87e7212391914ef852bd11c71064e39577",
+  "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845",
+  "native_driver": "/usr/lib64/libcuda.so.570.148.08",
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "cpu_affinity": [
+    48,
+    49,
+    50,
+    51
+  ],
+  "gpu_policy": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794398454.1069522,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": []
+  },
+  "observed_requests": 2,
+  "observed_prefix_sha256": "12cd6a7780964e7c1ecf60844b4e2665059543f775c740b58fd131328f63be0f",
+  "limitations": [
+    "Only the observed prefix and actual runtime/source identity are checked here.",
+    "SpecBench AR, DFlash timing and profiling remain incomplete.",
+    "No CUDA-acquisition attempt or retry count is inferred."
+  ]
+}

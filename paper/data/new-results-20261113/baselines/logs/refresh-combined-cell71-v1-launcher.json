@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/refresh_combined_results.py",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/combined-results-cell71-v1"
+  ],
+  "pid": 190835,
+  "started_unix": 1794520996.3808305,
+  "source_sha256": "acc574447a7462a69112df3a06ac75c6f0a831182d9cfa0af97563b833186d92"
+}

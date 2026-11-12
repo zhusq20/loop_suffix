@@ -1,0 +1,140 @@
+{
+  "model": "huginn-3.5b",
+  "revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "seed": 42,
+  "epochs": 1,
+  "world_size": 1,
+  "micro_batch": 1,
+  "accumulation": 1,
+  "global_batch": 1,
+  "examples": 32,
+  "excluded_under_32_tokens": [],
+  "sources": [
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/loopahead-train/huginn-3.5b/shard0/teachers.jsonl",
+      "sha256": "7d761de35bf772c549e0e450aab4e596e43b64737136f2cb171cbf1839c47c28",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "7bfb0f750708ad9b09d0f700f913eb849eba20984d3c6f645352f0933de4ae34",
+        "batch_plan_sha256": "54c9a7cc6f9c17c795dfd54af18da5110cd2a09013916c78f0af4db846e352ec",
+        "shards": 8,
+        "shard": 0,
+        "max_batch": 16,
+        "kv_budget_gib": 32,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "raw",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "identical_prompt_length",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    },
+    {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/loopahead-train/huginn-3.5b/shard1/teachers.jsonl",
+      "sha256": "e57aa59d2e40596b139cb9c0817fbf90c3c1398f4a9ea5196a463aca1f22300d",
+      "metadata": {
+        "model": "huginn-3.5b",
+        "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+        "manifest_sha256": "7bfb0f750708ad9b09d0f700f913eb849eba20984d3c6f645352f0933de4ae34",
+        "batch_plan_sha256": "54c9a7cc6f9c17c795dfd54af18da5110cd2a09013916c78f0af4db846e352ec",
+        "shards": 8,
+        "shard": 1,
+        "max_batch": 16,
+        "kv_budget_gib": 32,
+        "max_new_tokens": 512,
+        "precision": "bfloat16",
+        "full_depth": 32,
+        "seed": 0,
+        "noise_capacity": 3072,
+        "prompt_format": "raw",
+        "stop_audit": {
+          "sources": {
+            "tokenizer": [
+              65505
+            ],
+            "generation_config": [
+              65505,
+              65508
+            ],
+            "model_config": [
+              65505
+            ]
+          },
+          "invalid_ids": {
+            "tokenizer": [],
+            "generation_config": [],
+            "model_config": []
+          },
+          "selected_source": "model_config",
+          "stop_ids": [
+            65505
+          ],
+          "conflict": true,
+          "reason": "Preserve historical benchmark stopping policy."
+        },
+        "batching": "identical_prompt_length",
+        "torch": "2.6.0+cu126",
+        "transformers": "4.57.1"
+      }
+    }
+  ],
+  "max_seq": 3072,
+  "num_anchors": 512,
+  "block_size": 16,
+  "loss_decay_gamma": 7.0,
+  "lr": 0.0006,
+  "warmup_ratio": 0.04,
+  "max_grad_norm": 1.0,
+  "weight_decay": 0.0,
+  "adam_betas": [
+    0.9,
+    0.999
+  ],
+  "total_updates": 1,
+  "target_features": [
+    1,
+    126,
+    128,
+    130,
+    131
+  ],
+  "mask_token_id": 65513,
+  "draft_parameters": 2116288320,
+  "smoke": true,
+  "torch": "2.9.1+cu128",
+  "transformers": "4.57.1",
+  "gradient_checkpointing": true,
+  "distributed": "DDP",
+  "final_global_batch": "deterministically pad from shuffled epoch start",
+  "target_generation_software": "recorded in teacher sources; target features recomputed in training environment",
+  "source_sha256": "57b95c5cc340960e946a3b4f0baee6e968a2f2d616c4a1ecce0ca19ec01afd5f"
+}

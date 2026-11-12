@@ -1,0 +1,429 @@
+{
+  "status": "passed",
+  "completed": 63,
+  "expected": 72,
+  "previous_rows": 62,
+  "all_previous_rows_unchanged": true,
+  "added": [
+    {
+      "method": "dflash",
+      "model": "ouro-1.4b",
+      "benchmark": "bbh",
+      "temperature": "0",
+      "eta": "3.50134696635227",
+      "gamma": "3.9827457424559305",
+      "method_tok_s": "42.23439320354548",
+      "ar_tok_s": "12.062327329857741",
+      "drafter_time_frac": "0.03488286155956413",
+      "match_rate": "0.8111111111111111",
+      "engine": "official_dflash_with_packed_loop_target",
+      "status": "complete_with_declared_limitations",
+      "notes": "Official frozen DFlash drafter/decoder with our packed full-loop target adapter; fresh own-stack AR; separate full-task profile matches every token and verification; numerical diagnostics not all completed. ",
+      "eta_latency": "3.5300427639610157",
+      "eta_throughput": "3.50134696635227",
+      "aligned_token_match_rate": "0.8963450507427563",
+      "method_decode_tokens": "53321",
+      "ar_decode_tokens": "53758",
+      "method_decode_s": "1262.5018605813384",
+      "ar_decode_s": "4456.685557432473",
+      "ar_provenance": "new_same_packed_stack_AR",
+      "ar_first_completed_unix": "1794501135.557461",
+      "ar_last_completed_unix": "1794505589.9096956",
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-bbh-t0-ar",
+      "target_backend": "packed_full_loop",
+      "method_exit_evidence": "actual_exit0",
+      "profile_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-bbh-t0-profile",
+      "numerical_diagnostics": "not_all_completed"
+    }
+  ],
+  "new_cell_evidence": {
+    "dflash/ouro-1.4b/bbh/0": {
+      "origin": "verified_packed_supplement",
+      "agreement": {
+        "match_rate": 0.8111111111111111,
+        "aligned_token_match_rate": 0.8963450507427563,
+        "exact_sequences": 219,
+        "requests": 270,
+        "first_divergences": [
+          {
+            "source_id": "bbh/logical_deduction_seven_objects/142",
+            "position": 129,
+            "method_length": 370,
+            "ar_length": 376
+          },
+          {
+            "source_id": "bbh/dyck_languages/66",
+            "position": 300,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/boolean_expressions/123",
+            "position": 9,
+            "method_length": 157,
+            "ar_length": 180
+          },
+          {
+            "source_id": "bbh/navigate/209",
+            "position": 142,
+            "method_length": 182,
+            "ar_length": 181
+          },
+          {
+            "source_id": "bbh/snarks/98",
+            "position": 56,
+            "method_length": 147,
+            "ar_length": 147
+          },
+          {
+            "source_id": "bbh/causal_judgement/123",
+            "position": 84,
+            "method_length": 124,
+            "ar_length": 123
+          },
+          {
+            "source_id": "bbh/word_sorting/86",
+            "position": 255,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/causal_judgement/146",
+            "position": 50,
+            "method_length": 79,
+            "ar_length": 159
+          },
+          {
+            "source_id": "bbh/multistep_arithmetic_two/116",
+            "position": 207,
+            "method_length": 248,
+            "ar_length": 256
+          },
+          {
+            "source_id": "bbh/boolean_expressions/211",
+            "position": 9,
+            "method_length": 224,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/movie_recommendation/147",
+            "position": 53,
+            "method_length": 135,
+            "ar_length": 133
+          },
+          {
+            "source_id": "bbh/movie_recommendation/215",
+            "position": 138,
+            "method_length": 163,
+            "ar_length": 148
+          },
+          {
+            "source_id": "bbh/word_sorting/135",
+            "position": 273,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/movie_recommendation/96",
+            "position": 8,
+            "method_length": 137,
+            "ar_length": 137
+          },
+          {
+            "source_id": "bbh/logical_deduction_seven_objects/203",
+            "position": 149,
+            "method_length": 378,
+            "ar_length": 376
+          },
+          {
+            "source_id": "bbh/snarks/82",
+            "position": 18,
+            "method_length": 124,
+            "ar_length": 124
+          },
+          {
+            "source_id": "bbh/multistep_arithmetic_two/231",
+            "position": 178,
+            "method_length": 289,
+            "ar_length": 301
+          },
+          {
+            "source_id": "bbh/movie_recommendation/54",
+            "position": 95,
+            "method_length": 151,
+            "ar_length": 135
+          },
+          {
+            "source_id": "bbh/salient_translation_error_detection/225",
+            "position": 204,
+            "method_length": 232,
+            "ar_length": 232
+          },
+          {
+            "source_id": "bbh/logical_deduction_five_objects/165",
+            "position": 83,
+            "method_length": 186,
+            "ar_length": 187
+          },
+          {
+            "source_id": "bbh/navigate/80",
+            "position": 172,
+            "method_length": 214,
+            "ar_length": 215
+          },
+          {
+            "source_id": "bbh/causal_judgement/16",
+            "position": 135,
+            "method_length": 152,
+            "ar_length": 154
+          },
+          {
+            "source_id": "bbh/geometric_shapes/134",
+            "position": 502,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/snarks/45",
+            "position": 46,
+            "method_length": 159,
+            "ar_length": 181
+          },
+          {
+            "source_id": "bbh/dyck_languages/184",
+            "position": 256,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/logical_deduction_seven_objects/93",
+            "position": 70,
+            "method_length": 248,
+            "ar_length": 248
+          },
+          {
+            "source_id": "bbh/logical_deduction_five_objects/68",
+            "position": 99,
+            "method_length": 176,
+            "ar_length": 174
+          },
+          {
+            "source_id": "bbh/penguins_in_a_table/140",
+            "position": 94,
+            "method_length": 132,
+            "ar_length": 137
+          },
+          {
+            "source_id": "bbh/dyck_languages/35",
+            "position": 332,
+            "method_length": 382,
+            "ar_length": 402
+          },
+          {
+            "source_id": "bbh/disambiguation_qa/151",
+            "position": 112,
+            "method_length": 204,
+            "ar_length": 194
+          },
+          {
+            "source_id": "bbh/multistep_arithmetic_two/172",
+            "position": 1,
+            "method_length": 287,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/formal_fallacies/92",
+            "position": 498,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/disambiguation_qa/157",
+            "position": 157,
+            "method_length": 200,
+            "ar_length": 199
+          },
+          {
+            "source_id": "bbh/boolean_expressions/243",
+            "position": 9,
+            "method_length": 139,
+            "ar_length": 179
+          },
+          {
+            "source_id": "bbh/reasoning_about_colored_objects/60",
+            "position": 83,
+            "method_length": 141,
+            "ar_length": 131
+          },
+          {
+            "source_id": "bbh/sports_understanding/248",
+            "position": 7,
+            "method_length": 28,
+            "ar_length": 30
+          },
+          {
+            "source_id": "bbh/disambiguation_qa/194",
+            "position": 41,
+            "method_length": 201,
+            "ar_length": 202
+          },
+          {
+            "source_id": "bbh/reasoning_about_colored_objects/147",
+            "position": 73,
+            "method_length": 111,
+            "ar_length": 113
+          },
+          {
+            "source_id": "bbh/formal_fallacies/11",
+            "position": 17,
+            "method_length": 309,
+            "ar_length": 359
+          },
+          {
+            "source_id": "bbh/snarks/80",
+            "position": 23,
+            "method_length": 140,
+            "ar_length": 145
+          },
+          {
+            "source_id": "bbh/multistep_arithmetic_two/17",
+            "position": 1,
+            "method_length": 275,
+            "ar_length": 276
+          },
+          {
+            "source_id": "bbh/dyck_languages/226",
+            "position": 480,
+            "method_length": 512,
+            "ar_length": 512
+          },
+          {
+            "source_id": "bbh/snarks/92",
+            "position": 41,
+            "method_length": 198,
+            "ar_length": 182
+          },
+          {
+            "source_id": "bbh/ruin_names/11",
+            "position": 120,
+            "method_length": 191,
+            "ar_length": 195
+          },
+          {
+            "source_id": "bbh/movie_recommendation/99",
+            "position": 63,
+            "method_length": 140,
+            "ar_length": 138
+          },
+          {
+            "source_id": "bbh/ruin_names/162",
+            "position": 161,
+            "method_length": 207,
+            "ar_length": 196
+          },
+          {
+            "source_id": "bbh/causal_judgement/98",
+            "position": 69,
+            "method_length": 117,
+            "ar_length": 108
+          },
+          {
+            "source_id": "bbh/geometric_shapes/115",
+            "position": 282,
+            "method_length": 512,
+            "ar_length": 310
+          },
+          {
+            "source_id": "bbh/disambiguation_qa/19",
+            "position": 128,
+            "method_length": 220,
+            "ar_length": 223
+          },
+          {
+            "source_id": "bbh/reasoning_about_colored_objects/57",
+            "position": 200,
+            "method_length": 297,
+            "ar_length": 233
+          },
+          {
+            "source_id": "bbh/word_sorting/33",
+            "position": 278,
+            "method_length": 512,
+            "ar_length": 512
+          }
+        ]
+      },
+      "sources": {
+        "method": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t0/attempt1",
+          "sha256": {
+            "metadata.json": "045014481d8ef07f03c464aff56db12952394fa4b14a3d9045a5909ac9df3b7d",
+            "complete.json": "7544193b6fe080f67c779345230e9f0ce8cb976f11f0b202cff9922fefda1227",
+            "requests.jsonl": "4db7597e0a42ff0a830298fc38e416b9d9a30cd2c445d94e4b3e259a97f9dd87",
+            "summary.json": "690be18f30ad0a9cb5ea6f46b9c1fbc023c025b26fb9b5a18cfced0e23267729"
+          }
+        },
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-bbh-t0-ar",
+          "sha256": {
+            "metadata.json": "d5b89f4b9ffce6b3274fb6485525f854f01080197dece72f09aa36b9bc750e8c",
+            "complete.json": "dd150d1d5edf2b1a275944412419e181be258a82e07516d17cfa53b519af6443",
+            "requests.jsonl": "da86e5914ec8e8fe438165aa1cfb00e66bc8bd7c55d329e63d33e8c412f75ff7",
+            "summary.json": "388356c455249ad81c5b79b5a22bede52ff3fdd5a7679466d31b2c4122889c63"
+          }
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-bbh-t0-profile",
+          "sha256": {
+            "metadata.json": "8ef1955fb214bf31a06ef9958cf0c2f192739b99ae7082d3cfaf4ddaccd175ba",
+            "complete.json": "16d0898ed11f8b665212e7ba283f7c4ce5c7845605c017d1ddfe7e91c9dd5268",
+            "requests.jsonl": "eb8975c8959802866c4af7fc1bcc850f27ed75b5dbe6ffcdbdd96972cddef14c",
+            "summary.json": "9cc8d5e0d6daaef2a5c1b129b8c68eb3361a49edf96c6e7aa61eec3d60405a5e"
+          }
+        }
+      },
+      "supplement_exits": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t0-ar-exit.json",
+          "sha256": "76e20ca583996ea32d50deba2ce6a12969c998bc5856e180955e2edf54bad68d",
+          "exit_code": 0
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-bbh-t0-profile-exit.json",
+          "sha256": "9d26716c7841aa81deae60a60d9625b5912258f6638976fd303546be94105627",
+          "exit_code": 0
+        }
+      },
+      "original_timed_exit": {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-bbh-t0-attempt1-exit.json",
+        "sha256": "e9845d811853b85c58869514331e3f31d82c5a7754fefd08c409f15cb5f1c3a6",
+        "actual_exit_code": 0
+      },
+      "training_audit": {
+        "path": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/checks/training-audit.json",
+        "sha256": "2f7f44b57f54e702bcd803f0e7417718590efa194bc428796bd24f33bb17e438",
+        "checkpoint": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/training/checkpoint-009108"
+      }
+    }
+  },
+  "collector_exits": {
+    "combined": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/combined-results-cell63-v1/combined-exit.json",
+      "sha256": "3e426b2fbf154167101c40b8dac1f487496acc0c9b8b23fc5ef6649e60a3ff81",
+      "exit_code": 0
+    }
+  },
+  "prior_csv_sha256": "af26112c3454124c098f641c64fb10a98d8af5e44382fe727cf2833d3a747333",
+  "results_sha256": "ea01b18cf03a91516a3b2df66a1bebe52ea87055844456ce727a65f85419e8d7",
+  "evidence_sha256": "dd6ed2c21e13c55c3b63ddaeb03eb43015f17e47ad04d160e6a4bce4c8956d03",
+  "source_sha256": {
+    "refresh_combined_results.py": "acc574447a7462a69112df3a06ac75c6f0a831182d9cfa0af97563b833186d92",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "collect_combined_results.py": "568f2c1c6fbd88db82447679ee17346f96992ccde9b91c08f94b3e8b2c5ec55a"
+  },
+  "new_gpu_measurements": 0,
+  "checked_unix": 1794514999.6842158,
+  "limitation": "Measurement collection only. Numerical checks and unresolved original exit statuses retain their declared scope."
+}

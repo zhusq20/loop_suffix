@@ -1,0 +1,149 @@
+{
+  "nemotron_fallback": "V2 access returned401/GatedRepoError; use public official V1, not a mirror",
+  "shard_selection": "lowest SHA256(loopfill-baselines-42:filename), per domain",
+  "tasks": [
+    {
+      "repo": "sahil2801/CodeAlpaca-20k",
+      "revision": "152bb5e9a29651266b018106053980070a0521a1",
+      "filename": "code_alpaca_20k.json",
+      "expected_bytes": 8057896
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "algebra/train-00000-of-00001.parquet",
+      "expected_bytes": 505186
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "counting_and_probability/train-00000-of-00001.parquet",
+      "expected_bytes": 329354
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "geometry/train-00000-of-00001.parquet",
+      "expected_bytes": 549388
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "intermediate_algebra/train-00000-of-00001.parquet",
+      "expected_bytes": 575154
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "number_theory/train-00000-of-00001.parquet",
+      "expected_bytes": 308653
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "prealgebra/train-00000-of-00001.parquet",
+      "expected_bytes": 383626
+    },
+    {
+      "repo": "EleutherAI/hendrycks_math",
+      "revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "filename": "precalculus/train-00000-of-00001.parquet",
+      "expected_bytes": 353745
+    },
+    {
+      "repo": "HuggingFaceH4/ultrachat_200k",
+      "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+      "filename": "data/train_sft-00000-of-00003-a3ecf92756993583.parquet",
+      "expected_bytes": 243999189
+    },
+    {
+      "repo": "HuggingFaceH4/ultrachat_200k",
+      "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+      "filename": "data/train_sft-00001-of-00003-0a1804bcb6ae68c6.parquet",
+      "expected_bytes": 243897199
+    },
+    {
+      "repo": "HuggingFaceH4/ultrachat_200k",
+      "revision": "8049631c405ae6576f93f445c6b8166f76f5505a",
+      "filename": "data/train_sft-00002-of-00003-ee46ed25cfae92c6.parquet",
+      "expected_bytes": 244131731
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/math-00006-of-00159.parquet",
+      "expected_bytes": 210026193,
+      "domain": "math"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/math-00102-of-00159.parquet",
+      "expected_bytes": 234000070,
+      "domain": "math"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/math-00132-of-00159.parquet",
+      "expected_bytes": 247296816,
+      "domain": "math"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/math-00077-of-00159.parquet",
+      "expected_bytes": 261310559,
+      "domain": "math"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/code-00051-of-00183.parquet",
+      "expected_bytes": 165541903,
+      "domain": "code"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/code-00127-of-00183.parquet",
+      "expected_bytes": 189814865,
+      "domain": "code"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/code-00038-of-00183.parquet",
+      "expected_bytes": 179776257,
+      "domain": "code"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/code-00057-of-00183.parquet",
+      "expected_bytes": 229799887,
+      "domain": "code"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/chat-00000-of-00008.parquet",
+      "expected_bytes": 149037549,
+      "domain": "chat"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/chat-00003-of-00008.parquet",
+      "expected_bytes": 150023239,
+      "domain": "chat"
+    },
+    {
+      "repo": "nvidia/Nemotron-Post-Training-Dataset-v1",
+      "revision": "74e23eb6f830fef4a9e96a92f6f6262214cbb9a8",
+      "filename": "data/stem-00158-of-00660.parquet",
+      "expected_bytes": 284240063,
+      "domain": "stem"
+    }
+  ]
+}

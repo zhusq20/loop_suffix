@@ -1,0 +1,46 @@
+{
+  "name": "teacher-loopahead-dev-ouro-1.4b-shard0-resume-v1",
+  "gpu": 3,
+  "resume_plan": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-ouro14-resume-v1/plan.json",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/generate_teachers.py",
+    "--model",
+    "ouro-1.4b",
+    "--gpu",
+    "3",
+    "--cpus",
+    "12-15",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/loopahead-dev/ouro-1.4b/shard0",
+    "--manifest",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/loopahead-dev.jsonl",
+    "--shard",
+    "0",
+    "--shards",
+    "1",
+    "--max-batch",
+    "32",
+    "--kv-budget-gib",
+    "70"
+  ],
+  "started_unix": 1794447083.1632438,
+  "pid": 348983,
+  "start_ticks": "46211945",
+  "supervisor_identity": {
+    "pid": 348981,
+    "state": "R",
+    "start_ticks": "46211939",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/loop_suffix/scripts/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/teacher-loopahead-dev-ouro-1.4b-shard0-resume-v1-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  }
+}

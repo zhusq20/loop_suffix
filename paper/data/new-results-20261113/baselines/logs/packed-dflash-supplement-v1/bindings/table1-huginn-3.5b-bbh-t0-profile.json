@@ -1,0 +1,33 @@
+{
+  "job": {
+    "id": "table1-huginn-3.5b-bbh-t0",
+    "kind": "latency",
+    "model": "huginn-3.5b",
+    "dataset": "bbh",
+    "temperature": 0,
+    "batch": 1,
+    "max_seq": 3072,
+    "max_new_tokens": 512,
+    "count": 270,
+    "inputs": "inputs/huginn-3.5b-bbh.jsonl",
+    "inputs_sha256": "a512a67a494bc727a061f6b8b42bb6a0e9b27ff2dfc14eb009510858f02833d9",
+    "original_inputs_sha256": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373"
+  },
+  "stage": "profile",
+  "timed": {
+    "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-huginn-3.5b-bbh-t0/attempt1",
+    "hashes": {
+      "metadata.json": "d9d219dc6843ad9d05ec06db44205a737e0714dd2b1e510c16546065b53933c1",
+      "complete.json": "e2cdd303ee2092117cc0381fb7b8ab43d7522769578eedf184f800c79086e905",
+      "requests.jsonl": "945aac3441ab210d2ee15a943c761123ac7420bb53781849ef1282dff8d2918e",
+      "summary.json": "8ef35c41e1195212d97495be830d7aa3cfa258fc713e5062a83714a75f3929bb"
+    },
+    "exit_evidence": {
+      "path": "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/logs/table1-huginn-3.5b-bbh-t0-attempt1-exit.json",
+      "sha256": "08647d989ebf6a2315fea54b3cb8d70a06076ad96cd3f3b45f2afb55bdd23474",
+      "actual_exit_code": 0
+    }
+  },
+  "plan_sha256": "0e398011930f446630667e45cdcac5ab15b7ef6f5af2d813d9defbe46927340d",
+  "created_unix": 1794458765.752674
+}

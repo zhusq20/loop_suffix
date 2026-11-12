@@ -1,0 +1,61 @@
+{
+  "status": "completed_measurements_reused_profile_running",
+  "checked_unix": 1794366596.3511589,
+  "reused_stages": [
+    {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+      "requests": 378,
+      "journal_sha256": "e046de04323928dda5028242192d7bd64fd9baea5e1481a02b0413770611ec60",
+      "identical_to_committed_completed_measurement": true,
+      "reused_unix": 1794366491.874728
+    },
+    {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+      "requests": 378,
+      "journal_sha256": "2440351e5519929e25a5ea94319d08352d79750f05daad165e61e2c79a76ec9c",
+      "identical_to_committed_completed_measurement": true,
+      "reused_unix": 1794366492.6020777
+    }
+  ],
+  "profile_pid": 264404,
+  "profile_start_ticks": 38152892,
+  "profile_actual_argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "dflash",
+    "--dataset",
+    "mbppplus",
+    "--temperature",
+    "0",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1",
+    "--checkpoint",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+    "--profile"
+  ],
+  "cuda_acquisition": {
+    "gpu": 2,
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "pid": 264404,
+    "started_unix": 1794366494.2062676,
+    "acquired_unix": 1794366495.1324549,
+    "attempts": 1,
+    "cuda_busy_errors": 0,
+    "timing_scope": "startup only; outside benchmark decode"
+  },
+  "actual_gpu_context_verified": true,
+  "profile_complete": false,
+  "prior_failed_profile_preserved": "logs/gpu2-eval-startup-recovery-v1/failed-attempts",
+  "limitations": [
+    "This verifies startup and reuse, not completion of the profile or formal cell.",
+    "CUDA acquisition succeeded on its first attempt; no live contention retry was exercised."
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "gpu": 0,
+    "replaced_idle_supervisor": 25850,
+    "new_dflash_supervisor": 28958,
+    "extra_lad_supervisor": 28959,
+    "extra_argv": [
+      "python",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/continue-huginn-loopahead.py",
+      "--gpu",
+      "0",
+      "--cpus",
+      "0-3",
+      "--shards",
+      "4",
+      "--wait-for",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard5/complete.json"
+    ],
+    "old_plan": {
+      "gpu": 0,
+      "cpus": "0-3",
+      "dependencies": [
+        "features/loopahead-confirmation/huginn-3.5b/shard5/complete.json"
+      ],
+      "jobs": [
+        {
+          "model": "huginn-3.5b",
+          "shard": 6
+        }
+      ]
+    },
+    "new_plan": {
+      "gpu": 0,
+      "cpus": "0-3",
+      "dependencies": [
+        "features/loopahead-confirmation/huginn-3.5b/shard4/complete.json"
+      ],
+      "jobs": [
+        {
+          "model": "huginn-3.5b",
+          "shard": 6
+        }
+      ]
+    },
+    "changed_unix": 1794303088.2276354
+  },
+  {
+    "gpu": 7,
+    "replaced_idle_supervisor": 25855,
+    "new_dflash_supervisor": 28962,
+    "extra_lad_supervisor": 28965,
+    "extra_argv": [
+      "python",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/continue-huginn-loopahead.py",
+      "--gpu",
+      "7",
+      "--cpus",
+      "60-63",
+      "--shards",
+      "7",
+      "--wait-for",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard6/complete.json"
+    ],
+    "old_plan": {
+      "gpu": 7,
+      "cpus": "60-63",
+      "dependencies": [
+        "features/loopahead-confirmation/huginn-3.5b/shard6/complete.json"
+      ],
+      "jobs": [
+        {
+          "model": "huginn-3.5b",
+          "shard": 7
+        }
+      ]
+    },
+    "new_plan": {
+      "gpu": 7,
+      "cpus": "60-63",
+      "dependencies": [
+        "features/loopahead-confirmation/huginn-3.5b/shard7/complete.json"
+      ],
+      "jobs": [
+        {
+          "model": "huginn-3.5b",
+          "shard": 7
+        }
+      ]
+    },
+    "changed_unix": 1794303088.3259022
+  }
+]

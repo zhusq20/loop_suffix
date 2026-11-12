@@ -1,0 +1,195 @@
+{
+  "reason": "User stopped DFlash because its code version is outdated; switch priority to LoopAhead Spec-Bench throughput B=1,2,4,8,16.",
+  "time_unix": 1794419035.8005106,
+  "processes": [
+    {
+      "pid": 62126,
+      "argv": [
+        "/tmp/loopfill-specforge-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_training_audits.py",
+        "--execute"
+      ],
+      "start_ticks": "36908693",
+      "pgid": 62126
+    },
+    {
+      "pid": 174369,
+      "argv": [
+        "python",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-huginn-3.5b-math500-t0.json"
+      ],
+      "start_ticks": "41348731",
+      "pgid": 174369
+    },
+    {
+      "pid": 174370,
+      "argv": [
+        "python",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-huginn-3.5b-math500-t1.json"
+      ],
+      "start_ticks": "41348738",
+      "pgid": 174370
+    },
+    {
+      "pid": 174380,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "ar",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "0",
+        "--gpu",
+        "3",
+        "--cpus",
+        "12-15",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-math500-t0-ar-v1"
+      ],
+      "start_ticks": "41348834",
+      "pgid": 174369
+    },
+    {
+      "pid": 174381,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "ar",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "1",
+        "--gpu",
+        "6",
+        "--cpus",
+        "56-59",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-math500-t1-ar-v1"
+      ],
+      "start_ticks": "41348835",
+      "pgid": 174370
+    },
+    {
+      "pid": 252990,
+      "argv": [
+        "python",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-huginn-3.5b-bbh-t0.json"
+      ],
+      "start_ticks": "42049173",
+      "pgid": 252990
+    },
+    {
+      "pid": 401558,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "bbh",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-bbh-t0-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+        "--profile"
+      ],
+      "start_ticks": "43362180",
+      "pgid": 252990
+    },
+    {
+      "pid": 401812,
+      "argv": [
+        "python",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--worker",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/formal-controller-v1/dflash-huginn-3.5b-specbench-t0.json"
+      ],
+      "start_ticks": "43364106",
+      "pgid": 401812
+    },
+    {
+      "pid": 401821,
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "ar",
+        "--dataset",
+        "specbench",
+        "--temperature",
+        "0",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-specbench-t0-ar-v1"
+      ],
+      "start_ticks": "43364204",
+      "pgid": 401812
+    },
+    {
+      "pid": 477516,
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_formal.py",
+        "--execute",
+        "--resume",
+        "--retry-failed",
+        "loopahead-huginn-3.5b-bbh-t1",
+        "--retry-failed",
+        "loopahead-ouro-2.6b-bbh-t1",
+        "--retry-failed",
+        "dflash-ouro-2.6b-bbh-t1",
+        "--retry-failed",
+        "loopahead-huginn-3.5b-humanevalplus-t1",
+        "--retry-failed",
+        "loopahead-ouro-2.6b-humanevalplus-t1",
+        "--retry-failed",
+        "dflash-ouro-2.6b-humanevalplus-t1"
+      ],
+      "start_ticks": "39622686",
+      "pgid": 477516
+    },
+    {
+      "pid": 478387,
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/orchestrate_appendix.py",
+        "--execute"
+      ],
+      "start_ticks": "39629964",
+      "pgid": 478387
+    }
+  ]
+}

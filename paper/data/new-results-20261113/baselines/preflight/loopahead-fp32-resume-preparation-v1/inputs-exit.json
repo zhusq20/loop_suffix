@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-fp32-resume-preparation-v1/check_inputs.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines"
+  ],
+  "pid": 54336,
+  "started_unix": 1794509716.8615363,
+  "source_sha256": {
+    "diagnose_trained_loopahead.py": "8e4c18ebc54ef0c0b1475ead9573ec80ca4da24c8af18c670231d28526addc7f",
+    "diagnose_trained_loopahead_resume.py": "ad413afbdd2e8c038bea5707d318c445ccf672cca30a9c075b9790a854ace615",
+    "loopahead_partial_resume.py": "ede86c154b1d44ac935e952b0c4d607220e4c7e583f47b9b34357d97cfea2523",
+    "test_loopahead_partial_resume.py": "6a27749f8b9edfe4438af6b3f5af61f8e890f7e1aacad25f51a047e405e42729",
+    "preflight/loopahead-fp32-resume-preparation-v1/check_inputs.py": "d6828b210fd756b8f99cad382a6ac77f2d85fe59b2ebeec71c310c0e1ae2dc42"
+  },
+  "exit_code": 0,
+  "finished_unix": 1794509718.7210526,
+  "exit_evidence": "subprocess_wait"
+}

@@ -1,0 +1,16 @@
+{
+  "observed_failure_unix": 1794418729.4019654,
+  "tool_session_id": 58119,
+  "tool_returned_exit_code": 1,
+  "phase": "before_collector_invocation",
+  "source_sha256": "c26610670039b7c6eb221e2312f8b6dc35eede41b754c0b984dd252b89d34901",
+  "formal_outputs_unchanged_from_HEAD": true,
+  "output_sha256": {
+    "results.csv": "caadc04a877e0f1d1d0bc4bd6c1c6f0f8605ca44e09be6a6d3d91b010430b618",
+    "table2_rows.md": "e4e1d5724776e54870cb12d25e838a533a8dc3c87d3750d9e3ce61040f9922fb",
+    "formal-agreement.json": "6812ba9748c416dfac636a9e93959884a0e940fac99145d6486f36ef8ccd97d6",
+    "formal-matrix-status.json": "949bee57745dc81018426796564b975446d63425437988e49fc6dab698479694"
+  },
+  "cause": "A broad ==30 to ==31 replacement also changed expected exact_sequences308 to318. Prior full-timing evidence records308 exact sequences and70 first divergences.",
+  "measurement_files_unchanged": true
+}

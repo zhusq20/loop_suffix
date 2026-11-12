@@ -1,0 +1,86 @@
+{
+  "status": "all_three_formal_LAD_training_audits_complete",
+  "models": [
+    "ouro-2.6b",
+    "huginn-3.5b",
+    "ouro-1.4b"
+  ],
+  "results": [
+    {
+      "model": "ouro-2.6b",
+      "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-2.6b-formal-audit-v2/report.json",
+      "audit_report_sha256": "c7bc6c34e17f2e4628aedad29573e1b743782d22976cd714c35dc62bc414deec",
+      "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+      "checkpoint_sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+      "actual_audit_exit": {
+        "name": "audit-loopahead-ouro-2.6b-formal-v2",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+          "--model",
+          "ouro-2.6b",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-2.6b-formal-audit-v2"
+        ],
+        "pid": 71711,
+        "started_unix": 1794354881.2629638,
+        "exit_code": 0,
+        "finished_unix": 1794354885.8070312
+      },
+      "training_gpu_hours": 0.14824656864007313,
+      "reused_existing_audit": true
+    },
+    {
+      "model": "huginn-3.5b",
+      "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-huginn-3.5b-formal-audit-v2/report.json",
+      "audit_report_sha256": "d4a29c8c6e48ff6c9e830ba41f332536e71e8b761afaa76335924d55d25f5379",
+      "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+      "checkpoint_sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+      "actual_audit_exit": {
+        "name": "audit-loopahead-huginn-3.5b-formal-v2",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+          "--model",
+          "huginn-3.5b",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-huginn-3.5b-formal-audit-v2"
+        ],
+        "pid": 71753,
+        "started_unix": 1794354885.8423781,
+        "exit_code": 0,
+        "finished_unix": 1794354891.5099359
+      },
+      "training_gpu_hours": 0.1995019594166014,
+      "reused_existing_audit": true
+    },
+    {
+      "model": "ouro-1.4b",
+      "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v2/report.json",
+      "audit_report_sha256": "0d8f27ae01d9c1d178b55d877ce34a754d1e7ea7d1d571a90bfcfb539dd6c2ec",
+      "selected_checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+      "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+      "actual_audit_exit": {
+        "name": "audit-loopahead-ouro-1.4b-formal-v2",
+        "argv": [
+          "/tmp/loopfill-venv/bin/python",
+          "-u",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_loopahead_training.py",
+          "--model",
+          "ouro-1.4b",
+          "--out",
+          "/ossfs/workspace/sz/loopfill/experiments/baselines/training/loopahead-ouro-1.4b-formal-audit-v2"
+        ],
+        "pid": 372162,
+        "started_unix": 1794449114.679747,
+        "exit_code": 0,
+        "finished_unix": 1794449124.121611
+      },
+      "training_gpu_hours": 0.14642724653085074,
+      "reused_existing_audit": false
+    }
+  ],
+  "finished_unix": 1794449124.321278
+}

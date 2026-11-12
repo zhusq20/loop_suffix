@@ -1,0 +1,60 @@
+[
+  {
+    "name": "teacher-dflash-train-ouro-2.6b-shard1",
+    "pid": 483783,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/generate_teachers.py",
+      "--model",
+      "ouro-2.6b",
+      "--manifest",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/dflash-train.jsonl",
+      "--shard",
+      "1",
+      "--shards",
+      "8",
+      "--max-batch",
+      "32",
+      "--gpu",
+      "5",
+      "--cpus",
+      "52-55",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/ouro-2.6b/shard1"
+    ],
+    "env_overrides": {
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+    },
+    "started_unix": 1794294578.8389738
+  },
+  {
+    "name": "teacher-loopahead-train-huginn-3.5b-shard0-v2",
+    "pid": 483784,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/generate_teachers.py",
+      "--model",
+      "huginn-3.5b",
+      "--manifest",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/loopahead-train.jsonl",
+      "--shard",
+      "0",
+      "--shards",
+      "8",
+      "--max-batch",
+      "16",
+      "--gpu",
+      "0",
+      "--cpus",
+      "0-3",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/loopahead-train/huginn-3.5b/shard0"
+    ],
+    "env_overrides": {
+      "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True"
+    },
+    "started_unix": 1794294578.8531601
+  }
+]

@@ -1,0 +1,131 @@
+{
+  "updated_unix": 1794351119.5407665,
+  "completed": [
+    "check-huginn-lad",
+    "loopahead-huginn-3.5b-gsm8k-t0",
+    "loopahead-ouro-2.6b-gsm8k-t0",
+    "loopahead-huginn-3.5b-bbh-t0",
+    "loopahead-ouro-2.6b-bbh-t0",
+    "loopahead-huginn-3.5b-humanevalplus-t0",
+    "loopahead-huginn-3.5b-math500-t0",
+    "loopahead-ouro-2.6b-humanevalplus-t0",
+    "loopahead-huginn-3.5b-mbppplus-t0",
+    "loopahead-ouro-2.6b-mbppplus-t0",
+    "loopahead-huginn-3.5b-specbench-t0",
+    "loopahead-ouro-2.6b-math500-t0",
+    "loopahead-huginn-3.5b-gsm8k-t1",
+    "loopahead-ouro-2.6b-specbench-t0",
+    "loopahead-ouro-2.6b-gsm8k-t1",
+    "train-ouro-2.6b",
+    "loopahead-huginn-3.5b-math500-t1",
+    "loopahead-ouro-2.6b-math500-t1",
+    "dflash-ouro-2.6b-gsm8k-t0"
+  ],
+  "failed": [],
+  "runtime_policy": {
+    "huginn_training_gpus": 4
+  },
+  "running": {
+    "dflash-ouro-2.6b-math500-t0": {
+      "pid": 433210,
+      "gpus": [
+        4
+      ],
+      "started_unix": 1794342615.0712776
+    },
+    "dflash-ouro-2.6b-bbh-t0": {
+      "pid": 448206,
+      "gpus": [
+        3
+      ],
+      "started_unix": 1794343742.8907878
+    },
+    "dflash-ouro-2.6b-humanevalplus-t0": {
+      "pid": 508130,
+      "gpus": [
+        6
+      ],
+      "started_unix": 1794348850.5124638
+    },
+    "dflash-ouro-2.6b-mbppplus-t0": {
+      "pid": 514455,
+      "gpus": [
+        2
+      ],
+      "started_unix": 1794349367.8928177
+    }
+  },
+  "pending": [
+    "train-huginn-3.5b",
+    "dflash-huginn-3.5b-gsm8k-t0",
+    "dflash-huginn-3.5b-math500-t0",
+    "dflash-huginn-3.5b-bbh-t0",
+    "dflash-huginn-3.5b-humanevalplus-t0",
+    "dflash-huginn-3.5b-mbppplus-t0",
+    "dflash-huginn-3.5b-specbench-t0",
+    "dflash-ouro-2.6b-specbench-t0",
+    "dflash-huginn-3.5b-gsm8k-t1",
+    "dflash-ouro-2.6b-gsm8k-t1",
+    "dflash-huginn-3.5b-math500-t1",
+    "dflash-ouro-2.6b-math500-t1",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "dflash-huginn-3.5b-bbh-t1",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "dflash-ouro-2.6b-bbh-t1",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "dflash-huginn-3.5b-humanevalplus-t1",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "dflash-ouro-2.6b-humanevalplus-t1",
+    "loopahead-huginn-3.5b-mbppplus-t1",
+    "dflash-huginn-3.5b-mbppplus-t1",
+    "loopahead-ouro-2.6b-mbppplus-t1",
+    "dflash-ouro-2.6b-mbppplus-t1",
+    "loopahead-huginn-3.5b-specbench-t1",
+    "dflash-huginn-3.5b-specbench-t1",
+    "loopahead-ouro-2.6b-specbench-t1",
+    "dflash-ouro-2.6b-specbench-t1"
+  ],
+  "gpu_allocation": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794351121.2837737,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": [
+      3
+    ]
+  },
+  "user_deferred": {
+    "train-huginn-3.5b": {
+      "pid": 315046,
+      "gpus": [
+        0,
+        1,
+        5,
+        7
+      ],
+      "started_unix": 1794330234.591793,
+      "reason": "User requested four GPUs released and a smaller Huginn drafter candidate; preserve checkpoint4000",
+      "worker_exit": {
+        "worker_pid": 315046,
+        "started_unix": 1794330234.7568316,
+        "job_sha256": "d5d05e8b45e28bc5df22e1035e6350dd7e1f6acf209ce3940fae016ca6708848",
+        "source_sha256": "f4e24e76eb4e11cff1aa38479d12282af71891435a4688155bd0cb76d71f3290",
+        "exit_code": 1,
+        "finished_unix": 1794351154.2975018
+      }
+    }
+  }
+}

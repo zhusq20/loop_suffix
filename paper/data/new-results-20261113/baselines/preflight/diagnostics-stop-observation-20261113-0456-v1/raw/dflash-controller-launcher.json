@@ -1,0 +1,32 @@
+{
+  "recovery": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1",
+  "plan_sha256": "e3dc2b1f6a89502b1553fc801f2bcd13f21340460af9eb38ba6cd92b31ddbcc8",
+  "authorization_context_sha256": "693286ccac4d1abf972fc665eb3f3f422186f65f4ce9837dc364d7de87fe0546",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/plan.json"
+  ],
+  "started_unix": 1794509233.9147525,
+  "pid": 48618,
+  "start_ticks": "52427020",
+  "supervisor_identity": {
+    "pid": 48615,
+    "state": "R",
+    "start_ticks": "52427014",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/resume-after-reconfirmation-v1/controller-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  }
+}

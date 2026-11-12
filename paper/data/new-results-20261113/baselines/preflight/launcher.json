@@ -1,0 +1,98 @@
+[
+  {
+    "name": "huginn-3.5b-gsm8k-ar-n20",
+    "pid": 428041,
+    "command": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight_worker.py",
+      "--repo",
+      "/ossfs/workspace/loop_suffix",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "ar",
+      "--gpu",
+      "0",
+      "--cpus",
+      "0-3",
+      "--count",
+      "20",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-3.5b-gsm8k-ar-n20"
+    ],
+    "started_unix": 1794288114.2656834
+  },
+  {
+    "name": "huginn-3.5b-gsm8k-loopspec-dual-n20",
+    "pid": 428042,
+    "command": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight_worker.py",
+      "--repo",
+      "/ossfs/workspace/loop_suffix",
+      "--model",
+      "huginn-3.5b",
+      "--method",
+      "loopspec-dual",
+      "--gpu",
+      "1",
+      "--cpus",
+      "4-7",
+      "--count",
+      "20",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-3.5b-gsm8k-loopspec-dual-n20"
+    ],
+    "started_unix": 1794288114.2805197
+  },
+  {
+    "name": "ouro-2.6b-gsm8k-ar-n20",
+    "pid": 428043,
+    "command": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight_worker.py",
+      "--repo",
+      "/ossfs/workspace/loop_suffix",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "ar",
+      "--gpu",
+      "4",
+      "--cpus",
+      "48-51",
+      "--count",
+      "20",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/ouro-2.6b-gsm8k-ar-n20"
+    ],
+    "started_unix": 1794288114.2978916
+  },
+  {
+    "name": "ouro-2.6b-gsm8k-loopspec-dual-n20",
+    "pid": 428044,
+    "command": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight_worker.py",
+      "--repo",
+      "/ossfs/workspace/loop_suffix",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "loopspec-dual",
+      "--gpu",
+      "5",
+      "--cpus",
+      "52-55",
+      "--count",
+      "20",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/ouro-2.6b-gsm8k-loopspec-dual-n20"
+    ],
+    "started_unix": 1794288114.313492
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "gpu": 4,
+  "cpus": "48-51",
+  "dependencies": [
+    "data/teachers/dflash-train/huginn-3.5b/shard0/complete.json"
+  ],
+  "jobs": [
+    {
+      "model": "huginn-3.5b",
+      "shard": 5
+    }
+  ]
+}

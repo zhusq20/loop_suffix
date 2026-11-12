@@ -1,0 +1,33 @@
+{
+  "job": {
+    "id": "table1-ouro-1.4b-bbh-t1",
+    "kind": "latency",
+    "model": "ouro-1.4b",
+    "dataset": "bbh",
+    "temperature": 1,
+    "batch": 1,
+    "max_seq": 3072,
+    "max_new_tokens": 512,
+    "count": 270,
+    "inputs": "inputs/ouro-1.4b-bbh.jsonl",
+    "inputs_sha256": "62cdd1ba523729839eec0ded755ff83f1abe19ce50c50e4ff73399b594f1d353",
+    "original_inputs_sha256": "7d931729db443e0f44ac7c3ebb81c41274669cfed60b131a14750968d71b4373"
+  },
+  "stage": "profile",
+  "timed": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-bbh-t1/attempt1",
+    "hashes": {
+      "metadata.json": "9c461e7dcfebf6bcf44a538218700786ee3893e2685d5d79c785bd06849ef515",
+      "complete.json": "50a19acace13c9251e97f53406177411abb28f6e3a7017f6d3d731cd9b6478b2",
+      "requests.jsonl": "d49a7aaad801dd1e138ccdf1c73894c419090ea26fb1c73aa5d66ae9b19606fe",
+      "summary.json": "6b5a0d5eae4d1d995978833901929bcf66cce766a7b2bc494338e0273d306c3e"
+    },
+    "exit_evidence": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-bbh-t1-attempt1-exit.json",
+      "sha256": "d9c670cb6cc65948d8295a7e9f1a21c8bef9c3e73bd136207268404a3423357c",
+      "actual_exit_code": 0
+    }
+  },
+  "plan_sha256": "458953f59f7b21393e98753f03147ffe0474cde41cf2c75cbf84dd3c9b3d4e8c",
+  "created_unix": 1794513845.941446
+}

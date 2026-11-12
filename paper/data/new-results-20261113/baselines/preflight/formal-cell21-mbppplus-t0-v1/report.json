@@ -1,0 +1,202 @@
+{
+  "status": "complete_formal_cell_with_greedy_diagnostics_pending",
+  "checked_unix": 1794367961.227756,
+  "completed_cells": 21,
+  "expected_cells": 72,
+  "previous_20_rows_and_agreements_unchanged": true,
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "requests_per_stage": {
+    "ar": 378,
+    "dflash": 378,
+    "dflash-profile": 378
+  },
+  "summaries": {
+    "ar": {
+      "decode_tokens": 69660,
+      "decode_s": 5964.5912514179945,
+      "loops": 278640,
+      "tok_s": 11.678922672771474,
+      "gamma": 1.0
+    },
+    "dflash": {
+      "decode_tokens": 69218,
+      "decode_s": 1334.5833452865481,
+      "loops": 55388,
+      "tok_s": 51.86487621358576,
+      "gamma": 4.998772297248501
+    },
+    "dflash-profile": {
+      "decode_tokens": 69218,
+      "decode_s": 1340.332467265427,
+      "loops": 55388,
+      "tok_s": 51.642410887218105,
+      "gamma": 4.998772297248501
+    }
+  },
+  "journal_sha256": {
+    "ar": "e046de04323928dda5028242192d7bd64fd9baea5e1481a02b0413770611ec60",
+    "dflash": "2440351e5519929e25a5ea94319d08352d79750f05daad165e61e2c79a76ec9c",
+    "dflash-profile": "3b7e746fbcdb737f206ebc7d3f8f5bde5ffc9031115a368577f30320c80c556b"
+  },
+  "source_manifest_sha256": {
+    "ar": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69",
+    "dflash": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69",
+    "dflash-profile": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+  },
+  "actual_exit_receipts": {
+    "ar": {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "ar",
+        "--dataset",
+        "mbppplus",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1"
+      ],
+      "pid": 514462,
+      "started_unix": 1794349368.1231291,
+      "exit_code": 0,
+      "finished_unix": 1794355391.2220597
+    },
+    "dflash": {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "mbppplus",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+      ],
+      "pid": 77179,
+      "started_unix": 1794355391.261442,
+      "exit_code": 0,
+      "finished_unix": 1794356778.9513283
+    },
+    "dflash-profile": {
+      "name": "dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "mbppplus",
+        "--temperature",
+        "0",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+        "--profile"
+      ],
+      "pid": 264404,
+      "started_unix": 1794366492.6297762,
+      "exit_code": 0,
+      "finished_unix": 1794367889.346969
+    }
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794367899.6491094,
+    "completion_basis": "direct_child_exit_code"
+  },
+  "profile_all_tokens_and_verification_counts_match_timed_run": true,
+  "draft_gpu_s": 44.3273329315186,
+  "profile_wall_relative_difference": 0.004307802880339828,
+  "result": {
+    "method": "dflash",
+    "model": "ouro-2.6b",
+    "benchmark": "mbppplus",
+    "temperature": "0",
+    "eta": "4.440895591723097",
+    "gamma": "4.998772297248501",
+    "method_tok_s": "51.86487621358576",
+    "ar_tok_s": "11.678922672771474",
+    "drafter_time_frac": "0.033071893738391714",
+    "match_rate": "0.5343915343915344",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "η in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+    "eta_latency": "4.469253473365756",
+    "eta_throughput": "4.440895591723097",
+    "aligned_token_match_rate": "0.7133830736192941",
+    "method_decode_tokens": "69218",
+    "ar_decode_tokens": "69660",
+    "method_decode_s": "1334.5833452865481",
+    "ar_decode_s": "5964.5912514179945",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794349387.512014",
+    "ar_last_completed_unix": "1794355390.3811948",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1"
+  },
+  "agreement": {
+    "match_rate": 0.5343915343915344,
+    "aligned_token_match_rate": 0.7133830736192941,
+    "exact_sequences": 202,
+    "requests": 378
+  },
+  "first_divergences_pending_diagnosis": 176,
+  "limitations": [
+    "All actual first divergences still require the queued full-prefix BF16/FP32 diagnosis; no blanket numerical attribution.",
+    "Shared host with overlapping CPU affinities; no isolation or timing correction claimed.",
+    "Original failed startup and successful completed AR/timed journals preserved; only the failed profile stage was retried.",
+    "Cell completion is not completion of the 72-cell matrix."
+  ],
+  "collector_stdout": "{\"completed\": 21, \"expected\": 72, \"missing\": 51}"
+}

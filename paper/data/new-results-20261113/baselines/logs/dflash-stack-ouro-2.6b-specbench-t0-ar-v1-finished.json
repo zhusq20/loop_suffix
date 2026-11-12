@@ -1,0 +1,26 @@
+{
+  "name": "dflash-stack-ouro-2.6b-specbench-t0-ar-v1",
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+    "--model",
+    "ouro-2.6b",
+    "--method",
+    "ar",
+    "--dataset",
+    "specbench",
+    "--temperature",
+    "0",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-specbench-t0-ar-v1"
+  ],
+  "pid": 287005,
+  "started_unix": 1794367900.0953488,
+  "exit_code": 0,
+  "finished_unix": 1794374948.171204
+}

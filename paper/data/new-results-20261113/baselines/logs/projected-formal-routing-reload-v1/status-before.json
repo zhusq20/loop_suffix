@@ -1,0 +1,100 @@
+{
+  "updated_unix": 1794354021.3273246,
+  "completed": [
+    "check-huginn-lad",
+    "loopahead-huginn-3.5b-gsm8k-t0",
+    "loopahead-ouro-2.6b-gsm8k-t0",
+    "loopahead-huginn-3.5b-bbh-t0",
+    "loopahead-ouro-2.6b-bbh-t0",
+    "loopahead-huginn-3.5b-humanevalplus-t0",
+    "loopahead-huginn-3.5b-math500-t0",
+    "loopahead-ouro-2.6b-humanevalplus-t0",
+    "loopahead-huginn-3.5b-mbppplus-t0",
+    "loopahead-ouro-2.6b-mbppplus-t0",
+    "loopahead-huginn-3.5b-specbench-t0",
+    "loopahead-ouro-2.6b-math500-t0",
+    "loopahead-huginn-3.5b-gsm8k-t1",
+    "loopahead-ouro-2.6b-specbench-t0",
+    "loopahead-ouro-2.6b-gsm8k-t1",
+    "train-ouro-2.6b",
+    "loopahead-huginn-3.5b-math500-t1",
+    "loopahead-ouro-2.6b-math500-t1",
+    "dflash-ouro-2.6b-gsm8k-t0",
+    "dflash-ouro-2.6b-bbh-t0",
+    "dflash-ouro-2.6b-humanevalplus-t0"
+  ],
+  "failed": [],
+  "runtime_policy": {
+    "huginn_training_gpus": 4,
+    "deferred_training_record": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/four-gpu-reallocation-v1/preserved-checkpoint.json"
+  },
+  "gpu_allocation": {
+    "allowed_gpus": [
+      2,
+      3,
+      4,
+      6
+    ],
+    "released_gpus": [
+      0,
+      1,
+      5,
+      7
+    ],
+    "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+    "updated_unix": 1794353566.114057,
+    "deferred_jobs": [
+      "train-huginn-3.5b"
+    ],
+    "reserved_for_development": [
+      3,
+      6
+    ]
+  },
+  "running": {
+    "dflash-ouro-2.6b-math500-t0": {
+      "pid": 433210,
+      "gpus": [
+        4
+      ],
+      "started_unix": 1794342615.0712776
+    },
+    "dflash-ouro-2.6b-mbppplus-t0": {
+      "pid": 514455,
+      "gpus": [
+        2
+      ],
+      "started_unix": 1794349367.8928177
+    }
+  },
+  "pending": [
+    "train-huginn-3.5b",
+    "dflash-huginn-3.5b-gsm8k-t0",
+    "dflash-huginn-3.5b-math500-t0",
+    "dflash-huginn-3.5b-bbh-t0",
+    "dflash-huginn-3.5b-humanevalplus-t0",
+    "dflash-huginn-3.5b-mbppplus-t0",
+    "dflash-huginn-3.5b-specbench-t0",
+    "dflash-ouro-2.6b-specbench-t0",
+    "dflash-huginn-3.5b-gsm8k-t1",
+    "dflash-ouro-2.6b-gsm8k-t1",
+    "dflash-huginn-3.5b-math500-t1",
+    "dflash-ouro-2.6b-math500-t1",
+    "loopahead-huginn-3.5b-bbh-t1",
+    "dflash-huginn-3.5b-bbh-t1",
+    "loopahead-ouro-2.6b-bbh-t1",
+    "dflash-ouro-2.6b-bbh-t1",
+    "loopahead-huginn-3.5b-humanevalplus-t1",
+    "dflash-huginn-3.5b-humanevalplus-t1",
+    "loopahead-ouro-2.6b-humanevalplus-t1",
+    "dflash-ouro-2.6b-humanevalplus-t1",
+    "loopahead-huginn-3.5b-mbppplus-t1",
+    "dflash-huginn-3.5b-mbppplus-t1",
+    "loopahead-ouro-2.6b-mbppplus-t1",
+    "dflash-ouro-2.6b-mbppplus-t1",
+    "loopahead-huginn-3.5b-specbench-t1",
+    "dflash-huginn-3.5b-specbench-t1",
+    "loopahead-ouro-2.6b-specbench-t1",
+    "dflash-ouro-2.6b-specbench-t1"
+  ]
+}

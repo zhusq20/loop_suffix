@@ -1,0 +1,17 @@
+{
+  "gpu": 5,
+  "cpus": "52-55",
+  "dependencies": [
+    "data/teachers/dflash-train/ouro-2.6b/shard1/complete.json"
+  ],
+  "jobs": [
+    {
+      "model": "ouro-2.6b",
+      "shard": 5
+    },
+    {
+      "model": "huginn-3.5b",
+      "shard": 2
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "released_gpus": [
+    0,
+    1,
+    5,
+    7
+  ],
+  "reason": "User requested four GPUs for a friend; only four GPUs for LoopFill until further instruction.",
+  "updated_unix": 1794419424.7338958,
+  "deferred_jobs": [
+    "dflash-huginn-3.5b-bbh-t0",
+    "dflash-huginn-3.5b-bbh-t1",
+    "dflash-huginn-3.5b-gsm8k-t0",
+    "dflash-huginn-3.5b-gsm8k-t1",
+    "dflash-huginn-3.5b-humanevalplus-t0",
+    "dflash-huginn-3.5b-humanevalplus-t1",
+    "dflash-huginn-3.5b-math500-t0",
+    "dflash-huginn-3.5b-math500-t1",
+    "dflash-huginn-3.5b-mbppplus-t0",
+    "dflash-huginn-3.5b-mbppplus-t1",
+    "dflash-huginn-3.5b-specbench-t0",
+    "dflash-huginn-3.5b-specbench-t1",
+    "dflash-ouro-2.6b-bbh-t0",
+    "dflash-ouro-2.6b-bbh-t1",
+    "dflash-ouro-2.6b-gsm8k-t0",
+    "dflash-ouro-2.6b-gsm8k-t1",
+    "dflash-ouro-2.6b-humanevalplus-t0",
+    "dflash-ouro-2.6b-humanevalplus-t1",
+    "dflash-ouro-2.6b-math500-t0",
+    "dflash-ouro-2.6b-math500-t1",
+    "dflash-ouro-2.6b-mbppplus-t0",
+    "dflash-ouro-2.6b-mbppplus-t1",
+    "dflash-ouro-2.6b-specbench-t0",
+    "dflash-ouro-2.6b-specbench-t1",
+    "train-huginn-3.5b",
+    "train-ouro-2.6b"
+  ],
+  "reserved_for_development": [],
+  "dflash_stop_reason": "User stopped DFlash because its code version is outdated; switch priority to LoopAhead Spec-Bench throughput B=1,2,4,8,16.",
+  "dflash_stop_record": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/user-stop-dflash-1794419035"
+}

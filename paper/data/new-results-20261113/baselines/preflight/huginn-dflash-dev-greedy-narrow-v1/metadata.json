@@ -1,0 +1,41 @@
+{
+  "model": "huginn-3.5b",
+  "dataset": "heldout-huginn-dflash-dev20",
+  "label": "narrow",
+  "development_only": true,
+  "max_new_tokens": 128,
+  "count": 20,
+  "cases": 8,
+  "source_report_sha256": "c3cbc9734de017f011f1458651c1b55471f1747cb6c8cb07acb02cdce00d5b0e",
+  "source_metadata_sha256": "7cb3f1396ac8b234128fc2c8fdaacb105a3736f741b67ea546b7d75d3e5238cc",
+  "inputs_sha256": "aec11336b2ca404571136a18b5a320d285bf43fda6debff00c31b744c3d12cc7",
+  "plan_sha256": "79d093f0d4e1a0e417b30e5841d5436d4854746c38f50f2e118aacc64a58f01c",
+  "checkpoint": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-pilot-v1/checkpoint-000060",
+    "step": 60,
+    "training_examples": 1893,
+    "training_epochs_planned": 1,
+    "parameters": 332621056,
+    "hashes": {
+      "model.safetensors": "f7cd716a686b7d887d89cbe5f3261cc58b9414aedeb9cfdfd7a8aa0cbdc0222c"
+    },
+    "config_sha256": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+    "training_metadata_sha256": "782a9588caf69e7a1ae8f9a8ef411b9de7e4b04e144c3ef9a81c82341eba8c8d",
+    "loading": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "mismatched_keys": [],
+      "error_msgs": []
+    }
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-compare-v1/ar.jsonl",
+      "sha256": "b368da4c61d4524c9de530a69f82abc0eb7376355f02fe8ff49fbdb5a6152054"
+    },
+    "narrow": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/huginn-dflash-dev-compare-v1/narrow.jsonl",
+      "sha256": "ed3926eda4f32277f83ac8e7151e5df1c52291eb1e24b9519d977d3af8ef0a29"
+    }
+  }
+}

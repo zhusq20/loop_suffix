@@ -1,0 +1,61 @@
+{
+  "status": "queued_waiting_for_measurements",
+  "controller": {
+    "plan_sha256": "994a83735b8ff36410e856979802e7fd91fab2cc62c34d3f0008918fa6fb2a8e",
+    "activation_source_sha256": "eb6be4683b14c914191f47c0b07c5588caf358f5c4c0b05d509206a32dc869ca",
+    "argv": [
+      "taskset",
+      "--cpu-list",
+      "80-83",
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/queue_loopahead_math_continuation.py"
+    ],
+    "started_unix": 1794510570.994019,
+    "pid": 64214,
+    "start_ticks": "52560728",
+    "supervisor_identity": {
+      "pid": 64213,
+      "state": "R",
+      "start_ticks": "52560722",
+      "argv": [
+        "/opt/conda/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/source/loop_queue_recovery.py",
+        "--spec",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/loopahead-math-fp32-continuation-v1/controller-launcher.json.supervisor.json",
+        "--lock-fd",
+        "3"
+      ]
+    }
+  },
+  "initial_status": {
+    "stage": "waiting_for_measurement_priority",
+    "controller_pid": 64214,
+    "updated_unix": 1794510571.7205613,
+    "running": null,
+    "reused_cases": 262,
+    "remaining_cases": 167,
+    "priority_pending": [
+      "table1-ouro-1.4b-gsm8k-t1-profile",
+      "table1-ouro-1.4b-math500-t0-profile",
+      "table1-ouro-1.4b-math500-t1-profile",
+      "table1-ouro-1.4b-bbh-t0-profile",
+      "table1-ouro-1.4b-bbh-t1-profile",
+      "table1-ouro-1.4b-humanevalplus-t0-profile",
+      "table1-ouro-1.4b-humanevalplus-t1-profile",
+      "table1-ouro-1.4b-mbppplus-t0-profile",
+      "table1-ouro-1.4b-mbppplus-t1-profile",
+      "table1-ouro-1.4b-specbench-t0-profile",
+      "table1-ouro-1.4b-specbench-t1-profile"
+    ]
+  },
+  "plan_sha256": "994a83735b8ff36410e856979802e7fd91fab2cc62c34d3f0008918fa6fb2a8e",
+  "unchanged_results_csv_sha256": "ed407418e235c10bf37b7b4b729e1486f5ac7c3026a9ebbec3c7c598e6621ff4",
+  "reused_cases": 262,
+  "remaining_cases": 167,
+  "new_gpu_runs": 0,
+  "signalled_processes": [],
+  "source_sha256": "eb6be4683b14c914191f47c0b07c5588caf358f5c4c0b05d509206a32dc869ca",
+  "finished_unix": 1794510571.7838228
+}

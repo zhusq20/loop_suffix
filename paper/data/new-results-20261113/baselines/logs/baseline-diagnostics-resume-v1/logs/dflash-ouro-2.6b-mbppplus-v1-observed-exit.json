@@ -1,0 +1,49 @@
+{
+  "group": "dflash-ouro-2.6b-mbppplus-v1",
+  "step": "dflash-ouro-2.6b-mbppplus-v1-observed",
+  "gpu": 1,
+  "plan_sha256": "c321d04eac2871bf2945dab3e463fb8308853cb5e37b3f4574d86664d40f4b39",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "4-7",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/lock_handoff.py",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/diagnose_dflash.py",
+    "--ar",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+    "--dflash",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+    "--gpu",
+    "1",
+    "--cpus",
+    "4-7",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/formal-greedy-margins/dflash-ouro-2.6b-mbppplus-v1",
+    "--shard",
+    "0",
+    "--shards",
+    "1"
+  ],
+  "started_unix": 1794479294.0883367,
+  "pid": 219603,
+  "start_ticks": "49433038",
+  "supervisor_identity": {
+    "pid": 219602,
+    "state": "R",
+    "start_ticks": "49433031",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/baseline-diagnostics-resume-v1/logs/dflash-ouro-2.6b-mbppplus-v1-observed-launcher.json.supervisor.json",
+      "--lock-fd",
+      "6"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794482480.1532629,
+  "exit_evidence": "supervisor_waitpid"
+}

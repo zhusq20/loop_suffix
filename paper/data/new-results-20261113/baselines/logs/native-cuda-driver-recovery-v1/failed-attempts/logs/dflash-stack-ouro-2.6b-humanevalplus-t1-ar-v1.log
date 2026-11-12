@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 178, in <module>
+    main()
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py", line 67, in main
+    lease, acquisition = acquire_cuda_context(args.gpu, uuid)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/gpu_startup.py", line 34, in acquire_cuda_context
+    torch.cuda.set_device(0)
+  File "/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 476, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/opt/conda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Unexpected error from cudaGetDeviceCount(). Did you run some cuda functions before calling NumCudaDevices() that might have already set an error? Error 803: system has unsupported display driver / cuda driver combination

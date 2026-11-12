@@ -1,0 +1,22 @@
+{
+  "pid": 59111,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "8-11",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2",
+    "--job",
+    "table1-ouro-2.6b-specbench-t0",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table1-ouro-2.6b-specbench-t0/attempt1",
+    "--lock-fd",
+    "16"
+  ],
+  "gpu": 2,
+  "started_unix": 1794431758.929221,
+  "placement_amendment": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/plan.json"
+}

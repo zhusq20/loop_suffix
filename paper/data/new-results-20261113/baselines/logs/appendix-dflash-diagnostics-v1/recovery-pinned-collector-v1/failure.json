@@ -1,0 +1,4 @@
+{
+  "error": "Traceback (most recent call last):\n  File \"/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/resume_appendix_dflash_diagnostics.py\", line 112, in <module>\n    main(args.spec.resolve())\n  File \"/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/resume_appendix_dflash_diagnostics.py\", line 88, in main\n    verify(spec_path)\n  File \"/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-dflash-diagnostics-v1/source/resume_appendix_dflash_diagnostics.py\", line 24, in verify\n    assert sha(Path(spec['base'])/name) == expected, name\nAssertionError: collect_combined_results.py\n",
+  "failed_unix": 1794478083.7925217
+}

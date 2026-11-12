@@ -1,0 +1,3530 @@
+{
+  "status": "passed_stochastic_CPU_integration",
+  "samples_per_configuration": 64,
+  "configurations": {
+    "dflash-block16": {
+      "samples": 64,
+      "outcomes": 63,
+      "familywise_alpha": 1e-06,
+      "max_absolute_error": 0.0651741424,
+      "total_variation": 0.2874490083,
+      "outcomes_detail": [
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0015925248,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0015925248,
+          "bound": 0.24028376092289608
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0005971968,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0002985984,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0002985984,
+          "bound": 0.22240207037467716
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0115379344,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00378432,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0031104,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0125146,
+          "bound": 0.2527941597376531
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0063700992,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0092549008,
+          "bound": 0.27168627912106247
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.011324620799999997,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.004300379200000003,
+          "bound": 0.29246214187466113
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.005898239999999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.009726760000000001,
+          "bound": 0.2693240929650161
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.0010616831999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616831999999997,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0013271039999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0013271039999999997,
+          "bound": 0.23753834574044624
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.004423679999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.004423679999999999,
+          "bound": 0.26124493796287246
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0192,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0192,
+          "bound": 0.3173211081904109
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0005971968000000001,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0150278032,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0010616832,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616832,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00055296,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00055296,
+          "bound": 0.22733293844945562
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 9.95328e-05,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 9.95328e-05,
+          "bound": 0.21662438942445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0006054912,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0150195088,
+          "bound": 0.22819601803979378
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.000124416,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.000124416,
+          "bound": 0.21755607748158914
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.00041472,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00041472,
+          "bound": 0.22484174094764997
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.005255999999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.005255999999999999,
+          "bound": 0.2659485726656205
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00432,
+          "bound": 0.2606285827332722
+        },
+        {
+          "sequence": [
+            0,
+            2
+          ],
+          "expected_probability": 0.0144,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.01685,
+          "bound": 0.3030025075272979
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0040870656,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.01184068,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0028382399999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0028382399999999997,
+          "bound": 0.2508279780502445
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0046618091999999995,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.010963190800000001,
+          "bound": 0.2626334164596308
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.028359339299999998,
+          "count": 5,
+          "empirical_probability": 0.078125,
+          "absolute_error": 0.049765660700000006,
+          "bound": 0.3400873164915169
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0058272615,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0058272615,
+          "bound": 0.2689605500608373
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.04420085759999999,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.01295085759999999,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.030299678400000002,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.008287660799999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.007337339200000001,
+          "bound": 0.28047017152319376
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.035970749999999996,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.004720749999999996,
+          "bound": 0.35608782393736516
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.029564999999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.013939999999999998,
+          "bound": 0.3427672582518334
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0072658944,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658944,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.044200857600000004,
+          "count": 7,
+          "empirical_probability": 0.109375,
+          "absolute_error": 0.0651741424,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.009082368,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.006542632,
+          "bound": 0.28380094358525365
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0688914432,
+          "count": 5,
+          "empirical_probability": 0.078125,
+          "absolute_error": 0.0092335568,
+          "bound": 0.40914770850781135
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.025834291199999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.010209291199999998,
+          "bound": 0.3342659398043685
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.012917145599999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.012917145599999999,
+          "bound": 0.29808391076399954
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.056064,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.009189000000000003,
+          "bound": 0.39076991430909247
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0009503215999999981,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.029467238399999995,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.0017827616000000053,
+          "bound": 0.34255220671305076
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.015347519999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0002774800000000018,
+          "bound": 0.3060078691412186
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.012614399999999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.012614399999999998,
+          "bound": 0.2970441272157039
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.042047999999999995,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.010797999999999995,
+          "bound": 0.36754732555582004
+        },
+        {
+          "sequence": [
+            1,
+            2
+          ],
+          "expected_probability": 0.1825,
+          "count": 8,
+          "empirical_probability": 0.125,
+          "absolute_error": 0.057499999999999996,
+          "bound": 0.5143829234346903
+        },
+        {
+          "sequence": [
+            2
+          ],
+          "expected_probability": 0.15,
+          "count": 8,
+          "empirical_probability": 0.125,
+          "absolute_error": 0.024999999999999994,
+          "bound": 0.49128847603613035
+        }
+      ],
+      "execution_counters": {
+        "accepted_draft_tokens": 87,
+        "target_verifications": 99
+      }
+    },
+    "loopahead-ouro-default": {
+      "samples": 64,
+      "outcomes": 63,
+      "familywise_alpha": 1e-06,
+      "max_absolute_error": 0.053311,
+      "total_variation": 0.25597787549999995,
+      "outcomes_detail": [
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0015925248,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0015925248,
+          "bound": 0.24028376092289608
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0005971968,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0002985984,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0002985984,
+          "bound": 0.22240207037467716
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0115379344,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00378432,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0031104,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0125146,
+          "bound": 0.2527941597376531
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0063700992,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0063700992,
+          "bound": 0.27168627912106247
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.011324620799999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.011324620799999997,
+          "bound": 0.29246214187466113
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.005898239999999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.009726760000000001,
+          "bound": 0.2693240929650161
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.0010616831999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616831999999997,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0013271039999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0013271039999999997,
+          "bound": 0.23753834574044624
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.004423679999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.004423679999999999,
+          "bound": 0.26124493796287246
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0192,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0035749999999999983,
+          "bound": 0.3173211081904109
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0005971968000000001,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968000000001,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0010616832,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616832,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00055296,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00055296,
+          "bound": 0.22733293844945562
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 9.95328e-05,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 9.95328e-05,
+          "bound": 0.21662438942445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0006054912,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006054912,
+          "bound": 0.22819601803979378
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.000124416,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.000124416,
+          "bound": 0.21755607748158914
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.00041472,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00041472,
+          "bound": 0.22484174094764997
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.005255999999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.005255999999999999,
+          "bound": 0.2659485726656205
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00432,
+          "bound": 0.2606285827332722
+        },
+        {
+          "sequence": [
+            0,
+            2
+          ],
+          "expected_probability": 0.0144,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.01685,
+          "bound": 0.3030025075272979
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0040870656,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00378432,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0028382399999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0028382399999999997,
+          "bound": 0.2508279780502445
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0046618091999999995,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.010963190800000001,
+          "bound": 0.2626334164596308
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.028359339299999998,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.002890660700000002,
+          "bound": 0.3400873164915169
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0058272615,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0058272615,
+          "bound": 0.2689605500608373
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.04420085759999999,
+          "count": 5,
+          "empirical_probability": 0.078125,
+          "absolute_error": 0.03392414240000001,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0009503215999999981,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.008287660799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.008287660799999999,
+          "bound": 0.28047017152319376
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.035970749999999996,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.020345749999999996,
+          "bound": 0.35608782393736516
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.029564999999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.013939999999999998,
+          "bound": 0.3427672582518334
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0072658944,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0083591056,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.044200857600000004,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.012950857600000004,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.009082368,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.009082368,
+          "bound": 0.28380094358525365
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0688914432,
+          "count": 5,
+          "empirical_probability": 0.078125,
+          "absolute_error": 0.0092335568,
+          "bound": 0.40914770850781135
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.025834291199999998,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.005415708800000002,
+          "bound": 0.3342659398043685
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.012917145599999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.002707854400000001,
+          "bound": 0.29808391076399954
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.056064,
+          "count": 7,
+          "empirical_probability": 0.109375,
+          "absolute_error": 0.053311,
+          "bound": 0.39076991430909247
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.016575321599999998,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.029467238399999995,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.017407761600000005,
+          "bound": 0.34255220671305076
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.015347519999999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.015347519999999998,
+          "bound": 0.3060078691412186
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.012614399999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.003010600000000002,
+          "bound": 0.2970441272157039
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.042047999999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.042047999999999995,
+          "bound": 0.36754732555582004
+        },
+        {
+          "sequence": [
+            1,
+            2
+          ],
+          "expected_probability": 0.1825,
+          "count": 13,
+          "empirical_probability": 0.203125,
+          "absolute_error": 0.020625000000000004,
+          "bound": 0.5143829234346903
+        },
+        {
+          "sequence": [
+            2
+          ],
+          "expected_probability": 0.15,
+          "count": 12,
+          "empirical_probability": 0.1875,
+          "absolute_error": 0.037500000000000006,
+          "bound": 0.49128847603613035
+        }
+      ],
+      "execution_counters": {
+        "lad_calls": 52,
+        "lad_tokens": 104,
+        "first_proposals": 575,
+        "second_proposals": 313,
+        "accepted_first": 82,
+        "accepted_second": 50,
+        "fallback_tokens": 17,
+        "cascade_commits": 0,
+        "native_budget_rejections": 0,
+        "retention_evictions": 0
+      }
+    },
+    "loopahead-ouro-tight": {
+      "samples": 64,
+      "outcomes": 63,
+      "familywise_alpha": 1e-06,
+      "max_absolute_error": 0.0675,
+      "total_variation": 0.3224205732,
+      "outcomes_detail": [
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0015925248,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0015925248,
+          "bound": 0.24028376092289608
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0005971968,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0002985984,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0002985984,
+          "bound": 0.22240207037467716
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0040870656,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.01184068,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0031104,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0125146,
+          "bound": 0.2527941597376531
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0063700992,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0063700992,
+          "bound": 0.27168627912106247
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.011324620799999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.011324620799999997,
+          "bound": 0.29246214187466113
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.005898239999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.005898239999999999,
+          "bound": 0.2693240929650161
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.0010616831999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616831999999997,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0013271039999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0013271039999999997,
+          "bound": 0.23753834574044624
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.004423679999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.004423679999999999,
+          "bound": 0.26124493796287246
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0192,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.027675,
+          "bound": 0.3173211081904109
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0005971968000000001,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968000000001,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0010616832,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616832,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00055296,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00055296,
+          "bound": 0.22733293844945562
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 9.95328e-05,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 9.95328e-05,
+          "bound": 0.21662438942445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0006054912,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006054912,
+          "bound": 0.22819601803979378
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.000124416,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.000124416,
+          "bound": 0.21755607748158914
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.00041472,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00041472,
+          "bound": 0.22484174094764997
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.0247914272,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.005255999999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.005255999999999999,
+          "bound": 0.2659485726656205
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00432,
+          "bound": 0.2606285827332722
+        },
+        {
+          "sequence": [
+            0,
+            2
+          ],
+          "expected_probability": 0.0144,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0144,
+          "bound": 0.3030025075272979
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0115379344,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00378432,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0028382399999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0028382399999999997,
+          "bound": 0.2508279780502445
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0046618091999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0046618091999999995,
+          "bound": 0.2626334164596308
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.028359339299999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.028359339299999998,
+          "bound": 0.3400873164915169
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0058272615,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0058272615,
+          "bound": 0.2689605500608373
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.04420085759999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.04420085759999999,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0009503215999999981,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.008287660799999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.007337339200000001,
+          "bound": 0.28047017152319376
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.035970749999999996,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.010904250000000004,
+          "bound": 0.35608782393736516
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.029564999999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.013939999999999998,
+          "bound": 0.3427672582518334
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0072658944,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658944,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.044200857600000004,
+          "count": 6,
+          "empirical_probability": 0.09375,
+          "absolute_error": 0.049549142399999996,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.009082368,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.009082368,
+          "bound": 0.28380094358525365
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0688914432,
+          "count": 8,
+          "empirical_probability": 0.125,
+          "absolute_error": 0.0561085568,
+          "bound": 0.40914770850781135
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.025834291199999998,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.005415708800000002,
+          "bound": 0.3342659398043685
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.012917145599999999,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.0339578544,
+          "bound": 0.29808391076399954
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.056064,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.009189000000000003,
+          "bound": 0.39076991430909247
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.006458572799999999,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.016575321599999998,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.029467238399999995,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.013842238399999995,
+          "bound": 0.34255220671305076
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.015347519999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0002774800000000018,
+          "bound": 0.3060078691412186
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.012614399999999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.003010600000000002,
+          "bound": 0.2970441272157039
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.042047999999999995,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.010797999999999995,
+          "bound": 0.36754732555582004
+        },
+        {
+          "sequence": [
+            1,
+            2
+          ],
+          "expected_probability": 0.1825,
+          "count": 16,
+          "empirical_probability": 0.25,
+          "absolute_error": 0.0675,
+          "bound": 0.5143829234346903
+        },
+        {
+          "sequence": [
+            2
+          ],
+          "expected_probability": 0.15,
+          "count": 7,
+          "empirical_probability": 0.109375,
+          "absolute_error": 0.040624999999999994,
+          "bound": 0.49128847603613035
+        }
+      ],
+      "execution_counters": {
+        "lad_calls": 0,
+        "lad_tokens": 0,
+        "first_proposals": 235,
+        "second_proposals": 178,
+        "accepted_first": 78,
+        "accepted_second": 58,
+        "fallback_tokens": 24,
+        "cascade_commits": 0,
+        "native_budget_rejections": 350,
+        "retention_evictions": 0
+      }
+    },
+    "loopahead-huginn": {
+      "samples": 64,
+      "outcomes": 63,
+      "familywise_alpha": 1e-06,
+      "max_absolute_error": 0.068936,
+      "total_variation": 0.31753926590000003,
+      "outcomes_detail": [
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0015925248,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0015925248,
+          "bound": 0.24028376092289608
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0005971968,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0002985984,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0002985984,
+          "bound": 0.22240207037467716
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0040870656,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0072658943999999994,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00378432,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0031104,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0031104,
+          "bound": 0.2527941597376531
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0063700992,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0092549008,
+          "bound": 0.27168627912106247
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.011324620799999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.011324620799999997,
+          "bound": 0.29246214187466113
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.005898239999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.005898239999999999,
+          "bound": 0.2693240929650161
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.0010616831999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616831999999997,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0091664272,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0013271039999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0013271039999999997,
+          "bound": 0.23753834574044624
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.004423679999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.004423679999999999,
+          "bound": 0.26124493796287246
+        },
+        {
+          "sequence": [
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0192,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0035749999999999983,
+          "bound": 0.3173211081904109
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0005971968000000001,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0005971968000000001,
+          "bound": 0.22806231010028136
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0010616832,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0010616832,
+          "bound": 0.23450039911747877
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00055296,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00055296,
+          "bound": 0.22733293844945562
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 9.95328e-05,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 9.95328e-05,
+          "bound": 0.21662438942445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0006054912,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0150195088,
+          "bound": 0.22819601803979378
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.000124416,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.000124416,
+          "bound": 0.21755607748158914
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.00041472,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00041472,
+          "bound": 0.22484174094764997
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0091664272,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.005255999999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.005255999999999999,
+          "bound": 0.2659485726656205
+        },
+        {
+          "sequence": [
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.00432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00432,
+          "bound": 0.2606285827332722
+        },
+        {
+          "sequence": [
+            0,
+            2
+          ],
+          "expected_probability": 0.0144,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0144,
+          "bound": 0.3030025075272979
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0040870656,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.027162934399999998,
+          "bound": 0.25921591597892446
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.0072658943999999994,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.0239841056,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.00378432,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.00378432,
+          "bound": 0.2573174812973588
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0006811775999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0006811775999999999,
+          "bound": 0.2293760438972955
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.0041438303999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0041438303999999995,
+          "bound": 0.2595638543896272
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.0008514719999999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0008514719999999999,
+          "bound": 0.2318110035498756
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.0028382399999999997,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.012786760000000001,
+          "bound": 0.2508279780502445
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.0046618091999999995,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0046618091999999995,
+          "bound": 0.2626334164596308
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.028359339299999998,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.018515660700000002,
+          "bound": 0.3400873164915169
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0058272615,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0058272615,
+          "bound": 0.2689605500608373
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.04420085759999999,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.01295085759999999,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0009503215999999981,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.008287660799999999,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.008287660799999999,
+          "bound": 0.28047017152319376
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.035970749999999996,
+          "count": 4,
+          "empirical_probability": 0.0625,
+          "absolute_error": 0.026529250000000004,
+          "bound": 0.35608782393736516
+        },
+        {
+          "sequence": [
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.029564999999999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.029564999999999998,
+          "bound": 0.3427672582518334
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "expected_probability": 0.0072658944,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0083591056,
+          "bound": 0.27593701543070265
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            1
+          ],
+          "expected_probability": 0.044200857600000004,
+          "count": 3,
+          "empirical_probability": 0.046875,
+          "absolute_error": 0.002674142399999996,
+          "bound": 0.3713792233548889
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          "expected_probability": 0.009082368,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.009082368,
+          "bound": 0.28380094358525365
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "expected_probability": 0.0688914432,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0532664432,
+          "bound": 0.40914770850781135
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            1
+          ],
+          "expected_probability": 0.025834291199999998,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.010209291199999998,
+          "bound": 0.3342659398043685
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            1,
+            2
+          ],
+          "expected_probability": 0.012917145599999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.002707854400000001,
+          "bound": 0.29808391076399954
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.056064,
+          "count": 8,
+          "empirical_probability": 0.125,
+          "absolute_error": 0.068936,
+          "bound": 0.39076991430909247
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "expected_probability": 0.006458572799999999,
+          "count": 1,
+          "empirical_probability": 0.015625,
+          "absolute_error": 0.0091664272,
+          "bound": 0.2721191451247423
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          "expected_probability": 0.0024219647999999994,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0024219647999999994,
+          "bound": 0.24762656808214445
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            0,
+            2
+          ],
+          "expected_probability": 0.0012109823999999997,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.0012109823999999997,
+          "bound": 0.2362507366664344
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "expected_probability": 0.016575321599999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.016575321599999998,
+          "bound": 0.30976107557281757
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "expected_probability": 0.029467238399999995,
+          "count": 2,
+          "empirical_probability": 0.03125,
+          "absolute_error": 0.0017827616000000053,
+          "bound": 0.34255220671305076
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.015347519999999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.015347519999999998,
+          "bound": 0.3060078691412186
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.012614399999999998,
+          "count": 0,
+          "empirical_probability": 0.0,
+          "absolute_error": 0.012614399999999998,
+          "bound": 0.2970441272157039
+        },
+        {
+          "sequence": [
+            1,
+            1,
+            2
+          ],
+          "expected_probability": 0.042047999999999995,
+          "count": 5,
+          "empirical_probability": 0.078125,
+          "absolute_error": 0.036077000000000005,
+          "bound": 0.36754732555582004
+        },
+        {
+          "sequence": [
+            1,
+            2
+          ],
+          "expected_probability": 0.1825,
+          "count": 14,
+          "empirical_probability": 0.21875,
+          "absolute_error": 0.036250000000000004,
+          "bound": 0.5143829234346903
+        },
+        {
+          "sequence": [
+            2
+          ],
+          "expected_probability": 0.15,
+          "count": 7,
+          "empirical_probability": 0.109375,
+          "absolute_error": 0.040624999999999994,
+          "bound": 0.49128847603613035
+        }
+      ],
+      "execution_counters": {
+        "lad_calls": 156,
+        "lad_tokens": 213,
+        "first_proposals": 868,
+        "second_proposals": 577,
+        "accepted_first": 93,
+        "accepted_second": 50,
+        "fallback_tokens": 18,
+        "cascade_commits": 0,
+        "native_budget_rejections": 0,
+        "retention_evictions": 0
+      }
+    }
+  },
+  "source_sha256": {
+    "check_stochastic_decode.py": "71933cbeae83d04ff159244244ff0a0549ce7b92acdc4b3750289524ad8ff97f",
+    "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "packed_dflash_evidence.py": "5a1bb1f3ae8b072f2d2c289121d04a266ae6ff3ec517afa2fb61d38cae161fd0",
+    "provenance.py": "0bca59993724fccdfd7fee78815e8c835ebec7a4cb494d7736490ef19900c44d"
+  },
+  "engine_sha256": {
+    "loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a"
+  },
+  "torch": "2.6.0+cu126",
+  "cuda_initialized": false,
+  "started_unix": 1794477310.2247088,
+  "finished_unix": 1794477310.6469276,
+  "new_gpu_runs": 0,
+  "limitations": [
+    "Synthetic vocabulary of three tokens and generation cap5, not real-model quality or speed.",
+    "Finite Monte Carlo with fixed seeds and a predeclared simultaneous bound, not a universal distribution proof.",
+    "Full target compute is replaced by a prefix-conditioned oracle; actual model numerical differences are checked separately."
+  ]
+}

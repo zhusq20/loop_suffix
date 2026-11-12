@@ -1,0 +1,20 @@
+{
+  "model": "huginn-3.5b",
+  "dataset": "humanevalplus",
+  "shard": 0,
+  "shards": 1,
+  "checkpoint_sha256": {
+    "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1",
+      "sha256": "47e93db5857a40365b5e171317070254f5a3d7b3db3adf0627ccbbf297c42ccb"
+    },
+    "dflash": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+      "sha256": "1f042df0f220118a949f867ba55f83d24873021db947d9e8169f333bfa0fe66c"
+    }
+  }
+}

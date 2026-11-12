@@ -1,0 +1,108 @@
+Loading ouro-2.6b
+`torch_dtype` is deprecated! Use `dtype` instead!
+{
+  "stage": "target_compatibility_only",
+  "model": "ouro-2.6b",
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "started_unix": 1794289244.7917194,
+  "status": "probe_complete_not_baseline_validation",
+  "torch": "2.6.0+cu126",
+  "transformers": "4.57.1",
+  "target_path": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "official_draft_import": "DFlashDraftModel",
+  "dflash_commit": "94e4abc5e0c31b67bc1a9d30f1cc34ece28a8756",
+  "source_sha256": {
+    "modeling_ouro.py": "c5c68fbb368ce2909c257ae2afc50719be8c91539333d3295e19312c4316f413",
+    "configuration_ouro.py": "950443e32929047aa08d02abad2e1888bc1914b3db988d3d675f70787f65dafb"
+  },
+  "prefill_logits_shape": [
+    1,
+    16,
+    49152
+  ],
+  "feature_shape": [
+    1,
+    16,
+    10240
+  ],
+  "cache_class": "DynamicCache",
+  "physical_layer_calls_per_forward": {
+    "0": 4,
+    "1": 4,
+    "2": 4,
+    "3": 4,
+    "4": 4,
+    "5": 4,
+    "6": 4,
+    "7": 4,
+    "8": 4,
+    "9": 4,
+    "10": 4,
+    "11": 4,
+    "12": 4,
+    "13": 4,
+    "14": 4,
+    "15": 4,
+    "16": 4,
+    "17": 4,
+    "18": 4,
+    "19": 4,
+    "20": 4,
+    "21": 4,
+    "22": 4,
+    "23": 4,
+    "24": 4,
+    "25": 4,
+    "26": 4,
+    "27": 4,
+    "28": 4,
+    "29": 4,
+    "30": 4,
+    "31": 4,
+    "32": 4,
+    "33": 4,
+    "34": 4,
+    "35": 4,
+    "36": 4,
+    "37": 4,
+    "38": 4,
+    "39": 4,
+    "40": 4,
+    "41": 4,
+    "42": 4,
+    "43": 4,
+    "44": 4,
+    "45": 4,
+    "46": 4,
+    "47": 4
+  },
+  "cache_slots": 192,
+  "embedding_accessor": "model.embed_tokens",
+  "after_block_cache_lengths": [
+    24
+  ],
+  "native_crop_lengths": [
+    16
+  ],
+  "native_crop_effective": true,
+  "rollback_repeat_logits_exact": true,
+  "rollback_repeat_features_exact": true,
+  "future_perturbation_prefix_logits_exact": true,
+  "future_perturbation_prefix_features_exact": true,
+  "single_token_after_partial_accept_shape": [
+    1,
+    1,
+    49152
+  ],
+  "final_cache_lengths": [
+    21
+  ],
+  "peak_allocated_bytes": 5412367872,
+  "limitations": [
+    "short fixed text only; not a trained DFlash pilot",
+    "no speed or task score reported",
+    "no AR versus speculative output equivalence claim",
+    "Huginn fixed noise table follows benchmark construction but uses capacity4096 for this diagnostic"
+  ],
+  "finished_unix": 1794289251.395343
+}

@@ -1,0 +1,34 @@
+{
+  "status": "partial_checkpoint_CPU_integrity_verified_not_training_complete",
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-000500",
+  "step": 500,
+  "parameters": 332621056,
+  "weight_tensors": 60,
+  "all_model_master_optimizer_tensors_finite": true,
+  "exported_weights_exactly_match_saved_draft": true,
+  "optimizer_tensor_count": 180,
+  "rank_rng_lengths": {
+    "0": {
+      "cpu": 5056,
+      "cuda": 16
+    },
+    "1": {
+      "cpu": 5056,
+      "cuda": 16
+    }
+  },
+  "cuda_initialized": false,
+  "sha256": {
+    "complete.json": "ceaddf50b965c95c9167085d058828a62e8889235224411393a8d78b80cc7fb4",
+    "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c",
+    "model.safetensors": "b6d0d85141d5598c67e7ba9958afcca83ffef67620728f3e4ff74500faa7085a",
+    "rng-rank0.pt": "be53d6f5e555df7de7b2882abff21a190e8f8f9ad1283d4814ac40a38937e39f",
+    "rng-rank1.pt": "cfd121029bbab87e5ab0b2c3b576b5647b5178f56adad2558c3622e9f121bffc",
+    "training-state.pt": "79b0613d0b1b1299fecf080c9e7cf73e9795eebe15eb95f976b58105f0f44419"
+  },
+  "verified_unix": 1794357354.306792,
+  "limitations": [
+    "CPU deserialization/finite values/equality checks only; no resumed optimizer update or CUDA RNG restore performed.",
+    "Full training, final CPU audit and benchmark are still pending."
+  ]
+}

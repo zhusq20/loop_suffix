@@ -1,0 +1,194 @@
+{
+  "train": {
+    "teacher_requests": 9025,
+    "teacher_gpu_hours": 4.052811038692792,
+    "features_requests": 9025,
+    "features_gpu_hours": 0.1070396011405521,
+    "feature_tensor_bytes": 20873476278,
+    "features_excluded": 0,
+    "teacher_completions": [
+      {
+        "requests": 2272,
+        "teachers_sha256": "8b514fe4c768b5f7d446884a008497d19179d6a7fa30318bcdddc405353c3a40",
+        "output_tokens": 1015723,
+        "finished_unix": 1794296510.4877012
+      },
+      {
+        "requests": 2267,
+        "teachers_sha256": "6564c72ed508548f501215223b32985d2ea2357eefd5c5ff2fc81bc4db99c88c",
+        "output_tokens": 1024854,
+        "finished_unix": 1794296520.3516223
+      },
+      {
+        "requests": 2246,
+        "teachers_sha256": "2bcb53a7bd37c4253775d12263c0d084c7bb4f34bb19483e9464a2ff88e1f7c3",
+        "output_tokens": 1004422,
+        "finished_unix": 1794296465.6514754
+      },
+      {
+        "requests": 2240,
+        "teachers_sha256": "8d435d3e3307133cfbf4f5f0a9fbaaab0307b842dd13353be5f525c4236308f9",
+        "output_tokens": 999526,
+        "finished_unix": 1794296456.072388
+      }
+    ],
+    "feature_completions": [
+      {
+        "requests": 2272,
+        "bytes": 5247045640,
+        "no_eligible_anchors": 0,
+        "index_sha256": "71ccf4d8503f91bed03a4b21445293c52c8dd57374c80aaa0290527e851ede0d",
+        "finished_unix": 1794297443.6563087
+      },
+      {
+        "requests": 2267,
+        "bytes": 5310781556,
+        "no_eligible_anchors": 0,
+        "index_sha256": "ec345820f0c1c45b886033e6ef7184eab7acad8b8289d6d5d49bf534708c1cc3",
+        "finished_unix": 1794297327.4991384
+      },
+      {
+        "requests": 2246,
+        "bytes": 5176957924,
+        "no_eligible_anchors": 0,
+        "index_sha256": "c2d7059a7452f8bb8a746d36f94f0f8830f995e9a7aca6707a804c0f4ae2a42a",
+        "finished_unix": 1794297280.303164
+      },
+      {
+        "requests": 2240,
+        "bytes": 5138691158,
+        "no_eligible_anchors": 0,
+        "index_sha256": "6c734c7a986d0c764f32bbab1a2d3893a5d2c439ecced06be88069d93a8f5c1c",
+        "finished_unix": 1794297315.828918
+      }
+    ]
+  },
+  "dev": {
+    "teacher_requests": 782,
+    "teacher_gpu_hours": 0.4021108269029193,
+    "features_requests": 782,
+    "features_gpu_hours": 0.01948723442024655,
+    "feature_tensor_bytes": 1862063362,
+    "features_excluded": 0,
+    "teacher_completions": [
+      {
+        "requests": 206,
+        "teachers_sha256": "a260b0c4f34fedd36c2cc1eb7455e11a95d2b210001aaa93d1d82b88352e88b1",
+        "output_tokens": 89155,
+        "finished_unix": 1794296920.9883192
+      },
+      {
+        "requests": 192,
+        "teachers_sha256": "872ce69d355b597c1cc02cc7696e1a9a67dd4901711d843f6b75b26a2c457faf",
+        "output_tokens": 84029,
+        "finished_unix": 1794296870.8053386
+      },
+      {
+        "requests": 192,
+        "teachers_sha256": "07ea1cf58bec73349c2116d0ab6dc8f37cb277f78a92f9a2906a10ccb09f81d7",
+        "output_tokens": 84633,
+        "finished_unix": 1794296830.3766646
+      },
+      {
+        "requests": 192,
+        "teachers_sha256": "a8e238ec8b5899913a90fbb119174263bb3204aef7075c27e1e5cdd5dd5b36f6",
+        "output_tokens": 83218,
+        "finished_unix": 1794296842.2475772
+      }
+    ],
+    "feature_completions": [
+      {
+        "requests": 206,
+        "bytes": 495667520,
+        "no_eligible_anchors": 0,
+        "index_sha256": "67305d63e83a63c4586de7f8c4df11dbc7ec4eddb8571f836530a2a8520710f3",
+        "finished_unix": 1794297463.8893995
+      },
+      {
+        "requests": 192,
+        "bytes": 436794582,
+        "no_eligible_anchors": 0,
+        "index_sha256": "3455d490e14cd93b1b33ce2201120c033baabe498f753cbd06168e17e6e1c10c",
+        "finished_unix": 1794297346.3247266
+      },
+      {
+        "requests": 192,
+        "bytes": 454833558,
+        "no_eligible_anchors": 0,
+        "index_sha256": "3071df633d7d4c8e2cfaee1e5fd5d3dc5df41895aa760e954f51646ece98b615",
+        "finished_unix": 1794297298.3403182
+      },
+      {
+        "requests": 192,
+        "bytes": 474767702,
+        "no_eligible_anchors": 0,
+        "index_sha256": "dec0e4fed1423ec1fab12a1babd580ec8a985b45c1054a5cd728d1f71dcbe1ec",
+        "finished_unix": 1794297334.0911145
+      }
+    ]
+  },
+  "confirmation": {
+    "teacher_requests": 782,
+    "teacher_gpu_hours": 0.3980827588505215,
+    "features_requests": 782,
+    "features_gpu_hours": 0.020983885725339255,
+    "feature_tensor_bytes": 1863340354,
+    "features_excluded": 0,
+    "teacher_completions": [
+      {
+        "requests": 206,
+        "teachers_sha256": "ae39f61d2b1c5b999df383be1e9631edca0bcb4f28330f3ac673bbf7e4c0bbee",
+        "output_tokens": 89745,
+        "finished_unix": 1794297330.949779
+      },
+      {
+        "requests": 192,
+        "teachers_sha256": "bac563827a9e09872b93b2ced73808aabb6b31bb190697962d57648efb4fcdab",
+        "output_tokens": 85526,
+        "finished_unix": 1794297220.3302977
+      },
+      {
+        "requests": 192,
+        "teachers_sha256": "b43f38140ff606fbf9ff15b4f63fb42bc9eb099fa0db259d33924c98ca4a355d",
+        "output_tokens": 87161,
+        "finished_unix": 1794297189.009042
+      },
+      {
+        "requests": 192,
+        "teachers_sha256": "a2a082e8ec785fb2267f7772ef5af89334133c46574fdd25dd467bab79f095ee",
+        "output_tokens": 80638,
+        "finished_unix": 1794297211.3362036
+      }
+    ],
+    "feature_completions": [
+      {
+        "requests": 206,
+        "bytes": 500003008,
+        "no_eligible_anchors": 0,
+        "index_sha256": "f69acf2c64f786c92dd3842c0d5d7058896673a8ea97afb6c6e60167bc44bc6a",
+        "finished_unix": 1794297484.3543272
+      },
+      {
+        "requests": 192,
+        "bytes": 440465622,
+        "no_eligible_anchors": 0,
+        "index_sha256": "3ee31d606207be52f4d6ce39701fd729874e116bdbf775443411ee63df8aa64c",
+        "finished_unix": 1794297367.9769218
+      },
+      {
+        "requests": 192,
+        "bytes": 464526230,
+        "no_eligible_anchors": 0,
+        "index_sha256": "c25b513e144b7de17c0af09208ac92ea7a6dc24b7412905189af2b1efb89a0f5",
+        "finished_unix": 1794297318.1228786
+      },
+      {
+        "requests": 192,
+        "bytes": 458345494,
+        "no_eligible_anchors": 0,
+        "index_sha256": "aec82cb894b1baee1e408189469daa04ff5419f93597b8628d57aaf1fc292262",
+        "finished_unix": 1794297352.6412454
+      }
+    ]
+  }
+}

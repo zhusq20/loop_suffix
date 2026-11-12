@@ -1,0 +1,244 @@
+{
+  "status": "complete_formal_sampling_cell_with_declared_limitations",
+  "checked_unix": 1794409674.62317,
+  "completed_cells": 29,
+  "expected_cells": 72,
+  "previous_commit": "1ee4b011eddbdac988fdd2418200a8e7d59785f3",
+  "previous_28_rows_and_agreements_unchanged": true,
+  "requests_per_stage": {
+    "ar": 500,
+    "dflash": 500,
+    "dflash-profile": 500
+  },
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "summaries": {
+    "ar": {
+      "decode_tokens": 205470,
+      "decode_s": 17816.09863936901,
+      "loops": 821880,
+      "tok_s": 11.532827930463068,
+      "gamma": 1.0
+    },
+    "dflash": {
+      "decode_tokens": 210330,
+      "decode_s": 7296.305071912706,
+      "loops": 296908,
+      "tok_s": 28.82691964315886,
+      "gamma": 2.8336050224311906
+    },
+    "dflash-profile": {
+      "decode_tokens": 210330,
+      "decode_s": 7249.92387714237,
+      "loops": 296908,
+      "tok_s": 29.01133909324627,
+      "gamma": 2.8336050224311906
+    }
+  },
+  "journal_sha256": {
+    "ar": "d56ed57190a2105d59ed704fad8651895c2707a7546f480d9b98ffba1c356892",
+    "dflash": "bf725d13532b4ff5986e6384698bb9871dc1af7e6b1fc6650d576658b901ad79",
+    "dflash-profile": "1f56f7313177b8ed9f6d252fc1982eb7f2c49cca3d25b1e1d287f4f037e6e86c"
+  },
+  "execution_evidence": {
+    "ar": {
+      "kind": "actual_successful_process_exit",
+      "pid": 420686,
+      "launch_sha256": "8d4345d2de6380d104976710d5cdd59b5042c3b659495bf36caf743b4bae0884",
+      "exit_receipt_sha256": "3af241fba080ce91494a1ed00c3328c95720d01620b1472d8ae1c211a568f7cd",
+      "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+    },
+    "dflash": {
+      "kind": "actual_successful_process_exit",
+      "pid": 134675,
+      "launch_sha256": "ac556f6c154b4af8912de1fe03ffa79266a714ae9d38ac56f236fce01a015d2b",
+      "exit_receipt_sha256": "c4b9f5a5aae47b88675ebf2f5cc61fc812e39497dc7189c977bef376bfb48533",
+      "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+    },
+    "dflash-profile": {
+      "kind": "actual_successful_process_exit",
+      "pid": 217392,
+      "launch_sha256": "55a3e24529dc39a98d59bbff88e3eea03116aa21a5ce11693419f9cfb226aa8a",
+      "exit_receipt_sha256": "db85eeaf092b91ab2dba1b4ab33d810aa795032b4dc307ec75f9896eda1e4fb5",
+      "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+    }
+  },
+  "actual_exit_receipts": {
+    "ar": {
+      "name": "dflash-stack-ouro-2.6b-math500-t1-ar-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "ar",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "1",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1"
+      ],
+      "pid": 420686,
+      "started_unix": 1794377022.8435104,
+      "exit_code": 0,
+      "finished_unix": 1794394917.3838923
+    },
+    "dflash": {
+      "name": "dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "1",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+      ],
+      "pid": 134675,
+      "started_unix": 1794394917.4335377,
+      "exit_code": 0,
+      "finished_unix": 1794402292.9570785
+    },
+    "dflash-profile": {
+      "name": "dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "math500",
+        "--temperature",
+        "1",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+        "--profile"
+      ],
+      "pid": 217392,
+      "started_unix": 1794402293.0055752,
+      "exit_code": 0,
+      "finished_unix": 1794409617.4776685
+    }
+  },
+  "worker_exit": {
+    "worker_pid": 420683,
+    "started_unix": 1794377022.8031979,
+    "job_sha256": "69bcf4e9fb89880c04382148f08fe9140b9326d892d739662620200f07a3f36d",
+    "source_sha256": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "exit_code": 0,
+    "finished_unix": 1794409617.5042179
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794409619.9838748,
+    "completion_basis": "worker_exit_receipt"
+  },
+  "training_audit_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "checkpoint_sha256": {
+    "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+    "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+  },
+  "profile_all_tokens_and_verification_counts_match_timed_run": true,
+  "draft_gpu_s": 251.03102345061308,
+  "profile_wall_relative_difference": -0.006356805850797231,
+  "result": {
+    "method": "dflash",
+    "model": "ouro-2.6b",
+    "benchmark": "math500",
+    "temperature": "1",
+    "eta": "2.499553432772095",
+    "gamma": "2.8336050224311906",
+    "method_tok_s": "28.82691964315886",
+    "ar_tok_s": "11.532827930463068",
+    "drafter_time_frac": "0.03462533230756617",
+    "match_rate": "0.0",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+    "eta_latency": "2.441797384261315",
+    "eta_throughput": "2.499553432772095",
+    "aligned_token_match_rate": "0.021679174677996238",
+    "method_decode_tokens": "210330",
+    "ar_decode_tokens": "205470",
+    "method_decode_s": "7296.305071912706",
+    "ar_decode_s": "17816.09863936901",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794377080.3672972",
+    "ar_last_completed_unix": "1794394916.4624119",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-math500-t1-ar-v1"
+  },
+  "agreement": {
+    "match_rate": 0.0,
+    "aligned_token_match_rate": 0.021679174677996238,
+    "exact_sequences": 0,
+    "requests": 500
+  },
+  "output_sha256": {
+    "results.csv": "6f55b8a00bf6011da87e4ea2f3ecaab7e18023ed08a0c09b8d744a17a2cc837b",
+    "table2_rows.md": "4157d54776dac9201ad4e9c0a1ee6d9c51d3c5dc0a86f009bd7ad91ee075f266",
+    "formal-agreement.json": "4b7d6750a3da3b3f16694f94f40b5ab051cc37c1bb79e7ca596a5e069c482b46",
+    "formal-matrix-status.json": "5829f7cc1fc243b43fe94b1d3db938736e6a1de15f16bcbe15ffba5eb0b3a994"
+  },
+  "collector_exit_code": 0,
+  "collection_source_sha256": {
+    "collect_results.py": "a41bb742e543a7f828ce2bafa87262bda4ba4657f05d972c0e5df1e17e43a60d",
+    "result_evidence.py": "d3b438b9ca068a48f6f68f00cad358e6b52d95ad7a713609846faba9161d0d2a"
+  },
+  "verification_source_sha256": "54ddd8edc978833a307fe9acda1c929adf3379ba5dc123f921ba2f4ffc0d4a80",
+  "limitations": [
+    "T1 same-seed token agreement is descriptive, not a sampling-distribution proof.",
+    "Shared-host timings remain uncorrected; profile wall differences include run variation.",
+    "The original AR and worker were retained across the native-driver environment correction.",
+    "29/72 cells complete; final training, remaining benchmarks and diagnostics are pending."
+  ]
+}

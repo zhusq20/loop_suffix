@@ -1,0 +1,255 @@
+{
+  "status": "complete_formal_narrow_cell_greedy_diagnostics_pending",
+  "checked_unix": 1794413452.2638543,
+  "completed_cells": 30,
+  "expected_cells": 72,
+  "previous_commit": "56fb7cb8d8cdfcb70a5b1c99edd527cec82be88d",
+  "previous_29_rows_and_agreements_unchanged": true,
+  "requests_per_stage": {
+    "ar": 164,
+    "dflash": 164,
+    "dflash-profile": 164
+  },
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "summaries": {
+    "ar": {
+      "decode_tokens": 25297,
+      "decode_s": 2611.524722635746,
+      "loops": 809504,
+      "tok_s": 9.686678353352281,
+      "gamma": 1.0
+    },
+    "dflash": {
+      "decode_tokens": 25532,
+      "decode_s": 498.0394169688225,
+      "loops": 126144,
+      "tok_s": 51.26501865132156,
+      "gamma": 6.47691527143582
+    },
+    "dflash-profile": {
+      "decode_tokens": 25532,
+      "decode_s": 489.71433463692665,
+      "loops": 126144,
+      "tok_s": 52.13651754533463,
+      "gamma": 6.47691527143582
+    }
+  },
+  "journal_sha256": {
+    "ar": "47e93db5857a40365b5e171317070254f5a3d7b3db3adf0627ccbbf297c42ccb",
+    "dflash": "1f042df0f220118a949f867ba55f83d24873021db947d9e8169f333bfa0fe66c",
+    "dflash-profile": "80f82855be5d64f5337d30306de34df910ee77bebf8b21a810bde679bae82e5d"
+  },
+  "execution_evidence": {
+    "ar": {
+      "kind": "actual_successful_process_exit",
+      "pid": 299585,
+      "launch_sha256": "b402b38edb7c3ff94d5f45375ae09360699eec23c1464e6d33019bc3f5c402f3",
+      "exit_receipt_sha256": "84e0f7ba03c05315f5c148580377a6879cb461930ff61ac0ce0fa43ddcfa22f9",
+      "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+    },
+    "dflash": {
+      "kind": "actual_successful_process_exit",
+      "pid": 330907,
+      "launch_sha256": "74d7b86f557f4426b481c7f2ad4bf4e40803f63bd0acd96e1b0e66c9d0cd4ca6",
+      "exit_receipt_sha256": "6966950d195f22d679133bf6eb3a183b77ff11f62c052d4251ac76a9a149b9a4",
+      "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+    },
+    "dflash-profile": {
+      "kind": "actual_successful_process_exit",
+      "pid": 336954,
+      "launch_sha256": "de71a23ccc9679afba4ce66a3a7a2f66b70b7126a27a80b4da7fb21712cbe44e",
+      "exit_receipt_sha256": "23278fb8cf26e8284551197235b06481080902615a2fdecf2410392bbb5d36c3",
+      "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+    }
+  },
+  "actual_exit_receipts": {
+    "ar": {
+      "name": "dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "ar",
+        "--dataset",
+        "humanevalplus",
+        "--temperature",
+        "0",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1"
+      ],
+      "pid": 299585,
+      "started_unix": 1794409621.2846792,
+      "exit_code": 0,
+      "finished_unix": 1794412296.4463847
+    },
+    "dflash": {
+      "name": "dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "humanevalplus",
+        "--temperature",
+        "0",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886"
+      ],
+      "pid": 330907,
+      "started_unix": 1794412296.4966648,
+      "exit_code": 0,
+      "finished_unix": 1794412850.5153894
+    },
+    "dflash-profile": {
+      "name": "dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_projected_dflash.py",
+        "--model",
+        "huginn-3.5b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "humanevalplus",
+        "--temperature",
+        "0",
+        "--gpu",
+        "4",
+        "--cpus",
+        "48-51",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+        "--profile"
+      ],
+      "pid": 336954,
+      "started_unix": 1794412850.568588,
+      "exit_code": 0,
+      "finished_unix": 1794413394.4683921
+    }
+  },
+  "worker_exit": {
+    "worker_pid": 299577,
+    "started_unix": 1794409620.377158,
+    "job_sha256": "ba3a3dd997830dc5395f85d2f417ff246ee35324652d375a9b5cfe360695f37f",
+    "source_sha256": "d11477f98292a0a650dc94c15a3deee80eeeca347f63db4835b8fda09800410d",
+    "exit_code": 0,
+    "finished_unix": 1794413394.5052114
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794413402.704787,
+    "completion_basis": "direct_child_exit_code"
+  },
+  "training_binding": {
+    "training_name": "dflash-huginn-narrow-formal-v1",
+    "training_root": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1",
+    "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-formal-v1/checkpoint-008886",
+    "audit_report": "/ossfs/workspace/sz/loopfill/experiments/baselines/training/dflash-huginn-narrow-formal-audit-v1/report.json",
+    "audit_report_sha256": "02bc2ffd720010a53686a14123797f43a7c12032eb713c8d307647ef451daaa6",
+    "queue_complete_sha256": "dcee2382eeb36f12083c16f17ff4a74593d833786ddbf696f803b90080a0c9aa",
+    "weights_sha256": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "completion_basis": "separate_projected_training_queue_exit0_export_and_full_CPU_audit",
+    "interrupted_wide_training": "dflash-huginn-3.5b-formal-v1 remains incomplete and separately costed"
+  },
+  "checkpoint_sha256": {
+    "model.safetensors": "fde0e64955405f5f38de8566d09459db89a8547d367ab321edf38586324b3d48",
+    "config.json": "0ab0dd222e4209a26e5e58d9cdc8a015a2a0406fe93bf49e446a8fbe9aa22e9c"
+  },
+  "profile_all_tokens_and_verification_counts_match_timed_run": true,
+  "draft_gpu_s": 15.112387960433962,
+  "profile_wall_relative_difference": -0.016715709737522566,
+  "result": {
+    "method": "dflash",
+    "model": "huginn-3.5b",
+    "benchmark": "humanevalplus",
+    "temperature": "0",
+    "eta": "5.292321762039328",
+    "gamma": "6.47691527143582",
+    "method_tok_s": "51.26501865132156",
+    "ar_tok_s": "9.686678353352281",
+    "drafter_time_frac": "0.030859598936670417",
+    "match_rate": "0.8414634146341463",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run; Our narrow Huginn adaptation:5layers,H2048,FF5632,332621056 trainable parameters with target-width projections; not an author checkpoint",
+    "eta_latency": "5.243610512858722",
+    "eta_throughput": "5.292321762039328",
+    "aligned_token_match_rate": "0.9050279329608939",
+    "method_decode_tokens": "25532",
+    "ar_decode_tokens": "25297",
+    "method_decode_s": "498.0394169688225",
+    "ar_decode_s": "2611.524722635746",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794409700.9087298",
+    "ar_last_completed_unix": "1794412295.3362548",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1"
+  },
+  "agreement": {
+    "match_rate": 0.8414634146341463,
+    "aligned_token_match_rate": 0.9050279329608939,
+    "exact_sequences": 138,
+    "requests": 164
+  },
+  "first_divergences": 26,
+  "output_sha256": {
+    "results.csv": "caadc04a877e0f1d1d0bc4bd6c1c6f0f8605ca44e09be6a6d3d91b010430b618",
+    "table2_rows.md": "e4e1d5724776e54870cb12d25e838a533a8dc3c87d3750d9e3ce61040f9922fb",
+    "formal-agreement.json": "6812ba9748c416dfac636a9e93959884a0e940fac99145d6486f36ef8ccd97d6",
+    "formal-matrix-status.json": "949bee57745dc81018426796564b975446d63425437988e49fc6dab698479694"
+  },
+  "collector_exit_code": 0,
+  "collection_source_sha256": {
+    "collect_results.py": "a41bb742e543a7f828ce2bafa87262bda4ba4657f05d972c0e5df1e17e43a60d",
+    "result_evidence.py": "d3b438b9ca068a48f6f68f00cad358e6b52d95ad7a713609846faba9161d0d2a"
+  },
+  "verification_source_sha256": "30a40d8226f958c596ec86ebff603acf8458cce4c54b5a3fc1cfd2164d64b796",
+  "limitations": [
+    "All 26 greedy first divergences still require actual-prefix BF16 and FP32 diagnostics.",
+    "Shared-host timings remain uncorrected; profile wall differences include run variation.",
+    "Own 332.6M Huginn width adaptation, not an author checkpoint or equal-training wide/narrow comparison.",
+    "30/72 cells complete; appendix training, remaining benchmarks and diagnostics are pending."
+  ]
+}

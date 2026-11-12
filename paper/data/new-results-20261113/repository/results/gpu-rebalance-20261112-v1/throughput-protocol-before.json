@@ -1,0 +1,166 @@
+{
+  "created_unix": 1794419563.100001,
+  "models": {
+    "huginn-3.5b": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-huginn-3.5b-formal-v1/checkpoint-013500/lad.pt",
+      "sha256": "e327989bf37929e062b0a80f4f5b73316a46975da8e439e9a849ac4b748a082c",
+      "training_complete_sha256": "6bb35ca183ee8eb40b5805a462114ce0905402e0bf0a605333daa5c9b7248e18",
+      "input_sha256": "531bdf2140144e2a3447f713a8ade5ba87e128e533f3cbd1f6ce418a61aec10e",
+      "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c"
+    },
+    "ouro-2.6b": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1/checkpoint-013000/lad.pt",
+      "sha256": "c445ce786366dace9097d0969b90e195dd920bfcc3f90babec9ba900063a5630",
+      "training_complete_sha256": "60f9a7d4b0ebd12210c103a059d9924800658e5335daa91abb6a90dcbcb15785",
+      "input_sha256": "2db1b17cf15243f00cc3ecfb60bae3d7734ab28a3eb667e6583ef5051634384d",
+      "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd"
+    }
+  },
+  "batches": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "planned_cells": 10,
+  "requests_per_cell": 480,
+  "max_new_tokens": 1024,
+  "temperature": 0,
+  "dtype": "bfloat16",
+  "prefill_chunk_size": 128,
+  "schedule": "continuous",
+  "graph": false,
+  "compile": false,
+  "pad_decode_rows": false,
+  "max_seq": 2688,
+  "seed": 0,
+  "repeats": 1,
+  "warmup_requests": "min(2B,480)",
+  "warmup_max_new_tokens": 32,
+  "table2_protocol": "/ossfs/workspace/sz/loopfill/results/loopfill-table2-20261107-v2/protocol.json",
+  "table2_protocol_sha256": "49e2609728153a2d85ed3f2e0c13c2923aad702ddc38cdb6762ce19bbdb6a920",
+  "source_sha256": {
+    "evaluate_loopahead_throughput.py": "f6c040e259ba9fcce68aa1b3f5d06e33a7ecd0d642d4ec19ea23c71e2c0091c1",
+    "orchestrate_loopahead_throughput.py": "139930b6633ba2142f1ad986560375515ae3bb4050fe28ccc6d3035bcee2c759",
+    "gpu_startup.py": "587b57d564494fdb0f0c33fbe23731ca2b0646ab941f6567fb00603947baf0a4",
+    "gpu_allocation.py": "229530c6e531e8a482a95969a16c9c88117074031f7c51add87a8f0550be9c88",
+    "configs/gpu-allocation.json": "c8a91644f336b671539b7e74f9df863fcc1be50603f5ba72481637db5a40deb7",
+    "native_cuda_env.py": "70df7f5a13daac035db62efad20840404f4f13d738d64ec22d1bd5e3ebbf41d6",
+    "loopahead/__init__.py": "ce232c4381012bbd37e3ba0d1456ad3922109c5b402a4ce66979d2da8c5b9e30",
+    "loopahead/admission.py": "6652ed847e69526959b6fcec57318d4790201743729dd917e96f7283941468c6",
+    "loopahead/batch.py": "291f4ecc84194bb834a4e4b4c58405270837657061725f006a0ced7b32a76f6b",
+    "loopahead/decode.py": "3995ee42b1f7e61b5980384e9cd5baef09ba841a64f07ba5c73990bff48a2cbd",
+    "loopahead/engine.py": "c94e7ea5008e69c1dc61f547163fba18e722d98be9663001b67d673f71f566c1",
+    "loopahead/lad.py": "877a6d8a94831ac6fd0c51ce3e2be8f8faa6de42f7f06da37904086e3e87d023",
+    "loopahead/sampling.py": "651711468585d8f81b1d6f81ef47f3abbaaabbf2bff59336426c150775f65dbc",
+    "loopahead/test_admission.py": "ac0d9267df479bb57fa73236e985950c45aa0c0651ffe1cce711b9a36cbec805",
+    "loopahead/test_batch.py": "b607732a4dbf9320452ef9ec18783a33c2632ae45a8c74752a153856f6b781d1",
+    "loopahead/test_decode.py": "b34bb46ba92403f1ef431d0c709cbf7750224eda5843c8a14e41de7ec81a82b0",
+    "loopahead/test_lad.py": "865756b678d0520760b683c2ce82e788fb019b263d4939ed6765dc247541560e",
+    "loopahead/test_sampling.py": "45a1fa8f45f505d5f134ac85239fc6bc7052a2ba23811969a831dc7152c54c56",
+    "loopahead/test_training_data.py": "44fe923890221925317f4f43c7b73a7e128d49b02e01be63b8a61f7baf42e266",
+    "loopahead/training_data.py": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8"
+  },
+  "jobs": [
+    {
+      "id": "huginn-3.5b-b1",
+      "model": "huginn-3.5b",
+      "batch": 1,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b1",
+      "model": "ouro-2.6b",
+      "batch": 1,
+      "mode": "formal"
+    },
+    {
+      "id": "huginn-3.5b-b2",
+      "model": "huginn-3.5b",
+      "batch": 2,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b2",
+      "model": "ouro-2.6b",
+      "batch": 2,
+      "mode": "formal"
+    },
+    {
+      "id": "huginn-3.5b-b4",
+      "model": "huginn-3.5b",
+      "batch": 4,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b4",
+      "model": "ouro-2.6b",
+      "batch": 4,
+      "mode": "formal"
+    },
+    {
+      "id": "huginn-3.5b-b8",
+      "model": "huginn-3.5b",
+      "batch": 8,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b8",
+      "model": "ouro-2.6b",
+      "batch": 8,
+      "mode": "formal"
+    },
+    {
+      "id": "huginn-3.5b-b16",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "mode": "formal"
+    },
+    {
+      "id": "ouro-2.6b-b16",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "mode": "formal"
+    }
+  ],
+  "preflight": [
+    {
+      "id": "huginn-3.5b-fp32-b2",
+      "model": "huginn-3.5b",
+      "batch": 2,
+      "mode": "validate"
+    },
+    {
+      "id": "ouro-2.6b-fp32-b2",
+      "model": "ouro-2.6b",
+      "batch": 2,
+      "mode": "validate"
+    },
+    {
+      "id": "huginn-3.5b-bf16-b16",
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "mode": "smoke"
+    },
+    {
+      "id": "ouro-2.6b-bf16-b16",
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "mode": "smoke"
+    }
+  ],
+  "allowed_gpus": [
+    2,
+    3,
+    4,
+    6
+  ],
+  "timing": "Output token count / finite-stream E2E wall time including prefill, scheduling and fsynced request journal.",
+  "dflash": "Stopped at user request due to outdated code; this queue cannot launch DFlash.",
+  "historical_references": "Original Table 2 AR and LoopFill; cross-date, no drift correction.",
+  "limitations": [
+    "No throughput data for Ouro-1.4B: a trained LoopAhead checkpoint is not available.",
+    "Single measurement per cell; shared-host conditions and BF16 output differences remain."
+  ]
+}

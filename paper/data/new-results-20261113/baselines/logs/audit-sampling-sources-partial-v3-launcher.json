@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/audit_sampling_sources.py",
+    "--tests",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/sampling-CPU-evidence-v1",
+    "--partial",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/sampling-source-coverage-partial-v3"
+  ],
+  "pid": 69103,
+  "started_unix": 1794510966.858809,
+  "source_sha256": "aab98ffc438e747a92ac602d896a4c74df8969d75ebcdd10b27a5a1d981b291d"
+}

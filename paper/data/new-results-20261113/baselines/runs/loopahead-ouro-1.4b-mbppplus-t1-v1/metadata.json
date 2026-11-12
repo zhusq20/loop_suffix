@@ -1,0 +1,98 @@
+{
+  "model": "ouro-1.4b",
+  "model_revision": "574fa66cb8bf5abdc979642d01cf2b79b16bfab1",
+  "method": "loopahead",
+  "dataset": "mbppplus",
+  "prompt_format": "chat",
+  "input_sha256": "92e6e65d36ae42d026814f83e46f9e0ab7fc965d1b403b450ea68017dfd44f71",
+  "count": 378,
+  "full_count": 378,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "dtype": "bfloat16",
+  "max_seq": 768,
+  "max_new_tokens": 512,
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Released tokenizer EOS plus chat end token."
+  },
+  "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3",
+  "cpu_affinity": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "physical_nodes": 32,
+  "config": {
+    "total": 4,
+    "first": 1,
+    "second": 2,
+    "future": 3,
+    "retain": 32,
+    "execute": 16,
+    "guard": 2,
+    "stride": 1,
+    "family": "ouro",
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+  "torch": "2.6.0+cu126",
+  "transformers": "4.55.0",
+  "frozen_source_sha256": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "scripts/loop_latency_inputs.py": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+    "scripts/loop_latency_suite.py": "bfacd730288af7962b5e88ac3c828a9ef8476b7bfc862bcea436d7a779f4fc62",
+    "scripts/loop_latency_worker.py": "9133eed7f81f24861263be2fae0fdab2b0783b0ab3a3bfe849da5d35d35e702c",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "0dfdf55dd5380dc4502e26fd41b4778b200a940d372c48fb325d0d95471347e6",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_sampling.py": "03488c4a739c412711b0812e92d73c20f05da157c02b2da452c61c108bdde6c3",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "03a55dae40f45bf4081b14197e7d079e29d318f0370b9535cc9e6177ac8b760b"
+  },
+  "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-1.4b-formal-v1/checkpoint-013533/lad.pt",
+  "checkpoint_sha256": "d219fda331aeaad2d59ffd41576a56b7d5f2758a8bbd1899d9fcf1ec4692e311",
+  "admission_sha256": "b39fc04e0c68bcf3f9c5e161ce17afe4635f9ecc2436d09002fd5f98893c57fa",
+  "random_lad": false,
+  "graph": false,
+  "compile": false,
+  "trace": false,
+  "pilot": false,
+  "dev_calibration": false,
+  "native_only": false,
+  "profile_dev": false,
+  "paper_check": false,
+  "paper_check_limitations": [],
+  "reportable": true
+}

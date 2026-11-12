@@ -1,0 +1,39 @@
+{
+  "checked_unix": 1794465540.7708905,
+  "controller": {
+    "pid": 45833,
+    "state": "S",
+    "start_ticks": "48050473",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/source/orchestrate_baseline_diagnostics_resume.py",
+      "--plan",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/appendix-loopahead-diagnostics-v1/plan.json"
+    ]
+  },
+  "status": {
+    "stage": "waiting_for_measurement_priority",
+    "controller_pid": 45833,
+    "updated_unix": 1794465539.8499138,
+    "expected_groups": 6,
+    "validated_groups": [],
+    "running": {},
+    "ready": [
+      "loopahead-ouro-1.4b-gsm8k-v1-observed",
+      "loopahead-ouro-1.4b-math500-v1-observed",
+      "loopahead-ouro-1.4b-bbh-v1-observed",
+      "loopahead-ouro-1.4b-humanevalplus-v1-observed",
+      "loopahead-ouro-1.4b-mbppplus-v1-observed",
+      "loopahead-ouro-1.4b-specbench-v1-observed"
+    ],
+    "priority_pending": [
+      "table1-huginn-3.5b-mbppplus-t1-profile",
+      "table1-ouro-2.6b-mbppplus-t1-profile",
+      "table1-huginn-3.5b-specbench-t1-profile",
+      "table1-ouro-2.6b-specbench-t1-profile"
+    ],
+    "failures": {}
+  },
+  "plan_sha256": "6cb42950ddf435d5afb68eb2cad0c2378878027f674c71a4b9d0ef56939d9083"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "loopahead-ouro-2.6b-formal-v1",
+  "pid": 512271,
+  "argv": [
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_loopahead.py",
+    "--model",
+    "ouro-2.6b",
+    "--features",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/features",
+    "--gpu",
+    "2",
+    "--cpus",
+    "8-11",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/loopahead-ouro-2.6b-formal-v1"
+  ],
+  "started_unix": 1794298119.4500506,
+  "exit_code": 0,
+  "finished_unix": 1794298654.4001207
+}

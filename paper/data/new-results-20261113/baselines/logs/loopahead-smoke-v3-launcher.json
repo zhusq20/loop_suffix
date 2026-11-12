@@ -1,0 +1,42 @@
+[
+  {
+    "name": "loopahead-smoke-ouro-2.6b-fp32-v1",
+    "pid": 479689,
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/smoke_loopahead.py",
+      "--model",
+      "ouro-2.6b",
+      "--dtype",
+      "float32",
+      "--gpu",
+      "1",
+      "--cpus",
+      "4-7",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-smoke-ouro-2.6b-fp32-v1"
+    ],
+    "started_unix": 1794294045.3881245
+  },
+  {
+    "name": "loopahead-smoke-huginn-3.5b-v1",
+    "pid": 479690,
+    "argv": [
+      "/tmp/loopfill-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/smoke_loopahead.py",
+      "--model",
+      "huginn-3.5b",
+      "--dtype",
+      "bfloat16",
+      "--gpu",
+      "0",
+      "--cpus",
+      "0-3",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-smoke-huginn-3.5b-v1"
+    ],
+    "started_unix": 1794294045.4022362
+  }
+]

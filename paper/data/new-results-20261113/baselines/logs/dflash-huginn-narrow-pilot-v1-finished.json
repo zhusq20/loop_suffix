@@ -1,0 +1,31 @@
+{
+  "name": "dflash-huginn-narrow-pilot-v1",
+  "argv": [
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/train_projected_dflash.py",
+    "--model",
+    "huginn-3.5b",
+    "--teachers",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/teachers/dflash-train/huginn-3.5b",
+    "--cpu-groups",
+    "12-15",
+    "--epochs",
+    "1",
+    "--micro-batch",
+    "4",
+    "--checkpoint-layers",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-huginn-narrow-pilot-v1",
+    "--accumulation",
+    "8",
+    "--save-every",
+    "50",
+    "--selection-manifest",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/data/manifests/dflash-pilot.jsonl"
+  ],
+  "pid": 44810,
+  "started_unix": 1794352638.400462,
+  "exit_code": 0,
+  "finished_unix": 1794353244.9093328
+}

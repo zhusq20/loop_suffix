@@ -1,0 +1,200 @@
+{
+  "status": "complete_formal_cell_with_declared_limitations",
+  "checked_unix": 1794366569.9355125,
+  "completed_cells": 20,
+  "expected_cells": 72,
+  "previous_19_rows_and_agreements_unchanged": true,
+  "common_config_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "dtype",
+    "cuda",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity"
+  ],
+  "requests_per_stage": {
+    "ar": 300,
+    "dflash": 300,
+    "dflash-profile": 300
+  },
+  "summaries": {
+    "ar": {
+      "decode_tokens": 58994,
+      "decode_s": 5086.573546215892,
+      "loops": 235976,
+      "tok_s": 11.597984274480417,
+      "gamma": 1.0
+    },
+    "dflash": {
+      "decode_tokens": 62616,
+      "decode_s": 2219.2394461855292,
+      "loops": 90964,
+      "tok_s": 28.21507165782654,
+      "gamma": 2.7534409216833033
+    },
+    "dflash-profile": {
+      "decode_tokens": 62616,
+      "decode_s": 2223.143531292677,
+      "loops": 90964,
+      "tok_s": 28.16552288173273,
+      "gamma": 2.7534409216833033
+    }
+  },
+  "journal_sha256": {
+    "ar": "35299574da9f60d0c697fddd0de328d5cefbc8cac95d58eb4909659d31bad90e",
+    "dflash": "1074b86b730857feea78bbc72bde2d042f6c518688f301bd64dafb172da21530",
+    "dflash-profile": "28c148e29f25c7440ea8b304aa35188974736147acb625a2bfcbc54c522ba733"
+  },
+  "source_manifest_sha256": {
+    "ar": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69",
+    "dflash": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7",
+    "dflash-profile": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+  },
+  "actual_exit_receipts": {
+    "ar": {
+      "name": "dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "ar",
+        "--dataset",
+        "gsm8k",
+        "--temperature",
+        "1",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1"
+      ],
+      "pid": 101799,
+      "started_unix": 1794356805.9840043,
+      "exit_code": 0,
+      "finished_unix": 1794361943.0267265
+    },
+    "dflash": {
+      "name": "dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "gsm8k",
+        "--temperature",
+        "1",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030"
+      ],
+      "pid": 181571,
+      "started_unix": 1794361943.0692887,
+      "exit_code": 0,
+      "finished_unix": 1794364210.376494
+    },
+    "dflash-profile": {
+      "name": "dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1",
+      "argv": [
+        "/tmp/loopfill-dflash-venv/bin/python",
+        "-u",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+        "--model",
+        "ouro-2.6b",
+        "--method",
+        "dflash",
+        "--dataset",
+        "gsm8k",
+        "--temperature",
+        "1",
+        "--gpu",
+        "2",
+        "--cpus",
+        "8-11",
+        "--out",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1",
+        "--checkpoint",
+        "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+        "--profile"
+      ],
+      "pid": 223505,
+      "started_unix": 1794364210.4197679,
+      "exit_code": 0,
+      "finished_unix": 1794366483.2874177
+    }
+  },
+  "outer_exit": {
+    "exit_code": 0,
+    "finished_unix": 1794366491.2913444,
+    "completion_basis": "worker_exit_receipt"
+  },
+  "profile_all_tokens_and_verification_counts_match_timed_run": true,
+  "draft_gpu_s": 78.22388809037207,
+  "profile_wall_relative_difference": 0.0017591995824777218,
+  "result": {
+    "method": "dflash",
+    "model": "ouro-2.6b",
+    "benchmark": "gsm8k",
+    "temperature": "1",
+    "eta": "2.432756502344073",
+    "gamma": "2.7534409216833033",
+    "method_tok_s": "28.21507165782654",
+    "ar_tok_s": "11.597984274480417",
+    "drafter_time_frac": "0.03518616184214059",
+    "match_rate": "0.0",
+    "engine": "official",
+    "status": "complete_with_declared_limitations",
+    "notes": "η in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+    "eta_latency": "2.292034577412902",
+    "eta_throughput": "2.432756502344073",
+    "aligned_token_match_rate": "0.02566880066210657",
+    "method_decode_tokens": "62616",
+    "ar_decode_tokens": "58994",
+    "method_decode_s": "2219.2394461855292",
+    "ar_decode_s": "5086.573546215892",
+    "ar_provenance": "new_same_stack_AR",
+    "ar_first_completed_unix": "1794356825.450822",
+    "ar_last_completed_unix": "1794361942.117787",
+    "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1",
+    "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1"
+  },
+  "agreement": {
+    "match_rate": 0.0,
+    "aligned_token_match_rate": 0.02566880066210657,
+    "exact_sequences": 0,
+    "requests": 300
+  },
+  "limitations": [
+    "T1 same-seed token agreement is descriptive, not a correctness or distribution test.",
+    "Shared host with overlapping CPU affinities; no isolation or timing correction claimed.",
+    "Cell completion is not completion of the 72-cell matrix."
+  ],
+  "collector_stdout": "{\"completed\": 20, \"expected\": 72, \"missing\": 52}"
+}

@@ -1,0 +1,191 @@
+{
+  "status": "complete_offline_sensitivity_only",
+  "created_unix": 1794335352.7966905,
+  "benchmark": "gsm8k",
+  "frozen_pool_count": 300,
+  "subset_sizes": [
+    100,
+    200
+  ],
+  "repeats": 2000,
+  "seed": 20261111,
+  "python_version": "3.10.16",
+  "sampling": "uniform without replacement within each draw; repeated draws are independent; same indices for every method/model and its paired AR",
+  "draw_indices_sha256": {
+    "100": "e4cb0992facc56d495bdb68052e7a6203aba7d2b0dd7f58820837c211fcb2fcc",
+    "200": "730bf0621f536b6ad2535b10221ed401f1764649783f120a662e4da3a888724a"
+  },
+  "results_csv_sha256": "eec896da869a55de58f600b0f4f6f6e3474f2d57f93e9bacbb885add880512d8",
+  "protocol_sha256": "b9317d2b7f44b795368a61bdb00dfa862b9a2d501a486bcb46526c0b6d2ee781",
+  "analyzer_sha256": "016c6597192e89a5e7ce61b8b6a55ba7bb5e1e7e618408b5b93f588947d338fa",
+  "collector_sha256": "fd9c14fdb2f75b2e6ab2275af78ba323f841dc17fc6f5383f72e431eb988ad8d",
+  "limitations": [
+    "Uses already measured per-question times and loop/token counts; no new GPU timing.",
+    "Percentiles describe subset composition within this frozen finite pool, not a confidence interval for the full source dataset or repeated timing noise.",
+    "Does not assess unseen questions, change the formal question set, or count as a new benchmark cell.",
+    "Uniform sampling does not preserve task/category strata; no smaller formal protocol is adopted.",
+    "Archived AR timing drift and BF16 output differences remain as declared for the source runs."
+  ],
+  "cells": [
+    {
+      "method": "loopahead",
+      "model": "huginn-3.5b",
+      "temperature": 0,
+      "full": {
+        "eta_latency": 3.3188587560191434,
+        "eta_throughput": 3.3931125536691313,
+        "gamma": 5.408353206846337
+      },
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-gsm8k-t0-v1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-gsm8k-t0",
+      "method_journal_sha256": "9367235f52213180c5ceafe449c52a02c076476e73c6e339b93ec0393e8ef4bb",
+      "ar_journal_sha256": "7bb991a398a050874013eae832253772952cc5569e9cac1b61132ff7f050bf07",
+      "subsets": [
+        {
+          "count": 100,
+          "metrics": {
+            "eta_latency": {
+              "p025": 3.072281703542706,
+              "median": 3.3104767988655714,
+              "p975": 3.5719904583938153,
+              "relative_error_pct_p025": -7.4295735553446,
+              "relative_error_pct_p975": 7.627070658417972,
+              "absolute_relative_error_pct_p95": 7.515106482219811,
+              "absolute_relative_error_pct_max": 12.15390035983177
+            },
+            "eta_throughput": {
+              "p025": 3.1615027041919728,
+              "median": 3.3856816404437717,
+              "p975": 3.6257339283900314,
+              "relative_error_pct_p025": -6.825881718150138,
+              "relative_error_pct_p975": 6.855692849603699,
+              "absolute_relative_error_pct_p95": 6.84907547179831,
+              "absolute_relative_error_pct_max": 11.157805122334796
+            },
+            "gamma": {
+              "p025": 5.034212571307756,
+              "median": 5.396004547245171,
+              "p975": 5.784478739374054,
+              "relative_error_pct_p025": -6.917829165908839,
+              "relative_error_pct_p975": 6.9545297457937245,
+              "absolute_relative_error_pct_p95": 6.93441665536236,
+              "absolute_relative_error_pct_max": 11.322119331275715
+            }
+          }
+        },
+        {
+          "count": 200,
+          "metrics": {
+            "eta_latency": {
+              "p025": 3.18734524446106,
+              "median": 3.319285141654701,
+              "p975": 3.4380337057203185,
+              "relative_error_pct_p025": -3.9626124889939414,
+              "relative_error_pct_p975": 3.590841263884392,
+              "absolute_relative_error_pct_p95": 3.7550336505125825,
+              "absolute_relative_error_pct_max": 6.7945406322579505
+            },
+            "eta_throughput": {
+              "p025": 3.267996471458691,
+              "median": 3.3934603677748383,
+              "p975": 3.5026961400824868,
+              "relative_error_pct_p025": -3.6873543164710774,
+              "relative_error_pct_p975": 3.229588900458302,
+              "absolute_relative_error_pct_p95": 3.414206513732989,
+              "absolute_relative_error_pct_max": 6.232826747406728
+            },
+            "gamma": {
+              "p025": 5.206721994398261,
+              "median": 5.408935997614208,
+              "p975": 5.581976977233153,
+              "relative_error_pct_p025": -3.7281443118921,
+              "relative_error_pct_p975": 3.2102890426429433,
+              "absolute_relative_error_pct_p95": 3.498149166551061,
+              "absolute_relative_error_pct_max": 6.35388344069362
+            }
+          }
+        }
+      ]
+    },
+    {
+      "method": "loopahead",
+      "model": "ouro-2.6b",
+      "temperature": 0,
+      "full": {
+        "eta_latency": 4.924977419313611,
+        "eta_throughput": 4.961335550468545,
+        "gamma": 6.014274087522694
+      },
+      "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-gsm8k-t0-v1",
+      "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-gsm8k-t0",
+      "method_journal_sha256": "6c3ca32e800f6f4f2049ea0cf94c174f3e2fcdae58d2845e5181a4c59fbdae37",
+      "ar_journal_sha256": "de5254cfa5759dd28b695a1478923779624169b6983e6681373438ac053bde0d",
+      "subsets": [
+        {
+          "count": 100,
+          "metrics": {
+            "eta_latency": {
+              "p025": 4.694933772047015,
+              "median": 4.928057417553016,
+              "p975": 5.182367850745845,
+              "relative_error_pct_p025": -4.670958416265322,
+              "relative_error_pct_p975": 5.226225615225377,
+              "absolute_relative_error_pct_p95": 4.915271667107166,
+              "absolute_relative_error_pct_max": 9.415683075173465
+            },
+            "eta_throughput": {
+              "p025": 4.810565378923616,
+              "median": 4.960620568122255,
+              "p975": 5.112533043570638,
+              "relative_error_pct_p025": -3.0389029327131616,
+              "relative_error_pct_p975": 3.0475159675062446,
+              "absolute_relative_error_pct_p95": 3.047644595872395,
+              "absolute_relative_error_pct_max": 6.659068912914822
+            },
+            "gamma": {
+              "p025": 5.828544235723403,
+              "median": 6.014761672634318,
+              "p975": 6.1976680739487975,
+              "relative_error_pct_p025": -3.088150774249032,
+              "relative_error_pct_p975": 3.0493120825100823,
+              "absolute_relative_error_pct_p95": 3.0806954924054484,
+              "absolute_relative_error_pct_max": 6.78887353842339
+            }
+          }
+        },
+        {
+          "count": 200,
+          "metrics": {
+            "eta_latency": {
+              "p025": 4.803835036671585,
+              "median": 4.92525293196667,
+              "p975": 5.061335837329231,
+              "relative_error_pct_p025": -2.4597550877483783,
+              "relative_error_pct_p975": 2.7687115372525852,
+              "absolute_relative_error_pct_p95": 2.582926681894355,
+              "absolute_relative_error_pct_max": 4.136882592643576
+            },
+            "eta_throughput": {
+              "p025": 4.882779791400608,
+              "median": 4.961645642016647,
+              "p975": 5.032805969370781,
+              "relative_error_pct_p025": -1.5833591231400868,
+              "relative_error_pct_p975": 1.4405479769552547,
+              "absolute_relative_error_pct_p95": 1.5122748093019447,
+              "absolute_relative_error_pct_max": 2.90454805276138
+            },
+            "gamma": {
+              "p025": 5.919343541868984,
+              "median": 6.014335471352299,
+              "p975": 6.1031483078737905,
+              "relative_error_pct_p025": -1.578420675084535,
+              "relative_error_pct_p975": 1.4777214848833684,
+              "absolute_relative_error_pct_p95": 1.5398177391940715,
+              "absolute_relative_error_pct_max": 2.8180624627365147
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

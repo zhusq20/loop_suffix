@@ -1,0 +1,28 @@
+{
+  "pid": 510179,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "80-83",
+    "/opt/conda/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/amendments/output-diagnostics-cancelled/resume_ouro14_dflash_evaluation.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/plan-no-output-diagnostics.json"
+  ],
+  "started_unix": 1794461202.7119708,
+  "start_ticks": "47623899",
+  "previous_pid": 232243,
+  "previous_controller_stopped": true,
+  "plan_sha256": "1eb9641bdd9c554d90f5439fc3d81df193017d082e5376bf5385fde7aae0f05e",
+  "cancelled_steps": [
+    "table1-ouro-1.4b-gsm8k-t0-diagnose",
+    "table1-ouro-1.4b-math500-t0-diagnose",
+    "table1-ouro-1.4b-bbh-t0-diagnose",
+    "table1-ouro-1.4b-humanevalplus-t0-diagnose",
+    "table1-ouro-1.4b-mbppplus-t0-diagnose",
+    "table1-ouro-1.4b-specbench-t0-diagnose"
+  ],
+  "remaining_steps": 37,
+  "original_sources_preserved": true
+}

@@ -1,0 +1,33 @@
+{
+  "job": {
+    "id": "table1-ouro-1.4b-math500-t0",
+    "kind": "latency",
+    "model": "ouro-1.4b",
+    "dataset": "math500",
+    "temperature": 0,
+    "batch": 1,
+    "max_seq": 2304,
+    "max_new_tokens": 512,
+    "count": 500,
+    "inputs": "inputs/ouro-1.4b-math500.jsonl",
+    "inputs_sha256": "5c5b4030d3f141f76a9f91ec131e433ac155f69eae2c5ea9f3bfedc80ca076ba",
+    "original_inputs_sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413"
+  },
+  "stage": "ar",
+  "timed": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-math500-t0/attempt1",
+    "hashes": {
+      "metadata.json": "ac0be61b4e9704cada386fc12f485857f13f5732ed272930d1364ecb409f2d33",
+      "complete.json": "817e6b7ee7946f55532678b1cb9c1cbe4b2346f6fd6ea5318387883be7e0bb2c",
+      "requests.jsonl": "e8f2e57dca09a634369ef17315be96a8c34c6a2344d49c6e6cee6e1d279f5259",
+      "summary.json": "03808864a4031b7d24cf1ddd195977f851479477e709d982503bd6fc0ae316dd"
+    },
+    "exit_evidence": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-math500-t0-attempt1-exit.json",
+      "sha256": "96690bb1cdc3bb8696b7a2b6cef918eb540c0f76399fd841c5efbbd9b48e6129",
+      "actual_exit_code": 0
+    }
+  },
+  "plan_sha256": "458953f59f7b21393e98753f03147ffe0474cde41cf2c75cbf84dd3c9b3d4e8c",
+  "created_unix": 1794502282.006762
+}

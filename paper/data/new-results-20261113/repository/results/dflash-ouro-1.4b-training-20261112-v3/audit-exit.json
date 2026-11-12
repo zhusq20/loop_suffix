@@ -1,0 +1,18 @@
+{
+  "stage": "audit",
+  "pid": 414483,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "0-3",
+    "/tmp/loopfill-specforge-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/controller.py",
+    "--audit"
+  ],
+  "gpu": 0,
+  "started_unix": 1794495950.9112256,
+  "log": "/ossfs/workspace/loop_suffix/results/dflash-ouro-1.4b-training-20261112-v3/logs/audit.log",
+  "exit_code": 0,
+  "finished_unix": 1794495965.9700797
+}

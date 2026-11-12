@@ -1,0 +1,90 @@
+{
+  "model": "ouro-2.6b",
+  "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+  "method": "ar",
+  "dataset": "specbench",
+  "input_sha256": "5a1033b912a7611a31a88b87873f794152d32c041ff2d6f1b1124dcdcd53298c",
+  "count": 480,
+  "full_count": 480,
+  "temperature": 1.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "dtype": "bfloat16",
+  "max_new_tokens": 512,
+  "max_seq": 2304,
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+  "gpu": "NVIDIA L20X",
+  "cpu_affinity": [
+    60,
+    61,
+    62,
+    63
+  ],
+  "torch": "2.6.0+cu126",
+  "transformers": "4.55.0",
+  "graph": false,
+  "compile": false,
+  "physical_nodes": 1,
+  "reportable": true,
+  "stage": "formal",
+  "frozen_source_sha256": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "scripts/loop_latency_inputs.py": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+    "scripts/loop_latency_suite.py": "bfacd730288af7962b5e88ac3c828a9ef8476b7bfc862bcea436d7a779f4fc62",
+    "scripts/loop_latency_worker.py": "9133eed7f81f24861263be2fae0fdab2b0783b0ab3a3bfe849da5d35d35e702c",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "cfece82f9a9e5e0e9a3cb7250793c38bc6bbabf7638712839723d5cac2d35cf0",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "0dfdf55dd5380dc4502e26fd41b4778b200a940d372c48fb325d0d95471347e6",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_sampling.py": "03488c4a739c412711b0812e92d73c20f05da157c02b2da452c61c108bdde6c3",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "03a55dae40f45bf4081b14197e7d079e29d318f0370b9535cc9e6177ac8b760b"
+  },
+  "measurement_provenance": {
+    "kind": "archived_same_host_AR",
+    "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-specbench-ar",
+    "source_sha256": {
+      "metadata.json": "5fcde1bdc8f2aee73a4207ff318fd8dc3f7186693390c79ed9a570b0b9bc5f1b",
+      "requests.jsonl": "d1c885713ba1e1a61bc93b8f53c60673246433fae42c07eddf83ad917014b176",
+      "summary.json": "3fec174d4c29e9011ec97ed8c50df9d606aa13685084dc47d1b35941a229b210",
+      "complete.json": "b1e8906c8f4fcf70c3b084fece475e6f4445ab137105d5cfa44175d3f63524e2"
+    },
+    "imported_unix": 1794301579.5883641,
+    "first_request_completed_unix": 1794089233.253369,
+    "last_request_completed_unix": 1794102960.1998506,
+    "new_measurement": false,
+    "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+  }
+}

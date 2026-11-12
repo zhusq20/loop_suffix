@@ -1,0 +1,33 @@
+{
+  "job": {
+    "id": "table1-ouro-1.4b-humanevalplus-t0",
+    "kind": "latency",
+    "model": "ouro-1.4b",
+    "dataset": "humanevalplus",
+    "temperature": 0,
+    "batch": 1,
+    "max_seq": 1024,
+    "max_new_tokens": 512,
+    "count": 164,
+    "inputs": "inputs/ouro-1.4b-humanevalplus.jsonl",
+    "inputs_sha256": "5892593986cc2e2d9138c8c9f7aaa72581b80bf83b5b83edec97513d9076977f",
+    "original_inputs_sha256": "acf6f2e98fdc8d8a17e65a57565bd1dd2060d2097a715e66e25e7b7881b642f8"
+  },
+  "stage": "profile",
+  "timed": {
+    "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/runs/table1-ouro-1.4b-humanevalplus-t0/attempt1",
+    "hashes": {
+      "metadata.json": "de77fe085b0cfeb2619365f981c06cc2ead7cd66acbf62e0315252256734b357",
+      "complete.json": "fd1099050cc1a3818677fb1c7df062c7bd5c60215ebc49cd2c7fba76f66c987c",
+      "requests.jsonl": "8461ef6b2384f2a43f64b8f2e0546a2ae092906d9c55f8a551355815b96e1e96",
+      "summary.json": "a18ce5405acf30672252a3b26b28aee8fd9bb937314173fa528c09aca8373517"
+    },
+    "exit_evidence": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/suite/logs/table1-ouro-1.4b-humanevalplus-t0-attempt1-exit.json",
+      "sha256": "dcc9eb2c8156a4cf3754a01fe7fd04b68b2a04415b1bb5920f25e2744833caa9",
+      "actual_exit_code": 0
+    }
+  },
+  "plan_sha256": "458953f59f7b21393e98753f03147ffe0474cde41cf2c75cbf84dd3c9b3d4e8c",
+  "created_unix": 1794514545.744032
+}

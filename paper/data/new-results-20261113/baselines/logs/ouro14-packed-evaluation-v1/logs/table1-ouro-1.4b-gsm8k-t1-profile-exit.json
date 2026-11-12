@@ -1,0 +1,46 @@
+{
+  "stage": "profile",
+  "job_id": "table1-ouro-1.4b-gsm8k-t1",
+  "gpu": 0,
+  "plan_sha256": "1eb9641bdd9c554d90f5439fc3d81df193017d082e5376bf5385fde7aae0f05e",
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "0-3",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/source/supplement_packed_dflash.py",
+    "--plan",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/plan.json",
+    "--binding",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/bindings/table1-ouro-1.4b-gsm8k-t1-profile.json",
+    "--job",
+    "table1-ouro-1.4b-gsm8k-t1",
+    "--stage",
+    "profile",
+    "--out",
+    "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/supplement/runs/table1-ouro-1.4b-gsm8k-t1-profile",
+    "--lock-fd",
+    "4"
+  ],
+  "started_unix": 1794510602.6489294,
+  "pid": 64571,
+  "start_ticks": "52563894",
+  "supervisor_identity": {
+    "pid": 64570,
+    "state": "R",
+    "start_ticks": "52563886",
+    "argv": [
+      "/opt/conda/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/source/loop_queue_recovery.py",
+      "--spec",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/ouro14-packed-evaluation-v1/logs/table1-ouro-1.4b-gsm8k-t1-profile-launcher.json.supervisor.json",
+      "--lock-fd",
+      "4"
+    ]
+  },
+  "exit_code": 0,
+  "finished_unix": 1794513833.4172366,
+  "exit_evidence": "supervisor_waitpid"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "checked_unix": 1794464920.0185199,
+  "canonical_cells": 44,
+  "preserved_legacy_cells": 41,
+  "packed_additions": 3,
+  "all_original_columns_preserved": true,
+  "source_sha256": "568f2c1c6fbd88db82447679ee17346f96992ccde9b91c08f94b3e8b2c5ec55a",
+  "formal_training_completed": 5,
+  "cost_changed_rows": [
+    [
+      "loopahead",
+      "ouro-1.4b"
+    ]
+  ],
+  "cost_delta_gpu_hours": 2.6868954669104568,
+  "cost_total_gpu_hours": 124.53738086130883,
+  "outputs_sha256": {
+    "experiments/baselines/combined-results/results.csv": "52d55d2b3919504a90a0381477f05ca972a1f9d23ef1c633f6e22bc849f811b9",
+    "experiments/baselines/combined-results/table2_rows.md": "71dadaa9018c132b44f6e40257cba8f4eaee1a61f10fb2902b90d716bc366f4b",
+    "experiments/baselines/combined-results/evidence.json": "8ebbf721f8548b0fb887743a26224f3ebc922f89b500b63b2bbe7aaa985eb502",
+    "experiments/baselines/training/current-cost-summary.json": "f61331219a839ee55f7926808394b4d6e56ec7becabf3f60a6f520d76121205e",
+    "experiments/baselines/training/current-cost-summary-ledger.json": "cb7911c7bea46a9ea9eca169ae194b5149b507f412f474a6ac97261ef012ef95"
+  },
+  "limitation": "This check verifies collection and closed cost artifacts, not remaining GPU measurements or full numerical equivalence.",
+  "collector_process_exit_code": 0,
+  "cost_renderer_process_exit_code": 0
+}

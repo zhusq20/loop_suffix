@@ -1,0 +1,40 @@
+[
+  {
+    "model": "ouro-2.6b",
+    "pid": 443433,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/smoke_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-smoke-ouro-2.6b-v1"
+    ],
+    "log": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-smoke-ouro-2.6b-v1.log",
+    "started_unix": 1794289756.252056
+  },
+  {
+    "model": "huginn-3.5b",
+    "pid": 443434,
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/smoke_dflash.py",
+      "--model",
+      "huginn-3.5b",
+      "--gpu",
+      "6",
+      "--cpus",
+      "56-59",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/dflash-smoke-huginn-3.5b-v1"
+    ],
+    "log": "/ossfs/workspace/sz/loopfill/experiments/baselines/logs/dflash-smoke-huginn-3.5b-v1.log",
+    "started_unix": 1794289756.2663786
+  }
+]

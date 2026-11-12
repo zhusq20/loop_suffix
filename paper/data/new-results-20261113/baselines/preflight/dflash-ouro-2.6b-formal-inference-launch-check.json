@@ -1,0 +1,215 @@
+{
+  "status": "formal_inference_started_and_verified_not_completed",
+  "model": "ouro-2.6b",
+  "dataset": "gsm8k",
+  "temperature": 0,
+  "ar_requests": 300,
+  "ar_summary": {
+    "decode_tokens": 48838,
+    "decode_s": 4182.167921036482,
+    "loops": 195352,
+    "tok_s": 11.677675531473232,
+    "gamma": 1.0
+  },
+  "ar_complete": {
+    "requests": 300,
+    "requests_sha256": "1516db662e0b4bfb114fe6e17cac90c63dcec1989104673b4bb0bf8bac2547e4",
+    "finished_unix": 1794346849.3353107
+  },
+  "ar_exit_receipt": {
+    "name": "dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1",
+    "argv": [
+      "/tmp/loopfill-dflash-venv/bin/python",
+      "-u",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/evaluate_dflash.py",
+      "--model",
+      "ouro-2.6b",
+      "--method",
+      "ar",
+      "--dataset",
+      "gsm8k",
+      "--temperature",
+      "0",
+      "--gpu",
+      "2",
+      "--cpus",
+      "8-11",
+      "--out",
+      "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1"
+    ],
+    "pid": 433217,
+    "started_unix": 1794342615.2675064,
+    "exit_code": 0,
+    "finished_unix": 1794346850.1171098
+  },
+  "ar_metadata": {
+    "model": "ouro-2.6b",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "method": "ar",
+    "dataset": "gsm8k",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "seed": 0,
+    "count": 300,
+    "full_count": 300,
+    "max_new_tokens": 512,
+    "max_seq": 1024,
+    "input_sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+    "stop_audit": {
+      "sources": {
+        "tokenizer": [
+          0
+        ],
+        "generation_config": [],
+        "model_config": [
+          0
+        ]
+      },
+      "invalid_ids": {
+        "tokenizer": [],
+        "generation_config": [],
+        "model_config": []
+      },
+      "selected_source": "tokenizer",
+      "stop_ids": [
+        0,
+        2
+      ],
+      "conflict": true,
+      "reason": "Preserve historical benchmark stopping policy."
+    },
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "cpu_affinity": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "torch": "2.6.0+cu126",
+    "dtype": "bfloat16",
+    "transformers": "4.57.1",
+    "cuda": "12.6",
+    "graph": false,
+    "compile": false,
+    "checkpoint": null,
+    "checkpoint_sha256": {},
+    "stage": "formal",
+    "trace": false,
+    "profiling": false,
+    "reportable": true,
+    "denominator": "full-depth HF LoopTarget AR, same target version and precision",
+    "sampling": "frozen positional target uniforms for AR; DFlash softmax-q rejection with request-hashed seed",
+    "source_sha256": {
+      "evaluate_dflash.py": "b6e27deba90ac3b0a52d53f17556c2022b3419f206e399573829cd2c661edaac",
+      "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+      "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+    }
+  },
+  "dflash_metadata": {
+    "model": "ouro-2.6b",
+    "model_revision": "1ed04250da1a9936042725d302e81c8fa2ab5abd",
+    "method": "dflash",
+    "dataset": "gsm8k",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "top_k": 0,
+    "seed": 0,
+    "count": 300,
+    "full_count": 300,
+    "max_new_tokens": 512,
+    "max_seq": 1024,
+    "input_sha256": "0ca048dc3081531e58e5a594bffd10080ec620b4ec53656c54d19a227e4807c5",
+    "stop_audit": {
+      "sources": {
+        "tokenizer": [
+          0
+        ],
+        "generation_config": [],
+        "model_config": [
+          0
+        ]
+      },
+      "invalid_ids": {
+        "tokenizer": [],
+        "generation_config": [],
+        "model_config": []
+      },
+      "selected_source": "tokenizer",
+      "stop_ids": [
+        0,
+        2
+      ],
+      "conflict": true,
+      "reason": "Preserve historical benchmark stopping policy."
+    },
+    "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+    "cpu_affinity": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "torch": "2.6.0+cu126",
+    "dtype": "bfloat16",
+    "transformers": "4.57.1",
+    "cuda": "12.6",
+    "graph": false,
+    "compile": false,
+    "checkpoint": "/ossfs/workspace/sz/loopfill/experiments/baselines/checkpoints/dflash-ouro-2.6b-formal-v1/checkpoint-009030",
+    "checkpoint_sha256": {
+      "model.safetensors": "55bf467d26407751d57600a829344a2d02edcaf0a4ba18fe438036e62e7d71ca",
+      "config.json": "2d3c69daccf0d9db3b50376efb964cf1be48645485a06e0e476ace0afd83466e"
+    },
+    "stage": "formal",
+    "trace": false,
+    "profiling": false,
+    "reportable": true,
+    "denominator": "full-depth HF LoopTarget AR, same target version and precision",
+    "sampling": "frozen positional target uniforms for AR; DFlash softmax-q rejection with request-hashed seed",
+    "source_sha256": {
+      "evaluate_dflash.py": "b6e27deba90ac3b0a52d53f17556c2022b3419f206e399573829cd2c661edaac",
+      "dflash_impl/target.py": "0d72946669aedb0572da0f386702e82f9fa2e977044425d243360dd316660363",
+      "dflash_impl/decode.py": "be473a16230b969bacc4f7f116acd3d66473c5a59d10f3ee6972805ce72dc93c"
+    }
+  },
+  "checkpoint_loading": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "training_audit_sha256": "c19089e7e77c7fa61701414b17a253666137397bf85e29c7aa64644b6b494475",
+  "matched_configuration_keys": [
+    "model",
+    "model_revision",
+    "dataset",
+    "temperature",
+    "top_p",
+    "top_k",
+    "seed",
+    "count",
+    "full_count",
+    "max_new_tokens",
+    "max_seq",
+    "input_sha256",
+    "stop_audit",
+    "torch",
+    "transformers",
+    "cuda",
+    "dtype",
+    "graph",
+    "compile",
+    "gpu_uuid",
+    "cpu_affinity",
+    "source_sha256"
+  ],
+  "frozen_run_sources_verified": true,
+  "first_dflash_requests_checked": 20,
+  "first_dflash_requests_sha256": "67be5ade13da7095e415116d1895f5527d399f04c555d5aef42d813c2ae60e7a",
+  "checked_unix": 1794347043.5260673,
+  "limitations": [
+    "DFlash timed run and separate full-task profiling are still pending; no final DFlash eta or gamma is reported here.",
+    "This launch check verifies checkpoint/configuration and request-prefix bookkeeping, not full-benchmark greedy agreement or all numerical divergence diagnoses."
+  ]
+}

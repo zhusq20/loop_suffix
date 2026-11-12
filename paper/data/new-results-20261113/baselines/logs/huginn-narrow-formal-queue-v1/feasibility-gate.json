@@ -1,0 +1,123 @@
+{
+  "dev_report_sha256": "c3cbc9734de017f011f1458651c1b55471f1747cb6c8cb07acb02cdce00d5b0e",
+  "pilot_audit_sha256": "f18ac96d672f9d1812670e9c048a694748d3070d6ee936f4a700414b043623b3",
+  "dev_plan_sha256": "79d093f0d4e1a0e417b30e5841d5436d4854746c38f50f2e118aacc64a58f01c",
+  "comparisons": {
+    "narrow": {
+      "eta_latency": 0.8346913747639475,
+      "eta_throughput": 0.851593785196479,
+      "whole_sequence_equal": 12,
+      "requests": 20,
+      "first_differences": [
+        {
+          "source_id": "ultrachat/adcda52b719987653efa3dfe733701bd01474cc0bc10ee6823fdafc68c588a68",
+          "position": 29,
+          "ar_token": 461,
+          "dflash_token": 865
+        },
+        {
+          "source_id": "nemotron-v1/a322ade6-c8e8-42c7-aec4-a783ff417bb8",
+          "position": 127,
+          "ar_token": 1570,
+          "dflash_token": 879
+        },
+        {
+          "source_id": "ultrachat/e7d03eefaa0b8068850fb7a01f7d74ccb829c470541a549391dfc6d3f4437eaf",
+          "position": 114,
+          "ar_token": 1121,
+          "dflash_token": 19208
+        },
+        {
+          "source_id": "nemotron-v1/644b6135-3f1a-4780-bf7c-9f0c29eea9f0",
+          "position": 94,
+          "ar_token": 44,
+          "dflash_token": 48
+        },
+        {
+          "source_id": "ultrachat/bb6f66ff5c67053129dc3b9f2afaff7790873cd69667fb15957c99d9879f73eb",
+          "position": 31,
+          "ar_token": 344,
+          "dflash_token": 399
+        },
+        {
+          "source_id": "ultrachat/10517dfd119469bd5ffa2b6601f25353ce2d92ab9ce10529c85537effa2224e1",
+          "position": 28,
+          "ar_token": 51977,
+          "dflash_token": 47318
+        },
+        {
+          "source_id": "ultrachat/7533291e998e8947ab4d0aca7e02f8c9730d814e719c2aae4f80321e5fc93630",
+          "position": 16,
+          "ar_token": 12562,
+          "dflash_token": 48036
+        },
+        {
+          "source_id": "ultrachat/6eb7f07554ec4b978b4231cf28549a9b81f91be10d24deb9cee5baa64c6ed3f4",
+          "position": 43,
+          "ar_token": 31177,
+          "dflash_token": 33615
+        }
+      ],
+      "profile_all_outputs_identical": true,
+      "profile_wall_change_pct": -1.9052037684509915
+    },
+    "wide": {
+      "eta_latency": 2.9461732432655694,
+      "eta_throughput": 3.0058329341029157,
+      "whole_sequence_equal": 13,
+      "requests": 20,
+      "first_differences": [
+        {
+          "source_id": "ultrachat/adcda52b719987653efa3dfe733701bd01474cc0bc10ee6823fdafc68c588a68",
+          "position": 29,
+          "ar_token": 461,
+          "dflash_token": 865
+        },
+        {
+          "source_id": "nemotron-v1/a322ade6-c8e8-42c7-aec4-a783ff417bb8",
+          "position": 127,
+          "ar_token": 1570,
+          "dflash_token": 879
+        },
+        {
+          "source_id": "ultrachat/e7d03eefaa0b8068850fb7a01f7d74ccb829c470541a549391dfc6d3f4437eaf",
+          "position": 86,
+          "ar_token": 16275,
+          "dflash_token": 305
+        },
+        {
+          "source_id": "nemotron-v1/644b6135-3f1a-4780-bf7c-9f0c29eea9f0",
+          "position": 94,
+          "ar_token": 44,
+          "dflash_token": 48
+        },
+        {
+          "source_id": "ultrachat/bb6f66ff5c67053129dc3b9f2afaff7790873cd69667fb15957c99d9879f73eb",
+          "position": 31,
+          "ar_token": 344,
+          "dflash_token": 399
+        },
+        {
+          "source_id": "ultrachat/7533291e998e8947ab4d0aca7e02f8c9730d814e719c2aae4f80321e5fc93630",
+          "position": 16,
+          "ar_token": 12562,
+          "dflash_token": 48036
+        },
+        {
+          "source_id": "ultrachat/6eb7f07554ec4b978b4231cf28549a9b81f91be10d24deb9cee5baa64c6ed3f4",
+          "position": 43,
+          "ar_token": 31177,
+          "dflash_token": 33615
+        }
+      ],
+      "profile_all_outputs_identical": true,
+      "profile_wall_change_pct": -0.7282180738782951
+    }
+  },
+  "reason": "Real target training, checkpoint audit and deployment succeeded. Complete the approved50k/6epoch recipe to assess the smaller capacity; pilot speed is not an equal-training architecture comparison.",
+  "configuration": "5layers,H2048,FF5632,16heads,block16,target-width-projections-v1",
+  "parameters": 332621056,
+  "from_scratch": true,
+  "reuse_teacher_answers": true,
+  "passed_unix": 1794354274.260947
+}

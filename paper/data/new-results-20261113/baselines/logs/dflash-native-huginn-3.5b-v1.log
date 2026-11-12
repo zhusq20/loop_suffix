@@ -1,0 +1,69 @@
+Loading huginn-3.5b
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.34s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.30s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.38s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.01s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.13s/it]
+{
+  "stage": "target_compatibility_only",
+  "model": "huginn-3.5b",
+  "gpu_uuid": "GPU-e54049b5-ca93-d066-efc5-6942d59bf762",
+  "started_unix": 1794289244.797785,
+  "status": "probe_complete_not_baseline_validation",
+  "torch": "2.6.0+cu126",
+  "transformers": "4.57.1",
+  "target_path": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "official_draft_import": "DFlashDraftModel",
+  "dflash_commit": "94e4abc5e0c31b67bc1a9d30f1cc34ece28a8756",
+  "source_sha256": {
+    "raven_modeling_minimal.py": "a1d447da93c605a6dc11fbc17cbc7185663f4a41ae12335b34b5847edf0f84aa",
+    "raven_config_minimal.py": "36a39939e76dc9e8f7563187c6498e012ca7f64a3d86b32ff1daa7f4c41a4278"
+  },
+  "prefill_logits_shape": [
+    1,
+    16,
+    65536
+  ],
+  "feature_shape": [
+    1,
+    16,
+    26400
+  ],
+  "cache_class": "HuginnDynamicCache",
+  "physical_layer_calls_per_forward": {
+    "0": 1,
+    "1": 1,
+    "2": 32,
+    "3": 32,
+    "4": 32,
+    "5": 32,
+    "6": 1,
+    "7": 1
+  },
+  "cache_slots": 132,
+  "embedding_accessor": "transformer.wte",
+  "after_block_cache_lengths": [
+    24
+  ],
+  "native_crop_lengths": [
+    24
+  ],
+  "native_crop_effective": false,
+  "rollback_repeat_logits_exact": true,
+  "rollback_repeat_features_exact": true,
+  "future_perturbation_prefix_logits_exact": true,
+  "future_perturbation_prefix_features_exact": true,
+  "single_token_after_partial_accept_shape": [
+    1,
+    1,
+    65536
+  ],
+  "final_cache_lengths": [
+    21
+  ],
+  "peak_allocated_bytes": 7407558656,
+  "limitations": [
+    "short fixed text only; not a trained DFlash pilot",
+    "no speed or task score reported",
+    "no AR versus speculative output equivalence claim",
+    "Huginn fixed noise table follows benchmark construction but uses capacity4096 for this diagnostic"
+  ],
+  "finished_unix": 1794289255.4323866
+}

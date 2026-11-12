@@ -1,0 +1,9 @@
+ouro-default {'distribution_passed': True, 'coverage_passed': False, 'counters': {'lad_calls': 433, 'lad_tokens': 1224, 'first_proposals': 2688, 'second_proposals': 1170, 'accepted_first': 265, 'accepted_second': 150, 'fallback_tokens': 36, 'cascade_commits': 73, 'native_budget_rejections': 0, 'retention_evictions': 0}, 'violations': 0}
+ouro-retain8 {'distribution_passed': True, 'coverage_passed': True, 'counters': {'lad_calls': 204, 'lad_tokens': 567, 'first_proposals': 1135, 'second_proposals': 766, 'accepted_first': 218, 'accepted_second': 164, 'fallback_tokens': 53, 'cascade_commits': 33, 'native_budget_rejections': 218, 'retention_evictions': 286}, 'violations': 0}
+huginn-default {'distribution_passed': True, 'coverage_passed': True, 'counters': {'lad_calls': 480, 'lad_tokens': 901, 'first_proposals': 3229, 'second_proposals': 2000, 'accepted_first': 218, 'accepted_second': 136, 'fallback_tokens': 61, 'cascade_commits': 35, 'native_budget_rejections': 694, 'retention_evictions': 371}, 'violations': 0}
+Traceback (most recent call last):
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/check_loopahead_retention_sampling.py", line 182, in <module>
+    run(args.out.resolve(), args.samples)
+  File "/ossfs/workspace/sz/loopfill/experiments/baselines/check_loopahead_retention_sampling.py", line 174, in run
+    raise AssertionError('Distribution or required scheduler-path coverage failed; preserve outputs.')
+AssertionError: Distribution or required scheduler-path coverage failed; preserve outputs.
