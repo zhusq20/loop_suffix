@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "cpu_only": true,
+  "cases": [
+    {
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "parent_reservation_preserved": true
+    },
+    {
+      "expected_exit": 7,
+      "actual_exit": 7,
+      "parent_reservation_preserved": true
+    }
+  ],
+  "reservation_released_after_parent_close": true,
+  "no_gpu_context_created": true
+}

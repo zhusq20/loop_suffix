@@ -1,0 +1,27 @@
+{
+  "outcome": "complete",
+  "attempt": 1,
+  "out": "runs/table2-ouro-2.6b-b2/attempt1",
+  "gpu": 4,
+  "gpu_uuid": "GPU-a688c63c-924d-a0b0-49f3-d8fbe7df3dda",
+  "pid": 512259,
+  "argv": [
+    "taskset",
+    "--cpu-list",
+    "48-51",
+    "/tmp/loopfill-dflash-venv/bin/python",
+    "-u",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/source/scripts/loop_dflash_benchmark_worker.py",
+    "--suite",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2",
+    "--job",
+    "table2-ouro-2.6b-b2",
+    "--out",
+    "/ossfs/workspace/loop_suffix/results/dflash-table12-packed-20261112-v2/runs/table2-ouro-2.6b-b2/attempt1",
+    "--lock-fd",
+    "10"
+  ],
+  "started_unix": 1794426286.2034009,
+  "exit_code": 0,
+  "finished_unix": 1794429769.4999764
+}

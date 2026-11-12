@@ -1,0 +1,265 @@
+{
+  "train": {
+    "count": 9025,
+    "eligible": 9025,
+    "ineligible_ids": [],
+    "state_tokens": 5496655,
+    "component_sha256": "d96da1e706c8e4635150ae9cf8b6b35932d961f18f84a9d23a6fd20556cd76c3",
+    "source": [
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard0/index.json",
+        "sha256": "48d4b5ff2abc5d63600aaec759a07fbb41943fae6e341b818e43c8a27eef829d"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard1/index.json",
+        "sha256": "97b1a3ef5ea185f1c470d70dab07dde9abe157f68ea159d9474af7fda6d5d00d"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard2/index.json",
+        "sha256": "8e026a7fe34f4b38d64719d58b3068e8954b67c84af44f4e3fe0cbdadb9bf62a"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard3/index.json",
+        "sha256": "68b084aeb327306739492caefe3857a1629e4507de146f8dcf64f8cc0dcb2f65"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard4/index.json",
+        "sha256": "79e4a28b8c259a3a4ac01c2eda3aeb77b91771b41c08b3c74ce984884c2b80be"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard5/index.json",
+        "sha256": "5abc4071e1a2bcb8a6074fcd806d5e058097ba16de10585ed097417753ebd162"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard6/index.json",
+        "sha256": "242cafaaed4cc88d4021229d1ee63d44dfd4654929cdfd2396a8684fcc607dfa"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-train/huginn-3.5b/shard7/index.json",
+        "sha256": "69db9c049887058cf62bf952b7d929a70082aa346331f6bea34ca24b6a3d75de"
+      }
+    ],
+    "teacher_sources": [
+      {
+        "shard": 0,
+        "requests": 1215,
+        "teachers_sha256": "64defafc750977676aaac104fdc86fd5cdfda2e0964f10a8e1cddf6372a2dadd"
+      },
+      {
+        "shard": 1,
+        "requests": 1094,
+        "teachers_sha256": "db47ae4be111172bfbcba54ca39a59c396b78cead0f86ee639b85feff6bdb79d"
+      },
+      {
+        "shard": 2,
+        "requests": 1125,
+        "teachers_sha256": "141772ff4f450eb647032f4c4e311db1d31bd98c08ea5266ce01e81c76829727"
+      },
+      {
+        "shard": 3,
+        "requests": 1106,
+        "teachers_sha256": "0e0f51f042ce8a0c0c539ff977be15169f783a91b2f5da92958422f3d4e4458f"
+      },
+      {
+        "shard": 4,
+        "requests": 1153,
+        "teachers_sha256": "7209e63cc99755398c4a2a97f827bc5eb75d49ecaf44f41ff185c0492fda6180"
+      },
+      {
+        "shard": 5,
+        "requests": 1120,
+        "teachers_sha256": "9a159445e58969268a67d4b87ef1db103f1fc2a32625ed0f64b2467070ba5349"
+      },
+      {
+        "shard": 6,
+        "requests": 1155,
+        "teachers_sha256": "d3faabd6adad2961bd9ceb7e9aad82c7132d2a6d4c291a6b14961c3c2a5e96a1"
+      },
+      {
+        "shard": 7,
+        "requests": 1057,
+        "teachers_sha256": "4379db1f919edcff873e34c05e4446328a93478788577774f0d2d213fb712df5"
+      }
+    ],
+    "all_states_finite": true,
+    "all_teacher_token_ids_equal": true
+  },
+  "dev": {
+    "count": 782,
+    "eligible": 782,
+    "ineligible_ids": [],
+    "state_tokens": 500479,
+    "component_sha256": "d96da1e706c8e4635150ae9cf8b6b35932d961f18f84a9d23a6fd20556cd76c3",
+    "source": [
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard0/index.json",
+        "sha256": "fbc1a54f50decfbadf6b1bc3d3b366432c3eaeaaa089cf8aae20393b81adb5be"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard1/index.json",
+        "sha256": "b0e7f27f3eac4a08d67cd7c90c68a672b824816b59be76d9943fd76df6fdf413"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard2/index.json",
+        "sha256": "a14332f2db2b5d752a0b9424187b59cadb8e4f613384f873d97f256846794cd0"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard3/index.json",
+        "sha256": "69903ab1bc7756e703c127c5ef0c88fbd862e5d90b8b136d4a6a20f654ec5ac5"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard4/index.json",
+        "sha256": "c65aa3df9834f06aad7ae2ea7f7ff16571be818ce8d0f236f22046156a5be03b"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard5/index.json",
+        "sha256": "9f7f8aff5b90864ed870b78fc51b5c8bbe14b07724209a6a8864461b621bdcd3"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard6/index.json",
+        "sha256": "8fd696f3109a851c1ebb2372a347cddfd53b70bef4c517af1c510d9095892384"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-dev/huginn-3.5b/shard7/index.json",
+        "sha256": "3058db3e4eb85ae25c1d8a80fb4f8e1e1b60a7fd8ade05a28afcd2c7539a557a"
+      }
+    ],
+    "teacher_sources": [
+      {
+        "shard": 0,
+        "requests": 92,
+        "teachers_sha256": "348bac1cfd59ce269e596eb01db09b064980f7e784c11d1fec797ae8e57165af"
+      },
+      {
+        "shard": 1,
+        "requests": 105,
+        "teachers_sha256": "452a1e2857de1d280e9cf25e3991b96ad9f79ad21410aa9bd551ecf7d9ac3f6f"
+      },
+      {
+        "shard": 2,
+        "requests": 91,
+        "teachers_sha256": "e4c9f10ecdd5d2c2ea919a9c57ccf65780804579f58857e54167f7be46cc76b3"
+      },
+      {
+        "shard": 3,
+        "requests": 100,
+        "teachers_sha256": "8b0c50f50eedcb300572dd9fc4ec89f4c06b7270eff436aa61d2a4a45ed5f714"
+      },
+      {
+        "shard": 4,
+        "requests": 97,
+        "teachers_sha256": "e31574365dcb753af89ffdd079a7ca550083d3d74ff4fefdf078d18bdd266526"
+      },
+      {
+        "shard": 5,
+        "requests": 107,
+        "teachers_sha256": "836dbe7ca30cd94f05ce346a543ce80e48c4078e8e8b1f8533f416b8de221426"
+      },
+      {
+        "shard": 6,
+        "requests": 98,
+        "teachers_sha256": "c1636644b17c78fa4f6a16bc0bad9696514e133203a9e4a0a04639eafb62dfdc"
+      },
+      {
+        "shard": 7,
+        "requests": 92,
+        "teachers_sha256": "585a8972b47aa2b83d471ab5b617a50cef4ac070cb133ee7a7404aae1d4147a2"
+      }
+    ],
+    "all_states_finite": true,
+    "all_teacher_token_ids_equal": true
+  },
+  "confirmation": {
+    "count": 782,
+    "eligible": 782,
+    "ineligible_ids": [],
+    "state_tokens": 494804,
+    "component_sha256": "d96da1e706c8e4635150ae9cf8b6b35932d961f18f84a9d23a6fd20556cd76c3",
+    "source": [
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard0/index.json",
+        "sha256": "3c78c956a562b3bc5eb8197fb8f0f4876fe809b3df9bc009a8e64d56b7799ef0"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard1/index.json",
+        "sha256": "1a5679fe5b3e52c74c290c4e471607f19b6d51c37211eaa7dc97523604c93fd9"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard2/index.json",
+        "sha256": "57a6d1c5e4a1f3719b9ced50b4b7735e6308a9ffd84dc72ff908d947c94e7575"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard3/index.json",
+        "sha256": "ab65c7fa6308c44f05df433165597f8c20b296bcd01c35a373f0706a37ccde04"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard4/index.json",
+        "sha256": "7ee4978187575280d024b73a0a8e044cddefc136e5b7f127d45404f2ff1008c1"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard5/index.json",
+        "sha256": "3f3003212d76c6a9c0f54c03c4a08993160b0298466c76463fe9fa5d37f6808d"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard6/index.json",
+        "sha256": "6d97aeb50ee361892863cf330ac3e96982f742c6b5910965f32a526ef50c7e3d"
+      },
+      {
+        "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/features/loopahead-confirmation/huginn-3.5b/shard7/index.json",
+        "sha256": "a231e4ba30c22cec4973f51affab89163e1ee4e1322ad5583955b221970324b7"
+      }
+    ],
+    "teacher_sources": [
+      {
+        "shard": 0,
+        "requests": 90,
+        "teachers_sha256": "fcaab4d28670651714b86c191e537a83837360e8d422d758eaefc409aae5451e"
+      },
+      {
+        "shard": 1,
+        "requests": 97,
+        "teachers_sha256": "e7a36489ef8f6c4450bc1424d3b57814eb29a85c6a45497d397b352f18a3524c"
+      },
+      {
+        "shard": 2,
+        "requests": 102,
+        "teachers_sha256": "e41379b55af0166640f20d68df54a63e023d049551524662b92386d5a23a5355"
+      },
+      {
+        "shard": 3,
+        "requests": 95,
+        "teachers_sha256": "762919fb8f52d9544afea92b49b8fe7254ea3d5109aa8490297f1dd1acba9cc6"
+      },
+      {
+        "shard": 4,
+        "requests": 94,
+        "teachers_sha256": "d86c83512a4d41928cd99f064a4366d514e3951f23e733c6d927b0f5cd4cfd79"
+      },
+      {
+        "shard": 5,
+        "requests": 104,
+        "teachers_sha256": "1af0ac583b37455596bf597559b4523825966a01945006afaadacad28f5f2de5"
+      },
+      {
+        "shard": 6,
+        "requests": 90,
+        "teachers_sha256": "e3df400433912ae317c54ef602405506d093a52d299247cc4a09ab7e2169c2a7"
+      },
+      {
+        "shard": 7,
+        "requests": 110,
+        "teachers_sha256": "399a13306a318d26c8047b4f5d8a9e0a7a71a05cd461f161ccd7000f07f1f428"
+      }
+    ],
+    "all_states_finite": true,
+    "all_teacher_token_ids_equal": true
+  },
+  "audit": {
+    "status": "complete",
+    "wall_s": 208.72831058502197,
+    "finished_unix": 1794318458.313278,
+    "script_sha256": "228a19dbf29956b09ccaac44a5b144d152fe259940951719de63e3562d76a918",
+    "reader_sha256": "6e38ab2e37bbcc5f1603ed9dac886b08522a9a9036cd5b51b308428720ef3cd8",
+    "checks": "Actual FeatureStore validates all24 indices/chunks/components/manifests and IDs; additionally full teacher token equality, full-depth provenance, state shapes, finite values, and output-token counts."
+  }
+}

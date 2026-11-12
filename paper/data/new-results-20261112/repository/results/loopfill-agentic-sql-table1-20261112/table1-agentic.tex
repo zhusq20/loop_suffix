@@ -1,0 +1,32 @@
+% Generated from this suite only. Cell = latency speedup / loop-normalized gamma.
+% Pending cells are --. See protocol.json and report.md for the workload and timing boundaries.
+% huginn-3.5b
+\begin{tabular}{lrr}
+\hline
+Method & Agentic ($T=0$) & Agentic ($T=1$) \\
+\hline
+AR & 1.00 / 1.00 & 1.00 / 1.00 \\
+WFD & 3.01 / 4.17 & 1.75 / 2.34 \\
+LoopSpec & 4.10 / 5.57 & 1.97 / 2.68 \\
+Suffix-only & 2.03 / 2.22 & 1.26 / 1.49 \\
+LoopAhead & 4.22 / 6.27 & 2.11 / 3.97 \\
+DFlash & 3.28 / 3.46 & 2.12 / 2.15 \\
+LoopFill-online & 5.40 / 7.61 & 2.18 / 3.30 \\
+\hline
+\end{tabular}
+
+% ouro-2.6b
+\begin{tabular}{lrr}
+\hline
+Method & Agentic ($T=0$) & Agentic ($T=1$) \\
+\hline
+AR & 1.00 / 1.00 & 1.00 / 1.00 \\
+WFD & 2.28 / 3.08 & 2.08 / 2.28 \\
+LoopSpec & 2.98 / 3.28 & 2.07 / 2.44 \\
+Suffix-only & 1.69 / 2.11 & 1.21 / 1.57 \\
+LoopAhead & 2.88 / 3.89 & 2.98 / 3.43 \\
+DFlash & 2.35 / 2.69 & 1.63 / 2.10 \\
+LoopFill-online & 4.64 / 6.23 & 3.27 / 3.62 \\
+\hline
+\end{tabular}
+

@@ -1,0 +1,442 @@
+{
+  "gpu_hours": {
+    "generation": 11.704819595747523,
+    "features": 0.4011701241466734
+  },
+  "total_gpu_hours": 12.105989719894197,
+  "reservations": [
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard0/reservation-cost.jsonl",
+      "started_unix": 1794294579.3814888,
+      "finished_unix": 1794302531.1369214,
+      "reserved_gpu_seconds": 7951.755432844162,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard1/reservation-cost.jsonl",
+      "started_unix": 1794297354.192952,
+      "finished_unix": 1794305059.0902581,
+      "reserved_gpu_seconds": 7704.897306442261,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard2/reservation-cost.jsonl",
+      "started_unix": 1794305394.584591,
+      "finished_unix": 1794308577.797049,
+      "reserved_gpu_seconds": 3183.2124581336975,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard3/reservation-cost.jsonl",
+      "started_unix": 1794305956.4711573,
+      "finished_unix": 1794309169.131636,
+      "reserved_gpu_seconds": 3212.6604788303375,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard4/reservation-cost.jsonl",
+      "started_unix": 1794313479.7663217,
+      "finished_unix": 1794316786.9626832,
+      "reserved_gpu_seconds": 3307.1963617801666,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard5/reservation-cost.jsonl",
+      "started_unix": 1794309412.4322813,
+      "finished_unix": 1794312561.4518821,
+      "reserved_gpu_seconds": 3149.019601583481,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard6/reservation-cost.jsonl",
+      "started_unix": 1794310015.0165796,
+      "finished_unix": 1794313392.1959736,
+      "reserved_gpu_seconds": 3377.1793942451477,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-train/huginn-3.5b/shard7/reservation-cost.jsonl",
+      "started_unix": 1794314230.3827786,
+      "finished_unix": 1794317260.5044503,
+      "reserved_gpu_seconds": 3030.1216719150543,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard0/reservation-cost.jsonl",
+      "started_unix": 1794302723.5698507,
+      "finished_unix": 1794304024.6108284,
+      "reserved_gpu_seconds": 1301.0409779548645,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard1/reservation-cost.jsonl",
+      "started_unix": 1794305065.2385216,
+      "finished_unix": 1794305427.2723992,
+      "reserved_gpu_seconds": 362.03387784957886,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard2/reservation-cost.jsonl",
+      "started_unix": 1794308579.1299355,
+      "finished_unix": 1794308905.8590646,
+      "reserved_gpu_seconds": 326.729129076004,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard3/reservation-cost.jsonl",
+      "started_unix": 1794309170.7311018,
+      "finished_unix": 1794309524.3065238,
+      "reserved_gpu_seconds": 353.5754220485687,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard4/reservation-cost.jsonl",
+      "started_unix": 1794316788.3294635,
+      "finished_unix": 1794317121.168872,
+      "reserved_gpu_seconds": 332.8394088745117,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard5/reservation-cost.jsonl",
+      "started_unix": 1794312562.919287,
+      "finished_unix": 1794312936.1837258,
+      "reserved_gpu_seconds": 373.26443910598755,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard6/reservation-cost.jsonl",
+      "started_unix": 1794313394.1481295,
+      "finished_unix": 1794313718.31356,
+      "reserved_gpu_seconds": 324.16543078422546,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-dev/huginn-3.5b/shard7/reservation-cost.jsonl",
+      "started_unix": 1794317261.901643,
+      "finished_unix": 1794317583.7996964,
+      "reserved_gpu_seconds": 321.89805364608765,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard0/reservation-cost.jsonl",
+      "started_unix": 1794304026.276478,
+      "finished_unix": 1794305187.0155802,
+      "reserved_gpu_seconds": 1160.7391023635864,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard1/reservation-cost.jsonl",
+      "started_unix": 1794305428.641601,
+      "finished_unix": 1794305757.682406,
+      "reserved_gpu_seconds": 329.04080510139465,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard2/reservation-cost.jsonl",
+      "started_unix": 1794308907.3076067,
+      "finished_unix": 1794309237.658791,
+      "reserved_gpu_seconds": 330.3511848449707,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard3/reservation-cost.jsonl",
+      "started_unix": 1794309525.5643637,
+      "finished_unix": 1794309845.6289558,
+      "reserved_gpu_seconds": 320.0645923614502,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard4/reservation-cost.jsonl",
+      "started_unix": 1794317122.6651025,
+      "finished_unix": 1794317455.776637,
+      "reserved_gpu_seconds": 333.11153507232666,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard5/reservation-cost.jsonl",
+      "started_unix": 1794312937.6194396,
+      "finished_unix": 1794313303.3211842,
+      "reserved_gpu_seconds": 365.7017447948456,
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard6/reservation-cost.jsonl",
+      "started_unix": 1794313719.6282816,
+      "finished_unix": 1794314042.5404356,
+      "reserved_gpu_seconds": 322.9121539592743,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "generation",
+      "path": "data/teachers/loopahead-confirmation/huginn-3.5b/shard7/reservation-cost.jsonl",
+      "started_unix": 1794317585.1223984,
+      "finished_unix": 1794317948.9623792,
+      "reserved_gpu_seconds": 363.83998107910156,
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard0/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794305188.4995675,
+      "finished_unix": 1794305322.5104618,
+      "reserved_gpu_seconds": 134.01089453697205,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard1/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794305758.9925053,
+      "finished_unix": 1794305879.2859797,
+      "reserved_gpu_seconds": 120.29347467422485,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard2/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794309238.929486,
+      "finished_unix": 1794309349.4478595,
+      "reserved_gpu_seconds": 110.51837372779846,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard3/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794309846.8714273,
+      "finished_unix": 1794309951.045211,
+      "reserved_gpu_seconds": 104.17378401756287,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard4/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794317457.1123354,
+      "finished_unix": 1794317581.500084,
+      "reserved_gpu_seconds": 124.38774871826172,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard5/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794313304.6760702,
+      "finished_unix": 1794313410.17253,
+      "reserved_gpu_seconds": 105.4964599609375,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard6/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794314044.3680065,
+      "finished_unix": 1794314161.5173044,
+      "reserved_gpu_seconds": 117.14929795265198,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-train/huginn-3.5b/shard7/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794317950.348119,
+      "finished_unix": 1794318052.2769558,
+      "reserved_gpu_seconds": 101.92883706092834,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard0/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794305324.0842855,
+      "finished_unix": 1794305359.0299776,
+      "reserved_gpu_seconds": 34.94569230079651,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard1/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794305880.7231479,
+      "finished_unix": 1794305915.6939874,
+      "reserved_gpu_seconds": 34.970839738845825,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard2/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794309350.8849351,
+      "finished_unix": 1794309380.3805962,
+      "reserved_gpu_seconds": 29.49566102027893,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard3/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794309952.5022879,
+      "finished_unix": 1794309982.4954524,
+      "reserved_gpu_seconds": 29.993164777755737,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard4/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794317583.9513206,
+      "finished_unix": 1794317620.4861028,
+      "reserved_gpu_seconds": 36.53478217124939,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard5/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794313411.5626013,
+      "finished_unix": 1794313445.650665,
+      "reserved_gpu_seconds": 34.08806395530701,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard6/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794314163.8683267,
+      "finished_unix": 1794314193.707609,
+      "reserved_gpu_seconds": 29.839282512664795,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-dev/huginn-3.5b/shard7/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794318053.6199586,
+      "finished_unix": 1794318083.4596705,
+      "reserved_gpu_seconds": 29.839712142944336,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard0/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794305360.5227747,
+      "finished_unix": 1794305392.9959943,
+      "reserved_gpu_seconds": 32.473220109939575,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard1/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794305916.971041,
+      "finished_unix": 1794305955.0882509,
+      "reserved_gpu_seconds": 38.117210149765015,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard2/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794309381.6682575,
+      "finished_unix": 1794309410.987939,
+      "reserved_gpu_seconds": 29.319681644439697,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard3/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794309983.7573366,
+      "finished_unix": 1794310013.6883323,
+      "reserved_gpu_seconds": 29.93099594116211,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard4/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794317621.9267848,
+      "finished_unix": 1794317664.2291605,
+      "reserved_gpu_seconds": 42.30237603187561,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard5/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-994c5418-ecc5-78ff-ad5e-0cee6dcd1111",
+      "started_unix": 1794313446.9793782,
+      "finished_unix": 1794313478.3649673,
+      "reserved_gpu_seconds": 31.385589361190796,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard6/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794314194.9520268,
+      "finished_unix": 1794314226.0058084,
+      "reserved_gpu_seconds": 31.053781747817993,
+      "status": "complete"
+    },
+    {
+      "category": "features",
+      "path": "features/loopahead-confirmation/huginn-3.5b/shard7/reservation-cost.jsonl",
+      "gpu_uuid": "GPU-afc353e9-924d-40c1-75bb-c126dc83e41e",
+      "started_unix": 1794318084.7288904,
+      "finished_unix": 1794318116.6924129,
+      "reserved_gpu_seconds": 31.9635226726532,
+      "status": "complete"
+    }
+  ],
+  "coverage": "All successful Huginn LoopAhead train/dev/confirmation generation and feature reservations; separate failed attempts are in the global cost ledger."
+}

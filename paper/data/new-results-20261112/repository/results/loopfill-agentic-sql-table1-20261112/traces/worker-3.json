@@ -1,0 +1,29 @@
+{
+  "pid": 457458,
+  "shard": 3,
+  "shards": 4,
+  "gpu_uuid": "afc353e9-924d-40c1-75bb-c126dc83e41e",
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        0
+      ],
+      "generation_config": [],
+      "model_config": [
+        0
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "tokenizer",
+    "stop_ids": [
+      0,
+      2
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  }
+}

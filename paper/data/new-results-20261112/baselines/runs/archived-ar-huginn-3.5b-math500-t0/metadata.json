@@ -1,0 +1,92 @@
+{
+  "model": "huginn-3.5b",
+  "model_revision": "bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+  "method": "ar",
+  "dataset": "math500",
+  "input_sha256": "e2f540f73346a63b30d143d5334e7c47702786118699b0e119a15f31b28ac413",
+  "count": 500,
+  "full_count": 500,
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "top_k": 0,
+  "seed": 0,
+  "dtype": "bfloat16",
+  "max_new_tokens": 512,
+  "max_seq": 2304,
+  "stop_audit": {
+    "sources": {
+      "tokenizer": [
+        65505
+      ],
+      "generation_config": [
+        65505,
+        65508
+      ],
+      "model_config": [
+        65505
+      ]
+    },
+    "invalid_ids": {
+      "tokenizer": [],
+      "generation_config": [],
+      "model_config": []
+    },
+    "selected_source": "model_config",
+    "stop_ids": [
+      65505,
+      65508
+    ],
+    "conflict": true,
+    "reason": "Preserve historical benchmark stopping policy."
+  },
+  "gpu_uuid": "GPU-861ad2de-b899-21ca-707e-44c0a1ce1029",
+  "gpu": "NVIDIA L20X",
+  "cpu_affinity": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "torch": "2.6.0+cu126",
+  "transformers": "4.55.0",
+  "graph": false,
+  "compile": false,
+  "physical_nodes": 1,
+  "reportable": true,
+  "stage": "formal",
+  "frozen_source_sha256": {
+    "scripts/loop_batch_bench.py": "a1b338b6bca09bf34b1bf10bcb4bf292b5c21c9e21aafd50dcc91221762b0b63",
+    "scripts/loop_latency_inputs.py": "fba7af141ebba15317393b2ec3b40cc1c21dd0c8871dd1eb8e8f96e24e00872e",
+    "scripts/loop_latency_suite.py": "126d66f3c24ec53100182cf0c58057eb71dade51084912c1d9c1d69b4a9faf5d",
+    "scripts/loop_latency_worker.py": "dfe886d1bf1e72a2ea501a8ed1cd018de7c1770816f10a486929560def5c69b1",
+    "src/llm_memory_editability/__init__.py": "8ee3bae217e08e40c16a9718ab3056d0bd2416d173794b3ac58684c687dfff26",
+    "src/llm_memory_editability/loop_batch_decode.py": "9fb2e7b6785330d94f9cccc6ad818892aa7a00a48868c9ca82af013e3c222fad",
+    "src/llm_memory_editability/loop_batch_suffix.py": "50288e83986b1d4e364b1635d355d37cf52e222812e7bfda0baefbf012597d5e",
+    "src/llm_memory_editability/loop_budget_decode.py": "c65b1e42a1b1e9ea7861c5a167a60ea3203fc87ce06149e81e3f28f356da65e3",
+    "src/llm_memory_editability/loop_decode_steps.py": "1b66a398e46aa2c36ba2ef50f44b2916595d69a6420f60b357eec721845df35a",
+    "src/llm_memory_editability/loop_loopspec_decode.py": "44a93dc0ba0978c6c680df29b57eabf10a950a44fbf2785026d657e97c90c603",
+    "src/llm_memory_editability/loop_model_registry.py": "392e5ef6655f12fbb0239238806cd5f635c40dc07ca8cf0fb5e0d57737c210ec",
+    "src/llm_memory_editability/loop_optimized_decode.py": "65f0c74564454c58fe81d89b3b07426c1e7352919c715a88774e834817630c6a",
+    "src/llm_memory_editability/loop_prob_decode.py": "ddad88e7d6c864d8668427e93c46eede58e11e0e60c21027928fda8b32c8b832",
+    "src/llm_memory_editability/loop_prob_tree.py": "97ddf24655dd2a4968a817b2a72943b2be16d64f37f71d97c8b6f03994d67a1a",
+    "src/llm_memory_editability/loop_raven_decode.py": "41d56d01d7c73b06776cae41ddd485389428ff64b099c3ad5c9a0802dfaa4f2d",
+    "src/llm_memory_editability/loop_score_ablation.py": "8977a0c8b02b102f1d7b5385a5ad6eec1f1e4a9a664cea0f0530e1fd01f11561",
+    "src/llm_memory_editability/loop_suffix_spec.py": "a2d336fef8e92adedd363ef86730b4e652bdc3a370256ba181e96f6b100ba20a",
+    "src/llm_memory_editability/loop_tree_decode.py": "4ed0c51f982296327ef74b2ac2c9a0a757cbd7e997ae498e79db4571291636b2"
+  },
+  "measurement_provenance": {
+    "kind": "archived_same_host_AR",
+    "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-20261107/runs/huginn-3.5b-math500-ar",
+    "source_sha256": {
+      "metadata.json": "e72f675560b0fc1443c8836d074e8d56afeb8e1087a1dd5704a1f3cc9dee400a",
+      "requests.jsonl": "5e931648819e34ea820db7321fd851ddaf2f6139be7e333d659a9c2aea912664",
+      "summary.json": "a1c3e622e4b15c422b46c1b747fc8dcdd1e7c9c496fd6efb7bb943f40f761180",
+      "complete.json": "cda4bbe6207dc67ee98ac0225b850799341ab510be017832d306942c2c198281"
+    },
+    "imported_unix": 1794301570.8610322,
+    "first_request_completed_unix": 1793991550.6156566,
+    "last_request_completed_unix": 1794008803.6362429,
+    "new_measurement": false,
+    "reason": "Preserve original LoopFill table denominator on verified identical GPU host and frozen software/protocol"
+  }
+}

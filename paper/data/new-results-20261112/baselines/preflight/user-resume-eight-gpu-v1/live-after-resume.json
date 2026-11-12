@@ -1,0 +1,85 @@
+{
+  "observed_unix": 1794436155.6953673,
+  "live": {
+    "100836": {
+      "state": "S",
+      "start_ticks": "45015978"
+    },
+    "105015": {
+      "state": "S",
+      "start_ticks": "45050655"
+    },
+    "497107": {
+      "state": "S",
+      "start_ticks": "44019573"
+    },
+    "table1-ouro-2.6b-math500-t0": {
+      "pid": 24069,
+      "state": "R",
+      "start_ticks": "44419783"
+    },
+    "table1-ouro-2.6b-math500-t1": {
+      "pid": 26008,
+      "state": "R",
+      "start_ticks": "44433809"
+    },
+    "table1-huginn-3.5b-math500-t1": {
+      "pid": 27179,
+      "state": "R",
+      "start_ticks": "44443524"
+    },
+    "table1-ouro-2.6b-specbench-t1": {
+      "pid": 46374,
+      "state": "R",
+      "start_ticks": "44579965"
+    },
+    "table1-ouro-2.6b-specbench-t0": {
+      "pid": 59111,
+      "state": "R",
+      "start_ticks": "44679521"
+    },
+    "table1-ouro-2.6b-mbppplus-t1": {
+      "pid": 88956,
+      "state": "R",
+      "start_ticks": "44928553"
+    },
+    "loopahead-ouro-2.6b-specbench-t1": {
+      "pid": 88946,
+      "state": "R",
+      "start_ticks": "44928509"
+    }
+  },
+  "pending_balanced": [
+    "table1-huginn-3.5b-mbppplus-t1",
+    "table1-huginn-3.5b-bbh-t0",
+    "table1-huginn-3.5b-bbh-t1",
+    "table1-huginn-3.5b-specbench-t1",
+    "table1-huginn-3.5b-specbench-t0",
+    "table1-ouro-2.6b-humanevalplus-t1",
+    "table1-huginn-3.5b-gsm8k-t1",
+    "table1-huginn-3.5b-humanevalplus-t1",
+    "table2-ouro-2.6b-b8",
+    "table2-ouro-2.6b-b16",
+    "table2-huginn-3.5b-b16"
+  ],
+  "reuse": [
+    "table1-ouro-2.6b-bbh-t0",
+    "table1-huginn-3.5b-gsm8k-t0",
+    "table1-ouro-2.6b-gsm8k-t0",
+    "table1-huginn-3.5b-humanevalplus-t0",
+    "table1-ouro-2.6b-humanevalplus-t0",
+    "table1-huginn-3.5b-mbppplus-t0",
+    "table1-ouro-2.6b-mbppplus-t0",
+    "table1-ouro-2.6b-bbh-t1",
+    "table1-ouro-2.6b-gsm8k-t1"
+  ],
+  "lad_pipeline": {
+    "stage": "waiting_for_current_gpu_job",
+    "controller_pid": 105015,
+    "updated_unix": 1794436153.591067,
+    "gpu": 3,
+    "gpu_uuid": "GPU-bb9dac43-6fce-fc43-0f10-8f64a80742c3"
+  },
+  "formal_cells": 35,
+  "hardware": "0, NVIDIA L20X, 20771 MiB, 74 %\n1, NVIDIA L20X, 10151 MiB, 48 %\n2, NVIDIA L20X, 10169 MiB, 45 %\n3, NVIDIA L20X, 9505 MiB, 43 %\n4, NVIDIA L20X, 7609 MiB, 44 %\n5, NVIDIA L20X, 15015 MiB, 54 %\n6, NVIDIA L20X, 10175 MiB, 47 %\n7, NVIDIA L20X, 10175 MiB, 48 %\n"
+}

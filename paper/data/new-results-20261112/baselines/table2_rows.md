@@ -1,0 +1,21 @@
+| Model | Temp. | Method | GSM8K η γ | MATH-500 η γ | BBH η γ | HumanEval+ η γ | MBPP+ η γ | SpecBench η γ | Mean η γ |
+|---|---|---|---|---|---|---|---|---|---|
+| huginn-3.5b | 0 | DFlash* (Huginn窄版适配) | 2.35 2.85 | pending | pending | 5.24 6.48 | 4.22 5.22 | pending | pending |
+| huginn-3.5b | 0 | LoopAhead† (Huginn适配) | 3.32 5.41 | 4.29 6.96 | 4.28 6.63 | 5.26 7.95 | 4.19 5.97 | 3.27 4.95 | 4.10 6.31 |
+| huginn-3.5b | 1 | LoopAhead† (Huginn适配) | 2.34 3.72 | 2.68 4.41 | 2.86 4.59 | 2.85 4.42 | 2.94 4.49 | 2.39 3.74 | 2.68 4.23 |
+| ouro-2.6b | 0 | DFlash* | 3.50 3.89 | 3.36 3.81 | 3.61 4.01 | 3.94 4.43 | 4.47 5.00 | 2.57 2.87 | 3.57 4.00 |
+| ouro-2.6b | 0 | LoopAhead† | 4.92 6.01 | 4.14 5.08 | 4.42 5.26 | 4.58 5.70 | 4.76 5.73 | 3.62 4.38 | 4.41 5.36 |
+| ouro-2.6b | 1 | DFlash* | 2.29 2.75 | 2.44 2.83 | 2.77 3.02 | pending | pending | pending | pending |
+| ouro-2.6b | 1 | LoopAhead† | 3.83 4.51 | 3.43 4.29 | 3.33 3.98 | 3.11 4.29 | 3.37 4.30 | 2.71 3.29 | 3.30 4.11 |
+
+η按原LoopFill表的总decode时间比；六任务Mean为算术平均。CSV另报吞吐比。
+
+* DFlash使用官方草稿模型/损失和本地循环目标适配，η相对其同栈AR；训练数据版本/规模差异见DESIGN。草稿耗时来自独立完整题集profiling；BF16输出一致率与分歧诊断见CSV和NOTES。
+
+Huginn DFlash为我们的窄版适配：5层/H2048/FF5632、332,621,056可训练参数，投影连接冻结的5280维target embedding/head；该结构不是原作者发布的Huginn检查点。旧宽版中断训练成本单列。
+
+† LoopAhead为按论文自行复现，无官方训练代码或LAD权重；Huginn为迁移。B4对照及BF16数值限制见NOTES。
+LoopAhead沿用原表同一主机、同一冻结配置的AR测量；原始时间戳保留于CSV与导入记录，不算作本次新测。跨日期时延漂移未作修正，独立GSM8K全300题环境复测见preflight/calibration-n300.md。
+两种方法的AR分母来源及目标执行栈不同，不能仅凭各自η跨方法排序；比较时须同时查看CSV中的实测method_tok_s、method_decode_s和输出token数。这里不将分母差异归因于某个软件版本，也不作漂移校正。
+
+部分结果：已完成36/72格，不是最终完整表。

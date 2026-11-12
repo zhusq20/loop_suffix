@@ -1,0 +1,6 @@
+{
+  "actual_tool_exit_code": 1,
+  "source_sha256": "7c83a4cb85dfcb6424e4a457ede0bf3acaa1cd01d54c000ed364da429b08255d",
+  "error": "AssertionError at metadata source_sha256 equality",
+  "finding": "Six B4/B8/B16 jobs used the recorded gpu-rebalance source snapshot. The only changed file is configs/gpu-allocation.json; inference source hashes are identical. Original measurement artifacts are unchanged."
+}

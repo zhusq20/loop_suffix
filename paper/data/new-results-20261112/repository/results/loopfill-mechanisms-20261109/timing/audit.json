@@ -1,0 +1,152 @@
+{
+  "complete_streams": 32,
+  "planned_streams": 32,
+  "all_complete": true,
+  "pairs": [
+    {
+      "model": "huginn-3.5b",
+      "batch": 1,
+      "arm": "ar",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.064718366489426
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 1,
+      "arm": "budget-online",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 0.874409953752347
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 1,
+      "arm": "budget-suffix",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.2298022488595675
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 1,
+      "arm": "loopspec-dual",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.053512796223954
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "ar",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0363725107615602
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "budget-online",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.030981986012351
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "budget-suffix",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.026791854975583
+    },
+    {
+      "model": "huginn-3.5b",
+      "batch": 16,
+      "arm": "loopspec-dual",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0266994889039542
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 1,
+      "arm": "ar",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0981086177215131
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 1,
+      "arm": "budget-online",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0165840990516575
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 1,
+      "arm": "budget-suffix",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 0.9938794545743079
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 1,
+      "arm": "loopspec-dual",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0321693182245337
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "ar",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0287066877715523
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "budget-online",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0014311702508836
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "budget-suffix",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 0.9910542275112844
+    },
+    {
+      "model": "ouro-2.6b",
+      "batch": 16,
+      "arm": "loopspec-dual",
+      "requests": 24,
+      "same_output_requests": 24,
+      "same_publication_order": true,
+      "diagnostic_over_normal_wall": 1.0126272717129507
+    }
+  ],
+  "normal_timing_streams": 16
+}

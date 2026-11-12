@@ -775,6 +775,30 @@
       "group": "tree-sampling",
       "bytes": 229,
       "sha256": "187bb4a95908ca4708ccd751107cd2e8fd7ab6f8355f584fa56e558c0c325f61"
+    },
+    {
+      "path": "paper/data/new-results-20261112/README.md",
+      "group": "new-paper-results-20261112",
+      "bytes": 6564,
+      "sha256": "c178254c121e07ed23d9c2923dbff0dc50ddb9bdfbd656048c08c72c95ecc947"
+    },
+    {
+      "path": "paper/data/new-results-20261112/manifest.json",
+      "group": "new-paper-results-20261112",
+      "bytes": 1425530,
+      "sha256": "d0587e5c65ce3083691e2f53672fa3b2af33af04adbb1e071ef68c9597493aca"
+    },
+    {
+      "path": "paper/data/new-results-20261112/validation.json",
+      "group": "new-paper-results-20261112",
+      "bytes": 637,
+      "sha256": "20817f52f3c4f3f2fe2774e2cbb2fb41787a9595e48051962afb8135b6a4eb08"
+    },
+    {
+      "path": "paper/data/new-results-20261112/run-audits.json",
+      "group": "new-paper-results-20261112",
+      "bytes": 79603,
+      "sha256": "b73d4a4e34addcd483f761f78d83cd73bc0519ae5d76e913a9f4b9d04bff6d5a"
     }
   ],
   "file_count": 129,
@@ -785,5 +809,12 @@
     "Compressed numerical records retain all statistics and output hashes.",
     "The child-Q=2 ablation archive contains all 40 cells, including 36 reused cells from the original archive; only four cells are new measurements."
   ],
-  "updated_utc": "2026-11-09T04:56:53.977360+00:00"
+  "updated_utc": "2026-11-12T02:32:28.665948+00:00",
+  "submanifests": [
+    {
+      "path": "paper/data/new-results-20261112/manifest.json",
+      "base": "paper/data/new-results-20261112",
+      "description": "Complete per-file hashes for the 2026-11-12 baseline, SQL, timing, training and ongoing-status snapshot."
+    }
+  ]
 }

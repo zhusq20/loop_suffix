@@ -1,0 +1,249 @@
+{
+  "passed": true,
+  "cases": 5,
+  "checks": "Both actual replay top3 token IDs, logits and probabilities exactly equal previously instrumented BF1620 traces; each replay also verified every source token through its formal first divergence.",
+  "source_journals": {
+    "ar": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-ar-bfloat16-n20-v1/requests.jsonl",
+      "sha256": "2af58e329df65e12ffa6752fa7480294e88c4fea1a604ca87a168744728b663b"
+    },
+    "loopahead": {
+      "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/loopahead-trained-huginn-3.5b-gsm8k-loopahead-bfloat16-n20-v1/requests.jsonl",
+      "sha256": "64d47fdfe60a1ee04a633a1d35570c3f1ebfdab6ef7e8250d6912cbcb0f45d8e"
+    }
+  },
+  "checked_cases": [
+    {
+      "source_id": "gsm8k/test/1194",
+      "position": 28,
+      "ar": {
+        "top_ids": [
+          291,
+          286,
+          725
+        ],
+        "top_logits": [
+          19.0,
+          18.875,
+          17.875
+        ],
+        "top_probs": [
+          0.4434596598148346,
+          0.39135175943374634,
+          0.14397026598453522
+        ],
+        "top2_probability_margin": 0.05210790038108826,
+        "top1_logit_margin": 0.125,
+        "argmax": 291
+      },
+      "loopahead": {
+        "top_ids": [
+          291,
+          286,
+          725
+        ],
+        "top_logits": [
+          18.875,
+          18.875,
+          17.75
+        ],
+        "top_probs": [
+          0.4204639792442322,
+          0.4204639792442322,
+          0.136504665017128
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 286
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/901",
+      "position": 19,
+      "ar": {
+        "top_ids": [
+          18014,
+          16251,
+          2649
+        ],
+        "top_logits": [
+          18.75,
+          18.625,
+          16.0
+        ],
+        "top_probs": [
+          0.47484979033470154,
+          0.41905346512794495,
+          0.03035612963140011
+        ],
+        "top2_probability_margin": 0.05579632520675659,
+        "top1_logit_margin": 0.125,
+        "argmax": 18014
+      },
+      "loopahead": {
+        "top_ids": [
+          18014,
+          16251,
+          2649
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          16.0
+        ],
+        "top_probs": [
+          0.44978365302085876,
+          0.44978365302085876,
+          0.028753705322742462
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 16251
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/745",
+      "position": 102,
+      "ar": {
+        "top_ids": [
+          16587,
+          3334,
+          13039
+        ],
+        "top_logits": [
+          16.875,
+          16.875,
+          15.8125
+        ],
+        "top_probs": [
+          0.2905927002429962,
+          0.2905927002429962,
+          0.10042615234851837
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 3334
+      },
+      "loopahead": {
+        "top_ids": [
+          16587,
+          3334,
+          13039
+        ],
+        "top_logits": [
+          17.0,
+          16.875,
+          15.8125
+        ],
+        "top_probs": [
+          0.31457749009132385,
+          0.27761366963386536,
+          0.09594070911407471
+        ],
+        "top2_probability_margin": 0.036963820457458496,
+        "top1_logit_margin": 0.125,
+        "argmax": 16587
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/804",
+      "position": 4,
+      "ar": {
+        "top_ids": [
+          893,
+          494,
+          330
+        ],
+        "top_logits": [
+          17.875,
+          17.75,
+          16.625
+        ],
+        "top_probs": [
+          0.3728903830051422,
+          0.3290746212005615,
+          0.10683488845825195
+        ],
+        "top2_probability_margin": 0.04381576180458069,
+        "top1_logit_margin": 0.125,
+        "argmax": 893
+      },
+      "loopahead": {
+        "top_ids": [
+          893,
+          494,
+          330
+        ],
+        "top_logits": [
+          17.75,
+          17.75,
+          16.625
+        ],
+        "top_probs": [
+          0.3437053859233856,
+          0.3437053859233856,
+          0.11158480495214462
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 494
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    },
+    {
+      "source_id": "gsm8k/test/1185",
+      "position": 3,
+      "ar": {
+        "top_ids": [
+          5147,
+          893,
+          5752
+        ],
+        "top_logits": [
+          18.75,
+          18.75,
+          15.6875
+        ],
+        "top_probs": [
+          0.47341397404670715,
+          0.47341397404670715,
+          0.022141868248581886
+        ],
+        "top2_probability_margin": 0.0,
+        "top1_logit_margin": 0.0,
+        "argmax": 893
+      },
+      "loopahead": {
+        "top_ids": [
+          5147,
+          893,
+          5752
+        ],
+        "top_logits": [
+          18.875,
+          18.75,
+          15.6875
+        ],
+        "top_probs": [
+          0.5045032501220703,
+          0.4452225863933563,
+          0.020823337137699127
+        ],
+        "top2_probability_margin": 0.05928066372871399,
+        "top1_logit_margin": 0.125,
+        "argmax": 5147
+      },
+      "both_original_prefixes_reproduced": true,
+      "at_least_one_top2_tie": true
+    }
+  ],
+  "finished_unix": 1794327449.266473,
+  "limitation": "This cross-check covers the5 shared pilot/formal mismatches; the full83-case formal replay is still running."
+}

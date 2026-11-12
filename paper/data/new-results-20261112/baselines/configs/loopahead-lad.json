@@ -1,0 +1,47 @@
+[
+  {
+    "model": "ouro-2.6b",
+    "parameters": 11051008,
+    "config": {
+      "target_hidden": 2048,
+      "width": 512,
+      "layers": 2,
+      "heads": 8,
+      "intermediate": 1536,
+      "context": 64,
+      "train_future": 7,
+      "norm_eps": 1e-06,
+      "init_std": 0.02
+    }
+  },
+  {
+    "model": "huginn-3.5b",
+    "parameters": 17673376,
+    "config": {
+      "target_hidden": 5280,
+      "width": 512,
+      "layers": 2,
+      "heads": 8,
+      "intermediate": 1536,
+      "context": 64,
+      "train_future": 7,
+      "norm_eps": 1e-06,
+      "init_std": 0.02
+    }
+  },
+  {
+    "model": "ouro-1.4b",
+    "parameters": 11051008,
+    "config": {
+      "target_hidden": 2048,
+      "width": 512,
+      "layers": 2,
+      "heads": 8,
+      "intermediate": 1536,
+      "context": 64,
+      "train_future": 7,
+      "norm_eps": 1e-06,
+      "init_std": 0.02
+    }
+  }
+]

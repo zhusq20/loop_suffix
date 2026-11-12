@@ -1,0 +1,102 @@
+"""Verify and reuse the ten completed continuous-throughput measurements."""
+import csv
+import hashlib
+import json
+import math
+from pathlib import Path
+import time
+
+OUT = Path(__file__).resolve().parent
+BASE = OUT.parents[1]
+ROOT = BASE.parents[1]
+SUITE = Path('/ossfs/workspace/loop_suffix/results/loopahead-table2-20261112-v2')
+
+
+def read(path):
+    return json.loads(path.read_bytes())
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+protocol = read(SUITE/'protocol.json')
+assert protocol['planned_cells'] == 10 and protocol['requests_per_cell'] == 480
+assert protocol['batches'] == [1, 2, 4, 8, 16]
+assert sha(Path(protocol['table2_protocol'])) == protocol['table2_protocol_sha256']
+old = read(Path(protocol['table2_protocol']))
+for name, expected in protocol['source_sha256'].items():
+    assert sha(SUITE/'source'/name) == expected
+for name, expected in old['source_sha256'].items():
+    assert sha(ROOT/'results/loopfill-table2-20261107-v2/source'/name) == expected
+table = list(csv.DictReader((SUITE/'measurements.csv').open()))
+historical = list(csv.DictReader((ROOT/'results/loopfill-table2-20261107-v2/measurements.csv').open()))
+results = []
+for job in protocol['jobs']:
+    run = SUITE/'runs'/job['id']
+    meta, done, summary = [read(run/name) for name in ['metadata.json', 'complete.json', 'summary.json']]
+    launch, finish = [read(SUITE/'logs'/f"{job['id']}-{suffix}.json") for suffix in ['launcher', 'finished']]
+    assert finish['exit_code'] == 0 and all(finish[k] == v for k, v in launch.items())
+    assert sha(run/'requests.jsonl') == done['requests_sha256']
+    assert not (run/'failure.json').exists()
+    assert meta['model'] == job['model'] and meta['batch'] == job['batch']
+    assert set(meta['source_sha256']) == set(protocol['source_sha256'])
+    changed = [name for name in meta['source_sha256'] if meta['source_sha256'][name] != protocol['source_sha256'][name]]
+    source_script = next(Path(a) for a in launch['argv'] if a.endswith('/evaluate_loopahead_throughput.py'))
+    for name, expected in meta['source_sha256'].items():
+        assert sha(source_script.parent/name) == expected
+    if changed:
+        assert changed == ['configs/gpu-allocation.json']
+        amendment = read(SUITE/'gpu-placement-amendment.json')
+        assert job['id'] in amendment['migrated_jobs']
+        assert launch['placement_amendment'] == amendment['plan']
+        migration = read(Path(amendment['plan']))
+        assert migration['source_sha256'] == meta['source_sha256']
+        original_policy = read(SUITE/'source/configs/gpu-allocation.json')
+        migrated_policy = read(source_script.parent/'configs/gpu-allocation.json')
+        assert migrated_policy['allowed_gpus'] == list(range(8)) and not migrated_policy['released_gpus']
+        changed_policy = {k for k in original_policy.keys()|migrated_policy.keys()
+                          if original_policy.get(k) != migrated_policy.get(k)}
+        assert changed_policy <= {'allowed_gpus','released_gpus','reason','updated_unix','placement_amendment'}
+    assert meta['target_source_sha256'] == old['source_sha256']
+    assert meta['mode'] == 'formal' and meta['reportable']
+    assert meta['max_new_tokens'] == 1024 and meta['temperature'] == 0 and meta['dtype'] == 'bfloat16'
+    assert not any(meta[k] for k in ['graph', 'compile', 'pad_decode_rows'])
+    assert meta['schedule'] == 'continuous' and meta['prefill_chunk_size'] == 128
+    assert sha(Path(meta['input_path'])) == meta['input_sha256'] == protocol['models'][job['model']]['input_sha256']
+    assert sha(Path(meta['checkpoint'])) == meta['checkpoint_sha256'] == protocol['models'][job['model']]['sha256']
+    rows = [json.loads(line) for line in (run/'requests.jsonl').read_bytes().splitlines()]
+    inputs = [json.loads(line) for line in Path(meta['input_path']).read_bytes().splitlines()]
+    assert len(rows) == done['requests'] == summary['requests'] == 480
+    assert {r['request_id'] for r in rows} == {r['question_id'] for r in inputs}
+    assert len({r['request_id'] for r in rows}) == len(rows)
+    for row in rows:
+        assert row['n_tokens'] == len(row['tokens']) <= 1024
+        assert row['stats']['tokens'] == len(row['tokens'])-1
+        assert launch['started_unix'] <= row['finished_unix'] <= done['finished_unix'] <= finish['finished_unix']
+    assert summary['output_tokens'] == sum(len(r['tokens']) for r in rows)
+    assert summary['input_tokens'] == summary['prefill_chunk_tokens'] == sum(len(r['prompt_token_ids']) for r in inputs)
+    assert summary['concurrency'] == job['batch'] and summary['core_padding_rows'] == 0
+    assert math.isfinite(summary['wall_s']) and summary['wall_s'] > 0
+    assert math.isclose(summary['output_tput'], summary['output_tokens']/summary['wall_s'], rel_tol=1e-12)
+    loops = sum(r['stats']['calls'] for r in rows)
+    assert math.isclose(summary['gamma'], meta['config']['total']*sum(r['stats']['tokens'] for r in rows)/loops, rel_tol=1e-12)
+    row = next(r for r in table if r['model'] == job['model'] and int(r['batch']) == job['batch'])
+    for arm, label in [('ar', 'ar'), ('budget-online', 'loopfill')]:
+        ref = next(r for r in historical if r['model'] == job['model'] and int(r['batch']) == job['batch'] and r['arm'] == arm)
+        assert float(row[f'historical_{label}_tput']) == float(ref['output_tput'])
+        assert float(row[f'ratio_to_historical_{label}']) == summary['output_tput']/float(ref['output_tput'])
+    results.append({'id': job['id'], 'requests': 480, 'actual_exit_code': 0, 'row': row,
+        'placement_only_source_change': changed, 'actual_source_root': str(source_script.parent),
+        'artifacts': {str(path): sha(path) for path in [run/'metadata.json', run/'complete.json', run/'summary.json',
+            run/'requests.jsonl', SUITE/'logs'/f"{job['id']}-launcher.json", SUITE/'logs'/f"{job['id']}-finished.json"]}})
+assert len(results) == 10
+report = {'status': 'complete_throughput_artifact_audit', 'checked_unix': time.time(), 'cells': results,
+          'protocol_sha256': sha(SUITE/'protocol.json'), 'measurements_sha256': sha(SUITE/'measurements.csv'),
+          'source_sha256': sha(Path(__file__)), 'new_gpu_measurements': 0,
+          'limitations': ['Historical same-host AR and LoopFill denominators; no drift correction.',
+              'Single timing run per cell; shared-host and BF16 output differences.',
+              'Max1024 end-to-end throughput is separate from max512 latency; this audit does not establish numerical equivalence.']}
+(OUT/'loopahead-throughput-audit.json').write_text(json.dumps(report,indent=2)+'\n')
+(OUT/'loopahead-throughput-measurements.csv').write_bytes((SUITE/'measurements.csv').read_bytes())
+print(json.dumps({'status':report['status'], 'verified_cells':len(results), 'requests':4800, 'new_gpu_runs':0}))

@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "new_rows": [
+    {
+      "key": [
+        "loopahead",
+        "huginn-3.5b",
+        "mbppplus",
+        "1"
+      ],
+      "recomputed_metrics": {
+        "gamma": 4.485159151600724,
+        "method_tok_s": 20.555273339195054,
+        "ar_tok_s": 7.0004017796432025,
+        "method_decode_s": 3554.367718413472,
+        "ar_decode_s": 10466.827805951238,
+        "match_rate": 0.0,
+        "aligned_token_match_rate": 0.030702702702702703
+      }
+    },
+    {
+      "key": [
+        "loopahead",
+        "huginn-3.5b",
+        "specbench",
+        "1"
+      ],
+      "recomputed_metrics": {
+        "gamma": 3.735164741606834,
+        "method_tok_s": 16.74854592978342,
+        "ar_tok_s": 7.050583746096919,
+        "method_decode_s": 2946.882685035467,
+        "ar_decode_s": 7037.431478984654,
+        "match_rate": 0.05416666666666667,
+        "aligned_token_match_rate": 0.03178918590522479
+      }
+    },
+    {
+      "key": [
+        "loopahead",
+        "ouro-2.6b",
+        "humanevalplus",
+        "1"
+      ],
+      "recomputed_metrics": {
+        "gamma": 4.2930834621329215,
+        "method_tok_s": 22.190220803944463,
+        "ar_tok_s": 6.510900475835097,
+        "method_decode_s": 2002.7741225585341,
+        "ar_decode_s": 6220.337747491896,
+        "match_rate": 0.0,
+        "aligned_token_match_rate": 0.03167170562642873
+      }
+    },
+    {
+      "key": [
+        "loopahead",
+        "ouro-2.6b",
+        "mbppplus",
+        "1"
+      ],
+      "recomputed_metrics": {
+        "gamma": 4.301529831718511,
+        "method_tok_s": 22.473620448178053,
+        "ar_tok_s": 6.480388856693071,
+        "method_decode_s": 3753.4228271991014,
+        "ar_decode_s": 12651.246987335384,
+        "match_rate": 0.0,
+        "aligned_token_match_rate": 0.02431373279095961
+      }
+    }
+  ]
+}

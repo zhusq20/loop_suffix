@@ -1,0 +1,131 @@
+{
+  "dataset": "Spider development SQL execution/repair request replay",
+  "dataset_id": "spider-repair100",
+  "source": "https://yale-lily.github.io/spider",
+  "release": {
+    "url": "https://drive.google.com/file/d/1403EGqzIDoHMdQF4c9Bkyl7dZLZ5Wt6J/view",
+    "sha256": "00636695dabed6b5f4b8328a16b13e069a2f16591d5efcce57660669c85b121b",
+    "bytes": 205800266
+  },
+  "dev_sha256": "30d64a3fccde493226df79687aed9e4a1c0129525baf44f29c0573d914d758a4",
+  "databases": {
+    "concert_singer": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/concert_singer/concert_singer.sqlite",
+      "sha256": "4fa1ba5ab4577e895271088b1dc44aa94be88e25a54293317a67584112ef059d",
+      "schema": "CREATE TABLE \"concert\" (\n\"concert_ID\" int,\n\"concert_Name\" text,\n\"Theme\" text,\n\"Stadium_ID\" text,\n\"Year\" text,\nPRIMARY KEY (\"concert_ID\"),\nFOREIGN KEY (\"Stadium_ID\") REFERENCES \"stadium\"(\"Stadium_ID\")\n);\nCREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Country\" text,\n\"Song_Name\" text,\n\"Song_release_year\" text,\n\"Age\" int,\n\"Is_male\" bool,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"singer_in_concert\" (\n\"concert_ID\" int,\n\"Singer_ID\" text,\nPRIMARY KEY (\"concert_ID\",\"Singer_ID\"),\nFOREIGN KEY (\"concert_ID\") REFERENCES \"concert\"(\"concert_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES \"singer\"(\"Singer_ID\")\n);\nCREATE TABLE \"stadium\" (\n\"Stadium_ID\" int,\n\"Location\" text,\n\"Name\" text,\n\"Capacity\" int,\n\"Highest\" int,\n\"Lowest\" int,\n\"Average\" int,\nPRIMARY KEY (\"Stadium_ID\")\n);"
+    },
+    "pets_1": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/pets_1/pets_1.sqlite",
+      "sha256": "8ffe0ea9b3b034ca8860a2f18300a98c7583ce2522ea195726a04803f675e5bb",
+      "schema": "CREATE TABLE Has_Pet (\n       StuID\t\tINTEGER,\n       PetID\t\tINTEGER,\n       FOREIGN KEY(PetID) REFERENCES Pets(PetID),\n       FOREIGN KEY(StuID) REFERENCES Student(StuID)\n);\nCREATE TABLE Pets (\n       PetID\t\tINTEGER PRIMARY KEY,\n       PetType\t\tVARCHAR(20),\n       pet_age INTEGER,\n       weight REAL\n);\nCREATE TABLE Student (\n       StuID    \tINTEGER PRIMARY KEY,\n       LName\t\tVARCHAR(12),\n       Fname\t\tVARCHAR(12),\n       Age\t\tINTEGER,\n       Sex\t\tVARCHAR(1),\n       Major\t\tINTEGER,\n       Advisor\t\tINTEGER,\n       city_code\tVARCHAR(3)\n);"
+    },
+    "car_1": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/car_1/car_1.sqlite",
+      "sha256": "9d851e396e02997a1de073ae982fe1e4b1769fdffce2fac6e325857a3a938709",
+      "schema": "CREATE TABLE \"car_makers\" ( \n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"Maker\" TEXT, \n\t\"FullName\" TEXT, \n\t\"Country\" TEXT,\n\tFOREIGN KEY (Country) REFERENCES countries(CountryId)\n);\nCREATE TABLE \"car_names\" ( \n\t\"MakeId\" INTEGER PRIMARY KEY, \n\t\"Model\" TEXT, \n\t\"Make\" TEXT,\n\tFOREIGN KEY (Model) REFERENCES model_list (Model)\n);\nCREATE TABLE \"cars_data\" (\n\t\"Id\" INTEGER PRIMARY KEY, \n\t\"MPG\" TEXT, \n\t\"Cylinders\" INTEGER, \n\t\"Edispl\" REAL, \n\t\"Horsepower\" TEXT, \n\t\"Weight\" INTEGER, \n\t\"Accelerate\" REAL, \n\t\"Year\" INTEGER,\n\tFOREIGN KEY (Id) REFERENCES car_names (MakeId)\n);\nCREATE TABLE \"continents\" ( \n\t\"ContId\" INTEGER PRIMARY KEY, \n\t\"Continent\" TEXT \n);\nCREATE TABLE \"countries\" (\n\t\"CountryId\" INTEGER PRIMARY KEY, \n\t\"CountryName\" TEXT, \n\t\"Continent\" INTEGER,\n\tFOREIGN KEY (Continent) REFERENCES continents(ContId)\n);\nCREATE TABLE \"model_list\" ( \n\t\"ModelId\" INTEGER PRIMARY KEY, \n\t\"Maker\" INTEGER, \n\t\"Model\" TEXT UNIQUE,\n\tFOREIGN KEY (Maker) REFERENCES car_makers (Id)\n\n);"
+    },
+    "flight_2": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/flight_2/flight_2.sqlite",
+      "sha256": "db777ba6488ae2b515cb138d71ff23c4533e5fd0355854648a1102faff3fb7af",
+      "schema": "CREATE TABLE 'airlines' (\n\tuid INTEGER PRIMARY KEY, \n\tAirline TEXT, \n\tAbbreviation TEXT, \n\tCountry TEXT\n);\nCREATE TABLE 'airports' (\n\tCity TEXT, \n\tAirportCode TEXT PRIMARY KEY, \n\tAirportName TEXT, \n\tCountry TEXT, \n\tCountryAbbrev TEXT\n);\nCREATE TABLE 'flights' (\n\tAirline INTEGER, \n\tFlightNo INTEGER, \n\tSourceAirport TEXT, \n\tDestAirport TEXT, \n\tPRIMARY KEY(Airline, FlightNo),\n\tFOREIGN KEY (SourceAirport) REFERENCES airports(AirportCode),\n\tFOREIGN KEY (DestAirport) REFERENCES airports(AirportCode)\n);"
+    },
+    "employee_hire_evaluation": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/employee_hire_evaluation/employee_hire_evaluation.sqlite",
+      "sha256": "760fec5cc872ef0cdf99242614f05c93dbd00d422ac9da87ea64fcf555be7373",
+      "schema": "CREATE TABLE \"employee\" (\n\"Employee_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"City\" text,\nPRIMARY KEY (\"Employee_ID\")\n);\nCREATE TABLE \"evaluation\" (\n\"Employee_ID\" text,\n\"Year_awarded\" text,\n\"Bonus\" real,\nPRIMARY KEY (\"Employee_ID\",\"Year_awarded\"),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"hiring\" (\n\"Shop_ID\" int,\n\"Employee_ID\" int,\n\"Start_from\" text,\n\"Is_full_time\" bool,\nPRIMARY KEY (\"Employee_ID\"),\nFOREIGN KEY (`Shop_ID`) REFERENCES `shop`(`Shop_ID`),\nFOREIGN KEY (`Employee_ID`) REFERENCES `employee`(`Employee_ID`)\n);\nCREATE TABLE \"shop\" (\n\"Shop_ID\" int,\n\"Name\" text,\n\"Location\" text,\n\"District\" text,\n\"Number_products\" int,\n\"Manager_name\" text,\nPRIMARY KEY (\"Shop_ID\")\n);"
+    },
+    "cre_Doc_Template_Mgt": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/cre_Doc_Template_Mgt/cre_Doc_Template_Mgt.sqlite",
+      "sha256": "9c3fdd03d8795ecde60aae782ce50c4fb1d6c03de1401fcdd6dc177342a53df5",
+      "schema": "CREATE TABLE Documents (\nDocument_ID INTEGER NOT NULL,\nTemplate_ID INTEGER,\nDocument_Name VARCHAR(255),\nDocument_Description VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Document_ID),\nFOREIGN KEY (Template_ID) REFERENCES Templates (Template_ID)\n);\nCREATE TABLE Paragraphs (\nParagraph_ID INTEGER NOT NULL,\nDocument_ID INTEGER NOT NULL,\nParagraph_Text VARCHAR(255),\nOther_Details VARCHAR(255),\nPRIMARY KEY (Paragraph_ID),\nFOREIGN KEY (Document_ID) REFERENCES Documents (Document_ID)\n);\nCREATE TABLE Ref_Template_Types (\nTemplate_Type_Code CHAR(15) NOT NULL,\nTemplate_Type_Description VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_Type_Code)\n);\nCREATE TABLE Templates (\nTemplate_ID INTEGER NOT NULL,\nVersion_Number INTEGER NOT NULL,\nTemplate_Type_Code CHAR(15) NOT NULL,\nDate_Effective_From DATETIME,\nDate_Effective_To DATETIME,\nTemplate_Details VARCHAR(255) NOT NULL,\nPRIMARY KEY (Template_ID),\nFOREIGN KEY (Template_Type_Code) REFERENCES Ref_Template_Types (Template_Type_Code)\n);"
+    },
+    "course_teach": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/course_teach/course_teach.sqlite",
+      "sha256": "da45fcdde64ac2b9330146506b7653ad4417489d8e496e509045e1b02245d793",
+      "schema": "CREATE TABLE \"course\" (\n\"Course_ID\" int,\n\"Staring_Date\" text,\n\"Course\" text,\nPRIMARY KEY (\"Course_ID\")\n);\nCREATE TABLE \"course_arrange\" (\n\"Course_ID\" int,\n\"Teacher_ID\" int,\n\"Grade\" int,\nPRIMARY KEY (\"Course_ID\",\"Teacher_ID\",\"Grade\"),\nFOREIGN KEY (\"Course_ID\") REFERENCES `course`(\"Course_ID\"),\nFOREIGN KEY (\"Teacher_ID\") REFERENCES `teacher`(\"Teacher_ID\")\n);\nCREATE TABLE \"teacher\" (\n\"Teacher_ID\" int,\n\"Name\" text,\n\"Age\" text,\n\"Hometown\" text,\nPRIMARY KEY (\"Teacher_ID\")\n);"
+    },
+    "museum_visit": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/museum_visit/museum_visit.sqlite",
+      "sha256": "3217aee38d8e3661d374bf025591b7164a1179c568ef5d20f3c338035fc6e1dd",
+      "schema": "CREATE TABLE \"museum\" (\n\"Museum_ID\" int,\n\"Name\" text,\n\"Num_of_Staff\" int,\n\"Open_Year\" text,\nPRIMARY KEY (\"Museum_ID\")\n);\nCREATE TABLE \"visit\" (\n\"Museum_ID\" int,\n\"visitor_ID\" text,\n\"Num_of_Ticket\" int,\n\"Total_spent\" real,\nPRIMARY KEY (\"Museum_ID\",\"visitor_ID\"),\nFOREIGN KEY (\"Museum_ID\") REFERENCES `museum`(\"Museum_ID\"),\nFOREIGN KEY (\"visitor_ID\") REFERENCES `visitor`(\"ID\")\n);\nCREATE TABLE \"visitor\" (\n\"ID\" int,\n\"Name\" text,\n\"Level_of_membership\" int,\n\"Age\" int,\nPRIMARY KEY (\"ID\")\n);"
+    },
+    "wta_1": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/wta_1/wta_1.sqlite",
+      "sha256": "8f20747456d7748674b4f05432f3de96446ced95b8bd5a6fd01284f6c28f727c",
+      "schema": "CREATE TABLE matches(\n  \"best_of\" INT,\n  \"draw_size\" INT,\n  \"loser_age\" FLOAT,\n  \"loser_entry\" TEXT,\n  \"loser_hand\" TEXT,\n  \"loser_ht\" INT,\n  \"loser_id\" INT,\n  \"loser_ioc\" TEXT,\n  \"loser_name\" TEXT,\n  \"loser_rank\" INT,\n  \"loser_rank_points\" INT,\n  \"loser_seed\" INT,\n  \"match_num\" INT,\n  \"minutes\" INT,\n  \"round\" TEXT,\n  \"score\" TEXT,\n  \"surface\" TEXT,\n  \"tourney_date\" DATE,\n  \"tourney_id\" TEXT,\n  \"tourney_level\" TEXT,\n  \"tourney_name\" TEXT,\n  \"winner_age\" FLOAT,\n  \"winner_entry\" TEXT,\n  \"winner_hand\" TEXT,\n  \"winner_ht\" INT,\n  \"winner_id\" INT,\n  \"winner_ioc\" TEXT,\n  \"winner_name\" TEXT,\n  \"winner_rank\" INT,\n  \"winner_rank_points\" INT,\n  \"winner_seed\" INT,\n  \"year\" INT,\n  FOREIGN KEY(loser_id) REFERENCES players(player_id),\n  FOREIGN KEY(winner_id) REFERENCES players(player_id)\n);\nCREATE TABLE players(\n    \"player_id\" INT PRIMARY KEY,\n    \"first_name\" TEXT,\n    \"last_name\" TEXT,\n    \"hand\" TEXT,\n    \"birth_date\" DATE,\n    \"country_code\" TEXT\n);\nCREATE TABLE rankings(\"ranking_date\" DATE,\"ranking\" INT,\"player_id\" INT,\"ranking_points\" INT,\"tours\" INT,FOREIGN KEY(player_id) REFERENCES players(player_id));"
+    },
+    "battle_death": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/battle_death/battle_death.sqlite",
+      "sha256": "12569f4493a9655639c4ea86ba4bd8a4ea6411e1b8ae0e1fdf3d6a995344265d",
+      "schema": "CREATE TABLE \"battle\" (\n\"id\" int,\n\"name\" text,\n\"date\" text,\n\"bulgarian_commander\" text,\n\"latin_commander\" text,\n\"result\" text,\nprimary key(\"id\")\n);\nCREATE TABLE \"death\" (\n\"caused_by_ship_id\" int,\n\"id\" int,\n\"note\" text,\n\"killed\" int,\n\"injured\" int,\nprimary key(\"id\"),\nforeign key (\"caused_by_ship_id\") references `ship`(\"id\") \n);\nCREATE TABLE \"ship\" (\n\"lost_in_battle\" int,\n\"id\" int,\n\"name\" text,\n\"tonnage\" text,\n\"ship_type\" text,\n\"location\" text,\n\"disposition_of_ship\" text,\nprimary key(\"id\"),\nforeign key (`lost_in_battle`) references `battle`(\"id\") \n);"
+    },
+    "student_transcripts_tracking": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/student_transcripts_tracking/student_transcripts_tracking.sqlite",
+      "sha256": "5a1f4928a1fd36f6edb31c4f054203b2e2fab6b18e5951c4f5633628f82a8e56",
+      "schema": "CREATE TABLE `Addresses` (\n`address_id` INTEGER PRIMARY KEY,\n`line_1` VARCHAR(255),\n`line_2` VARCHAR(255),\n`line_3` VARCHAR(255),\n`city` VARCHAR(255),\n`zip_postcode` VARCHAR(20),\n`state_province_county` VARCHAR(255),\n`country` VARCHAR(255),\n`other_address_details` VARCHAR(255)\n);\nCREATE TABLE `Courses` (\n`course_id` INTEGER PRIMARY KEY,\n`course_name` VARCHAR(255),\n`course_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Degree_Programs` (\n`degree_program_id` INTEGER PRIMARY KEY,\n`department_id` INTEGER NOT NULL,\n`degree_summary_name` VARCHAR(255),\n`degree_summary_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`department_id` ) REFERENCES `Departments`(`department_id` )\n);\nCREATE TABLE `Departments` (\n`department_id` INTEGER PRIMARY KEY,\n`department_name` VARCHAR(255),\n`department_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Sections` (\n`section_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`section_name` VARCHAR(255),\n`section_description` VARCHAR(255),\n`other_details` VARCHAR(255),\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` )\n);\nCREATE TABLE `Semesters` (\n`semester_id` INTEGER PRIMARY KEY,\n`semester_name` VARCHAR(255),\n`semester_description` VARCHAR(255),\n`other_details` VARCHAR(255)\n);\nCREATE TABLE `Student_Enrolment` (\n`student_enrolment_id` INTEGER PRIMARY KEY,\n`degree_program_id` INTEGER NOT NULL,\n`semester_id` INTEGER NOT NULL,\n`student_id` INTEGER NOT NULL,\n`other_details` VARCHAR(255),\nFOREIGN KEY (`degree_program_id` ) REFERENCES `Degree_Programs`(`degree_program_id` ),\nFOREIGN KEY (`semester_id` ) REFERENCES `Semesters`(`semester_id` ),\nFOREIGN KEY (`student_id` ) REFERENCES `Students`(`student_id` )\n);\nCREATE TABLE `Student_Enrolment_Courses` (\n`student_course_id` INTEGER PRIMARY KEY,\n`course_id` INTEGER NOT NULL,\n`student_enrolment_id` INTEGER NOT NULL,\nFOREIGN KEY (`course_id` ) REFERENCES `Courses`(`course_id` ),\nFOREIGN KEY (`student_enrolment_id` ) REFERENCES `Student_Enrolment`(`student_enrolment_id` )\n);\nCREATE TABLE `Students` (\n`student_id` INTEGER PRIMARY KEY,\n`current_address_id` INTEGER NOT NULL,\n`permanent_address_id` INTEGER NOT NULL,\n`first_name` VARCHAR(80),\n`middle_name` VARCHAR(40),\n`last_name` VARCHAR(40),\n`cell_mobile_number` VARCHAR(40),\n`email_address` VARCHAR(40),\n`ssn` VARCHAR(40),\n`date_first_registered` DATETIME,\n`date_left` DATETIME,\n`other_student_details` VARCHAR(255),\nFOREIGN KEY (`current_address_id` ) REFERENCES `Addresses`(`address_id` ),\nFOREIGN KEY (`permanent_address_id` ) REFERENCES `Addresses`(`address_id` )\n);\nCREATE TABLE `Transcript_Contents` (\n`student_course_id` INTEGER NOT NULL,\n`transcript_id` INTEGER NOT NULL,\nFOREIGN KEY (`student_course_id` ) REFERENCES `Student_Enrolment_Courses`(`student_course_id` ),\nFOREIGN KEY (`transcript_id` ) REFERENCES `Transcripts`(`transcript_id` )\n);\nCREATE TABLE `Transcripts` (\n`transcript_id` INTEGER PRIMARY KEY,\n`transcript_date` DATETIME,\n`other_details` VARCHAR(255)\n);"
+    },
+    "tvshow": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/tvshow/tvshow.sqlite",
+      "sha256": "1212c2e75cf1dcf3aeb4055331a85298b073d8a613ead77975b13bd3346b9fc4",
+      "schema": "CREATE TABLE \"Cartoon\" (\n\"id\" real,\n\"Title\" text,\n\"Directed_by\" text,\n\"Written_by\" text,\n\"Original_air_date\" text,\n\"Production_code\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);\nCREATE TABLE \"TV_Channel\" (\n\"id\" text,\n\"series_name\" text,\n\"Country\" text,\n\"Language\" text,\n\"Content\" text,\n\"Pixel_aspect_ratio_PAR\" text,\n\"Hight_definition_TV\" text,\n\"Pay_per_view_PPV\" text,\n\"Package_Option\" text,\nPRIMARY KEY (\"id\")\n);\nCREATE TABLE \"TV_series\" (\n\"id\" real,\n\"Episode\" text,\n\"Air_Date\" text,\n\"Rating\" text,\n\"Share\" real,\n\"18_49_Rating_Share\" text,\n\"Viewers_m\" text,\n\"Weekly_Rank\" real,\n\"Channel\" text,\nPRIMARY KEY (\"id\"),\nFOREIGN KEY (`Channel`) REFERENCES `TV_Channel`(`id`)\n);"
+    },
+    "poker_player": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/poker_player/poker_player.sqlite",
+      "sha256": "63fffd7b68524f07a742a74b74b95a4ba178e6419f3574b9ee78b8dda1df46ba",
+      "schema": "CREATE TABLE \"people\" (\n\"People_ID\" int,\n\"Nationality\" text,\n\"Name\" text,\n\"Birth_Date\" text,\n\"Height\" real,\nPRIMARY KEY (\"People_ID\")\n);\nCREATE TABLE \"poker_player\" (\n\"Poker_Player_ID\" int,\n\"People_ID\" int,\n\"Final_Table_Made\" real,\n\"Best_Finish\" real,\n\"Money_Rank\" real,\n\"Earnings\" real,\nPRIMARY KEY (\"Poker_Player_ID\"),\nFOREIGN KEY (\"People_ID\") REFERENCES `people`(\"People_ID\")\n);"
+    },
+    "voter_1": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/voter_1/voter_1.sqlite",
+      "sha256": "815bf1611b8a32f649d292a6138562f1761a0c10cb256e20f6561199cff31531",
+      "schema": "CREATE TABLE `AREA_CODE_STATE` (\n  `area_code` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  PRIMARY KEY (`area_code`)\n);\nCREATE TABLE `CONTESTANTS` (\n  `contestant_number` integer\n,  `contestant_name` varchar(50) NOT NULL\n,  PRIMARY KEY (`contestant_number`)\n);\nCREATE TABLE `VOTES` (\n  `vote_id` integer NOT NULL PRIMARY KEY\n,  `phone_number` integer NOT NULL\n,  `state` varchar(2) NOT NULL\n,  `contestant_number` integer NOT NULL\n,  `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP\n, \tFOREIGN KEY (`state`) REFERENCES `AREA_CODE_STATE`(`state`)\n, \tFOREIGN KEY (`contestant_number`) REFERENCES `CONTESTANTS`(`contestant_number`)\n);"
+    },
+    "world_1": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/world_1/world_1.sqlite",
+      "sha256": "17b986695f16786d58d66f85e49dba87bdfe72953207ab9b1b49da9d2301ef65",
+      "schema": "CREATE TABLE `city` (\n  `ID` integer NOT NULL PRIMARY KEY AUTOINCREMENT\n,  `Name` char(35) NOT NULL DEFAULT ''\n,  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `District` char(20) NOT NULL DEFAULT ''\n,  `Population` integer NOT NULL DEFAULT '0'\n,  CONSTRAINT `city_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);\nCREATE TABLE `country` (\n  `Code` char(3) NOT NULL DEFAULT ''\n,  `Name` char(52) NOT NULL DEFAULT ''\n,  `Continent` text  NOT NULL DEFAULT 'Asia'\n,  `Region` char(26) NOT NULL DEFAULT ''\n,  `SurfaceArea` float(10,2) NOT NULL DEFAULT '0.00'\n,  `IndepYear` integer DEFAULT NULL\n,  `Population` integer NOT NULL DEFAULT '0'\n,  `LifeExpectancy` float(3,1) DEFAULT NULL\n,  `GNP` float(10,2) DEFAULT NULL\n,  `GNPOld` float(10,2) DEFAULT NULL\n,  `LocalName` char(45) NOT NULL DEFAULT ''\n,  `GovernmentForm` char(45) NOT NULL DEFAULT ''\n,  `HeadOfState` char(60) DEFAULT NULL\n,  `Capital` integer DEFAULT NULL\n,  `Code2` char(2) NOT NULL DEFAULT ''\n,  PRIMARY KEY (`Code`)\n);\nCREATE TABLE `countrylanguage` (\n  `CountryCode` char(3) NOT NULL DEFAULT ''\n,  `Language` char(30) NOT NULL DEFAULT ''\n,  `IsOfficial` text  NOT NULL DEFAULT 'F'\n,  `Percentage` float(4,1) NOT NULL DEFAULT '0.0'\n,  PRIMARY KEY (`CountryCode`,`Language`)\n,  CONSTRAINT `countryLanguage_ibfk_1` FOREIGN KEY (`CountryCode`) REFERENCES `country` (`Code`)\n);"
+    },
+    "orchestra": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/orchestra/orchestra.sqlite",
+      "sha256": "13b64af1cf6fcbd34953a44f951b2bf79bedc000b344549212dac1a9345e2f86",
+      "schema": "CREATE TABLE \"conductor\" (\n\"Conductor_ID\" int,\n\"Name\" text,\n\"Age\" int,\n\"Nationality\" text,\n\"Year_of_Work\" int,\nPRIMARY KEY (\"Conductor_ID\")\n);\nCREATE TABLE \"orchestra\" (\n\"Orchestra_ID\" int,\n\"Orchestra\" text,\n\"Conductor_ID\" int,\n\"Record_Company\" text,\n\"Year_of_Founded\" real,\n\"Major_Record_Format\" text,\nPRIMARY KEY (\"Orchestra_ID\"),\nFOREIGN KEY (`Conductor_ID`) REFERENCES `conductor`(`Conductor_ID`)\n);\nCREATE TABLE \"performance\" (\n\"Performance_ID\" int,\n\"Orchestra_ID\" int,\n\"Type\" text,\n\"Date\" text,\n\"Official_ratings_(millions)\" real,\n\"Weekly_rank\" text,\n\"Share\" text,\nPRIMARY KEY (\"Performance_ID\"),\nFOREIGN KEY (`Orchestra_ID`) REFERENCES `orchestra`(`Orchestra_ID`)\n);\nCREATE TABLE \"show\" (\n\"Show_ID\" int,\n\"Performance_ID\" int,\n\"If_first_show\" bool,\n\"Result\" text,\n\"Attendance\" real,\nFOREIGN KEY (`Performance_ID`) REFERENCES `performance`(`Performance_ID`)\n);"
+    },
+    "network_1": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/network_1/network_1.sqlite",
+      "sha256": "bec92cd9a68d6f23469a0df246429299f44caaf75eab12275784e0bb7d0aa9ca",
+      "schema": "CREATE TABLE Friend(\n\tstudent_id int, \n\tfriend_id int,\n\tprimary key (student_id,friend_id),\n\tforeign key(student_id) references Highschooler(ID),\n\tforeign key (friend_id) references Highschooler(ID)\n);\nCREATE TABLE Highschooler(\n\tID int primary key, \n\tname text, \n\tgrade int);\nCREATE TABLE Likes(\n\tstudent_id int, \n\tliked_id int,\n\tprimary key (student_id, liked_id),\n        foreign key (liked_id) references Highschooler(ID),\n        foreign key (student_id) references Highschooler(ID)\n);"
+    },
+    "dog_kennels": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/dog_kennels/dog_kennels.sqlite",
+      "sha256": "ea5fbc6cf6aaf500371c5c121c339d9802ba6f5fbecd948a5274c0b487a9f486",
+      "schema": "CREATE TABLE `Breeds` (\n`breed_code` VARCHAR(10) PRIMARY KEY ,\n`breed_name` VARCHAR(80)\n);\nCREATE TABLE `Charges` (\n`charge_id` INTEGER PRIMARY KEY ,\n`charge_type` VARCHAR(10),\n`charge_amount` DECIMAL(19,4)\n);\nCREATE TABLE `Dogs` (\n`dog_id` INTEGER PRIMARY KEY ,\n`owner_id` INTEGER NOT NULL,\n`abandoned_yn` VARCHAR(1),\n`breed_code` VARCHAR(10) NOT NULL,\n`size_code` VARCHAR(10) NOT NULL,\n`name` VARCHAR(50),\n`age` VARCHAR(20),\n`date_of_birth` DATETIME,\n`gender` VARCHAR(1),\n`weight` VARCHAR(20),\n`date_arrived` DATETIME,\n`date_adopted` DATETIME,\n`date_departed` DATETIME,\nFOREIGN KEY (`breed_code` ) REFERENCES `Breeds`(`breed_code` ),\nFOREIGN KEY (`size_code` ) REFERENCES `Sizes`(`size_code` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` ),\nFOREIGN KEY (`owner_id` ) REFERENCES `Owners`(`owner_id` )\n);\nCREATE TABLE `Owners` (\n`owner_id` INTEGER PRIMARY KEY ,\n`first_name` VARCHAR(50),\n`last_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Professionals` (\n`professional_id` INTEGER PRIMARY KEY ,\n`role_code` VARCHAR(10) NOT NULL,\n`first_name` VARCHAR(50),\n`street` VARCHAR(50),\n`city` VARCHAR(50),\n`state` VARCHAR(20),\n`zip_code` VARCHAR(20),\n`last_name` VARCHAR(50),\n`email_address` VARCHAR(50),\n`home_phone` VARCHAR(20),\n`cell_number` VARCHAR(20)\n);\nCREATE TABLE `Sizes` (\n`size_code` VARCHAR(10) PRIMARY KEY ,\n`size_description` VARCHAR(80)\n);\nCREATE TABLE `Treatment_Types` (\n`treatment_type_code` VARCHAR(10) PRIMARY KEY ,\n`treatment_type_description` VARCHAR(80)\n);\nCREATE TABLE `Treatments` (\n`treatment_id` INTEGER PRIMARY KEY ,\n`dog_id` INTEGER NOT NULL,\n`professional_id` INTEGER NOT NULL,\n`treatment_type_code` VARCHAR(10) NOT NULL,\n`date_of_treatment` DATETIME,\n`cost_of_treatment` DECIMAL(19,4),\nFOREIGN KEY (`treatment_type_code` ) REFERENCES `Treatment_Types`(`treatment_type_code` ),\nFOREIGN KEY (`professional_id` ) REFERENCES `Professionals`(`professional_id` ),\nFOREIGN KEY (`dog_id` ) REFERENCES `Dogs`(`dog_id` )\n);"
+    },
+    "singer": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/singer/singer.sqlite",
+      "sha256": "5c1b72755d148c294b26d7b479307e8799b93485ac918720f953e2ab84d59a0a",
+      "schema": "CREATE TABLE \"singer\" (\n\"Singer_ID\" int,\n\"Name\" text,\n\"Birth_Year\" real,\n\"Net_Worth_Millions\" real,\n\"Citizenship\" text,\nPRIMARY KEY (\"Singer_ID\")\n);\nCREATE TABLE \"song\" (\n\"Song_ID\" int,\n\"Title\" text,\n\"Singer_ID\" int,\n\"Sales\" real,\n\"Highest_Position\" real,\nPRIMARY KEY (\"Song_ID\"),\nFOREIGN KEY (\"Singer_ID\") REFERENCES `singer`(\"Singer_ID\")\n);"
+    },
+    "real_estate_properties": {
+      "path": "/tmp/loopfill-assets/spider/spider_data/database/real_estate_properties/real_estate_properties.sqlite",
+      "sha256": "5d0bd83afa93a843e68f892d8430fe625d7ed2508aae00a341926b0b5b478a29",
+      "schema": "CREATE TABLE `Other_Available_Features` (\n`feature_id` INTEGER PRIMARY KEY,\n`feature_type_code` VARCHAR(20) NOT NULL,\n`feature_name` VARCHAR(80),\n`feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_type_code` ) REFERENCES `Ref_Feature_Types`(`feature_type_code` )\n);\nCREATE TABLE `Other_Property_Features` (\n`property_id` INTEGER NOT NULL,\n`feature_id` INTEGER NOT NULL,\n`property_feature_description` VARCHAR(80),\nFOREIGN KEY (`feature_id` ) REFERENCES `Other_Available_Features`(`feature_id` ),\nFOREIGN KEY (`property_id` ) REFERENCES `Properties`(`property_id` )\n);\nCREATE TABLE `Properties` (\n`property_id` INTEGER PRIMARY KEY,\n`property_type_code` VARCHAR(20) NOT NULL,\n`date_on_market` DATETIME,\n`date_sold` DATETIME,\n`property_name` VARCHAR(80),\n`property_address` VARCHAR(255),\n`room_count` INTEGER,\n`vendor_requested_price` DECIMAL(19,4),\n`buyer_offered_price` DECIMAL(19,4),\n`agreed_selling_price` DECIMAL(19,4),\n`apt_feature_1` VARCHAR(255),\n`apt_feature_2` VARCHAR(255),\n`apt_feature_3` VARCHAR(255),\n`fld_feature_1` VARCHAR(255),\n`fld_feature_2` VARCHAR(255),\n`fld_feature_3` VARCHAR(255),\n`hse_feature_1` VARCHAR(255),\n`hse_feature_2` VARCHAR(255),\n`hse_feature_3` VARCHAR(255),\n`oth_feature_1` VARCHAR(255),\n`oth_feature_2` VARCHAR(255),\n`oth_feature_3` VARCHAR(255),\n`shp_feature_1` VARCHAR(255),\n`shp_feature_2` VARCHAR(255),\n`shp_feature_3` VARCHAR(255),\n`other_property_details` VARCHAR(255),\nFOREIGN KEY (`property_type_code` ) REFERENCES `Ref_Property_Types`(`property_type_code` )\n);\nCREATE TABLE `Ref_Feature_Types` (\n`feature_type_code` VARCHAR(20) PRIMARY KEY,\n`feature_type_name` VARCHAR(80)\n);\nCREATE TABLE `Ref_Property_Types` (\n`property_type_code` VARCHAR(20) PRIMARY KEY,\n`property_type_description` VARCHAR(80)\n);"
+    }
+  },
+  "tasks_sha256": "44913609dd93e0456f0928b3d745880939f88bd3fb6e1b7d02f708726fca7287",
+  "seed": 20261112,
+  "model_paths": {
+    "huginn-3.5b": "/tmp/loopfill-assets/hub/models--tomg-group-umd--huginn-0125/snapshots/bb6621b65e90b6a4b9b29ef88dc83866d450470c",
+    "ouro-2.6b": "/tmp/loopfill-assets/hub/models--ByteDance--Ouro-2.6B/snapshots/1ed04250da1a9936042725d302e81c8fa2ab5abd"
+  },
+  "teacher": "ouro-2.6b",
+  "teacher_temperature": 0,
+  "teacher_max_new_tokens": 512,
+  "teacher_source": "/ossfs/workspace/loop_suffix/results/loopfill-agentic-table1-20261112/source",
+  "max_calls_per_task": 3,
+  "stop": "first successful SQLite execution or three calls",
+  "max_prompt_tokens": 3548,
+  "task_count": 100,
+  "task_selection": "Database round-robin; SHA256 ranking; initial prompt <=1900 tokens in both models. No answer-quality or repetition filtering.",
+  "excluded_long_questions": [],
+  "script_sha256": "36697e4487d86e4bfe1aaafb17fdb66611fb95adeafa822757a2de66ee337f70",
+  "sqlite_version": "3.45.3"
+}

@@ -1,0 +1,21 @@
+{
+  "created_unix": 1794434236.04456,
+  "reason": "Fix stopped status without active and resume safely after controller crash.",
+  "authorization": "User requested fixing and restoring the scheduler.",
+  "original_controller_sha256": "81b64c089bfadc59357a9121396ca802c8d0d5c46b85aea8c945ff2fcaedc28d",
+  "controller_sha256": "d126fc8ec0c5bde5dcab46d604af9dad7440b9d6e57efee30b9965af6ae596be",
+  "recovery_helper_sha256": "441ba7c64f8753e0a8fe6e4a7473fd102a8a8c2f120cece038bf9d8213cb5d5e",
+  "backup": "/ossfs/workspace/loop_suffix/results/gpu-balanced-queue-20261112-v1/recovery-20261112-v1",
+  "protocol_sha256": "6d06a4e8491ce7a17ead410ba562186e79081f0de3489c0fce299a6ef4d8b149",
+  "inference_source_changes": false,
+  "recovery_policy": "Preserve original attempts. Missing actual exits remain interrupted and rerun in fresh attempts; no synthetic exit codes and no combined timing windows.",
+  "process_policy": "Adopt matching live workers without signaling them. New workers have independent waitpid receipt supervisors and inherited GPU locks.",
+  "tests": {
+    "command": "python -m pytest -q tests/test_loop_queue_recovery.py tests/test_loop_table2_suite.py",
+    "passed": 19,
+    "ruff": "passed",
+    "diff_check": "passed"
+  },
+  "previous_controller_sha256": "34e7bb8164ce2f275eeb55df29f2ef3b48da4b63f877ee922fbdd70d683308a5",
+  "resume_dedup_policy": "/ossfs/workspace/sz/loopfill/experiments/baselines/preflight/user-resume-eight-gpu-v1/reuse.json"
+}

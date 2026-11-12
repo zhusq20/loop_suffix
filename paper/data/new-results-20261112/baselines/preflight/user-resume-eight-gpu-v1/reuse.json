@@ -1,0 +1,881 @@
+{
+  "status": "verified_existing_measurements_for_reuse",
+  "checked_unix": 1794434989.4227097,
+  "authorization": "User explicitly resumed both baselines, small DFlash, <=500 questions per dataset, all eight available GPUs, no repeat of existing results.",
+  "preserved_previous_rows": 31,
+  "current_rows": 35,
+  "new_results": [
+    {
+      "key": [
+        "loopahead",
+        "huginn-3.5b",
+        "mbppplus",
+        "1"
+      ],
+      "row": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "mbppplus",
+        "temperature": "1",
+        "eta": "2.9362990848566293",
+        "gamma": "4.485159151600724",
+        "method_tok_s": "20.555273339195054",
+        "ar_tok_s": "7.0004017796432025",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.0",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected; Huginn migration, not a model evaluated in the LoopAhead paper",
+        "eta_latency": "2.9447791098618272",
+        "eta_throughput": "2.9362990848566293",
+        "aligned_token_match_rate": "0.030702702702702703",
+        "method_decode_tokens": "73061",
+        "ar_decode_tokens": "73272",
+        "method_decode_s": "3554.367718413472",
+        "ar_decode_s": "10466.827805951238",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794081955.9001791",
+        "ar_last_completed_unix": "1794092457.4263937",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-mbppplus-t1-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-mbppplus-t1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "verified_archived_AR",
+          "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-mbppplus-ar",
+          "requests_sha256": "88c6c2ead3c84b419b26ea77e438393ab446221440b2dff402efeadf8a9d992d",
+          "limitation": "Historical measurement, not a new process exit or same-date timing."
+        },
+        "loopahead": {
+          "kind": "actual_successful_process_exit",
+          "pid": 451139,
+          "launch_sha256": "7446e2bb3e3b8c671268d3b20603dce478a3f1a630566d2197e891f7cfe319a3",
+          "exit_receipt_sha256": "af9d19db26188a817dfea3d0cde0fc4a0fec3ecd545cf1c16c623e2b2259294b",
+          "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+        }
+      }
+    },
+    {
+      "key": [
+        "loopahead",
+        "huginn-3.5b",
+        "specbench",
+        "1"
+      ],
+      "row": {
+        "method": "loopahead",
+        "model": "huginn-3.5b",
+        "benchmark": "specbench",
+        "temperature": "1",
+        "eta": "2.3754835816332402",
+        "gamma": "3.735164741606834",
+        "method_tok_s": "16.74854592978342",
+        "ar_tok_s": "7.050583746096919",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.05416666666666667",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected; Huginn migration, not a model evaluated in the LoopAhead paper",
+        "eta_latency": "2.388093531758613",
+        "eta_throughput": "2.3754835816332402",
+        "aligned_token_match_rate": "0.03178918590522479",
+        "method_decode_tokens": "49356",
+        "ar_decode_tokens": "49618",
+        "method_decode_s": "2946.882685035467",
+        "ar_decode_s": "7037.431478984654",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794086601.2949855",
+        "ar_last_completed_unix": "1794093694.2242959",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-huginn-3.5b-specbench-t1-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-huginn-3.5b-specbench-t1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "verified_archived_AR",
+          "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/huginn-3.5b-specbench-ar",
+          "requests_sha256": "9ffab1f9fa12e1a566251be3be7b9a6be50e0647560b286f2bdef426284b46bb",
+          "limitation": "Historical measurement, not a new process exit or same-date timing."
+        },
+        "loopahead": {
+          "kind": "actual_successful_process_exit",
+          "pid": 471557,
+          "launch_sha256": "2a79498d51b9ab3bb1875684f6fa58140551c439afd015105a6e45090eae0e06",
+          "exit_receipt_sha256": "d7979d9c5bf851d10ee645f47741496e02f5342f34323c78d6e2b4d6da9d3a6b",
+          "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+        }
+      }
+    },
+    {
+      "key": [
+        "loopahead",
+        "ouro-2.6b",
+        "humanevalplus",
+        "1"
+      ],
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-2.6b",
+        "benchmark": "humanevalplus",
+        "temperature": "1",
+        "eta": "3.40816464424582",
+        "gamma": "4.2930834621329215",
+        "method_tok_s": "22.190220803944463",
+        "ar_tok_s": "6.510900475835097",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.0",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "3.1058608544159965",
+        "eta_throughput": "3.40816464424582",
+        "aligned_token_match_rate": "0.03167170562642873",
+        "method_decode_tokens": "44442",
+        "ar_decode_tokens": "40500",
+        "method_decode_s": "2002.7741225585341",
+        "ar_decode_s": "6220.337747491896",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794080389.910887",
+        "ar_last_completed_unix": "1794086549.755872",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-humanevalplus-t1-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-humanevalplus-t1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "verified_archived_AR",
+          "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-humanevalplus-ar",
+          "requests_sha256": "d7a61649a2b50f779ae70ac9f9aa86222140adb81d8a91819ea32314f5d17cea",
+          "limitation": "Historical measurement, not a new process exit or same-date timing."
+        },
+        "loopahead": {
+          "kind": "actual_successful_process_exit",
+          "pid": 440602,
+          "launch_sha256": "4b8bcc5f2f062bc54d82aed1c06eb1e573b507bf21e97fa151fa8f9a87d5f0d2",
+          "exit_receipt_sha256": "a4225657f83ae1edb6e1731ee13931200496d5ee3f4084d1ad13abbe0c8bbc36",
+          "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+        }
+      }
+    },
+    {
+      "key": [
+        "loopahead",
+        "ouro-2.6b",
+        "mbppplus",
+        "1"
+      ],
+      "row": {
+        "method": "loopahead",
+        "model": "ouro-2.6b",
+        "benchmark": "mbppplus",
+        "temperature": "1",
+        "eta": "3.4679431967985788",
+        "gamma": "4.301529831718511",
+        "method_tok_s": "22.473620448178053",
+        "ar_tok_s": "6.480388856693071",
+        "drafter_time_frac": "NA",
+        "match_rate": "0.0",
+        "engine": "ours",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Own paper-based implementation; no official author code/weights; B4 gamma reference unavailable; AR denominator is the original same-host frozen-table measurement, not a new run; cross-date timing drift is uncorrected",
+        "eta_latency": "3.370589344653201",
+        "eta_throughput": "3.4679431967985788",
+        "aligned_token_match_rate": "0.02431373279095961",
+        "method_decode_tokens": "84353",
+        "ar_decode_tokens": "81985",
+        "method_decode_s": "3753.4228271991014",
+        "ar_decode_s": "12651.246987335384",
+        "ar_provenance": "archived_same_host_AR",
+        "ar_first_completed_unix": "1794083048.816708",
+        "ar_last_completed_unix": "1794095735.026055",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-mbppplus-t1-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/archived-ar-ouro-2.6b-mbppplus-t1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "verified_archived_AR",
+          "source": "/ossfs/workspace/sz/loopfill/results/loopfill-latency512-t1-20261108/runs/ouro-2.6b-mbppplus-ar",
+          "requests_sha256": "ec0041c7c2968f91cabea1b149fb0c491eb969329e426a2ea67029e64c88f874",
+          "limitation": "Historical measurement, not a new process exit or same-date timing."
+        },
+        "loopahead": {
+          "kind": "actual_successful_process_exit",
+          "pid": 451143,
+          "launch_sha256": "5424015b4a2d2f43999bd5d8f65288eb9f84982643fc87ba1d529a1075d4c800",
+          "exit_receipt_sha256": "3ecc9b7e0af237cea72d3e76a1b5f90d15b80e464de70e09722fa5de5ef7c244",
+          "source_manifest_sha256": "2dea5f819ad61ef5b83566f6ea2a2802e190a05955f92a516774588f7b34f18d"
+        }
+      }
+    }
+  ],
+  "reuse": {
+    "table1-ouro-2.6b-bbh-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "bbh",
+        "temperature": "0",
+        "eta": "3.551838793489426",
+        "gamma": "4.011064633652678",
+        "method_tok_s": "41.34065879307763",
+        "ar_tok_s": "11.639227227557646",
+        "drafter_time_frac": "0.0332614224403262",
+        "match_rate": "0.8185185185185185",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+        "eta_latency": "3.6105661287178474",
+        "eta_throughput": "3.551838793489426",
+        "aligned_token_match_rate": "0.8989684367599832",
+        "method_decode_tokens": "59452",
+        "ar_decode_tokens": "60435",
+        "method_decode_s": "1438.0999658852816",
+        "ar_decode_s": "5192.35502653569",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794343784.478345",
+        "ar_last_completed_unix": "1794348992.0133984",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 448210,
+          "launch_sha256": "9430aefdb62a17016bdf72a454d20728494ca27135b9bc25972aa3e0d448743e",
+          "exit_receipt_sha256": "04b36d18787e6993e8aaa38e9f7302b09873a54c86f849e709a2a4f6c67a92f2",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 509829,
+          "launch_sha256": "d2fd949d35bc0121ad63e6d2b15cd5de9c9a121ed95912690e38684286f0b214",
+          "exit_receipt_sha256": "d83bb36008e509ad855cb1eec25f6faf77b93b2fb8a97bb73c30655411dc8dae",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 6898,
+          "launch_sha256": "038e97fb95f47179b3dbd3afeecea02b4dbfe8c39b5acb84e30622ed73ccd183",
+          "exit_receipt_sha256": "f76aa9ca2cecb3c79e237f40755f802dd6b2cc29b65b3b9897ab851f39fa7857",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-ar-v1",
+          "requests_sha256": "9cbd5ec4b2033dbd6224a92feda2f86ee033db3a2e4b590e8b411110a8ffef21",
+          "metadata_sha256": "6c5326dc0e7d73c6ba4b4187a189a4fd6c57af87b7bfb428c4430c308ba00401",
+          "complete_sha256": "bc07352ecc16a65143fa6c7225ed0edd92a7e300b3074613a02497d60b6294ca"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-dflash-v1",
+          "requests_sha256": "8971745e14a9b8626500f27d9e36248b526b74daa0d8b3dfcba2ced32ab98c84",
+          "metadata_sha256": "0182af2c7adace3c4ef406b896336c71fcb4d641f812e109fdd396df03f1970c",
+          "complete_sha256": "23c0c75d81325ed9633942ca49ab483b3a80c98b07e43828f50b5c8f3fa95e2b"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t0-dflash-profile-v1",
+          "requests_sha256": "45562c790cc4b73c9009d687b3cbdda78773acb5c751419c53adc1b075a39709",
+          "metadata_sha256": "0ab310ed40600ebd89321675d56a7ae8138724e02aa1a0905b4647ea346cd97a",
+          "complete_sha256": "ed6f587b4dcbf3c31e18d16822989625d2f88f6f47c04f15c4922e1fe3b7e6d8"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-huginn-3.5b-gsm8k-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "huginn-3.5b",
+        "benchmark": "gsm8k",
+        "temperature": "0",
+        "eta": "2.3835214375437035",
+        "gamma": "2.852720964207451",
+        "method_tok_s": "22.802557447397316",
+        "ar_tok_s": "9.56675156691525",
+        "drafter_time_frac": "0.02860059016178302",
+        "match_rate": "0.7466666666666667",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run; Our narrow Huginn adaptation:5layers,H2048,FF5632,332621056 trainable parameters with target-width projections; not an author checkpoint",
+        "eta_latency": "2.345147680763481",
+        "eta_throughput": "2.3835214375437035",
+        "aligned_token_match_rate": "0.8185844848560466",
+        "method_decode_tokens": "31243",
+        "ar_decode_tokens": "30740",
+        "method_decode_s": "1370.1533291637897",
+        "ar_decode_s": "3213.211902178824",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794399193.553211",
+        "ar_last_completed_unix": "1794402499.7823458",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 182221,
+          "launch_sha256": "a61be3a1178e2bfc39d672b5756fbf4491f67df6a8c4a206d9609774e4781943",
+          "exit_receipt_sha256": "1f62d8ac2e75bfaf1e67d94ea59a1ef0b63904b823a9f5e479bd5a8bf1641f52",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 219749,
+          "launch_sha256": "2602c9733b06f3be97ff6f34afcc311ed214eba5046396a9f0bef7200da4b880",
+          "exit_receipt_sha256": "f5b0092e02b06f92bd9e20ca4a5d21cbf22827276ac6472723682827c3db5069",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 235583,
+          "launch_sha256": "b04cacfe91f2a6a8af29257f02e1dfc9ab56438628bffef269599ccf90308fd8",
+          "exit_receipt_sha256": "6284e969e648b5efdf8d8364af85151e1d0d86c70e572afd77fe0e2ddf1147a2",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-ar-v1",
+          "requests_sha256": "2121f4d6b969a2e36f5043b763c71d63abaaa1836657b2b7a768d8791a820f8a",
+          "metadata_sha256": "f87f955d671045687c72e03dd695518247591426a49889ae8720f22423acc3f2",
+          "complete_sha256": "0232b12b85ddd726f1687ae1317f6bc285361cf6784e7ba14afc0b4323edaf74"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-v1",
+          "requests_sha256": "baab6a5cdea21209b714fcbde194bbff5c19636e6c738915ef7ec333f55600c0",
+          "metadata_sha256": "6b0ef18e94dc02d0056f1d5dbf731017f2c17d29aa82061315ed34670449234b",
+          "complete_sha256": "98d0904c3fbedcb263c9909eafd0692d401b996516a9ac336357759e94b49b07"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-gsm8k-t0-dflash-profile-v1",
+          "requests_sha256": "d86157f66f958b957eefa1142369aec815c57e59bb6c7ec0533f8e63613d5796",
+          "metadata_sha256": "e610971c4f2608312d4dde56ddf3a1d6befbc524fe6879000719f966f56f55e4",
+          "complete_sha256": "d85e97b05e23b4d4ee89822f42ff7bec9f0434b6588b6b81985c65565cee95af"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-ouro-2.6b-gsm8k-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "gsm8k",
+        "temperature": "0",
+        "eta": "3.435463950403362",
+        "gamma": "3.8920694129095037",
+        "method_tok_s": "40.11823331288371",
+        "ar_tok_s": "11.677675531473232",
+        "drafter_time_frac": "0.03297306150949668",
+        "match_rate": "0.6666666666666666",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+        "eta_latency": "3.4956599039481504",
+        "eta_throughput": "3.435463950403362",
+        "aligned_token_match_rate": "0.7456359102244389",
+        "method_decode_tokens": "47997",
+        "ar_decode_tokens": "48838",
+        "method_decode_s": "1196.3886750862002",
+        "ar_decode_s": "4182.167921036482",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794342636.2597692",
+        "ar_last_completed_unix": "1794346849.2784672",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 433217,
+          "launch_sha256": "b63cb51a15c2494d7fcdf3a3d9936c1036e1d0101a12bbbb632b4d25425213c6",
+          "exit_receipt_sha256": "2c0d447ff911e31fb7391542e36654827988afad3cc141beed673b6216ea44ca",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 485708,
+          "launch_sha256": "bced10688e4d41af569034a3c066736bb7672795f6e3fd902c2c03b31448b8ba",
+          "exit_receipt_sha256": "fea96f832bf6b120598e68e8910354e4f1170e993086d96f3c3afaba552dbc66",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 499054,
+          "launch_sha256": "b850b93e0031936e24b1bde746104b6b2592174995468c13144eaccd30fb969e",
+          "exit_receipt_sha256": "537f020791824f93b5a553d773e02f5f7de8a3e47a3b39b8135cf83469ef68fa",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-ar-v1",
+          "requests_sha256": "1516db662e0b4bfb114fe6e17cac90c63dcec1989104673b4bb0bf8bac2547e4",
+          "metadata_sha256": "9087c3ecbddfa14df2421d207a2713e3444e311ee5de424adee703f50b51dce8",
+          "complete_sha256": "b311371e6d7d9d45d9bf5e27f3fbfbec89fa56dfca7119118c027a048daededc"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-dflash-v1",
+          "requests_sha256": "921f01b76a3a192547fcf0186784a84bec7db7414fe2d704ab5b1144e4ffd115",
+          "metadata_sha256": "fbc66e9be5519c5c9a5868e9b16f1374d5ab8134564f61cbb11437adca97311e",
+          "complete_sha256": "6933a6e2fc96739f1611f882f4bcb27d0a055c4dd38cab034fcd6fdf61bce46e"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t0-dflash-profile-v1",
+          "requests_sha256": "88600e7eee2e787aeeed316ba0b3244885cdd7203d6d54d1809385bd92f727ad",
+          "metadata_sha256": "3214c4d029ab42f27761638c0451600784bec4d33e25940ccbd55da728505cb7",
+          "complete_sha256": "a7de03fcf228ce73e40d3f4f6264cea2a9c59ee8020f313a1786b3bb3248aa96"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-huginn-3.5b-humanevalplus-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "huginn-3.5b",
+        "benchmark": "humanevalplus",
+        "temperature": "0",
+        "eta": "5.292321762039328",
+        "gamma": "6.47691527143582",
+        "method_tok_s": "51.26501865132156",
+        "ar_tok_s": "9.686678353352281",
+        "drafter_time_frac": "0.030859598936670417",
+        "match_rate": "0.8414634146341463",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run; Our narrow Huginn adaptation:5layers,H2048,FF5632,332621056 trainable parameters with target-width projections; not an author checkpoint",
+        "eta_latency": "5.243610512858722",
+        "eta_throughput": "5.292321762039328",
+        "aligned_token_match_rate": "0.9050279329608939",
+        "method_decode_tokens": "25532",
+        "ar_decode_tokens": "25297",
+        "method_decode_s": "498.0394169688225",
+        "ar_decode_s": "2611.524722635746",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794409700.9087298",
+        "ar_last_completed_unix": "1794412295.3362548",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 299585,
+          "launch_sha256": "b402b38edb7c3ff94d5f45375ae09360699eec23c1464e6d33019bc3f5c402f3",
+          "exit_receipt_sha256": "84e0f7ba03c05315f5c148580377a6879cb461930ff61ac0ce0fa43ddcfa22f9",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 330907,
+          "launch_sha256": "74d7b86f557f4426b481c7f2ad4bf4e40803f63bd0acd96e1b0e66c9d0cd4ca6",
+          "exit_receipt_sha256": "6966950d195f22d679133bf6eb3a183b77ff11f62c052d4251ac76a9a149b9a4",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 336954,
+          "launch_sha256": "de71a23ccc9679afba4ce66a3a7a2f66b70b7126a27a80b4da7fb21712cbe44e",
+          "exit_receipt_sha256": "23278fb8cf26e8284551197235b06481080902615a2fdecf2410392bbb5d36c3",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-ar-v1",
+          "requests_sha256": "47e93db5857a40365b5e171317070254f5a3d7b3db3adf0627ccbbf297c42ccb",
+          "metadata_sha256": "12f7c507af39e17da9595a36ae8b69b876df979cdbb999a7e222d890fc52123d",
+          "complete_sha256": "3b927c87d1051f9420735ef3c7f9af6bbf92e07c7a04ba5b58d4656e5ee7a58b"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-v1",
+          "requests_sha256": "1f042df0f220118a949f867ba55f83d24873021db947d9e8169f333bfa0fe66c",
+          "metadata_sha256": "6e6830be53d148e8e150dc704b5e3e03e3226911baec2dd747574890d71f6631",
+          "complete_sha256": "d2762a0a5e0fabfabbfa634347181ecb349f58fae455c8e7ce3ced39ec65f37f"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-humanevalplus-t0-dflash-profile-v1",
+          "requests_sha256": "80f82855be5d64f5337d30306de34df910ee77bebf8b21a810bde679bae82e5d",
+          "metadata_sha256": "e602c6020c9e98cb92bfaea86cf8cc188c775c58a3e79a81e5b9a899ddba0cc2",
+          "complete_sha256": "b7cc96a912bc89c24f58f76ff841a6097f970c30550703a8b3cf4974aa6e2df9"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-ouro-2.6b-humanevalplus-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "humanevalplus",
+        "temperature": "0",
+        "eta": "3.9028177506209087",
+        "gamma": "4.4328115942028985",
+        "method_tok_s": "45.14203795084107",
+        "ar_tok_s": "11.566524709912297",
+        "drafter_time_frac": "0.032380723581944174",
+        "match_rate": "0.6951219512195121",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+        "eta_latency": "3.9358916122378673",
+        "eta_throughput": "3.9028177506209087",
+        "aligned_token_match_rate": "0.7485069844931437",
+        "method_decode_tokens": "38233",
+        "ar_decode_tokens": "38557",
+        "method_decode_s": "846.9489135965705",
+        "ar_decode_s": "3333.499125018716",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794348890.4613297",
+        "ar_last_completed_unix": "1794352217.0404499",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 508135,
+          "launch_sha256": "f77eefbd10b36e8831ea0e331692506f053c6e0aa4cee7c8eea9c067d1dd845a",
+          "exit_receipt_sha256": "bc245c146ff696957a7139ab5e401a6cc0a63afb9b3b16e49cba1dfc1d898037",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 39965,
+          "launch_sha256": "3c8ad95931298b61b653397658932fc6d7cbc817eca438b6f5143c81a02a4cc2",
+          "exit_receipt_sha256": "7b558b0980720e131acfeb1941d9c34e076cfb04d032cebb402d1b562ab62fdd",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 49977,
+          "launch_sha256": "3011744de717fb0d6a9ad2d8871e392577c35b128c142bcbadf3dec9ff998a46",
+          "exit_receipt_sha256": "7f85824e92ed21f0acbef4651d683db95d4e76757781b3e3a9d9c781fd6468b9",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-ar-v1",
+          "requests_sha256": "8f385e5c70dab5ceb9908342f466e25725ec230e0b3d7794226abca27a9024e4",
+          "metadata_sha256": "9d221350ee9d334e92e36cc10b8275f07db09f0062a0661829748aa5d37a8233",
+          "complete_sha256": "e359867b0c4722746e9b35c17149d5ad1e829f4d8ada4a32231b00ead5784e19"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-v1",
+          "requests_sha256": "ddd33101574fcbbc5b51a54188fb646feb537477e7c6de010bb78c9a291a09f3",
+          "metadata_sha256": "b47c7e5ca3e4c1f945af613a81ed2cc2c60608ed251b75fdef1e7e962cd15836",
+          "complete_sha256": "6fb6d36753fd36d9a872e291aea241495ba56b8a156cf7b8bc7a81cd29280c4f"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-humanevalplus-t0-dflash-profile-v1",
+          "requests_sha256": "c8472fd649719ae51aa9a6ed3f278b5549048114c4de801330f216488a355538",
+          "metadata_sha256": "01bf5dfdf48a0d93ce0728ca33c37998b3d6d67c60a7082ce47bb830b59f53d7",
+          "complete_sha256": "ca98bbfd41f1436bd097493e00c36fabd681ec2bc1fb34ac94e239e74864fd66"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-huginn-3.5b-mbppplus-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "huginn-3.5b",
+        "benchmark": "mbppplus",
+        "temperature": "0",
+        "eta": "4.173183444604706",
+        "gamma": "5.216223439796873",
+        "method_tok_s": "48.539344769531034",
+        "ar_tok_s": "11.63125115726342",
+        "drafter_time_frac": "0.034282971985547535",
+        "match_rate": "0.8148148148148148",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run; Our narrow Huginn adaptation:5layers,H2048,FF5632,332621056 trainable parameters with target-width projections; not an author checkpoint",
+        "eta_latency": "4.215949139730417",
+        "eta_throughput": "4.173183444604706",
+        "aligned_token_match_rate": "0.7363667431528584",
+        "method_decode_tokens": "39033",
+        "ar_decode_tokens": "39433",
+        "method_decode_s": "804.151769772172",
+        "ar_decode_s": "3390.2629619836807",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794413420.2554238",
+        "ar_last_completed_unix": "1794416868.145545",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 343065,
+          "launch_sha256": "f0d23808b12ca535ee3e75f1e9c4ee320f74d348273184b3e117944046d8478c",
+          "exit_receipt_sha256": "150f113763644bebeb173f1a692721ded69dd988f8c34bb558d81a7a3898ce95",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 382061,
+          "launch_sha256": "86ef070f156d02d457f20a5c7dbf06d6ef7e439a7df8ca5851a8fe77e6f6d1d0",
+          "exit_receipt_sha256": "3d4c2b5c92fcf8e43ee3df742a367da9245d73fa265cfa8493ed275d5dad51f9",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 391870,
+          "launch_sha256": "9cba0566c85ba46c41413150ed8148f31f74ec8e81580b4ccf13430d704a78b7",
+          "exit_receipt_sha256": "71f3a210e6d80db1f388f225414ff935fae799fd0978e0d18e56f967b687663f",
+          "source_manifest_sha256": "97e54b631681b95ba0a37aa74c63fcd39a0c87ec9afdd96e6479955bd2bfb845"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-ar-v1",
+          "requests_sha256": "6e9a3d483d4cd89dc02eb6d1e25822eb0fff7c10ca149a7cffd511a6d11b2f5f",
+          "metadata_sha256": "06225fb5c4009ec7f04e1304284727c766a908bb6b4d920760353b52ab6d1917",
+          "complete_sha256": "fd3d9be5ec0c2863b46b981ec4c9124c11c7d9162e2f7286fd176662129245e5"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-v1",
+          "requests_sha256": "c86d72fa5fce9b73604907c9c63c4772d14f8a8d470d1aa9224ea85a73403aab",
+          "metadata_sha256": "956a3943491b9971e6c5dac050ee4cb21a1a740374689fade9df507f6a714262",
+          "complete_sha256": "2abce12ab7dd902631d8ba575f927280a45bb20df682529e50c147733bef72b5"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-huginn-3.5b-mbppplus-t0-dflash-profile-v1",
+          "requests_sha256": "fc91c1d258068e3edefd4d7cbfc0d5e27a70d69e83f8e776b7d2d881c72a8876",
+          "metadata_sha256": "64f50423befd0bb2dab2115761dffb895c4df62742d1cc9b0161f054fcbeceb5",
+          "complete_sha256": "93c7b0f4a681f10b81d229b08dc952fc4e6063e3c29ba09c05e5b9235430a8c8"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-ouro-2.6b-mbppplus-t0": {
+      "row": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "mbppplus",
+        "temperature": "0",
+        "eta": "4.440895591723097",
+        "gamma": "4.998772297248501",
+        "method_tok_s": "51.86487621358576",
+        "ar_tok_s": "11.678922672771474",
+        "drafter_time_frac": "0.033071893738391714",
+        "match_rate": "0.5343915343915344",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+        "eta_latency": "4.469253473365756",
+        "eta_throughput": "4.440895591723097",
+        "aligned_token_match_rate": "0.7133830736192941",
+        "method_decode_tokens": "69218",
+        "ar_decode_tokens": "69660",
+        "method_decode_s": "1334.5833452865481",
+        "ar_decode_s": "5964.5912514179945",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794349387.512014",
+        "ar_last_completed_unix": "1794355390.3811948",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 514462,
+          "launch_sha256": "b2435ae2a905cfc88333052a43af07b02c978503160f47eabfc68ad1ba3099c6",
+          "exit_receipt_sha256": "c8d789a7f2bb4e2524cae3afbaa8cd9cb82d9e8ff731549e524a2c85ee754128",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 77179,
+          "launch_sha256": "bcec304b7842959aa4bed6308c69b908d584ab5aa352fc1bac6ce98d921a2f67",
+          "exit_receipt_sha256": "3ee8408ed436774179cd6388ddea3e70e8bd72fff6e53cf387635fb8b94b6f7c",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 264404,
+          "launch_sha256": "8bd2e13a215837d6afffaa7de6226a4819abfdef66de3d43120b131cc45b1588",
+          "exit_receipt_sha256": "b31636352bcf07c21872b257133de740f94d7b75becdfe19df6a7b321e339b7a",
+          "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-ar-v1",
+          "requests_sha256": "e046de04323928dda5028242192d7bd64fd9baea5e1481a02b0413770611ec60",
+          "metadata_sha256": "4429ec20e51615a27a8ea042e0b1bb3ef999147ac8164b4fdc6888d716d8783c",
+          "complete_sha256": "307c62bb4ca518c3675f5dfbe0f1d3b2f7ef68c894c6412167ef82980f6e7537"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-v1",
+          "requests_sha256": "2440351e5519929e25a5ea94319d08352d79750f05daad165e61e2c79a76ec9c",
+          "metadata_sha256": "e90ebef5bca829b74426efe1f96c429e5292abca2c06fbb7a01600775fa04f8b",
+          "complete_sha256": "05f094865c5d4bd53a4f5f29100036d544ec313ee31ef5581ffbcebb0c8d3148"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-mbppplus-t0-dflash-profile-v1",
+          "requests_sha256": "3b7e746fbcdb737f206ebc7d3f8f5bde5ffc9031115a368577f30320c80c556b",
+          "metadata_sha256": "7a4aa583e2e2ed5ac377b40dec40ce578796f32b3efbdd08356049bfd2dc73cb",
+          "complete_sha256": "51db18924f657d38052d7ef1a59b15bbf5795e1009f9cbfaf414a1a16bd9683e"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-ouro-2.6b-bbh-t1": {
+      "row": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "bbh",
+        "temperature": "1",
+        "eta": "2.6477657523751668",
+        "gamma": "3.022419067622483",
+        "method_tok_s": "30.937434447864007",
+        "ar_tok_s": "11.684354788603077",
+        "drafter_time_frac": "0.03417102377577034",
+        "match_rate": "0.011111111111111112",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+        "eta_latency": "2.766326009951986",
+        "eta_throughput": "2.6477657523751668",
+        "aligned_token_match_rate": "0.13079771044382865",
+        "method_decode_tokens": "66194",
+        "ar_decode_tokens": "69158",
+        "method_decode_s": "2139.6085739284754",
+        "ar_decode_s": "5918.854849174619",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794387523.6497762",
+        "ar_last_completed_unix": "1794393438.1063821",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 39200,
+          "launch_sha256": "61e98666eb40c06fdf689c752901aa757bd8b76288a0cbce6fe409a1cfc69a07",
+          "exit_receipt_sha256": "d8f4f5ab089373cc5c4d0b3f9d393c374610622406a49d705cb3847b399d448f",
+          "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 117735,
+          "launch_sha256": "8726178bae422d6811dacf2a7002c186b76c92ccdaf318da40521a4fe8a6e924",
+          "exit_receipt_sha256": "8bf5978375b246951da4f70963b0620dc26979e7420aee93acf6f94e635c1226",
+          "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 142592,
+          "launch_sha256": "e00079814fcbc88e27a6c7c3f053d31a9bb131bfeb4c5a7cf37c862b0ab5ce99",
+          "exit_receipt_sha256": "ab1a758133c7a24d4db2e83dfdfcd5e0cc7524a8901a9d0a496f13300e4fba0e",
+          "source_manifest_sha256": "1aff47e8da773a53854896c49866aab503760e697db34c85a9f71b2debcc1ff9"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-ar-v1",
+          "requests_sha256": "e1ad71a10830a89de3f2442860e0c6cd55b0d459e6d20dc8541b6458a10a5d67",
+          "metadata_sha256": "172ccaf45c6dbb531b26cbf271aeb2bf06aa776cac9aec2aece73767ee03d798",
+          "complete_sha256": "92d0458f51e10fd45d484172221134ac6cf6031f9d78f32a81198bce2a3a5fba"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-v1",
+          "requests_sha256": "5dd0ebd580b33e4ea14a7c299b81df4c93094b1bfda248c64a8907c5f307d768",
+          "metadata_sha256": "48cb86dd0cdfe1273700fd81696231e35ab02929b27ae5aab1bcfe67bedf057c",
+          "complete_sha256": "9f59888741a25e41dd425da0903a0d5963e60128d21389bf16bc77cb59c062b3"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-bbh-t1-dflash-profile-v1",
+          "requests_sha256": "f4572512c8b165518b806e4b7764272c9f2e37267594ed6e5bdac6c4c06b5de9",
+          "metadata_sha256": "65c15a8d8b4cf6eee516aa8438b219647ca8749e14e12f6a403160b6070cacc8",
+          "complete_sha256": "569e42155891c8a771c9fc26719dab8fac4e780273b6ecde8d3008d42399ed53"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    },
+    "table1-ouro-2.6b-gsm8k-t1": {
+      "row": {
+        "method": "dflash",
+        "model": "ouro-2.6b",
+        "benchmark": "gsm8k",
+        "temperature": "1",
+        "eta": "2.432756502344073",
+        "gamma": "2.7534409216833033",
+        "method_tok_s": "28.21507165782654",
+        "ar_tok_s": "11.597984274480417",
+        "drafter_time_frac": "0.03518616184214059",
+        "match_rate": "0.0",
+        "engine": "official",
+        "status": "complete_with_declared_limitations",
+        "notes": "\u03b7 in CSV is pooled throughput ratio; table uses latency ratio; match_rate is exact whole-sequence fraction; aligned token fraction separately reported; Same-seed token agreement is descriptive, not a sampling distribution test; Official DFlash model/loss with full-loop target and timing/rejection adapter; separate full-task draft profiling run",
+        "eta_latency": "2.292034577412902",
+        "eta_throughput": "2.432756502344073",
+        "aligned_token_match_rate": "0.02566880066210657",
+        "method_decode_tokens": "62616",
+        "ar_decode_tokens": "58994",
+        "method_decode_s": "2219.2394461855292",
+        "ar_decode_s": "5086.573546215892",
+        "ar_provenance": "new_same_stack_AR",
+        "ar_first_completed_unix": "1794356825.450822",
+        "ar_last_completed_unix": "1794361942.117787",
+        "method_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1",
+        "ar_run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1"
+      },
+      "execution_evidence": {
+        "ar": {
+          "kind": "actual_successful_process_exit",
+          "pid": 101799,
+          "launch_sha256": "1bb6070b9e8d330eb28567400b80ac69a129eec88d0db6e1168c1b44b2dad133",
+          "exit_receipt_sha256": "d333a9c814cda65182b6db3e1df99d68a266369c2867783e7e22090146be2e53",
+          "source_manifest_sha256": "0f7adf81fe39ee521263ae641b7fed203c37b7a9f19aaf0a8185137593d94f69"
+        },
+        "dflash": {
+          "kind": "actual_successful_process_exit",
+          "pid": 181571,
+          "launch_sha256": "111be50af1245b05d1a5e5e3dc66206c24b16cd052798142307e02c3b20491f2",
+          "exit_receipt_sha256": "0dcc95361a897b0dccf6111edc67e76708ecc059e4dca22ebf383352b03db412",
+          "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+        },
+        "profile": {
+          "kind": "actual_successful_process_exit",
+          "pid": 223505,
+          "launch_sha256": "edcc7ec25df9bea4b1676c33be5e28c3c8b965d9613531e13c6bc18bb85ed338",
+          "exit_receipt_sha256": "4370715b67050d0a91de57bd01f42c3cb297e997e1b1748418340181a23537bd",
+          "source_manifest_sha256": "27f23e2f581968664ff255cec2d8463bbd311bcee47031250793ebc017d388d7"
+        }
+      },
+      "runs": {
+        "ar": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-ar-v1",
+          "requests_sha256": "35299574da9f60d0c697fddd0de328d5cefbc8cac95d58eb4909659d31bad90e",
+          "metadata_sha256": "df299592a56dbb7ee4ae713996f18948df8b9025351bc1d8bdf5f5f7f3bea337",
+          "complete_sha256": "1e3ed4f8e15e9840d2d3cdceb0bcd2c939f97673654a388813aafc6f79f6f0d6"
+        },
+        "dflash": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-v1",
+          "requests_sha256": "1074b86b730857feea78bbc72bde2d042f6c518688f301bd64dafb172da21530",
+          "metadata_sha256": "ed4a6f120bedbd4063b4b9a7b6328529b26c597228e00bc4ce7a455c7b45c6ba",
+          "complete_sha256": "3f29c37520193591a01e61e7ff3a295f9edcc728d8500f6ce4bd613aa1d3c68e"
+        },
+        "profile": {
+          "path": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/dflash-stack-ouro-2.6b-gsm8k-t1-dflash-profile-v1",
+          "requests_sha256": "28c148e29f25c7440ea8b304aa35188974736147acb625a2bfcbc54c522ba733",
+          "metadata_sha256": "542fdc6ad78996ec85462065cb69ebf7a38eca52bfb804b9c314c19e33ce8e1e",
+          "complete_sha256": "ceea73432a77376ef5b39a7aabef76b8973bec0cf7f567237316a8206a632aa0"
+        }
+      },
+      "provenance_note": "Reuse the existing HF-target measurement and its original AR denominator. This is not a completed packed-backend measurement."
+    }
+  },
+  "already_running_overlap": [
+    "table1-ouro-2.6b-math500-t0",
+    "table1-ouro-2.6b-specbench-t0",
+    "table1-ouro-2.6b-math500-t1"
+  ],
+  "formal_outputs_sha256": {
+    "results.csv": "45404a53ce0e79923d8dcb7d32bec5dab3035d5cc974198ca25cadbe0d767b5b",
+    "formal-agreement.json": "021b53482f64f73d92932d6edd6c5d0f4002180f27bfd96050fa461cf18b9209",
+    "formal-matrix-status.json": "75149f6d772ccf521186ad22ba8b80dd447a26cf3e5fdc85da5d1b5bd9b56565",
+    "table2_rows.md": "9338bf8caa8d4c8ce91aac8b6b267b497d60d640a5f9a4deda975ce3339b81c6"
+  },
+  "source_sha256": "ba1192714c0b49d1dac8108c8dd9419749d9fab93998fb38057bcc9b1463c528",
+  "limitation": "No new GPU measurement and no numerical equivalence claim."
+}

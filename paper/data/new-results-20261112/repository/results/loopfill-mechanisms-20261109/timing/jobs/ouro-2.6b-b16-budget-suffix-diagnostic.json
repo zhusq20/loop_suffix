@@ -1,0 +1,244 @@
+{
+  "key": "ouro-2.6b-b16-budget-suffix-diagnostic",
+  "model": "ouro-2.6b",
+  "batch": 16,
+  "arm": "budget-suffix",
+  "mode": "diagnostic",
+  "phase": "measurement",
+  "lane": 1,
+  "sequence": 9,
+  "outcome": "complete",
+  "output": "/ossfs/workspace/loop_suffix/results/loopfill-mechanisms-20261109/timing/runs/ouro-2.6b-b16-budget-suffix-diagnostic",
+  "gpu": 1,
+  "gpu_uuid": "GPU-520fad11-804c-b419-7096-2a19c219449b",
+  "cpus": "4-7",
+  "started_unix": 1794194349.4415567,
+  "wandb_url": null,
+  "pid": 509469,
+  "progress": {
+    "completed_requests": 23,
+    "total_requests": 24,
+    "completed_output_tokens": 4511,
+    "elapsed_s": 78.37572925537825,
+    "updated_unix": 1794194454.3065047,
+    "phase": "measured"
+  },
+  "returncode": 0,
+  "summary": {
+    "schedule": "continuous",
+    "concurrency": 16,
+    "max_active_requests": 16,
+    "requests": 24,
+    "output_tokens": 4992,
+    "wall_s": 97.37013468891382,
+    "output_tput": 51.268286892576,
+    "request_tput": 0.24648214852199998,
+    "prefill_policy": "chunked_interleaved",
+    "prefill_chunk_size": 128,
+    "prefill_chunks": 65,
+    "prefill_chunk_tokens": 6598,
+    "attention_policy": "packed_prefix_and_tree",
+    "latency_origin": "slot_admission",
+    "refilled_requests": 8,
+    "average_active_requests": 6.754595124133638,
+    "slot_utilization": 0.42216219525835236,
+    "core_calls": 1761,
+    "core_rows": 26256,
+    "max_core_rows": 49,
+    "attention_backend": "packed_prefix_and_tree",
+    "cuda_graph": false,
+    "cuda_graph_shapes": 0,
+    "cuda_graph_replays": 0,
+    "cuda_graph_eager_misses": 2810,
+    "cuda_graph_capture_s": 0.0,
+    "attention_batches": 84528,
+    "pad_decode_rows": false,
+    "core_execution_rows": 26256,
+    "core_padding_rows": 0,
+    "verifier_graph_shapes": 0,
+    "padding_sink_bytes": 0,
+    "latency_s": {
+      "p50": 22.475344754755497,
+      "p95": 64.05804763063786
+    },
+    "ttft_s": {
+      "p50": 1.4582906477153301,
+      "p95": 6.9242470365017645
+    },
+    "diagnostic": true,
+    "stage_profiled": true,
+    "formal_throughput": false,
+    "arm": "budget-suffix",
+    "config": {
+      "name": "budget-suffix",
+      "depth_total": 4,
+      "draft_depth": 1,
+      "readout_depths": [
+        1,
+        2
+      ],
+      "draft_node_budget": 16,
+      "scoring": "raw",
+      "eta": 0.1,
+      "c_min": 0.25,
+      "c_max": 2.0,
+      "use_suffix": true,
+      "use_model": false,
+      "top_m": 2,
+      "suffix_room": 4,
+      "spec_factor": 1.0,
+      "suffix_min_prob": 0.001,
+      "trace_controller": false,
+      "tree_policy": "node_budget",
+      "child_suffix_policy": "all",
+      "positive_only": false,
+      "child_suffix_caps": [
+        4,
+        4
+      ],
+      "c_initial": 1.0,
+      "existing_child_probs": false
+    },
+    "order_seed": 0,
+    "repeat_id": 0,
+    "request_order": [
+      386,
+      92,
+      431,
+      240,
+      206,
+      320,
+      508,
+      488,
+      289,
+      202,
+      140,
+      481,
+      150,
+      477,
+      204,
+      476,
+      250,
+      536,
+      395,
+      418,
+      249,
+      129,
+      362,
+      354
+    ],
+    "max_nodes": 17,
+    "buffer_policy": "per-arm",
+    "slot_buffer_bytes": 4254666752,
+    "profiled": false,
+    "controller_profiled": false,
+    "tree_policy": "node_budget",
+    "scoring": "raw",
+    "cap_skips": 0,
+    "publications": [
+      {
+        "request_id": 202,
+        "output_tokens": 8
+      },
+      {
+        "request_id": 386,
+        "output_tokens": 12
+      },
+      {
+        "request_id": 488,
+        "output_tokens": 11
+      },
+      {
+        "request_id": 508,
+        "output_tokens": 21
+      },
+      {
+        "request_id": 204,
+        "output_tokens": 22
+      },
+      {
+        "request_id": 418,
+        "output_tokens": 13
+      },
+      {
+        "request_id": 240,
+        "output_tokens": 40
+      },
+      {
+        "request_id": 206,
+        "output_tokens": 43
+      },
+      {
+        "request_id": 362,
+        "output_tokens": 15
+      },
+      {
+        "request_id": 140,
+        "output_tokens": 327
+      },
+      {
+        "request_id": 536,
+        "output_tokens": 92
+      },
+      {
+        "request_id": 395,
+        "output_tokens": 91
+      },
+      {
+        "request_id": 354,
+        "output_tokens": 69
+      },
+      {
+        "request_id": 476,
+        "output_tokens": 143
+      },
+      {
+        "request_id": 431,
+        "output_tokens": 174
+      },
+      {
+        "request_id": 320,
+        "output_tokens": 203
+      },
+      {
+        "request_id": 289,
+        "output_tokens": 569
+      },
+      {
+        "request_id": 150,
+        "output_tokens": 162
+      },
+      {
+        "request_id": 249,
+        "output_tokens": 509
+      },
+      {
+        "request_id": 250,
+        "output_tokens": 307
+      },
+      {
+        "request_id": 481,
+        "output_tokens": 257
+      },
+      {
+        "request_id": 477,
+        "output_tokens": 1024
+      },
+      {
+        "request_id": 129,
+        "output_tokens": 399
+      },
+      {
+        "request_id": 92,
+        "output_tokens": 481
+      }
+    ],
+    "durable_results": true,
+    "result_persistence_s": 0.14185617119073868,
+    "peak_allocated_bytes": 73454136320,
+    "peak_reserved_bytes": 73878470656,
+    "input_tokens": 6598,
+    "total_tput": 119.03033755708249
+  },
+  "finished_unix": 1794194480.0268831
+}

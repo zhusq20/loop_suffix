@@ -1,0 +1,61 @@
+{
+  "stage": "needs_attention",
+  "controller_pid": 100836,
+  "updated_unix": 1794443591.7482603,
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "original_controller_retired": true,
+  "running": {},
+  "pending": [],
+  "original_running": {},
+  "retry": {
+    "stage": "complete",
+    "updated_unix": 1794439395.759072,
+    "run": "/ossfs/workspace/sz/loopfill/experiments/baselines/runs/loopahead-ouro-2.6b-specbench-t1-lockretry-v2",
+    "collected_t1_rows": 12
+  },
+  "reserved_for_sql": [],
+  "completed": [
+    "table1-ouro-2.6b-mbppplus-t1",
+    "table1-huginn-3.5b-mbppplus-t1",
+    "table1-huginn-3.5b-bbh-t0",
+    "table1-huginn-3.5b-bbh-t1",
+    "table1-huginn-3.5b-specbench-t1",
+    "table1-huginn-3.5b-specbench-t0",
+    "table1-ouro-2.6b-humanevalplus-t1",
+    "table1-huginn-3.5b-gsm8k-t1",
+    "table1-huginn-3.5b-humanevalplus-t1",
+    "table2-ouro-2.6b-b8",
+    "table2-ouro-2.6b-b16",
+    "table2-huginn-3.5b-b16"
+  ],
+  "reused_existing": [
+    "table1-ouro-2.6b-bbh-t0",
+    "table1-huginn-3.5b-gsm8k-t0",
+    "table1-ouro-2.6b-gsm8k-t0",
+    "table1-huginn-3.5b-humanevalplus-t0",
+    "table1-ouro-2.6b-humanevalplus-t0",
+    "table1-huginn-3.5b-mbppplus-t0",
+    "table1-ouro-2.6b-mbppplus-t0",
+    "table1-ouro-2.6b-bbh-t1",
+    "table1-ouro-2.6b-gsm8k-t1"
+  ],
+  "complete_artifacts_without_exit": [
+    "table1-ouro-2.6b-math500-t0",
+    "table1-ouro-2.6b-math500-t1",
+    "table1-huginn-3.5b-math500-t1",
+    "table1-huginn-3.5b-math500-t0",
+    "table1-ouro-2.6b-specbench-t1",
+    "table1-ouro-2.6b-specbench-t0"
+  ],
+  "failed": {},
+  "finished_unix": 1794443591.795014
+}
